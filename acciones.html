@@ -11,7 +11,7 @@
 <style>
   :root {
     --bg:#0b110d; --surface:#131b15; --fg:#f3ead2; --muted:#bdb59b; --line:#3b4033;
-    --accent:#e1d3a8; --head:#1b251d; --up:#67d68f; --down:#ff8a63;
+    --accent:#e1d3a8; --head:#1b251d; --up:#67d68f; --down:#ff8a63; --flat:#e6bd62;
     --font-title:"Roboto Slab", Georgia, "Times New Roman", serif;
     --font-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-num:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -27,80 +27,315 @@
     background-attachment: fixed;
   }
   .wrap { max-width:1100px; margin:0 auto; }
-  .menubtn { display:inline-block; font-family:var(--font-title); font-size:20px; font-weight:700; letter-spacing:.08em; color:var(--accent); background:rgba(10,15,12,.6); border:2px solid var(--accent); border-radius:8px; padding:6px 14px; text-decoration:none; margin-bottom:14px; }
+  .menubtn { display:inline-block; font-family:var(--font-title); font-size:20px; font-weight:700; letter-spacing:.08em; color:var(--accent); background:rgba(10,15,12,.6); border:2px solid var(--accent); border-radius:8px; padding:6px 14px; text-decoration:none; margin-bottom:14px; cursor:pointer; font-style:normal; }
   .menubtn:hover, .menubtn:focus-visible { background:var(--accent); color:#0a0f0c; outline:none; }
+  button.menubtn { font-family:var(--font-title); }
   h1 { font-family:var(--font-title); color:var(--accent); font-size:26px; text-transform:uppercase; letter-spacing:.02em; margin:0 0 4px; }
+  h2 { font-family:var(--font-title); color:var(--accent); font-size:20px; margin:0 0 4px; }
   .sub { color:var(--muted); font-size:13px; margin-bottom:14px; }
-  .barra { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
-  select, input { padding:9px 10px; font:inherit; color:var(--fg); background:rgba(19,27,21,.9); border:1px solid #4a5040; border-radius:6px; }
-  select:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
-  input { flex:1; min-width:160px; }
-  .tabla { overflow-x:auto; max-width:100%; border:1px solid var(--line); border-radius:8px; background:rgba(19,27,21,.92); }
-  table { border-collapse:collapse; width:100%; min-width:560px; }
-  th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
-  td:nth-child(n+3) { font-family:var(--font-num); font-variant-numeric:tabular-nums; }
-  th:nth-child(-n+2), td:nth-child(-n+2) { text-align:left; }
-  th { background:var(--head); color:var(--accent); position:sticky; top:0; font-weight:600; }
-  tr:last-child td { border-bottom:0; }
-  .up { color:var(--up); } .down { color:var(--down); }
-  .nota, .vacio { color:var(--muted); font-size:13px; margin-top:12px; }
-  .vacio { padding:16px; text-align:center; }
+  .aviso { color:var(--muted); font-size:13px; margin:12px 0; }
+  .aviso b { color:var(--fg); }
+  .paises { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+  .pais { font:inherit; font-weight:600; color:var(--fg); background:rgba(19,27,21,.9); border:1px solid #4a5040; border-radius:999px; padding:8px 14px; cursor:pointer; }
+  .pais:hover, .pais:focus-visible { border-color:var(--accent); outline:none; }
+  .pais[aria-pressed="true"] { background:var(--accent); color:#0a0f0c; border-color:var(--accent); }
+  .pais small { font-weight:500; opacity:.8; margin-left:4px; }
+  input[type=search] { width:100%; padding:10px 12px; font:inherit; color:var(--fg); background:rgba(19,27,21,.9); border:1px solid #4a5040; border-radius:6px; margin-bottom:12px; }
+  input:focus-visible, summary:focus-visible, button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  details.sector { border:1px solid var(--line); border-radius:8px; background:rgba(19,27,21,.92); margin-bottom:10px; }
+  details.sector > summary { cursor:pointer; padding:12px 14px; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:8px; }
+  details.sector > summary::-webkit-details-marker { display:none; }
+  details.sector > summary::before { content:"▸"; color:var(--accent); margin-right:8px; }
+  details.sector[open] > summary::before { content:"▾"; }
+  details.sector > summary span { color:var(--muted); font-weight:500; margin-left:auto; }
+  .cuerpo { padding:0 0 10px; }
+  .tabla { position:relative; overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
+  .tabla::after { content:""; position:sticky; right:0; top:0; float:right; width:18px; height:100%; margin-left:-18px; pointer-events:none; background:linear-gradient(to right, transparent, rgba(0,0,0,.45)); }
+  table { border-collapse:separate; border-spacing:0; width:100%; min-width:640px; }
+  th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; background:rgba(19,27,21,.95); vertical-align:middle; }
+  td.num, th.num { font-family:var(--font-num); font-variant-numeric:tabular-nums; }
+  th:first-child, td:first-child { text-align:left; position:sticky; left:0; z-index:1; box-shadow:2px 0 4px -2px rgba(0,0,0,.6); }
+  th { background:var(--head); color:var(--accent); font-weight:600; position:sticky; top:0; z-index:2; }
+  th:first-child { z-index:3; }
+  th button.ord { font:inherit; font-weight:600; color:inherit; background:none; border:0; padding:0; cursor:pointer; }
+  th button.ord .fl { font-size:11px; margin-left:3px; }
+  .q { font:inherit; font-size:12px; font-weight:700; color:var(--accent); background:transparent; border:1px solid var(--accent); border-radius:50%; width:20px; height:20px; line-height:16px; padding:0; margin-left:5px; cursor:pointer; vertical-align:middle; }
+  .q:hover { background:var(--accent); color:#0a0f0c; }
+  tr.fila { cursor:pointer; }
+  tr.fila:hover td { background:#1d2a20; }
+  .nom { font-weight:600; max-width:230px; overflow:hidden; text-overflow:ellipsis; display:block; }
+  .meta { color:var(--muted); font-size:12px; font-weight:400; display:block; }
+  .up { color:var(--up); } .down { color:var(--down); } .nd { color:var(--muted); }
+  .conv span { display:block; }
+  .chip { display:inline-block; border:1px solid currentColor; border-radius:999px; padding:1px 9px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .chip.s2 { color:var(--up); } .chip.s1 { color:#9be3b6; } .chip.s0 { color:var(--flat); } .chip.sm1 { color:#ffb08f; } .chip.sm2 { color:var(--down); } .chip.sx { color:var(--muted); }
+  .mas { display:block; margin:12px auto 4px; font:inherit; font-weight:600; color:var(--accent); background:rgba(10,15,12,.6); border:1px solid var(--accent); border-radius:8px; padding:8px 18px; cursor:pointer; }
+  .pop { margin:8px 14px; padding:10px 12px; border:1px solid var(--accent); border-radius:8px; background:#1d261f; font-size:14px; }
+  .vacio { color:var(--muted); padding:14px; text-align:center; }
+  /* ficha */
+  .ficha h1 { margin-bottom:2px; }
+  .gridf { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:10px; margin:12px 0; }
+  .caja { border:1px solid var(--line); border-radius:8px; background:rgba(19,27,21,.92); padding:12px 14px; }
+  .caja h3 { margin:0 0 6px; font-size:13px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
+  .caja .v { font-family:var(--font-num); font-size:22px; font-weight:600; }
+  .caja .s { color:var(--muted); font-size:13px; }
+  table.sen { min-width:0; }
+  table.sen td, table.sen th { white-space:normal; text-align:left; }
+  table.sen th:first-child, table.sen td:first-child { position:static; box-shadow:none; }
+  .voto { font-weight:700; }
+  .semana { display:inline-block; margin-left:8px; font-size:12px; color:#0a0f0c; background:var(--flat); border-radius:999px; padding:1px 9px; font-weight:600; }
+  @media (max-width:560px){ body{padding:12px;} .nom{max-width:150px;} }
 </style>
 </head>
 <body>
-<div class="wrap">
-<a class="menubtn" href="./" aria-label="Volver al menú principal">☰ MENÚ</a>
-<h1>Acciones</h1>
-<div class="sub" id="act" role="status">Cargando...</div>
-<div class="barra">
-  <select id="indice" aria-label="Filtrar por índice"><option value="">Todos los índices</option></select>
-  <input id="q" type="search" placeholder="Buscar empresa o ticker" aria-label="Buscar empresa o ticker">
-</div>
-<div class="tabla">
-<table>
-  <thead><tr><th>Índice</th><th>Empresa</th><th>Apertura</th><th>Cierre</th><th>Var.</th><th>Fecha</th></tr></thead>
-  <tbody id="cuerpo"></tbody>
-</table>
-<div class="vacio" id="vacio" hidden></div>
-</div>
-<p class="nota">Datos con retraso, solo informativos. Cierre = último precio de la sesión (cierre oficial cuando la bolsa ya ha cerrado). Moneda: USD, EUR, HKD, JPY; FTSE 100 en peniques (GBp). Fuente: Yahoo Finance (no es una API oficial).</p>
+<div class="wrap" id="app">
+  <a class="menubtn" href="./" aria-label="Volver al menú principal">☰ MENÚ</a>
+  <div id="vista"><div class="sub">Cargando...</div></div>
 </div>
 
 <script>
-let datos = [];
-const $ = id => document.getElementById(id);
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const num = v => v == null ? "-" : v.toLocaleString("es-ES", {minimumFractionDigits:2, maximumFractionDigits:2});
+"use strict";
+var PRECIOS = [], FX = null, FUND = {}, FUND_FECHA = null, ACT_PRECIOS = null;
+var POR_TICKER = {};
+var ST = { pais: null, q: "", orden: { k: "nombre", d: 1 }, pagina: {}, abiertos: {}, ayuda: null };
+var $ = function (id) { return document.getElementById(id); };
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function nf(v, d) { return v == null || isNaN(v) ? null : Number(v).toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d }); }
+var SIMB = { USD: "$", EUR: "€", GBP: "£", JPY: "¥", HKD: "HK$", GBp: "p" };
+function precio(v, mon) {
+  var t = nf(v, 2); if (t == null) return "n/d";
+  if (mon === "GBp") return t + " p";
+  return (SIMB[mon] || (mon ? mon + " " : "")) + (SIMB[mon] && mon !== "GBp" ? " " : "") + t;
+}
+function dolares(v) { var t = nf(v, 2); return t == null ? "n/d" : "$ " + t; }
+function euros(v) { var t = nf(v, 2); return t == null ? "n/d" : "€ " + t; }
+function varp(p) { return (p.cierre != null && p.cierre_anterior) ? (p.cierre / p.cierre_anterior - 1) * 100 : null; }
+function fechaCorta(s) { if (!s) return "n/d"; var d = new Date(s); return isNaN(d) ? s : d.toLocaleDateString("es-ES"); }
+function reciente(f) { if (!f) return false; var d = new Date(f); return !isNaN(d) && (Date.now() - d.getTime()) < 7 * 86400000; }
 
-function pintar() {
-  const ind = $("indice").value, q = $("q").value.trim().toLowerCase();
-  const f = datos.filter(p => (!ind || p.indice === ind) &&
-      (!q || p.nombre.toLowerCase().includes(q) || p.ticker_google.toLowerCase().includes(q)));
-  $("cuerpo").innerHTML = f.map(p => {
-      const v = (p.cierre != null && p.cierre_anterior) ? (p.cierre / p.cierre_anterior - 1) * 100 : null;
-      const cls = v == null ? "" : (v >= 0 ? "up" : "down");
-      const vt = v == null ? "-" : (v >= 0 ? "+" : "") + v.toFixed(2).replace(".", ",") + " %";
-      return `<tr><td>${esc(p.indice)}</td><td>${esc(p.nombre)}</td><td>${num(p.apertura)}</td>` +
-             `<td>${num(p.cierre)}</td><td class="${cls}">${vt}</td><td>${esc(p.fecha || "-")}</td></tr>`;
-    }).join("");
-  $("vacio").hidden = f.length > 0 || !datos.length;
-  $("vacio").textContent = "Ningún valor coincide con la búsqueda.";
+var AYUDA = {
+  per: "Cuántos años de beneficio estás pagando. PER 15 significa que pagas 15 veces lo que la empresa gana en un año. Más bajo no siempre es mejor: puede ser una empresa con problemas. Se compara con las demás de su sector y país.",
+  roe: "Cuánto beneficio genera la empresa por cada 100 € que han puesto sus accionistas. ROE 15 % son 15 € por cada 100 €. Si es negativo, pierde dinero.",
+  div: "Lo que la empresa reparte al año por cada 100 € del precio de la acción, y cada cuánto lo paga. No está garantizado: puede recortarlo.",
+  deuda: "Lo que debe la empresa dividido entre el dinero de sus accionistas. 1,0 significa que debe tanto como vale su patrimonio. Bajo, medio o alto es frente a las de su sector y país. En bancos y aseguradoras no se muestra, porque su deuda funciona de otra manera.",
+  conv: "El precio de cierre pasado a dólares y euros con un tipo de cambio con retraso. Solo orientativo. Un precio alto no significa que la acción sea cara: para eso está el PER.",
+  punt: "Resume cuatro señales: si está barata o cara frente a sus parecidas (PER), si es rentable (ROE), cuánta deuda tiene y si el precio va a favor de la tendencia. Compara cada empresa con las de su mismo sector y país. Describe cómo está hoy y no predice su evolución. No es una recomendación de inversión.",
+  var: "Variación del último cierre frente al anterior, en la moneda de cotización."
+};
+function q(k) { return '<button type="button" class="q" data-ayuda="' + k + '" aria-label="Qué significa">?</button>'; }
+
+function claseP(f) {
+  if (!f || f.puntuacion == null) return "sx";
+  var p = f.puntuacion; return p >= 3 ? "s2" : p >= 1 ? "s1" : p === 0 ? "s0" : p >= -2 ? "sm1" : "sm2";
+}
+function chipPunt(f) {
+  if (!f) return '<span class="chip sx">Sin datos</span>';
+  var n = f.puntuacion == null ? "" : " (" + (f.puntuacion > 0 ? "+" : "") + f.puntuacion + ")";
+  return '<span class="chip ' + claseP(f) + '">' + esc(f.etiqueta || "Sin datos") + n + "</span>";
 }
 
-fetch("precios.json", {cache: "no-store"})
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(d => {
-    datos = d.precios;
-    [...new Set(datos.map(p => p.indice))].forEach(i => {
-      const o = document.createElement("option"); o.value = o.textContent = i; $("indice").appendChild(o);
-    });
-    $("act").textContent = "Actualizado: " + new Date(d.actualizado).toLocaleString("es-ES");
-    pintar();
-  })
-  .catch(() => { $("act").textContent = "Todavía no hay precios cargados o no se pudieron leer."; });
+/* ---------- ordenación ---------- */
+var ORD = {
+  nombre: function (p) { return p.nombre.toLowerCase(); },
+  apertura: function (p) { return p.apertura; },
+  cierre: function (p) { return p.cierre; },
+  conv: function (p) { return p.precio_eur; },
+  var: function (p) { return varp(p); },
+  punt: function (p) { var f = FUND[p.ticker_yahoo]; return f && f.puntuacion != null ? f.puntuacion : null; }
+};
+function ordenar(lista) {
+  var k = ST.orden.k, d = ST.orden.d, g = ORD[k];
+  return lista.slice().sort(function (a, b) {
+    var x = g(a), y = g(b), nx = x == null, ny = y == null;
+    if (nx && ny) return 0; if (nx) return 1; if (ny) return -1;   /* n/d siempre al final */
+    if (x < y) return -d; if (x > y) return d; return a.nombre.localeCompare(b.nombre, "es");
+  });
+}
+var COLS = [
+  ["nombre", "Acción", "", 0], ["apertura", "Apertura", "num", 0], ["cierre", "Cierre", "num", 0],
+  ["conv", "Conversión", "num", "conv"], ["var", "Var.", "num", "var"], ["punt", "Puntuación", "", "punt"]
+];
+function cabecera() {
+  return "<thead><tr>" + COLS.map(function (c) {
+    var act = ST.orden.k === c[0], fl = act ? (ST.orden.d === 1 ? "▲" : "▼") : "";
+    return '<th class="' + c[2] + '" aria-sort="' + (act ? (ST.orden.d === 1 ? "ascending" : "descending") : "none") + '"><button type="button" class="ord" data-ord="' + c[0] + '">' + c[1] + '<span class="fl">' + fl + "</span></button>" + (c[3] ? q(c[3]) : "") + "</th>";
+  }).join("") + "</tr></thead>";
+}
+function fila(p) {
+  var f = FUND[p.ticker_yahoo], v = varp(p);
+  var cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
+  var vt = v == null ? "n/d" : (v >= 0 ? "+" : "") + nf(v, 2) + " %";
+  return '<tr class="fila" tabindex="0" data-t="' + esc(p.ticker_yahoo) + '">' +
+    '<td><span class="nom" title="' + esc(p.nombre) + '">' + esc(p.nombre) + '</span><span class="meta">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.indice) + "</span></td>" +
+    '<td class="num">' + precio(p.apertura, p.moneda) + '</td><td class="num">' + precio(p.cierre, p.moneda) + "</td>" +
+    '<td class="num conv"><span>' + dolares(p.precio_usd) + "</span><span>" + euros(p.precio_eur) + '</span></td>' +
+    '<td class="num ' + cls + '">' + vt + "</td><td>" + chipPunt(f) + "</td></tr>";
+}
+function tablaHtml(lista, clave) {
+  var ord = ordenar(lista), n = ST.pagina[clave] || 50, vis = ord.slice(0, n);
+  var h = '<div class="tabla"><table>' + cabecera() + "<tbody>" + vis.map(fila).join("") + "</tbody></table></div>";
+  if (ord.length > n) h += '<button type="button" class="mas" data-mas="' + esc(clave) + '">Mostrar más (' + (ord.length - n) + " restantes)</button>";
+  if (!ord.length) h = '<div class="vacio">Sin empresas.</div>';
+  return h + '<div id="ay-' + esc(clave) + '"></div>';
+}
 
-$("indice").addEventListener("change", pintar);
-$("q").addEventListener("input", pintar);
+/* ---------- vista principal ---------- */
+var ORDEN_PAISES = ["EE. UU.", "España", "Francia", "Alemania", "Reino Unido", "Japón", "Hong Kong (China)"];
+function paises() {
+  var m = {}; PRECIOS.forEach(function (p) { m[p.pais] = (m[p.pais] || 0) + 1; });
+  var ks = Object.keys(m).sort(function (a, b) {
+    var ia = ORDEN_PAISES.indexOf(a), ib = ORDEN_PAISES.indexOf(b);
+    if (ia < 0 && ib < 0) return a.localeCompare(b, "es"); if (ia < 0) return 1; if (ib < 0) return -1; return ia - ib;
+  });
+  return ks.map(function (k) { return [k, m[k]]; });
+}
+function sectorDe(p) { var f = FUND[p.ticker_yahoo]; return f && f.sector ? f.sector : "Sin clasificar"; }
+function vistaLista() {
+  var h = "<h1>Acciones</h1>";
+  h += '<div class="sub">Precios: ' + esc(ACT_PRECIOS ? new Date(ACT_PRECIOS).toLocaleString("es-ES") : "n/d") +
+       " · Fundamentales: " + esc(FUND_FECHA ? new Date(FUND_FECHA).toLocaleString("es-ES") : "aún sin datos") +
+       (FX && FX.fecha ? " · Tipos de cambio: " + esc(fechaCorta(FX.fecha)) : "") + "</div>";
+  h += '<div class="paises" role="group" aria-label="País">' + paises().map(function (c) {
+    return '<button type="button" class="pais" data-pais="' + esc(c[0]) + '" aria-pressed="' + (ST.pais === c[0]) + '">' + esc(c[0]) + "<small>" + c[1] + "</small></button>";
+  }).join("") + "</div>";
+  h += '<input id="q" type="search" placeholder="Buscar empresa o ticker (en todos los países)" aria-label="Buscar empresa o ticker" value="' + esc(ST.q) + '">';
+  h += '<div id="res"></div>';
+  h += '<p class="aviso"><b>Datos con retraso, solo informativos. No es una recomendación de inversión.</b> Cierre = último precio de la sesión (cierre oficial si la bolsa ya ha cerrado). Moneda de cada cotización con su símbolo; «p» = peniques. Fuente: Yahoo Finance (no es una API oficial).</p>';
+  $("vista").innerHTML = h;
+  pintarResultados();
+  $("q").addEventListener("input", function (e) { ST.q = e.target.value; pintarResultados(); });
+}
+function pintarResultados() {
+  var res = $("res"), q = ST.q.trim().toLowerCase();
+  if (q) {
+    var l = PRECIOS.filter(function (p) { return p.nombre.toLowerCase().indexOf(q) >= 0 || p.ticker_google.toLowerCase().indexOf(q) >= 0 || p.ticker_yahoo.toLowerCase().indexOf(q) >= 0; });
+    res.innerHTML = "<h2>Resultados (" + l.length + ")</h2>" + tablaHtml(l, "busqueda");
+    return;
+  }
+  if (!ST.pais) { res.innerHTML = '<div class="vacio">Elige un país para ver sus sectores, o busca una empresa.</div>'; return; }
+  var del = PRECIOS.filter(function (p) { return p.pais === ST.pais; }), por = {};
+  del.forEach(function (p) { var s = sectorDe(p); (por[s] = por[s] || []).push(p); });
+  var ss = Object.keys(por).sort(function (a, b) { if (a === "Sin clasificar") return 1; if (b === "Sin clasificar") return -1; return a.localeCompare(b, "es"); });
+  res.innerHTML = ss.map(function (s) {
+    var clave = ST.pais + "|" + s;
+    return '<details class="sector" data-clave="' + esc(clave) + '"' + (ST.abiertos[clave] ? " open" : "") + "><summary>" + esc(s) + "<span>" + por[s].length + " empresas</span></summary><div class=\"cuerpo\">" + (ST.abiertos[clave] ? tablaHtml(por[s], clave) : "") + "</div></details>";
+  }).join("");
+  res.__por = por;
+}
+function repintarAbiertos() {
+  var q = ST.q.trim();
+  if (q) { pintarResultados(); return; }
+  var res = $("res");
+  if (!res || !res.__por) return;
+  Array.prototype.forEach.call(res.querySelectorAll("details.sector[open]"), function (d) {
+    var clave = d.getAttribute("data-clave"), s = clave.split("|")[1];
+    d.querySelector(".cuerpo").innerHTML = tablaHtml(res.__por[s], clave);
+  });
+}
+
+/* ---------- ficha de una acción ---------- */
+function votoTxt(k, v) {
+  if (v == null) return "No cuenta";
+  var t = {
+    per: ["Más cara que sus parecidas", "En línea con sus parecidas", "Más barata que sus parecidas"],
+    roe: ["Rinde menos que sus parecidas", "En línea con sus parecidas", "Rinde más que sus parecidas"],
+    deuda: ["Más deuda que sus parecidas", "Deuda en línea", "Menos deuda que sus parecidas"],
+    tendencia: ["Tendencia bajista", "Tendencia lateral", "Tendencia alcista"]
+  }[k];
+  return (v > 0 ? "+1 · " : v < 0 ? "−1 · " : "0 · ") + t[v + 1];
+}
+function vistaFicha(t) {
+  var p = POR_TICKER[t]; if (!p) { location.hash = ""; return; }
+  var f = FUND[t], v = varp(p), cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
+  var h = '<button type="button" class="menubtn" data-volver="1" style="font-size:16px">← Volver a la lista</button>';
+  h += '<div class="ficha"><h1>' + esc(p.nombre) + "</h1>";
+  h += '<div class="sub">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.pais) + " · " + esc((p.indices || [p.indice]).join(", ")) + " · sector: " + esc(f && f.sector ? f.sector : "sin clasificar") + "</div>";
+  h += '<div class="gridf">';
+  h += '<div class="caja"><h3>Cierre</h3><div class="v">' + precio(p.cierre, p.moneda) + '</div><div class="s">Apertura ' + precio(p.apertura, p.moneda) + " · sesión " + esc(fechaCorta(p.fecha)) + "</div></div>";
+  h += '<div class="caja"><h3>Variación ' + q("var") + '</h3><div class="v ' + cls + '">' + (v == null ? "n/d" : (v >= 0 ? "+" : "") + nf(v, 2) + " %") + '</div><div class="s">Cierre anterior ' + precio(p.cierre_anterior, p.moneda) + "</div></div>";
+  h += '<div class="caja"><h3>Conversión ' + q("conv") + '</h3><div class="v">' + dolares(p.precio_usd) + '</div><div class="v">' + euros(p.precio_eur) + '</div><div class="s">Tipo de cambio del ' + esc(FX && FX.fecha ? fechaCorta(FX.fecha) : "n/d") + "</div></div>";
+  h += '<div class="caja"><h3>Puntuación del modelo ' + q("punt") + "</h3>" + '<div style="margin:6px 0">' + chipPunt(f) + "</div>" +
+       (f && f.actualizada && reciente(f.actualizada) ? '<span class="semana">Actualizada esta semana</span>' : "") + "</div>";
+  h += "</div>";
+  h += '<div id="ay-ficha"></div>';
+  if (f) {
+    var d = f.deuda == null ? "n/d" : nf(f.deuda, 2) + (f.deuda_etiqueta && f.deuda_etiqueta !== "n/a" ? " · " + f.deuda_etiqueta : "");
+    if (f.sector === "Finanzas") d = "n/a";
+    h += '<div class="gridf">';
+    h += '<div class="caja"><h3>PER ' + q("per") + '</h3><div class="v">' + (f.per && (f.eps == null || f.eps > 0) ? nf(f.per, 1) : (f.eps != null && f.eps <= 0 ? "Pérdidas" : "n/d")) + "</div></div>";
+    h += '<div class="caja"><h3>ROE ' + q("roe") + '</h3><div class="v">' + (f.roe == null ? "n/d" : nf(f.roe, 1) + " %") + "</div></div>";
+    h += '<div class="caja"><h3>Dividendo ' + q("div") + '</h3><div class="v">' + (f.dividendo == null ? (f.frecuencia === "no paga" ? "No paga" : "n/d") : nf(f.dividendo, 2) + " %") + '</div><div class="s">Frecuencia: ' + esc(f.frecuencia || "n/d") + "</div></div>";
+    h += '<div class="caja"><h3>Deuda / patrimonio ' + q("deuda") + '</h3><div class="v">' + d + "</div></div>";
+    h += "</div>";
+    h += '<div class="caja"><h3>Las cuatro señales</h3><div class="tabla"><table class="sen"><thead><tr><th>Señal</th><th>Valor</th><th>Mediana del grupo</th><th>Voto</th></tr></thead><tbody>';
+    var sen = f.señales || {};
+    [["per", "PER"], ["roe", "ROE"], ["deuda", "Deuda / patrimonio"], ["tendencia", "Tendencia del precio"]].forEach(function (k) {
+      var s = sen[k[0]];
+      var val = !s ? "n/d" : (k[0] === "tendencia" ? s.valor : (k[0] === "roe" ? nf(s.valor, 1) + " %" : (s.valor == null ? "n/d" : nf(s.valor, k[0] === "per" ? 1 : 2))));
+      var med = !s || s.mediana == null ? "—" : (k[0] === "roe" ? nf(s.mediana, 1) + " %" : nf(s.mediana, k[0] === "per" ? 1 : 2));
+      if (k[0] === "tendencia") med = "—";
+      h += "<tr><td>" + k[1] + "</td><td>" + esc(val) + (s && s.nota ? " <span class=\"nd\">(" + esc(s.nota) + ")</span>" : "") + "</td><td>" + med + '</td><td class="voto">' + esc(votoTxt(k[0], s ? s.voto : null)) + "</td></tr>";
+    });
+    h += "</tbody></table></div>";
+    var g = f.grupo || {};
+    h += '<p class="s">Se compara con <b>' + (g.n || "?") + "</b> empresas de " + esc(g.sector || "") + " en " + esc(g.pais || "") + (g.pequeno ? " · <b>grupo pequeño</b>: la comparación es poco fiable" : "") +
+         ". Último trimestre: " + esc(fechaCorta(f.trimestre)) + ". Datos del " + esc(fechaCorta(f.fecha)) + ".</p>";
+    if (f.puntuacion == null && f.faltan && f.faltan.length) h += '<p class="s"><b>Datos insuficientes.</b> Faltan: ' + esc(f.faltan.join(", ")) + ".</p>";
+    h += "</div>";
+  } else {
+    h += '<div class="vacio">Todavía no hay fundamentales de esta empresa (se cargan por tandas diarias).</div>';
+  }
+  h += '<p class="aviso"><b>Datos con retraso, solo informativos. No es una recomendación de inversión.</b> La puntuación describe cómo está hoy la empresa frente a sus parecidas y no predice su evolución.</p></div>';
+  $("vista").innerHTML = h;
+  window.scrollTo(0, 0);
+}
+
+/* ---------- eventos ---------- */
+function ruta() {
+  var h = decodeURIComponent((location.hash || "").replace(/^#/, ""));
+  if (h && POR_TICKER[h]) vistaFicha(h); else vistaLista();
+}
+document.addEventListener("click", function (ev) {
+  var T = ev.target; if (!T.closest) return;
+  var a = T.closest("[data-ayuda]");
+  if (a) {
+    var k = a.getAttribute("data-ayuda"), host = a.closest(".caja") ? $("ay-ficha") : (a.closest("details") ? a.closest("details").querySelector('[id^="ay-"]') : document.querySelector('[id^="ay-"]'));
+    if (!host && $("ay-busqueda")) host = $("ay-busqueda");
+    if (host) { var abierto = host.getAttribute("data-k") === k && host.innerHTML; host.setAttribute("data-k", abierto ? "" : k); host.innerHTML = abierto ? "" : '<div class="pop" role="note">' + esc(AYUDA[k]) + "</div>"; }
+    return;
+  }
+  var o = T.closest("[data-ord]");
+  if (o) { var kk = o.getAttribute("data-ord"); ST.orden = ST.orden.k === kk ? { k: kk, d: -ST.orden.d } : { k: kk, d: 1 }; ST.pagina = {}; repintarAbiertos(); return; }
+  var m = T.closest("[data-mas]");
+  if (m) { var c = m.getAttribute("data-mas"); ST.pagina[c] = (ST.pagina[c] || 50) + 50; repintarAbiertos(); return; }
+  var pb = T.closest("[data-pais]");
+  if (pb) { var np = pb.getAttribute("data-pais"); ST.pais = ST.pais === np ? null : np; ST.q = ""; vistaLista(); return; }
+  if (T.closest("[data-volver]")) { history.back(); setTimeout(function () { if (location.hash) location.hash = ""; }, 50); return; }
+  var r = T.closest("tr.fila");
+  if (r) { location.hash = encodeURIComponent(r.getAttribute("data-t")); }
+});
+document.addEventListener("keydown", function (ev) {
+  if ((ev.key === "Enter" || ev.key === " ") && ev.target.classList && ev.target.classList.contains("fila")) { ev.preventDefault(); location.hash = encodeURIComponent(ev.target.getAttribute("data-t")); }
+});
+document.addEventListener("toggle", function (ev) {
+  var d = ev.target; if (!d.classList || !d.classList.contains("sector")) return;
+  var clave = d.getAttribute("data-clave"), res = $("res");
+  ST.abiertos[clave] = d.open;
+  if (d.open && res && res.__por) d.querySelector(".cuerpo").innerHTML = tablaHtml(res.__por[clave.split("|")[1]], clave);
+}, true);
+window.addEventListener("hashchange", ruta);
+
+function cargar() {
+  var p1 = fetch("precios.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  var p2 = fetch("fundamentales.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+  Promise.all([p1, p2]).then(function (res) {
+    PRECIOS = res[0].precios; FX = res[0].fx || null; ACT_PRECIOS = res[0].actualizado;
+    PRECIOS.forEach(function (p) { POR_TICKER[p.ticker_yahoo] = p; });
+    if (res[1]) { FUND = res[1].empresas || {}; FUND_FECHA = res[1].actualizado; }
+    ruta();
+  }).catch(function () { $("vista").innerHTML = '<div class="vacio">Todavía no hay precios cargados o no se pudieron leer.</div>'; });
+}
+cargar();
 </script>
 </body>
 </html>
