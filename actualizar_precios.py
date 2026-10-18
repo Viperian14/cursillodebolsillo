@@ -20,7 +20,7 @@ Cada empresa aparece UNA sola vez (clave ticker_yahoo) con una sola etiqueta de 
   si no, "S&P 500" si está en él; en el resto, su índice.
 Los precios en peniques (moneda GBp) se dividen entre 100 antes de convertir.
 """
-import json, os, sys
+import json, os, sys, time
 from datetime import datetime, timezone
 import pandas as pd
 import yfinance as yf
@@ -70,6 +70,43 @@ def descargar(tickers):
                 "fecha": dia.strftime("%Y-%m-%d"),
             }
     return out
+
+
+def moneda_yahoo(ticker):
+    """Moneda en la que Yahoo cotiza el valor (p. ej. GBp o GBP), o None si no la da."""
+    for intento in range(3):
+        try:
+            m = yf.Ticker(ticker).fast_info["currency"]
+            return m if m else None
+        except Exception:
+            time.sleep(1 + intento)
+    return None
+
+
+def ajustar_monedas(df):
+    """Yahoo cotiza casi todo el LSE en peniques (GBp), pero algunos valores en libras (GBP).
+    Para los valores de GBp consulta la moneda real y, si es GBP, no divide entre 100.
+    Además compara una muestra del resto contra la lista y avisa de diferencias."""
+    df = df.copy()
+    df["moneda_lista"] = df.moneda
+    cambios, dudas = [], []
+    for i, r in df[df.moneda == "GBp"].iterrows():
+        m = moneda_yahoo(r.ticker_yahoo)
+        if m is None:
+            dudas.append(r.ticker_yahoo)
+        elif m != "GBp":
+            df.at[i, "moneda"] = m
+            cambios.append(f"{r.nombre} ({r.ticker_yahoo}): lista GBp, Yahoo {m}")
+    muestra = df[~df.moneda_lista.eq("GBp")].sort_values("ticker_yahoo").iloc[::30]
+    for r in muestra.itertuples():
+        m = moneda_yahoo(r.ticker_yahoo)
+        if m and m != r.moneda:
+            print(f"AVISO moneda: {r.nombre} ({r.ticker_yahoo}): lista {r.moneda}, Yahoo {m}", file=sys.stderr)
+    for c in cambios:
+        print("Moneda corregida:", c)
+    if dudas:
+        print("Sin moneda de Yahoo (se asume GBp):", ", ".join(dudas), file=sys.stderr)
+    return df
 
 
 def descargar_fx():
@@ -148,6 +185,7 @@ def unificar(df):
 
 def main():
     df = unificar(pd.read_csv("tickers.csv", dtype=str))
+    df = ajustar_monedas(df)
     datos = descargar(sorted(df.ticker_yahoo.unique()))
     fx = construir_fx()
 
