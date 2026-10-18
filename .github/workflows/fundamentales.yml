@@ -1,0 +1,44 @@
+name: Actualizar fundamentales
+on:
+  schedule:
+    - cron: "30 5 * * *"       # una tanda diaria (una séptima parte de las empresas)
+  push:                        # prueba en las ramas de trabajo (el cron solo corre en main)
+    branches: [feature-acciones, acciones-cambios]
+    paths: [fundamentales.py, .github/workflows/fundamentales.yml]
+  workflow_dispatch:
+    inputs:
+      todo:
+        description: "Carga completa de todas las empresas"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: fundamentales
+  cancel-in-progress: false
+jobs:
+  fundamentales:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install yfinance pandas
+      - name: Calcular fundamentales
+        env:
+          FUND_TODO: ${{ inputs.todo && '1' || '' }}
+          FUND_MINUTOS: "200"
+        run: python fundamentales.py
+      - name: Guardar resultados
+        if: always()
+        run: |
+          git config user.name "bot-fundamentales"
+          git config user.email "bot@users.noreply.github.com"
+          git add fundamentales.json fundamentales_estado.json
+          git commit -m "Fundamentales $(date -u +%F\ %H:%M)" || { echo "sin cambios"; exit 0; }
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 5
+          done
+          exit 1
