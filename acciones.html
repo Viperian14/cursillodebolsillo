@@ -84,6 +84,9 @@
   table.sen th:first-child, table.sen td:first-child { position:static; box-shadow:none; }
   .voto { font-weight:700; }
   .semana { display:inline-block; margin-left:8px; font-size:12px; color:#0a0f0c; background:var(--flat); border-radius:999px; padding:1px 9px; font-weight:600; }
+  .fabmenu { position: fixed; right: 16px; bottom: 18px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); cursor: pointer; display: none; align-items: center; justify-content: center; }
+  .fabmenu svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .fabmenu.show { display: flex; }
   @media (max-width:560px){ body{padding:12px;} .nom{max-width:150px;} }
 </style>
 </head>
@@ -211,15 +214,15 @@ function inicio() {
 function sectorDe(p) { var f = FUND[p.ticker_yahoo]; return f && f.sector ? f.sector : "Sin clasificar"; }
 function vistaLista() {
   var h = "<h1>Acciones</h1>";
-  h += '<div class="sub">Precios: ' + esc(ACT_PRECIOS ? new Date(ACT_PRECIOS).toLocaleString("es-ES") : "n/d") +
-       " · Fundamentales: " + esc(FUND_FECHA ? new Date(FUND_FECHA).toLocaleString("es-ES") : "aún sin datos") +
-       (FX && FX.fecha ? " · Tipos de cambio: " + esc(fechaCorta(FX.fecha)) : "") + "</div>";
   h += '<div class="paises" role="group" aria-label="País">' + paises().map(function (c) {
     return '<button type="button" class="pais" data-pais="' + esc(c[0]) + '" aria-pressed="' + (ST.pais === c[0]) + '">' + esc(c[0]) + "<small>" + c[1] + "</small></button>";
   }).join("") + "</div>";
   h += '<input id="q" type="search" placeholder="Buscar empresa o ticker (en todos los países)" aria-label="Buscar empresa o ticker" value="' + esc(ST.q) + '">';
   h += '<div id="res"></div>';
   h += '<p class="aviso"><b>Datos con retraso, solo informativos. No es una recomendación de inversión.</b> Cierre = último precio de la sesión (cierre oficial si la bolsa ya ha cerrado). Moneda de cada cotización con su símbolo; «p» = peniques. Fuente: Yahoo Finance (no es una API oficial).</p>';
+  h += '<div class="sub" style="margin-top:12px">Precios: ' + esc(ACT_PRECIOS ? new Date(ACT_PRECIOS).toLocaleString("es-ES") : "n/d") +
+       " · Fundamentales: " + esc(FUND_FECHA ? new Date(FUND_FECHA).toLocaleString("es-ES") : "aún sin datos") +
+       (FX && FX.fecha ? " · Tipos de cambio: " + esc(fechaCorta(FX.fecha)) : "") + "</div>";
   $("vista").innerHTML = h;
   pintarResultados();
   $("q").addEventListener("input", function (e) { ST.q = e.target.value; pintarResultados(); });
@@ -263,6 +266,39 @@ function votoTxt(k, v) {
   }[k];
   return (v > 0 ? "+1 · " : v < 0 ? "−1 · " : "0 · ") + t[v + 1];
 }
+function abrev(v) {
+  if (v == null) return "n/d";
+  var a = Math.abs(v), s = v < 0 ? "−" : "";
+  if (a >= 1e9) return s + nf(a / 1e9, 2) + " mil M";
+  if (a >= 1e6) return s + nf(a / 1e6, 1) + " M";
+  return s + nf(a, 0);
+}
+function cambio(n, ant) {
+  if (n == null || ant == null || ant === 0) return '<span class="nd">n/d</span>';
+  var c = (n - ant) / Math.abs(ant) * 100;
+  return '<span class="' + (c >= 0 ? "up" : "down") + '">' + (c >= 0 ? "+" : "") + nf(c, 1) + " %</span>";
+}
+function bloqueResultados(f) {
+  var r = f.resultados;
+  if (!r || (!r.proxima && !r.ultima && !r.ingresos && !r.beneficio)) return '<div class="caja" style="margin-top:10px"><h3>Resultados</h3><div class="s">Yahoo no da datos de resultados de esta empresa por ahora.</div></div>';
+  var h = '<div class="caja" style="margin-top:10px"><h3>Resultados</h3>';
+  h += '<p class="s" style="margin:0 0 8px">Próxima presentación: <b>' + esc(r.proxima ? fechaCorta(r.proxima) : "sin fecha") + "</b>" +
+       (r.ultima ? " · Última presentación: <b>" + esc(fechaCorta(r.ultima)) + "</b>" : "") + "</p>";
+  if (r.bpa_real != null) {
+    h += '<p class="s" style="margin:0 0 8px">Beneficio por acción (BPA): real <b>' + nf(r.bpa_real, 2) + "</b>" +
+         (r.bpa_est != null ? " frente a " + nf(r.bpa_est, 2) + " esperado" : "") +
+         (r.sorpresa != null ? ' · <span class="' + (r.sorpresa >= 0 ? "up" : "down") + '">' + (r.sorpresa >= 0 ? "+" : "") + nf(r.sorpresa, 1) + " % de sorpresa</span>" : "") + "</p>";
+  }
+  if (r.ingresos || r.beneficio) {
+    h += '<div class="tabla"><table class="sen"><thead><tr><th>Último trimestre' + (r.periodo ? " (" + esc(fechaCorta(r.periodo)) + ")" : "") + "</th><th>Importe</th><th>Vs. trimestre anterior</th><th>Vs. mismo trimestre año anterior</th></tr></thead><tbody>";
+    [["Ingresos", r.ingresos], ["Beneficio neto", r.beneficio]].forEach(function (x) {
+      var d = x[1]; if (!d) return;
+      h += "<tr><td>" + x[0] + '</td><td class="num">' + abrev(d.ultimo) + '</td><td class="num">' + cambio(d.ultimo, d.anterior) + '</td><td class="num">' + cambio(d.ultimo, d["año_anterior"]) + "</td></tr>";
+    });
+    h += '</tbody></table></div><p class="s">Importes en la moneda de sus cuentas (M = millones). Datos de Yahoo Finance, pueden tener retraso.</p>';
+  }
+  return h + "</div>";
+}
 function vistaFicha(t) {
   var p = POR_TICKER[t]; if (!p) { location.hash = ""; return; }
   var f = FUND[t], v = varp(p), cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
@@ -299,6 +335,7 @@ function vistaFicha(t) {
     var g = f.grupo || {};
     h += '<p class="s">Se compara con <b>' + (g.n || "?") + "</b> empresas de " + esc(g.sector || "") + " en " + esc(g.pais || "") + (g.pequeno ? " · <b>grupo pequeño</b>: la comparación es poco fiable" : "") +
          ". Último trimestre: " + esc(fechaCorta(f.trimestre)) + ". Datos del " + esc(fechaCorta(f.fecha)) + ".</p>";
+    h += bloqueResultados(f);
     if (f.puntuacion == null && f.faltan && f.faltan.length) h += '<p class="s"><b>Datos insuficientes.</b> Faltan: ' + esc(f.faltan.join(", ")) + ".</p>";
     h += "</div>";
   } else {
@@ -354,6 +391,12 @@ function cargar() {
     ruta();
   }).catch(function () { $("vista").innerHTML = '<div class="vacio">Todavía no hay precios cargados o no se pudieron leer.</div>'; });
 }
+var fab = document.createElement("button");
+fab.type = "button"; fab.className = "fabmenu"; fab.setAttribute("aria-label", "Subir al principio de la página");
+fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg>';
+document.body.appendChild(fab);
+fab.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+window.addEventListener("scroll", function () { fab.classList.toggle("show", (window.pageYOffset || 0) > 400); }, { passive: true });
 cargar();
 </script>
 </body>
