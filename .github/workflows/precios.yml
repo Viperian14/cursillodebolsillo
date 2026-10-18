@@ -8,7 +8,7 @@ on:
     - cron: "0 17 * * 1-5"    # cierre Europa
     - cron: "30 21 * * 1-5"   # cierre EE. UU.
   push:                # prueba en la rama de trabajo (el cron solo corre en main)
-    branches: [feature-acciones]
+    branches: [feature-acciones, acciones-cambios]
     paths: [actualizar_precios.py, tickers.csv, .github/workflows/precios.yml]
   workflow_dispatch:           # botón "Run workflow" (solo aparece cuando el archivo esté en main)
 permissions:
