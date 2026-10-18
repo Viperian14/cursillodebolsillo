@@ -568,7 +568,7 @@ IBEX 35,Unicaja,BME:UNI,UNI.MC,España,BME Madrid,EUR
 CAC 40,Accor,EPA:AC,AC.PA,Francia,Euronext Paris,EUR
 CAC 40,Air Liquide,EPA:AI,AI.PA,Francia,Euronext Paris,EUR
 CAC 40,Airbus,EPA:AIR,AIR.PA,Francia,Euronext Paris,EUR
-CAC 40,ArcelorMittal,EPA:MT,MT.PA,Francia,Euronext Paris,EUR
+CAC 40,ArcelorMittal,AMS:MT,MT.AS,Países Bajos,Euronext Ámsterdam,EUR
 CAC 40,AXA,EPA:CS,CS.PA,Francia,Euronext Paris,EUR
 CAC 40,BNP Paribas,EPA:BNP,BNP.PA,Francia,Euronext Paris,EUR
 CAC 40,Bouygues,EPA:EN,EN.PA,Francia,Euronext Paris,EUR
@@ -658,7 +658,6 @@ FTSE 100,Aviva,LON:AV,AV.L,Reino Unido,LSE,GBp
 FTSE 100,BAE Systems,LON:BA,BA.L,Reino Unido,LSE,GBp
 FTSE 100,Barclays,LON:BARC,BARC.L,Reino Unido,LSE,GBp
 FTSE 100,Barratt Redrow,LON:BTRW,BTRW.L,Reino Unido,LSE,GBp
-FTSE 100,Beazley,LON:BEZ,BEZ.L,Reino Unido,LSE,GBp
 FTSE 100,BP,LON:BP,BP.L,Reino Unido,LSE,GBp
 FTSE 100,British American Tobacco,LON:BATS,BATS.L,Reino Unido,LSE,GBp
 FTSE 100,BT Group,LON:BT.A,BT-A.L,Reino Unido,LSE,GBp
@@ -713,7 +712,6 @@ FTSE 100,Rio Tinto,LON:RIO,RIO.L,Reino Unido,LSE,GBp
 FTSE 100,Rolls-Royce,LON:RR,RR.L,Reino Unido,LSE,GBp
 FTSE 100,Sage,LON:SGE,SGE.L,Reino Unido,LSE,GBp
 FTSE 100,Sainsbury's,LON:SBRY,SBRY.L,Reino Unido,LSE,GBp
-FTSE 100,Schroders,LON:SDR,SDR.L,Reino Unido,LSE,GBp
 FTSE 100,Segro,LON:SGRO,SGRO.L,Reino Unido,LSE,GBp
 FTSE 100,Severn Trent,LON:SVT,SVT.L,Reino Unido,LSE,GBp
 FTSE 100,Shell,LON:SHEL,SHEL.L,Reino Unido,LSE,GBp
