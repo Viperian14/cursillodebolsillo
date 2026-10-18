@@ -155,10 +155,10 @@ var COLS = [
   ["nombre", "Acción", "", 0], ["apertura", "Apertura", "num", 0], ["cierre", "Cierre", "num", 0],
   ["conv", "Conversión", "num", "conv"], ["var", "Var.", "num", "var"], ["punt", "Puntuación", "", "punt"]
 ];
-function cabecera() {
+function cabecera(fijo) {
   return "<thead><tr>" + COLS.map(function (c) {
     var act = ST.orden.k === c[0], fl = act ? (ST.orden.d === 1 ? "▲" : "▼") : "";
-    return '<th class="' + c[2] + '" aria-sort="' + (act ? (ST.orden.d === 1 ? "ascending" : "descending") : "none") + '"><button type="button" class="ord" data-ord="' + c[0] + '">' + c[1] + '<span class="fl">' + fl + "</span></button>" + (c[3] ? q(c[3]) : "") + "</th>";
+    return '<th class="' + c[2] + '" aria-sort="' + (act ? (ST.orden.d === 1 ? "ascending" : "descending") : "none") + '">' + (fijo ? c[1] : '<button type="button" class="ord" data-ord="' + c[0] + '">' + c[1] + '<span class="fl">' + fl + "</span></button>") + (c[3] ? q(c[3]) : "") + "</th>";
   }).join("") + "</tr></thead>";
 }
 function fila(p) {
@@ -171,9 +171,9 @@ function fila(p) {
     '<td class="num conv"><span>' + dolares(p.precio_usd) + "</span><span>" + euros(p.precio_eur) + '</span></td>' +
     '<td class="num ' + cls + '">' + vt + "</td><td>" + chipPunt(f) + "</td></tr>";
 }
-function tablaHtml(lista, clave) {
-  var ord = ordenar(lista), n = ST.pagina[clave] || 50, vis = ord.slice(0, n);
-  var h = '<div class="tabla"><table>' + cabecera() + "<tbody>" + vis.map(fila).join("") + "</tbody></table></div>";
+function tablaHtml(lista, clave, fijo) {
+  var ord = fijo ? lista : ordenar(lista), n = fijo ? 9999 : (ST.pagina[clave] || 50), vis = ord.slice(0, n);
+  var h = '<div class="tabla"><table>' + cabecera(fijo) + "<tbody>" + vis.map(fila).join("") + "</tbody></table></div>";
   if (ord.length > n) h += '<button type="button" class="mas" data-mas="' + esc(clave) + '">Mostrar más (' + (ord.length - n) + " restantes)</button>";
   if (!ord.length) h = '<div class="vacio">Sin empresas.</div>';
   return h + '<div id="ay-' + esc(clave) + '"></div>';
@@ -188,6 +188,25 @@ function paises() {
     if (ia < 0 && ib < 0) return a.localeCompare(b, "es"); if (ia < 0) return 1; if (ib < 0) return -1; return ia - ib;
   });
   return ks.map(function (k) { return [k, m[k]]; });
+}
+var SECT_EN = { "Tecnología de la información": "Information Technology", "Finanzas": "Financials", "Salud": "Health Care", "Industriales": "Industrials", "Consumo discrecional": "Consumer Discretionary", "Consumo básico": "Consumer Staples", "Energía": "Energy", "Materiales": "Materials", "Bienes raíces": "Real Estate", "Servicios de comunicación": "Communication Services", "Servicios públicos": "Utilities", "Sin clasificar": "Unclassified" };
+function inicio() {
+  var con = PRECIOS.filter(function (p) { var f = FUND[p.ticker_yahoo]; return f && f.puntuacion != null; });
+  if (!con.length) return '<div class="vacio">Elige un país para ver sus sectores, o busca una empresa.</div>';
+  var h = '<p class="sub">Resumen inicial: 10 de EE. UU. y 5 de cada uno de los demás países. Para ver más, elige un país y abre sus sectores.</p>';
+  [["Más favorables", -1], ["Más desfavorables", 1]].forEach(function (blk) {
+    h += "<h2>" + blk[0] + "</h2>";
+    paises().forEach(function (c) {
+      var n = c[0] === "EE. UU." ? 10 : 5;
+      var l = con.filter(function (p) { return p.pais === c[0]; }).sort(function (a, b) {
+        var d = (FUND[a.ticker_yahoo].puntuacion - FUND[b.ticker_yahoo].puntuacion) * blk[1];
+        return d || a.nombre.localeCompare(b.nombre, "es");
+      }).slice(0, n);
+      if (!l.length) return;
+      h += '<div class="bloque"><h3 style="margin:14px 14px 4px;color:var(--fg);font-size:15px">' + esc(c[0]) + "</h3>" + tablaHtml(l, "ini|" + blk[0] + "|" + c[0], true) + "</div>";
+    });
+  });
+  return h;
 }
 function sectorDe(p) { var f = FUND[p.ticker_yahoo]; return f && f.sector ? f.sector : "Sin clasificar"; }
 function vistaLista() {
@@ -212,13 +231,13 @@ function pintarResultados() {
     res.innerHTML = "<h2>Resultados (" + l.length + ")</h2>" + tablaHtml(l, "busqueda");
     return;
   }
-  if (!ST.pais) { res.innerHTML = '<div class="vacio">Elige un país para ver sus sectores, o busca una empresa.</div>'; return; }
+  if (!ST.pais) { res.innerHTML = inicio(); return; }
   var del = PRECIOS.filter(function (p) { return p.pais === ST.pais; }), por = {};
   del.forEach(function (p) { var s = sectorDe(p); (por[s] = por[s] || []).push(p); });
   var ss = Object.keys(por).sort(function (a, b) { if (a === "Sin clasificar") return 1; if (b === "Sin clasificar") return -1; return a.localeCompare(b, "es"); });
   res.innerHTML = ss.map(function (s) {
     var clave = ST.pais + "|" + s;
-    return '<details class="sector" data-clave="' + esc(clave) + '"' + (ST.abiertos[clave] ? " open" : "") + "><summary>" + esc(s) + "<span>" + por[s].length + " empresas</span></summary><div class=\"cuerpo\">" + (ST.abiertos[clave] ? tablaHtml(por[s], clave) : "") + "</div></details>";
+    return '<details class="sector" data-clave="' + esc(clave) + '"' + (ST.abiertos[clave] ? " open" : "") + "><summary>" + esc(s) + (SECT_EN[s] ? " <em style=\"color:var(--muted);font-weight:400;font-style:normal\">(" + esc(SECT_EN[s]) + ")</em>" : "") + "<span>" + por[s].length + " empresas</span></summary><div class=\"cuerpo\">" + (ST.abiertos[clave] ? tablaHtml(por[s], clave) : "") + "</div></details>";
   }).join("");
   res.__por = por;
 }
@@ -299,7 +318,7 @@ document.addEventListener("click", function (ev) {
   var T = ev.target; if (!T.closest) return;
   var a = T.closest("[data-ayuda]");
   if (a) {
-    var k = a.getAttribute("data-ayuda"), host = a.closest(".caja") ? $("ay-ficha") : (a.closest("details") ? a.closest("details").querySelector('[id^="ay-"]') : document.querySelector('[id^="ay-"]'));
+    var k = a.getAttribute("data-ayuda"), host = a.closest(".bloque") ? a.closest(".bloque").querySelector('[id^="ay-"]') : a.closest(".caja") ? $("ay-ficha") : (a.closest("details") ? a.closest("details").querySelector('[id^="ay-"]') : document.querySelector('[id^="ay-"]'));
     if (!host && $("ay-busqueda")) host = $("ay-busqueda");
     if (host) { var abierto = host.getAttribute("data-k") === k && host.innerHTML; host.setAttribute("data-k", abierto ? "" : k); host.innerHTML = abierto ? "" : '<div class="pop" role="note">' + esc(AYUDA[k]) + "</div>"; }
     return;
