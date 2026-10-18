@@ -1,0 +1,1406 @@
+indice,nombre,ticker_google,ticker_yahoo,pais,bolsa,moneda
+Dow Jones 30,Apple,NASDAQ:AAPL,AAPL,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Amgen,NASDAQ:AMGN,AMGN,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Amazon,NASDAQ:AMZN,AMZN,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,American Express,NYSE:AXP,AXP,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Boeing,NYSE:BA,BA,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Caterpillar,NYSE:CAT,CAT,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Salesforce,NYSE:CRM,CRM,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Cisco,NASDAQ:CSCO,CSCO,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Chevron,NYSE:CVX,CVX,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Disney,NYSE:DIS,DIS,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Goldman Sachs,NYSE:GS,GS,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Home Depot,NYSE:HD,HD,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Honeywell,NASDAQ:HON,HON,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,IBM,NYSE:IBM,IBM,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Johnson & Johnson,NYSE:JNJ,JNJ,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,JPMorgan Chase,NYSE:JPM,JPM,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Coca-Cola,NYSE:KO,KO,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,McDonald's,NYSE:MCD,MCD,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,3M,NYSE:MMM,MMM,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Merck,NYSE:MRK,MRK,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Microsoft,NASDAQ:MSFT,MSFT,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Nike,NYSE:NKE,NKE,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Nvidia,NASDAQ:NVDA,NVDA,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Procter & Gamble,NYSE:PG,PG,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Sherwin-Williams,NYSE:SHW,SHW,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Travelers,NYSE:TRV,TRV,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,UnitedHealth,NYSE:UNH,UNH,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Visa,NYSE:V,V,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Verizon,NYSE:VZ,VZ,EE. UU.,NYSE/Nasdaq,USD
+Dow Jones 30,Walmart,NASDAQ:WMT,WMT,EE. UU.,NYSE/Nasdaq,USD
+S&P 500,3M,NYSE:MMM,MMM,EE. UU.,NYSE,USD
+S&P 500,A O Smith,NYSE:AOS,AOS,EE. UU.,NYSE,USD
+S&P 500,Abbott Laboratories,NYSE:ABT,ABT,EE. UU.,NYSE,USD
+S&P 500,Abbvie,NYSE:ABBV,ABBV,EE. UU.,NYSE,USD
+S&P 500,Accenture Plc Class A,NYSE:ACN,ACN,EE. UU.,NYSE,USD
+S&P 500,Adobe Inc,NASDAQ:ADBE,ADBE,EE. UU.,Nasdaq,USD
+S&P 500,Advanced Micro Devices,NASDAQ:AMD,AMD,EE. UU.,Nasdaq,USD
+S&P 500,Aes,NYSE:AES,AES,EE. UU.,NYSE,USD
+S&P 500,Aflac,NYSE:AFL,AFL,EE. UU.,NYSE,USD
+S&P 500,Agilent Technologies Inc,NYSE:A,A,EE. UU.,NYSE,USD
+S&P 500,Air Products And Chemicals,NYSE:APD,APD,EE. UU.,NYSE,USD
+S&P 500,Airbnb Class A,NASDAQ:ABNB,ABNB,EE. UU.,Nasdaq,USD
+S&P 500,Akamai Technologies Inc,NASDAQ:AKAM,AKAM,EE. UU.,Nasdaq,USD
+S&P 500,Albemarle Corp,NYSE:ALB,ALB,EE. UU.,NYSE,USD
+S&P 500,Alexandria Real Estate Equities Re,NYSE:ARE,ARE,EE. UU.,NYSE,USD
+S&P 500,Align Technology,NASDAQ:ALGN,ALGN,EE. UU.,Nasdaq,USD
+S&P 500,Allegion Plc,NYSE:ALLE,ALLE,EE. UU.,NYSE,USD
+S&P 500,Alliant Energy Corp,NASDAQ:LNT,LNT,EE. UU.,Nasdaq,USD
+S&P 500,Allstate Corp,NYSE:ALL,ALL,EE. UU.,NYSE,USD
+S&P 500,Alphabet Class A,NASDAQ:GOOGL,GOOGL,EE. UU.,Nasdaq,USD
+S&P 500,Alphabet Class C,NASDAQ:GOOG,GOOG,EE. UU.,Nasdaq,USD
+S&P 500,Altria Group Inc,NYSE:MO,MO,EE. UU.,NYSE,USD
+S&P 500,Amazon.Com Inc,NASDAQ:AMZN,AMZN,EE. UU.,Nasdaq,USD
+S&P 500,Amcor Plc,NYSE:AMCR,AMCR,EE. UU.,NYSE,USD
+S&P 500,Ameren,NYSE:AEE,AEE,EE. UU.,NYSE,USD
+S&P 500,American Electric Power Inc,NASDAQ:AEP,AEP,EE. UU.,Nasdaq,USD
+S&P 500,American Express,NYSE:AXP,AXP,EE. UU.,NYSE,USD
+S&P 500,American International Group,NYSE:AIG,AIG,EE. UU.,NYSE,USD
+S&P 500,American Tower Reit,NYSE:AMT,AMT,EE. UU.,NYSE,USD
+S&P 500,American Water Works,NYSE:AWK,AWK,EE. UU.,NYSE,USD
+S&P 500,Ameriprise Finance Inc,NYSE:AMP,AMP,EE. UU.,NYSE,USD
+S&P 500,Ametek Inc,NYSE:AME,AME,EE. UU.,NYSE,USD
+S&P 500,Amgen Inc,NASDAQ:AMGN,AMGN,EE. UU.,Nasdaq,USD
+S&P 500,Amphenol Corp Class A,NYSE:APH,APH,EE. UU.,NYSE,USD
+S&P 500,Analog Devices,NASDAQ:ADI,ADI,EE. UU.,Nasdaq,USD
+S&P 500,Aon Plc Class A,NYSE:AON,AON,EE. UU.,NYSE,USD
+S&P 500,Apa,NASDAQ:APA,APA,EE. UU.,Nasdaq,USD
+S&P 500,Apollo Global Management,NYSE:APO,APO,EE. UU.,NYSE,USD
+S&P 500,Apple,NASDAQ:AAPL,AAPL,EE. UU.,Nasdaq,USD
+S&P 500,Applied Material Inc,NASDAQ:AMAT,AMAT,EE. UU.,Nasdaq,USD
+S&P 500,Applovin Class A,NASDAQ:APP,APP,EE. UU.,Nasdaq,USD
+S&P 500,Aptiv Plc,NYSE:APTV,APTV,EE. UU.,NYSE,USD
+S&P 500,Arch Capital Group,NASDAQ:ACGL,ACGL,EE. UU.,Nasdaq,USD
+S&P 500,Archer Daniels Midland,NYSE:ADM,ADM,EE. UU.,NYSE,USD
+S&P 500,Ares Management Class A,NYSE:ARES,ARES,EE. UU.,NYSE,USD
+S&P 500,Arista Networks,NYSE:ANET,ANET,EE. UU.,NYSE,USD
+S&P 500,Arthur J Gallagher,NYSE:AJG,AJG,EE. UU.,NYSE,USD
+S&P 500,Assurant Inc,NYSE:AIZ,AIZ,EE. UU.,NYSE,USD
+S&P 500,At&T,NYSE:T,T,EE. UU.,NYSE,USD
+S&P 500,Atmos Energy,NYSE:ATO,ATO,EE. UU.,NYSE,USD
+S&P 500,Autodesk,NASDAQ:ADSK,ADSK,EE. UU.,Nasdaq,USD
+S&P 500,Automatic Data Processing Inc,NASDAQ:ADP,ADP,EE. UU.,Nasdaq,USD
+S&P 500,Autozone,NYSE:AZO,AZO,EE. UU.,NYSE,USD
+S&P 500,Avery Dennison Corp,NYSE:AVY,AVY,EE. UU.,NYSE,USD
+S&P 500,Axon Enterprise,NASDAQ:AXON,AXON,EE. UU.,Nasdaq,USD
+S&P 500,Baker Hughes Class A,NASDAQ:BKR,BKR,EE. UU.,Nasdaq,USD
+S&P 500,Ball Corp,NYSE:BALL,BALL,EE. UU.,NYSE,USD
+S&P 500,Bank Of America,NYSE:BAC,BAC,EE. UU.,NYSE,USD
+S&P 500,Bank Of New York Mellon Corp,NYSE:BNY,BNY,EE. UU.,NYSE,USD
+S&P 500,Baxter International,NYSE:BAX,BAX,EE. UU.,NYSE,USD
+S&P 500,Becton Dickinson,NYSE:BDX,BDX,EE. UU.,NYSE,USD
+S&P 500,Berkshire Hathaway Inc Class B,NYSE:BRK.B,BRK-B,EE. UU.,NYSE,USD
+S&P 500,Best Buy,NYSE:BBY,BBY,EE. UU.,NYSE,USD
+S&P 500,Bio Techne,NASDAQ:TECH,TECH,EE. UU.,Nasdaq,USD
+S&P 500,Biogen,NASDAQ:BIIB,BIIB,EE. UU.,Nasdaq,USD
+S&P 500,Blackrock,NYSE:BLK,BLK,EE. UU.,NYSE,USD
+S&P 500,Blackstone,NYSE:BX,BX,EE. UU.,NYSE,USD
+S&P 500,Block Class A,NYSE:XYZ,XYZ,EE. UU.,NYSE,USD
+S&P 500,Bloom Energy Class A,NYSE:BE,BE,EE. UU.,NYSE,USD
+S&P 500,Boeing,NYSE:BA,BA,EE. UU.,NYSE,USD
+S&P 500,Booking Holdings,NASDAQ:BKNG,BKNG,EE. UU.,Nasdaq,USD
+S&P 500,Boston Scientific Corp,NYSE:BSX,BSX,EE. UU.,NYSE,USD
+S&P 500,Bristol Myers Squibb,NYSE:BMY,BMY,EE. UU.,NYSE,USD
+S&P 500,Broadcom Inc,NASDAQ:AVGO,AVGO,EE. UU.,Nasdaq,USD
+S&P 500,Broadridge Financial Solutions Inc,NYSE:BR,BR,EE. UU.,NYSE,USD
+S&P 500,Brown & Brown Inc,NYSE:BRO,BRO,EE. UU.,NYSE,USD
+S&P 500,Brown Forman Class B,NYSE:BF.B,BF-B,EE. UU.,NYSE,USD
+S&P 500,Bunge Global Sa,NYSE:BG,BG,EE. UU.,NYSE,USD
+S&P 500,Bxp,NYSE:BXP,BXP,EE. UU.,NYSE,USD
+S&P 500,Cadence Design Systems,NASDAQ:CDNS,CDNS,EE. UU.,Nasdaq,USD
+S&P 500,Camden Property Trust Reit,NYSE:CPT,CPT,EE. UU.,NYSE,USD
+S&P 500,Capital One Financial Corp,NYSE:COF,COF,EE. UU.,NYSE,USD
+S&P 500,Cardinal Health,NYSE:CAH,CAH,EE. UU.,NYSE,USD
+S&P 500,Carnival Corp Ltd,NYSE:CCL,CCL,EE. UU.,NYSE,USD
+S&P 500,Carrier Global,NYSE:CARR,CARR,EE. UU.,NYSE,USD
+S&P 500,Carvana Class A,NYSE:CVNA,CVNA,EE. UU.,NYSE,USD
+S&P 500,Caseys General Stores Inc,NASDAQ:CASY,CASY,EE. UU.,Nasdaq,USD
+S&P 500,Caterpillar Inc,NYSE:CAT,CAT,EE. UU.,NYSE,USD
+S&P 500,Cboe Global Markets,BATS:CBOE,CBOE,EE. UU.,Cboe BZX,USD
+S&P 500,Cbre Group Class A,NYSE:CBRE,CBRE,EE. UU.,NYSE,USD
+S&P 500,Cdw,NASDAQ:CDW,CDW,EE. UU.,Nasdaq,USD
+S&P 500,Cencora,NYSE:COR,COR,EE. UU.,NYSE,USD
+S&P 500,Centene Corp,NYSE:CNC,CNC,EE. UU.,NYSE,USD
+S&P 500,Centerpoint Energy,NYSE:CNP,CNP,EE. UU.,NYSE,USD
+S&P 500,Cf Industries Holdings Inc,NYSE:CF,CF,EE. UU.,NYSE,USD
+S&P 500,Ch Robinson Worldwide,NASDAQ:CHRW,CHRW,EE. UU.,Nasdaq,USD
+S&P 500,Charles River Laboratories Interna,NYSE:CRL,CRL,EE. UU.,NYSE,USD
+S&P 500,Charles Schwab,NYSE:SCHW,SCHW,EE. UU.,NYSE,USD
+S&P 500,Charter Communications Class A,NASDAQ:CHTR,CHTR,EE. UU.,Nasdaq,USD
+S&P 500,Chevron,NYSE:CVX,CVX,EE. UU.,NYSE,USD
+S&P 500,Chipotle Mexican Grill,NYSE:CMG,CMG,EE. UU.,NYSE,USD
+S&P 500,Chubb,NYSE:CB,CB,EE. UU.,NYSE,USD
+S&P 500,Church And Dwight Inc,NYSE:CHD,CHD,EE. UU.,NYSE,USD
+S&P 500,Ciena,NYSE:CIEN,CIEN,EE. UU.,NYSE,USD
+S&P 500,Cigna,NYSE:CI,CI,EE. UU.,NYSE,USD
+S&P 500,Cincinnati Financial,NASDAQ:CINF,CINF,EE. UU.,Nasdaq,USD
+S&P 500,Cintas,NASDAQ:CTAS,CTAS,EE. UU.,Nasdaq,USD
+S&P 500,Cisco Systems Inc,NASDAQ:CSCO,CSCO,EE. UU.,Nasdaq,USD
+S&P 500,Citigroup,NYSE:C,C,EE. UU.,NYSE,USD
+S&P 500,Citizens Financial Group Inc,NYSE:CFG,CFG,EE. UU.,NYSE,USD
+S&P 500,Clorox,NYSE:CLX,CLX,EE. UU.,NYSE,USD
+S&P 500,Cme Group Class A,NASDAQ:CME,CME,EE. UU.,Nasdaq,USD
+S&P 500,Cms Energy,NYSE:CMS,CMS,EE. UU.,NYSE,USD
+S&P 500,Coca-Cola,NYSE:KO,KO,EE. UU.,NYSE,USD
+S&P 500,Cognizant Technology Solutions Cla,NASDAQ:CTSH,CTSH,EE. UU.,Nasdaq,USD
+S&P 500,Coherent,NYSE:COHR,COHR,EE. UU.,NYSE,USD
+S&P 500,Coinbase Global Class A,NASDAQ:COIN,COIN,EE. UU.,Nasdaq,USD
+S&P 500,Colgate-Palmolive,NYSE:CL,CL,EE. UU.,NYSE,USD
+S&P 500,Comcast Class A,NASDAQ:CMCSA,CMCSA,EE. UU.,Nasdaq,USD
+S&P 500,Comfort Systems Usa,NYSE:FIX,FIX,EE. UU.,NYSE,USD
+S&P 500,Conocophillips,NYSE:COP,COP,EE. UU.,NYSE,USD
+S&P 500,Consolidated Edison,NYSE:ED,ED,EE. UU.,NYSE,USD
+S&P 500,Constellation Brands Class A,NYSE:STZ,STZ,EE. UU.,NYSE,USD
+S&P 500,Constellation Energy Corp,NASDAQ:CEG,CEG,EE. UU.,Nasdaq,USD
+S&P 500,Cooper,NASDAQ:COO,COO,EE. UU.,Nasdaq,USD
+S&P 500,Copart Inc,NASDAQ:CPRT,CPRT,EE. UU.,Nasdaq,USD
+S&P 500,Corning,NYSE:GLW,GLW,EE. UU.,NYSE,USD
+S&P 500,Corpay,NYSE:CPAY,CPAY,EE. UU.,NYSE,USD
+S&P 500,Costar Group,NASDAQ:CSGP,CSGP,EE. UU.,Nasdaq,USD
+S&P 500,Costco Wholesale Corp,NASDAQ:COST,COST,EE. UU.,Nasdaq,USD
+S&P 500,Crh Public Limited Plc,NYSE:CRH,CRH,EE. UU.,NYSE,USD
+S&P 500,Crowdstrike Holdings Class A,NASDAQ:CRWD,CRWD,EE. UU.,Nasdaq,USD
+S&P 500,Crown Castle Inc,NYSE:CCI,CCI,EE. UU.,NYSE,USD
+S&P 500,Csx,NASDAQ:CSX,CSX,EE. UU.,Nasdaq,USD
+S&P 500,Cummins Inc,NYSE:CMI,CMI,EE. UU.,NYSE,USD
+S&P 500,Cvs Health,NYSE:CVS,CVS,EE. UU.,NYSE,USD
+S&P 500,D R Horton,NYSE:DHI,DHI,EE. UU.,NYSE,USD
+S&P 500,Danaher,NYSE:DHR,DHR,EE. UU.,NYSE,USD
+S&P 500,Darden Restaurants Inc,NYSE:DRI,DRI,EE. UU.,NYSE,USD
+S&P 500,Datadog Inc Class A,NASDAQ:DDOG,DDOG,EE. UU.,Nasdaq,USD
+S&P 500,Davita Inc,NYSE:DVA,DVA,EE. UU.,NYSE,USD
+S&P 500,Deckers Outdoor,NYSE:DECK,DECK,EE. UU.,NYSE,USD
+S&P 500,Deere,NYSE:DE,DE,EE. UU.,NYSE,USD
+S&P 500,Dell Technologies Inc Class C,NYSE:DELL,DELL,EE. UU.,NYSE,USD
+S&P 500,Delta Air Lines,NYSE:DAL,DAL,EE. UU.,NYSE,USD
+S&P 500,Devon Energy,NYSE:DVN,DVN,EE. UU.,NYSE,USD
+S&P 500,Dexcom Inc,NASDAQ:DXCM,DXCM,EE. UU.,Nasdaq,USD
+S&P 500,Diamondback Energy,NASDAQ:FANG,FANG,EE. UU.,Nasdaq,USD
+S&P 500,Digital Realty Trust Reit,NYSE:DLR,DLR,EE. UU.,NYSE,USD
+S&P 500,Dollar General Corp,NYSE:DG,DG,EE. UU.,NYSE,USD
+S&P 500,Dollar Tree Inc,NASDAQ:DLTR,DLTR,EE. UU.,Nasdaq,USD
+S&P 500,Dominion Energy,NYSE:D,D,EE. UU.,NYSE,USD
+S&P 500,Dominos Pizza,NASDAQ:DPZ,DPZ,EE. UU.,Nasdaq,USD
+S&P 500,Doordash Class A,NASDAQ:DASH,DASH,EE. UU.,Nasdaq,USD
+S&P 500,Dover Corp,NYSE:DOV,DOV,EE. UU.,NYSE,USD
+S&P 500,Dow,NYSE:DOW,DOW,EE. UU.,NYSE,USD
+S&P 500,Dte Energy,NYSE:DTE,DTE,EE. UU.,NYSE,USD
+S&P 500,Duke Energy Corp,NYSE:DUK,DUK,EE. UU.,NYSE,USD
+S&P 500,Dupont De Nemours,NYSE:DD,DD,EE. UU.,NYSE,USD
+S&P 500,Eaton Plc,NYSE:ETN,ETN,EE. UU.,NYSE,USD
+S&P 500,Ebay,NASDAQ:EBAY,EBAY,EE. UU.,Nasdaq,USD
+S&P 500,Echostar Class A,NASDAQ:ECHO,ECHO,EE. UU.,Nasdaq,USD
+S&P 500,Ecolab,NYSE:ECL,ECL,EE. UU.,NYSE,USD
+S&P 500,Edison International,NYSE:EIX,EIX,EE. UU.,NYSE,USD
+S&P 500,Edwards Lifesciences,NYSE:EW,EW,EE. UU.,NYSE,USD
+S&P 500,Elevance Health Inc,NYSE:ELV,ELV,EE. UU.,NYSE,USD
+S&P 500,Eli Lilly,NYSE:LLY,LLY,EE. UU.,NYSE,USD
+S&P 500,Emcor Group,NYSE:EME,EME,EE. UU.,NYSE,USD
+S&P 500,Emerson Electric,NYSE:EMR,EMR,EE. UU.,NYSE,USD
+S&P 500,Entergy Corp,NYSE:ETR,ETR,EE. UU.,NYSE,USD
+S&P 500,Eog Resources,NYSE:EOG,EOG,EE. UU.,NYSE,USD
+S&P 500,Eqt,NYSE:EQT,EQT,EE. UU.,NYSE,USD
+S&P 500,Equifax,NYSE:EFX,EFX,EE. UU.,NYSE,USD
+S&P 500,Equinix Reit,NASDAQ:EQIX,EQIX,EE. UU.,Nasdaq,USD
+S&P 500,Erie Indemnity Class A,NASDAQ:ERIE,ERIE,EE. UU.,Nasdaq,USD
+S&P 500,Essex Property Trust Reit,NYSE:ESS,ESS,EE. UU.,NYSE,USD
+S&P 500,Estee Lauder Inc Class A,NYSE:EL,EL,EE. UU.,NYSE,USD
+S&P 500,Everest Group,NYSE:EG,EG,EE. UU.,NYSE,USD
+S&P 500,Evergy,NASDAQ:EVRG,EVRG,EE. UU.,Nasdaq,USD
+S&P 500,Everpure Inc Class A,NYSE:P,P,EE. UU.,NYSE,USD
+S&P 500,Eversource Energy,NYSE:ES,ES,EE. UU.,NYSE,USD
+S&P 500,Exelon Corp,NASDAQ:EXC,EXC,EE. UU.,Nasdaq,USD
+S&P 500,Expand Energy,NASDAQ:EXE,EXE,EE. UU.,Nasdaq,USD
+S&P 500,Expedia Group,NASDAQ:EXPE,EXPE,EE. UU.,Nasdaq,USD
+S&P 500,Expeditors International Of Washin,NYSE:EXPD,EXPD,EE. UU.,NYSE,USD
+S&P 500,Extra Space Storage Reit,NYSE:EXR,EXR,EE. UU.,NYSE,USD
+S&P 500,Exxonmobil Holdings Corp,NYSE:XOM,XOM,EE. UU.,NYSE,USD
+S&P 500,F5,NASDAQ:FFIV,FFIV,EE. UU.,Nasdaq,USD
+S&P 500,Factset Research Systems,NYSE:FDS,FDS,EE. UU.,NYSE,USD
+S&P 500,Fair Isaac,NYSE:FICO,FICO,EE. UU.,NYSE,USD
+S&P 500,Fastenal,NASDAQ:FAST,FAST,EE. UU.,Nasdaq,USD
+S&P 500,Federal Realty Investment Trust Re,NYSE:FRT,FRT,EE. UU.,NYSE,USD
+S&P 500,Fedex Corp,NYSE:FDX,FDX,EE. UU.,NYSE,USD
+S&P 500,Fedex Freight Holding Company Inc,NYSE:FDXF,FDXF,EE. UU.,NYSE,USD
+S&P 500,Ferguson Enterprises,NYSE:FERG,FERG,EE. UU.,NYSE,USD
+S&P 500,Fidelity National Information Serv,NYSE:FIS,FIS,EE. UU.,NYSE,USD
+S&P 500,Fifth Third Bancorp,NYSE:FITB,FITB,EE. UU.,NYSE,USD
+S&P 500,First Solar,NASDAQ:FSLR,FSLR,EE. UU.,Nasdaq,USD
+S&P 500,Firstenergy Corp,NYSE:FE,FE,EE. UU.,NYSE,USD
+S&P 500,Fiserv Inc,NASDAQ:FISV,FISV,EE. UU.,Nasdaq,USD
+S&P 500,Flex Ltd,NASDAQ:FLEX,FLEX,EE. UU.,Nasdaq,USD
+S&P 500,Ford Motor Co,NYSE:F,F,EE. UU.,NYSE,USD
+S&P 500,Fortinet,NASDAQ:FTNT,FTNT,EE. UU.,Nasdaq,USD
+S&P 500,Fortive,NYSE:FTV,FTV,EE. UU.,NYSE,USD
+S&P 500,Fox Class A,NASDAQ:FOXA,FOXA,EE. UU.,Nasdaq,USD
+S&P 500,Fox Class B,NASDAQ:FOX,FOX,EE. UU.,Nasdaq,USD
+S&P 500,Franklin Templeton,NYSE:BEN,BEN,EE. UU.,NYSE,USD
+S&P 500,Freeport Mcmoran Inc,NYSE:FCX,FCX,EE. UU.,NYSE,USD
+S&P 500,Garmin,NYSE:GRMN,GRMN,EE. UU.,NYSE,USD
+S&P 500,Gartner,NYSE:IT,IT,EE. UU.,NYSE,USD
+S&P 500,Ge Aerospace,NYSE:GE,GE,EE. UU.,NYSE,USD
+S&P 500,Ge Healthcare Technologies,NASDAQ:GEHC,GEHC,EE. UU.,Nasdaq,USD
+S&P 500,Ge Vernova,NYSE:GEV,GEV,EE. UU.,NYSE,USD
+S&P 500,Gen Digital,NASDAQ:GEN,GEN,EE. UU.,Nasdaq,USD
+S&P 500,Generac Holdings,NYSE:GNRC,GNRC,EE. UU.,NYSE,USD
+S&P 500,General Dynamics Corp,NYSE:GD,GD,EE. UU.,NYSE,USD
+S&P 500,General Mills Inc,NYSE:GIS,GIS,EE. UU.,NYSE,USD
+S&P 500,General Motors,NYSE:GM,GM,EE. UU.,NYSE,USD
+S&P 500,Genuine Parts,NYSE:GPC,GPC,EE. UU.,NYSE,USD
+S&P 500,Gilead Sciences,NASDAQ:GILD,GILD,EE. UU.,Nasdaq,USD
+S&P 500,Global Payments Inc,NYSE:GPN,GPN,EE. UU.,NYSE,USD
+S&P 500,Globe Life,NYSE:GL,GL,EE. UU.,NYSE,USD
+S&P 500,Godaddy Class A,NYSE:GDDY,GDDY,EE. UU.,NYSE,USD
+S&P 500,Goldman Sachs Group,NYSE:GS,GS,EE. UU.,NYSE,USD
+S&P 500,Halliburton,NYSE:HAL,HAL,EE. UU.,NYSE,USD
+S&P 500,Hartford Insurance Group,NYSE:HIG,HIG,EE. UU.,NYSE,USD
+S&P 500,Hasbro,NASDAQ:HAS,HAS,EE. UU.,Nasdaq,USD
+S&P 500,Hca Healthcare,NYSE:HCA,HCA,EE. UU.,NYSE,USD
+S&P 500,Healthpeak Properties Inc,NYSE:DOC,DOC,EE. UU.,NYSE,USD
+S&P 500,Henry Schein,NASDAQ:HSIC,HSIC,EE. UU.,Nasdaq,USD
+S&P 500,Hershey Foods,NYSE:HSY,HSY,EE. UU.,NYSE,USD
+S&P 500,Hewlett Packard Enterprise,NYSE:HPE,HPE,EE. UU.,NYSE,USD
+S&P 500,Hilton Worldwide Holdings,NYSE:HLT,HLT,EE. UU.,NYSE,USD
+S&P 500,Home Depot,NYSE:HD,HD,EE. UU.,NYSE,USD
+S&P 500,Honeywell Aerospace Inc,NASDAQ:HONA,HONA,EE. UU.,Nasdaq,USD
+S&P 500,Honeywell International Inc,NASDAQ:HON,HON,EE. UU.,Nasdaq,USD
+S&P 500,Hormel Foods Corp,NYSE:HRL,HRL,EE. UU.,NYSE,USD
+S&P 500,Host Hotels & Resorts Reit,NASDAQ:HST,HST,EE. UU.,Nasdaq,USD
+S&P 500,Howmet Aerospace,NYSE:HWM,HWM,EE. UU.,NYSE,USD
+S&P 500,Hp Inc,NYSE:HPQ,HPQ,EE. UU.,NYSE,USD
+S&P 500,Hubbell Inc,NYSE:HUBB,HUBB,EE. UU.,NYSE,USD
+S&P 500,Humana,NYSE:HUM,HUM,EE. UU.,NYSE,USD
+S&P 500,Huntington Bancshares Inc,NASDAQ:HBAN,HBAN,EE. UU.,Nasdaq,USD
+S&P 500,Huntington Ingalls Industries,NYSE:HII,HII,EE. UU.,NYSE,USD
+S&P 500,Idex,NYSE:IEX,IEX,EE. UU.,NYSE,USD
+S&P 500,Idexx Laboratories,NASDAQ:IDXX,IDXX,EE. UU.,Nasdaq,USD
+S&P 500,Illinois Tool Inc,NYSE:ITW,ITW,EE. UU.,NYSE,USD
+S&P 500,Illumina Inc,NASDAQ:ILMN,ILMN,EE. UU.,Nasdaq,USD
+S&P 500,Incyte Corp,NASDAQ:INCY,INCY,EE. UU.,Nasdaq,USD
+S&P 500,Ingersoll Rand Inc,NYSE:IR,IR,EE. UU.,NYSE,USD
+S&P 500,Insulet,NASDAQ:PODD,PODD,EE. UU.,Nasdaq,USD
+S&P 500,Intel Corporation,NASDAQ:INTC,INTC,EE. UU.,Nasdaq,USD
+S&P 500,Interactive Brokers Group Inc Clas,NASDAQ:IBKR,IBKR,EE. UU.,Nasdaq,USD
+S&P 500,Intercontinental Exchange Inc,NYSE:ICE,ICE,EE. UU.,NYSE,USD
+S&P 500,International Business Machines,NYSE:IBM,IBM,EE. UU.,NYSE,USD
+S&P 500,International Flavors & Fragrances,NYSE:IFF,IFF,EE. UU.,NYSE,USD
+S&P 500,International Paper,NYSE:IP,IP,EE. UU.,NYSE,USD
+S&P 500,Intuit,NASDAQ:INTU,INTU,EE. UU.,Nasdaq,USD
+S&P 500,Intuitive Surgical,NASDAQ:ISRG,ISRG,EE. UU.,Nasdaq,USD
+S&P 500,Invesco Ltd,NYSE:IVZ,IVZ,EE. UU.,NYSE,USD
+S&P 500,Invitation Homes,NYSE:INVH,INVH,EE. UU.,NYSE,USD
+S&P 500,Iqvia Holdings Inc,NYSE:IQV,IQV,EE. UU.,NYSE,USD
+S&P 500,Iron Mountain Inc,NYSE:IRM,IRM,EE. UU.,NYSE,USD
+S&P 500,Jabil,NYSE:JBL,JBL,EE. UU.,NYSE,USD
+S&P 500,Jack Henry And Associates Inc,NASDAQ:JKHY,JKHY,EE. UU.,Nasdaq,USD
+S&P 500,Jacobs Solutions Inc,NYSE:J,J,EE. UU.,NYSE,USD
+S&P 500,Jb Hunt Transport Services,NASDAQ:JBHT,JBHT,EE. UU.,Nasdaq,USD
+S&P 500,Jm Smucker,NYSE:SJM,SJM,EE. UU.,NYSE,USD
+S&P 500,Johnson & Johnson,NYSE:JNJ,JNJ,EE. UU.,NYSE,USD
+S&P 500,Johnson Controls International Plc,NYSE:JCI,JCI,EE. UU.,NYSE,USD
+S&P 500,Jpmorgan Chase & Co,NYSE:JPM,JPM,EE. UU.,NYSE,USD
+S&P 500,Kenvue,NYSE:KVUE,KVUE,EE. UU.,NYSE,USD
+S&P 500,Keurig Dr Pepper Inc,NASDAQ:KDP,KDP,EE. UU.,Nasdaq,USD
+S&P 500,Keycorp,NYSE:KEY,KEY,EE. UU.,NYSE,USD
+S&P 500,Keysight Technologies,NYSE:KEYS,KEYS,EE. UU.,NYSE,USD
+S&P 500,Kimberly Clark,NASDAQ:KMB,KMB,EE. UU.,Nasdaq,USD
+S&P 500,Kimco Realty Reit Corp,NYSE:KIM,KIM,EE. UU.,NYSE,USD
+S&P 500,Kinder Morgan,NYSE:KMI,KMI,EE. UU.,NYSE,USD
+S&P 500,Kkr And Co Inc,NYSE:KKR,KKR,EE. UU.,NYSE,USD
+S&P 500,Kla,NASDAQ:KLAC,KLAC,EE. UU.,Nasdaq,USD
+S&P 500,Kraft Heinz,NASDAQ:KHC,KHC,EE. UU.,Nasdaq,USD
+S&P 500,Kroger,NYSE:KR,KR,EE. UU.,NYSE,USD
+S&P 500,L3Harris Technologies,NYSE:LHX,LHX,EE. UU.,NYSE,USD
+S&P 500,Labcorp Holdings,NYSE:LH,LH,EE. UU.,NYSE,USD
+S&P 500,Lam Research,NASDAQ:LRCX,LRCX,EE. UU.,Nasdaq,USD
+S&P 500,Las Vegas Sands,NYSE:LVS,LVS,EE. UU.,NYSE,USD
+S&P 500,Leidos Holdings,NYSE:LDOS,LDOS,EE. UU.,NYSE,USD
+S&P 500,Lennar A Class A,NYSE:LEN,LEN,EE. UU.,NYSE,USD
+S&P 500,Lennox International,NYSE:LII,LII,EE. UU.,NYSE,USD
+S&P 500,Linde Plc,NASDAQ:LIN,LIN,EE. UU.,Nasdaq,USD
+S&P 500,Live Nation Entertainment,NYSE:LYV,LYV,EE. UU.,NYSE,USD
+S&P 500,Lockheed Martin Corp,NYSE:LMT,LMT,EE. UU.,NYSE,USD
+S&P 500,Loews,NYSE:L,L,EE. UU.,NYSE,USD
+S&P 500,Lowes Companies Inc,NYSE:LOW,LOW,EE. UU.,NYSE,USD
+S&P 500,Lululemon Athletica,NASDAQ:LULU,LULU,EE. UU.,Nasdaq,USD
+S&P 500,Lumentum Holdings,NASDAQ:LITE,LITE,EE. UU.,Nasdaq,USD
+S&P 500,Lyondellbasell Industries Class A,NYSE:LYB,LYB,EE. UU.,NYSE,USD
+S&P 500,M&T Bank,NYSE:MTB,MTB,EE. UU.,NYSE,USD
+S&P 500,Marathon Petroleum,NYSE:MPC,MPC,EE. UU.,NYSE,USD
+S&P 500,Marriott International Class A,NASDAQ:MAR,MAR,EE. UU.,Nasdaq,USD
+S&P 500,Marsh McLennan,NYSE:MRSH,MRSH,EE. UU.,NYSE,USD
+S&P 500,Martin Marietta Materials,NYSE:MLM,MLM,EE. UU.,NYSE,USD
+S&P 500,Marvell Technology,NASDAQ:MRVL,MRVL,EE. UU.,Nasdaq,USD
+S&P 500,Masco,NYSE:MAS,MAS,EE. UU.,NYSE,USD
+S&P 500,Mastercard Class A,NYSE:MA,MA,EE. UU.,NYSE,USD
+S&P 500,Mccormick & Co Non-Voting,NYSE:MKC,MKC,EE. UU.,NYSE,USD
+S&P 500,Mcdonalds Corp,NYSE:MCD,MCD,EE. UU.,NYSE,USD
+S&P 500,Mckesson Corp,NYSE:MCK,MCK,EE. UU.,NYSE,USD
+S&P 500,Medtronic Plc,NYSE:MDT,MDT,EE. UU.,NYSE,USD
+S&P 500,Merck & Co Inc,NYSE:MRK,MRK,EE. UU.,NYSE,USD
+S&P 500,Meta Platforms Class A,NASDAQ:META,META,EE. UU.,Nasdaq,USD
+S&P 500,Metlife,NYSE:MET,MET,EE. UU.,NYSE,USD
+S&P 500,Mettler Toledo,NYSE:MTD,MTD,EE. UU.,NYSE,USD
+S&P 500,Mgm Resorts International,NYSE:MGM,MGM,EE. UU.,NYSE,USD
+S&P 500,Microchip Technology Inc,NASDAQ:MCHP,MCHP,EE. UU.,Nasdaq,USD
+S&P 500,Micron Technology,NASDAQ:MU,MU,EE. UU.,Nasdaq,USD
+S&P 500,Microsoft,NASDAQ:MSFT,MSFT,EE. UU.,Nasdaq,USD
+S&P 500,Mid America Apartment Communities,NYSE:MAA,MAA,EE. UU.,NYSE,USD
+S&P 500,Moderna,NASDAQ:MRNA,MRNA,EE. UU.,Nasdaq,USD
+S&P 500,Mondelez International Class A,NASDAQ:MDLZ,MDLZ,EE. UU.,Nasdaq,USD
+S&P 500,Monolithic Power Systems Inc,NASDAQ:MPWR,MPWR,EE. UU.,Nasdaq,USD
+S&P 500,Monster Beverage,NASDAQ:MNST,MNST,EE. UU.,Nasdaq,USD
+S&P 500,Moodys Corp,NYSE:MCO,MCO,EE. UU.,NYSE,USD
+S&P 500,Morgan Stanley,NYSE:MS,MS,EE. UU.,NYSE,USD
+S&P 500,Mosaic,NYSE:MOS,MOS,EE. UU.,NYSE,USD
+S&P 500,Motorola Solutions Inc,NYSE:MSI,MSI,EE. UU.,NYSE,USD
+S&P 500,Msci,NYSE:MSCI,MSCI,EE. UU.,NYSE,USD
+S&P 500,Nasdaq Inc,NASDAQ:NDAQ,NDAQ,EE. UU.,Nasdaq,USD
+S&P 500,Netapp Inc,NASDAQ:NTAP,NTAP,EE. UU.,Nasdaq,USD
+S&P 500,Netflix,NASDAQ:NFLX,NFLX,EE. UU.,Nasdaq,USD
+S&P 500,Newmont,NYSE:NEM,NEM,EE. UU.,NYSE,USD
+S&P 500,News Class A,NASDAQ:NWSA,NWSA,EE. UU.,Nasdaq,USD
+S&P 500,News Class B,NASDAQ:NWS,NWS,EE. UU.,Nasdaq,USD
+S&P 500,Nextera Energy,NYSE:NEE,NEE,EE. UU.,NYSE,USD
+S&P 500,Nike Class B,NYSE:NKE,NKE,EE. UU.,NYSE,USD
+S&P 500,Nisource,NYSE:NI,NI,EE. UU.,NYSE,USD
+S&P 500,Nordson,NASDAQ:NDSN,NDSN,EE. UU.,Nasdaq,USD
+S&P 500,Norfolk Southern Corp,NYSE:NSC,NSC,EE. UU.,NYSE,USD
+S&P 500,Northern Trust,NASDAQ:NTRS,NTRS,EE. UU.,Nasdaq,USD
+S&P 500,Northrop Grumman Corp,NYSE:NOC,NOC,EE. UU.,NYSE,USD
+S&P 500,Norwegian Cruise Line Holdings,NYSE:NCLH,NCLH,EE. UU.,NYSE,USD
+S&P 500,Nrg Energy Inc,NYSE:NRG,NRG,EE. UU.,NYSE,USD
+S&P 500,Nucor,NYSE:NUE,NUE,EE. UU.,NYSE,USD
+S&P 500,Nvidia,NASDAQ:NVDA,NVDA,EE. UU.,Nasdaq,USD
+S&P 500,Nvr,NYSE:NVR,NVR,EE. UU.,NYSE,USD
+S&P 500,Nxp Semiconductors Nv,NASDAQ:NXPI,NXPI,EE. UU.,Nasdaq,USD
+S&P 500,Occidental Petroleum Corp,NYSE:OXY,OXY,EE. UU.,NYSE,USD
+S&P 500,Old Dominion Freight Line,NASDAQ:ODFL,ODFL,EE. UU.,Nasdaq,USD
+S&P 500,Omnicom Group Inc,NYSE:OMC,OMC,EE. UU.,NYSE,USD
+S&P 500,On Semiconductor Corp,NASDAQ:ON,ON,EE. UU.,Nasdaq,USD
+S&P 500,Oneok,NYSE:OKE,OKE,EE. UU.,NYSE,USD
+S&P 500,Oracle,NYSE:ORCL,ORCL,EE. UU.,NYSE,USD
+S&P 500,Oreilly Automotive Inc,NASDAQ:ORLY,ORLY,EE. UU.,Nasdaq,USD
+S&P 500,Otis Worldwide,NYSE:OTIS,OTIS,EE. UU.,NYSE,USD
+S&P 500,Paccar Inc,NASDAQ:PCAR,PCAR,EE. UU.,Nasdaq,USD
+S&P 500,Packaging Corp Of America,NYSE:PKG,PKG,EE. UU.,NYSE,USD
+S&P 500,Palantir Technologies Class A,NASDAQ:PLTR,PLTR,EE. UU.,Nasdaq,USD
+S&P 500,Palo Alto Networks,NASDAQ:PANW,PANW,EE. UU.,Nasdaq,USD
+S&P 500,Parker-Hannifin,NYSE:PH,PH,EE. UU.,NYSE,USD
+S&P 500,Paychex,NASDAQ:PAYX,PAYX,EE. UU.,Nasdaq,USD
+S&P 500,Paypal Holdings,NASDAQ:PYPL,PYPL,EE. UU.,Nasdaq,USD
+S&P 500,Pentair,NYSE:PNR,PNR,EE. UU.,NYSE,USD
+S&P 500,Pepsico,NASDAQ:PEP,PEP,EE. UU.,Nasdaq,USD
+S&P 500,Pfizer,NYSE:PFE,PFE,EE. UU.,NYSE,USD
+S&P 500,Pg&E Corp,NYSE:PCG,PCG,EE. UU.,NYSE,USD
+S&P 500,Philip Morris International,NYSE:PM,PM,EE. UU.,NYSE,USD
+S&P 500,Phillips 66,NYSE:PSX,PSX,EE. UU.,NYSE,USD
+S&P 500,Pinnacle West,NYSE:PNW,PNW,EE. UU.,NYSE,USD
+S&P 500,Pnc Financial Services Group,NYSE:PNC,PNC,EE. UU.,NYSE,USD
+S&P 500,PPG Industries,NYSE:PPG,PPG,EE. UU.,NYSE,USD
+S&P 500,Ppl Corp,NYSE:PPL,PPL,EE. UU.,NYSE,USD
+S&P 500,Principal Financial Group Inc,NASDAQ:PFG,PFG,EE. UU.,Nasdaq,USD
+S&P 500,Procter & Gamble,NYSE:PG,PG,EE. UU.,NYSE,USD
+S&P 500,Progressive,NYSE:PGR,PGR,EE. UU.,NYSE,USD
+S&P 500,Prologis Reit,NYSE:PLD,PLD,EE. UU.,NYSE,USD
+S&P 500,Prudential Financial Inc,NYSE:PRU,PRU,EE. UU.,NYSE,USD
+S&P 500,Ptc,NASDAQ:PTC,PTC,EE. UU.,Nasdaq,USD
+S&P 500,Public Service Enterprise Group,NYSE:PEG,PEG,EE. UU.,NYSE,USD
+S&P 500,Public Storage Reit,NYSE:PSA,PSA,EE. UU.,NYSE,USD
+S&P 500,Pultegroup,NYSE:PHM,PHM,EE. UU.,NYSE,USD
+S&P 500,Qualcomm,NASDAQ:QCOM,QCOM,EE. UU.,Nasdaq,USD
+S&P 500,Quanta Services Inc,NYSE:PWR,PWR,EE. UU.,NYSE,USD
+S&P 500,Quest Diagnostics Inc,NYSE:DGX,DGX,EE. UU.,NYSE,USD
+S&P 500,Ralph Lauren Class A,NYSE:RL,RL,EE. UU.,NYSE,USD
+S&P 500,Raymond James,NYSE:RJF,RJF,EE. UU.,NYSE,USD
+S&P 500,Realty Income Reit,NYSE:O,O,EE. UU.,NYSE,USD
+S&P 500,Reddit Class A,NYSE:RDDT,RDDT,EE. UU.,NYSE,USD
+S&P 500,Regency Centers Reit Corp,NASDAQ:REG,REG,EE. UU.,Nasdaq,USD
+S&P 500,Regeneron Pharmaceuticals,NASDAQ:REGN,REGN,EE. UU.,Nasdaq,USD
+S&P 500,Regions Financial,NYSE:RF,RF,EE. UU.,NYSE,USD
+S&P 500,Republic Services Inc,NYSE:RSG,RSG,EE. UU.,NYSE,USD
+S&P 500,Resmed,NYSE:RMD,RMD,EE. UU.,NYSE,USD
+S&P 500,Revvity,NYSE:RVTY,RVTY,EE. UU.,NYSE,USD
+S&P 500,Robinhood Markets Class A,NASDAQ:HOOD,HOOD,EE. UU.,Nasdaq,USD
+S&P 500,Rockwell Automation Inc,NYSE:ROK,ROK,EE. UU.,NYSE,USD
+S&P 500,Rollins Inc,NYSE:ROL,ROL,EE. UU.,NYSE,USD
+S&P 500,Roper Technologies,NASDAQ:ROP,ROP,EE. UU.,Nasdaq,USD
+S&P 500,Ross Stores Inc,NASDAQ:ROST,ROST,EE. UU.,Nasdaq,USD
+S&P 500,Royal Caribbean Group,NYSE:RCL,RCL,EE. UU.,NYSE,USD
+S&P 500,Rtx,NYSE:RTX,RTX,EE. UU.,NYSE,USD
+S&P 500,S&P Global,NYSE:SPGI,SPGI,EE. UU.,NYSE,USD
+S&P 500,Salesforce,NYSE:CRM,CRM,EE. UU.,NYSE,USD
+S&P 500,Sba Communications Reit Corp Class,NASDAQ:SBAC,SBAC,EE. UU.,Nasdaq,USD
+S&P 500,Seagate Technology Holdings Plc,NASDAQ:STX,STX,EE. UU.,Nasdaq,USD
+S&P 500,Sempra,NYSE:SRE,SRE,EE. UU.,NYSE,USD
+S&P 500,Servicenow,NYSE:NOW,NOW,EE. UU.,NYSE,USD
+S&P 500,Sherwin Williams,NYSE:SHW,SHW,EE. UU.,NYSE,USD
+S&P 500,Simon Property Group Reit Inc,NYSE:SPG,SPG,EE. UU.,NYSE,USD
+S&P 500,Paramount Skydance,NASDAQ:PSKY,PSKY,EE. UU.,Nasdaq,USD
+S&P 500,Skyworks Solutions,NASDAQ:SWKS,SWKS,EE. UU.,Nasdaq,USD
+S&P 500,Slb,NYSE:SLB,SLB,EE. UU.,NYSE,USD
+S&P 500,Smurfit Westrock Plc,NYSE:SW,SW,EE. UU.,NYSE,USD
+S&P 500,Snap On Inc,NYSE:SNA,SNA,EE. UU.,NYSE,USD
+S&P 500,Solventum,NYSE:SOLV,SOLV,EE. UU.,NYSE,USD
+S&P 500,Southern,NYSE:SO,SO,EE. UU.,NYSE,USD
+S&P 500,Southwest Airlines,NYSE:LUV,LUV,EE. UU.,NYSE,USD
+S&P 500,Stanley Black & Decker,NYSE:SWK,SWK,EE. UU.,NYSE,USD
+S&P 500,Starbucks Corp,NASDAQ:SBUX,SBUX,EE. UU.,Nasdaq,USD
+S&P 500,State Street,NYSE:STT,STT,EE. UU.,NYSE,USD
+S&P 500,Steel Dynamics Inc,NASDAQ:STLD,STLD,EE. UU.,Nasdaq,USD
+S&P 500,Steris,NYSE:STE,STE,EE. UU.,NYSE,USD
+S&P 500,Stryker,NYSE:SYK,SYK,EE. UU.,NYSE,USD
+S&P 500,Super Micro Computer Inc,NASDAQ:SMCI,SMCI,EE. UU.,Nasdaq,USD
+S&P 500,Synchrony Financial,NYSE:SYF,SYF,EE. UU.,NYSE,USD
+S&P 500,Synopsys,NASDAQ:SNPS,SNPS,EE. UU.,Nasdaq,USD
+S&P 500,Sysco,NYSE:SYY,SYY,EE. UU.,NYSE,USD
+S&P 500,T Mobile Us Inc,NASDAQ:TMUS,TMUS,EE. UU.,Nasdaq,USD
+S&P 500,T Rowe Price Group,NASDAQ:TROW,TROW,EE. UU.,Nasdaq,USD
+S&P 500,Take Two Interactive Software,NASDAQ:TTWO,TTWO,EE. UU.,Nasdaq,USD
+S&P 500,Tapestry,NYSE:TPR,TPR,EE. UU.,NYSE,USD
+S&P 500,Targa Resources,NYSE:TRGP,TRGP,EE. UU.,NYSE,USD
+S&P 500,Target Corp,NYSE:TGT,TGT,EE. UU.,NYSE,USD
+S&P 500,Te Connectivity Plc,NYSE:TEL,TEL,EE. UU.,NYSE,USD
+S&P 500,Teledyne Technologies Inc,NYSE:TDY,TDY,EE. UU.,NYSE,USD
+S&P 500,Teradyne,NASDAQ:TER,TER,EE. UU.,Nasdaq,USD
+S&P 500,Tesla Inc,NASDAQ:TSLA,TSLA,EE. UU.,Nasdaq,USD
+S&P 500,Texas Instrument Inc,NASDAQ:TXN,TXN,EE. UU.,Nasdaq,USD
+S&P 500,Texas Pacific Land,NYSE:TPL,TPL,EE. UU.,NYSE,USD
+S&P 500,Textron Inc,NYSE:TXT,TXT,EE. UU.,NYSE,USD
+S&P 500,Thermo Fisher Scientific,NYSE:TMO,TMO,EE. UU.,NYSE,USD
+S&P 500,Tjx,NYSE:TJX,TJX,EE. UU.,NYSE,USD
+S&P 500,Tko Group Holdings Inc Class A,NYSE:TKO,TKO,EE. UU.,NYSE,USD
+S&P 500,Tractor Supply,NASDAQ:TSCO,TSCO,EE. UU.,Nasdaq,USD
+S&P 500,Trane Technologies Plc,NYSE:TT,TT,EE. UU.,NYSE,USD
+S&P 500,Transdigm Group,NYSE:TDG,TDG,EE. UU.,NYSE,USD
+S&P 500,Travelers Companies,NYSE:TRV,TRV,EE. UU.,NYSE,USD
+S&P 500,Trimble Inc,NASDAQ:TRMB,TRMB,EE. UU.,Nasdaq,USD
+S&P 500,Truist Financial,NYSE:TFC,TFC,EE. UU.,NYSE,USD
+S&P 500,Twilio Class A,NYSE:TWLO,TWLO,EE. UU.,NYSE,USD
+S&P 500,Tyler Technologies,NYSE:TYL,TYL,EE. UU.,NYSE,USD
+S&P 500,Tyson Foods Inc Class A,NYSE:TSN,TSN,EE. UU.,NYSE,USD
+S&P 500,Uber Technologies,NYSE:UBER,UBER,EE. UU.,NYSE,USD
+S&P 500,Udr Reit,NYSE:UDR,UDR,EE. UU.,NYSE,USD
+S&P 500,Ulta Beauty Inc,NASDAQ:ULTA,ULTA,EE. UU.,Nasdaq,USD
+S&P 500,Union Pacific,NYSE:UNP,UNP,EE. UU.,NYSE,USD
+S&P 500,United Airlines Holdings,NASDAQ:UAL,UAL,EE. UU.,Nasdaq,USD
+S&P 500,United Parcel Service Inc Class B,NYSE:UPS,UPS,EE. UU.,NYSE,USD
+S&P 500,United Rentals,NYSE:URI,URI,EE. UU.,NYSE,USD
+S&P 500,Unitedhealth Group,NYSE:UNH,UNH,EE. UU.,NYSE,USD
+S&P 500,Universal Health Services Class B,NYSE:UHS,UHS,EE. UU.,NYSE,USD
+S&P 500,Us Bancorp,NYSE:USB,USB,EE. UU.,NYSE,USD
+S&P 500,Valero Energy Corp,NYSE:VLO,VLO,EE. UU.,NYSE,USD
+S&P 500,Veeva Systems Class A,NYSE:VEEV,VEEV,EE. UU.,NYSE,USD
+S&P 500,Ventas Reit,NYSE:VTR,VTR,EE. UU.,NYSE,USD
+S&P 500,Veralto Corp,NYSE:VLTO,VLTO,EE. UU.,NYSE,USD
+S&P 500,Verisign,NASDAQ:VRSN,VRSN,EE. UU.,Nasdaq,USD
+S&P 500,Verisk Analytics,NASDAQ:VRSK,VRSK,EE. UU.,Nasdaq,USD
+S&P 500,Verizon Communications Inc,NYSE:VZ,VZ,EE. UU.,NYSE,USD
+S&P 500,Vertex Pharmaceuticals,NASDAQ:VRTX,VRTX,EE. UU.,Nasdaq,USD
+S&P 500,Vertiv Holdings Class A,NYSE:VRT,VRT,EE. UU.,NYSE,USD
+S&P 500,Viatris,NASDAQ:VTRS,VTRS,EE. UU.,Nasdaq,USD
+S&P 500,Vici Pptys Inc,NYSE:VICI,VICI,EE. UU.,NYSE,USD
+S&P 500,Visa Class A,NYSE:V,V,EE. UU.,NYSE,USD
+S&P 500,Vistra,NYSE:VST,VST,EE. UU.,NYSE,USD
+S&P 500,Vivmark Residential,NYSE:VMRK,VMRK,EE. UU.,NYSE,USD
+S&P 500,Vulcan Materials,NYSE:VMC,VMC,EE. UU.,NYSE,USD
+S&P 500,Vylor,NYSE:VYLR,VYLR,EE. UU.,NYSE,USD
+S&P 500,Walmart,NASDAQ:WMT,WMT,EE. UU.,Nasdaq,USD
+S&P 500,Walt Disney,NYSE:DIS,DIS,EE. UU.,NYSE,USD
+S&P 500,Waste Management Inc,NYSE:WM,WM,EE. UU.,NYSE,USD
+S&P 500,Waters Corp,NYSE:WAT,WAT,EE. UU.,NYSE,USD
+S&P 500,Wec Energy Group,NYSE:WEC,WEC,EE. UU.,NYSE,USD
+S&P 500,Wells Fargo,NYSE:WFC,WFC,EE. UU.,NYSE,USD
+S&P 500,Welltower,NYSE:WELL,WELL,EE. UU.,NYSE,USD
+S&P 500,West Pharmaceutical Services,NYSE:WST,WST,EE. UU.,NYSE,USD
+S&P 500,Western Digital Corp,NASDAQ:WDC,WDC,EE. UU.,Nasdaq,USD
+S&P 500,Westinghouse Air Brake Technologie,NYSE:WAB,WAB,EE. UU.,NYSE,USD
+S&P 500,Weyerhaeuser Reit,NYSE:WY,WY,EE. UU.,NYSE,USD
+S&P 500,Williams,NYSE:WMB,WMB,EE. UU.,NYSE,USD
+S&P 500,Williams Sonoma Inc,NYSE:WSM,WSM,EE. UU.,NYSE,USD
+S&P 500,Willis Towers Watson,NASDAQ:WTW,WTW,EE. UU.,Nasdaq,USD
+S&P 500,Workday Class A,NASDAQ:WDAY,WDAY,EE. UU.,Nasdaq,USD
+S&P 500,Wr Berkley,NYSE:WRB,WRB,EE. UU.,NYSE,USD
+S&P 500,Ww Grainger Inc,NYSE:GWW,GWW,EE. UU.,NYSE,USD
+S&P 500,Wynn Resorts,NASDAQ:WYNN,WYNN,EE. UU.,Nasdaq,USD
+S&P 500,Xcel Energy Inc,NASDAQ:XEL,XEL,EE. UU.,Nasdaq,USD
+S&P 500,Xylem Inc,NYSE:XYL,XYL,EE. UU.,NYSE,USD
+S&P 500,Yum Brands,NYSE:YUM,YUM,EE. UU.,NYSE,USD
+S&P 500,Zebra Technologies Corp Class A,NASDAQ:ZBRA,ZBRA,EE. UU.,Nasdaq,USD
+S&P 500,Zimmer Biomet Holdings,NYSE:ZBH,ZBH,EE. UU.,NYSE,USD
+S&P 500,Zoetis Inc Class A,NYSE:ZTS,ZTS,EE. UU.,NYSE,USD
+IBEX 35,Acciona,BME:ANA,ANA.MC,España,BME Madrid,EUR
+IBEX 35,Acciona Energía,BME:ANE,ANE.MC,España,BME Madrid,EUR
+IBEX 35,Acerinox,BME:ACX,ACX.MC,España,BME Madrid,EUR
+IBEX 35,ACS,BME:ACS,ACS.MC,España,BME Madrid,EUR
+IBEX 35,Aena,BME:AENA,AENA.MC,España,BME Madrid,EUR
+IBEX 35,Amadeus,BME:AMS,AMS.MC,España,BME Madrid,EUR
+IBEX 35,ArcelorMittal,BME:MTS,MTS.MC,España,BME Madrid,EUR
+IBEX 35,Banco Sabadell,BME:SAB,SAB.MC,España,BME Madrid,EUR
+IBEX 35,Banco Santander,BME:SAN,SAN.MC,España,BME Madrid,EUR
+IBEX 35,Bankinter,BME:BKT,BKT.MC,España,BME Madrid,EUR
+IBEX 35,BBVA,BME:BBVA,BBVA.MC,España,BME Madrid,EUR
+IBEX 35,CaixaBank,BME:CABK,CABK.MC,España,BME Madrid,EUR
+IBEX 35,Cellnex,BME:CLNX,CLNX.MC,España,BME Madrid,EUR
+IBEX 35,Colonial,BME:COL,COL.MC,España,BME Madrid,EUR
+IBEX 35,Enagás,BME:ENG,ENG.MC,España,BME Madrid,EUR
+IBEX 35,Endesa,BME:ELE,ELE.MC,España,BME Madrid,EUR
+IBEX 35,Ferrovial,BME:FER,FER.MC,España,BME Madrid,EUR
+IBEX 35,Fluidra,BME:FDR,FDR.MC,España,BME Madrid,EUR
+IBEX 35,Grifols,BME:GRF,GRF.MC,España,BME Madrid,EUR
+IBEX 35,IAG,BME:IAG,IAG.MC,España,BME Madrid,EUR
+IBEX 35,Iberdrola,BME:IBE,IBE.MC,España,BME Madrid,EUR
+IBEX 35,Inditex,BME:ITX,ITX.MC,España,BME Madrid,EUR
+IBEX 35,Indra,BME:IDR,IDR.MC,España,BME Madrid,EUR
+IBEX 35,Logista,BME:LOG,LOG.MC,España,BME Madrid,EUR
+IBEX 35,Mapfre,BME:MAP,MAP.MC,España,BME Madrid,EUR
+IBEX 35,Merlin Properties,BME:MRL,MRL.MC,España,BME Madrid,EUR
+IBEX 35,Naturgy,BME:NTGY,NTGY.MC,España,BME Madrid,EUR
+IBEX 35,Puig Brands,BME:PUIG,PUIG.MC,España,BME Madrid,EUR
+IBEX 35,Redeia,BME:RED,RED.MC,España,BME Madrid,EUR
+IBEX 35,Repsol,BME:REP,REP.MC,España,BME Madrid,EUR
+IBEX 35,Rovi,BME:ROVI,ROVI.MC,España,BME Madrid,EUR
+IBEX 35,Sacyr,BME:SCYR,SCYR.MC,España,BME Madrid,EUR
+IBEX 35,Solaria,BME:SLR,SLR.MC,España,BME Madrid,EUR
+IBEX 35,Telefónica,BME:TEF,TEF.MC,España,BME Madrid,EUR
+IBEX 35,Unicaja,BME:UNI,UNI.MC,España,BME Madrid,EUR
+CAC 40,Accor,EPA:AC,AC.PA,Francia,Euronext Paris,EUR
+CAC 40,Air Liquide,EPA:AI,AI.PA,Francia,Euronext Paris,EUR
+CAC 40,Airbus,EPA:AIR,AIR.PA,Francia,Euronext Paris,EUR
+CAC 40,ArcelorMittal,EPA:MT,MT.PA,Francia,Euronext Paris,EUR
+CAC 40,AXA,EPA:CS,CS.PA,Francia,Euronext Paris,EUR
+CAC 40,BNP Paribas,EPA:BNP,BNP.PA,Francia,Euronext Paris,EUR
+CAC 40,Bouygues,EPA:EN,EN.PA,Francia,Euronext Paris,EUR
+CAC 40,Bureau Veritas,EPA:BVI,BVI.PA,Francia,Euronext Paris,EUR
+CAC 40,Capgemini,EPA:CAP,CAP.PA,Francia,Euronext Paris,EUR
+CAC 40,Carrefour,EPA:CA,CA.PA,Francia,Euronext Paris,EUR
+CAC 40,Crédit Agricole,EPA:ACA,ACA.PA,Francia,Euronext Paris,EUR
+CAC 40,Danone,EPA:BN,BN.PA,Francia,Euronext Paris,EUR
+CAC 40,Dassault Systèmes,EPA:DSY,DSY.PA,Francia,Euronext Paris,EUR
+CAC 40,Edenred,EPA:EDEN,EDEN.PA,Francia,Euronext Paris,EUR
+CAC 40,Engie,EPA:ENGI,ENGI.PA,Francia,Euronext Paris,EUR
+CAC 40,EssilorLuxottica,EPA:EL,EL.PA,Francia,Euronext Paris,EUR
+CAC 40,Eurofins,EPA:ERF,ERF.PA,Francia,Euronext Paris,EUR
+CAC 40,Hermès,EPA:RMS,RMS.PA,Francia,Euronext Paris,EUR
+CAC 40,Kering,EPA:KER,KER.PA,Francia,Euronext Paris,EUR
+CAC 40,L'Oréal,EPA:OR,OR.PA,Francia,Euronext Paris,EUR
+CAC 40,Legrand,EPA:LR,LR.PA,Francia,Euronext Paris,EUR
+CAC 40,LVMH,EPA:MC,MC.PA,Francia,Euronext Paris,EUR
+CAC 40,Michelin,EPA:ML,ML.PA,Francia,Euronext Paris,EUR
+CAC 40,Orange,EPA:ORA,ORA.PA,Francia,Euronext Paris,EUR
+CAC 40,Pernod Ricard,EPA:RI,RI.PA,Francia,Euronext Paris,EUR
+CAC 40,Publicis,EPA:PUB,PUB.PA,Francia,Euronext Paris,EUR
+CAC 40,Renault,EPA:RNO,RNO.PA,Francia,Euronext Paris,EUR
+CAC 40,Safran,EPA:SAF,SAF.PA,Francia,Euronext Paris,EUR
+CAC 40,Saint-Gobain,EPA:SGO,SGO.PA,Francia,Euronext Paris,EUR
+CAC 40,Sanofi,EPA:SAN,SAN.PA,Francia,Euronext Paris,EUR
+CAC 40,Schneider Electric,EPA:SU,SU.PA,Francia,Euronext Paris,EUR
+CAC 40,Société Générale,EPA:GLE,GLE.PA,Francia,Euronext Paris,EUR
+CAC 40,STMicroelectronics,EPA:STMPA,STMPA.PA,Francia,Euronext Paris,EUR
+CAC 40,Stellantis,EPA:STLAP,STLAP.PA,Francia,Euronext Paris,EUR
+CAC 40,Teleperformance,EPA:TEP,TEP.PA,Francia,Euronext Paris,EUR
+CAC 40,Thales,EPA:HO,HO.PA,Francia,Euronext Paris,EUR
+CAC 40,TotalEnergies,EPA:TTE,TTE.PA,Francia,Euronext Paris,EUR
+CAC 40,Unibail-Rodamco-Westfield,EPA:URW,URW.PA,Francia,Euronext Paris,EUR
+CAC 40,Veolia,EPA:VIE,VIE.PA,Francia,Euronext Paris,EUR
+CAC 40,Vinci,EPA:DG,DG.PA,Francia,Euronext Paris,EUR
+DAX 40,Adidas,ETR:ADS,ADS.DE,Alemania,Xetra,EUR
+DAX 40,Airbus,ETR:AIR,AIR.DE,Alemania,Xetra,EUR
+DAX 40,Allianz,ETR:ALV,ALV.DE,Alemania,Xetra,EUR
+DAX 40,BASF,ETR:BAS,BAS.DE,Alemania,Xetra,EUR
+DAX 40,Bayer,ETR:BAYN,BAYN.DE,Alemania,Xetra,EUR
+DAX 40,Beiersdorf,ETR:BEI,BEI.DE,Alemania,Xetra,EUR
+DAX 40,BMW,ETR:BMW,BMW.DE,Alemania,Xetra,EUR
+DAX 40,Brenntag,ETR:BNR,BNR.DE,Alemania,Xetra,EUR
+DAX 40,Commerzbank,ETR:CBK,CBK.DE,Alemania,Xetra,EUR
+DAX 40,Continental,ETR:CON,CON.DE,Alemania,Xetra,EUR
+DAX 40,Daimler Truck,ETR:DTG,DTG.DE,Alemania,Xetra,EUR
+DAX 40,Deutsche Bank,ETR:DBK,DBK.DE,Alemania,Xetra,EUR
+DAX 40,Deutsche Börse,ETR:DB1,DB1.DE,Alemania,Xetra,EUR
+DAX 40,Deutsche Post (DHL),ETR:DHL,DHL.DE,Alemania,Xetra,EUR
+DAX 40,Deutsche Telekom,ETR:DTE,DTE.DE,Alemania,Xetra,EUR
+DAX 40,E.ON,ETR:EOAN,EOAN.DE,Alemania,Xetra,EUR
+DAX 40,Fresenius,ETR:FRE,FRE.DE,Alemania,Xetra,EUR
+DAX 40,Fresenius Medical Care,ETR:FME,FME.DE,Alemania,Xetra,EUR
+DAX 40,GEA Group,ETR:G1A,G1A.DE,Alemania,Xetra,EUR
+DAX 40,Hannover Rück,ETR:HNR1,HNR1.DE,Alemania,Xetra,EUR
+DAX 40,Heidelberg Materials,ETR:HEI,HEI.DE,Alemania,Xetra,EUR
+DAX 40,Henkel,ETR:HEN3,HEN3.DE,Alemania,Xetra,EUR
+DAX 40,Infineon,ETR:IFX,IFX.DE,Alemania,Xetra,EUR
+DAX 40,Mercedes-Benz,ETR:MBG,MBG.DE,Alemania,Xetra,EUR
+DAX 40,Merck KGaA,ETR:MRK,MRK.DE,Alemania,Xetra,EUR
+DAX 40,MTU Aero Engines,ETR:MTX,MTX.DE,Alemania,Xetra,EUR
+DAX 40,Münchener Rück,ETR:MUV2,MUV2.DE,Alemania,Xetra,EUR
+DAX 40,Porsche SE,ETR:PAH3,PAH3.DE,Alemania,Xetra,EUR
+DAX 40,Qiagen,ETR:QIA,QIA.DE,Alemania,Xetra,EUR
+DAX 40,Rheinmetall,ETR:RHM,RHM.DE,Alemania,Xetra,EUR
+DAX 40,RWE,ETR:RWE,RWE.DE,Alemania,Xetra,EUR
+DAX 40,SAP,ETR:SAP,SAP.DE,Alemania,Xetra,EUR
+DAX 40,Scout24,ETR:G24,G24.DE,Alemania,Xetra,EUR
+DAX 40,Siemens,ETR:SIE,SIE.DE,Alemania,Xetra,EUR
+DAX 40,Siemens Energy,ETR:ENR,ENR.DE,Alemania,Xetra,EUR
+DAX 40,Siemens Healthineers,ETR:SHL,SHL.DE,Alemania,Xetra,EUR
+DAX 40,Symrise,ETR:SY1,SY1.DE,Alemania,Xetra,EUR
+DAX 40,Volkswagen,ETR:VOW3,VOW3.DE,Alemania,Xetra,EUR
+DAX 40,Vonovia,ETR:VNA,VNA.DE,Alemania,Xetra,EUR
+DAX 40,Zalando,ETR:ZAL,ZAL.DE,Alemania,Xetra,EUR
+FTSE 100,3i Group,LON:III,III.L,Reino Unido,LSE,GBp
+FTSE 100,Admiral,LON:ADM,ADM.L,Reino Unido,LSE,GBp
+FTSE 100,Airtel Africa,LON:AAF,AAF.L,Reino Unido,LSE,GBp
+FTSE 100,Anglo American,LON:AAL,AAL.L,Reino Unido,LSE,GBp
+FTSE 100,Antofagasta,LON:ANTO,ANTO.L,Reino Unido,LSE,GBp
+FTSE 100,Sunbelt Rentals (antes Ashtead),NYSE:SUNB,SUNB,Reino Unido,NYSE,USD
+FTSE 100,Associated British Foods,LON:ABF,ABF.L,Reino Unido,LSE,GBp
+FTSE 100,AstraZeneca,LON:AZN,AZN.L,Reino Unido,LSE,GBp
+FTSE 100,Auto Trader,LON:AUTO,AUTO.L,Reino Unido,LSE,GBp
+FTSE 100,Aviva,LON:AV,AV.L,Reino Unido,LSE,GBp
+FTSE 100,BAE Systems,LON:BA,BA.L,Reino Unido,LSE,GBp
+FTSE 100,Barclays,LON:BARC,BARC.L,Reino Unido,LSE,GBp
+FTSE 100,Barratt Redrow,LON:BTRW,BTRW.L,Reino Unido,LSE,GBp
+FTSE 100,Beazley,LON:BEZ,BEZ.L,Reino Unido,LSE,GBp
+FTSE 100,BP,LON:BP,BP.L,Reino Unido,LSE,GBp
+FTSE 100,British American Tobacco,LON:BATS,BATS.L,Reino Unido,LSE,GBp
+FTSE 100,BT Group,LON:BT.A,BT-A.L,Reino Unido,LSE,GBp
+FTSE 100,Bunzl,LON:BNZL,BNZL.L,Reino Unido,LSE,GBp
+FTSE 100,Burberry,LON:BRBY,BRBY.L,Reino Unido,LSE,GBp
+FTSE 100,Centrica,LON:CNA,CNA.L,Reino Unido,LSE,GBp
+FTSE 100,Coca-Cola HBC,LON:CCH,CCH.L,Reino Unido,LSE,GBp
+FTSE 100,Compass Group,LON:CPG,CPG.L,Reino Unido,LSE,GBp
+FTSE 100,Convatec,LON:CTEC,CTEC.L,Reino Unido,LSE,GBp
+FTSE 100,Croda,LON:CRDA,CRDA.L,Reino Unido,LSE,GBp
+FTSE 100,DCC,LON:DCC,DCC.L,Reino Unido,LSE,GBp
+FTSE 100,Diageo,LON:DGE,DGE.L,Reino Unido,LSE,GBp
+FTSE 100,Entain,LON:ENT,ENT.L,Reino Unido,LSE,GBp
+FTSE 100,easyJet,LON:EZJ,EZJ.L,Reino Unido,LSE,GBp
+FTSE 100,Endeavour Mining,LON:EDV,EDV.L,Reino Unido,LSE,GBp
+FTSE 100,Experian,LON:EXPN,EXPN.L,Reino Unido,LSE,GBp
+FTSE 100,Flutter,NYSE:FLUT,FLUT,Reino Unido,NYSE,USD
+FTSE 100,Fresnillo,LON:FRES,FRES.L,Reino Unido,LSE,GBp
+FTSE 100,GSK,LON:GSK,GSK.L,Reino Unido,LSE,GBp
+FTSE 100,Glencore,LON:GLEN,GLEN.L,Reino Unido,LSE,GBp
+FTSE 100,Halma,LON:HLMA,HLMA.L,Reino Unido,LSE,GBp
+FTSE 100,Hikma,LON:HIK,HIK.L,Reino Unido,LSE,GBp
+FTSE 100,Howden,LON:HWDN,HWDN.L,Reino Unido,LSE,GBp
+FTSE 100,HSBC,LON:HSBA,HSBA.L,Reino Unido,LSE,GBp
+FTSE 100,IAG,LON:IAG,IAG.L,Reino Unido,LSE,GBp
+FTSE 100,Imperial Brands,LON:IMB,IMB.L,Reino Unido,LSE,GBp
+FTSE 100,Informa,LON:INF,INF.L,Reino Unido,LSE,GBp
+FTSE 100,InterContinental Hotels,LON:IHG,IHG.L,Reino Unido,LSE,GBp
+FTSE 100,Intertek,LON:ITRK,ITRK.L,Reino Unido,LSE,GBp
+FTSE 100,JD Sports,LON:JD,JD.L,Reino Unido,LSE,GBp
+FTSE 100,Kingfisher,LON:KGF,KGF.L,Reino Unido,LSE,GBp
+FTSE 100,Land Securities,LON:LAND,LAND.L,Reino Unido,LSE,GBp
+FTSE 100,Legal & General,LON:LGEN,LGEN.L,Reino Unido,LSE,GBp
+FTSE 100,Lloyds Banking Group,LON:LLOY,LLOY.L,Reino Unido,LSE,GBp
+FTSE 100,LSEG,LON:LSEG,LSEG.L,Reino Unido,LSE,GBp
+FTSE 100,M&G,LON:MNG,MNG.L,Reino Unido,LSE,GBp
+FTSE 100,Marks & Spencer,LON:MKS,MKS.L,Reino Unido,LSE,GBp
+FTSE 100,Melrose,LON:MRO,MRO.L,Reino Unido,LSE,GBp
+FTSE 100,Mondi,LON:MNDI,MNDI.L,Reino Unido,LSE,GBp
+FTSE 100,National Grid,LON:NG,NG.L,Reino Unido,LSE,GBp
+FTSE 100,NatWest,LON:NWG,NWG.L,Reino Unido,LSE,GBp
+FTSE 100,Next,LON:NXT,NXT.L,Reino Unido,LSE,GBp
+FTSE 100,Pearson,LON:PSON,PSON.L,Reino Unido,LSE,GBp
+FTSE 100,Persimmon,LON:PSN,PSN.L,Reino Unido,LSE,GBp
+FTSE 100,Standard Life plc,LON:SDLF,SDLF.L,Reino Unido,LSE,GBp
+FTSE 100,Prudential,LON:PRU,PRU.L,Reino Unido,LSE,GBp
+FTSE 100,Reckitt,LON:RKT,RKT.L,Reino Unido,LSE,GBp
+FTSE 100,RELX,LON:REL,REL.L,Reino Unido,LSE,GBp
+FTSE 100,Rentokil,LON:RTO,RTO.L,Reino Unido,LSE,GBp
+FTSE 100,Rightmove,LON:RMV,RMV.L,Reino Unido,LSE,GBp
+FTSE 100,Rio Tinto,LON:RIO,RIO.L,Reino Unido,LSE,GBp
+FTSE 100,Rolls-Royce,LON:RR,RR.L,Reino Unido,LSE,GBp
+FTSE 100,Sage,LON:SGE,SGE.L,Reino Unido,LSE,GBp
+FTSE 100,Sainsbury's,LON:SBRY,SBRY.L,Reino Unido,LSE,GBp
+FTSE 100,Schroders,LON:SDR,SDR.L,Reino Unido,LSE,GBp
+FTSE 100,Segro,LON:SGRO,SGRO.L,Reino Unido,LSE,GBp
+FTSE 100,Severn Trent,LON:SVT,SVT.L,Reino Unido,LSE,GBp
+FTSE 100,Shell,LON:SHEL,SHEL.L,Reino Unido,LSE,GBp
+FTSE 100,Smith & Nephew,LON:SN,SN.L,Reino Unido,LSE,GBp
+FTSE 100,Smiths Group,LON:SMIN,SMIN.L,Reino Unido,LSE,GBp
+FTSE 100,Smurfit Westrock,NYSE:SW,SW,Reino Unido,NYSE,USD
+FTSE 100,Spirax,LON:SPX,SPX.L,Reino Unido,LSE,GBp
+FTSE 100,SSE,LON:SSE,SSE.L,Reino Unido,LSE,GBp
+FTSE 100,Standard Chartered,LON:STAN,STAN.L,Reino Unido,LSE,GBp
+FTSE 100,Taylor Wimpey,LON:TW,TW.L,Reino Unido,LSE,GBp
+FTSE 100,Tesco,LON:TSCO,TSCO.L,Reino Unido,LSE,GBp
+FTSE 100,Unilever,LON:ULVR,ULVR.L,Reino Unido,LSE,GBp
+FTSE 100,United Utilities,LON:UU,UU.L,Reino Unido,LSE,GBp
+FTSE 100,Vodafone,LON:VOD,VOD.L,Reino Unido,LSE,GBp
+FTSE 100,Weir,LON:WEIR,WEIR.L,Reino Unido,LSE,GBp
+FTSE 100,Whitbread,LON:WTB,WTB.L,Reino Unido,LSE,GBp
+FTSE 100,WPP,LON:WPP,WPP.L,Reino Unido,LSE,GBp
+FTSE 100,Wise,LON:WISE,WISE.L,Reino Unido,LSE,GBp
+FTSE 100,Games Workshop,LON:GAW,GAW.L,Reino Unido,LSE,GBp
+FTSE 100,Babcock,LON:BAB,BAB.L,Reino Unido,LSE,GBp
+FTSE 100,ICG,LON:ICG,ICG.L,Reino Unido,LSE,GBp
+FTSE 100,Metlen,LON:MTLN,MTLN.L,Reino Unido,LSE,GBp
+FTSE 100,Scottish Mortgage,LON:SMT,SMT.L,Reino Unido,LSE,GBp
+FTSE 100,Hiscox,LON:HSX,HSX.L,Reino Unido,LSE,GBp
+FTSE 100,Diploma,LON:DPLM,DPLM.L,Reino Unido,LSE,GBp
+FTSE 100,Haleon,LON:HLN,HLN.L,Reino Unido,LSE,GBp
+FTSE 100,St. James's Place,LON:STJ,STJ.L,Reino Unido,LSE,GBp
+FTSE 100,Berkeley Group,LON:BKG,BKG.L,Reino Unido,LSE,GBp
+FTSE 100,Unite Group,LON:UTG,UTG.L,Reino Unido,LSE,GBp
+FTSE 100,Johnson Matthey,LON:JMAT,JMAT.L,Reino Unido,LSE,GBp
+FTSE 100,IMI,LON:IMI,IMI.L,Reino Unido,LSE,GBp
+Nikkei 225,Nissui Corp.,TYO:1332,1332.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Inpex Corp.,TYO:1605,1605.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Comsys Holdings Corp.,TYO:1721,1721.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Taisei Corp.,TYO:1801,1801.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Obayashi Corp.,TYO:1802,1802.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shimizu Corp.,TYO:1803,1803.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Haseko Corp.,TYO:1808,1808.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kajima Corp.,TYO:1812,1812.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Daiwa House Ind.,TYO:1925,1925.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sekisui House,TYO:1928,1928.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Jgc Holdings Corp.,TYO:1963,1963.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nisshin Seifun Group,TYO:2002,2002.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Meiji Holdings Co.,TYO:2269,2269.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nh Foods Ltd.,TYO:2282,2282.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,M3 Inc.,TYO:2413,2413.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Dena Co. Ltd.,TYO:2432,2432.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sapporo Breweries,TYO:2501,2501.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Asahi Group Holdings,TYO:2502,2502.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kirin Holdings Co.,TYO:2503,2503.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sojitz Corp.,TYO:2768,2768.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kikkoman Corp.,TYO:2801,2801.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ajinomoto Co. Inc.,TYO:2802,2802.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nichirei Corp.,TYO:2871,2871.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Japan Tobacco Inc.,TYO:2914,2914.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,J.Front Retailing Co.,TYO:3086,3086.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Zozo Inc.,TYO:3092,3092.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Isetan Mitsukoshi,TYO:3099,3099.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyu Fudosan,TYO:3289,3289.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Seven & I Holdings,TYO:3382,3382.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Teijin Ltd.,TYO:3401,3401.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toray Industries,TYO:3402,3402.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kuraray Co. Ltd.,TYO:3405,3405.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Asahi Kasei Corp.,TYO:3407,3407.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumco Corp.,TYO:3436,3436.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nexon Co. Ltd.,TYO:3659,3659.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shift Inc.,TYO:3697,3697.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Oji Holdings Corp.,TYO:3861,3861.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Resonac Holdings,TYO:4004,4004.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Chemical,TYO:4005,4005.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nissan Chemical Corp.,TYO:4021,4021.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tosoh Corp.,TYO:4042,4042.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokuyama Corp.,TYO:4043,4043.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Denka Co. Ltd.,TYO:4061,4061.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ibiden Co. Ltd.,TYO:4062,4062.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shin-Etsu Chemical,TYO:4063,4063.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kyowa Kirin Co.,TYO:4151,4151.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsui Chemicals,TYO:4183,4183.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Chemical,TYO:4188,4188.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ube Corp.,TYO:4208,4208.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nomura Research,TYO:4307,4307.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Dentsu Group Inc.,TYO:4324,4324.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mercari Inc.,TYO:4385,4385.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kao Corp.,TYO:4452,4452.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Takeda Pharmaceutical,TYO:4502,4502.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Astellas Pharma Inc.,TYO:4503,4503.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Pharma Co.,TYO:4506,4506.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shionogi & Co.,TYO:4507,4507.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Chugai Pharmaceutical,TYO:4519,4519.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Eisai Co. Ltd.,TYO:4523,4523.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Terumo Corp.,TYO:4543,4543.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Daiichi Sankyo Co.,TYO:4568,4568.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Otsuka Holdings Co.,TYO:4578,4578.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Oriental Land Co.,TYO:4661,4661.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ly Corp.,TYO:4689,4689.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Trend Micro Inc.,TYO:4704,4704.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Cyberagent Inc.,TYO:4751,4751.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Rakuten Group Inc.,TYO:4755,4755.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fujifilm Holdings,TYO:4901,4901.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shiseido Co. Ltd.,TYO:4911,4911.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Idemitsu Kosan Co.,TYO:5019,5019.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Eneos Holdings Inc.,TYO:5020,5020.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yokohama Rubber Co.,TYO:5101,5101.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Bridgestone Corp.,TYO:5108,5108.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Agc Inc.,TYO:5201,5201.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nippon Electric Glass,TYO:5214,5214.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Taiheiyo Cement,TYO:5233,5233.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokai Carbon Co.,TYO:5301,5301.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toto Ltd.,TYO:5332,5332.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ngk Corp.,TYO:5333,5333.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nippon Steel Corp.,TYO:5401,5401.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kobe Steel Ltd.,TYO:5406,5406.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Jfe Holdings Inc.,TYO:5411,5411.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Japan Steel Works,TYO:5631,5631.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsui Kinzoku Co.,TYO:5706,5706.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Materials,TYO:5711,5711.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Metal,TYO:5713,5713.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Dowa Holdings Co.,TYO:5714,5714.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Furukawa Electric,TYO:5801,5801.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Electric,TYO:5802,5802.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fujikura Ltd.,TYO:5803,5803.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Shizuoka Financial,TYO:5831,5831.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Recruit Holdings Co.,TYO:6098,6098.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Okuma Corp.,TYO:6103,6103.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Amada Co. Ltd.,TYO:6113,6113.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Disco Corp.,TYO:6146,6146.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Japan Post Holdings,TYO:6178,6178.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Smc Corp.,TYO:6273,6273.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Komatsu Ltd.,TYO:6301,6301.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Heavy Ind.,TYO:6302,6302.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Hitachi Const. Mach.,TYO:6305,6305.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kubota Corp.,TYO:6326,6326.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ebara Corp.,TYO:6361,6361.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Daikin Industries,TYO:6367,6367.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nsk Ltd.,TYO:6471,6471.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ntn Corp.,TYO:6472,6472.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Jtekt Corp.,TYO:6473,6473.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Minebea Mitsumi Inc.,TYO:6479,6479.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Hitachi Ltd.,TYO:6501,6501.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Electric,TYO:6503,6503.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fuji Electric Co.,TYO:6504,6504.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yaskawa Electric,TYO:6506,6506.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kokusai Electric,TYO:6525,6525.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Socionext Inc.,TYO:6526,6526.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Baycurrent Inc.,TYO:6532,6532.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Omron Corp.,TYO:6645,6645.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nec Corp.,TYO:6701,6701.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fujitsu Ltd.,TYO:6702,6702.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Renesas Electronics,TYO:6723,6723.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Seiko Epson Corp.,TYO:6724,6724.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Panasonic Holdings,TYO:6752,6752.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sharp Corp.,TYO:6753,6753.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sony Group Corp.,TYO:6758,6758.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tdk Corp.,TYO:6762,6762.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Alps Alpine Co.,TYO:6770,6770.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yokogawa Electric,TYO:6841,6841.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Advantest Corp.,TYO:6857,6857.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Keyence Corp.,TYO:6861,6861.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Denso Corp.,TYO:6902,6902.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Lasertec Corp.,TYO:6920,6920.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fanuc Corp.,TYO:6954,6954.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Rohm Co. Ltd.,TYO:6963,6963.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kyocera Corp.,TYO:6971,6971.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Taiyo Yuden Co.,TYO:6976,6976.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Murata Manufacturing,TYO:6981,6981.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nitto Denko Corp.,TYO:6988,6988.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Heavy Ind.,TYO:7011,7011.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kawasaki Heavy Ind.,TYO:7012,7012.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ihi Corp.,TYO:7013,7013.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yokohama Financial,TYO:7186,7186.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nissan Motor Co.,TYO:7201,7201.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Isuzu Motors Ltd.,TYO:7202,7202.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toyota Motor Corp.,TYO:7203,7203.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Motors,TYO:7211,7211.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mazda Motor Corp.,TYO:7261,7261.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Honda Motor Co.,TYO:7267,7267.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Suzuki Motor Corp.,TYO:7269,7269.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Subaru Corp.,TYO:7270,7270.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yamaha Motor Co.,TYO:7272,7272.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ryohin Keikaku Co.,TYO:7453,7453.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Pan Pacific Int.,TYO:7532,7532.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nikon Corp.,TYO:7731,7731.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Olympus Corp.,TYO:7733,7733.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Screen Holdings Co.,TYO:7735,7735.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Hoya Corp.,TYO:7741,7741.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Canon Inc.,TYO:7751,7751.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ricoh Co. Ltd.,TYO:7752,7752.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Bandai Namco,TYO:7832,7832.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toppan Holdings Inc.,TYO:7911,7911.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Dai Nippon Printing,TYO:7912,7912.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yamaha Corp.,TYO:7951,7951.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nintendo Co. Ltd.,TYO:7974,7974.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Itochu Corp.,TYO:8001,8001.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Marubeni Corp.,TYO:8002,8002.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toyota Tsusho Corp.,TYO:8015,8015.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsui & Co. Ltd.,TYO:8031,8031.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyo Electron Ltd.,TYO:8035,8035.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Corp.,TYO:8053,8053.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Corp.,TYO:8058,8058.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Takashimaya Co.,TYO:8233,8233.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Marui Group Co.,TYO:8252,8252.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Credit Saison Co.,TYO:8253,8253.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Aeon Co. Ltd.,TYO:8267,8267.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Aozora Bank Ltd.,TYO:8304,8304.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Ufj Fin.,TYO:8306,8306.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Resona Holdings,TYO:8308,8308.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Mitsui Trust,TYO:8309,8309.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Mitsui Fin.,TYO:8316,8316.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,The Chiba Bank Ltd.,TYO:8331,8331.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fukuoka Financial,TYO:8354,8354.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mizuho Financial,TYO:8411,8411.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Orix Corp.,TYO:8591,8591.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Daiwa Securities,TYO:8601,8601.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nomura Holdings Inc.,TYO:8604,8604.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sompo Holdings Inc.,TYO:8630,8630.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Japan Exchange Group,TYO:8697,8697.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ms&Ad Insurance,TYO:8725,8725.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Daiichi Life Group,TYO:8750,8750.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokio Marine Holdings,TYO:8766,8766.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,T&D Holdings Inc.,TYO:8795,8795.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsui Fudosan Co.,TYO:8801,8801.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsubishi Estate,TYO:8802,8802.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyo Tatemono Co.,TYO:8804,8804.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Sumitomo Realty,TYO:8830,8830.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tobu Railway Co.,TYO:9001,9001.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyu Corp.,TYO:9005,9005.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Odakyu Electric,TYO:9007,9007.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Keio Corp.,TYO:9008,9008.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Keisei Electric,TYO:9009,9009.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,East Japan Railway,TYO:9020,9020.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,West Japan Railway,TYO:9021,9021.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Central Japan Railway,TYO:9022,9022.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Yamato Holdings Co.,TYO:9064,9064.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nippon Yusen K.K.,TYO:9101,9101.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Mitsui O.S.K.Lines,TYO:9104,9104.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kawasaki Kisen,TYO:9107,9107.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nippon Express,TYO:9147,9147.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Japan Airlines Co.,TYO:9201,9201.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ana Holdings Inc.,TYO:9202,9202.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Ntt Inc.,TYO:9432,9432.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kddi Corp.,TYO:9433,9433.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Softbank Corp.,TYO:9434,9434.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyo Electric Power,TYO:9501,9501.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Chubu Electric Power,TYO:9502,9502.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Kansai Electric,TYO:9503,9503.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Tokyo Gas Co. Ltd.,TYO:9531,9531.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Osaka Gas Co. Ltd.,TYO:9532,9532.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Toho Co. Ltd,TYO:9602,9602.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Capcom Co. Ltd.,TYO:9697,9697.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Secom Co. Ltd.,TYO:9735,9735.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Konami Group Corp.,TYO:9766,9766.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Nitori Holdings Co.,TYO:9843,9843.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Fast Retailing Co.,TYO:9983,9983.T,Japón,Bolsa de Tokio,JPY
+Nikkei 225,Softbank Group Corp.,TYO:9984,9984.T,Japón,Bolsa de Tokio,JPY
+Hang Seng Composite,CKH HOLDINGS,HKG:0001,0001.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CLP HOLDINGS,HKG:0002,0002.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HK & CHINA GAS,HKG:0003,0003.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WHARF HOLDINGS,HKG:0004,0004.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HSBC HOLDINGS,HKG:0005,0005.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,POWER ASSETS,HKG:0006,0006.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PCCW,HKG:0008,0008.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HANG LUNG,HKG:0010,0010.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HENDERSON LAND,HKG:0012,0012.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HUTCHMED,HKG:0013,0013.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HYSAN DEV,HKG:0014,0014.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SHK PPT,HKG:0016,0016.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NEW WORLD DEV,HKG:0017,0017.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SWIRE PACIFIC A,HKG:0019,0019.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SENSETIME,HKG:0020,0020.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BANK OF E ASIA,HKG:0023,0023.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GALAXY ENT,HKG:0027,0027.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GREAT EAGLE H,HKG:0041,0041.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MTR,HKG:0066,0066.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MANYCORE TECH,HKG:0068,0068.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CH OVS G OCEANS,HKG:0081,0081.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SINO LAND,HKG:0083,0083.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SWIRE PACIFIC B,HKG:0087,0087.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MINIMAX,HKG:0100,0100.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HANG LUNG PPT,HKG:0101,0101.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,POLY PROPERTY,HKG:0119,0119.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YUEXIU PROPERTY,HKG:0123,0123.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KUNLUN ENERGY,HKG:0135,0135.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA RUYI,HKG:0136,0136.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FIRST PACIFIC,HKG:0142,0142.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HARBIN ELECTRIC,HKG:1133,1133.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COSCO SHIP ENGY,HKG:1138,1138.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZOOMLION,HKG:1157,1157.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CGN MINING,HKG:1164,1164.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YANKUANG,HKG:1171,1171.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SBP GROUP,HKG:1177,1177.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HWORLD,HKG:1179,1179.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA RAIL CONS,HKG:1186,1186.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CREALIGHTS,HKG:1191,1191.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA RES GAS,HKG:1193,1193.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,REALORD TECH,HKG:1196,1196.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COSCO SHIP PORT,HKG:1199,1199.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MMG,HKG:1208,1208.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA RES MIXC,HKG:1209,1209.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BYD COMPANY,HKG:1211,1211.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LDROBOT,HKG:1236,1236.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINFMINING,HKG:1258,1258.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HENGRUI PHARMA,HKG:1276,1276.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KINETIC DEV,HKG:1277,1277.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,IMPRO PRECISION,HKG:1286,1286.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ABC,HKG:1288,1288.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AIA,HKG:1299,1299.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LIFETECH SCI,HKG:1302,1302.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SITC,HKG:1308,1308.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HKBN,HKG:1310,1310.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CR BLDG MAT TEC,HKG:1313,1313.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NEXTEER,HKG:1316,1316.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MAO GEPING,HKG:1318,1318.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BRETON,HKG:1333,1333.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NCI,HKG:1336,1336.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PICC GROUP,HKG:1339,1339.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HUA HONG GRACE,HKG:1347,1347.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MEITU,HKG:1357,1357.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA CINDA,HKG:1359,1359.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,361 DEGREES,HKG:1361,1361.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GUMING,HKG:1364,1364.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XTEP INT'L,HKG:1368,1368.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINAHONGQIAO,HKG:1378,1378.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DEEPEXI TECH,HKG:1384,1384.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SHANGHAI FUDAN,HKG:1385,1385.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HQVT,HKG:1392,1392.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ICBC,HKG:1398,1398.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DPC DASH,HKG:1405,1405.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COWELL,HKG:1415,1415.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BRIGHT SMART,HKG:1428,1428.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,STAR SHINE HLDG,HKG:1440,1440.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,Q TECH,HKG:1478,1478.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,UISEE TECH,HKG:1511,1511.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LIVZON PHARMA,HKG:1513,1513.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,J&T EXPRESS,HKG:1519,1519.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,3SBIO,HKG:1530,1530.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GENSCRIPT BIO,HKG:1548,1548.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YIHAI INTL,HKG:1579,1579.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YADEA,HKG:1585,1585.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,STAR SPORTS MED,HKG:1609,1609.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COFCO JOYCOME,HKG:1610,1610.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TSUGAMI CHINA,HKG:1651,1651.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PSBC,HKG:1658,1658.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ASCLETIS,HKG:1672,1672.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ASIAINFO TECH,HKG:1675,1675.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CONSUN PHARMA,HKG:1681,1681.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNEVISION,HKG:1686,1686.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TME ‑ SW,HKG:1698,1698.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TIME INTERCON,HKG:1729,1729.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CENTRAL NEW EGY,HKG:1735,1735.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CRRC,HKG:1766,1766.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BUSYMING,HKG:1768,1768.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GANFENGLITHIUM,HKG:1772,1772.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GF SEC,HKG:1776,1776.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LONGBIO ‑ B,HKG:1779,1779.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ENVISION GREEN,HKG:1783,1783.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SD GOLD,HKG:1787,1787.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GUOTAI JUNAN I,HKG:1788,1788.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AK MEDICAL,HKG:1789,1789.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EAST BUY,HKG:1797,1797.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA COMM,HKG:1800,1800.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,INNOVENT BIO,HKG:1801,1801.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XIAOMI,HKG:1810,1810.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CGN NEW ENERGY,HKG:1811,1811.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CGN POWER,HKG:1816,1816.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZHAOJIN MINING,HKG:1818,1818.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FWD,HKG:1828,1828.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PA GOODDOCTOR,HKG:1833,1833.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,STELLA HOLDINGS,HKG:1836,1836.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MOBVISTA,HKG:1860,1860.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA XLX FERT,HKG:1866,1866.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BUD APAC,HKG:1876,1876.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XIZHI TECH,HKG:1879,1879.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CTG DUTY‑FREE,HKG:1880,1880.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAITIAN INT'L,HKG:1882,1882.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CITIC TELECOM,HKG:1883,1883.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KB LAMINATES,HKG:1888,1888.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MAOYAN ENT,HKG:1896,1896.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA COAL,HKG:1898,1898.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA RISUN GP,HKG:1907,1907.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,C&D INTL GROUP,HKG:1908,1908.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SAMSONITE,HKG:1910,1910.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PRADA,HKG:1913,1913.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNAC,HKG:1918,1918.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COSCO SHIP HOLD,HKG:1919,1919.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DALIPAL HLDG,HKG:1921,1921.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SANDS CHINA LTD,HKG:1928,1928.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHOW TAI FOOK,HKG:1929,1929.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JXR,HKG:1951,1951.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EVEREST MED,HKG:1952,1952.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WENGE AI,HKG:1956,1956.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BCQ,HKG:1963,1963.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SWIREPROPERTIES,HKG:1972,1972.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MINSHENG BANK,HKG:1988,1988.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WHARF REIC,HKG:1997,1997.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MAN WAH HLDGS,HKG:1999,1999.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SSY GROUP,HKG:2005,2005.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,COUNTRY GARDEN,HKG:2007,2007.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WEIMOB INC,HKG:2013,2013.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LI AUTO,HKG:2015,2015.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CZBANK,HKG:2016,2016.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AAC TECH,HKG:2018,2018.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ANTA SPORTS,HKG:2020,2020.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PONY,HKG:2026,2026.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FIH,HKG:2038,2038.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CIMC,HKG:2039,2039.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SANHUA,HKG:2050,2050.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZTO EXPRESS,HKG:2057,2057.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BOSS ZHIPIN,HKG:2076,2076.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SIMCERE PHARMA,HKG:2096,2096.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MIXUE GROUP,HKG:2097,2097.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINAGOLDINTL,HKG:2099,2099.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA LESSO,HKG:2128,2128.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HBM HOLDINGS,HKG:2142,2142.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHICMAX,HKG:2145,2145.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MORIMATSU INTL,HKG:2155,2155.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LEPU BIO,HKG:2157,2157.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KEYMED BIO ‑ B,HKG:2162,2162.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CARSGEN ‑ B,HKG:2171,2171.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MICROPORT,HKG:2172,2172.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LUYE PHARMA,HKG:2186,2186.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MEDLIVE,HKG:2192,2192.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FOSUN PHARMA,HKG:2196,2196.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA VANKE,HKG:2202,2202.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JINHAI MED TECH,HKG:2225,2225.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XTALPI,HKG:2228,2228.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CRYSTAL INTL,HKG:2232,2232.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WESTCHINACEME,HKG:2233,2233.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GAC GROUP,HKG:2238,2238.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MEDBOT ‑ B,HKG:2252,2252.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZIJIN GOLD INTL,HKG:2259,2259.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WUXI XDC,HKG:2268,2268.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WUXI BIO,HKG:2269,2269.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KEYTOP PARKING,HKG:2272,2272.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GUSHENGTANG,HKG:2273,2273.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CONANT OPTICAL,HKG:2276,2276.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MGM CHINA,HKG:2282,2282.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHERVON,HKG:2285,2285.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SHENZHOU INTL,HKG:2313,2313.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LEE & MAN PAPER,HKG:2314,2314.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PING AN,HKG:2318,2318.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MENGNIU DAIRY,HKG:2319,2319.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PICC P&C,HKG:2328,2328.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LI NING,HKG:2331,2331.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GWMOTOR,HKG:2333,2333.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MICOT PHARMA,HKG:2335,2335.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WEICHAI POWER,HKG:2338,2338.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PACIFIC BASIN,HKG:2343,2343.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DAHSING BANKING,HKG:2356,2356.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AVICHINA,HKG:2357,2357.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WUXI APPTEC,HKG:2359,2359.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GIANT BIOGENE,HKG:2367,2367.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PRU,HKG:2378,2378.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA POWER,HKG:2380,2380.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNNY OPTICAL,HKG:2382,2382.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SINOPEC SEG,HKG:2386,2386.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BOC HONG KONG,HKG:2388,2388.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XD INC,HKG:2400,2400.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DEKON AGR,HKG:2419,2419.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BEKE,HKG:2423,2423.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DOBOT,HKG:2432,2432.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CR BEVERAGE,HKG:2460,2460.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XXF,HKG:2473,2473.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,VGT,HKG:2476,2476.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WELLCELL HOLD,HKG:2477,2477.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ROBOSENSE,HKG:2498,2498.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XUNFEIHEALTH,HKG:2506,2506.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CIRRUS,HKG:2507,2507.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TS LINES,HKG:2510,2510.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,Z.AI,HKG:2513,2513.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GUOQUAN,HKG:2517,2517.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HESAI,HKG:2525,2525.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DIAGENS,HKG:2526,2526.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BLACK SESAME,HKG:2533,2533.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SHOUGANG LANZA,HKG:2553,2553.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHABAIDAO,HKG:2555,2555.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MARKETINGFORCE,HKG:2556,2556.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PEGBIO CO,HKG:2565,2565.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XUANZHUBIO,HKG:2575,2575.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,INNOSCIENCE,HKG:2577,2577.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AUX ELECTRIC,HKG:2580,2580.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HIPINE,HKG:2583,2583.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DMALL,HKG:2586,2586.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BOC AVIATION,HKG:2588,2588.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AUNTEA JENNY,HKG:2589,2589.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GEEKPLUS,HKG:2590,2590.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,INNOGEN ‑ B,HKG:2591,2591.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GENFLEET ‑ B,HKG:2595,2595.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHALCO,HKG:2600,2600.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CPIC,HKG:2601,2601.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ONEWO,HKG:2602,2602.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SH PHARMA,HKG:2607,2607.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BAYZED HEALTH,HKG:2609,2609.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NANSHAN AL INTL,HKG:2610,2610.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GTHT,HKG:2611,2611.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CSTONE PHARMA,HKG:2616,2616.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TRANSTHERA,HKG:2617,2617.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JD LOGISTICS,HKG:2618,2618.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA LIFE,HKG:2628,2628.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NEW VISION CO,HKG:2632,2632.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NUOBIKAN,HKG:2635,2635.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAIXI PHARMA,HKG:2637,2637.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HKELECTRIC ‑ SS,HKG:2638,2638.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CAOCAO INC,HKG:2643,2643.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZHIDA TECH,HKG:2650,2650.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CF PHARMTECH,HKG:2652,2652.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GUOXIA TECH,HKG:2655,2655.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,160 HEALTH,HKG:2656,2656.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BAO PHARMA ‑ B,HKG:2659,2659.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,QINGSONG,HKG:2661,2661.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SEYOND,HKG:2665,2665.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,UNI MEDICAL,HKG:2666,2666.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA OVS PPT,HKG:2669,2669.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BAIGE DIGITAL,HKG:2672,2672.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EDGE MEDICAL,HKG:2675,2675.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,QUANTGROUP,HKG:2685,2685.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ABLE DIGITAL,HKG:2687,2687.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ENN ENERGY,HKG:2688,2688.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ND PAPER,HKG:2689,2689.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HENLIUS,HKG:2696,2696.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TH MEDICAL ‑ B,HKG:2697,2697.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SOFTCARE,HKG:2698,2698.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAIZHI TECH GP,HKG:2706,2706.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MUYUAN,HKG:2714,2714.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MININGLAMP,HKG:2718,2718.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DEEPZERO,HKG:2723,2723.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EPIWORLD,HKG:2726,2726.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SH ELECTRIC,HKG:2727,2727.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GALAXIS TECH,HKG:2729,2729.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHAMPION REIT,HKG:2778,2778.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHUANGXIN IND,HKG:2788,2788.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CITIC FAMC,HKG:2799,2799.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YIXIN,HKG:2858,2858.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GREENTOWN SER,HKG:2869,2869.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SHINEWAY PHARM,HKG:2877,2877.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA OILFIELD,HKG:2883,2883.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,STANCHART,HKG:2888,2888.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PATEO,HKG:2889,2889.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZIJIN MINING,HKG:2899,2899.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YUNJI,HKG:2670,2670.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GPIXEL,HKG:3277,3277.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAITIAN FLAV,HKG:3288,3288.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JNBY,HKG:3306,3306.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,VIEWTRIX TECH,HKG:3310,3310.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA STATE CON,HKG:3311,3311.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XUNCE,HKG:3317,3317.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINARES,HKG:3320,3320.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CNBM,HKG:3323,3323.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BANKCOMM,HKG:3328,3328.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LINGBAO GOLD,HKG:3330,3330.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LONKING,HKG:3339,3339.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FS.COM,HKG:3355,3355.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FE HORIZON,HKG:3360,3360.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LOGAN GROUP,HKG:3380,3380.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CREALITY,HKG:3388,3388.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WASION,HKG:3393,3393.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LEGENDHOLDING,HKG:3396,3396.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FUYAO GLASS,HKG:3606,3606.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TONGRENTANGCM,HKG:3613,3613.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CQRC BANK,HKG:3618,3618.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FOURSEMI,HKG:3625,3625.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZHONGYU ENERGY,HKG:3633,3633.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,QFIN,HKG:3660,3660.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YANCOAL AUS,HKG:3668,3668.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZENERGY,HKG:3677,3677.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MEITUAN,HKG:3690,3690.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HANSOH PHARMA,HKG:3692,3692.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,INSILICO,HKG:3696,3696.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HUISHANG BANK,HKG:3698,3698.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,VOBILE GROUP,HKG:3738,3738.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CATL,HKG:3750,3750.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FAMEGLOW,HKG:3774,3774.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GCL TECH,HKG:3800,3800.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SINOTRUK,HKG:3808,3808.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JIAXIN INTL RES,HKG:3858,3858.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XINYI ENERGY,HKG:3868,3868.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CSSC SHIPPING,HKG:3877,3877.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CIDI,HKG:3881,3881.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HASHKEY HLDGS,HKG:3887,3887.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KINGSOFT,HKG:3888,3888.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,KINGSOFT CLOUD,HKG:3896,3896.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TIMES ELECTRIC,HKG:3898,3898.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CIMC ENRIC,HKG:3899,3899.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GREENTOWN,HKG:3900,3900.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CICC,HKG:3908,3908.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NAGACORP,HKG:3918,3918.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CALB,HKG:3931,3931.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,UNITED LAB,HKG:3933,3933.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WANGUO GOLD GP,HKG:3939,3939.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CM BANK,HKG:3968,3968.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA CRSC,HKG:3969,3969.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GIGADEVICE,HKG:3986,3986.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BANK OF CHINA,HKG:3988,3988.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CMOC,HKG:3993,3993.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CH ENERGY ENG,HKG:3996,3996.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BOSIDENG,HKG:3998,3998.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CITIC SEC,HKG:6030,6030.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SANY HEAVY IND,HKG:6031,6031.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,POLY PPT SER,HKG:6049,6049.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CTIHK,HKG:6055,6055.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZA ONLINE,HKG:6060,6060.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CSC,HKG:6066,6066.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SY HOLDINGS,HKG:6069,6069.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HYGEIA HEALTH,HKG:6078,6078.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BIREN TECH,HKG:6082,6082.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,FIT HON TENG,HKG:6088,6088.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BUTONG GROUP,HKG:6090,6090.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CG SERVICES,HKG:6098,6098.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CMSC,HKG:6099,6099.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SEER TECH,HKG:6106,6106.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TOPSPORTS,HKG:6110,6110.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BEONE MEDICINES,HKG:6160,6160.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZHOU LIU FU,HKG:6168,6168.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LAOPU GOLD,HKG:6181,6181.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHINA FEIHE,HKG:6186,6186.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ONEROBOTICS,HKG:6600,6600.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JD HEALTH,HKG:6618,6618.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EXTREME VISION,HKG:6636,6636.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,51WORLD,HKG:6651,6651.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HX BLDG MAT,HKG:6655,6655.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SIGENERGY,HKG:6656,6656.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LIULIUMEI,HKG:6658,6658.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,EVERG SERVICES,HKG:6666,6666.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SENASIC,HKG:6675,6675.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BRAINAURORA,HKG:6681,6681.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,PHANCY,HKG:6682,6682.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,STARPLUS LEGEND,HKG:6683,6683.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JST GROUP,HKG:6687,6687.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAIER,HKG:6690,6690.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ANGELALIGN,HKG:6699,6699.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XUNLONG,HKG:6715,6715.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNART RETAIL,HKG:6808,6808.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MONTAGE TECH,HKG:6809,6809.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNMI TECH,HKG:6810,6810.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CEB BANK,HKG:6818,6818.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HKT ‑ SS,HKG:6823,6823.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ASCENTAGE,HKG:6855,6855.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HAIDILAO,HKG:6862,6862.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YOFC,HKG:6869,6869.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TENNOR THERAP,HKG:6872,6872.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CGS,HKG:6881,6881.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HTSC,HKG:6886,6886.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,RIBOLIFE ‑ B,HKG:6938,6938.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUNSHINE INS,HKG:6963,6963.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SMOORE INTL,HKG:6969,6969.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZJLD,HKG:6979,6979.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SKB BIO,HKG:6990,6990.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BLUE MOON,HKG:6993,6993.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JD INDUSTRIALS,HKG:7618,7618.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,IMPACT THERAP,HKG:7630,7630.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,METIS TECHBIO,HKG:7666,7666.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TOPNC,HKG:7688,7688.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,DUALITYBIO ‑ B,HKG:9606,9606.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JD ‑ SW,HKG:9618,9618.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BILIBILI,HKG:9626,9626.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NONGFU SPRING,HKG:9633,9633.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,JF SMARTINVEST,HKG:9636,9636.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ALEBUND ‑ B,HKG:9637,9637.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SUPER HI,HKG:9658,9658.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,HORIZONROBOT,HKG:9660,9660.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,UNISOUND,HKG:9678,9678.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ZAI LAB,HKG:9688,9688.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TUHU,HKG:9690,9690.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,GDS ‑ SW,HKG:9698,9698.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SF INTRA‑CITY,HKG:9699,9699.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YOURAN DAIRY,HKG:9858,9858.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LEAPMOTOR,HKG:9863,9863.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NIO ‑ SW,HKG:9866,9866.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,XPENG,HKG:9868,9868.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,UBTECH ROBOTICS,HKG:9880,9880.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,LEADS BIOLABS,HKG:9887,9887.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BIDU,HKG:9888,9888.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TANWAN,HKG:9890,9890.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,MNSO,HKG:9896,9896.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WB ‑ SW,HKG:9898,9898.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NETEASE MUSIC,HKG:9899,9899.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NEW ORIENTAL,HKG:9901,9901.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,ILUVATAR COREX,HKG:9903,9903.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NEWBORNTOWN,HKG:9911,9911.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,AKESO,HKG:9926,9926.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,SERES,HKG:9927,9927.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,TRIP.COM,HKG:9961,9961.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,INNOCARE,HKG:9969,9969.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,CHERY AUTO,HKG:9973,9973.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,WL DELICIOUS,HKG:9985,9985.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,YUM CHINA,HKG:9987,9987.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,BABA,HKG:9988,9988.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,POP MART,HKG:9992,9992.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,RADIANCE HLDGS,HKG:9993,9993.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,REMEGEN,HKG:9995,9995.HK,Hong Kong (China),HKEX,HKD
+Hang Seng Composite,NTES,HKG:9999,9999.HK,Hong Kong (China),HKEX,HKD

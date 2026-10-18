@@ -1,0 +1,33 @@
+name: Actualizar precios
+on:
+  schedule:            # L-V, en UTC (valen en horario de invierno y de verano)
+    - cron: "0 2 * * 1-5"     # apertura Hong Kong (Tokio ya abierta)
+    - cron: "0 7 * * 1-5"     # cierre Tokio
+    - cron: "45 8 * * 1-5"    # cierre Hong Kong + apertura Europa
+    - cron: "0 15 * * 1-5"    # apertura EE. UU.
+    - cron: "0 17 * * 1-5"    # cierre Europa
+    - cron: "30 21 * * 1-5"   # cierre EE. UU.
+  push:                # prueba en la rama de trabajo (el cron solo corre en main)
+    branches: [feature-acciones]
+    paths: [actualizar_precios.py, tickers.csv, .github/workflows/precios.yml]
+  workflow_dispatch:           # botón "Run workflow" (solo aparece cuando el archivo esté en main)
+permissions:
+  contents: write
+concurrency: precios
+jobs:
+  precios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install yfinance pandas
+      - run: python actualizar_precios.py
+      - name: Guardar resultados
+        run: |
+          git config user.name "bot-precios"
+          git config user.email "bot@users.noreply.github.com"
+          git add precios.json precios.csv errores.txt
+          git commit -m "Precios $(date -u +%F\ %H:%M)" || echo "sin cambios"
+          git pull --rebase
+          git push
