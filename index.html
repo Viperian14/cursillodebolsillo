@@ -403,7 +403,8 @@ h2 { color: var(--muted); }
 @media (max-width: 700px) { .split { grid-template-columns: minmax(0, 1fr); } }
 
 /* Herramientas */
-.toolcards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.toolcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .toolcards { grid-template-columns: 1fr; } }
 .tcard { font: inherit; text-align: left; color: var(--fg); background: rgba(19,27,21,.9); border: 2px solid #4a5040; border-radius: 10px; padding: 16px 18px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
 .tcard b { font-family: var(--font-title); font-size: 20px; color: var(--accent); }
 .tcard span { font-size: 13px; color: var(--muted); }
@@ -430,7 +431,7 @@ button.bs:hover, button.bs:focus-visible { border-color: var(--accent); outline:
 .actgrp[hidden], .actcat[hidden] { display: none; }
 </style>
 
-<div id="home"><div class="bg"></div><div class="stage"><div class="pic" role="img" aria-label="Cursillo de Bolsillo: un toro verde y un oso rojo frente a frente"></div><button type="button" class="bubble b-intra" data-go="intra">Intradía / Scalping</button><button type="button" class="bubble b-swing" data-go="swing">Swing</button><button type="button" class="bubble mini b-ind" data-page="herramientas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Herramientas</button><button type="button" class="bubble mini b-cal" data-page="calendario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Calendario</button><button type="button" class="bubble mini b-ops" data-page="operativas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Operativas</button></div></div>
+<div id="home"><div class="bg"></div><div class="stage"><div class="pic" role="img" aria-label="Cursillo de Bolsillo: un toro verde y un oso rojo frente a frente"></div><button type="button" class="bubble b-intra" data-go="intra">Intradía / Scalping</button><button type="button" class="bubble b-swing" data-go="swing">Swing</button><button type="button" class="bubble mini b-ind" data-page="herramientas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M18 6h2M4 12h3M12 12h8M4 18h9M18 18h2"/><circle cx="15.5" cy="6" r="2"/><circle cx="9.5" cy="12" r="2"/><circle cx="15.5" cy="18" r="2"/></svg>Utilidades</button><button type="button" class="bubble mini b-cal" data-page="calendario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Calendario</button><button type="button" class="bubble mini b-ops" data-href="acciones.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Acciones</button></div></div>
 
 <template id="tpl-indicador">
 <section>
@@ -8670,7 +8671,9 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     var h = (location.hash || '').replace('#', '');
     state.home = !h || h === 'inicio';
     if (h === 'indicador') h = 'herramientas';
-    if (h === 'herramientas' || h === 'calendario' || h === 'operativas') { state.page = h; state.home = false; }
+    if (h === 'operativas') h = 'herramientas';
+    if (h === 'herramientas' || h === 'calendario') { state.page = h; state.home = false; }
+    if (h === 'acciones') { location.replace('acciones.html'); }
     if (h === 'intra' || h === 'swing') {
       pickMode(h);
     } else if (h) {
@@ -9479,7 +9482,7 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     if (x === 'XETR') return 'xetr';
     return '';
   }
-  var TOOLST = { tab: 'ind', cat: 'all' };
+  var TOOLST = { tab: (location.hash === '#operativas' ? 'ops' : 'ind'), cat: 'all' };
   function activosHtml() {
     var h = '<section><h2>Activos de mi lista</h2><p class="legend">Símbolos de mi lista de TradingView agrupados por activo, con la etiqueta <b>FUTURO</b> o <b>CFD</b> (y SPOT, ÍNDICE o ETF cuando no es ninguno de los dos). El símbolo <span class="usd">$</span> marca los que necesitan una suscripción de datos para verse en tiempo real: púlsalo para ver cuál. Los CFD y los datos de TVC no llevan $ porque son del propio bróker o de TradingView, pero no he comprobado cada uno.</p>' +
       '<input type="search" id="actq" class="actq" placeholder="Buscar un activo o símbolo (por ejemplo café, WTI, NQ)" aria-label="Buscar activo"></section>';
@@ -9502,8 +9505,8 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
   }
   function renderTools() {
     var t = TOOLST.tab;
-    return '<div class="toolcards"><button type="button" class="tcard" data-tool="ind" aria-pressed="' + (t === 'ind') + '"><b>Indicador</b><span>VIPERIANDICATOR14: qué hace cada herramienta</span></button><button type="button" class="tcard" data-tool="act" aria-pressed="' + (t === 'act') + '"><b>Activos</b><span>Símbolos de mi lista: futuros y CFD por activo</span></button></div>' +
-      (t === 'ind' ? document.getElementById('tpl-indicador').innerHTML : activosHtml());
+    return '<div class="toolcards"><button type="button" class="tcard" data-tool="ind" aria-pressed="' + (t === 'ind') + '"><b>Indicador</b><span>VIPERIANDICATOR14: qué hace cada herramienta</span></button><button type="button" class="tcard" data-tool="act" aria-pressed="' + (t === 'act') + '"><b>Activos</b><span>Símbolos de mi lista: futuros y CFD por activo</span></button><button type="button" class="tcard" data-tool="ops" aria-pressed="' + (t === 'ops') + '"><b>Operativas</b><span>Aciertos y fallos de mis análisis, medidos con gráfico</span></button></div>' +
+      (t === 'ind' ? document.getElementById('tpl-indicador').innerHTML : t === 'ops' ? renderTrades() : activosHtml());
   }
   function openUsd(k) {
     var u = USD[k]; if (!u) return;
@@ -9514,9 +9517,9 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
 
   function renderInfo() {
     var pg = state.page;
-    document.getElementById('infoeyebrow').textContent = pg === 'herramientas' ? 'Herramientas' : pg === 'operativas' ? 'Operativas' : 'Calendario';
-    document.getElementById('infotitle').textContent = pg === 'herramientas' ? 'Indicador y activos' : pg === 'operativas' ? 'Operativas realizadas' : 'Datos y resultados';
-    document.getElementById('infobody').innerHTML = pg === 'herramientas' ? renderTools() : pg === 'operativas' ? renderTrades() : renderCalendar();
+    document.getElementById('infoeyebrow').textContent = pg === 'herramientas' ? 'Utilidades' : 'Calendario';
+    document.getElementById('infotitle').textContent = pg === 'herramientas' ? (TOOLST.tab === 'ops' ? 'Operativas realizadas' : TOOLST.tab === 'act' ? 'Activos' : 'Indicador') : 'Datos y resultados';
+    document.getElementById('infobody').innerHTML = pg === 'herramientas' ? renderTools() : renderCalendar();
   }
 
   /* Datos reales automáticos: un script de GitHub Actions escribe actuales.json y aquí se aplican sobre el calendario.
@@ -9601,6 +9604,8 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
       if (ent) { pickMode(modeOf(ent)); state.asset = ta; state.date = td; state.home = false; state.page = null; render(); }
       return;
     }
+    var hr = ev.target.closest ? ev.target.closest('[data-href]') : null;
+    if (hr) { location.href = hr.getAttribute('data-href'); return; }
     var g = ev.target.closest ? ev.target.closest('[data-go],[data-home],[data-page]') : null;
     if (g) {
       if (g.getAttribute('data-home')) { state.home = true; state.page = null; }

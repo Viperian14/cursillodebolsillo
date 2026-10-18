@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b110d">
+<title>Acciones · Cursillo de Bolsillo</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Roboto+Slab:wght@600;700&display=swap">
+<style>
+  :root {
+    --bg:#0b110d; --surface:#131b15; --fg:#f3ead2; --muted:#bdb59b; --line:#3b4033;
+    --accent:#e1d3a8; --head:#1b251d; --up:#67d68f; --down:#ff8a63;
+    --font-title:"Roboto Slab", Georgia, "Times New Roman", serif;
+    --font-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-num:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:16px; color:var(--fg); font:15px/1.5 var(--font-body);
+    background:
+      radial-gradient(ellipse 70% 55% at 0% 0%, rgba(47,125,70,.30), transparent 70%),
+      radial-gradient(ellipse 70% 55% at 100% 100%, rgba(200,75,32,.24), transparent 70%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+  .wrap { max-width:1100px; margin:0 auto; }
+  .menubtn { display:inline-block; font-family:var(--font-title); font-size:20px; font-weight:700; letter-spacing:.08em; color:var(--accent); background:rgba(10,15,12,.6); border:2px solid var(--accent); border-radius:8px; padding:6px 14px; text-decoration:none; margin-bottom:14px; }
+  .menubtn:hover, .menubtn:focus-visible { background:var(--accent); color:#0a0f0c; outline:none; }
+  h1 { font-family:var(--font-title); color:var(--accent); font-size:26px; text-transform:uppercase; letter-spacing:.02em; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:14px; }
+  .barra { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  select, input { padding:9px 10px; font:inherit; color:var(--fg); background:rgba(19,27,21,.9); border:1px solid #4a5040; border-radius:6px; }
+  select:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  input { flex:1; min-width:160px; }
+  .tabla { overflow-x:auto; max-width:100%; border:1px solid var(--line); border-radius:8px; background:rgba(19,27,21,.92); }
+  table { border-collapse:collapse; width:100%; min-width:560px; }
+  th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+  td:nth-child(n+3) { font-family:var(--font-num); font-variant-numeric:tabular-nums; }
+  th:nth-child(-n+2), td:nth-child(-n+2) { text-align:left; }
+  th { background:var(--head); color:var(--accent); position:sticky; top:0; font-weight:600; }
+  tr:last-child td { border-bottom:0; }
+  .up { color:var(--up); } .down { color:var(--down); }
+  .nota, .vacio { color:var(--muted); font-size:13px; margin-top:12px; }
+  .vacio { padding:16px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="menubtn" href="./" aria-label="Volver al menú principal">☰ MENÚ</a>
+<h1>Acciones</h1>
+<div class="sub" id="act" role="status">Cargando...</div>
+<div class="barra">
+  <select id="indice" aria-label="Filtrar por índice"><option value="">Todos los índices</option></select>
+  <input id="q" type="search" placeholder="Buscar empresa o ticker" aria-label="Buscar empresa o ticker">
+</div>
+<div class="tabla">
+<table>
+  <thead><tr><th>Índice</th><th>Empresa</th><th>Apertura</th><th>Cierre</th><th>Var.</th><th>Fecha</th></tr></thead>
+  <tbody id="cuerpo"></tbody>
+</table>
+<div class="vacio" id="vacio" hidden></div>
+</div>
+<p class="nota">Datos con retraso, solo informativos. Cierre = último precio de la sesión (cierre oficial cuando la bolsa ya ha cerrado). Moneda: USD, EUR, HKD, JPY; FTSE 100 en peniques (GBp). Fuente: Yahoo Finance (no es una API oficial).</p>
+</div>
+
+<script>
+let datos = [];
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const num = v => v == null ? "-" : v.toLocaleString("es-ES", {minimumFractionDigits:2, maximumFractionDigits:2});
+
+function pintar() {
+  const ind = $("indice").value, q = $("q").value.trim().toLowerCase();
+  const f = datos.filter(p => (!ind || p.indice === ind) &&
+      (!q || p.nombre.toLowerCase().includes(q) || p.ticker_google.toLowerCase().includes(q)));
+  $("cuerpo").innerHTML = f.map(p => {
+      const v = (p.cierre != null && p.cierre_anterior) ? (p.cierre / p.cierre_anterior - 1) * 100 : null;
+      const cls = v == null ? "" : (v >= 0 ? "up" : "down");
+      const vt = v == null ? "-" : (v >= 0 ? "+" : "") + v.toFixed(2).replace(".", ",") + " %";
+      return `<tr><td>${esc(p.indice)}</td><td>${esc(p.nombre)}</td><td>${num(p.apertura)}</td>` +
+             `<td>${num(p.cierre)}</td><td class="${cls}">${vt}</td><td>${esc(p.fecha || "-")}</td></tr>`;
+    }).join("");
+  $("vacio").hidden = f.length > 0 || !datos.length;
+  $("vacio").textContent = "Ningún valor coincide con la búsqueda.";
+}
+
+fetch("precios.json", {cache: "no-store"})
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    datos = d.precios;
+    [...new Set(datos.map(p => p.indice))].forEach(i => {
+      const o = document.createElement("option"); o.value = o.textContent = i; $("indice").appendChild(o);
+    });
+    $("act").textContent = "Actualizado: " + new Date(d.actualizado).toLocaleString("es-ES");
+    pintar();
+  })
+  .catch(() => { $("act").textContent = "Todavía no hay precios cargados o no se pudieron leer."; });
+
+$("indice").addEventListener("change", pintar);
+$("q").addEventListener("input", pintar);
+</script>
+</body>
+</html>
