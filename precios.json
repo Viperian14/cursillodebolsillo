@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T12:28:47+00:00",
+ "actualizado": "2026-10-18T12:31:30+00:00",
  "precios": [
   {
    "indice": "Dow Jones 30",
@@ -7401,15 +7401,15 @@
   {
    "indice": "CAC 40",
    "nombre": "ArcelorMittal",
-   "ticker_google": "EPA:MT",
-   "ticker_yahoo": "MT.PA",
-   "pais": "Francia",
-   "bolsa": "Euronext Paris",
+   "ticker_google": "AMS:MT",
+   "ticker_yahoo": "MT.AS",
+   "pais": "Países Bajos",
+   "bolsa": "Euronext Ámsterdam",
    "moneda": "EUR",
-   "apertura": null,
-   "cierre": null,
-   "cierre_anterior": null,
-   "fecha": null
+   "apertura": 57.16,
+   "cierre": 56.8,
+   "cierre_anterior": 56.68,
+   "fecha": "2026-10-16"
   },
   {
    "indice": "CAC 40",
@@ -8570,19 +8570,6 @@
   },
   {
    "indice": "FTSE 100",
-   "nombre": "Beazley",
-   "ticker_google": "LON:BEZ",
-   "ticker_yahoo": "BEZ.L",
-   "pais": "Reino Unido",
-   "bolsa": "LSE",
-   "moneda": "GBp",
-   "apertura": null,
-   "cierre": null,
-   "cierre_anterior": null,
-   "fecha": null
-  },
-  {
-   "indice": "FTSE 100",
    "nombre": "BP",
    "ticker_google": "LON:BP",
    "ticker_yahoo": "BP.L",
@@ -9282,19 +9269,6 @@
    "cierre": 352.4,
    "cierre_anterior": 350.8,
    "fecha": "2026-10-16"
-  },
-  {
-   "indice": "FTSE 100",
-   "nombre": "Schroders",
-   "ticker_google": "LON:SDR",
-   "ticker_yahoo": "SDR.L",
-   "pais": "Reino Unido",
-   "bolsa": "LSE",
-   "moneda": "GBp",
-   "apertura": null,
-   "cierre": null,
-   "cierre_anterior": null,
-   "fecha": null
   },
   {
    "indice": "FTSE 100",

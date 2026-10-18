@@ -1,3 +1,0 @@
-CAC 40	ArcelorMittal	EPA:MT	MT.PA
-FTSE 100	Beazley	LON:BEZ	BEZ.L
-FTSE 100	Schroders	LON:SDR	SDR.L
