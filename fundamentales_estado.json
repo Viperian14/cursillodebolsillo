@@ -1,12 +1,12 @@
 {
- "ultima_ejecucion": "2026-10-18T18:04:13+00:00",
+ "ultima_ejecucion": "2026-10-18T23:24:00+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
  "actualizadas_en_esta_ejecucion": 1371,
  "errores": [],
  "n_errores": 0,
  "datos_insuficientes": 83,
- "minutos": 19.8,
+ "minutos": 37.5,
  "muestra_diagnostico": {
   "0001.HK": {
    "sector_yahoo": "Industrials",
@@ -53,7 +53,7 @@
    "eps": 16.32,
    "roe": 15.26,
    "deuda": 0.143,
-   "dividendo": 19.941,
+   "dividendo": 19.94,
    "dividendo_yahoo": 14.79,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
