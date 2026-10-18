@@ -100,6 +100,49 @@ def frecuencia_dividendo(divs):
     return n, nombres.get(n, "irregular")
 
 
+def resultados(t):
+    """Fechas de resultados y cambio de los últimos datos publicados (todo opcional; None si Yahoo no lo da)."""
+    r = {"proxima": None, "ultima": None, "bpa_real": None, "bpa_est": None, "sorpresa": None,
+         "periodo": None, "ingresos": None, "beneficio": None}
+    try:
+        ed = con_reintentos(lambda: t.get_earnings_dates(limit=12))
+        if ed is not None and len(ed):
+            idx = pd.DatetimeIndex(ed.index)
+            if idx.tz is not None:
+                idx = idx.tz_localize(None)
+            ahora = pd.Timestamp(hoy())
+            fut = [d for d in idx if d >= ahora]
+            if fut:
+                r["proxima"] = min(fut).strftime("%Y-%m-%d")
+            rep = ed.copy()
+            rep.index = idx
+            rep = rep[rep["Reported EPS"].notna()] if "Reported EPS" in rep else rep.iloc[0:0]
+            rep = rep[rep.index <= ahora + pd.Timedelta(days=1)]
+            if len(rep):
+                f = rep.sort_index().iloc[-1]
+                r["ultima"] = rep.sort_index().index[-1].strftime("%Y-%m-%d")
+                r["bpa_real"] = num(f.get("Reported EPS"))
+                r["bpa_est"] = num(f.get("EPS Estimate"))
+                r["sorpresa"] = num(f.get("Surprise(%)"))
+    except Exception:
+        pass
+    try:
+        q = con_reintentos(lambda: t.quarterly_income_stmt)
+        if q is not None and len(q.columns):
+            q = q[sorted(q.columns, reverse=True)]
+            r["periodo"] = pd.Timestamp(q.columns[0]).strftime("%Y-%m-%d")
+            for clave, fila in (("ingresos", "Total Revenue"), ("beneficio", "Net Income")):
+                if fila in q.index:
+                    v = [num(x) for x in q.loc[fila].tolist()]
+                    # [último trimestre, trimestre anterior, mismo trimestre del año anterior]
+                    r[clave] = {"ultimo": v[0] if len(v) > 0 else None,
+                                "anterior": v[1] if len(v) > 1 else None,
+                                "año_anterior": v[4] if len(v) > 4 else None}
+    except Exception:
+        pass
+    return r
+
+
 def obtener(ticker, cierres):
     """Descarga los datos de una empresa. Devuelve dict (campos brutos normalizados)."""
     t = yf.Ticker(ticker)
@@ -138,6 +181,7 @@ def obtener(ticker, cierres):
         "moneda_yahoo": info.get("currency"),
         "tendencia": tendencia_de(cierres) if cierres is not None else None,
         "volumen_rel": None,
+        "resultados": resultados(t),
         "fecha": hoy().isoformat(),
     }
 
@@ -258,9 +302,9 @@ def main():
 
     todo = os.environ.get("FUND_TODO", "").lower() in ("1", "true", "yes")
     dia = hoy().toordinal()
-    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp]
+    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t]]
     # Primero las que no tienen datos, para que una ejecución cortada continúe donde quedó
-    tanda.sort(key=lambda t: (t in emp, t))
+    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t], t))
     print(f"Tanda: {len(tanda)} empresas de {len(tickers)} (todo={todo})")
 
     errores, hechas = [], 0

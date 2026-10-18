@@ -9551,7 +9551,7 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
   loadActuals();
 
   var fab = document.createElement('button');
-  fab.type = 'button'; fab.className = 'fabmenu'; fab.setAttribute('data-home', '1'); fab.setAttribute('aria-label', 'Volver al menú principal'); fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg>';
+  fab.type = 'button'; fab.className = 'fabmenu'; fab.setAttribute('aria-label', 'Subir al principio de la página'); fab.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }); fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg>';
   document.body.appendChild(fab);
   function fabUpdate() { var y = window.pageYOffset || document.documentElement.scrollTop || 0; fab.classList.toggle('show', y > 400 && !state.home); }
   window.addEventListener('scroll', fabUpdate, { passive: true });
