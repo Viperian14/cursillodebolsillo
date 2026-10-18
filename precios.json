@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T17:38:48+00:00",
+ "actualizado": "2026-10-18T17:43:24+00:00",
  "fx": {
   "fecha": "2026-10-18",
   "usd_por": {
@@ -7,7 +7,7 @@
    "EUR": 1.12422705,
    "GBP": 1.33294237,
    "JPY": 0.00632963,
-   "HKD": 0.12742749
+   "HKD": 0.12742262
   },
   "fechas": {
    "USD": null,
@@ -10293,25 +10293,6 @@
   },
   {
    "indice": "CAC 40",
-   "nombre": "ArcelorMittal",
-   "ticker_google": "AMS:MT",
-   "ticker_yahoo": "MT.AS",
-   "pais": "Francia",
-   "bolsa": "Euronext Ámsterdam",
-   "moneda": "EUR",
-   "indices": [
-    "CAC 40"
-   ],
-   "moneda_lista": "EUR",
-   "apertura": 57.16,
-   "cierre": 56.8,
-   "cierre_anterior": 56.68,
-   "fecha": "2026-10-16",
-   "precio_usd": 63.8561,
-   "precio_eur": 56.8
-  },
-  {
-   "indice": "CAC 40",
    "nombre": "AXA",
    "ticker_google": "EPA:CS",
    "ticker_yahoo": "CS.PA",
@@ -17850,8 +17831,8 @@
    "cierre": 65.9,
    "cierre_anterior": 65.0,
    "fecha": "2026-10-16",
-   "precio_usd": 8.3975,
-   "precio_eur": 7.4696
+   "precio_usd": 8.3972,
+   "precio_eur": 7.4693
   },
   {
    "indice": "Hang Seng Composite",
@@ -17869,8 +17850,8 @@
    "cierre": 77.15,
    "cierre_anterior": 77.4,
    "fecha": "2026-10-16",
-   "precio_usd": 9.831,
-   "precio_eur": 8.7447
+   "precio_usd": 9.8307,
+   "precio_eur": 8.7444
   },
   {
    "indice": "Hang Seng Composite",
@@ -17907,8 +17888,8 @@
    "cierre": 19.6,
    "cierre_anterior": 19.23,
    "fecha": "2026-10-16",
-   "precio_usd": 2.4976,
-   "precio_eur": 2.2216
+   "precio_usd": 2.4975,
+   "precio_eur": 2.2215
   },
   {
    "indice": "Hang Seng Composite",
@@ -17926,8 +17907,8 @@
    "cierre": 149.7,
    "cierre_anterior": 147.9,
    "fecha": "2026-10-16",
-   "precio_usd": 19.0759,
-   "precio_eur": 16.968
+   "precio_usd": 19.0752,
+   "precio_eur": 16.9674
   },
   {
    "indice": "Hang Seng Composite",
@@ -17945,8 +17926,8 @@
    "cierre": 60.55,
    "cierre_anterior": 60.6,
    "fecha": "2026-10-16",
-   "precio_usd": 7.7157,
-   "precio_eur": 6.8631
+   "precio_usd": 7.7154,
+   "precio_eur": 6.8629
   },
   {
    "indice": "Hang Seng Composite",
@@ -17983,8 +17964,8 @@
    "cierre": 12.18,
    "cierre_anterior": 11.89,
    "fecha": "2026-10-16",
-   "precio_usd": 1.5521,
-   "precio_eur": 1.3806
+   "precio_usd": 1.552,
+   "precio_eur": 1.3805
   },
   {
    "indice": "Hang Seng Composite",
@@ -18002,8 +17983,8 @@
    "cierre": 27.2,
    "cierre_anterior": 26.74,
    "fecha": "2026-10-16",
-   "precio_usd": 3.466,
-   "precio_eur": 3.083
+   "precio_usd": 3.4659,
+   "precio_eur": 3.0829
   },
   {
    "indice": "Hang Seng Composite",
@@ -18021,8 +18002,8 @@
    "cierre": 22.28,
    "cierre_anterior": 21.44,
    "fecha": "2026-10-16",
-   "precio_usd": 2.8391,
-   "precio_eur": 2.5254
+   "precio_usd": 2.839,
+   "precio_eur": 2.5253
   },
   {
    "indice": "Hang Seng Composite",
@@ -18041,7 +18022,7 @@
    "cierre_anterior": 15.71,
    "fecha": "2026-10-16",
    "precio_usd": 2.0286,
-   "precio_eur": 1.8045
+   "precio_eur": 1.8044
   },
   {
    "indice": "Hang Seng Composite",
@@ -18059,8 +18040,8 @@
    "cierre": 107.2,
    "cierre_anterior": 106.3,
    "fecha": "2026-10-16",
-   "precio_usd": 13.6602,
-   "precio_eur": 12.1508
+   "precio_usd": 13.6597,
+   "precio_eur": 12.1503
   },
   {
    "indice": "Hang Seng Composite",
@@ -18079,7 +18060,7 @@
    "cierre_anterior": 4.99,
    "fecha": "2026-10-16",
    "precio_usd": 0.6403,
-   "precio_eur": 0.5696
+   "precio_eur": 0.5695
   },
   {
    "indice": "Hang Seng Composite",
@@ -18097,8 +18078,8 @@
    "cierre": 105.4,
    "cierre_anterior": 102.2,
    "fecha": "2026-10-16",
-   "precio_usd": 13.4309,
-   "precio_eur": 11.9467
+   "precio_usd": 13.4303,
+   "precio_eur": 11.9463
   },
   {
    "indice": "Hang Seng Composite",
@@ -18135,7 +18116,7 @@
    "cierre": 18.42,
    "cierre_anterior": 18.43,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3472,
+   "precio_usd": 2.3471,
    "precio_eur": 2.0878
   },
   {
@@ -18154,8 +18135,8 @@
    "cierre": 33.54,
    "cierre_anterior": 33.28,
    "fecha": "2026-10-16",
-   "precio_usd": 4.2739,
-   "precio_eur": 3.8017
+   "precio_usd": 4.2738,
+   "precio_eur": 3.8015
   },
   {
    "indice": "Hang Seng Composite",
@@ -18173,8 +18154,8 @@
    "cierre": 13.8,
    "cierre_anterior": 13.8,
    "fecha": "2026-10-16",
-   "precio_usd": 1.7585,
-   "precio_eur": 1.5642
+   "precio_usd": 1.7584,
+   "precio_eur": 1.5641
   },
   {
    "indice": "Hang Seng Composite",
@@ -18192,8 +18173,8 @@
    "cierre": 32.38,
    "cierre_anterior": 31.86,
    "fecha": "2026-10-16",
-   "precio_usd": 4.1261,
-   "precio_eur": 3.6702
+   "precio_usd": 4.1259,
+   "precio_eur": 3.67
   },
   {
    "indice": "Hang Seng Composite",
@@ -18212,7 +18193,7 @@
    "cierre_anterior": 4.72,
    "fecha": "2026-10-16",
    "precio_usd": 0.6078,
-   "precio_eur": 0.5407
+   "precio_eur": 0.5406
   },
   {
    "indice": "Hang Seng Composite",
@@ -18249,7 +18230,7 @@
    "cierre": 10.5,
    "cierre_anterior": 10.43,
    "fecha": "2026-10-16",
-   "precio_usd": 1.338,
+   "precio_usd": 1.3379,
    "precio_eur": 1.1901
   },
   {
@@ -18268,8 +18249,8 @@
    "cierre": 15.6,
    "cierre_anterior": 15.08,
    "fecha": "2026-10-16",
-   "precio_usd": 1.9879,
-   "precio_eur": 1.7682
+   "precio_usd": 1.9878,
+   "precio_eur": 1.7681
   },
   {
    "indice": "Hang Seng Composite",
@@ -18287,8 +18268,8 @@
    "cierre": 182.1,
    "cierre_anterior": 179.5,
    "fecha": "2026-10-16",
-   "precio_usd": 23.2045,
-   "precio_eur": 20.6404
+   "precio_usd": 23.2037,
+   "precio_eur": 20.6397
   },
   {
    "indice": "Hang Seng Composite",
@@ -18363,7 +18344,7 @@
    "cierre": 7.56,
    "cierre_anterior": 7.59,
    "fecha": "2026-10-16",
-   "precio_usd": 0.9634,
+   "precio_usd": 0.9633,
    "precio_eur": 0.8569
   },
   {
@@ -18383,7 +18364,7 @@
    "cierre_anterior": 1.51,
    "fecha": "2026-10-16",
    "precio_usd": 0.1905,
-   "precio_eur": 0.1695
+   "precio_eur": 0.1694
   },
   {
    "indice": "Hang Seng Composite",
@@ -18402,7 +18383,7 @@
    "cierre_anterior": 4.875,
    "fecha": "2026-10-16",
    "precio_usd": 0.6193,
-   "precio_eur": 0.5509
+   "precio_eur": 0.5508
   },
   {
    "indice": "Hang Seng Composite",
@@ -18420,8 +18401,8 @@
    "cierre": 12.36,
    "cierre_anterior": 12.05,
    "fecha": "2026-10-16",
-   "precio_usd": 1.575,
-   "precio_eur": 1.401
+   "precio_usd": 1.5749,
+   "precio_eur": 1.4009
   },
   {
    "indice": "Hang Seng Composite",
@@ -18439,8 +18420,8 @@
    "cierre": 18.01,
    "cierre_anterior": 18.34,
    "fecha": "2026-10-16",
-   "precio_usd": 2.295,
-   "precio_eur": 2.0414
+   "precio_usd": 2.2949,
+   "precio_eur": 2.0413
   },
   {
    "indice": "Hang Seng Composite",
@@ -18458,7 +18439,7 @@
    "cierre": 5.3,
    "cierre_anterior": 5.285,
    "fecha": "2026-10-16",
-   "precio_usd": 0.6754,
+   "precio_usd": 0.6753,
    "precio_eur": 0.6007
   },
   {
@@ -18497,7 +18478,7 @@
    "cierre_anterior": 11.25,
    "fecha": "2026-10-16",
    "precio_usd": 1.4259,
-   "precio_eur": 1.2684
+   "precio_eur": 1.2683
   },
   {
    "indice": "Hang Seng Composite",
@@ -18516,7 +18497,7 @@
    "cierre_anterior": 5.27,
    "fecha": "2026-10-16",
    "precio_usd": 0.669,
-   "precio_eur": 0.5951
+   "precio_eur": 0.595
   },
   {
    "indice": "Hang Seng Composite",
@@ -18534,8 +18515,8 @@
    "cierre": 36.36,
    "cierre_anterior": 34.88,
    "fecha": "2026-10-16",
-   "precio_usd": 4.6333,
-   "precio_eur": 4.1213
+   "precio_usd": 4.6331,
+   "precio_eur": 4.1211
   },
   {
    "indice": "Hang Seng Composite",
@@ -18572,8 +18553,8 @@
    "cierre": 85.05,
    "cierre_anterior": 89.8,
    "fecha": "2026-10-16",
-   "precio_usd": 10.8377,
-   "precio_eur": 9.6401
+   "precio_usd": 10.8373,
+   "precio_eur": 9.6398
   },
   {
    "indice": "Hang Seng Composite",
@@ -18591,8 +18572,8 @@
    "cierre": 16.69,
    "cierre_anterior": 16.51,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1268,
-   "precio_eur": 1.8918
+   "precio_usd": 2.1267,
+   "precio_eur": 1.8917
   },
   {
    "indice": "Hang Seng Composite",
@@ -18667,8 +18648,8 @@
    "cierre": 39.68,
    "cierre_anterior": 38.78,
    "fecha": "2026-10-16",
-   "precio_usd": 5.0563,
-   "precio_eur": 4.4976
+   "precio_usd": 5.0561,
+   "precio_eur": 4.4974
   },
   {
    "indice": "Hang Seng Composite",
@@ -18686,8 +18667,8 @@
    "cierre": 73.75,
    "cierre_anterior": 72.95,
    "fecha": "2026-10-16",
-   "precio_usd": 9.3978,
-   "precio_eur": 8.3593
+   "precio_usd": 9.3974,
+   "precio_eur": 8.359
   },
   {
    "indice": "Hang Seng Composite",
@@ -18705,8 +18686,8 @@
    "cierre": 21.5,
    "cierre_anterior": 21.4,
    "fecha": "2026-10-16",
-   "precio_usd": 2.7397,
-   "precio_eur": 2.437
+   "precio_usd": 2.7396,
+   "precio_eur": 2.4369
   },
   {
    "indice": "Hang Seng Composite",
@@ -18724,7 +18705,7 @@
    "cierre": 14.11,
    "cierre_anterior": 13.9,
    "fecha": "2026-10-16",
-   "precio_usd": 1.798,
+   "precio_usd": 1.7979,
    "precio_eur": 1.5993
   },
   {
@@ -18743,8 +18724,8 @@
    "cierre": 47.6,
    "cierre_anterior": 48.0,
    "fecha": "2026-10-16",
-   "precio_usd": 6.0655,
-   "precio_eur": 5.3953
+   "precio_usd": 6.0653,
+   "precio_eur": 5.3951
   },
   {
    "indice": "Hang Seng Composite",
@@ -18762,8 +18743,8 @@
    "cierre": 1.825,
    "cierre_anterior": 1.8,
    "fecha": "2026-10-16",
-   "precio_usd": 0.2326,
-   "precio_eur": 0.2069
+   "precio_usd": 0.2325,
+   "precio_eur": 0.2068
   },
   {
    "indice": "Hang Seng Composite",
@@ -18800,8 +18781,8 @@
    "cierre": 6.74,
    "cierre_anterior": 6.8,
    "fecha": "2026-10-16",
-   "precio_usd": 0.8589,
-   "precio_eur": 0.764
+   "precio_usd": 0.8588,
+   "precio_eur": 0.7639
   },
   {
    "indice": "Hang Seng Composite",
@@ -18819,8 +18800,8 @@
    "cierre": 73.3,
    "cierre_anterior": 72.45,
    "fecha": "2026-10-16",
-   "precio_usd": 9.3404,
-   "precio_eur": 8.3083
+   "precio_usd": 9.3401,
+   "precio_eur": 8.308
   },
   {
    "indice": "Hang Seng Composite",
@@ -18857,8 +18838,8 @@
    "cierre": 49.52,
    "cierre_anterior": 48.5,
    "fecha": "2026-10-16",
-   "precio_usd": 6.3102,
-   "precio_eur": 5.6129
+   "precio_usd": 6.31,
+   "precio_eur": 5.6127
   },
   {
    "indice": "Hang Seng Composite",
@@ -18914,8 +18895,8 @@
    "cierre": 4.425,
    "cierre_anterior": 4.345,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5639,
-   "precio_eur": 0.5016
+   "precio_usd": 0.5638,
+   "precio_eur": 0.5015
   },
   {
    "indice": "Hang Seng Composite",
@@ -18933,8 +18914,8 @@
    "cierre": 43.82,
    "cierre_anterior": 44.36,
    "fecha": "2026-10-16",
-   "precio_usd": 5.5839,
-   "precio_eur": 4.9669
+   "precio_usd": 5.5837,
+   "precio_eur": 4.9667
   },
   {
    "indice": "Hang Seng Composite",
@@ -18952,8 +18933,8 @@
    "cierre": 14.7,
    "cierre_anterior": 14.07,
    "fecha": "2026-10-16",
-   "precio_usd": 1.8732,
-   "precio_eur": 1.6662
+   "precio_usd": 1.8731,
+   "precio_eur": 1.6661
   },
   {
    "indice": "Hang Seng Composite",
@@ -18971,8 +18952,8 @@
    "cierre": 42.1,
    "cierre_anterior": 42.26,
    "fecha": "2026-10-16",
-   "precio_usd": 5.3647,
-   "precio_eur": 4.7719
+   "precio_usd": 5.3645,
+   "precio_eur": 4.7717
   },
   {
    "indice": "Hang Seng Composite",
@@ -19009,8 +18990,8 @@
    "cierre": 74.95,
    "cierre_anterior": 76.55,
    "fecha": "2026-10-16",
-   "precio_usd": 9.5507,
-   "precio_eur": 8.4953
+   "precio_usd": 9.5503,
+   "precio_eur": 8.495
   },
   {
    "indice": "Hang Seng Composite",
@@ -19085,8 +19066,8 @@
    "cierre": 21.4,
    "cierre_anterior": 21.54,
    "fecha": "2026-10-16",
-   "precio_usd": 2.7269,
-   "precio_eur": 2.4256
+   "precio_usd": 2.7268,
+   "precio_eur": 2.4255
   },
   {
    "indice": "Hang Seng Composite",
@@ -19123,8 +19104,8 @@
    "cierre": 19.64,
    "cierre_anterior": 19.51,
    "fecha": "2026-10-16",
-   "precio_usd": 2.5027,
-   "precio_eur": 2.2261
+   "precio_usd": 2.5026,
+   "precio_eur": 2.226
   },
   {
    "indice": "Hang Seng Composite",
@@ -19142,8 +19123,8 @@
    "cierre": 15.12,
    "cierre_anterior": 15.37,
    "fecha": "2026-10-16",
-   "precio_usd": 1.9267,
-   "precio_eur": 1.7138
+   "precio_usd": 1.9266,
+   "precio_eur": 1.7137
   },
   {
    "indice": "Hang Seng Composite",
@@ -19161,8 +19142,8 @@
    "cierre": 24.84,
    "cierre_anterior": 21.96,
    "fecha": "2026-10-16",
-   "precio_usd": 3.1653,
-   "precio_eur": 2.8155
+   "precio_usd": 3.1652,
+   "precio_eur": 2.8154
   },
   {
    "indice": "Hang Seng Composite",
@@ -19180,8 +19161,8 @@
    "cierre": 17.18,
    "cierre_anterior": 18.2,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1892,
-   "precio_eur": 1.9473
+   "precio_usd": 2.1891,
+   "precio_eur": 1.9472
   },
   {
    "indice": "Hang Seng Composite",
@@ -19199,7 +19180,7 @@
    "cierre": 7.59,
    "cierre_anterior": 7.695,
    "fecha": "2026-10-16",
-   "precio_usd": 0.9672,
+   "precio_usd": 0.9671,
    "precio_eur": 0.8603
   },
   {
@@ -19218,8 +19199,8 @@
    "cierre": 31.84,
    "cierre_anterior": 31.16,
    "fecha": "2026-10-16",
-   "precio_usd": 4.0573,
-   "precio_eur": 3.609
+   "precio_usd": 4.0571,
+   "precio_eur": 3.6088
   },
   {
    "indice": "Hang Seng Composite",
@@ -19237,8 +19218,8 @@
    "cierre": 21.5,
    "cierre_anterior": 20.7,
    "fecha": "2026-10-16",
-   "precio_usd": 2.7397,
-   "precio_eur": 2.437
+   "precio_usd": 2.7396,
+   "precio_eur": 2.4369
   },
   {
    "indice": "Hang Seng Composite",
@@ -19275,8 +19256,8 @@
    "cierre": 16.1,
    "cierre_anterior": 17.18,
    "fecha": "2026-10-16",
-   "precio_usd": 2.0516,
-   "precio_eur": 1.8249
+   "precio_usd": 2.0515,
+   "precio_eur": 1.8248
   },
   {
    "indice": "Hang Seng Composite",
@@ -19294,8 +19275,8 @@
    "cierre": 4.695,
    "cierre_anterior": 4.7,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5983,
-   "precio_eur": 0.5322
+   "precio_usd": 0.5982,
+   "precio_eur": 0.5321
   },
   {
    "indice": "Hang Seng Composite",
@@ -19313,8 +19294,8 @@
    "cierre": 33.72,
    "cierre_anterior": 33.6,
    "fecha": "2026-10-16",
-   "precio_usd": 4.2969,
-   "precio_eur": 3.8221
+   "precio_usd": 4.2967,
+   "precio_eur": 3.8219
   },
   {
    "indice": "Hang Seng Composite",
@@ -19332,8 +19313,8 @@
    "cierre": 21.26,
    "cierre_anterior": 21.38,
    "fecha": "2026-10-16",
-   "precio_usd": 2.7091,
-   "precio_eur": 2.4098
+   "precio_usd": 2.709,
+   "precio_eur": 2.4097
   },
   {
    "indice": "Hang Seng Composite",
@@ -19351,7 +19332,7 @@
    "cierre": 9.3,
    "cierre_anterior": 8.99,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1851,
+   "precio_usd": 1.185,
    "precio_eur": 1.0541
   },
   {
@@ -19370,7 +19351,7 @@
    "cierre": 14.47,
    "cierre_anterior": 14.36,
    "fecha": "2026-10-16",
-   "precio_usd": 1.8439,
+   "precio_usd": 1.8438,
    "precio_eur": 1.6401
   },
   {
@@ -19389,8 +19370,8 @@
    "cierre": 33.3,
    "cierre_anterior": 31.6,
    "fecha": "2026-10-16",
-   "precio_usd": 4.2433,
-   "precio_eur": 3.7744
+   "precio_usd": 4.2432,
+   "precio_eur": 3.7743
   },
   {
    "indice": "Hang Seng Composite",
@@ -19408,7 +19389,7 @@
    "cierre": 15.4,
    "cierre_anterior": 14.87,
    "fecha": "2026-10-16",
-   "precio_usd": 1.9624,
+   "precio_usd": 1.9623,
    "precio_eur": 1.7455
   },
   {
@@ -19427,8 +19408,8 @@
    "cierre": 9.49,
    "cierre_anterior": 9.265,
    "fecha": "2026-10-16",
-   "precio_usd": 1.2093,
-   "precio_eur": 1.0757
+   "precio_usd": 1.2092,
+   "precio_eur": 1.0756
   },
   {
    "indice": "Hang Seng Composite",
@@ -19446,8 +19427,8 @@
    "cierre": 67.0,
    "cierre_anterior": 69.0,
    "fecha": "2026-10-16",
-   "precio_usd": 8.5376,
-   "precio_eur": 7.5942
+   "precio_usd": 8.5373,
+   "precio_eur": 7.5939
   },
   {
    "indice": "Hang Seng Composite",
@@ -19484,8 +19465,8 @@
    "cierre": 40.56,
    "cierre_anterior": 38.6,
    "fecha": "2026-10-16",
-   "precio_usd": 5.1685,
-   "precio_eur": 4.5973
+   "precio_usd": 5.1683,
+   "precio_eur": 4.5972
   },
   {
    "indice": "Hang Seng Composite",
@@ -19503,7 +19484,7 @@
    "cierre": 5.515,
    "cierre_anterior": 5.54,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7028,
+   "precio_usd": 0.7027,
    "precio_eur": 0.6251
   },
   {
@@ -19522,7 +19503,7 @@
    "cierre": 5.85,
    "cierre_anterior": 5.785,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7455,
+   "precio_usd": 0.7454,
    "precio_eur": 0.6631
   },
   {
@@ -19560,8 +19541,8 @@
    "cierre": 15.68,
    "cierre_anterior": 15.39,
    "fecha": "2026-10-16",
-   "precio_usd": 1.9981,
-   "precio_eur": 1.7773
+   "precio_usd": 1.998,
+   "precio_eur": 1.7772
   },
   {
    "indice": "Hang Seng Composite",
@@ -19598,8 +19579,8 @@
    "cierre": 34.04,
    "cierre_anterior": 32.8,
    "fecha": "2026-10-16",
-   "precio_usd": 4.3376,
-   "precio_eur": 3.8583
+   "precio_usd": 4.3375,
+   "precio_eur": 3.8582
   },
   {
    "indice": "Hang Seng Composite",
@@ -19617,7 +19598,7 @@
    "cierre": 12.92,
    "cierre_anterior": 12.59,
    "fecha": "2026-10-16",
-   "precio_usd": 1.6464,
+   "precio_usd": 1.6463,
    "precio_eur": 1.4644
   },
   {
@@ -19637,7 +19618,7 @@
    "cierre_anterior": 10.17,
    "fecha": "2026-10-16",
    "precio_usd": 1.1672,
-   "precio_eur": 1.0383
+   "precio_eur": 1.0382
   },
   {
    "indice": "Hang Seng Composite",
@@ -19655,7 +19636,7 @@
    "cierre": 5.42,
    "cierre_anterior": 5.385,
    "fecha": "2026-10-16",
-   "precio_usd": 0.6907,
+   "precio_usd": 0.6906,
    "precio_eur": 0.6143
   },
   {
@@ -19674,8 +19655,8 @@
    "cierre": 349.6,
    "cierre_anterior": 350.0,
    "fecha": "2026-10-16",
-   "precio_usd": 44.5487,
-   "precio_eur": 39.626
+   "precio_usd": 44.5469,
+   "precio_eur": 39.6245
   },
   {
    "indice": "Hang Seng Composite",
@@ -19693,8 +19674,8 @@
    "cierre": 23.96,
    "cierre_anterior": 25.6,
    "fecha": "2026-10-16",
-   "precio_usd": 3.0532,
-   "precio_eur": 2.7158
+   "precio_usd": 3.053,
+   "precio_eur": 2.7157
   },
   {
    "indice": "Hang Seng Composite",
@@ -19712,7 +19693,7 @@
    "cierre": 16.77,
    "cierre_anterior": 16.77,
    "fecha": "2026-10-16",
-   "precio_usd": 2.137,
+   "precio_usd": 2.1369,
    "precio_eur": 1.9008
   },
   {
@@ -19731,8 +19712,8 @@
    "cierre": 74.4,
    "cierre_anterior": 72.4,
    "fecha": "2026-10-16",
-   "precio_usd": 9.4806,
-   "precio_eur": 8.433
+   "precio_usd": 9.4802,
+   "precio_eur": 8.4327
   },
   {
    "indice": "Hang Seng Composite",
@@ -19769,8 +19750,8 @@
    "cierre": 18.77,
    "cierre_anterior": 18.01,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3918,
-   "precio_eur": 2.1275
+   "precio_usd": 2.3917,
+   "precio_eur": 2.1274
   },
   {
    "indice": "Hang Seng Composite",
@@ -19808,7 +19789,7 @@
    "cierre_anterior": 4.495,
    "fecha": "2026-10-16",
    "precio_usd": 0.5753,
-   "precio_eur": 0.5118
+   "precio_eur": 0.5117
   },
   {
    "indice": "Hang Seng Composite",
@@ -19826,8 +19807,8 @@
    "cierre": 28.7,
    "cierre_anterior": 27.64,
    "fecha": "2026-10-16",
-   "precio_usd": 3.6572,
-   "precio_eur": 3.2531
+   "precio_usd": 3.657,
+   "precio_eur": 3.2529
   },
   {
    "indice": "Hang Seng Composite",
@@ -19864,8 +19845,8 @@
    "cierre": 89.05,
    "cierre_anterior": 87.75,
    "fecha": "2026-10-16",
-   "precio_usd": 11.3474,
-   "precio_eur": 10.0935
+   "precio_usd": 11.347,
+   "precio_eur": 10.0931
   },
   {
    "indice": "Hang Seng Composite",
@@ -19883,8 +19864,8 @@
    "cierre": 26.66,
    "cierre_anterior": 27.08,
    "fecha": "2026-10-16",
-   "precio_usd": 3.3972,
-   "precio_eur": 3.0218
+   "precio_usd": 3.3971,
+   "precio_eur": 3.0217
   },
   {
    "indice": "Hang Seng Composite",
@@ -19921,7 +19902,7 @@
    "cierre": 3.32,
    "cierre_anterior": 3.285,
    "fecha": "2026-10-16",
-   "precio_usd": 0.4231,
+   "precio_usd": 0.423,
    "precio_eur": 0.3763
   },
   {
@@ -19940,8 +19921,8 @@
    "cierre": 18.19,
    "cierre_anterior": 17.41,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3179,
-   "precio_eur": 2.0618
+   "precio_usd": 2.3178,
+   "precio_eur": 2.0617
   },
   {
    "indice": "Hang Seng Composite",
@@ -19959,8 +19940,8 @@
    "cierre": 31.2,
    "cierre_anterior": 30.86,
    "fecha": "2026-10-16",
-   "precio_usd": 3.9757,
-   "precio_eur": 3.5364
+   "precio_usd": 3.9756,
+   "precio_eur": 3.5363
   },
   {
    "indice": "Hang Seng Composite",
@@ -19997,8 +19978,8 @@
    "cierre": 13.11,
    "cierre_anterior": 12.49,
    "fecha": "2026-10-16",
-   "precio_usd": 1.6706,
-   "precio_eur": 1.486
+   "precio_usd": 1.6705,
+   "precio_eur": 1.4859
   },
   {
    "indice": "Hang Seng Composite",
@@ -20016,8 +19997,8 @@
    "cierre": 10.9,
    "cierre_anterior": 10.83,
    "fecha": "2026-10-16",
-   "precio_usd": 1.389,
-   "precio_eur": 1.2355
+   "precio_usd": 1.3889,
+   "precio_eur": 1.2354
   },
   {
    "indice": "Hang Seng Composite",
@@ -20035,7 +20016,7 @@
    "cierre": 9.825,
    "cierre_anterior": 9.945,
    "fecha": "2026-10-16",
-   "precio_usd": 1.252,
+   "precio_usd": 1.2519,
    "precio_eur": 1.1136
   },
   {
@@ -20054,7 +20035,7 @@
    "cierre": 6.08,
    "cierre_anterior": 6.005,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7748,
+   "precio_usd": 0.7747,
    "precio_eur": 0.6891
   },
   {
@@ -20073,8 +20054,8 @@
    "cierre": 218.0,
    "cierre_anterior": 215.0,
    "fecha": "2026-10-16",
-   "precio_usd": 27.7792,
-   "precio_eur": 24.7096
+   "precio_usd": 27.7781,
+   "precio_eur": 24.7086
   },
   {
    "indice": "Hang Seng Composite",
@@ -20092,8 +20073,8 @@
    "cierre": 43.14,
    "cierre_anterior": 42.46,
    "fecha": "2026-10-16",
-   "precio_usd": 5.4972,
-   "precio_eur": 4.8898
+   "precio_usd": 5.497,
+   "precio_eur": 4.8896
   },
   {
    "indice": "Hang Seng Composite",
@@ -20112,7 +20093,7 @@
    "cierre_anterior": 17.48,
    "fecha": "2026-10-16",
    "precio_usd": 2.2618,
-   "precio_eur": 2.0119
+   "precio_eur": 2.0118
   },
   {
    "indice": "Hang Seng Composite",
@@ -20149,8 +20130,8 @@
    "cierre": 39.48,
    "cierre_anterior": 38.28,
    "fecha": "2026-10-16",
-   "precio_usd": 5.0308,
-   "precio_eur": 4.4749
+   "precio_usd": 5.0306,
+   "precio_eur": 4.4748
   },
   {
    "indice": "Hang Seng Composite",
@@ -20225,8 +20206,8 @@
    "cierre": 13.29,
    "cierre_anterior": 12.89,
    "fecha": "2026-10-16",
-   "precio_usd": 1.6935,
-   "precio_eur": 1.5064
+   "precio_usd": 1.6934,
+   "precio_eur": 1.5063
   },
   {
    "indice": "Hang Seng Composite",
@@ -20244,8 +20225,8 @@
    "cierre": 13.14,
    "cierre_anterior": 12.83,
    "fecha": "2026-10-16",
-   "precio_usd": 1.6744,
-   "precio_eur": 1.4894
+   "precio_usd": 1.6743,
+   "precio_eur": 1.4893
   },
   {
    "indice": "Hang Seng Composite",
@@ -20263,8 +20244,8 @@
    "cierre": 39.22,
    "cierre_anterior": 38.22,
    "fecha": "2026-10-16",
-   "precio_usd": 4.9977,
-   "precio_eur": 4.4455
+   "precio_usd": 4.9975,
+   "precio_eur": 4.4453
   },
   {
    "indice": "Hang Seng Composite",
@@ -20301,7 +20282,7 @@
    "cierre": 17.19,
    "cierre_anterior": 17.34,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1905,
+   "precio_usd": 2.1904,
    "precio_eur": 1.9484
   },
   {
@@ -20320,7 +20301,7 @@
    "cierre": 3.05,
    "cierre_anterior": 3.13,
    "fecha": "2026-10-16",
-   "precio_usd": 0.3887,
+   "precio_usd": 0.3886,
    "precio_eur": 0.3457
   },
   {
@@ -20340,7 +20321,7 @@
    "cierre_anterior": 11.3,
    "fecha": "2026-10-16",
    "precio_usd": 1.4641,
-   "precio_eur": 1.3024
+   "precio_eur": 1.3023
   },
   {
    "indice": "Hang Seng Composite",
@@ -20396,8 +20377,8 @@
    "cierre": 32.36,
    "cierre_anterior": 30.62,
    "fecha": "2026-10-16",
-   "precio_usd": 4.1236,
-   "precio_eur": 3.6679
+   "precio_usd": 4.1234,
+   "precio_eur": 3.6678
   },
   {
    "indice": "Hang Seng Composite",
@@ -20415,8 +20396,8 @@
    "cierre": 64.75,
    "cierre_anterior": 59.3,
    "fecha": "2026-10-16",
-   "precio_usd": 8.2509,
-   "precio_eur": 7.3392
+   "precio_usd": 8.2506,
+   "precio_eur": 7.3389
   },
   {
    "indice": "Hang Seng Composite",
@@ -20434,7 +20415,7 @@
    "cierre": 8.17,
    "cierre_anterior": 8.31,
    "fecha": "2026-10-16",
-   "precio_usd": 1.0411,
+   "precio_usd": 1.041,
    "precio_eur": 0.926
   },
   {
@@ -20453,8 +20434,8 @@
    "cierre": 24.44,
    "cierre_anterior": 24.42,
    "fecha": "2026-10-16",
-   "precio_usd": 3.1143,
-   "precio_eur": 2.7702
+   "precio_usd": 3.1142,
+   "precio_eur": 2.7701
   },
   {
    "indice": "Hang Seng Composite",
@@ -20491,8 +20472,8 @@
    "cierre": 30.46,
    "cierre_anterior": 30.48,
    "fecha": "2026-10-16",
-   "precio_usd": 3.8814,
-   "precio_eur": 3.4525
+   "precio_usd": 3.8813,
+   "precio_eur": 3.4524
   },
   {
    "indice": "Hang Seng Composite",
@@ -20586,8 +20567,8 @@
    "cierre": 44.76,
    "cierre_anterior": 44.44,
    "fecha": "2026-10-16",
-   "precio_usd": 5.7037,
-   "precio_eur": 5.0734
+   "precio_usd": 5.7034,
+   "precio_eur": 5.0732
   },
   {
    "indice": "Hang Seng Composite",
@@ -20624,8 +20605,8 @@
    "cierre": 35.7,
    "cierre_anterior": 35.48,
    "fecha": "2026-10-16",
-   "precio_usd": 4.5492,
-   "precio_eur": 4.0465
+   "precio_usd": 4.549,
+   "precio_eur": 4.0463
   },
   {
    "indice": "Hang Seng Composite",
@@ -20643,8 +20624,8 @@
    "cierre": 77.95,
    "cierre_anterior": 75.45,
    "fecha": "2026-10-16",
-   "precio_usd": 9.933,
-   "precio_eur": 8.8354
+   "precio_usd": 9.9326,
+   "precio_eur": 8.835
   },
   {
    "indice": "Hang Seng Composite",
@@ -20662,8 +20643,8 @@
    "cierre": 39.92,
    "cierre_anterior": 39.3,
    "fecha": "2026-10-16",
-   "precio_usd": 5.0869,
-   "precio_eur": 4.5248
+   "precio_usd": 5.0867,
+   "precio_eur": 4.5246
   },
   {
    "indice": "Hang Seng Composite",
@@ -20681,8 +20662,8 @@
    "cierre": 12.4,
    "cierre_anterior": 12.27,
    "fecha": "2026-10-16",
-   "precio_usd": 1.5801,
-   "precio_eur": 1.4055
+   "precio_usd": 1.58,
+   "precio_eur": 1.4054
   },
   {
    "indice": "Hang Seng Composite",
@@ -20719,8 +20700,8 @@
    "cierre": 21.58,
    "cierre_anterior": 20.86,
    "fecha": "2026-10-16",
-   "precio_usd": 2.7499,
-   "precio_eur": 2.446
+   "precio_usd": 2.7498,
+   "precio_eur": 2.4459
   },
   {
    "indice": "Hang Seng Composite",
@@ -20738,8 +20719,8 @@
    "cierre": 158.3,
    "cierre_anterior": 157.3,
    "fecha": "2026-10-16",
-   "precio_usd": 20.1718,
-   "precio_eur": 17.9428
+   "precio_usd": 20.171,
+   "precio_eur": 17.9421
   },
   {
    "indice": "Hang Seng Composite",
@@ -20757,8 +20738,8 @@
    "cierre": 63.25,
    "cierre_anterior": 62.5,
    "fecha": "2026-10-16",
-   "precio_usd": 8.0598,
-   "precio_eur": 7.1692
+   "precio_usd": 8.0595,
+   "precio_eur": 7.1689
   },
   {
    "indice": "Hang Seng Composite",
@@ -20776,8 +20757,8 @@
    "cierre": 11.02,
    "cierre_anterior": 10.83,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4043,
-   "precio_eur": 1.2491
+   "precio_usd": 1.4042,
+   "precio_eur": 1.249
   },
   {
    "indice": "Hang Seng Composite",
@@ -20795,8 +20776,8 @@
    "cierre": 167.5,
    "cierre_anterior": 166.2,
    "fecha": "2026-10-16",
-   "precio_usd": 21.3441,
-   "precio_eur": 18.9856
+   "precio_usd": 21.3433,
+   "precio_eur": 18.9849
   },
   {
    "indice": "Hang Seng Composite",
@@ -20814,8 +20795,8 @@
    "cierre": 214.0,
    "cierre_anterior": 207.2,
    "fecha": "2026-10-16",
-   "precio_usd": 27.2695,
-   "precio_eur": 24.2562
+   "precio_usd": 27.2684,
+   "precio_eur": 24.2553
   },
   {
    "indice": "Hang Seng Composite",
@@ -20871,8 +20852,8 @@
    "cierre": 22.0,
    "cierre_anterior": 21.78,
    "fecha": "2026-10-16",
-   "precio_usd": 2.8034,
-   "precio_eur": 2.4936
+   "precio_usd": 2.8033,
+   "precio_eur": 2.4935
   },
   {
    "indice": "Hang Seng Composite",
@@ -20928,8 +20909,8 @@
    "cierre": 81.95,
    "cierre_anterior": 76.15,
    "fecha": "2026-10-16",
-   "precio_usd": 10.4427,
-   "precio_eur": 9.2888
+   "precio_usd": 10.4423,
+   "precio_eur": 9.2884
   },
   {
    "indice": "Hang Seng Composite",
@@ -20947,7 +20928,7 @@
    "cierre": 11.66,
    "cierre_anterior": 11.11,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4858,
+   "precio_usd": 1.4857,
    "precio_eur": 1.3216
   },
   {
@@ -20986,7 +20967,7 @@
    "cierre_anterior": 1.72,
    "fecha": "2026-10-16",
    "precio_usd": 0.2173,
-   "precio_eur": 0.1933
+   "precio_eur": 0.1932
   },
   {
    "indice": "Hang Seng Composite",
@@ -21005,7 +20986,7 @@
    "cierre_anterior": 6.45,
    "fecha": "2026-10-16",
    "precio_usd": 0.8302,
-   "precio_eur": 0.7385
+   "precio_eur": 0.7384
   },
   {
    "indice": "Hang Seng Composite",
@@ -21023,8 +21004,8 @@
    "cierre": 17.11,
    "cierre_anterior": 17.15,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1803,
-   "precio_eur": 1.9394
+   "precio_usd": 2.1802,
+   "precio_eur": 1.9393
   },
   {
    "indice": "Hang Seng Composite",
@@ -21080,7 +21061,7 @@
    "cierre": 5.92,
    "cierre_anterior": 5.89,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7544,
+   "precio_usd": 0.7543,
    "precio_eur": 0.671
   },
   {
@@ -21156,8 +21137,8 @@
    "cierre": 21.18,
    "cierre_anterior": 21.18,
    "fecha": "2026-10-16",
-   "precio_usd": 2.6989,
-   "precio_eur": 2.4007
+   "precio_usd": 2.6988,
+   "precio_eur": 2.4006
   },
   {
    "indice": "Hang Seng Composite",
@@ -21175,8 +21156,8 @@
    "cierre": 148.4,
    "cierre_anterior": 143.5,
    "fecha": "2026-10-16",
-   "precio_usd": 18.9102,
-   "precio_eur": 16.8207
+   "precio_usd": 18.9095,
+   "precio_eur": 16.82
   },
   {
    "indice": "Hang Seng Composite",
@@ -21194,8 +21175,8 @@
    "cierre": 74.45,
    "cierre_anterior": 74.55,
    "fecha": "2026-10-16",
-   "precio_usd": 9.487,
-   "precio_eur": 8.4387
+   "precio_usd": 9.4866,
+   "precio_eur": 8.4383
   },
   {
    "indice": "Hang Seng Composite",
@@ -21213,8 +21194,8 @@
    "cierre": 48.2,
    "cierre_anterior": 48.64,
    "fecha": "2026-10-16",
-   "precio_usd": 6.142,
-   "precio_eur": 5.4633
+   "precio_usd": 6.1418,
+   "precio_eur": 5.4631
   },
   {
    "indice": "Hang Seng Composite",
@@ -21232,8 +21213,8 @@
    "cierre": 51.6,
    "cierre_anterior": 52.25,
    "fecha": "2026-10-16",
-   "precio_usd": 6.5753,
-   "precio_eur": 5.8487
+   "precio_usd": 6.575,
+   "precio_eur": 5.8485
   },
   {
    "indice": "Hang Seng Composite",
@@ -21251,8 +21232,8 @@
    "cierre": 26.48,
    "cierre_anterior": 26.5,
    "fecha": "2026-10-16",
-   "precio_usd": 3.3743,
-   "precio_eur": 3.0014
+   "precio_usd": 3.3742,
+   "precio_eur": 3.0013
   },
   {
    "indice": "Hang Seng Composite",
@@ -21270,8 +21251,8 @@
    "cierre": 35.16,
    "cierre_anterior": 34.08,
    "fecha": "2026-10-16",
-   "precio_usd": 4.4804,
-   "precio_eur": 3.9853
+   "precio_usd": 4.4802,
+   "precio_eur": 3.9851
   },
   {
    "indice": "Hang Seng Composite",
@@ -21289,8 +21270,8 @@
    "cierre": 9.85,
    "cierre_anterior": 9.625,
    "fecha": "2026-10-16",
-   "precio_usd": 1.2552,
-   "precio_eur": 1.1165
+   "precio_usd": 1.2551,
+   "precio_eur": 1.1164
   },
   {
    "indice": "Hang Seng Composite",
@@ -21308,8 +21289,8 @@
    "cierre": 32.66,
    "cierre_anterior": 31.0,
    "fecha": "2026-10-16",
-   "precio_usd": 4.1618,
-   "precio_eur": 3.7019
+   "precio_usd": 4.1616,
+   "precio_eur": 3.7018
   },
   {
    "indice": "Hang Seng Composite",
@@ -21327,8 +21308,8 @@
    "cierre": 37.34,
    "cierre_anterior": 37.42,
    "fecha": "2026-10-16",
-   "precio_usd": 4.7581,
-   "precio_eur": 4.2324
+   "precio_usd": 4.758,
+   "precio_eur": 4.2322
   },
   {
    "indice": "Hang Seng Composite",
@@ -21346,7 +21327,7 @@
    "cierre": 3.32,
    "cierre_anterior": 3.3,
    "fecha": "2026-10-16",
-   "precio_usd": 0.4231,
+   "precio_usd": 0.423,
    "precio_eur": 0.3763
   },
   {
@@ -21365,8 +21346,8 @@
    "cierre": 50.05,
    "cierre_anterior": 50.4,
    "fecha": "2026-10-16",
-   "precio_usd": 6.3777,
-   "precio_eur": 5.673
+   "precio_usd": 6.3775,
+   "precio_eur": 5.6728
   },
   {
    "indice": "Hang Seng Composite",
@@ -21384,8 +21365,8 @@
    "cierre": 18.8,
    "cierre_anterior": 18.9,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3956,
-   "precio_eur": 2.1309
+   "precio_usd": 2.3955,
+   "precio_eur": 2.1308
   },
   {
    "indice": "Hang Seng Composite",
@@ -21460,8 +21441,8 @@
    "cierre": 24.0,
    "cierre_anterior": 14.63,
    "fecha": "2026-10-16",
-   "precio_usd": 3.0583,
-   "precio_eur": 2.7203
+   "precio_usd": 3.0581,
+   "precio_eur": 2.7202
   },
   {
    "indice": "Hang Seng Composite",
@@ -21479,8 +21460,8 @@
    "cierre": 25.42,
    "cierre_anterior": 24.62,
    "fecha": "2026-10-16",
-   "precio_usd": 3.2392,
-   "precio_eur": 2.8813
+   "precio_usd": 3.2391,
+   "precio_eur": 2.8812
   },
   {
    "indice": "Hang Seng Composite",
@@ -21517,8 +21498,8 @@
    "cierre": 13.8,
    "cierre_anterior": 13.92,
    "fecha": "2026-10-16",
-   "precio_usd": 1.7585,
-   "precio_eur": 1.5642
+   "precio_usd": 1.7584,
+   "precio_eur": 1.5641
   },
   {
    "indice": "Hang Seng Composite",
@@ -21555,8 +21536,8 @@
    "cierre": 196.2,
    "cierre_anterior": 200.6,
    "fecha": "2026-10-16",
-   "precio_usd": 25.0013,
-   "precio_eur": 22.2386
+   "precio_usd": 25.0003,
+   "precio_eur": 22.2378
   },
   {
    "indice": "Hang Seng Composite",
@@ -21574,8 +21555,8 @@
    "cierre": 22.6,
    "cierre_anterior": 23.22,
    "fecha": "2026-10-16",
-   "precio_usd": 2.8799,
-   "precio_eur": 2.5616
+   "precio_usd": 2.8798,
+   "precio_eur": 2.5615
   },
   {
    "indice": "Hang Seng Composite",
@@ -21593,8 +21574,8 @@
    "cierre": 93.65,
    "cierre_anterior": 93.5,
    "fecha": "2026-10-16",
-   "precio_usd": 11.9336,
-   "precio_eur": 10.6149
+   "precio_usd": 11.9331,
+   "precio_eur": 10.6145
   },
   {
    "indice": "Hang Seng Composite",
@@ -21631,8 +21612,8 @@
    "cierre": 57.7,
    "cierre_anterior": 57.15,
    "fecha": "2026-10-16",
-   "precio_usd": 7.3526,
-   "precio_eur": 6.5401
+   "precio_usd": 7.3523,
+   "precio_eur": 6.5399
   },
   {
    "indice": "Hang Seng Composite",
@@ -21669,8 +21650,8 @@
    "cierre": 50.15,
    "cierre_anterior": 50.45,
    "fecha": "2026-10-16",
-   "precio_usd": 6.3905,
-   "precio_eur": 5.6843
+   "precio_usd": 6.3902,
+   "precio_eur": 5.6841
   },
   {
    "indice": "Hang Seng Composite",
@@ -21688,8 +21669,8 @@
    "cierre": 40.52,
    "cierre_anterior": 40.44,
    "fecha": "2026-10-16",
-   "precio_usd": 5.1634,
-   "precio_eur": 4.5928
+   "precio_usd": 5.1632,
+   "precio_eur": 4.5926
   },
   {
    "indice": "Hang Seng Composite",
@@ -21707,8 +21688,8 @@
    "cierre": 54.2,
    "cierre_anterior": 52.5,
    "fecha": "2026-10-16",
-   "precio_usd": 6.9066,
-   "precio_eur": 6.1434
+   "precio_usd": 6.9063,
+   "precio_eur": 6.1432
   },
   {
    "indice": "Hang Seng Composite",
@@ -21726,8 +21707,8 @@
    "cierre": 47.46,
    "cierre_anterior": 45.4,
    "fecha": "2026-10-16",
-   "precio_usd": 6.0477,
-   "precio_eur": 5.3794
+   "precio_usd": 6.0475,
+   "precio_eur": 5.3792
   },
   {
    "indice": "Hang Seng Composite",
@@ -21745,7 +21726,7 @@
    "cierre": 16.86,
    "cierre_anterior": 16.46,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1484,
+   "precio_usd": 2.1483,
    "precio_eur": 1.911
   },
   {
@@ -21765,7 +21746,7 @@
    "cierre_anterior": 7.14,
    "fecha": "2026-10-16",
    "precio_usd": 0.92,
-   "precio_eur": 0.8184
+   "precio_eur": 0.8183
   },
   {
    "indice": "Hang Seng Composite",
@@ -21802,8 +21783,8 @@
    "cierre": 151.1,
    "cierre_anterior": 158.0,
    "fecha": "2026-10-16",
-   "precio_usd": 19.2543,
-   "precio_eur": 17.1267
+   "precio_usd": 19.2536,
+   "precio_eur": 17.126
   },
   {
    "indice": "Hang Seng Composite",
@@ -21840,8 +21821,8 @@
    "cierre": 14.78,
    "cierre_anterior": 14.6,
    "fecha": "2026-10-16",
-   "precio_usd": 1.8834,
-   "precio_eur": 1.6753
+   "precio_usd": 1.8833,
+   "precio_eur": 1.6752
   },
   {
    "indice": "Hang Seng Composite",
@@ -21859,8 +21840,8 @@
    "cierre": 65.35,
    "cierre_anterior": 64.75,
    "fecha": "2026-10-16",
-   "precio_usd": 8.3274,
-   "precio_eur": 7.4072
+   "precio_usd": 8.3271,
+   "precio_eur": 7.4069
   },
   {
    "indice": "Hang Seng Composite",
@@ -21878,8 +21859,8 @@
    "cierre": 39.78,
    "cierre_anterior": 38.78,
    "fecha": "2026-10-16",
-   "precio_usd": 5.0691,
-   "precio_eur": 4.5089
+   "precio_usd": 5.0689,
+   "precio_eur": 4.5088
   },
   {
    "indice": "Hang Seng Composite",
@@ -21897,7 +21878,7 @@
    "cierre": 13.81,
    "cierre_anterior": 13.58,
    "fecha": "2026-10-16",
-   "precio_usd": 1.7598,
+   "precio_usd": 1.7597,
    "precio_eur": 1.5653
   },
   {
@@ -21916,8 +21897,8 @@
    "cierre": 518.0,
    "cierre_anterior": 513.5,
    "fecha": "2026-10-16",
-   "precio_usd": 66.0074,
-   "precio_eur": 58.7136
+   "precio_usd": 66.0049,
+   "precio_eur": 58.7114
   },
   {
    "indice": "Hang Seng Composite",
@@ -21954,8 +21935,8 @@
    "cierre": 15.47,
    "cierre_anterior": 15.47,
    "fecha": "2026-10-16",
-   "precio_usd": 1.9713,
-   "precio_eur": 1.7535
+   "precio_usd": 1.9712,
+   "precio_eur": 1.7534
   },
   {
    "indice": "Hang Seng Composite",
@@ -21973,8 +21954,8 @@
    "cierre": 232.0,
    "cierre_anterior": 218.8,
    "fecha": "2026-10-16",
-   "precio_usd": 29.5632,
-   "precio_eur": 26.2964
+   "precio_usd": 29.562,
+   "precio_eur": 26.2954
   },
   {
    "indice": "Hang Seng Composite",
@@ -22011,8 +21992,8 @@
    "cierre": 13.77,
    "cierre_anterior": 13.45,
    "fecha": "2026-10-16",
-   "precio_usd": 1.7547,
-   "precio_eur": 1.5608
+   "precio_usd": 1.7546,
+   "precio_eur": 1.5607
   },
   {
    "indice": "Hang Seng Composite",
@@ -22031,7 +22012,7 @@
    "cierre_anterior": 4.035,
    "fecha": "2026-10-16",
    "precio_usd": 0.5142,
-   "precio_eur": 0.4574
+   "precio_eur": 0.4573
   },
   {
    "indice": "Hang Seng Composite",
@@ -22049,8 +22030,8 @@
    "cierre": 47.72,
    "cierre_anterior": 43.44,
    "fecha": "2026-10-16",
-   "precio_usd": 6.0808,
-   "precio_eur": 5.4089
+   "precio_usd": 6.0806,
+   "precio_eur": 5.4087
   },
   {
    "indice": "Hang Seng Composite",
@@ -22068,8 +22049,8 @@
    "cierre": 4.02,
    "cierre_anterior": 3.985,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5123,
-   "precio_eur": 0.4557
+   "precio_usd": 0.5122,
+   "precio_eur": 0.4556
   },
   {
    "indice": "Hang Seng Composite",
@@ -22106,8 +22087,8 @@
    "cierre": 32.58,
    "cierre_anterior": 31.7,
    "fecha": "2026-10-16",
-   "precio_usd": 4.1516,
-   "precio_eur": 3.6928
+   "precio_usd": 4.1514,
+   "precio_eur": 3.6927
   },
   {
    "indice": "Hang Seng Composite",
@@ -22126,7 +22107,7 @@
    "cierre_anterior": 7.965,
    "fecha": "2026-10-16",
    "precio_usd": 1.0194,
-   "precio_eur": 0.9068
+   "precio_eur": 0.9067
   },
   {
    "indice": "Hang Seng Composite",
@@ -22144,8 +22125,8 @@
    "cierre": 45.0,
    "cierre_anterior": 44.42,
    "fecha": "2026-10-16",
-   "precio_usd": 5.7342,
-   "precio_eur": 5.1006
+   "precio_usd": 5.734,
+   "precio_eur": 5.1004
   },
   {
    "indice": "Hang Seng Composite",
@@ -22163,7 +22144,7 @@
    "cierre": 8.545,
    "cierre_anterior": 8.55,
    "fecha": "2026-10-16",
-   "precio_usd": 1.0889,
+   "precio_usd": 1.0888,
    "precio_eur": 0.9685
   },
   {
@@ -22182,8 +22163,8 @@
    "cierre": 68.1,
    "cierre_anterior": 67.25,
    "fecha": "2026-10-16",
-   "precio_usd": 8.6778,
-   "precio_eur": 7.7189
+   "precio_usd": 8.6775,
+   "precio_eur": 7.7186
   },
   {
    "indice": "Hang Seng Composite",
@@ -22201,8 +22182,8 @@
    "cierre": 59.0,
    "cierre_anterior": 62.0,
    "fecha": "2026-10-16",
-   "precio_usd": 7.5182,
-   "precio_eur": 6.6875
+   "precio_usd": 7.5179,
+   "precio_eur": 6.6872
   },
   {
    "indice": "Hang Seng Composite",
@@ -22220,7 +22201,7 @@
    "cierre": 6.08,
    "cierre_anterior": 6.0,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7748,
+   "precio_usd": 0.7747,
    "precio_eur": 0.6891
   },
   {
@@ -22258,8 +22239,8 @@
    "cierre": 27.86,
    "cierre_anterior": 27.18,
    "fecha": "2026-10-16",
-   "precio_usd": 3.5501,
-   "precio_eur": 3.1578
+   "precio_usd": 3.55,
+   "precio_eur": 3.1577
   },
   {
    "indice": "Hang Seng Composite",
@@ -22296,8 +22277,8 @@
    "cierre": 26.46,
    "cierre_anterior": 26.7,
    "fecha": "2026-10-16",
-   "precio_usd": 3.3717,
-   "precio_eur": 2.9992
+   "precio_usd": 3.3716,
+   "precio_eur": 2.999
   },
   {
    "indice": "Hang Seng Composite",
@@ -22315,8 +22296,8 @@
    "cierre": 19.44,
    "cierre_anterior": 19.0,
    "fecha": "2026-10-16",
-   "precio_usd": 2.4772,
-   "precio_eur": 2.2035
+   "precio_usd": 2.4771,
+   "precio_eur": 2.2034
   },
   {
    "indice": "Hang Seng Composite",
@@ -22334,8 +22315,8 @@
    "cierre": 11.17,
    "cierre_anterior": 11.25,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4234,
-   "precio_eur": 1.2661
+   "precio_usd": 1.4233,
+   "precio_eur": 1.266
   },
   {
    "indice": "Hang Seng Composite",
@@ -22353,7 +22334,7 @@
    "cierre": 2.66,
    "cierre_anterior": 2.675,
    "fecha": "2026-10-16",
-   "precio_usd": 0.339,
+   "precio_usd": 0.3389,
    "precio_eur": 0.3015
   },
   {
@@ -22372,8 +22353,8 @@
    "cierre": 22.68,
    "cierre_anterior": 22.52,
    "fecha": "2026-10-16",
-   "precio_usd": 2.8901,
-   "precio_eur": 2.5707
+   "precio_usd": 2.8899,
+   "precio_eur": 2.5706
   },
   {
    "indice": "Hang Seng Composite",
@@ -22391,7 +22372,7 @@
    "cierre": 14.38,
    "cierre_anterior": 14.53,
    "fecha": "2026-10-16",
-   "precio_usd": 1.8324,
+   "precio_usd": 1.8323,
    "precio_eur": 1.6299
   },
   {
@@ -22429,7 +22410,7 @@
    "cierre": 9.275,
    "cierre_anterior": 9.135,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1819,
+   "precio_usd": 1.1818,
    "precio_eur": 1.0513
   },
   {
@@ -22448,8 +22429,8 @@
    "cierre": 10.27,
    "cierre_anterior": 10.15,
    "fecha": "2026-10-16",
-   "precio_usd": 1.3087,
-   "precio_eur": 1.1641
+   "precio_usd": 1.3086,
+   "precio_eur": 1.164
   },
   {
    "indice": "Hang Seng Composite",
@@ -22467,8 +22448,8 @@
    "cierre": 23.62,
    "cierre_anterior": 24.32,
    "fecha": "2026-10-16",
-   "precio_usd": 3.0098,
-   "precio_eur": 2.6773
+   "precio_usd": 3.0097,
+   "precio_eur": 2.6771
   },
   {
    "indice": "Hang Seng Composite",
@@ -22486,8 +22467,8 @@
    "cierre": 58.15,
    "cierre_anterior": 57.0,
    "fecha": "2026-10-16",
-   "precio_usd": 7.4099,
-   "precio_eur": 6.5911
+   "precio_usd": 7.4096,
+   "precio_eur": 6.5909
   },
   {
    "indice": "Hang Seng Composite",
@@ -22505,8 +22486,8 @@
    "cierre": 8.315,
    "cierre_anterior": 8.7,
    "fecha": "2026-10-16",
-   "precio_usd": 1.0596,
-   "precio_eur": 0.9425
+   "precio_usd": 1.0595,
+   "precio_eur": 0.9424
   },
   {
    "indice": "Hang Seng Composite",
@@ -22524,8 +22505,8 @@
    "cierre": 161.8,
    "cierre_anterior": 163.2,
    "fecha": "2026-10-16",
-   "precio_usd": 20.6178,
-   "precio_eur": 18.3395
+   "precio_usd": 20.617,
+   "precio_eur": 18.3388
   },
   {
    "indice": "Hang Seng Composite",
@@ -22562,7 +22543,7 @@
    "cierre": 11.0,
    "cierre_anterior": 11.11,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4017,
+   "precio_usd": 1.4016,
    "precio_eur": 1.2468
   },
   {
@@ -22581,7 +22562,7 @@
    "cierre": 6.08,
    "cierre_anterior": 6.18,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7748,
+   "precio_usd": 0.7747,
    "precio_eur": 0.6891
   },
   {
@@ -22619,8 +22600,8 @@
    "cierre": 12.01,
    "cierre_anterior": 12.2,
    "fecha": "2026-10-16",
-   "precio_usd": 1.5304,
-   "precio_eur": 1.3613
+   "precio_usd": 1.5303,
+   "precio_eur": 1.3612
   },
   {
    "indice": "Hang Seng Composite",
@@ -22752,8 +22733,8 @@
    "cierre": 66.0,
    "cierre_anterior": 67.0,
    "fecha": "2026-10-16",
-   "precio_usd": 8.4102,
-   "precio_eur": 7.4809
+   "precio_usd": 8.4099,
+   "precio_eur": 7.4806
   },
   {
    "indice": "Hang Seng Composite",
@@ -22771,8 +22752,8 @@
    "cierre": 30.4,
    "cierre_anterior": 31.2,
    "fecha": "2026-10-16",
-   "precio_usd": 3.8738,
-   "precio_eur": 3.4457
+   "precio_usd": 3.8736,
+   "precio_eur": 3.4456
   },
   {
    "indice": "Hang Seng Composite",
@@ -22809,8 +22790,8 @@
    "cierre": 147.5,
    "cierre_anterior": 174.6,
    "fecha": "2026-10-16",
-   "precio_usd": 18.7956,
-   "precio_eur": 16.7186
+   "precio_usd": 18.7948,
+   "precio_eur": 16.718
   },
   {
    "indice": "Hang Seng Composite",
@@ -22828,8 +22809,8 @@
    "cierre": 50.15,
    "cierre_anterior": 49.54,
    "fecha": "2026-10-16",
-   "precio_usd": 6.3905,
-   "precio_eur": 5.6843
+   "precio_usd": 6.3902,
+   "precio_eur": 5.6841
   },
   {
    "indice": "Hang Seng Composite",
@@ -22847,7 +22828,7 @@
    "cierre": 5.045,
    "cierre_anterior": 5.005,
    "fecha": "2026-10-16",
-   "precio_usd": 0.6429,
+   "precio_usd": 0.6428,
    "precio_eur": 0.5718
   },
   {
@@ -22866,8 +22847,8 @@
    "cierre": 51.35,
    "cierre_anterior": 50.15,
    "fecha": "2026-10-16",
-   "precio_usd": 6.5434,
-   "precio_eur": 5.8204
+   "precio_usd": 6.5432,
+   "precio_eur": 5.8201
   },
   {
    "indice": "Hang Seng Composite",
@@ -22885,8 +22866,8 @@
    "cierre": 62.1,
    "cierre_anterior": 62.0,
    "fecha": "2026-10-16",
-   "precio_usd": 7.9132,
-   "precio_eur": 7.0388
+   "precio_usd": 7.9129,
+   "precio_eur": 7.0386
   },
   {
    "indice": "Hang Seng Composite",
@@ -22904,8 +22885,8 @@
    "cierre": 26.14,
    "cierre_anterior": 25.06,
    "fecha": "2026-10-16",
-   "precio_usd": 3.331,
-   "precio_eur": 2.9629
+   "precio_usd": 3.3308,
+   "precio_eur": 2.9628
   },
   {
    "indice": "Hang Seng Composite",
@@ -22923,8 +22904,8 @@
    "cierre": 28.52,
    "cierre_anterior": 27.26,
    "fecha": "2026-10-16",
-   "precio_usd": 3.6342,
-   "precio_eur": 3.2326
+   "precio_usd": 3.6341,
+   "precio_eur": 3.2325
   },
   {
    "indice": "Hang Seng Composite",
@@ -22942,8 +22923,8 @@
    "cierre": 35.52,
    "cierre_anterior": 34.46,
    "fecha": "2026-10-16",
-   "precio_usd": 4.5262,
-   "precio_eur": 4.0261
+   "precio_usd": 4.5261,
+   "precio_eur": 4.0259
   },
   {
    "indice": "Hang Seng Composite",
@@ -22961,8 +22942,8 @@
    "cierre": 29.88,
    "cierre_anterior": 28.52,
    "fecha": "2026-10-16",
-   "precio_usd": 3.8075,
-   "precio_eur": 3.3868
+   "precio_usd": 3.8074,
+   "precio_eur": 3.3867
   },
   {
    "indice": "Hang Seng Composite",
@@ -22980,8 +22961,8 @@
    "cierre": 52.6,
    "cierre_anterior": 52.3,
    "fecha": "2026-10-16",
-   "precio_usd": 6.7027,
-   "precio_eur": 5.962
+   "precio_usd": 6.7024,
+   "precio_eur": 5.9618
   },
   {
    "indice": "Hang Seng Composite",
@@ -22999,8 +22980,8 @@
    "cierre": 80.2,
    "cierre_anterior": 80.0,
    "fecha": "2026-10-16",
-   "precio_usd": 10.2197,
-   "precio_eur": 9.0904
+   "precio_usd": 10.2193,
+   "precio_eur": 9.0901
   },
   {
    "indice": "Hang Seng Composite",
@@ -23037,7 +23018,7 @@
    "cierre": 20.66,
    "cierre_anterior": 20.66,
    "fecha": "2026-10-16",
-   "precio_usd": 2.6327,
+   "precio_usd": 2.6326,
    "precio_eur": 2.3417
   },
   {
@@ -23075,8 +23056,8 @@
    "cierre": 13.8,
    "cierre_anterior": 13.27,
    "fecha": "2026-10-16",
-   "precio_usd": 1.7585,
-   "precio_eur": 1.5642
+   "precio_usd": 1.7584,
+   "precio_eur": 1.5641
   },
   {
    "indice": "Hang Seng Composite",
@@ -23151,7 +23132,7 @@
    "cierre": 7.44,
    "cierre_anterior": 7.47,
    "fecha": "2026-10-16",
-   "precio_usd": 0.9481,
+   "precio_usd": 0.948,
    "precio_eur": 0.8433
   },
   {
@@ -23189,8 +23170,8 @@
    "cierre": 223.6,
    "cierre_anterior": 221.0,
    "fecha": "2026-10-16",
-   "precio_usd": 28.4928,
-   "precio_eur": 25.3443
+   "precio_usd": 28.4917,
+   "precio_eur": 25.3434
   },
   {
    "indice": "Hang Seng Composite",
@@ -23208,8 +23189,8 @@
    "cierre": 56.25,
    "cierre_anterior": 58.9,
    "fecha": "2026-10-16",
-   "precio_usd": 7.1678,
-   "precio_eur": 6.3758
+   "precio_usd": 7.1675,
+   "precio_eur": 6.3755
   },
   {
    "indice": "Hang Seng Composite",
@@ -23227,8 +23208,8 @@
    "cierre": 31.96,
    "cierre_anterior": 31.26,
    "fecha": "2026-10-16",
-   "precio_usd": 4.0726,
-   "precio_eur": 3.6226
+   "precio_usd": 4.0724,
+   "precio_eur": 3.6224
   },
   {
    "indice": "Hang Seng Composite",
@@ -23265,8 +23246,8 @@
    "cierre": 55.85,
    "cierre_anterior": 55.2,
    "fecha": "2026-10-16",
-   "precio_usd": 7.1168,
-   "precio_eur": 6.3304
+   "precio_usd": 7.1166,
+   "precio_eur": 6.3302
   },
   {
    "indice": "Hang Seng Composite",
@@ -23284,8 +23265,8 @@
    "cierre": 26.22,
    "cierre_anterior": 26.24,
    "fecha": "2026-10-16",
-   "precio_usd": 3.3411,
-   "precio_eur": 2.972
+   "precio_usd": 3.341,
+   "precio_eur": 2.9718
   },
   {
    "indice": "Hang Seng Composite",
@@ -23303,8 +23284,8 @@
    "cierre": 23.14,
    "cierre_anterior": 23.0,
    "fecha": "2026-10-16",
-   "precio_usd": 2.9487,
-   "precio_eur": 2.6228
+   "precio_usd": 2.9486,
+   "precio_eur": 2.6227
   },
   {
    "indice": "Hang Seng Composite",
@@ -23322,8 +23303,8 @@
    "cierre": 16.67,
    "cierre_anterior": 18.62,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1242,
-   "precio_eur": 1.8895
+   "precio_usd": 2.1241,
+   "precio_eur": 1.8894
   },
   {
    "indice": "Hang Seng Composite",
@@ -23342,7 +23323,7 @@
    "cierre_anterior": 8.61,
    "fecha": "2026-10-16",
    "precio_usd": 1.1118,
-   "precio_eur": 0.989
+   "precio_eur": 0.9889
   },
   {
    "indice": "Hang Seng Composite",
@@ -23360,8 +23341,8 @@
    "cierre": 69.85,
    "cierre_anterior": 68.1,
    "fecha": "2026-10-16",
-   "precio_usd": 8.9008,
-   "precio_eur": 7.9173
+   "precio_usd": 8.9005,
+   "precio_eur": 7.917
   },
   {
    "indice": "Hang Seng Composite",
@@ -23380,7 +23361,7 @@
    "cierre_anterior": 4.71,
    "fecha": "2026-10-16",
    "precio_usd": 0.5868,
-   "precio_eur": 0.522
+   "precio_eur": 0.5219
   },
   {
    "indice": "Hang Seng Composite",
@@ -23417,8 +23398,8 @@
    "cierre": 8.48,
    "cierre_anterior": 8.62,
    "fecha": "2026-10-16",
-   "precio_usd": 1.0806,
-   "precio_eur": 0.9612
+   "precio_usd": 1.0805,
+   "precio_eur": 0.9611
   },
   {
    "indice": "Hang Seng Composite",
@@ -23474,8 +23455,8 @@
    "cierre": 34.88,
    "cierre_anterior": 33.2,
    "fecha": "2026-10-16",
-   "precio_usd": 4.4447,
-   "precio_eur": 3.9535
+   "precio_usd": 4.4445,
+   "precio_eur": 3.9534
   },
   {
    "indice": "Hang Seng Composite",
@@ -23531,8 +23512,8 @@
    "cierre": 24.42,
    "cierre_anterior": 24.3,
    "fecha": "2026-10-16",
-   "precio_usd": 3.1118,
-   "precio_eur": 2.7679
+   "precio_usd": 3.1117,
+   "precio_eur": 2.7678
   },
   {
    "indice": "Hang Seng Composite",
@@ -23550,8 +23531,8 @@
    "cierre": 12.28,
    "cierre_anterior": 12.0,
    "fecha": "2026-10-16",
-   "precio_usd": 1.5648,
-   "precio_eur": 1.3919
+   "precio_usd": 1.5647,
+   "precio_eur": 1.3918
   },
   {
    "indice": "Hang Seng Composite",
@@ -23569,7 +23550,7 @@
    "cierre": 18.21,
    "cierre_anterior": 17.64,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3205,
+   "precio_usd": 2.3204,
    "precio_eur": 2.064
   },
   {
@@ -23588,8 +23569,8 @@
    "cierre": 55.6,
    "cierre_anterior": 55.5,
    "fecha": "2026-10-16",
-   "precio_usd": 7.085,
-   "precio_eur": 6.3021
+   "precio_usd": 7.0847,
+   "precio_eur": 6.3018
   },
   {
    "indice": "Hang Seng Composite",
@@ -23626,8 +23607,8 @@
    "cierre": 6.485,
    "cierre_anterior": 6.545,
    "fecha": "2026-10-16",
-   "precio_usd": 0.8264,
-   "precio_eur": 0.7351
+   "precio_usd": 0.8263,
+   "precio_eur": 0.735
   },
   {
    "indice": "Hang Seng Composite",
@@ -23645,8 +23626,8 @@
    "cierre": 49.3,
    "cierre_anterior": 49.24,
    "fecha": "2026-10-16",
-   "precio_usd": 6.2822,
-   "precio_eur": 5.588
+   "precio_usd": 6.2819,
+   "precio_eur": 5.5878
   },
   {
    "indice": "Hang Seng Composite",
@@ -23683,8 +23664,8 @@
    "cierre": 24.4,
    "cierre_anterior": 23.18,
    "fecha": "2026-10-16",
-   "precio_usd": 3.1092,
-   "precio_eur": 2.7657
+   "precio_usd": 3.1091,
+   "precio_eur": 2.7656
   },
   {
    "indice": "Hang Seng Composite",
@@ -23702,8 +23683,8 @@
    "cierre": 31.86,
    "cierre_anterior": 32.02,
    "fecha": "2026-10-16",
-   "precio_usd": 4.0598,
-   "precio_eur": 3.6112
+   "precio_usd": 4.0597,
+   "precio_eur": 3.6111
   },
   {
    "indice": "Hang Seng Composite",
@@ -23722,7 +23703,7 @@
    "cierre_anterior": 3.955,
    "fecha": "2026-10-16",
    "precio_usd": 0.4912,
-   "precio_eur": 0.437
+   "precio_eur": 0.4369
   },
   {
    "indice": "Hang Seng Composite",
@@ -23740,8 +23721,8 @@
    "cierre": 75.7,
    "cierre_anterior": 75.45,
    "fecha": "2026-10-16",
-   "precio_usd": 9.6463,
-   "precio_eur": 8.5803
+   "precio_usd": 9.6459,
+   "precio_eur": 8.58
   },
   {
    "indice": "Hang Seng Composite",
@@ -23759,8 +23740,8 @@
    "cierre": 31.74,
    "cierre_anterior": 31.38,
    "fecha": "2026-10-16",
-   "precio_usd": 4.0445,
-   "precio_eur": 3.5976
+   "precio_usd": 4.0444,
+   "precio_eur": 3.5975
   },
   {
    "indice": "Hang Seng Composite",
@@ -23778,8 +23759,8 @@
    "cierre": 39.1,
    "cierre_anterior": 37.64,
    "fecha": "2026-10-16",
-   "precio_usd": 4.9824,
-   "precio_eur": 4.4319
+   "precio_usd": 4.9822,
+   "precio_eur": 4.4317
   },
   {
    "indice": "Hang Seng Composite",
@@ -23797,8 +23778,8 @@
    "cierre": 4.695,
    "cierre_anterior": 4.72,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5983,
-   "precio_eur": 0.5322
+   "precio_usd": 0.5982,
+   "precio_eur": 0.5321
   },
   {
    "indice": "Hang Seng Composite",
@@ -23835,8 +23816,8 @@
    "cierre": 440.8,
    "cierre_anterior": 448.6,
    "fecha": "2026-10-16",
-   "precio_usd": 56.17,
-   "precio_eur": 49.9633
+   "precio_usd": 56.1679,
+   "precio_eur": 49.9613
   },
   {
    "indice": "Hang Seng Composite",
@@ -23854,8 +23835,8 @@
    "cierre": 29.6,
    "cierre_anterior": 29.0,
    "fecha": "2026-10-16",
-   "precio_usd": 3.7719,
-   "precio_eur": 3.3551
+   "precio_usd": 3.7717,
+   "precio_eur": 3.3549
   },
   {
    "indice": "Hang Seng Composite",
@@ -23892,8 +23873,8 @@
    "cierre": 33.12,
    "cierre_anterior": 31.96,
    "fecha": "2026-10-16",
-   "precio_usd": 4.2204,
-   "precio_eur": 3.754
+   "precio_usd": 4.2202,
+   "precio_eur": 3.7539
   },
   {
    "indice": "Hang Seng Composite",
@@ -23911,8 +23892,8 @@
    "cierre": 36.9,
    "cierre_anterior": 36.18,
    "fecha": "2026-10-16",
-   "precio_usd": 4.7021,
-   "precio_eur": 4.1825
+   "precio_usd": 4.7019,
+   "precio_eur": 4.1823
   },
   {
    "indice": "Hang Seng Composite",
@@ -23968,7 +23949,7 @@
    "cierre": 17.19,
    "cierre_anterior": 17.6,
    "fecha": "2026-10-16",
-   "precio_usd": 2.1905,
+   "precio_usd": 2.1904,
    "precio_eur": 1.9484
   },
   {
@@ -24006,8 +23987,8 @@
    "cierre": 25.54,
    "cierre_anterior": 25.6,
    "fecha": "2026-10-16",
-   "precio_usd": 3.2545,
-   "precio_eur": 2.8949
+   "precio_usd": 3.2544,
+   "precio_eur": 2.8948
   },
   {
    "indice": "Hang Seng Composite",
@@ -24025,7 +24006,7 @@
    "cierre": 4.6,
    "cierre_anterior": 4.445,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5862,
+   "precio_usd": 0.5861,
    "precio_eur": 0.5214
   },
   {
@@ -24044,8 +24025,8 @@
    "cierre": 28.06,
    "cierre_anterior": 27.54,
    "fecha": "2026-10-16",
-   "precio_usd": 3.5756,
-   "precio_eur": 3.1805
+   "precio_usd": 3.5755,
+   "precio_eur": 3.1804
   },
   {
    "indice": "Hang Seng Composite",
@@ -24063,7 +24044,7 @@
    "cierre": 6.81,
    "cierre_anterior": 6.63,
    "fecha": "2026-10-16",
-   "precio_usd": 0.8678,
+   "precio_usd": 0.8677,
    "precio_eur": 0.7719
   },
   {
@@ -24082,7 +24063,7 @@
    "cierre": 6.0,
    "cierre_anterior": 5.84,
    "fecha": "2026-10-16",
-   "precio_usd": 0.7646,
+   "precio_usd": 0.7645,
    "precio_eur": 0.6801
   },
   {
@@ -24102,7 +24083,7 @@
    "cierre_anterior": 19.56,
    "fecha": "2026-10-16",
    "precio_usd": 2.4644,
-   "precio_eur": 2.1921
+   "precio_eur": 2.192
   },
   {
    "indice": "Hang Seng Composite",
@@ -24140,7 +24121,7 @@
    "cierre_anterior": 15.28,
    "fecha": "2026-10-16",
    "precio_usd": 1.9649,
-   "precio_eur": 1.7478
+   "precio_eur": 1.7477
   },
   {
    "indice": "Hang Seng Composite",
@@ -24178,7 +24159,7 @@
    "cierre_anterior": 12.74,
    "fecha": "2026-10-16",
    "precio_usd": 1.6973,
-   "precio_eur": 1.5098
+   "precio_eur": 1.5097
   },
   {
    "indice": "Hang Seng Composite",
@@ -24196,8 +24177,8 @@
    "cierre": 53.25,
    "cierre_anterior": 53.95,
    "fecha": "2026-10-16",
-   "precio_usd": 6.7855,
-   "precio_eur": 6.0357
+   "precio_usd": 6.7853,
+   "precio_eur": 6.0355
   },
   {
    "indice": "Hang Seng Composite",
@@ -24234,8 +24215,8 @@
    "cierre": 339.2,
    "cierre_anterior": 335.0,
    "fecha": "2026-10-16",
-   "precio_usd": 43.2234,
-   "precio_eur": 38.4472
+   "precio_usd": 43.2218,
+   "precio_eur": 38.4458
   },
   {
    "indice": "Hang Seng Composite",
@@ -24272,8 +24253,8 @@
    "cierre": 14.61,
    "cierre_anterior": 14.19,
    "fecha": "2026-10-16",
-   "precio_usd": 1.8617,
-   "precio_eur": 1.656
+   "precio_usd": 1.8616,
+   "precio_eur": 1.6559
   },
   {
    "indice": "Hang Seng Composite",
@@ -24291,7 +24272,7 @@
    "cierre": 1.03,
    "cierre_anterior": 1.015,
    "fecha": "2026-10-16",
-   "precio_usd": 0.1313,
+   "precio_usd": 0.1312,
    "precio_eur": 0.1167
   },
   {
@@ -24329,8 +24310,8 @@
    "cierre": 23.22,
    "cierre_anterior": 23.26,
    "fecha": "2026-10-16",
-   "precio_usd": 2.9589,
-   "precio_eur": 2.6319
+   "precio_usd": 2.9588,
+   "precio_eur": 2.6318
   },
   {
    "indice": "Hang Seng Composite",
@@ -24348,8 +24329,8 @@
    "cierre": 16.32,
    "cierre_anterior": 15.97,
    "fecha": "2026-10-16",
-   "precio_usd": 2.0796,
-   "precio_eur": 1.8498
+   "precio_usd": 2.0795,
+   "precio_eur": 1.8497
   },
   {
    "indice": "Hang Seng Composite",
@@ -24367,8 +24348,8 @@
    "cierre": 27.34,
    "cierre_anterior": 27.0,
    "fecha": "2026-10-16",
-   "precio_usd": 3.4839,
-   "precio_eur": 3.0989
+   "precio_usd": 3.4837,
+   "precio_eur": 3.0988
   },
   {
    "indice": "Hang Seng Composite",
@@ -24386,8 +24367,8 @@
    "cierre": 25.86,
    "cierre_anterior": 23.7,
    "fecha": "2026-10-16",
-   "precio_usd": 3.2953,
-   "precio_eur": 2.9311
+   "precio_usd": 3.2951,
+   "precio_eur": 2.931
   },
   {
    "indice": "Hang Seng Composite",
@@ -24405,7 +24386,7 @@
    "cierre": 9.405,
    "cierre_anterior": 9.39,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1985,
+   "precio_usd": 1.1984,
    "precio_eur": 1.066
   },
   {
@@ -24425,7 +24406,7 @@
    "cierre_anterior": 11.16,
    "fecha": "2026-10-16",
    "precio_usd": 1.4195,
-   "precio_eur": 1.2627
+   "precio_eur": 1.2626
   },
   {
    "indice": "Hang Seng Composite",
@@ -24443,8 +24424,8 @@
    "cierre": 6.62,
    "cierre_anterior": 6.45,
    "fecha": "2026-10-16",
-   "precio_usd": 0.8436,
-   "precio_eur": 0.7504
+   "precio_usd": 0.8435,
+   "precio_eur": 0.7503
   },
   {
    "indice": "Hang Seng Composite",
@@ -24481,8 +24462,8 @@
    "cierre": 25.12,
    "cierre_anterior": 24.98,
    "fecha": "2026-10-16",
-   "precio_usd": 3.201,
-   "precio_eur": 2.8473
+   "precio_usd": 3.2009,
+   "precio_eur": 2.8472
   },
   {
    "indice": "Hang Seng Composite",
@@ -24500,7 +24481,7 @@
    "cierre": 4.06,
    "cierre_anterior": 3.945,
    "fecha": "2026-10-16",
-   "precio_usd": 0.5174,
+   "precio_usd": 0.5173,
    "precio_eur": 0.4602
   },
   {
@@ -24519,8 +24500,8 @@
    "cierre": 35.04,
    "cierre_anterior": 34.76,
    "fecha": "2026-10-16",
-   "precio_usd": 4.4651,
-   "precio_eur": 3.9717
+   "precio_usd": 4.4649,
+   "precio_eur": 3.9715
   },
   {
    "indice": "Hang Seng Composite",
@@ -24557,7 +24538,7 @@
    "cierre": 13.6,
    "cierre_anterior": 13.73,
    "fecha": "2026-10-16",
-   "precio_usd": 1.733,
+   "precio_usd": 1.7329,
    "precio_eur": 1.5415
   },
   {
@@ -24576,8 +24557,8 @@
    "cierre": 48.96,
    "cierre_anterior": 48.8,
    "fecha": "2026-10-16",
-   "precio_usd": 6.2388,
-   "precio_eur": 5.5495
+   "precio_usd": 6.2386,
+   "precio_eur": 5.5492
   },
   {
    "indice": "Hang Seng Composite",
@@ -24614,8 +24595,8 @@
    "cierre": 225.0,
    "cierre_anterior": 215.6,
    "fecha": "2026-10-16",
-   "precio_usd": 28.6712,
-   "precio_eur": 25.503
+   "precio_usd": 28.6701,
+   "precio_eur": 25.502
   },
   {
    "indice": "Hang Seng Composite",
@@ -24633,7 +24614,7 @@
    "cierre": 11.16,
    "cierre_anterior": 11.0,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4221,
+   "precio_usd": 1.422,
    "precio_eur": 1.2649
   },
   {
@@ -24652,8 +24633,8 @@
    "cierre": 318.6,
    "cierre_anterior": 311.6,
    "fecha": "2026-10-16",
-   "precio_usd": 40.5984,
-   "precio_eur": 36.1123
+   "precio_usd": 40.5968,
+   "precio_eur": 36.1109
   },
   {
    "indice": "Hang Seng Composite",
@@ -24690,8 +24671,8 @@
    "cierre": 41.2,
    "cierre_anterior": 40.8,
    "fecha": "2026-10-16",
-   "precio_usd": 5.25,
-   "precio_eur": 4.6699
+   "precio_usd": 5.2498,
+   "precio_eur": 4.6697
   },
   {
    "indice": "Hang Seng Composite",
@@ -24709,8 +24690,8 @@
    "cierre": 38.56,
    "cierre_anterior": 37.74,
    "fecha": "2026-10-16",
-   "precio_usd": 4.9136,
-   "precio_eur": 4.3707
+   "precio_usd": 4.9134,
+   "precio_eur": 4.3705
   },
   {
    "indice": "Hang Seng Composite",
@@ -24728,8 +24709,8 @@
    "cierre": 64.15,
    "cierre_anterior": 64.5,
    "fecha": "2026-10-16",
-   "precio_usd": 8.1745,
-   "precio_eur": 7.2712
+   "precio_usd": 8.1742,
+   "precio_eur": 7.2709
   },
   {
    "indice": "Hang Seng Composite",
@@ -24747,8 +24728,8 @@
    "cierre": 40.9,
    "cierre_anterior": 40.82,
    "fecha": "2026-10-16",
-   "precio_usd": 5.2118,
-   "precio_eur": 4.6359
+   "precio_usd": 5.2116,
+   "precio_eur": 4.6357
   },
   {
    "indice": "Hang Seng Composite",
@@ -24785,8 +24766,8 @@
    "cierre": 207.4,
    "cierre_anterior": 206.2,
    "fecha": "2026-10-16",
-   "precio_usd": 26.4285,
-   "precio_eur": 23.5081
+   "precio_usd": 26.4275,
+   "precio_eur": 23.5072
   },
   {
    "indice": "Hang Seng Composite",
@@ -24804,8 +24785,8 @@
    "cierre": 164.3,
    "cierre_anterior": 148.2,
    "fecha": "2026-10-16",
-   "precio_usd": 20.9363,
-   "precio_eur": 18.6229
+   "precio_usd": 20.9355,
+   "precio_eur": 18.6222
   },
   {
    "indice": "Hang Seng Composite",
@@ -24843,7 +24824,7 @@
    "cierre_anterior": 16.02,
    "fecha": "2026-10-16",
    "precio_usd": 1.9305,
-   "precio_eur": 1.7172
+   "precio_eur": 1.7171
   },
   {
    "indice": "Hang Seng Composite",
@@ -24880,8 +24861,8 @@
    "cierre": 22.6,
    "cierre_anterior": 21.78,
    "fecha": "2026-10-16",
-   "precio_usd": 2.8799,
-   "precio_eur": 2.5616
+   "precio_usd": 2.8798,
+   "precio_eur": 2.5615
   },
   {
    "indice": "Hang Seng Composite",
@@ -24918,7 +24899,7 @@
    "cierre": 10.85,
    "cierre_anterior": 11.25,
    "fecha": "2026-10-16",
-   "precio_usd": 1.3826,
+   "precio_usd": 1.3825,
    "precio_eur": 1.2298
   },
   {
@@ -24937,8 +24918,8 @@
    "cierre": 20.12,
    "cierre_anterior": 20.14,
    "fecha": "2026-10-16",
-   "precio_usd": 2.5638,
-   "precio_eur": 2.2805
+   "precio_usd": 2.5637,
+   "precio_eur": 2.2804
   },
   {
    "indice": "Hang Seng Composite",
@@ -24956,8 +24937,8 @@
    "cierre": 79.65,
    "cierre_anterior": 80.0,
    "fecha": "2026-10-16",
-   "precio_usd": 10.1496,
-   "precio_eur": 9.0281
+   "precio_usd": 10.1492,
+   "precio_eur": 9.0277
   },
   {
    "indice": "Hang Seng Composite",
@@ -24975,8 +24956,8 @@
    "cierre": 48.92,
    "cierre_anterior": 48.76,
    "fecha": "2026-10-16",
-   "precio_usd": 6.2338,
-   "precio_eur": 5.5449
+   "precio_usd": 6.2335,
+   "precio_eur": 5.5447
   },
   {
    "indice": "Hang Seng Composite",
@@ -25013,8 +24994,8 @@
    "cierre": 211.2,
    "cierre_anterior": 202.0,
    "fecha": "2026-10-16",
-   "precio_usd": 26.9127,
-   "precio_eur": 23.9388
+   "precio_usd": 26.9117,
+   "precio_eur": 23.9379
   },
   {
    "indice": "Hang Seng Composite",
@@ -25032,8 +25013,8 @@
    "cierre": 55.85,
    "cierre_anterior": 52.55,
    "fecha": "2026-10-16",
-   "precio_usd": 7.1168,
-   "precio_eur": 6.3304
+   "precio_usd": 7.1166,
+   "precio_eur": 6.3302
   },
   {
    "indice": "Hang Seng Composite",
@@ -25051,7 +25032,7 @@
    "cierre": 2.755,
    "cierre_anterior": 2.81,
    "fecha": "2026-10-16",
-   "precio_usd": 0.3511,
+   "precio_usd": 0.351,
    "precio_eur": 0.3123
   },
   {
@@ -25071,7 +25052,7 @@
    "cierre_anterior": 12.23,
    "fecha": "2026-10-16",
    "precio_usd": 1.538,
-   "precio_eur": 1.3681
+   "precio_eur": 1.368
   },
   {
    "indice": "Hang Seng Composite",
@@ -25089,8 +25070,8 @@
    "cierre": 29.74,
    "cierre_anterior": 28.02,
    "fecha": "2026-10-16",
-   "precio_usd": 3.7897,
-   "precio_eur": 3.3709
+   "precio_usd": 3.7895,
+   "precio_eur": 3.3708
   },
   {
    "indice": "Hang Seng Composite",
@@ -25108,7 +25089,7 @@
    "cierre": 9.365,
    "cierre_anterior": 9.345,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1934,
+   "precio_usd": 1.1933,
    "precio_eur": 1.0615
   },
   {
@@ -25127,8 +25108,8 @@
    "cierre": 124.0,
    "cierre_anterior": 122.6,
    "fecha": "2026-10-16",
-   "precio_usd": 15.801,
-   "precio_eur": 14.055
+   "precio_usd": 15.8004,
+   "precio_eur": 14.0545
   },
   {
    "indice": "Hang Seng Composite",
@@ -25146,8 +25127,8 @@
    "cierre": 101.7,
    "cierre_anterior": 103.7,
    "fecha": "2026-10-16",
-   "precio_usd": 12.9594,
-   "precio_eur": 11.5274
+   "precio_usd": 12.9589,
+   "precio_eur": 11.5269
   },
   {
    "indice": "Hang Seng Composite",
@@ -25165,7 +25146,7 @@
    "cierre": 7.32,
    "cierre_anterior": 7.35,
    "fecha": "2026-10-16",
-   "precio_usd": 0.9328,
+   "precio_usd": 0.9327,
    "precio_eur": 0.8297
   },
   {
@@ -25184,8 +25165,8 @@
    "cierre": 16.2,
    "cierre_anterior": 16.23,
    "fecha": "2026-10-16",
-   "precio_usd": 2.0643,
-   "precio_eur": 1.8362
+   "precio_usd": 2.0642,
+   "precio_eur": 1.8361
   },
   {
    "indice": "Hang Seng Composite",
@@ -25203,8 +25184,8 @@
    "cierre": 50.6,
    "cierre_anterior": 50.35,
    "fecha": "2026-10-16",
-   "precio_usd": 6.4478,
-   "precio_eur": 5.7353
+   "precio_usd": 6.4476,
+   "precio_eur": 5.7351
   },
   {
    "indice": "Hang Seng Composite",
@@ -25241,7 +25222,7 @@
    "cierre": 8.425,
    "cierre_anterior": 8.02,
    "fecha": "2026-10-16",
-   "precio_usd": 1.0736,
+   "precio_usd": 1.0735,
    "precio_eur": 0.9549
   },
   {
@@ -25279,8 +25260,8 @@
    "cierre": 452.0,
    "cierre_anterior": 438.4,
    "fecha": "2026-10-16",
-   "precio_usd": 57.5972,
-   "precio_eur": 51.2327
+   "precio_usd": 57.595,
+   "precio_eur": 51.2308
   },
   {
    "indice": "Hang Seng Composite",
@@ -25298,7 +25279,7 @@
    "cierre": 2.485,
    "cierre_anterior": 2.54,
    "fecha": "2026-10-16",
-   "precio_usd": 0.3167,
+   "precio_usd": 0.3166,
    "precio_eur": 0.2817
   },
   {
@@ -25317,7 +25298,7 @@
    "cierre": 12.98,
    "cierre_anterior": 12.49,
    "fecha": "2026-10-16",
-   "precio_usd": 1.654,
+   "precio_usd": 1.6539,
    "precio_eur": 1.4712
   },
   {
@@ -25336,8 +25317,8 @@
    "cierre": 13.02,
    "cierre_anterior": 12.95,
    "fecha": "2026-10-16",
-   "precio_usd": 1.6591,
-   "precio_eur": 1.4758
+   "precio_usd": 1.659,
+   "precio_eur": 1.4757
   },
   {
    "indice": "Hang Seng Composite",
@@ -25356,7 +25337,7 @@
    "cierre_anterior": 11.18,
    "fecha": "2026-10-16",
    "precio_usd": 1.5189,
-   "precio_eur": 1.3511
+   "precio_eur": 1.351
   },
   {
    "indice": "Hang Seng Composite",
@@ -25374,8 +25355,8 @@
    "cierre": 19.7,
    "cierre_anterior": 18.43,
    "fecha": "2026-10-16",
-   "precio_usd": 2.5103,
-   "precio_eur": 2.2329
+   "precio_usd": 2.5102,
+   "precio_eur": 2.2328
   },
   {
    "indice": "Hang Seng Composite",
@@ -25393,8 +25374,8 @@
    "cierre": 170.0,
    "cierre_anterior": 153.3,
    "fecha": "2026-10-16",
-   "precio_usd": 21.6627,
-   "precio_eur": 19.2689
+   "precio_usd": 21.6618,
+   "precio_eur": 19.2682
   },
   {
    "indice": "Hang Seng Composite",
@@ -25412,8 +25393,8 @@
    "cierre": 106.1,
    "cierre_anterior": 104.9,
    "fecha": "2026-10-16",
-   "precio_usd": 13.5201,
-   "precio_eur": 12.0261
+   "precio_usd": 13.5195,
+   "precio_eur": 12.0256
   },
   {
    "indice": "Hang Seng Composite",
@@ -25431,8 +25412,8 @@
    "cierre": 111.8,
    "cierre_anterior": 110.7,
    "fecha": "2026-10-16",
-   "precio_usd": 14.2464,
-   "precio_eur": 12.6722
+   "precio_usd": 14.2458,
+   "precio_eur": 12.6717
   },
   {
    "indice": "Hang Seng Composite",
@@ -25450,8 +25431,8 @@
    "cierre": 41.2,
    "cierre_anterior": 41.38,
    "fecha": "2026-10-16",
-   "precio_usd": 5.25,
-   "precio_eur": 4.6699
+   "precio_usd": 5.2498,
+   "precio_eur": 4.6697
   },
   {
    "indice": "Hang Seng Composite",
@@ -25469,8 +25450,8 @@
    "cierre": 27.08,
    "cierre_anterior": 26.9,
    "fecha": "2026-10-16",
-   "precio_usd": 3.4507,
-   "precio_eur": 3.0694
+   "precio_usd": 3.4506,
+   "precio_eur": 3.0693
   },
   {
    "indice": "Hang Seng Composite",
@@ -25488,8 +25469,8 @@
    "cierre": 17.48,
    "cierre_anterior": 18.62,
    "fecha": "2026-10-16",
-   "precio_usd": 2.2274,
-   "precio_eur": 1.9813
+   "precio_usd": 2.2273,
+   "precio_eur": 1.9812
   },
   {
    "indice": "Hang Seng Composite",
@@ -25545,8 +25526,8 @@
    "cierre": 63.45,
    "cierre_anterior": 64.15,
    "fecha": "2026-10-16",
-   "precio_usd": 8.0853,
-   "precio_eur": 7.1919
+   "precio_usd": 8.085,
+   "precio_eur": 7.1916
   },
   {
    "indice": "Hang Seng Composite",
@@ -25564,7 +25545,7 @@
    "cierre": 18.6,
    "cierre_anterior": 17.95,
    "fecha": "2026-10-16",
-   "precio_usd": 2.3702,
+   "precio_usd": 2.3701,
    "precio_eur": 2.1082
   },
   {
@@ -25583,8 +25564,8 @@
    "cierre": 11.37,
    "cierre_anterior": 11.4,
    "fecha": "2026-10-16",
-   "precio_usd": 1.4489,
-   "precio_eur": 1.2888
+   "precio_usd": 1.4488,
+   "precio_eur": 1.2887
   },
   {
    "indice": "Hang Seng Composite",
@@ -25602,8 +25583,8 @@
    "cierre": 24.8,
    "cierre_anterior": 24.52,
    "fecha": "2026-10-16",
-   "precio_usd": 3.1602,
-   "precio_eur": 2.811
+   "precio_usd": 3.1601,
+   "precio_eur": 2.8109
   },
   {
    "indice": "Hang Seng Composite",
@@ -25622,7 +25603,7 @@
    "cierre_anterior": 8.005,
    "fecha": "2026-10-16",
    "precio_usd": 1.0347,
-   "precio_eur": 0.9204
+   "precio_eur": 0.9203
   },
   {
    "indice": "Hang Seng Composite",
@@ -25659,8 +25640,8 @@
    "cierre": 35.18,
    "cierre_anterior": 35.0,
    "fecha": "2026-10-16",
-   "precio_usd": 4.4829,
-   "precio_eur": 3.9875
+   "precio_usd": 4.4827,
+   "precio_eur": 3.9874
   },
   {
    "indice": "Hang Seng Composite",
@@ -25678,8 +25659,8 @@
    "cierre": 27.4,
    "cierre_anterior": 26.48,
    "fecha": "2026-10-16",
-   "precio_usd": 3.4915,
-   "precio_eur": 3.1057
+   "precio_usd": 3.4914,
+   "precio_eur": 3.1056
   },
   {
    "indice": "Hang Seng Composite",
@@ -25697,8 +25678,8 @@
    "cierre": 37.46,
    "cierre_anterior": 37.2,
    "fecha": "2026-10-16",
-   "precio_usd": 4.7734,
-   "precio_eur": 4.246
+   "precio_usd": 4.7733,
+   "precio_eur": 4.2458
   },
   {
    "indice": "Hang Seng Composite",
@@ -25716,8 +25697,8 @@
    "cierre": 64.55,
    "cierre_anterior": 62.65,
    "fecha": "2026-10-16",
-   "precio_usd": 8.2254,
-   "precio_eur": 7.3165
+   "precio_usd": 8.2251,
+   "precio_eur": 7.3163
   },
   {
    "indice": "Hang Seng Composite",
@@ -25735,8 +25716,8 @@
    "cierre": 41.3,
    "cierre_anterior": 40.66,
    "fecha": "2026-10-16",
-   "precio_usd": 5.2628,
-   "precio_eur": 4.6812
+   "precio_usd": 5.2626,
+   "precio_eur": 4.681
   },
   {
    "indice": "Hang Seng Composite",
@@ -25754,8 +25735,8 @@
    "cierre": 79.45,
    "cierre_anterior": 78.35,
    "fecha": "2026-10-16",
-   "precio_usd": 10.1241,
-   "precio_eur": 9.0054
+   "precio_usd": 10.1237,
+   "precio_eur": 9.0051
   },
   {
    "indice": "Hang Seng Composite",
@@ -25773,7 +25754,7 @@
    "cierre": 8.88,
    "cierre_anterior": 9.0,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1316,
+   "precio_usd": 1.1315,
    "precio_eur": 1.0065
   },
   {
@@ -25792,8 +25773,8 @@
    "cierre": 20.28,
    "cierre_anterior": 20.56,
    "fecha": "2026-10-16",
-   "precio_usd": 2.5842,
-   "precio_eur": 2.2987
+   "precio_usd": 2.5841,
+   "precio_eur": 2.2986
   },
   {
    "indice": "Hang Seng Composite",
@@ -25811,8 +25792,8 @@
    "cierre": 50.5,
    "cierre_anterior": 50.15,
    "fecha": "2026-10-16",
-   "precio_usd": 6.4351,
-   "precio_eur": 5.724
+   "precio_usd": 6.4348,
+   "precio_eur": 5.7238
   },
   {
    "indice": "Hang Seng Composite",
@@ -25830,8 +25811,8 @@
    "cierre": 87.7,
    "cierre_anterior": 84.75,
    "fecha": "2026-10-16",
-   "precio_usd": 11.1754,
-   "precio_eur": 9.9405
+   "precio_usd": 11.175,
+   "precio_eur": 9.9401
   },
   {
    "indice": "Hang Seng Composite",
@@ -25849,8 +25830,8 @@
    "cierre": 48.14,
    "cierre_anterior": 45.46,
    "fecha": "2026-10-16",
-   "precio_usd": 6.1344,
-   "precio_eur": 5.4565
+   "precio_usd": 6.1341,
+   "precio_eur": 5.4563
   },
   {
    "indice": "Hang Seng Composite",
@@ -25868,8 +25849,8 @@
    "cierre": 78.95,
    "cierre_anterior": 79.8,
    "fecha": "2026-10-16",
-   "precio_usd": 10.0604,
-   "precio_eur": 8.9487
+   "precio_usd": 10.06,
+   "precio_eur": 8.9484
   },
   {
    "indice": "Hang Seng Composite",
@@ -25887,8 +25868,8 @@
    "cierre": 9.005,
    "cierre_anterior": 8.81,
    "fecha": "2026-10-16",
-   "precio_usd": 1.1475,
-   "precio_eur": 1.0207
+   "precio_usd": 1.1474,
+   "precio_eur": 1.0206
   },
   {
    "indice": "Hang Seng Composite",
@@ -25906,8 +25887,8 @@
    "cierre": 91.3,
    "cierre_anterior": 90.45,
    "fecha": "2026-10-16",
-   "precio_usd": 11.6341,
-   "precio_eur": 10.3486
+   "precio_usd": 11.6337,
+   "precio_eur": 10.3482
   },
   {
    "indice": "Hang Seng Composite",
@@ -25925,8 +25906,8 @@
    "cierre": 35.14,
    "cierre_anterior": 34.0,
    "fecha": "2026-10-16",
-   "precio_usd": 4.4778,
-   "precio_eur": 3.983
+   "precio_usd": 4.4776,
+   "precio_eur": 3.9829
   },
   {
    "indice": "Hang Seng Composite",
@@ -25944,8 +25925,8 @@
    "cierre": 315.0,
    "cierre_anterior": 309.2,
    "fecha": "2026-10-16",
-   "precio_usd": 40.1397,
-   "precio_eur": 35.7042
+   "precio_usd": 40.1381,
+   "precio_eur": 35.7029
   },
   {
    "indice": "Hang Seng Composite",
@@ -25963,7 +25944,7 @@
    "cierre": 12.32,
    "cierre_anterior": 12.0,
    "fecha": "2026-10-16",
-   "precio_usd": 1.5699,
+   "precio_usd": 1.5698,
    "precio_eur": 1.3964
   },
   {
@@ -25982,8 +25963,8 @@
    "cierre": 24.3,
    "cierre_anterior": 23.96,
    "fecha": "2026-10-16",
-   "precio_usd": 3.0965,
-   "precio_eur": 2.7543
+   "precio_usd": 3.0964,
+   "precio_eur": 2.7542
   },
   {
    "indice": "Hang Seng Composite",
@@ -26001,8 +25982,8 @@
    "cierre": 6.875,
    "cierre_anterior": 6.78,
    "fecha": "2026-10-16",
-   "precio_usd": 0.8761,
-   "precio_eur": 0.7793
+   "precio_usd": 0.876,
+   "precio_eur": 0.7792
   },
   {
    "indice": "Hang Seng Composite",
@@ -26020,8 +26001,8 @@
    "cierre": 352.0,
    "cierre_anterior": 344.2,
    "fecha": "2026-10-16",
-   "precio_usd": 44.8545,
-   "precio_eur": 39.8981
+   "precio_usd": 44.8528,
+   "precio_eur": 39.8965
   },
   {
    "indice": "Hang Seng Composite",
@@ -26039,8 +26020,8 @@
    "cierre": 108.8,
    "cierre_anterior": 106.4,
    "fecha": "2026-10-16",
-   "precio_usd": 13.8641,
-   "precio_eur": 12.3321
+   "precio_usd": 13.8636,
+   "precio_eur": 12.3317
   },
   {
    "indice": "Hang Seng Composite",
@@ -26058,8 +26039,8 @@
    "cierre": 142.2,
    "cierre_anterior": 145.5,
    "fecha": "2026-10-16",
-   "precio_usd": 18.1202,
-   "precio_eur": 16.1179
+   "precio_usd": 18.1195,
+   "precio_eur": 16.1173
   },
   {
    "indice": "Hang Seng Composite",
@@ -26096,8 +26077,8 @@
    "cierre": 65.9,
    "cierre_anterior": 64.85,
    "fecha": "2026-10-16",
-   "precio_usd": 8.3975,
-   "precio_eur": 7.4696
+   "precio_usd": 8.3972,
+   "precio_eur": 7.4693
   },
   {
    "indice": "Hang Seng Composite",
@@ -26115,8 +26096,8 @@
    "cierre": 197.7,
    "cierre_anterior": 196.2,
    "fecha": "2026-10-16",
-   "precio_usd": 25.1924,
-   "precio_eur": 22.4087
+   "precio_usd": 25.1915,
+   "precio_eur": 22.4078
   }
  ]
 }

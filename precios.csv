@@ -538,7 +538,6 @@ IBEX 35,Unicaja,BME:UNI,UNI.MC,España,BME Madrid,EUR,IBEX 35,EUR,3.25,3.256,3.2
 CAC 40,Accor,EPA:AC,AC.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,46.2,46.9,46.12,2026-10-16,52.7262,46.9
 CAC 40,Air Liquide,EPA:AI,AI.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,172.76,173.16,173.04,2026-10-16,194.6712,173.16
 CAC 40,Airbus,EPA:AIR,AIR.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,195.56,198.82,194.78,2026-10-16,223.5188,198.82
-CAC 40,ArcelorMittal,AMS:MT,MT.AS,Francia,Euronext Ámsterdam,EUR,CAC 40,EUR,57.16,56.8,56.68,2026-10-16,63.8561,56.8
 CAC 40,AXA,EPA:CS,CS.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,42.83,42.97,42.85,2026-10-16,48.308,42.97
 CAC 40,BNP Paribas,EPA:BNP,BNP.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,89.97,89.55,88.94,2026-10-16,100.6745,89.55
 CAC 40,Bouygues,EPA:EN,EN.PA,Francia,Euronext Paris,EUR,CAC 40,EUR,41.4,41.51,40.94,2026-10-16,46.6667,41.51
@@ -935,439 +934,439 @@ Nikkei 225,Konami Group Corp.,TYO:9766,9766.T,Japón,Bolsa de Tokio,JPY,Nikkei 2
 Nikkei 225,Nitori Holdings Co.,TYO:9843,9843.T,Japón,Bolsa de Tokio,JPY,Nikkei 225,JPY,3231.0,3299.0,3262.0,2026-10-16,20.8814,18.574
 Nikkei 225,Fast Retailing Co.,TYO:9983,9983.T,Japón,Bolsa de Tokio,JPY,Nikkei 225,JPY,74900.0,75580.0,76400.0,2026-10-16,478.3934,425.531
 Nikkei 225,Softbank Group Corp.,TYO:9984,9984.T,Japón,Bolsa de Tokio,JPY,Nikkei 225,JPY,4960.0,4944.0,4852.0,2026-10-16,31.2937,27.8357
-Hang Seng Composite,CKH HOLDINGS,HKG:0001,0001.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.55,65.9,65.0,2026-10-16,8.3975,7.4696
-Hang Seng Composite,CLP HOLDINGS,HKG:0002,0002.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,77.3,77.15,77.4,2026-10-16,9.831,8.7447
+Hang Seng Composite,CKH HOLDINGS,HKG:0001,0001.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.55,65.9,65.0,2026-10-16,8.3972,7.4693
+Hang Seng Composite,CLP HOLDINGS,HKG:0002,0002.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,77.3,77.15,77.4,2026-10-16,9.8307,8.7444
 Hang Seng Composite,HK & CHINA GAS,HKG:0003,0003.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.24,7.215,7.2,2026-10-16,0.9194,0.8178
-Hang Seng Composite,WHARF HOLDINGS,HKG:0004,0004.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.23,19.6,19.23,2026-10-16,2.4976,2.2216
-Hang Seng Composite,HSBC HOLDINGS,HKG:0005,0005.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,148.9,149.7,147.9,2026-10-16,19.0759,16.968
-Hang Seng Composite,POWER ASSETS,HKG:0006,0006.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,60.6,60.55,60.6,2026-10-16,7.7157,6.8631
+Hang Seng Composite,WHARF HOLDINGS,HKG:0004,0004.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.23,19.6,19.23,2026-10-16,2.4975,2.2215
+Hang Seng Composite,HSBC HOLDINGS,HKG:0005,0005.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,148.9,149.7,147.9,2026-10-16,19.0752,16.9674
+Hang Seng Composite,POWER ASSETS,HKG:0006,0006.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,60.6,60.55,60.6,2026-10-16,7.7154,6.8629
 Hang Seng Composite,PCCW,HKG:0008,0008.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.175,5.2,5.165,2026-10-16,0.6626,0.5894
-Hang Seng Composite,HANG LUNG,HKG:0010,0010.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.92,12.18,11.89,2026-10-16,1.5521,1.3806
-Hang Seng Composite,HENDERSON LAND,HKG:0012,0012.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.1,27.2,26.74,2026-10-16,3.466,3.083
-Hang Seng Composite,HUTCHMED,HKG:0013,0013.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.7,22.28,21.44,2026-10-16,2.8391,2.5254
-Hang Seng Composite,HYSAN DEV,HKG:0014,0014.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.85,15.92,15.71,2026-10-16,2.0286,1.8045
-Hang Seng Composite,SHK PPT,HKG:0016,0016.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,107.7,107.2,106.3,2026-10-16,13.6602,12.1508
-Hang Seng Composite,NEW WORLD DEV,HKG:0017,0017.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.99,5.025,4.99,2026-10-16,0.6403,0.5696
-Hang Seng Composite,SWIRE PACIFIC A,HKG:0019,0019.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,102.2,105.4,102.2,2026-10-16,13.4309,11.9467
+Hang Seng Composite,HANG LUNG,HKG:0010,0010.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.92,12.18,11.89,2026-10-16,1.552,1.3805
+Hang Seng Composite,HENDERSON LAND,HKG:0012,0012.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.1,27.2,26.74,2026-10-16,3.4659,3.0829
+Hang Seng Composite,HUTCHMED,HKG:0013,0013.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.7,22.28,21.44,2026-10-16,2.839,2.5253
+Hang Seng Composite,HYSAN DEV,HKG:0014,0014.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.85,15.92,15.71,2026-10-16,2.0286,1.8044
+Hang Seng Composite,SHK PPT,HKG:0016,0016.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,107.7,107.2,106.3,2026-10-16,13.6597,12.1503
+Hang Seng Composite,NEW WORLD DEV,HKG:0017,0017.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.99,5.025,4.99,2026-10-16,0.6403,0.5695
+Hang Seng Composite,SWIRE PACIFIC A,HKG:0019,0019.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,102.2,105.4,102.2,2026-10-16,13.4303,11.9463
 Hang Seng Composite,SENSETIME,HKG:0020,0020.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.155,1.155,1.14,2026-10-16,0.1472,0.1309
-Hang Seng Composite,BANK OF E ASIA,HKG:0023,0023.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.64,18.42,18.43,2026-10-16,2.3472,2.0878
-Hang Seng Composite,GALAXY ENT,HKG:0027,0027.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.3,33.54,33.28,2026-10-16,4.2739,3.8017
-Hang Seng Composite,GREAT EAGLE H,HKG:0041,0041.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.82,13.8,13.8,2026-10-16,1.7585,1.5642
-Hang Seng Composite,MTR,HKG:0066,0066.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.2,32.38,31.86,2026-10-16,4.1261,3.6702
-Hang Seng Composite,MANYCORE TECH,HKG:0068,0068.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.8,4.77,4.72,2026-10-16,0.6078,0.5407
+Hang Seng Composite,BANK OF E ASIA,HKG:0023,0023.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.64,18.42,18.43,2026-10-16,2.3471,2.0878
+Hang Seng Composite,GALAXY ENT,HKG:0027,0027.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.3,33.54,33.28,2026-10-16,4.2738,3.8015
+Hang Seng Composite,GREAT EAGLE H,HKG:0041,0041.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.82,13.8,13.8,2026-10-16,1.7584,1.5641
+Hang Seng Composite,MTR,HKG:0066,0066.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.2,32.38,31.86,2026-10-16,4.1259,3.67
+Hang Seng Composite,MANYCORE TECH,HKG:0068,0068.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.8,4.77,4.72,2026-10-16,0.6078,0.5406
 Hang Seng Composite,CH OVS G OCEANS,HKG:0081,0081.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.13,3.075,3.08,2026-10-16,0.3918,0.3485
-Hang Seng Composite,SINO LAND,HKG:0083,0083.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.54,10.5,10.43,2026-10-16,1.338,1.1901
-Hang Seng Composite,SWIRE PACIFIC B,HKG:0087,0087.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.9,15.6,15.08,2026-10-16,1.9879,1.7682
-Hang Seng Composite,MINIMAX,HKG:0100,0100.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,186.7,182.1,179.5,2026-10-16,23.2045,20.6404
+Hang Seng Composite,SINO LAND,HKG:0083,0083.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.54,10.5,10.43,2026-10-16,1.3379,1.1901
+Hang Seng Composite,SWIRE PACIFIC B,HKG:0087,0087.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.9,15.6,15.08,2026-10-16,1.9878,1.7681
+Hang Seng Composite,MINIMAX,HKG:0100,0100.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,186.7,182.1,179.5,2026-10-16,23.2037,20.6397
 Hang Seng Composite,HANG LUNG PPT,HKG:0101,0101.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.44,6.4,6.36,2026-10-16,0.8155,0.7254
 Hang Seng Composite,POLY PROPERTY,HKG:0119,0119.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.195,1.215,1.195,2026-10-16,0.1548,0.1377
 Hang Seng Composite,YUEXIU PROPERTY,HKG:0123,0123.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.175,3.23,3.165,2026-10-16,0.4116,0.3661
-Hang Seng Composite,KUNLUN ENERGY,HKG:0135,0135.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.625,7.56,7.59,2026-10-16,0.9634,0.8569
-Hang Seng Composite,CHINA RUYI,HKG:0136,0136.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.51,1.495,1.51,2026-10-16,0.1905,0.1695
-Hang Seng Composite,FIRST PACIFIC,HKG:0142,0142.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.89,4.86,4.875,2026-10-16,0.6193,0.5509
-Hang Seng Composite,HARBIN ELECTRIC,HKG:1133,1133.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.24,12.36,12.05,2026-10-16,1.575,1.401
-Hang Seng Composite,COSCO SHIP ENGY,HKG:1138,1138.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.6,18.01,18.34,2026-10-16,2.295,2.0414
-Hang Seng Composite,ZOOMLION,HKG:1157,1157.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.345,5.3,5.285,2026-10-16,0.6754,0.6007
+Hang Seng Composite,KUNLUN ENERGY,HKG:0135,0135.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.625,7.56,7.59,2026-10-16,0.9633,0.8569
+Hang Seng Composite,CHINA RUYI,HKG:0136,0136.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.51,1.495,1.51,2026-10-16,0.1905,0.1694
+Hang Seng Composite,FIRST PACIFIC,HKG:0142,0142.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.89,4.86,4.875,2026-10-16,0.6193,0.5508
+Hang Seng Composite,HARBIN ELECTRIC,HKG:1133,1133.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.24,12.36,12.05,2026-10-16,1.5749,1.4009
+Hang Seng Composite,COSCO SHIP ENGY,HKG:1138,1138.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.6,18.01,18.34,2026-10-16,2.2949,2.0413
+Hang Seng Composite,ZOOMLION,HKG:1157,1157.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.345,5.3,5.285,2026-10-16,0.6753,0.6007
 Hang Seng Composite,CGN MINING,HKG:1164,1164.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.98,2.02,1.93,2026-10-16,0.2574,0.229
-Hang Seng Composite,YANKUANG,HKG:1171,1171.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.33,11.19,11.25,2026-10-16,1.4259,1.2684
-Hang Seng Composite,SBP GROUP,HKG:1177,1177.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.4,5.25,5.27,2026-10-16,0.669,0.5951
-Hang Seng Composite,HWORLD,HKG:1179,1179.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,36.68,36.36,34.88,2026-10-16,4.6333,4.1213
+Hang Seng Composite,YANKUANG,HKG:1171,1171.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.33,11.19,11.25,2026-10-16,1.4259,1.2683
+Hang Seng Composite,SBP GROUP,HKG:1177,1177.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.4,5.25,5.27,2026-10-16,0.669,0.595
+Hang Seng Composite,HWORLD,HKG:1179,1179.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,36.68,36.36,34.88,2026-10-16,4.6331,4.1211
 Hang Seng Composite,CHINA RAIL CONS,HKG:1186,1186.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.375,4.36,4.34,2026-10-16,0.5556,0.4942
-Hang Seng Composite,CREALIGHTS,HKG:1191,1191.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,94.9,85.05,89.8,2026-10-16,10.8377,9.6401
-Hang Seng Composite,CHINA RES GAS,HKG:1193,1193.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.57,16.69,16.51,2026-10-16,2.1268,1.8918
+Hang Seng Composite,CREALIGHTS,HKG:1191,1191.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,94.9,85.05,89.8,2026-10-16,10.8373,9.6398
+Hang Seng Composite,CHINA RES GAS,HKG:1193,1193.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.57,16.69,16.51,2026-10-16,2.1267,1.8917
 Hang Seng Composite,REALORD TECH,HKG:1196,1196.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.265,3.2,3.265,2026-10-16,0.4078,0.3627
 Hang Seng Composite,COSCO SHIP PORT,HKG:1199,1199.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.335,6.4,6.32,2026-10-16,0.8155,0.7254
 Hang Seng Composite,MMG,HKG:1208,1208.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.95,7.635,7.87,2026-10-16,0.9729,0.8654
-Hang Seng Composite,CHINA RES MIXC,HKG:1209,1209.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.02,39.68,38.78,2026-10-16,5.0563,4.4976
-Hang Seng Composite,BYD COMPANY,HKG:1211,1211.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,73.5,73.75,72.95,2026-10-16,9.3978,8.3593
-Hang Seng Composite,LDROBOT,HKG:1236,1236.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.78,21.5,21.4,2026-10-16,2.7397,2.437
-Hang Seng Composite,CHINFMINING,HKG:1258,1258.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.02,14.11,13.9,2026-10-16,1.798,1.5993
-Hang Seng Composite,HENGRUI PHARMA,HKG:1276,1276.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,48.0,47.6,48.0,2026-10-16,6.0655,5.3953
-Hang Seng Composite,KINETIC DEV,HKG:1277,1277.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.835,1.825,1.8,2026-10-16,0.2326,0.2069
+Hang Seng Composite,CHINA RES MIXC,HKG:1209,1209.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.02,39.68,38.78,2026-10-16,5.0561,4.4974
+Hang Seng Composite,BYD COMPANY,HKG:1211,1211.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,73.5,73.75,72.95,2026-10-16,9.3974,8.359
+Hang Seng Composite,LDROBOT,HKG:1236,1236.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.78,21.5,21.4,2026-10-16,2.7396,2.4369
+Hang Seng Composite,CHINFMINING,HKG:1258,1258.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.02,14.11,13.9,2026-10-16,1.7979,1.5993
+Hang Seng Composite,HENGRUI PHARMA,HKG:1276,1276.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,48.0,47.6,48.0,2026-10-16,6.0653,5.3951
+Hang Seng Composite,KINETIC DEV,HKG:1277,1277.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.835,1.825,1.8,2026-10-16,0.2325,0.2068
 Hang Seng Composite,IMPRO PRECISION,HKG:1286,1286.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.915,6.105,5.855,2026-10-16,0.7779,0.692
-Hang Seng Composite,ABC,HKG:1288,1288.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.815,6.74,6.8,2026-10-16,0.8589,0.764
-Hang Seng Composite,AIA,HKG:1299,1299.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,72.75,73.3,72.45,2026-10-16,9.3404,8.3083
+Hang Seng Composite,ABC,HKG:1288,1288.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.815,6.74,6.8,2026-10-16,0.8588,0.7639
+Hang Seng Composite,AIA,HKG:1299,1299.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,72.75,73.3,72.45,2026-10-16,9.3401,8.308
 Hang Seng Composite,LIFETECH SCI,HKG:1302,1302.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.4,1.415,1.4,2026-10-16,0.1803,0.1604
-Hang Seng Composite,SITC,HKG:1308,1308.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,48.78,49.52,48.5,2026-10-16,6.3102,5.6129
+Hang Seng Composite,SITC,HKG:1308,1308.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,48.78,49.52,48.5,2026-10-16,6.31,5.6127
 Hang Seng Composite,HKBN,HKG:1310,1310.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.96,5.82,6.015,2026-10-16,0.7416,0.6597
 Hang Seng Composite,CR BLDG MAT TEC,HKG:1313,1313.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.025,1.0,1.025,2026-10-16,0.1274,0.1133
-Hang Seng Composite,NEXTEER,HKG:1316,1316.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.395,4.425,4.345,2026-10-16,0.5639,0.5016
-Hang Seng Composite,MAO GEPING,HKG:1318,1318.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,44.66,43.82,44.36,2026-10-16,5.5839,4.9669
-Hang Seng Composite,BRETON,HKG:1333,1333.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.27,14.7,14.07,2026-10-16,1.8732,1.6662
-Hang Seng Composite,NCI,HKG:1336,1336.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.7,42.1,42.26,2026-10-16,5.3647,4.7719
+Hang Seng Composite,NEXTEER,HKG:1316,1316.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.395,4.425,4.345,2026-10-16,0.5638,0.5015
+Hang Seng Composite,MAO GEPING,HKG:1318,1318.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,44.66,43.82,44.36,2026-10-16,5.5837,4.9667
+Hang Seng Composite,BRETON,HKG:1333,1333.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.27,14.7,14.07,2026-10-16,1.8731,1.6661
+Hang Seng Composite,NCI,HKG:1336,1336.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.7,42.1,42.26,2026-10-16,5.3645,4.7717
 Hang Seng Composite,PICC GROUP,HKG:1339,1339.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.175,5.06,5.16,2026-10-16,0.6448,0.5735
-Hang Seng Composite,HUA HONG GRACE,HKG:1347,1347.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,78.5,74.95,76.55,2026-10-16,9.5507,8.4953
+Hang Seng Composite,HUA HONG GRACE,HKG:1347,1347.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,78.5,74.95,76.55,2026-10-16,9.5503,8.495
 Hang Seng Composite,MEITU,HKG:1357,1357.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.61,3.58,3.525,2026-10-16,0.4562,0.4058
 Hang Seng Composite,CHINA CINDA,HKG:1359,1359.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.89,0.89,0.89,2026-10-16,0.1134,0.1009
 Hang Seng Composite,361 DEGREES,HKG:1361,1361.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.63,4.9,4.625,2026-10-16,0.6244,0.5554
-Hang Seng Composite,GUMING,HKG:1364,1364.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.8,21.4,21.54,2026-10-16,2.7269,2.4256
+Hang Seng Composite,GUMING,HKG:1364,1364.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.8,21.4,21.54,2026-10-16,2.7268,2.4255
 Hang Seng Composite,XTEP INT'L,HKG:1368,1368.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.6,3.645,3.575,2026-10-16,0.4645,0.4131
-Hang Seng Composite,CHINAHONGQIAO,HKG:1378,1378.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.5,19.64,19.51,2026-10-16,2.5027,2.2261
-Hang Seng Composite,DEEPEXI TECH,HKG:1384,1384.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.8,15.12,15.37,2026-10-16,1.9267,1.7138
-Hang Seng Composite,SHANGHAI FUDAN,HKG:1385,1385.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.8,24.84,21.96,2026-10-16,3.1653,2.8155
-Hang Seng Composite,HQVT,HKG:1392,1392.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.68,17.18,18.2,2026-10-16,2.1892,1.9473
-Hang Seng Composite,ICBC,HKG:1398,1398.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.74,7.59,7.695,2026-10-16,0.9672,0.8603
-Hang Seng Composite,DPC DASH,HKG:1405,1405.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.18,31.84,31.16,2026-10-16,4.0573,3.609
-Hang Seng Composite,COWELL,HKG:1415,1415.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.72,21.5,20.7,2026-10-16,2.7397,2.437
+Hang Seng Composite,CHINAHONGQIAO,HKG:1378,1378.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.5,19.64,19.51,2026-10-16,2.5026,2.226
+Hang Seng Composite,DEEPEXI TECH,HKG:1384,1384.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.8,15.12,15.37,2026-10-16,1.9266,1.7137
+Hang Seng Composite,SHANGHAI FUDAN,HKG:1385,1385.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.8,24.84,21.96,2026-10-16,3.1652,2.8154
+Hang Seng Composite,HQVT,HKG:1392,1392.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.68,17.18,18.2,2026-10-16,2.1891,1.9472
+Hang Seng Composite,ICBC,HKG:1398,1398.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.74,7.59,7.695,2026-10-16,0.9671,0.8603
+Hang Seng Composite,DPC DASH,HKG:1405,1405.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.18,31.84,31.16,2026-10-16,4.0571,3.6088
+Hang Seng Composite,COWELL,HKG:1415,1415.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.72,21.5,20.7,2026-10-16,2.7396,2.4369
 Hang Seng Composite,BRIGHT SMART,HKG:1428,1428.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.105,6.13,6.095,2026-10-16,0.7811,0.6948
-Hang Seng Composite,STAR SHINE HLDG,HKG:1440,1440.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.29,16.1,17.18,2026-10-16,2.0516,1.8249
-Hang Seng Composite,Q TECH,HKG:1478,1478.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.705,4.695,4.7,2026-10-16,0.5983,0.5322
-Hang Seng Composite,UISEE TECH,HKG:1511,1511.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.6,33.72,33.6,2026-10-16,4.2969,3.8221
-Hang Seng Composite,LIVZON PHARMA,HKG:1513,1513.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.38,21.26,21.38,2026-10-16,2.7091,2.4098
-Hang Seng Composite,J&T EXPRESS,HKG:1519,1519.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.01,9.3,8.99,2026-10-16,1.1851,1.0541
-Hang Seng Composite,3SBIO,HKG:1530,1530.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.68,14.47,14.36,2026-10-16,1.8439,1.6401
-Hang Seng Composite,GENSCRIPT BIO,HKG:1548,1548.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.3,33.3,31.6,2026-10-16,4.2433,3.7744
-Hang Seng Composite,YIHAI INTL,HKG:1579,1579.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.88,15.4,14.87,2026-10-16,1.9624,1.7455
-Hang Seng Composite,YADEA,HKG:1585,1585.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.265,9.49,9.265,2026-10-16,1.2093,1.0757
-Hang Seng Composite,STAR SPORTS MED,HKG:1609,1609.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,70.5,67.0,69.0,2026-10-16,8.5376,7.5942
+Hang Seng Composite,STAR SHINE HLDG,HKG:1440,1440.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.29,16.1,17.18,2026-10-16,2.0515,1.8248
+Hang Seng Composite,Q TECH,HKG:1478,1478.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.705,4.695,4.7,2026-10-16,0.5982,0.5321
+Hang Seng Composite,UISEE TECH,HKG:1511,1511.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.6,33.72,33.6,2026-10-16,4.2967,3.8219
+Hang Seng Composite,LIVZON PHARMA,HKG:1513,1513.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.38,21.26,21.38,2026-10-16,2.709,2.4097
+Hang Seng Composite,J&T EXPRESS,HKG:1519,1519.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.01,9.3,8.99,2026-10-16,1.185,1.0541
+Hang Seng Composite,3SBIO,HKG:1530,1530.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.68,14.47,14.36,2026-10-16,1.8438,1.6401
+Hang Seng Composite,GENSCRIPT BIO,HKG:1548,1548.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.3,33.3,31.6,2026-10-16,4.2432,3.7743
+Hang Seng Composite,YIHAI INTL,HKG:1579,1579.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.88,15.4,14.87,2026-10-16,1.9623,1.7455
+Hang Seng Composite,YADEA,HKG:1585,1585.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.265,9.49,9.265,2026-10-16,1.2092,1.0756
+Hang Seng Composite,STAR SPORTS MED,HKG:1609,1609.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,70.5,67.0,69.0,2026-10-16,8.5373,7.5939
 Hang Seng Composite,COFCO JOYCOME,HKG:1610,1610.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.065,1.075,1.06,2026-10-16,0.137,0.1218
-Hang Seng Composite,TSUGAMI CHINA,HKG:1651,1651.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.8,40.56,38.6,2026-10-16,5.1685,4.5973
-Hang Seng Composite,PSBC,HKG:1658,1658.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.585,5.515,5.54,2026-10-16,0.7028,0.6251
-Hang Seng Composite,ASCLETIS,HKG:1672,1672.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.75,5.85,5.785,2026-10-16,0.7455,0.6631
+Hang Seng Composite,TSUGAMI CHINA,HKG:1651,1651.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.8,40.56,38.6,2026-10-16,5.1683,4.5972
+Hang Seng Composite,PSBC,HKG:1658,1658.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.585,5.515,5.54,2026-10-16,0.7027,0.6251
+Hang Seng Composite,ASCLETIS,HKG:1672,1672.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.75,5.85,5.785,2026-10-16,0.7454,0.6631
 Hang Seng Composite,ASIAINFO TECH,HKG:1675,1675.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.685,3.605,3.605,2026-10-16,0.4594,0.4086
-Hang Seng Composite,CONSUN PHARMA,HKG:1681,1681.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.39,15.68,15.39,2026-10-16,1.9981,1.7773
+Hang Seng Composite,CONSUN PHARMA,HKG:1681,1681.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.39,15.68,15.39,2026-10-16,1.998,1.7772
 Hang Seng Composite,SUNEVISION,HKG:1686,1686.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.085,5.06,5.025,2026-10-16,0.6448,0.5735
-Hang Seng Composite,TME ‑ SW,HKG:1698,1698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.88,34.04,32.8,2026-10-16,4.3376,3.8583
-Hang Seng Composite,TIME INTERCON,HKG:1729,1729.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.76,12.92,12.59,2026-10-16,1.6464,1.4644
-Hang Seng Composite,CENTRAL NEW EGY,HKG:1735,1735.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.18,9.16,10.17,2026-10-16,1.1672,1.0383
-Hang Seng Composite,CRRC,HKG:1766,1766.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.31,5.42,5.385,2026-10-16,0.6907,0.6143
-Hang Seng Composite,BUSYMING,HKG:1768,1768.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,360.0,349.6,350.0,2026-10-16,44.5487,39.626
-Hang Seng Composite,GANFENGLITHIUM,HKG:1772,1772.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.04,23.96,25.6,2026-10-16,3.0532,2.7158
-Hang Seng Composite,GF SEC,HKG:1776,1776.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.99,16.77,16.77,2026-10-16,2.137,1.9008
-Hang Seng Composite,LONGBIO ‑ B,HKG:1779,1779.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,73.25,74.4,72.4,2026-10-16,9.4806,8.433
+Hang Seng Composite,TME ‑ SW,HKG:1698,1698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,33.88,34.04,32.8,2026-10-16,4.3375,3.8582
+Hang Seng Composite,TIME INTERCON,HKG:1729,1729.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.76,12.92,12.59,2026-10-16,1.6463,1.4644
+Hang Seng Composite,CENTRAL NEW EGY,HKG:1735,1735.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.18,9.16,10.17,2026-10-16,1.1672,1.0382
+Hang Seng Composite,CRRC,HKG:1766,1766.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.31,5.42,5.385,2026-10-16,0.6906,0.6143
+Hang Seng Composite,BUSYMING,HKG:1768,1768.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,360.0,349.6,350.0,2026-10-16,44.5469,39.6245
+Hang Seng Composite,GANFENGLITHIUM,HKG:1772,1772.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.04,23.96,25.6,2026-10-16,3.053,2.7157
+Hang Seng Composite,GF SEC,HKG:1776,1776.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.99,16.77,16.77,2026-10-16,2.1369,1.9008
+Hang Seng Composite,LONGBIO ‑ B,HKG:1779,1779.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,73.25,74.4,72.4,2026-10-16,9.4802,8.4327
 Hang Seng Composite,ENVISION GREEN,HKG:1783,1783.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.835,5.09,4.82,2026-10-16,0.6486,0.5769
-Hang Seng Composite,SD GOLD,HKG:1787,1787.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.27,18.77,18.01,2026-10-16,2.3918,2.1275
+Hang Seng Composite,SD GOLD,HKG:1787,1787.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.27,18.77,18.01,2026-10-16,2.3917,2.1274
 Hang Seng Composite,GUOTAI JUNAN I,HKG:1788,1788.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.875,2.88,2.87,2026-10-16,0.367,0.3264
-Hang Seng Composite,AK MEDICAL,HKG:1789,1789.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.54,4.515,4.495,2026-10-16,0.5753,0.5118
-Hang Seng Composite,EAST BUY,HKG:1797,1797.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.0,28.7,27.64,2026-10-16,3.6572,3.2531
+Hang Seng Composite,AK MEDICAL,HKG:1789,1789.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.54,4.515,4.495,2026-10-16,0.5753,0.5117
+Hang Seng Composite,EAST BUY,HKG:1797,1797.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.0,28.7,27.64,2026-10-16,3.657,3.2529
 Hang Seng Composite,CHINA COMM,HKG:1800,1800.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.33,3.35,3.33,2026-10-16,0.4269,0.3797
-Hang Seng Composite,INNOVENT BIO,HKG:1801,1801.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,91.25,89.05,87.75,2026-10-16,11.3474,10.0935
-Hang Seng Composite,XIAOMI,HKG:1810,1810.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.02,26.66,27.08,2026-10-16,3.3972,3.0218
+Hang Seng Composite,INNOVENT BIO,HKG:1801,1801.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,91.25,89.05,87.75,2026-10-16,11.347,10.0931
+Hang Seng Composite,XIAOMI,HKG:1810,1810.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.02,26.66,27.08,2026-10-16,3.3971,3.0217
 Hang Seng Composite,CGN NEW ENERGY,HKG:1811,1811.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.11,2.105,2.09,2026-10-16,0.2682,0.2386
-Hang Seng Composite,CGN POWER,HKG:1816,1816.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.3,3.32,3.285,2026-10-16,0.4231,0.3763
-Hang Seng Composite,ZHAOJIN MINING,HKG:1818,1818.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.5,18.19,17.41,2026-10-16,2.3179,2.0618
-Hang Seng Composite,FWD,HKG:1828,1828.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.02,31.2,30.86,2026-10-16,3.9757,3.5364
+Hang Seng Composite,CGN POWER,HKG:1816,1816.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.3,3.32,3.285,2026-10-16,0.423,0.3763
+Hang Seng Composite,ZHAOJIN MINING,HKG:1818,1818.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.5,18.19,17.41,2026-10-16,2.3178,2.0617
+Hang Seng Composite,FWD,HKG:1828,1828.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.02,31.2,30.86,2026-10-16,3.9756,3.5363
 Hang Seng Composite,PA GOODDOCTOR,HKG:1833,1833.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.83,5.735,5.815,2026-10-16,0.7308,0.65
-Hang Seng Composite,STELLA HOLDINGS,HKG:1836,1836.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.51,13.11,12.49,2026-10-16,1.6706,1.486
-Hang Seng Composite,MOBVISTA,HKG:1860,1860.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.08,10.9,10.83,2026-10-16,1.389,1.2355
-Hang Seng Composite,CHINA XLX FERT,HKG:1866,1866.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.825,9.825,9.945,2026-10-16,1.252,1.1136
-Hang Seng Composite,BUD APAC,HKG:1876,1876.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.005,6.08,6.005,2026-10-16,0.7748,0.6891
-Hang Seng Composite,XIZHI TECH,HKG:1879,1879.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,225.4,218.0,215.0,2026-10-16,27.7792,24.7096
-Hang Seng Composite,CTG DUTY‑FREE,HKG:1880,1880.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.86,43.14,42.46,2026-10-16,5.4972,4.8898
-Hang Seng Composite,HAITIAN INT'L,HKG:1882,1882.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.88,17.75,17.48,2026-10-16,2.2618,2.0119
+Hang Seng Composite,STELLA HOLDINGS,HKG:1836,1836.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.51,13.11,12.49,2026-10-16,1.6705,1.4859
+Hang Seng Composite,MOBVISTA,HKG:1860,1860.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.08,10.9,10.83,2026-10-16,1.3889,1.2354
+Hang Seng Composite,CHINA XLX FERT,HKG:1866,1866.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.825,9.825,9.945,2026-10-16,1.2519,1.1136
+Hang Seng Composite,BUD APAC,HKG:1876,1876.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.005,6.08,6.005,2026-10-16,0.7747,0.6891
+Hang Seng Composite,XIZHI TECH,HKG:1879,1879.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,225.4,218.0,215.0,2026-10-16,27.7781,24.7086
+Hang Seng Composite,CTG DUTY‑FREE,HKG:1880,1880.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.86,43.14,42.46,2026-10-16,5.497,4.8896
+Hang Seng Composite,HAITIAN INT'L,HKG:1882,1882.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.88,17.75,17.48,2026-10-16,2.2618,2.0118
 Hang Seng Composite,CITIC TELECOM,HKG:1883,1883.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.395,2.36,2.38,2026-10-16,0.3007,0.2675
-Hang Seng Composite,KB LAMINATES,HKG:1888,1888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.7,39.48,38.28,2026-10-16,5.0308,4.4749
+Hang Seng Composite,KB LAMINATES,HKG:1888,1888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.7,39.48,38.28,2026-10-16,5.0306,4.4748
 Hang Seng Composite,MAOYAN ENT,HKG:1896,1896.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.645,3.66,3.645,2026-10-16,0.4664,0.4148
 Hang Seng Composite,CHINA COAL,HKG:1898,1898.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.39,10.37,10.35,2026-10-16,1.3214,1.1754
 Hang Seng Composite,CHINA RISUN GP,HKG:1907,1907.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.615,1.605,1.585,2026-10-16,0.2045,0.1819
-Hang Seng Composite,C&D INTL GROUP,HKG:1908,1908.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.89,13.29,12.89,2026-10-16,1.6935,1.5064
-Hang Seng Composite,SAMSONITE,HKG:1910,1910.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.83,13.14,12.83,2026-10-16,1.6744,1.4894
-Hang Seng Composite,PRADA,HKG:1913,1913.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.46,39.22,38.22,2026-10-16,4.9977,4.4455
+Hang Seng Composite,C&D INTL GROUP,HKG:1908,1908.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.89,13.29,12.89,2026-10-16,1.6934,1.5063
+Hang Seng Composite,SAMSONITE,HKG:1910,1910.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.83,13.14,12.83,2026-10-16,1.6743,1.4893
+Hang Seng Composite,PRADA,HKG:1913,1913.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.46,39.22,38.22,2026-10-16,4.9975,4.4453
 Hang Seng Composite,SUNAC,HKG:1918,1918.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.565,0.565,0.555,2026-10-16,0.072,0.064
-Hang Seng Composite,COSCO SHIP HOLD,HKG:1919,1919.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.58,17.19,17.34,2026-10-16,2.1905,1.9484
-Hang Seng Composite,DALIPAL HLDG,HKG:1921,1921.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.22,3.05,3.13,2026-10-16,0.3887,0.3457
-Hang Seng Composite,SANDS CHINA LTD,HKG:1928,1928.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.45,11.49,11.3,2026-10-16,1.4641,1.3024
+Hang Seng Composite,COSCO SHIP HOLD,HKG:1919,1919.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.58,17.19,17.34,2026-10-16,2.1904,1.9484
+Hang Seng Composite,DALIPAL HLDG,HKG:1921,1921.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.22,3.05,3.13,2026-10-16,0.3886,0.3457
+Hang Seng Composite,SANDS CHINA LTD,HKG:1928,1928.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.45,11.49,11.3,2026-10-16,1.4641,1.3023
 Hang Seng Composite,CHOW TAI FOOK,HKG:1929,1929.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.19,11.18,11.04,2026-10-16,1.4246,1.2672
 Hang Seng Composite,JXR,HKG:1951,1951.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.27,2.195,2.22,2026-10-16,0.2797,0.2488
-Hang Seng Composite,EVEREST MED,HKG:1952,1952.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.8,32.36,30.62,2026-10-16,4.1236,3.6679
-Hang Seng Composite,WENGE AI,HKG:1956,1956.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,59.3,64.75,59.3,2026-10-16,8.2509,7.3392
-Hang Seng Composite,BCQ,HKG:1963,1963.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.295,8.17,8.31,2026-10-16,1.0411,0.926
-Hang Seng Composite,SWIREPROPERTIES,HKG:1972,1972.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.42,24.44,24.42,2026-10-16,3.1143,2.7702
+Hang Seng Composite,EVEREST MED,HKG:1952,1952.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.8,32.36,30.62,2026-10-16,4.1234,3.6678
+Hang Seng Composite,WENGE AI,HKG:1956,1956.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,59.3,64.75,59.3,2026-10-16,8.2506,7.3389
+Hang Seng Composite,BCQ,HKG:1963,1963.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.295,8.17,8.31,2026-10-16,1.041,0.926
+Hang Seng Composite,SWIREPROPERTIES,HKG:1972,1972.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.42,24.44,24.42,2026-10-16,3.1142,2.7701
 Hang Seng Composite,MINSHENG BANK,HKG:1988,1988.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.345,3.315,3.335,2026-10-16,0.4224,0.3757
-Hang Seng Composite,WHARF REIC,HKG:1997,1997.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,30.6,30.46,30.48,2026-10-16,3.8814,3.4525
+Hang Seng Composite,WHARF REIC,HKG:1997,1997.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,30.6,30.46,30.48,2026-10-16,3.8813,3.4524
 Hang Seng Composite,MAN WAH HLDGS,HKG:1999,1999.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.205,2.275,2.185,2026-10-16,0.2899,0.2579
 Hang Seng Composite,SSY GROUP,HKG:2005,2005.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.725,2.75,2.715,2026-10-16,0.3504,0.3117
 Hang Seng Composite,COUNTRY GARDEN,HKG:2007,2007.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.168,0.172,0.167,2026-10-16,0.0219,0.0195
 Hang Seng Composite,WEIMOB INC,HKG:2013,2013.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.705,0.715,0.705,2026-10-16,0.0911,0.081
-Hang Seng Composite,LI AUTO,HKG:2015,2015.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,44.88,44.76,44.44,2026-10-16,5.7037,5.0734
+Hang Seng Composite,LI AUTO,HKG:2015,2015.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,44.88,44.76,44.44,2026-10-16,5.7034,5.0732
 Hang Seng Composite,CZBANK,HKG:2016,2016.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.46,2.41,2.45,2026-10-16,0.3071,0.2732
-Hang Seng Composite,AAC TECH,HKG:2018,2018.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,35.78,35.7,35.48,2026-10-16,4.5492,4.0465
-Hang Seng Composite,ANTA SPORTS,HKG:2020,2020.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.8,77.95,75.45,2026-10-16,9.933,8.8354
-Hang Seng Composite,PONY,HKG:2026,2026.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.96,39.92,39.3,2026-10-16,5.0869,4.5248
-Hang Seng Composite,FIH,HKG:2038,2038.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.6,12.4,12.27,2026-10-16,1.5801,1.4055
+Hang Seng Composite,AAC TECH,HKG:2018,2018.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,35.78,35.7,35.48,2026-10-16,4.549,4.0463
+Hang Seng Composite,ANTA SPORTS,HKG:2020,2020.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.8,77.95,75.45,2026-10-16,9.9326,8.835
+Hang Seng Composite,PONY,HKG:2026,2026.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.96,39.92,39.3,2026-10-16,5.0867,4.5246
+Hang Seng Composite,FIH,HKG:2038,2038.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.6,12.4,12.27,2026-10-16,1.58,1.4054
 Hang Seng Composite,CIMC,HKG:2039,2039.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.72,6.79,6.615,2026-10-16,0.8652,0.7696
-Hang Seng Composite,SANHUA,HKG:2050,2050.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.1,21.58,20.86,2026-10-16,2.7499,2.446
-Hang Seng Composite,ZTO EXPRESS,HKG:2057,2057.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,157.4,158.3,157.3,2026-10-16,20.1718,17.9428
-Hang Seng Composite,BOSS ZHIPIN,HKG:2076,2076.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,63.8,63.25,62.5,2026-10-16,8.0598,7.1692
-Hang Seng Composite,SIMCERE PHARMA,HKG:2096,2096.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.85,11.02,10.83,2026-10-16,1.4043,1.2491
-Hang Seng Composite,MIXUE GROUP,HKG:2097,2097.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,168.2,167.5,166.2,2026-10-16,21.3441,18.9856
-Hang Seng Composite,CHINAGOLDINTL,HKG:2099,2099.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,208.0,214.0,207.2,2026-10-16,27.2695,24.2562
+Hang Seng Composite,SANHUA,HKG:2050,2050.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.1,21.58,20.86,2026-10-16,2.7498,2.4459
+Hang Seng Composite,ZTO EXPRESS,HKG:2057,2057.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,157.4,158.3,157.3,2026-10-16,20.171,17.9421
+Hang Seng Composite,BOSS ZHIPIN,HKG:2076,2076.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,63.8,63.25,62.5,2026-10-16,8.0595,7.1689
+Hang Seng Composite,SIMCERE PHARMA,HKG:2096,2096.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.85,11.02,10.83,2026-10-16,1.4042,1.249
+Hang Seng Composite,MIXUE GROUP,HKG:2097,2097.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,168.2,167.5,166.2,2026-10-16,21.3433,18.9849
+Hang Seng Composite,CHINAGOLDINTL,HKG:2099,2099.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,208.0,214.0,207.2,2026-10-16,27.2684,24.2553
 Hang Seng Composite,CHINA LESSO,HKG:2128,2128.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.035,3.07,3.03,2026-10-16,0.3912,0.348
 Hang Seng Composite,HBM HOLDINGS,HKG:2142,2142.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.12,10.37,9.93,2026-10-16,1.3214,1.1754
-Hang Seng Composite,CHICMAX,HKG:2145,2145.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.8,22.0,21.78,2026-10-16,2.8034,2.4936
+Hang Seng Composite,CHICMAX,HKG:2145,2145.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.8,22.0,21.78,2026-10-16,2.8033,2.4935
 Hang Seng Composite,MORIMATSU INTL,HKG:2155,2155.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.0,6.13,6.03,2026-10-16,0.7811,0.6948
 Hang Seng Composite,LEPU BIO,HKG:2157,2157.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.45,3.52,3.335,2026-10-16,0.4485,0.399
-Hang Seng Composite,KEYMED BIO ‑ B,HKG:2162,2162.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,78.0,81.95,76.15,2026-10-16,10.4427,9.2888
-Hang Seng Composite,CARSGEN ‑ B,HKG:2171,2171.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.3,11.66,11.11,2026-10-16,1.4858,1.3216
+Hang Seng Composite,KEYMED BIO ‑ B,HKG:2162,2162.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,78.0,81.95,76.15,2026-10-16,10.4423,9.2884
+Hang Seng Composite,CARSGEN ‑ B,HKG:2171,2171.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.3,11.66,11.11,2026-10-16,1.4857,1.3216
 Hang Seng Composite,MICROPORT,HKG:2172,2172.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.055,8.055,8.055,2026-10-16,1.0264,0.913
-Hang Seng Composite,LUYE PHARMA,HKG:2186,2186.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.72,1.705,1.72,2026-10-16,0.2173,0.1933
-Hang Seng Composite,MEDLIVE,HKG:2192,2192.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.48,6.515,6.45,2026-10-16,0.8302,0.7385
-Hang Seng Composite,FOSUN PHARMA,HKG:2196,2196.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.32,17.11,17.15,2026-10-16,2.1803,1.9394
+Hang Seng Composite,LUYE PHARMA,HKG:2186,2186.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.72,1.705,1.72,2026-10-16,0.2173,0.1932
+Hang Seng Composite,MEDLIVE,HKG:2192,2192.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.48,6.515,6.45,2026-10-16,0.8302,0.7384
+Hang Seng Composite,FOSUN PHARMA,HKG:2196,2196.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.32,17.11,17.15,2026-10-16,2.1802,1.9393
 Hang Seng Composite,CHINA VANKE,HKG:2202,2202.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.405,2.43,2.38,2026-10-16,0.3096,0.2754
 Hang Seng Composite,JINHAI MED TECH,HKG:2225,2225.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.8,3.85,3.8,2026-10-16,0.4906,0.4364
-Hang Seng Composite,XTALPI,HKG:2228,2228.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.1,5.92,5.89,2026-10-16,0.7544,0.671
+Hang Seng Composite,XTALPI,HKG:2228,2228.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.1,5.92,5.89,2026-10-16,0.7543,0.671
 Hang Seng Composite,CRYSTAL INTL,HKG:2232,2232.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.39,7.5,7.33,2026-10-16,0.9557,0.8501
 Hang Seng Composite,WESTCHINACEME,HKG:2233,2233.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.695,1.73,1.675,2026-10-16,0.2204,0.1961
 Hang Seng Composite,GAC GROUP,HKG:2238,2238.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.155,2.16,2.14,2026-10-16,0.2752,0.2448
-Hang Seng Composite,MEDBOT ‑ B,HKG:2252,2252.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.18,21.18,21.18,2026-10-16,2.6989,2.4007
-Hang Seng Composite,ZIJIN GOLD INTL,HKG:2259,2259.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,147.0,148.4,143.5,2026-10-16,18.9102,16.8207
-Hang Seng Composite,WUXI XDC,HKG:2268,2268.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.4,74.45,74.55,2026-10-16,9.487,8.4387
-Hang Seng Composite,WUXI BIO,HKG:2269,2269.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.98,48.2,48.64,2026-10-16,6.142,5.4633
-Hang Seng Composite,KEYTOP PARKING,HKG:2272,2272.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.25,51.6,52.25,2026-10-16,6.5753,5.8487
-Hang Seng Composite,GUSHENGTANG,HKG:2273,2273.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.98,26.48,26.5,2026-10-16,3.3743,3.0014
-Hang Seng Composite,CONANT OPTICAL,HKG:2276,2276.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.08,35.16,34.08,2026-10-16,4.4804,3.9853
-Hang Seng Composite,MGM CHINA,HKG:2282,2282.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.625,9.85,9.625,2026-10-16,1.2552,1.1165
-Hang Seng Composite,CHERVON,HKG:2285,2285.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.0,32.66,31.0,2026-10-16,4.1618,3.7019
-Hang Seng Composite,SHENZHOU INTL,HKG:2313,2313.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.06,37.34,37.42,2026-10-16,4.7581,4.2324
-Hang Seng Composite,LEE & MAN PAPER,HKG:2314,2314.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.315,3.32,3.3,2026-10-16,0.4231,0.3763
-Hang Seng Composite,PING AN,HKG:2318,2318.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.85,50.05,50.4,2026-10-16,6.3777,5.673
-Hang Seng Composite,MENGNIU DAIRY,HKG:2319,2319.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.9,18.8,18.9,2026-10-16,2.3956,2.1309
+Hang Seng Composite,MEDBOT ‑ B,HKG:2252,2252.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.18,21.18,21.18,2026-10-16,2.6988,2.4006
+Hang Seng Composite,ZIJIN GOLD INTL,HKG:2259,2259.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,147.0,148.4,143.5,2026-10-16,18.9095,16.82
+Hang Seng Composite,WUXI XDC,HKG:2268,2268.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.4,74.45,74.55,2026-10-16,9.4866,8.4383
+Hang Seng Composite,WUXI BIO,HKG:2269,2269.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.98,48.2,48.64,2026-10-16,6.1418,5.4631
+Hang Seng Composite,KEYTOP PARKING,HKG:2272,2272.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.25,51.6,52.25,2026-10-16,6.575,5.8485
+Hang Seng Composite,GUSHENGTANG,HKG:2273,2273.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.98,26.48,26.5,2026-10-16,3.3742,3.0013
+Hang Seng Composite,CONANT OPTICAL,HKG:2276,2276.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.08,35.16,34.08,2026-10-16,4.4802,3.9851
+Hang Seng Composite,MGM CHINA,HKG:2282,2282.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.625,9.85,9.625,2026-10-16,1.2551,1.1164
+Hang Seng Composite,CHERVON,HKG:2285,2285.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.0,32.66,31.0,2026-10-16,4.1616,3.7018
+Hang Seng Composite,SHENZHOU INTL,HKG:2313,2313.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.06,37.34,37.42,2026-10-16,4.758,4.2322
+Hang Seng Composite,LEE & MAN PAPER,HKG:2314,2314.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.315,3.32,3.3,2026-10-16,0.423,0.3763
+Hang Seng Composite,PING AN,HKG:2318,2318.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.85,50.05,50.4,2026-10-16,6.3775,5.6728
+Hang Seng Composite,MENGNIU DAIRY,HKG:2319,2319.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.9,18.8,18.9,2026-10-16,2.3955,2.1308
 Hang Seng Composite,PICC P&C,HKG:2328,2328.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.93,15.22,15.75,2026-10-16,1.9394,1.7251
 Hang Seng Composite,LI NING,HKG:2331,2331.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.14,13.28,12.78,2026-10-16,1.6922,1.5052
 Hang Seng Composite,GWMOTOR,HKG:2333,2333.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.025,7.045,6.975,2026-10-16,0.8977,0.7985
-Hang Seng Composite,MICOT PHARMA,HKG:2335,2335.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.63,24.0,14.63,2026-10-16,3.0583,2.7203
-Hang Seng Composite,WEICHAI POWER,HKG:2338,2338.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.08,25.42,24.62,2026-10-16,3.2392,2.8813
+Hang Seng Composite,MICOT PHARMA,HKG:2335,2335.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.63,24.0,14.63,2026-10-16,3.0581,2.7202
+Hang Seng Composite,WEICHAI POWER,HKG:2338,2338.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.08,25.42,24.62,2026-10-16,3.2391,2.8812
 Hang Seng Composite,PACIFIC BASIN,HKG:2343,2343.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.71,3.76,3.62,2026-10-16,0.4791,0.4262
-Hang Seng Composite,DAHSING BANKING,HKG:2356,2356.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.09,13.8,13.92,2026-10-16,1.7585,1.5642
+Hang Seng Composite,DAHSING BANKING,HKG:2356,2356.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.09,13.8,13.92,2026-10-16,1.7584,1.5641
 Hang Seng Composite,AVICHINA,HKG:2357,2357.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.05,3.165,3.035,2026-10-16,0.4033,0.3587
-Hang Seng Composite,WUXI APPTEC,HKG:2359,2359.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,203.8,196.2,200.6,2026-10-16,25.0013,22.2386
-Hang Seng Composite,GIANT BIOGENE,HKG:2367,2367.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.22,22.6,23.22,2026-10-16,2.8799,2.5616
-Hang Seng Composite,PRU,HKG:2378,2378.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,93.5,93.65,93.5,2026-10-16,11.9336,10.6149
+Hang Seng Composite,WUXI APPTEC,HKG:2359,2359.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,203.8,196.2,200.6,2026-10-16,25.0003,22.2378
+Hang Seng Composite,GIANT BIOGENE,HKG:2367,2367.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.22,22.6,23.22,2026-10-16,2.8798,2.5615
+Hang Seng Composite,PRU,HKG:2378,2378.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,93.5,93.65,93.5,2026-10-16,11.9331,10.6145
 Hang Seng Composite,CHINA POWER,HKG:2380,2380.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.76,2.735,2.76,2026-10-16,0.3485,0.31
-Hang Seng Composite,SUNNY OPTICAL,HKG:2382,2382.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,57.7,57.7,57.15,2026-10-16,7.3526,6.5401
+Hang Seng Composite,SUNNY OPTICAL,HKG:2382,2382.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,57.7,57.7,57.15,2026-10-16,7.3523,6.5399
 Hang Seng Composite,SINOPEC SEG,HKG:2386,2386.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.55,5.495,5.52,2026-10-16,0.7002,0.6228
-Hang Seng Composite,BOC HONG KONG,HKG:2388,2388.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.8,50.15,50.45,2026-10-16,6.3905,5.6843
-Hang Seng Composite,XD INC,HKG:2400,2400.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,40.68,40.52,40.44,2026-10-16,5.1634,4.5928
-Hang Seng Composite,DEKON AGR,HKG:2419,2419.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,54.3,54.2,52.5,2026-10-16,6.9066,6.1434
-Hang Seng Composite,BEKE,HKG:2423,2423.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.56,47.46,45.4,2026-10-16,6.0477,5.3794
-Hang Seng Composite,DOBOT,HKG:2432,2432.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.92,16.86,16.46,2026-10-16,2.1484,1.911
-Hang Seng Composite,CR BEVERAGE,HKG:2460,2460.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.14,7.22,7.14,2026-10-16,0.92,0.8184
+Hang Seng Composite,BOC HONG KONG,HKG:2388,2388.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.8,50.15,50.45,2026-10-16,6.3902,5.6841
+Hang Seng Composite,XD INC,HKG:2400,2400.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,40.68,40.52,40.44,2026-10-16,5.1632,4.5926
+Hang Seng Composite,DEKON AGR,HKG:2419,2419.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,54.3,54.2,52.5,2026-10-16,6.9063,6.1432
+Hang Seng Composite,BEKE,HKG:2423,2423.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.56,47.46,45.4,2026-10-16,6.0475,5.3792
+Hang Seng Composite,DOBOT,HKG:2432,2432.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.92,16.86,16.46,2026-10-16,2.1483,1.911
+Hang Seng Composite,CR BEVERAGE,HKG:2460,2460.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.14,7.22,7.14,2026-10-16,0.92,0.8183
 Hang Seng Composite,XXF,HKG:2473,2473.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.33,0.32,0.33,2026-10-16,0.0408,0.0363
-Hang Seng Composite,VGT,HKG:2476,2476.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,162.8,151.1,158.0,2026-10-16,19.2543,17.1267
+Hang Seng Composite,VGT,HKG:2476,2476.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,162.8,151.1,158.0,2026-10-16,19.2536,17.126
 Hang Seng Composite,WELLCELL HOLD,HKG:2477,2477.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.182,0.18,0.178,2026-10-16,0.0229,0.0204
-Hang Seng Composite,ROBOSENSE,HKG:2498,2498.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.84,14.78,14.6,2026-10-16,1.8834,1.6753
-Hang Seng Composite,XUNFEIHEALTH,HKG:2506,2506.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,66.0,65.35,64.75,2026-10-16,8.3274,7.4072
-Hang Seng Composite,CIRRUS,HKG:2507,2507.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.9,39.78,38.78,2026-10-16,5.0691,4.5089
-Hang Seng Composite,TS LINES,HKG:2510,2510.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.59,13.81,13.58,2026-10-16,1.7598,1.5653
-Hang Seng Composite,Z.AI,HKG:2513,2513.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,529.0,518.0,513.5,2026-10-16,66.0074,58.7136
+Hang Seng Composite,ROBOSENSE,HKG:2498,2498.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.84,14.78,14.6,2026-10-16,1.8833,1.6752
+Hang Seng Composite,XUNFEIHEALTH,HKG:2506,2506.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,66.0,65.35,64.75,2026-10-16,8.3271,7.4069
+Hang Seng Composite,CIRRUS,HKG:2507,2507.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.9,39.78,38.78,2026-10-16,5.0689,4.5088
+Hang Seng Composite,TS LINES,HKG:2510,2510.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.59,13.81,13.58,2026-10-16,1.7597,1.5653
+Hang Seng Composite,Z.AI,HKG:2513,2513.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,529.0,518.0,513.5,2026-10-16,66.0049,58.7114
 Hang Seng Composite,GUOQUAN,HKG:2517,2517.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.36,1.365,1.35,2026-10-16,0.1739,0.1547
-Hang Seng Composite,HESAI,HKG:2525,2525.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.47,15.47,15.47,2026-10-16,1.9713,1.7535
-Hang Seng Composite,DIAGENS,HKG:2526,2526.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,220.0,232.0,218.8,2026-10-16,29.5632,26.2964
+Hang Seng Composite,HESAI,HKG:2525,2525.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.47,15.47,15.47,2026-10-16,1.9712,1.7534
+Hang Seng Composite,DIAGENS,HKG:2526,2526.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,220.0,232.0,218.8,2026-10-16,29.562,26.2954
 Hang Seng Composite,BLACK SESAME,HKG:2533,2533.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.195,8.16,7.88,2026-10-16,1.0398,0.9249
-Hang Seng Composite,SHOUGANG LANZA,HKG:2553,2553.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.18,13.77,13.45,2026-10-16,1.7547,1.5608
-Hang Seng Composite,CHABAIDAO,HKG:2555,2555.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.035,4.035,4.035,2026-10-16,0.5142,0.4574
-Hang Seng Composite,MARKETINGFORCE,HKG:2556,2556.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.24,47.72,43.44,2026-10-16,6.0808,5.4089
-Hang Seng Composite,PEGBIO CO,HKG:2565,2565.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.025,4.02,3.985,2026-10-16,0.5123,0.4557
+Hang Seng Composite,SHOUGANG LANZA,HKG:2553,2553.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.18,13.77,13.45,2026-10-16,1.7546,1.5607
+Hang Seng Composite,CHABAIDAO,HKG:2555,2555.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.035,4.035,4.035,2026-10-16,0.5142,0.4573
+Hang Seng Composite,MARKETINGFORCE,HKG:2556,2556.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.24,47.72,43.44,2026-10-16,6.0806,5.4087
+Hang Seng Composite,PEGBIO CO,HKG:2565,2565.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.025,4.02,3.985,2026-10-16,0.5122,0.4556
 Hang Seng Composite,XUANZHUBIO,HKG:2575,2575.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.0,8.28,8.415,2026-10-16,1.0551,0.9385
-Hang Seng Composite,INNOSCIENCE,HKG:2577,2577.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.88,32.58,31.7,2026-10-16,4.1516,3.6928
-Hang Seng Composite,AUX ELECTRIC,HKG:2580,2580.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.965,8.0,7.965,2026-10-16,1.0194,0.9068
-Hang Seng Composite,HIPINE,HKG:2583,2583.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.92,45.0,44.42,2026-10-16,5.7342,5.1006
-Hang Seng Composite,DMALL,HKG:2586,2586.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.55,8.545,8.55,2026-10-16,1.0889,0.9685
-Hang Seng Composite,BOC AVIATION,HKG:2588,2588.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,67.9,68.1,67.25,2026-10-16,8.6778,7.7189
-Hang Seng Composite,AUNTEA JENNY,HKG:2589,2589.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,63.9,59.0,62.0,2026-10-16,7.5182,6.6875
-Hang Seng Composite,GEEKPLUS,HKG:2590,2590.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.3,6.08,6.0,2026-10-16,0.7748,0.6891
+Hang Seng Composite,INNOSCIENCE,HKG:2577,2577.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.88,32.58,31.7,2026-10-16,4.1514,3.6927
+Hang Seng Composite,AUX ELECTRIC,HKG:2580,2580.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.965,8.0,7.965,2026-10-16,1.0194,0.9067
+Hang Seng Composite,HIPINE,HKG:2583,2583.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.92,45.0,44.42,2026-10-16,5.734,5.1004
+Hang Seng Composite,DMALL,HKG:2586,2586.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.55,8.545,8.55,2026-10-16,1.0888,0.9685
+Hang Seng Composite,BOC AVIATION,HKG:2588,2588.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,67.9,68.1,67.25,2026-10-16,8.6775,7.7186
+Hang Seng Composite,AUNTEA JENNY,HKG:2589,2589.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,63.9,59.0,62.0,2026-10-16,7.5179,6.6872
+Hang Seng Composite,GEEKPLUS,HKG:2590,2590.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.3,6.08,6.0,2026-10-16,0.7747,0.6891
 Hang Seng Composite,INNOGEN ‑ B,HKG:2591,2591.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.75,3.645,3.645,2026-10-16,0.4645,0.4131
-Hang Seng Composite,GENFLEET ‑ B,HKG:2595,2595.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.12,27.86,27.18,2026-10-16,3.5501,3.1578
+Hang Seng Composite,GENFLEET ‑ B,HKG:2595,2595.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.12,27.86,27.18,2026-10-16,3.55,3.1577
 Hang Seng Composite,CHALCO,HKG:2600,2600.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.3,7.27,7.18,2026-10-16,0.9264,0.824
-Hang Seng Composite,CPIC,HKG:2601,2601.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.98,26.46,26.7,2026-10-16,3.3717,2.9992
-Hang Seng Composite,ONEWO,HKG:2602,2602.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.11,19.44,19.0,2026-10-16,2.4772,2.2035
-Hang Seng Composite,SH PHARMA,HKG:2607,2607.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.29,11.17,11.25,2026-10-16,1.4234,1.2661
-Hang Seng Composite,BAYZED HEALTH,HKG:2609,2609.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.74,2.66,2.675,2026-10-16,0.339,0.3015
-Hang Seng Composite,NANSHAN AL INTL,HKG:2610,2610.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.58,22.68,22.52,2026-10-16,2.8901,2.5707
-Hang Seng Composite,GTHT,HKG:2611,2611.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.62,14.38,14.53,2026-10-16,1.8324,1.6299
+Hang Seng Composite,CPIC,HKG:2601,2601.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.98,26.46,26.7,2026-10-16,3.3716,2.999
+Hang Seng Composite,ONEWO,HKG:2602,2602.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.11,19.44,19.0,2026-10-16,2.4771,2.2034
+Hang Seng Composite,SH PHARMA,HKG:2607,2607.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.29,11.17,11.25,2026-10-16,1.4233,1.266
+Hang Seng Composite,BAYZED HEALTH,HKG:2609,2609.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.74,2.66,2.675,2026-10-16,0.3389,0.3015
+Hang Seng Composite,NANSHAN AL INTL,HKG:2610,2610.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.58,22.68,22.52,2026-10-16,2.8899,2.5706
+Hang Seng Composite,GTHT,HKG:2611,2611.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.62,14.38,14.53,2026-10-16,1.8323,1.6299
 Hang Seng Composite,CSTONE PHARMA,HKG:2616,2616.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.695,4.97,4.695,2026-10-16,0.6333,0.5633
-Hang Seng Composite,TRANSTHERA,HKG:2617,2617.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.33,9.275,9.135,2026-10-16,1.1819,1.0513
-Hang Seng Composite,JD LOGISTICS,HKG:2618,2618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.23,10.27,10.15,2026-10-16,1.3087,1.1641
-Hang Seng Composite,CHINA LIFE,HKG:2628,2628.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.68,23.62,24.32,2026-10-16,3.0098,2.6773
-Hang Seng Composite,NEW VISION CO,HKG:2632,2632.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,58.25,58.15,57.0,2026-10-16,7.4099,6.5911
-Hang Seng Composite,NUOBIKAN,HKG:2635,2635.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.465,8.315,8.7,2026-10-16,1.0596,0.9425
-Hang Seng Composite,HAIXI PHARMA,HKG:2637,2637.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,167.2,161.8,163.2,2026-10-16,20.6178,18.3395
+Hang Seng Composite,TRANSTHERA,HKG:2617,2617.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.33,9.275,9.135,2026-10-16,1.1818,1.0513
+Hang Seng Composite,JD LOGISTICS,HKG:2618,2618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.23,10.27,10.15,2026-10-16,1.3086,1.164
+Hang Seng Composite,CHINA LIFE,HKG:2628,2628.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.68,23.62,24.32,2026-10-16,3.0097,2.6771
+Hang Seng Composite,NEW VISION CO,HKG:2632,2632.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,58.25,58.15,57.0,2026-10-16,7.4096,6.5909
+Hang Seng Composite,NUOBIKAN,HKG:2635,2635.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.465,8.315,8.7,2026-10-16,1.0595,0.9424
+Hang Seng Composite,HAIXI PHARMA,HKG:2637,2637.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,167.2,161.8,163.2,2026-10-16,20.617,18.3388
 Hang Seng Composite,HKELECTRIC ‑ SS,HKG:2638,2638.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.225,6.195,6.175,2026-10-16,0.7894,0.7022
-Hang Seng Composite,CAOCAO INC,HKG:2643,2643.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.36,11.0,11.11,2026-10-16,1.4017,1.2468
-Hang Seng Composite,ZHIDA TECH,HKG:2650,2650.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.28,6.08,6.18,2026-10-16,0.7748,0.6891
+Hang Seng Composite,CAOCAO INC,HKG:2643,2643.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.36,11.0,11.11,2026-10-16,1.4016,1.2468
+Hang Seng Composite,ZHIDA TECH,HKG:2650,2650.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.28,6.08,6.18,2026-10-16,0.7747,0.6891
 Hang Seng Composite,CF PHARMTECH,HKG:2652,2652.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.15,5.98,5.91,2026-10-16,0.762,0.6778
-Hang Seng Composite,GUOXIA TECH,HKG:2655,2655.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.28,12.01,12.2,2026-10-16,1.5304,1.3613
+Hang Seng Composite,GUOXIA TECH,HKG:2655,2655.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.28,12.01,12.2,2026-10-16,1.5303,1.3612
 Hang Seng Composite,160 HEALTH,HKG:2656,2656.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.545,2.49,2.485,2026-10-16,0.3173,0.2822
 Hang Seng Composite,BAO PHARMA ‑ B,HKG:2659,2659.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.69,9.6,9.695,2026-10-16,1.2233,1.0881
 Hang Seng Composite,QINGSONG,HKG:2661,2661.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.295,3.26,3.21,2026-10-16,0.4154,0.3695
 Hang Seng Composite,SEYOND,HKG:2665,2665.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.31,1.275,1.3,2026-10-16,0.1625,0.1445
 Hang Seng Composite,UNI MEDICAL,HKG:2666,2666.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.6,4.595,4.595,2026-10-16,0.5855,0.5208
 Hang Seng Composite,CHINA OVS PPT,HKG:2669,2669.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.355,3.345,3.325,2026-10-16,0.4262,0.3791
-Hang Seng Composite,BAIGE DIGITAL,HKG:2672,2672.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.05,66.0,67.0,2026-10-16,8.4102,7.4809
-Hang Seng Composite,EDGE MEDICAL,HKG:2675,2675.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.46,30.4,31.2,2026-10-16,3.8738,3.4457
+Hang Seng Composite,BAIGE DIGITAL,HKG:2672,2672.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.05,66.0,67.0,2026-10-16,8.4099,7.4806
+Hang Seng Composite,EDGE MEDICAL,HKG:2675,2675.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.46,30.4,31.2,2026-10-16,3.8736,3.4456
 Hang Seng Composite,QUANTGROUP,HKG:2685,2685.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.4,3.405,3.34,2026-10-16,0.4339,0.3859
-Hang Seng Composite,ABLE DIGITAL,HKG:2687,2687.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,174.4,147.5,174.6,2026-10-16,18.7956,16.7186
-Hang Seng Composite,ENN ENERGY,HKG:2688,2688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.1,50.15,49.54,2026-10-16,6.3905,5.6843
-Hang Seng Composite,ND PAPER,HKG:2689,2689.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.015,5.045,5.005,2026-10-16,0.6429,0.5718
-Hang Seng Composite,HENLIUS,HKG:2696,2696.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.0,51.35,50.15,2026-10-16,6.5434,5.8204
-Hang Seng Composite,TH MEDICAL ‑ B,HKG:2697,2697.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,62.75,62.1,62.0,2026-10-16,7.9132,7.0388
-Hang Seng Composite,SOFTCARE,HKG:2698,2698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.06,26.14,25.06,2026-10-16,3.331,2.9629
-Hang Seng Composite,HAIZHI TECH GP,HKG:2706,2706.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.26,28.52,27.26,2026-10-16,3.6342,3.2326
-Hang Seng Composite,MUYUAN,HKG:2714,2714.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.32,35.52,34.46,2026-10-16,4.5262,4.0261
-Hang Seng Composite,MININGLAMP,HKG:2718,2718.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.74,29.88,28.52,2026-10-16,3.8075,3.3868
-Hang Seng Composite,DEEPZERO,HKG:2723,2723.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,55.0,52.6,52.3,2026-10-16,6.7027,5.962
-Hang Seng Composite,EPIWORLD,HKG:2726,2726.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,81.6,80.2,80.0,2026-10-16,10.2197,9.0904
+Hang Seng Composite,ABLE DIGITAL,HKG:2687,2687.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,174.4,147.5,174.6,2026-10-16,18.7948,16.718
+Hang Seng Composite,ENN ENERGY,HKG:2688,2688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.1,50.15,49.54,2026-10-16,6.3902,5.6841
+Hang Seng Composite,ND PAPER,HKG:2689,2689.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.015,5.045,5.005,2026-10-16,0.6428,0.5718
+Hang Seng Composite,HENLIUS,HKG:2696,2696.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.0,51.35,50.15,2026-10-16,6.5432,5.8201
+Hang Seng Composite,TH MEDICAL ‑ B,HKG:2697,2697.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,62.75,62.1,62.0,2026-10-16,7.9129,7.0386
+Hang Seng Composite,SOFTCARE,HKG:2698,2698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.06,26.14,25.06,2026-10-16,3.3308,2.9628
+Hang Seng Composite,HAIZHI TECH GP,HKG:2706,2706.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.26,28.52,27.26,2026-10-16,3.6341,3.2325
+Hang Seng Composite,MUYUAN,HKG:2714,2714.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.32,35.52,34.46,2026-10-16,4.5261,4.0259
+Hang Seng Composite,MININGLAMP,HKG:2718,2718.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.74,29.88,28.52,2026-10-16,3.8074,3.3867
+Hang Seng Composite,DEEPZERO,HKG:2723,2723.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,55.0,52.6,52.3,2026-10-16,6.7024,5.9618
+Hang Seng Composite,EPIWORLD,HKG:2726,2726.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,81.6,80.2,80.0,2026-10-16,10.2193,9.0901
 Hang Seng Composite,SH ELECTRIC,HKG:2727,2727.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.63,2.67,2.63,2026-10-16,0.3402,0.3026
-Hang Seng Composite,GALAXIS TECH,HKG:2729,2729.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.18,20.66,20.66,2026-10-16,2.6327,2.3417
+Hang Seng Composite,GALAXIS TECH,HKG:2729,2729.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,21.18,20.66,20.66,2026-10-16,2.6326,2.3417
 Hang Seng Composite,CHAMPION REIT,HKG:2778,2778.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.155,2.145,2.14,2026-10-16,0.2733,0.2431
-Hang Seng Composite,CHUANGXIN IND,HKG:2788,2788.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.51,13.8,13.27,2026-10-16,1.7585,1.5642
+Hang Seng Composite,CHUANGXIN IND,HKG:2788,2788.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.51,13.8,13.27,2026-10-16,1.7584,1.5641
 Hang Seng Composite,CITIC FAMC,HKG:2799,2799.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.585,0.585,0.585,2026-10-16,0.0745,0.0663
 Hang Seng Composite,YIXIN,HKG:2858,2858.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.82,0.81,0.805,2026-10-16,0.1032,0.0918
 Hang Seng Composite,GREENTOWN SER,HKG:2869,2869.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.18,4.165,4.095,2026-10-16,0.5307,0.4721
-Hang Seng Composite,SHINEWAY PHARM,HKG:2877,2877.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.435,7.44,7.47,2026-10-16,0.9481,0.8433
+Hang Seng Composite,SHINEWAY PHARM,HKG:2877,2877.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.435,7.44,7.47,2026-10-16,0.948,0.8433
 Hang Seng Composite,CHINA OILFIELD,HKG:2883,2883.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.6,7.53,7.55,2026-10-16,0.9595,0.8535
-Hang Seng Composite,STANCHART,HKG:2888,2888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,222.0,223.6,221.0,2026-10-16,28.4928,25.3443
-Hang Seng Composite,PATEO,HKG:2889,2889.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,59.8,56.25,58.9,2026-10-16,7.1678,6.3758
-Hang Seng Composite,ZIJIN MINING,HKG:2899,2899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.72,31.96,31.26,2026-10-16,4.0726,3.6226
+Hang Seng Composite,STANCHART,HKG:2888,2888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,222.0,223.6,221.0,2026-10-16,28.4917,25.3434
+Hang Seng Composite,PATEO,HKG:2889,2889.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,59.8,56.25,58.9,2026-10-16,7.1675,6.3755
+Hang Seng Composite,ZIJIN MINING,HKG:2899,2899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.72,31.96,31.26,2026-10-16,4.0724,3.6224
 Hang Seng Composite,YUNJI,HKG:2670,2670.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.0,4.945,6.605,2026-10-16,0.6301,0.5605
-Hang Seng Composite,GPIXEL,HKG:3277,3277.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,57.5,55.85,55.2,2026-10-16,7.1168,6.3304
-Hang Seng Composite,HAITIAN FLAV,HKG:3288,3288.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.58,26.22,26.24,2026-10-16,3.3411,2.972
-Hang Seng Composite,JNBY,HKG:3306,3306.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.0,23.14,23.0,2026-10-16,2.9487,2.6228
-Hang Seng Composite,VIEWTRIX TECH,HKG:3310,3310.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.8,16.67,18.62,2026-10-16,2.1242,1.8895
-Hang Seng Composite,CHINA STATE CON,HKG:3311,3311.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.61,8.725,8.61,2026-10-16,1.1118,0.989
-Hang Seng Composite,XUNCE,HKG:3317,3317.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,68.7,69.85,68.1,2026-10-16,8.9008,7.9173
-Hang Seng Composite,CHINARES,HKG:3320,3320.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.71,4.605,4.71,2026-10-16,0.5868,0.522
+Hang Seng Composite,GPIXEL,HKG:3277,3277.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,57.5,55.85,55.2,2026-10-16,7.1166,6.3302
+Hang Seng Composite,HAITIAN FLAV,HKG:3288,3288.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,26.58,26.22,26.24,2026-10-16,3.341,2.9718
+Hang Seng Composite,JNBY,HKG:3306,3306.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.0,23.14,23.0,2026-10-16,2.9486,2.6227
+Hang Seng Composite,VIEWTRIX TECH,HKG:3310,3310.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.8,16.67,18.62,2026-10-16,2.1241,1.8894
+Hang Seng Composite,CHINA STATE CON,HKG:3311,3311.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.61,8.725,8.61,2026-10-16,1.1118,0.9889
+Hang Seng Composite,XUNCE,HKG:3317,3317.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,68.7,69.85,68.1,2026-10-16,8.9005,7.917
+Hang Seng Composite,CHINARES,HKG:3320,3320.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.71,4.605,4.71,2026-10-16,0.5868,0.5219
 Hang Seng Composite,CNBM,HKG:3323,3323.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.96,3.02,2.955,2026-10-16,0.3848,0.3423
-Hang Seng Composite,BANKCOMM,HKG:3328,3328.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.62,8.48,8.62,2026-10-16,1.0806,0.9612
+Hang Seng Composite,BANKCOMM,HKG:3328,3328.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.62,8.48,8.62,2026-10-16,1.0805,0.9611
 Hang Seng Composite,LINGBAO GOLD,HKG:3330,3330.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,17.02,18.33,16.91,2026-10-16,2.3357,2.0776
 Hang Seng Composite,LONKING,HKG:3339,3339.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.93,2.94,2.885,2026-10-16,0.3746,0.3332
-Hang Seng Composite,FS.COM,HKG:3355,3355.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.2,34.88,33.2,2026-10-16,4.4447,3.9535
+Hang Seng Composite,FS.COM,HKG:3355,3355.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.2,34.88,33.2,2026-10-16,4.4445,3.9534
 Hang Seng Composite,FE HORIZON,HKG:3360,3360.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.16,6.005,6.16,2026-10-16,0.7652,0.6806
 Hang Seng Composite,LOGAN GROUP,HKG:3380,3380.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.18,1.17,1.17,2026-10-16,0.1491,0.1326
-Hang Seng Composite,CREALITY,HKG:3388,3388.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.3,24.42,24.3,2026-10-16,3.1118,2.7679
-Hang Seng Composite,WASION,HKG:3393,3393.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.0,12.28,12.0,2026-10-16,1.5648,1.3919
-Hang Seng Composite,LEGENDHOLDING,HKG:3396,3396.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.0,18.21,17.64,2026-10-16,2.3205,2.064
-Hang Seng Composite,FUYAO GLASS,HKG:3606,3606.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,55.75,55.6,55.5,2026-10-16,7.085,6.3021
+Hang Seng Composite,CREALITY,HKG:3388,3388.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.3,24.42,24.3,2026-10-16,3.1117,2.7678
+Hang Seng Composite,WASION,HKG:3393,3393.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.0,12.28,12.0,2026-10-16,1.5647,1.3918
+Hang Seng Composite,LEGENDHOLDING,HKG:3396,3396.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.0,18.21,17.64,2026-10-16,2.3204,2.064
+Hang Seng Composite,FUYAO GLASS,HKG:3606,3606.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,55.75,55.6,55.5,2026-10-16,7.0847,6.3018
 Hang Seng Composite,TONGRENTANGCM,HKG:3613,3613.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.8,5.75,5.77,2026-10-16,0.7327,0.6517
-Hang Seng Composite,CQRC BANK,HKG:3618,3618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.62,6.485,6.545,2026-10-16,0.8264,0.7351
-Hang Seng Composite,FOURSEMI,HKG:3625,3625.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.66,49.3,49.24,2026-10-16,6.2822,5.588
+Hang Seng Composite,CQRC BANK,HKG:3618,3618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.62,6.485,6.545,2026-10-16,0.8263,0.735
+Hang Seng Composite,FOURSEMI,HKG:3625,3625.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.66,49.3,49.24,2026-10-16,6.2819,5.5878
 Hang Seng Composite,ZHONGYU ENERGY,HKG:3633,3633.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.7,2.67,2.675,2026-10-16,0.3402,0.3026
-Hang Seng Composite,QFIN,HKG:3660,3660.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.2,24.4,23.18,2026-10-16,3.1092,2.7657
-Hang Seng Composite,YANCOAL AUS,HKG:3668,3668.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.2,31.86,32.02,2026-10-16,4.0598,3.6112
-Hang Seng Composite,ZENERGY,HKG:3677,3677.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.98,3.855,3.955,2026-10-16,0.4912,0.437
-Hang Seng Composite,MEITUAN,HKG:3690,3690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.1,75.7,75.45,2026-10-16,9.6463,8.5803
-Hang Seng Composite,HANSOH PHARMA,HKG:3692,3692.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.72,31.74,31.38,2026-10-16,4.0445,3.5976
-Hang Seng Composite,INSILICO,HKG:3696,3696.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.16,39.1,37.64,2026-10-16,4.9824,4.4319
-Hang Seng Composite,HUISHANG BANK,HKG:3698,3698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.75,4.695,4.72,2026-10-16,0.5983,0.5322
+Hang Seng Composite,QFIN,HKG:3660,3660.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.2,24.4,23.18,2026-10-16,3.1091,2.7656
+Hang Seng Composite,YANCOAL AUS,HKG:3668,3668.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.2,31.86,32.02,2026-10-16,4.0597,3.6111
+Hang Seng Composite,ZENERGY,HKG:3677,3677.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.98,3.855,3.955,2026-10-16,0.4912,0.4369
+Hang Seng Composite,MEITUAN,HKG:3690,3690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,76.1,75.7,75.45,2026-10-16,9.6459,8.58
+Hang Seng Composite,HANSOH PHARMA,HKG:3692,3692.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,31.72,31.74,31.38,2026-10-16,4.0444,3.5975
+Hang Seng Composite,INSILICO,HKG:3696,3696.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,39.16,39.1,37.64,2026-10-16,4.9822,4.4317
+Hang Seng Composite,HUISHANG BANK,HKG:3698,3698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.75,4.695,4.72,2026-10-16,0.5982,0.5321
 Hang Seng Composite,VOBILE GROUP,HKG:3738,3738.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.845,2.82,2.805,2026-10-16,0.3593,0.3196
-Hang Seng Composite,CATL,HKG:3750,3750.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,438.6,440.8,448.6,2026-10-16,56.17,49.9633
-Hang Seng Composite,FAMEGLOW,HKG:3774,3774.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,30.6,29.6,29.0,2026-10-16,3.7719,3.3551
+Hang Seng Composite,CATL,HKG:3750,3750.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,438.6,440.8,448.6,2026-10-16,56.1679,49.9613
+Hang Seng Composite,FAMEGLOW,HKG:3774,3774.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,30.6,29.6,29.0,2026-10-16,3.7717,3.3549
 Hang Seng Composite,GCL TECH,HKG:3800,3800.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.66,0.655,0.65,2026-10-16,0.0835,0.0742
-Hang Seng Composite,SINOTRUK,HKG:3808,3808.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.68,33.12,31.96,2026-10-16,4.2204,3.754
-Hang Seng Composite,JIAXIN INTL RES,HKG:3858,3858.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,36.7,36.9,36.18,2026-10-16,4.7021,4.1825
+Hang Seng Composite,SINOTRUK,HKG:3808,3808.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,32.68,33.12,31.96,2026-10-16,4.2202,3.7539
+Hang Seng Composite,JIAXIN INTL RES,HKG:3858,3858.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,36.7,36.9,36.18,2026-10-16,4.7019,4.1823
 Hang Seng Composite,XINYI ENERGY,HKG:3868,3868.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.78,0.77,0.785,2026-10-16,0.0981,0.0873
 Hang Seng Composite,CSSC SHIPPING,HKG:3877,3877.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.425,2.41,2.415,2026-10-16,0.3071,0.2732
-Hang Seng Composite,CIDI,HKG:3881,3881.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.0,17.19,17.6,2026-10-16,2.1905,1.9484
+Hang Seng Composite,CIDI,HKG:3881,3881.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.0,17.19,17.6,2026-10-16,2.1904,1.9484
 Hang Seng Composite,HASHKEY HLDGS,HKG:3887,3887.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.015,2.01,1.95,2026-10-16,0.2561,0.2278
-Hang Seng Composite,KINGSOFT,HKG:3888,3888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.86,25.54,25.6,2026-10-16,3.2545,2.8949
-Hang Seng Composite,KINGSOFT CLOUD,HKG:3896,3896.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.6,4.6,4.445,2026-10-16,0.5862,0.5214
-Hang Seng Composite,TIMES ELECTRIC,HKG:3898,3898.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.74,28.06,27.54,2026-10-16,3.5756,3.1805
-Hang Seng Composite,CIMC ENRIC,HKG:3899,3899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.635,6.81,6.63,2026-10-16,0.8678,0.7719
-Hang Seng Composite,GREENTOWN,HKG:3900,3900.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.875,6.0,5.84,2026-10-16,0.7646,0.6801
-Hang Seng Composite,CICC,HKG:3908,3908.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.6,19.34,19.56,2026-10-16,2.4644,2.1921
+Hang Seng Composite,KINGSOFT,HKG:3888,3888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.86,25.54,25.6,2026-10-16,3.2544,2.8948
+Hang Seng Composite,KINGSOFT CLOUD,HKG:3896,3896.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.6,4.6,4.445,2026-10-16,0.5861,0.5214
+Hang Seng Composite,TIMES ELECTRIC,HKG:3898,3898.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.74,28.06,27.54,2026-10-16,3.5755,3.1804
+Hang Seng Composite,CIMC ENRIC,HKG:3899,3899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.635,6.81,6.63,2026-10-16,0.8677,0.7719
+Hang Seng Composite,GREENTOWN,HKG:3900,3900.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.875,6.0,5.84,2026-10-16,0.7645,0.6801
+Hang Seng Composite,CICC,HKG:3908,3908.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.6,19.34,19.56,2026-10-16,2.4644,2.192
 Hang Seng Composite,NAGACORP,HKG:3918,3918.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.53,2.425,2.47,2026-10-16,0.309,0.2749
-Hang Seng Composite,CALB,HKG:3931,3931.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.28,15.42,15.28,2026-10-16,1.9649,1.7478
+Hang Seng Composite,CALB,HKG:3931,3931.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.28,15.42,15.28,2026-10-16,1.9649,1.7477
 Hang Seng Composite,UNITED LAB,HKG:3933,3933.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.275,7.27,7.275,2026-10-16,0.9264,0.824
-Hang Seng Composite,WANGUO GOLD GP,HKG:3939,3939.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.89,13.32,12.74,2026-10-16,1.6973,1.5098
-Hang Seng Composite,CM BANK,HKG:3968,3968.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,54.2,53.25,53.95,2026-10-16,6.7855,6.0357
+Hang Seng Composite,WANGUO GOLD GP,HKG:3939,3939.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.89,13.32,12.74,2026-10-16,1.6973,1.5097
+Hang Seng Composite,CM BANK,HKG:3968,3968.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,54.2,53.25,53.95,2026-10-16,6.7853,6.0355
 Hang Seng Composite,CHINA CRSC,HKG:3969,3969.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.03,3.035,3.01,2026-10-16,0.3867,0.344
-Hang Seng Composite,GIGADEVICE,HKG:3986,3986.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,344.6,339.2,335.0,2026-10-16,43.2234,38.4472
+Hang Seng Composite,GIGADEVICE,HKG:3986,3986.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,344.6,339.2,335.0,2026-10-16,43.2218,38.4458
 Hang Seng Composite,BANK OF CHINA,HKG:3988,3988.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.24,6.14,6.16,2026-10-16,0.7824,0.6959
-Hang Seng Composite,CMOC,HKG:3993,3993.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.43,14.61,14.19,2026-10-16,1.8617,1.656
-Hang Seng Composite,CH ENERGY ENG,HKG:3996,3996.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.025,1.03,1.015,2026-10-16,0.1313,0.1167
+Hang Seng Composite,CMOC,HKG:3993,3993.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,14.43,14.61,14.19,2026-10-16,1.8616,1.6559
+Hang Seng Composite,CH ENERGY ENG,HKG:3996,3996.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.025,1.03,1.015,2026-10-16,0.1312,0.1167
 Hang Seng Composite,BOSIDENG,HKG:3998,3998.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.42,4.405,4.39,2026-10-16,0.5613,0.4993
-Hang Seng Composite,CITIC SEC,HKG:6030,6030.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.64,23.22,23.26,2026-10-16,2.9589,2.6319
-Hang Seng Composite,SANY HEAVY IND,HKG:6031,6031.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.34,16.32,15.97,2026-10-16,2.0796,1.8498
-Hang Seng Composite,POLY PPT SER,HKG:6049,6049.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.14,27.34,27.0,2026-10-16,3.4839,3.0989
-Hang Seng Composite,CTIHK,HKG:6055,6055.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.12,25.86,23.7,2026-10-16,3.2953,2.9311
-Hang Seng Composite,ZA ONLINE,HKG:6060,6060.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.395,9.405,9.39,2026-10-16,1.1985,1.066
-Hang Seng Composite,CSC,HKG:6066,6066.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.24,11.14,11.16,2026-10-16,1.4195,1.2627
-Hang Seng Composite,SY HOLDINGS,HKG:6069,6069.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.45,6.62,6.45,2026-10-16,0.8436,0.7504
+Hang Seng Composite,CITIC SEC,HKG:6030,6030.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,23.64,23.22,23.26,2026-10-16,2.9588,2.6318
+Hang Seng Composite,SANY HEAVY IND,HKG:6031,6031.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.34,16.32,15.97,2026-10-16,2.0795,1.8497
+Hang Seng Composite,POLY PPT SER,HKG:6049,6049.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.14,27.34,27.0,2026-10-16,3.4837,3.0988
+Hang Seng Composite,CTIHK,HKG:6055,6055.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.12,25.86,23.7,2026-10-16,3.2951,2.931
+Hang Seng Composite,ZA ONLINE,HKG:6060,6060.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.395,9.405,9.39,2026-10-16,1.1984,1.066
+Hang Seng Composite,CSC,HKG:6066,6066.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.24,11.14,11.16,2026-10-16,1.4195,1.2626
+Hang Seng Composite,SY HOLDINGS,HKG:6069,6069.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.45,6.62,6.45,2026-10-16,0.8435,0.7503
 Hang Seng Composite,HYGEIA HEALTH,HKG:6078,6078.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.485,9.39,9.44,2026-10-16,1.1965,1.0643
-Hang Seng Composite,BIREN TECH,HKG:6082,6082.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.86,25.12,24.98,2026-10-16,3.201,2.8473
-Hang Seng Composite,FIT HON TENG,HKG:6088,6088.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.065,4.06,3.945,2026-10-16,0.5174,0.4602
-Hang Seng Composite,BUTONG GROUP,HKG:6090,6090.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.74,35.04,34.76,2026-10-16,4.4651,3.9717
+Hang Seng Composite,BIREN TECH,HKG:6082,6082.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,25.86,25.12,24.98,2026-10-16,3.2009,2.8472
+Hang Seng Composite,FIT HON TENG,HKG:6088,6088.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,4.065,4.06,3.945,2026-10-16,0.5173,0.4602
+Hang Seng Composite,BUTONG GROUP,HKG:6090,6090.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.74,35.04,34.76,2026-10-16,4.4649,3.9715
 Hang Seng Composite,CG SERVICES,HKG:6098,6098.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,5.05,5.14,5.025,2026-10-16,0.655,0.5826
-Hang Seng Composite,CMSC,HKG:6099,6099.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.77,13.6,13.73,2026-10-16,1.733,1.5415
-Hang Seng Composite,SEER TECH,HKG:6106,6106.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.9,48.96,48.8,2026-10-16,6.2388,5.5495
+Hang Seng Composite,CMSC,HKG:6099,6099.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.77,13.6,13.73,2026-10-16,1.7329,1.5415
+Hang Seng Composite,SEER TECH,HKG:6106,6106.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.9,48.96,48.8,2026-10-16,6.2386,5.5492
 Hang Seng Composite,TOPSPORTS,HKG:6110,6110.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.045,1.065,1.045,2026-10-16,0.1357,0.1207
-Hang Seng Composite,BEONE MEDICINES,HKG:6160,6160.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,224.8,225.0,215.6,2026-10-16,28.6712,25.503
-Hang Seng Composite,ZHOU LIU FU,HKG:6168,6168.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.36,11.16,11.0,2026-10-16,1.4221,1.2649
-Hang Seng Composite,LAOPU GOLD,HKG:6181,6181.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,311.6,318.6,311.6,2026-10-16,40.5984,36.1123
+Hang Seng Composite,BEONE MEDICINES,HKG:6160,6160.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,224.8,225.0,215.6,2026-10-16,28.6701,25.502
+Hang Seng Composite,ZHOU LIU FU,HKG:6168,6168.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.36,11.16,11.0,2026-10-16,1.422,1.2649
+Hang Seng Composite,LAOPU GOLD,HKG:6181,6181.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,311.6,318.6,311.6,2026-10-16,40.5968,36.1109
 Hang Seng Composite,CHINA FEIHE,HKG:6186,6186.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.51,2.42,2.53,2026-10-16,0.3084,0.2743
-Hang Seng Composite,ONEROBOTICS,HKG:6600,6600.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.0,41.2,40.8,2026-10-16,5.25,4.6699
-Hang Seng Composite,JD HEALTH,HKG:6618,6618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.48,38.56,37.74,2026-10-16,4.9136,4.3707
-Hang Seng Composite,EXTREME VISION,HKG:6636,6636.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,68.25,64.15,64.5,2026-10-16,8.1745,7.2712
-Hang Seng Composite,51WORLD,HKG:6651,6651.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.2,40.9,40.82,2026-10-16,5.2118,4.6359
+Hang Seng Composite,ONEROBOTICS,HKG:6600,6600.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.0,41.2,40.8,2026-10-16,5.2498,4.6697
+Hang Seng Composite,JD HEALTH,HKG:6618,6618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,38.48,38.56,37.74,2026-10-16,4.9134,4.3705
+Hang Seng Composite,EXTREME VISION,HKG:6636,6636.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,68.25,64.15,64.5,2026-10-16,8.1742,7.2709
+Hang Seng Composite,51WORLD,HKG:6651,6651.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.2,40.9,40.82,2026-10-16,5.2116,4.6357
 Hang Seng Composite,HX BLDG MAT,HKG:6655,6655.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,15.1,15.73,14.95,2026-10-16,2.0044,1.7829
-Hang Seng Composite,SIGENERGY,HKG:6656,6656.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,210.0,207.4,206.2,2026-10-16,26.4285,23.5081
-Hang Seng Composite,LIULIUMEI,HKG:6658,6658.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,148.2,164.3,148.2,2026-10-16,20.9363,18.6229
+Hang Seng Composite,SIGENERGY,HKG:6656,6656.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,210.0,207.4,206.2,2026-10-16,26.4275,23.5072
+Hang Seng Composite,LIULIUMEI,HKG:6658,6658.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,148.2,164.3,148.2,2026-10-16,20.9355,18.6222
 Hang Seng Composite,EVERG SERVICES,HKG:6666,6666.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.205,1.2,1.205,2026-10-16,0.1529,0.136
-Hang Seng Composite,SENASIC,HKG:6675,6675.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.8,15.15,16.02,2026-10-16,1.9305,1.7172
+Hang Seng Composite,SENASIC,HKG:6675,6675.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.8,15.15,16.02,2026-10-16,1.9305,1.7171
 Hang Seng Composite,BRAINAURORA,HKG:6681,6681.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.68,0.63,0.655,2026-10-16,0.0803,0.0714
-Hang Seng Composite,PHANCY,HKG:6682,6682.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.26,22.6,21.78,2026-10-16,2.8799,2.5616
+Hang Seng Composite,PHANCY,HKG:6682,6682.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,22.26,22.6,21.78,2026-10-16,2.8798,2.5615
 Hang Seng Composite,STARPLUS LEGEND,HKG:6683,6683.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.7,3.605,3.625,2026-10-16,0.4594,0.4086
-Hang Seng Composite,JST GROUP,HKG:6687,6687.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.67,10.85,11.25,2026-10-16,1.3826,1.2298
-Hang Seng Composite,HAIER,HKG:6690,6690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.16,20.12,20.14,2026-10-16,2.5638,2.2805
-Hang Seng Composite,ANGELALIGN,HKG:6699,6699.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,80.0,79.65,80.0,2026-10-16,10.1496,9.0281
-Hang Seng Composite,XUNLONG,HKG:6715,6715.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.3,48.92,48.76,2026-10-16,6.2338,5.5449
+Hang Seng Composite,JST GROUP,HKG:6687,6687.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,10.67,10.85,11.25,2026-10-16,1.3825,1.2298
+Hang Seng Composite,HAIER,HKG:6690,6690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.16,20.12,20.14,2026-10-16,2.5637,2.2804
+Hang Seng Composite,ANGELALIGN,HKG:6699,6699.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,80.0,79.65,80.0,2026-10-16,10.1492,9.0277
+Hang Seng Composite,XUNLONG,HKG:6715,6715.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,49.3,48.92,48.76,2026-10-16,6.2335,5.5447
 Hang Seng Composite,SUNART RETAIL,HKG:6808,6808.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,1.05,1.09,1.045,2026-10-16,0.1389,0.1235
-Hang Seng Composite,MONTAGE TECH,HKG:6809,6809.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,209.2,211.2,202.0,2026-10-16,26.9127,23.9388
-Hang Seng Composite,SUNMI TECH,HKG:6810,6810.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.55,55.85,52.55,2026-10-16,7.1168,6.3304
-Hang Seng Composite,CEB BANK,HKG:6818,6818.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.81,2.755,2.81,2026-10-16,0.3511,0.3123
-Hang Seng Composite,HKT ‑ SS,HKG:6823,6823.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.26,12.07,12.23,2026-10-16,1.538,1.3681
-Hang Seng Composite,ASCENTAGE,HKG:6855,6855.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.94,29.74,28.02,2026-10-16,3.7897,3.3709
-Hang Seng Composite,HAIDILAO,HKG:6862,6862.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.45,9.365,9.345,2026-10-16,1.1934,1.0615
-Hang Seng Composite,YOFC,HKG:6869,6869.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,127.1,124.0,122.6,2026-10-16,15.801,14.055
-Hang Seng Composite,TENNOR THERAP,HKG:6872,6872.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,98.25,101.7,103.7,2026-10-16,12.9594,11.5274
-Hang Seng Composite,CGS,HKG:6881,6881.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.395,7.32,7.35,2026-10-16,0.9328,0.8297
-Hang Seng Composite,HTSC,HKG:6886,6886.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.23,16.2,16.23,2026-10-16,2.0643,1.8362
-Hang Seng Composite,RIBOLIFE ‑ B,HKG:6938,6938.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.9,50.6,50.35,2026-10-16,6.4478,5.7353
+Hang Seng Composite,MONTAGE TECH,HKG:6809,6809.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,209.2,211.2,202.0,2026-10-16,26.9117,23.9379
+Hang Seng Composite,SUNMI TECH,HKG:6810,6810.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,52.55,55.85,52.55,2026-10-16,7.1166,6.3302
+Hang Seng Composite,CEB BANK,HKG:6818,6818.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.81,2.755,2.81,2026-10-16,0.351,0.3123
+Hang Seng Composite,HKT ‑ SS,HKG:6823,6823.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.26,12.07,12.23,2026-10-16,1.538,1.368
+Hang Seng Composite,ASCENTAGE,HKG:6855,6855.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,28.94,29.74,28.02,2026-10-16,3.7895,3.3708
+Hang Seng Composite,HAIDILAO,HKG:6862,6862.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.45,9.365,9.345,2026-10-16,1.1933,1.0615
+Hang Seng Composite,YOFC,HKG:6869,6869.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,127.1,124.0,122.6,2026-10-16,15.8004,14.0545
+Hang Seng Composite,TENNOR THERAP,HKG:6872,6872.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,98.25,101.7,103.7,2026-10-16,12.9589,11.5269
+Hang Seng Composite,CGS,HKG:6881,6881.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,7.395,7.32,7.35,2026-10-16,0.9327,0.8297
+Hang Seng Composite,HTSC,HKG:6886,6886.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,16.23,16.2,16.23,2026-10-16,2.0642,1.8361
+Hang Seng Composite,RIBOLIFE ‑ B,HKG:6938,6938.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,50.9,50.6,50.35,2026-10-16,6.4476,5.7351
 Hang Seng Composite,SUNSHINE INS,HKG:6963,6963.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.485,3.465,3.475,2026-10-16,0.4415,0.3927
-Hang Seng Composite,SMOORE INTL,HKG:6969,6969.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.03,8.425,8.02,2026-10-16,1.0736,0.9549
+Hang Seng Composite,SMOORE INTL,HKG:6969,6969.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.03,8.425,8.02,2026-10-16,1.0735,0.9549
 Hang Seng Composite,ZJLD,HKG:6979,6979.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.575,8.605,8.535,2026-10-16,1.0965,0.9753
-Hang Seng Composite,SKB BIO,HKG:6990,6990.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,449.8,452.0,438.4,2026-10-16,57.5972,51.2327
-Hang Seng Composite,BLUE MOON,HKG:6993,6993.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.55,2.485,2.54,2026-10-16,0.3167,0.2817
-Hang Seng Composite,JD INDUSTRIALS,HKG:7618,7618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.49,12.98,12.49,2026-10-16,1.654,1.4712
-Hang Seng Composite,IMPACT THERAP,HKG:7630,7630.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.29,13.02,12.95,2026-10-16,1.6591,1.4758
-Hang Seng Composite,METIS TECHBIO,HKG:7666,7666.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.5,11.92,11.18,2026-10-16,1.5189,1.3511
-Hang Seng Composite,TOPNC,HKG:7688,7688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.2,19.7,18.43,2026-10-16,2.5103,2.2329
-Hang Seng Composite,DUALITYBIO ‑ B,HKG:9606,9606.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,154.5,170.0,153.3,2026-10-16,21.6627,19.2689
-Hang Seng Composite,JD ‑ SW,HKG:9618,9618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,108.1,106.1,104.9,2026-10-16,13.5201,12.0261
-Hang Seng Composite,BILIBILI,HKG:9626,9626.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,113.6,111.8,110.7,2026-10-16,14.2464,12.6722
-Hang Seng Composite,NONGFU SPRING,HKG:9633,9633.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.8,41.2,41.38,2026-10-16,5.25,4.6699
-Hang Seng Composite,JF SMARTINVEST,HKG:9636,9636.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.0,27.08,26.9,2026-10-16,3.4507,3.0694
-Hang Seng Composite,ALEBUND ‑ B,HKG:9637,9637.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.0,17.48,18.62,2026-10-16,2.2274,1.9813
+Hang Seng Composite,SKB BIO,HKG:6990,6990.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,449.8,452.0,438.4,2026-10-16,57.595,51.2308
+Hang Seng Composite,BLUE MOON,HKG:6993,6993.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,2.55,2.485,2.54,2026-10-16,0.3166,0.2817
+Hang Seng Composite,JD INDUSTRIALS,HKG:7618,7618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.49,12.98,12.49,2026-10-16,1.6539,1.4712
+Hang Seng Composite,IMPACT THERAP,HKG:7630,7630.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,13.29,13.02,12.95,2026-10-16,1.659,1.4757
+Hang Seng Composite,METIS TECHBIO,HKG:7666,7666.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.5,11.92,11.18,2026-10-16,1.5189,1.351
+Hang Seng Composite,TOPNC,HKG:7688,7688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.2,19.7,18.43,2026-10-16,2.5102,2.2328
+Hang Seng Composite,DUALITYBIO ‑ B,HKG:9606,9606.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,154.5,170.0,153.3,2026-10-16,21.6618,19.2682
+Hang Seng Composite,JD ‑ SW,HKG:9618,9618.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,108.1,106.1,104.9,2026-10-16,13.5195,12.0256
+Hang Seng Composite,BILIBILI,HKG:9626,9626.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,113.6,111.8,110.7,2026-10-16,14.2458,12.6717
+Hang Seng Composite,NONGFU SPRING,HKG:9633,9633.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,41.8,41.2,41.38,2026-10-16,5.2498,4.6697
+Hang Seng Composite,JF SMARTINVEST,HKG:9636,9636.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.0,27.08,26.9,2026-10-16,3.4506,3.0693
+Hang Seng Composite,ALEBUND ‑ B,HKG:9637,9637.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,19.0,17.48,18.62,2026-10-16,2.2273,1.9812
 Hang Seng Composite,SUPER HI,HKG:9658,9658.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.56,8.2,8.39,2026-10-16,1.0449,0.9294
 Hang Seng Composite,HORIZONROBOT,HKG:9660,9660.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.895,3.92,3.83,2026-10-16,0.4995,0.4443
-Hang Seng Composite,UNISOUND,HKG:9678,9678.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,66.4,63.45,64.15,2026-10-16,8.0853,7.1919
-Hang Seng Composite,ZAI LAB,HKG:9688,9688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.34,18.6,17.95,2026-10-16,2.3702,2.1082
-Hang Seng Composite,TUHU,HKG:9690,9690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.43,11.37,11.4,2026-10-16,1.4489,1.2888
-Hang Seng Composite,GDS ‑ SW,HKG:9698,9698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.82,24.8,24.52,2026-10-16,3.1602,2.811
-Hang Seng Composite,SF INTRA‑CITY,HKG:9699,9699.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.12,8.12,8.005,2026-10-16,1.0347,0.9204
+Hang Seng Composite,UNISOUND,HKG:9678,9678.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,66.4,63.45,64.15,2026-10-16,8.085,7.1916
+Hang Seng Composite,ZAI LAB,HKG:9688,9688.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,18.34,18.6,17.95,2026-10-16,2.3701,2.1082
+Hang Seng Composite,TUHU,HKG:9690,9690.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,11.43,11.37,11.4,2026-10-16,1.4488,1.2887
+Hang Seng Composite,GDS ‑ SW,HKG:9698,9698.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.82,24.8,24.52,2026-10-16,3.1601,2.8109
+Hang Seng Composite,SF INTRA‑CITY,HKG:9699,9699.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.12,8.12,8.005,2026-10-16,1.0347,0.9203
 Hang Seng Composite,YOURAN DAIRY,HKG:9858,9858.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,3.42,3.435,3.39,2026-10-16,0.4377,0.3893
-Hang Seng Composite,LEAPMOTOR,HKG:9863,9863.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,35.14,35.18,35.0,2026-10-16,4.4829,3.9875
-Hang Seng Composite,NIO ‑ SW,HKG:9866,9866.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.44,27.4,26.48,2026-10-16,3.4915,3.1057
-Hang Seng Composite,XPENG,HKG:9868,9868.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,37.92,37.46,37.2,2026-10-16,4.7734,4.246
-Hang Seng Composite,UBTECH ROBOTICS,HKG:9880,9880.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,64.25,64.55,62.65,2026-10-16,8.2254,7.3165
-Hang Seng Composite,LEADS BIOLABS,HKG:9887,9887.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.6,41.3,40.66,2026-10-16,5.2628,4.6812
-Hang Seng Composite,BIDU,HKG:9888,9888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,80.65,79.45,78.35,2026-10-16,10.1241,9.0054
-Hang Seng Composite,TANWAN,HKG:9890,9890.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.025,8.88,9.0,2026-10-16,1.1316,1.0065
-Hang Seng Composite,MNSO,HKG:9896,9896.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.78,20.28,20.56,2026-10-16,2.5842,2.2987
-Hang Seng Composite,WB ‑ SW,HKG:9898,9898.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,51.55,50.5,50.15,2026-10-16,6.4351,5.724
-Hang Seng Composite,NETEASE MUSIC,HKG:9899,9899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,85.2,87.7,84.75,2026-10-16,11.1754,9.9405
-Hang Seng Composite,NEW ORIENTAL,HKG:9901,9901.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.9,48.14,45.46,2026-10-16,6.1344,5.4565
-Hang Seng Composite,ILUVATAR COREX,HKG:9903,9903.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,82.8,78.95,79.8,2026-10-16,10.0604,8.9487
-Hang Seng Composite,NEWBORNTOWN,HKG:9911,9911.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.82,9.005,8.81,2026-10-16,1.1475,1.0207
-Hang Seng Composite,AKESO,HKG:9926,9926.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,92.15,91.3,90.45,2026-10-16,11.6341,10.3486
-Hang Seng Composite,SERES,HKG:9927,9927.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.28,35.14,34.0,2026-10-16,4.4778,3.983
-Hang Seng Composite,TRIP.COM,HKG:9961,9961.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,312.0,315.0,309.2,2026-10-16,40.1397,35.7042
-Hang Seng Composite,INNOCARE,HKG:9969,9969.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.2,12.32,12.0,2026-10-16,1.5699,1.3964
-Hang Seng Composite,CHERY AUTO,HKG:9973,9973.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.38,24.3,23.96,2026-10-16,3.0965,2.7543
-Hang Seng Composite,WL DELICIOUS,HKG:9985,9985.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.755,6.875,6.78,2026-10-16,0.8761,0.7793
-Hang Seng Composite,YUM CHINA,HKG:9987,9987.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,351.0,352.0,344.2,2026-10-16,44.8545,39.8981
-Hang Seng Composite,BABA,HKG:9988,9988.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,108.8,108.8,106.4,2026-10-16,13.8641,12.3321
-Hang Seng Composite,POP MART,HKG:9992,9992.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,145.9,142.2,145.5,2026-10-16,18.1202,16.1179
+Hang Seng Composite,LEAPMOTOR,HKG:9863,9863.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,35.14,35.18,35.0,2026-10-16,4.4827,3.9874
+Hang Seng Composite,NIO ‑ SW,HKG:9866,9866.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,27.44,27.4,26.48,2026-10-16,3.4914,3.1056
+Hang Seng Composite,XPENG,HKG:9868,9868.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,37.92,37.46,37.2,2026-10-16,4.7733,4.2458
+Hang Seng Composite,UBTECH ROBOTICS,HKG:9880,9880.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,64.25,64.55,62.65,2026-10-16,8.2251,7.3163
+Hang Seng Composite,LEADS BIOLABS,HKG:9887,9887.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,42.6,41.3,40.66,2026-10-16,5.2626,4.681
+Hang Seng Composite,BIDU,HKG:9888,9888.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,80.65,79.45,78.35,2026-10-16,10.1237,9.0051
+Hang Seng Composite,TANWAN,HKG:9890,9890.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,9.025,8.88,9.0,2026-10-16,1.1315,1.0065
+Hang Seng Composite,MNSO,HKG:9896,9896.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,20.78,20.28,20.56,2026-10-16,2.5841,2.2986
+Hang Seng Composite,WB ‑ SW,HKG:9898,9898.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,51.55,50.5,50.15,2026-10-16,6.4348,5.7238
+Hang Seng Composite,NETEASE MUSIC,HKG:9899,9899.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,85.2,87.7,84.75,2026-10-16,11.175,9.9401
+Hang Seng Composite,NEW ORIENTAL,HKG:9901,9901.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,46.9,48.14,45.46,2026-10-16,6.1341,5.4563
+Hang Seng Composite,ILUVATAR COREX,HKG:9903,9903.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,82.8,78.95,79.8,2026-10-16,10.06,8.9484
+Hang Seng Composite,NEWBORNTOWN,HKG:9911,9911.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,8.82,9.005,8.81,2026-10-16,1.1474,1.0206
+Hang Seng Composite,AKESO,HKG:9926,9926.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,92.15,91.3,90.45,2026-10-16,11.6337,10.3482
+Hang Seng Composite,SERES,HKG:9927,9927.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,34.28,35.14,34.0,2026-10-16,4.4776,3.9829
+Hang Seng Composite,TRIP.COM,HKG:9961,9961.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,312.0,315.0,309.2,2026-10-16,40.1381,35.7029
+Hang Seng Composite,INNOCARE,HKG:9969,9969.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,12.2,12.32,12.0,2026-10-16,1.5698,1.3964
+Hang Seng Composite,CHERY AUTO,HKG:9973,9973.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,24.38,24.3,23.96,2026-10-16,3.0964,2.7542
+Hang Seng Composite,WL DELICIOUS,HKG:9985,9985.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,6.755,6.875,6.78,2026-10-16,0.876,0.7792
+Hang Seng Composite,YUM CHINA,HKG:9987,9987.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,351.0,352.0,344.2,2026-10-16,44.8528,39.8965
+Hang Seng Composite,BABA,HKG:9988,9988.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,108.8,108.8,106.4,2026-10-16,13.8636,12.3317
+Hang Seng Composite,POP MART,HKG:9992,9992.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,145.9,142.2,145.5,2026-10-16,18.1195,16.1173
 Hang Seng Composite,RADIANCE HLDGS,HKG:9993,9993.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,0.995,0.985,0.975,2026-10-16,0.1255,0.1116
-Hang Seng Composite,REMEGEN,HKG:9995,9995.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.0,65.9,64.85,2026-10-16,8.3975,7.4696
-Hang Seng Composite,NTES,HKG:9999,9999.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,201.4,197.7,196.2,2026-10-16,25.1924,22.4087
+Hang Seng Composite,REMEGEN,HKG:9995,9995.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,65.0,65.9,64.85,2026-10-16,8.3972,7.4693
+Hang Seng Composite,NTES,HKG:9999,9999.HK,Hong Kong (China),HKEX,HKD,Hang Seng Composite,HKD,201.4,197.7,196.2,2026-10-16,25.1915,22.4078
