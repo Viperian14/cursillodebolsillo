@@ -16,7 +16,9 @@ import pandas as pd
 import yfinance as yf
 
 # --- Constantes ajustables (hipótesis, no datos validados) ---
-MARGEN = 0.20          # ±20 % frente a la mediana del grupo
+MARGEN = 0.15          # a partir de ±15 % frente a la mediana del grupo: medio punto (±0,5)
+MARGEN_FUERTE = 0.40   # a partir de ±40 %: punto entero (±1)
+ESCALA = 10.0          # la puntuación final va de -10 a +10
 MIN_SEÑALES = 3        # señales mínimas para dar puntuación
 GRUPO_PEQUEÑO = 5      # menos empresas que esto = "grupo pequeño"
 DIAS_ROTACION = 7      # una séptima parte cada día
@@ -87,6 +89,26 @@ def tendencia_de(cierres):
     return "lateral"
 
 
+def tendencia_voto(cierres):
+    """Voto -1 / -0,5 / 0 / +0,5 / +1 según el precio frente a sus medias de 50 y 200 sesiones."""
+    c = pd.Series(cierres).dropna()
+    if len(c) < 200:
+        return None
+    ult, m50, m200 = float(c.iloc[-1]), float(c.iloc[-50:].mean()), float(c.iloc[-200:].mean())
+    if ult > m50 > m200:
+        return 1.0
+    if ult < m50 < m200:
+        return -1.0
+    return 0.5 if ult > m200 else (-0.5 if ult < m200 else 0.0)
+
+
+def voto_analistas(rec, n):
+    """Sentimiento de mercado a partir de la recomendación media de Yahoo (1 = compra fuerte ... 5 = venta)."""
+    if rec is None or n is None or n < 3:
+        return None
+    return 1.0 if rec <= 1.8 else 0.5 if rec <= 2.3 else 0.0 if rec <= 3.2 else -0.5 if rec <= 3.7 else -1.0
+
+
 def frecuencia_dividendo(divs):
     """(pagos en 12 meses, texto). 0 = no paga."""
     if divs is None or len(divs) == 0:
@@ -143,6 +165,18 @@ def resultados(t):
     return r
 
 
+def analistas(info, ultimo):
+    rec, n = num(info.get("recommendationMean")), num(info.get("numberOfAnalystOpinions"))
+    obj = num(info.get("targetMeanPrice"))
+    pot = None
+    if obj and ultimo:
+        r = obj / ultimo
+        if 0.2 < r < 5:          # descarta monedas distintas (p. ej. peniques frente a libras)
+            pot = round((r - 1) * 100, 1)
+    return {"recomendacion": rec, "n": None if n is None else int(n), "objetivo": obj, "potencial": pot,
+            "voto": voto_analistas(rec, n)}
+
+
 def obtener(ticker, cierres):
     """Descarga los datos de una empresa. Devuelve dict (campos brutos normalizados)."""
     t = yf.Ticker(ticker)
@@ -187,6 +221,8 @@ def obtener(ticker, cierres):
         "trimestre": mrq if isinstance(mrq, str) else None,
         "moneda_yahoo": info.get("currency"),
         "tendencia": tendencia_de(cierres) if cierres is not None else None,
+        "tendencia_voto": tendencia_voto(cierres) if cierres is not None else None,
+        "analistas": analistas(info, ultimo),
         "volumen_rel": None,
         "resultados": resultados(t),
         "fecha": hoy().isoformat(),
@@ -223,13 +259,13 @@ def mediana(vals):
 
 
 def voto_relativo(valor, med, mas_es_mejor):
-    """+1 / 0 / -1 comparando con la mediana. None si no se puede calcular."""
+    """-1 / -0,5 / 0 / +0,5 / +1 comparando con la mediana. None si no se puede calcular."""
     if valor is None or med is None or med <= 0:
         return None
     r = valor / med
-    if mas_es_mejor:
-        return 1 if r > 1 + MARGEN else (-1 if r < 1 - MARGEN else 0)
-    return 1 if r < 1 - MARGEN else (-1 if r > 1 + MARGEN else 0)
+    alto = 1.0 if r > 1 + MARGEN_FUERTE else 0.5 if r > 1 + MARGEN else 0.0   # por encima de la mediana
+    bajo = 1.0 if r < 1 - MARGEN_FUERTE else 0.5 if r < 1 - MARGEN else 0.0   # por debajo de la mediana
+    return alto - bajo if mas_es_mejor else bajo - alto
 
 
 def calcular(empresas, meta):
@@ -268,7 +304,12 @@ def calcular(empresas, meta):
                     sen["deuda"] = {"valor": e["deuda"], "voto": voto_relativo(e["deuda"], med_de, False)}
             # Tendencia
             if e.get("tendencia"):
-                sen["tendencia"] = {"valor": e["tendencia"], "voto": {"alcista": 1, "lateral": 0, "bajista": -1}[e["tendencia"]]}
+                tv = e.get("tendencia_voto")
+                sen["tendencia"] = {"valor": e["tendencia"], "voto": tv if tv is not None else {"alcista": 1.0, "lateral": 0.0, "bajista": -1.0}[e["tendencia"]]}
+            # Sentimiento de mercado (analistas)
+            an = e.get("analistas") or {}
+            if an.get("voto") is not None:
+                sen["sentimiento"] = {"valor": an.get("recomendacion"), "voto": an["voto"], "nota": f"{an.get('n')} analistas"}
             for k, m in (("per", med_per), ("roe", med_roe), ("deuda", med_de)):
                 if k in sen:
                     sen[k]["mediana"] = None if m is None else round(m, 3)
@@ -276,19 +317,19 @@ def calcular(empresas, meta):
             e["señales"] = sen
             e["grupo"] = {"pais": clave[0], "sector": clave[1], "n": n, "pequeno": n < GRUPO_PEQUEÑO}
             if len(votos) >= MIN_SEÑALES:
-                p = sum(votos)
+                p = round(ESCALA * sum(votos) / len(votos), 1)   # media de los votos disponibles, sobre ±10
                 e["puntuacion"] = p
-                e["etiqueta"] = ("Muy favorable" if p >= 3 else "Favorable" if p >= 1 else
-                                 "Neutral" if p == 0 else "Desfavorable" if p >= -2 else "Muy desfavorable")
+                e["etiqueta"] = ("Muy favorable" if p >= 5 else "Favorable" if p >= 2 else
+                                 "Neutral" if p > -2 else "Desfavorable" if p > -5 else "Muy desfavorable")
             else:
                 e["puntuacion"] = None
                 e["etiqueta"] = "Datos insuficientes"
-                e["faltan"] = [k for k in ("per", "roe", "deuda", "tendencia")
+                e["faltan"] = [k for k in ("per", "roe", "deuda", "tendencia", "sentimiento")
                                if not (k in sen and sen[k].get("voto") is not None)
                                and not (k == "deuda" and clave[1] == FINANZAS)]
             d = sen.get("deuda", {})
             e["deuda_etiqueta"] = ("n/a" if clave[1] == FINANZAS else
-                                   {1: "bajo", 0: "medio", -1: "alto"}.get(d.get("voto")) if d else None)
+                                   ("bajo" if d["voto"] > 0 else "alto" if d["voto"] < 0 else "medio") if d and d.get("voto") is not None else None)
     return empresas
 
 
@@ -309,9 +350,9 @@ def main():
 
     todo = os.environ.get("FUND_TODO", "").lower() in ("1", "true", "yes")
     dia = hoy().toordinal()
-    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t] or "dominio" not in emp[t]]
+    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t] or "dominio" not in emp[t] or "analistas" not in emp[t]]
     # Primero las que no tienen datos, para que una ejecución cortada continúe donde quedó
-    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t] and "dominio" in emp[t], t))
+    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t] and "dominio" in emp[t] and "analistas" in emp[t], t))
     print(f"Tanda: {len(tanda)} empresas de {len(tickers)} (todo={todo})")
 
     errores, hechas = [], 0
