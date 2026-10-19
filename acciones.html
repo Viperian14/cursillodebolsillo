@@ -98,6 +98,10 @@
   table.sen { min-width:0; }
   table.sen td, table.sen th { white-space:normal; text-align:left; }
   table.sen th:first-child, table.sen td:first-child { position:static; box-shadow:none; }
+  details.tec > summary { cursor:pointer; list-style:none; }
+  details.tec > summary::-webkit-details-marker { display:none; }
+  details.tec > summary::before { content:"▸"; color:var(--accent); margin-right:8px; }
+  details.tec[open] > summary::before { content:"▾"; }
   .voto { font-weight:700; }
   .semana { display:inline-block; margin-left:8px; font-size:12px; color:#0a0f0c; background:var(--flat); border-radius:999px; padding:1px 9px; font-weight:600; }
   .fabmenu { position: fixed; right: 16px; bottom: 18px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); cursor: pointer; display: none; align-items: center; justify-content: center; }
@@ -338,6 +342,24 @@ function bloqueResultados(f) {
   }
   return h + "</div>";
 }
+function bloqueTecnicos(f, p) {
+  var t = f.tecnicos;
+  var cab = '<details class="caja tec" style="margin-top:10px"><summary><b>Indicadores técnicos</b><span class="s"> · toca para ver</span></summary>';
+  if (!t) return cab + '<div class="s" style="margin-top:8px">Sin historial suficiente para calcularlos.</div></details>';
+  var mon = p.moneda, cl = t.cierre;
+  function fila(nom, val, lect, cls) { return "<tr><td>" + nom + '</td><td class="num">' + val + '</td><td class="' + (cls || "") + '">' + lect + "</td></tr>"; }
+  var rows = "";
+  if (t.rsi14 != null) rows += fila("RSI (14)", nf(t.rsi14, 1), t.rsi14 >= 70 ? "Sobrecompra" : t.rsi14 <= 30 ? "Sobreventa" : t.rsi14 >= 55 ? "Momentum alcista" : t.rsi14 <= 45 ? "Momentum bajista" : "Neutral", t.rsi14 >= 70 ? "down" : t.rsi14 <= 30 ? "up" : "");
+  if (t.macd_hist != null) rows += fila("MACD (12, 26, 9)", nf(t.macd, 2) + " / señal " + nf(t.macd_senal, 2), t.macd_hist >= 0 ? "Por encima de su señal: impulso alcista" : "Por debajo de su señal: impulso bajista", t.macd_hist >= 0 ? "up" : "down");
+  if (t.adx7 != null) rows += fila("ADX (7)", nf(t.adx7, 1) + " · +DI " + nf(t.di_mas, 1) + " / −DI " + nf(t.di_menos, 1),
+      (t.adx7 >= 25 ? "Tendencia fuerte " : t.adx7 < 20 ? "Tendencia débil o lateral " : "Tendencia moderada ") + (t.di_mas >= t.di_menos ? "a favor de los compradores" : "a favor de los vendedores"), t.adx7 >= 20 ? (t.di_mas >= t.di_menos ? "up" : "down") : "");
+  if (t.willr40 != null) rows += fila("Williams %R (40)", nf(t.willr40, 1), t.willr40 >= -20 ? "Cerca de máximos de 40 sesiones (sobrecompra)" : t.willr40 <= -80 ? "Cerca de mínimos de 40 sesiones (sobreventa)" : "Zona intermedia", t.willr40 >= -20 ? "down" : t.willr40 <= -80 ? "up" : "");
+  if (t.sma50 != null) rows += fila("Media de 50 sesiones", precio(t.sma50, mon), cl >= t.sma50 ? "Precio por encima" : "Precio por debajo", cl >= t.sma50 ? "up" : "down");
+  if (t.sma200 != null) rows += fila("Media de 200 sesiones", precio(t.sma200, mon), cl >= t.sma200 ? "Precio por encima" : "Precio por debajo", cl >= t.sma200 ? "up" : "down");
+  if (t.sma50 != null && t.sma200 != null) rows += fila("Media 50 frente a 200", t.sma50 >= t.sma200 ? "50 > 200" : "50 < 200", t.sma50 >= t.sma200 ? "Configuración alcista (cruz dorada vigente)" : "Configuración bajista (cruz de la muerte vigente)", t.sma50 >= t.sma200 ? "up" : "down");
+  return cab + '<div class="tabla" style="margin-top:8px"><table class="sen"><thead><tr><th>Indicador</th><th>Valor</th><th>Lectura</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+    '<p class="s">Calculados con los máximos, mínimos y cierres diarios de Yahoo hasta el ' + esc(fechaCorta(t.fecha)) + ". Orientativos: pueden diferir de TradingView (otra fuente y otros ajustes). No entran en la puntuación.</p></details>";
+}
 function vistaFicha(t) {
   var p = POR_TICKER[t]; if (!p) { location.hash = ""; return; }
   var f = FUND[t], v = varp(p), cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
@@ -377,6 +399,7 @@ function vistaFicha(t) {
     h += '<p class="s">Se compara con <b>' + (g.n || "?") + "</b> empresas de " + esc(g.sector || "") + " en " + esc(g.pais || "") + (g.pequeno ? " · <b>grupo pequeño</b>: la comparación es poco fiable" : "") +
          ". Último trimestre: " + esc(fechaCorta(f.trimestre)) + ". Datos del " + esc(fechaCorta(f.fecha)) + ".</p>";
     h += bloqueResultados(f);
+    h += bloqueTecnicos(f, p);
     if (f.puntuacion == null && f.faltan && f.faltan.length) h += '<p class="s"><b>Datos insuficientes.</b> Faltan: ' + esc(f.faltan.join(", ")) + ".</p>";
     h += "</div>";
   } else {

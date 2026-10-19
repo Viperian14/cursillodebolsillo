@@ -177,7 +177,7 @@ def analistas(info, ultimo):
             "voto": voto_analistas(rec, n)}
 
 
-def obtener(ticker, cierres):
+def obtener(ticker, hist):
     """Descarga los datos de una empresa. Devuelve dict (campos brutos normalizados)."""
     t = yf.Ticker(ticker)
     info = con_reintentos(lambda: t.info) or {}
@@ -186,6 +186,7 @@ def obtener(ticker, cierres):
     except Exception:
         divs = None
     pagos, freq = frecuencia_dividendo(divs)
+    cierres = hist["Close"] if hist is not None and "Close" in hist else None
     ultimo = num(cierres.iloc[-1]) if cierres is not None and len(cierres.dropna()) else None
     rend = None
     if divs is not None and len(divs) and ultimo:
@@ -225,12 +226,13 @@ def obtener(ticker, cierres):
         "analistas": analistas(info, ultimo),
         "volumen_rel": None,
         "resultados": resultados(t),
+        "tecnicos": tecnicos(hist),
         "fecha": hoy().isoformat(),
     }
 
 
 def historicos(tickers):
-    """{ticker: serie de cierres} (≈ 14 meses) en lotes."""
+    """{ticker: DataFrame con High, Low, Close} (≈ 14 meses) en lotes."""
     out = {}
     for i in range(0, len(tickers), 100):
         lote = tickers[i:i + 100]
@@ -242,13 +244,62 @@ def historicos(tickers):
             continue
         if d is None or d.empty:
             continue
-        close = d["Close"]
-        if isinstance(close, pd.Series):
-            close = close.to_frame(lote[0])
-        for t in close.columns:
-            out[t] = close[t].dropna()
+        campos = {}
+        for c in ("High", "Low", "Close"):
+            x = d[c]
+            campos[c] = x.to_frame(lote[0]) if isinstance(x, pd.Series) else x
+        for t in campos["Close"].columns:
+            df = pd.DataFrame({c: campos[c][t] for c in campos if t in campos[c].columns}).dropna(subset=["Close"])
+            if len(df):
+                out[t] = df
         time.sleep(1)
     return out
+
+
+def tecnicos(df):
+    """Indicadores técnicos con el historial diario (None si hay pocos datos). Solo informativos."""
+    if df is None or len(df) < 60 or not {"High", "Low", "Close"} <= set(df.columns):
+        return None
+    d = df.dropna(subset=["High", "Low", "Close"])
+    if len(d) < 60:
+        return None
+    c, h, l = d["Close"].astype(float), d["High"].astype(float), d["Low"].astype(float)
+
+    def r(x, n=2):
+        return None if x is None or pd.isna(x) else round(float(x), n)
+
+    # RSI 14 (Wilder)
+    dif = c.diff()
+    g = dif.clip(lower=0).ewm(alpha=1 / 14, adjust=False).mean()
+    p = (-dif.clip(upper=0)).ewm(alpha=1 / 14, adjust=False).mean()
+    rsi = 100 - 100 / (1 + g / p.replace(0, float("nan")))
+    # MACD 12, 26, 9
+    macd = c.ewm(span=12, adjust=False).mean() - c.ewm(span=26, adjust=False).mean()
+    senal = macd.ewm(span=9, adjust=False).mean()
+    # ADX 7 con +DI / -DI (Wilder)
+    n = 7
+    up, dn = h.diff(), -l.diff()
+    mas = ((up > dn) & (up > 0)) * up
+    menos = ((dn > up) & (dn > 0)) * dn
+    tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
+    atr = tr.ewm(alpha=1 / n, adjust=False).mean()
+    dim = 100 * mas.ewm(alpha=1 / n, adjust=False).mean() / atr
+    dis = 100 * menos.ewm(alpha=1 / n, adjust=False).mean() / atr
+    dx = 100 * (dim - dis).abs() / (dim + dis).replace(0, float("nan"))
+    adx = dx.ewm(alpha=1 / n, adjust=False).mean()
+    # Williams %R 40
+    hh, ll = h.rolling(40).max(), l.rolling(40).min()
+    wr = -100 * (hh - c) / (hh - ll).replace(0, float("nan"))
+    return {
+        "fecha": d.index[-1].strftime("%Y-%m-%d"),
+        "cierre": r(c.iloc[-1], 4),
+        "rsi14": r(rsi.iloc[-1], 1),
+        "macd": r(macd.iloc[-1], 4), "macd_senal": r(senal.iloc[-1], 4), "macd_hist": r(macd.iloc[-1] - senal.iloc[-1], 4),
+        "adx7": r(adx.iloc[-1], 1), "di_mas": r(dim.iloc[-1], 1), "di_menos": r(dis.iloc[-1], 1),
+        "willr40": r(wr.iloc[-1], 1),
+        "sma50": r(c.iloc[-50:].mean(), 4) if len(c) >= 50 else None,
+        "sma200": r(c.iloc[-200:].mean(), 4) if len(c) >= 200 else None,
+    }
 
 
 # ---------------- cálculo de señales ----------------
@@ -350,9 +401,9 @@ def main():
 
     todo = os.environ.get("FUND_TODO", "").lower() in ("1", "true", "yes")
     dia = hoy().toordinal()
-    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t] or "dominio" not in emp[t] or "analistas" not in emp[t]]
+    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t] or "dominio" not in emp[t] or "analistas" not in emp[t] or "tecnicos" not in emp[t]]
     # Primero las que no tienen datos, para que una ejecución cortada continúe donde quedó
-    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t] and "dominio" in emp[t] and "analistas" in emp[t], t))
+    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t] and "dominio" in emp[t] and "analistas" in emp[t] and "tecnicos" in emp[t], t))
     print(f"Tanda: {len(tanda)} empresas de {len(tickers)} (todo={todo})")
 
     errores, hechas = [], 0
