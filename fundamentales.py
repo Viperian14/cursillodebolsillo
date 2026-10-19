@@ -167,7 +167,14 @@ def obtener(ticker, cierres):
     mrq = info.get("mostRecentQuarter")
     if isinstance(mrq, (int, float)) and mrq > 0:
         mrq = datetime.fromtimestamp(mrq, timezone.utc).strftime("%Y-%m-%d")
+    web = info.get("website") or ""
+    dominio = None
+    if isinstance(web, str) and web.strip():
+        dominio = web.strip().lower().replace("https://", "").replace("http://", "").split("/")[0]
+        dominio = dominio[4:] if dominio.startswith("www.") else dominio
+        dominio = dominio or None
     return {
+        "dominio": dominio,
         "sector_yahoo": info.get("sector"),
         "per": num(info.get("trailingPE")),
         "eps": num(info.get("trailingEps")),
@@ -302,9 +309,9 @@ def main():
 
     todo = os.environ.get("FUND_TODO", "").lower() in ("1", "true", "yes")
     dia = hoy().toordinal()
-    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t]]
+    tanda = [t for i, t in enumerate(tickers) if todo or i % DIAS_ROTACION == dia % DIAS_ROTACION or t not in emp or "resultados" not in emp[t] or "dominio" not in emp[t]]
     # Primero las que no tienen datos, para que una ejecución cortada continúe donde quedó
-    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t], t))
+    tanda.sort(key=lambda t: (t in emp and "resultados" in emp[t] and "dominio" in emp[t], t))
     print(f"Tanda: {len(tanda)} empresas de {len(tickers)} (todo={todo})")
 
     errores, hechas = [], 0

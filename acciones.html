@@ -63,6 +63,7 @@
   .q:hover { background:var(--accent); color:#0a0f0c; }
   tr.fila { cursor:pointer; }
   tr.fila:hover td { background:#1d2a20; }
+  img.logo { border-radius:4px; vertical-align:middle; margin-right:8px; background:#fff; }
   .nom { font-weight:600; max-width:230px; overflow:hidden; text-overflow:ellipsis; display:block; }
   .meta { color:var(--muted); font-size:12px; font-weight:400; display:block; }
   .up { color:var(--up); } .down { color:var(--down); } .nd { color:var(--muted); }
@@ -127,6 +128,10 @@ var AYUDA = {
 };
 function q(k) { return '<button type="button" class="q" data-ayuda="' + k + '" aria-label="Qué significa">?</button>'; }
 
+function logo(f, tam) {
+  if (!f || !f.dominio) return "";
+  return '<img class="logo" loading="lazy" width="' + tam + '" height="' + tam + '" alt="" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(f.dominio) + '&sz=64" onerror="this.remove()">';
+}
 function claseP(f) {
   if (!f || f.puntuacion == null) return "sx";
   var p = f.puntuacion; return p >= 3 ? "s2" : p >= 1 ? "s1" : p === 0 ? "s0" : p >= -2 ? "sm1" : "sm2";
@@ -169,7 +174,7 @@ function fila(p) {
   var cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
   var vt = v == null ? "n/d" : (v >= 0 ? "+" : "") + nf(v, 2) + " %";
   return '<tr class="fila" tabindex="0" data-t="' + esc(p.ticker_yahoo) + '">' +
-    '<td><span class="nom" title="' + esc(p.nombre) + '">' + esc(p.nombre) + '</span><span class="meta">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.indice) + "</span></td>" +
+    '<td><span class="nom" title="' + esc(p.nombre) + '">' + logo(f, 18) + esc(p.nombre) + '</span><span class="meta">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.indice) + "</span></td>" +
     '<td class="num">' + precio(p.apertura, p.moneda) + '</td><td class="num">' + precio(p.cierre, p.moneda) + "</td>" +
     '<td class="num conv"><span>' + dolares(p.precio_usd) + "</span><span>" + euros(p.precio_eur) + '</span></td>' +
     '<td class="num ' + cls + '">' + vt + "</td><td>" + chipPunt(f) + "</td></tr>";
@@ -303,7 +308,7 @@ function vistaFicha(t) {
   var p = POR_TICKER[t]; if (!p) { location.hash = ""; return; }
   var f = FUND[t], v = varp(p), cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
   var h = '<button type="button" class="menubtn" data-volver="1" style="font-size:16px">← Volver a la lista</button>';
-  h += '<div class="ficha"><h1>' + esc(p.nombre) + "</h1>";
+  h += '<div class="ficha"><h1>' + logo(f, 32) + esc(p.nombre) + "</h1>";
   h += '<div class="sub">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.pais) + " · " + esc((p.indices || [p.indice]).join(", ")) + " · sector: " + esc(f && f.sector ? f.sector : "sin clasificar") + "</div>";
   h += '<div class="gridf">';
   h += '<div class="caja"><h3>Cierre</h3><div class="v">' + precio(p.cierre, p.moneda) + '</div><div class="s">Apertura ' + precio(p.apertura, p.moneda) + " · sesión " + esc(fechaCorta(p.fecha)) + "</div></div>";
