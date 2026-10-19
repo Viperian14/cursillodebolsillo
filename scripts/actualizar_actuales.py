@@ -329,6 +329,12 @@ def sonda():
         r['eurostat_minr'] = {'id': j.get('id'), 'size': j.get('size'), 'dims': dims, 'n_valores': len(j.get('value', {}))}
     except Exception as ex:
         r['eurostat_minr'] = 'ERROR: %s' % ex
+    try:
+        q = urllib.parse.urlencode({'filter': 'security_type:eq:Bill,auction_date:gte:2026-10-12', 'fields': 'auction_date,security_term,high_discnt_rate,high_investment_rate', 'sort': '-auction_date', 'page[size]': '30'}, safe=':,[]-')
+        j = http_json('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?' + q)
+        r['subastas_letras'] = j.get('data') if isinstance(j, dict) else j
+    except Exception as ex:
+        r['subastas_letras'] = 'ERROR: %s' % ex
     for sid in ('ICSA', 'RSAFS', 'INDPRO'):
         try:
             o = fred_obs(sid, 3)
