@@ -123,7 +123,7 @@ var AYUDA = {
   div: "Lo que la empresa reparte al año por cada 100 € del precio de la acción, y cada cuánto lo paga. No está garantizado: puede recortarlo.",
   deuda: "Lo que debe la empresa dividido entre el dinero de sus accionistas. 1,0 significa que debe tanto como vale su patrimonio. Bajo, medio o alto es frente a las de su sector y país. En bancos y aseguradoras no se muestra, porque su deuda funciona de otra manera.",
   conv: "El precio de cierre pasado a dólares y euros con un tipo de cambio con retraso. Solo orientativo. Un precio alto no significa que la acción sea cara: para eso está el PER.",
-  punt: "Resume cuatro señales: si está barata o cara frente a sus parecidas (PER), si es rentable (ROE), cuánta deuda tiene y si el precio va a favor de la tendencia. Compara cada empresa con las de su mismo sector y país. Describe cómo está hoy y no predice su evolución. No es una recomendación de inversión.",
+  punt: "Va de −10 a +10. Resume cinco señales: si está barata o cara frente a sus parecidas (PER), si es rentable (ROE), cuánta deuda tiene, si el precio va a favor de la tendencia y qué opinan los analistas. Cada señal da de −1 a +1 (con medios puntos si la diferencia es moderada) y la nota final es la media de las señales disponibles, escalada a 10. Compara cada empresa con las de su mismo sector y país. Describe cómo está hoy y no predice su evolución. No es una recomendación de inversión.",
   var: "Variación del último cierre frente al anterior, en la moneda de cotización."
 };
 function q(k) { return '<button type="button" class="q" data-ayuda="' + k + '" aria-label="Qué significa">?</button>'; }
@@ -134,11 +134,11 @@ function logo(f, tam) {
 }
 function claseP(f) {
   if (!f || f.puntuacion == null) return "sx";
-  var p = f.puntuacion; return p >= 3 ? "s2" : p >= 1 ? "s1" : p === 0 ? "s0" : p >= -2 ? "sm1" : "sm2";
+  var p = f.puntuacion; return p >= 5 ? "s2" : p >= 2 ? "s1" : p > -2 ? "s0" : p > -5 ? "sm1" : "sm2";
 }
 function chipPunt(f) {
   if (!f) return '<span class="chip sx">Sin datos</span>';
-  var n = f.puntuacion == null ? "" : " (" + (f.puntuacion > 0 ? "+" : "") + f.puntuacion + ")";
+  var n = f.puntuacion == null ? "" : " (" + (f.puntuacion > 0 ? "+" : "") + nf(f.puntuacion, 1) + ")";
   return '<span class="chip ' + claseP(f) + '">' + esc(f.etiqueta || "Sin datos") + n + "</span>";
 }
 
@@ -264,12 +264,14 @@ function repintarAbiertos() {
 function votoTxt(k, v) {
   if (v == null) return "No cuenta";
   var t = {
-    per: ["Más cara que sus parecidas", "En línea con sus parecidas", "Más barata que sus parecidas"],
-    roe: ["Rinde menos que sus parecidas", "En línea con sus parecidas", "Rinde más que sus parecidas"],
-    deuda: ["Más deuda que sus parecidas", "Deuda en línea", "Menos deuda que sus parecidas"],
-    tendencia: ["Tendencia bajista", "Tendencia lateral", "Tendencia alcista"]
+    per: ["Mucho más cara que sus parecidas", "Algo más cara que sus parecidas", "En línea con sus parecidas", "Algo más barata que sus parecidas", "Mucho más barata que sus parecidas"],
+    roe: ["Rinde mucho menos que sus parecidas", "Rinde algo menos que sus parecidas", "En línea con sus parecidas", "Rinde algo más que sus parecidas", "Rinde mucho más que sus parecidas"],
+    deuda: ["Mucha más deuda que sus parecidas", "Algo más de deuda que sus parecidas", "Deuda en línea", "Algo menos de deuda que sus parecidas", "Mucha menos deuda que sus parecidas"],
+    tendencia: ["Tendencia bajista", "Débil, por debajo de su media de 200 sesiones", "Lateral", "Débil al alza, por encima de su media de 200 sesiones", "Tendencia alcista"],
+    sentimiento: ["Analistas: venta o infraponderar", "Analistas: algo negativos", "Analistas: mantener", "Analistas: algo positivos", "Analistas: compra"]
   }[k];
-  return (v > 0 ? "+1 · " : v < 0 ? "−1 · " : "0 · ") + t[v + 1];
+  var sg = v > 0 ? "+" : v < 0 ? "−" : "";
+  return sg + nf(Math.abs(v), 1) + " · " + t[Math.round(v * 2) + 2];
 }
 function abrev(v) {
   if (v == null) return "n/d";
@@ -327,16 +329,18 @@ function vistaFicha(t) {
     h += '<div class="caja"><h3>Dividendo ' + q("div") + '</h3><div class="v">' + (f.dividendo == null ? (f.frecuencia === "no paga" ? "No paga" : "n/d") : nf(f.dividendo, 2) + " %") + '</div><div class="s">Frecuencia: ' + esc(f.frecuencia || "n/d") + "</div></div>";
     h += '<div class="caja"><h3>Deuda / patrimonio ' + q("deuda") + '</h3><div class="v">' + d + "</div></div>";
     h += "</div>";
-    h += '<div class="caja"><h3>Las cuatro señales</h3><div class="tabla"><table class="sen"><thead><tr><th>Señal</th><th>Valor</th><th>Mediana del grupo</th><th>Voto</th></tr></thead><tbody>';
+    h += '<div class="caja"><h3>Las cinco señales</h3><div class="tabla"><table class="sen"><thead><tr><th>Señal</th><th>Valor</th><th>Mediana del grupo</th><th>Voto</th></tr></thead><tbody>';
     var sen = f.señales || {};
-    [["per", "PER"], ["roe", "ROE"], ["deuda", "Deuda / patrimonio"], ["tendencia", "Tendencia del precio"]].forEach(function (k) {
+    [["per", "PER"], ["roe", "ROE"], ["deuda", "Deuda / patrimonio"], ["tendencia", "Tendencia del precio"], ["sentimiento", "Sentimiento de mercado (analistas)"]].forEach(function (k) {
       var s = sen[k[0]];
-      var val = !s ? "n/d" : (k[0] === "tendencia" ? s.valor : (k[0] === "roe" ? nf(s.valor, 1) + " %" : (s.valor == null ? "n/d" : nf(s.valor, k[0] === "per" ? 1 : 2))));
+      var val = !s ? "n/d" : (k[0] === "tendencia" ? s.valor : k[0] === "sentimiento" ? nf(s.valor, 1) + " de 5 (1 = compra fuerte, 5 = venta)" : (k[0] === "roe" ? nf(s.valor, 1) + " %" : (s.valor == null ? "n/d" : nf(s.valor, k[0] === "per" ? 1 : 2))));
       var med = !s || s.mediana == null ? "—" : (k[0] === "roe" ? nf(s.mediana, 1) + " %" : nf(s.mediana, k[0] === "per" ? 1 : 2));
-      if (k[0] === "tendencia") med = "—";
+      if (k[0] === "tendencia" || k[0] === "sentimiento") med = "—";
       h += "<tr><td>" + k[1] + "</td><td>" + esc(val) + (s && s.nota ? " <span class=\"nd\">(" + esc(s.nota) + ")</span>" : "") + "</td><td>" + med + '</td><td class="voto">' + esc(votoTxt(k[0], s ? s.voto : null)) + "</td></tr>";
     });
     h += "</tbody></table></div>";
+    var an = f.analistas;
+    if (an && an.objetivo != null) h += '<p class="s">Precio objetivo medio de los analistas: <b>' + nf(an.objetivo, 2) + "</b>" + (an.potencial != null ? " (" + (an.potencial >= 0 ? "+" : "") + nf(an.potencial, 1) + " % sobre el cierre)" : "") + (an.n ? " · " + an.n + " analistas" : "") + ". Solo informativo: no entra en la puntuación.</p>";
     var g = f.grupo || {};
     h += '<p class="s">Se compara con <b>' + (g.n || "?") + "</b> empresas de " + esc(g.sector || "") + " en " + esc(g.pais || "") + (g.pequeno ? " · <b>grupo pequeño</b>: la comparación es poco fiable" : "") +
          ". Último trimestre: " + esc(fechaCorta(f.trimestre)) + ". Datos del " + esc(fechaCorta(f.fecha)) + ".</p>";
