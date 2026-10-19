@@ -62,7 +62,7 @@
   .q { font:inherit; font-size:12px; font-weight:700; color:var(--accent); background:transparent; border:1px solid var(--accent); border-radius:50%; width:20px; height:20px; line-height:16px; padding:0; margin-left:5px; cursor:pointer; vertical-align:middle; }
   .q:hover { background:var(--accent); color:#0a0f0c; }
   tr.fila { cursor:pointer; }
-  tr.fila:hover td { background:#1d2a20; }
+  tr.fila:not(.col):hover td { background:#1d2a20; }
   img.logo { border-radius:4px; vertical-align:middle; margin-right:8px; background:#fff; }
   .nom { font-weight:600; max-width:230px; overflow:hidden; text-overflow:ellipsis; display:block; }
   .meta { color:var(--muted); font-size:12px; font-weight:400; display:block; }
@@ -73,6 +73,21 @@
   .mas { display:block; margin:12px auto 4px; font:inherit; font-weight:600; color:var(--accent); background:rgba(10,15,12,.6); border:1px solid var(--accent); border-radius:8px; padding:8px 18px; cursor:pointer; }
   .pop { margin:8px 14px; padding:10px 12px; border:1px solid var(--accent); border-radius:8px; background:#1d261f; font-size:14px; }
   .vacio { color:var(--muted); padding:14px; text-align:center; }
+  .filtros { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:12px; }
+  .filtros label { display:flex; flex-direction:column; gap:4px; color:var(--muted); font-size:13px; flex:1 1 220px; }
+  .filtros select { font:inherit; color:var(--fg); background:rgba(19,27,21,.95); border:1px solid #4a5040; border-radius:6px; padding:10px 12px; width:100%; }
+  tr.col td { background-image:linear-gradient(var(--rc),var(--rc)); }
+  tr.fila.col:hover td { filter:brightness(1.25); }
+  .rk { color:var(--accent); font-family:var(--font-num); }
+  .podio { display:flex; gap:8px; align-items:flex-end; padding:10px 14px 6px; }
+  .pod { flex:1 1 0; min-width:0; border:1px solid var(--line); border-radius:8px; padding:10px 6px; text-align:center; cursor:pointer; background-color:rgba(19,27,21,.95); background-image:linear-gradient(var(--rc),var(--rc)); display:flex; flex-direction:column; align-items:center; gap:3px; }
+  .pod:hover, .pod:focus-visible { border-color:var(--accent); outline:none; }
+  .pod.p1 { order:2; padding-top:22px; padding-bottom:16px; border-color:var(--accent); }
+  .pod.p2 { order:1; } .pod.p3 { order:3; }
+  .pod .pn { font-family:var(--font-title); font-weight:700; color:var(--accent); font-size:18px; }
+  .pod .nm { font-weight:600; font-size:13px; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .pod .chip { font-size:11px; padding:1px 6px; white-space:normal; max-width:100%; text-align:center; line-height:1.25; }
+  .pod .num { font-size:13px; }
   /* ficha */
   .ficha h1 { margin-bottom:2px; }
   .gridf { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:10px; margin:12px 0; }
@@ -101,7 +116,7 @@
 "use strict";
 var PRECIOS = [], FX = null, FUND = {}, FUND_FECHA = null, ACT_PRECIOS = null;
 var POR_TICKER = {};
-var ST = { pais: null, q: "", orden: { k: "nombre", d: 1 }, pagina: {}, abiertos: {}, ayuda: null };
+var ST = { pais: null, sector: "", q: "", orden: { k: "nombre", d: 1 }, pagina: {}, abiertos: {}, ayuda: null };
 var $ = function (id) { return document.getElementById(id); };
 function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 function nf(v, d) { return v == null || isNaN(v) ? null : Number(v).toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d }); }
@@ -123,6 +138,7 @@ var AYUDA = {
   div: "Lo que la empresa reparte al año por cada 100 € del precio de la acción, y cada cuánto lo paga. No está garantizado: puede recortarlo.",
   deuda: "Lo que debe la empresa dividido entre el dinero de sus accionistas. 1,0 significa que debe tanto como vale su patrimonio. Bajo, medio o alto es frente a las de su sector y país. En bancos y aseguradoras no se muestra, porque su deuda funciona de otra manera.",
   conv: "El precio de cierre pasado a dólares y euros con un tipo de cambio con retraso. Solo orientativo. Un precio alto no significa que la acción sea cara: para eso está el PER.",
+  etiq: "La nota va de −10 a +10 y se resume en una etiqueta: Muy favorable (+5 o más), Favorable (de +2 a +5), Neutral (entre −2 y +2), Desfavorable (de −5 a −2) y Muy desfavorable (−5 o menos). «Datos insuficientes» significa que a la empresa le faltan señales (hacen falta al menos 3 de las 5). Cada señal vota de −1 a +1 y la nota es la media de las disponibles escalada a 10. Describe cómo está hoy la empresa frente a sus parecidas del mismo sector y país; no predice su evolución ni es una recomendación de inversión.",
   punt: "Va de −10 a +10. Resume cinco señales: si está barata o cara frente a sus parecidas (PER), si es rentable (ROE), cuánta deuda tiene, si el precio va a favor de la tendencia y qué opinan los analistas. Cada señal da de −1 a +1 (con medios puntos si la diferencia es moderada) y la nota final es la media de las señales disponibles, escalada a 10. Compara cada empresa con las de su mismo sector y país. Describe cómo está hoy y no predice su evolución. No es una recomendación de inversión.",
   var: "Variación del último cierre frente al anterior, en la moneda de cotización."
 };
@@ -169,22 +185,39 @@ function cabecera(fijo) {
     return '<th class="' + c[2] + '" aria-sort="' + (act ? (ST.orden.d === 1 ? "ascending" : "descending") : "none") + '">' + (fijo ? c[1] : '<button type="button" class="ord" data-ord="' + c[0] + '">' + c[1] + '<span class="fl">' + fl + "</span></button>") + (c[3] ? q(c[3]) : "") + "</th>";
   }).join("") + "</tr></thead>";
 }
-function fila(p) {
+function colorPunt(f) {
+  if (!f || f.puntuacion == null) return null;
+  var hh = Math.max(0, Math.min(120, 60 + f.puntuacion * 6));   /* +10 verde, 0 amarillo, -10 rojo */
+  return "hsla(" + Math.round(hh) + ",70%,42%,.34)";
+}
+function fila(p, rango, color) {
   var f = FUND[p.ticker_yahoo], v = varp(p);
   var cls = v == null ? "nd" : (v >= 0 ? "up" : "down");
   var vt = v == null ? "n/d" : (v >= 0 ? "+" : "") + nf(v, 2) + " %";
-  return '<tr class="fila" tabindex="0" data-t="' + esc(p.ticker_yahoo) + '">' +
-    '<td><span class="nom" title="' + esc(p.nombre) + '">' + logo(f, 18) + esc(p.nombre) + '</span><span class="meta">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.indice) + "</span></td>" +
+  var c = color ? colorPunt(f) : null;
+  return '<tr class="fila' + (c ? " col" : "") + '" tabindex="0" data-t="' + esc(p.ticker_yahoo) + '"' + (c ? ' style="--rc:' + c + '"' : "") + ">" +
+    '<td><span class="nom" title="' + esc(p.nombre) + '">' + (rango ? '<b class="rk">' + rango + "º</b> " : "") + logo(f, 18) + esc(p.nombre) + '</span><span class="meta">' + esc(p.ticker_google) + " · " + esc(p.bolsa) + " · " + esc(p.indice) + "</span></td>" +
     '<td class="num">' + precio(p.apertura, p.moneda) + '</td><td class="num">' + precio(p.cierre, p.moneda) + "</td>" +
     '<td class="num conv"><span>' + dolares(p.precio_usd) + "</span><span>" + euros(p.precio_eur) + '</span></td>' +
     '<td class="num ' + cls + '">' + vt + "</td><td>" + chipPunt(f) + "</td></tr>";
 }
-function tablaHtml(lista, clave, fijo) {
+function tablaHtml(lista, clave, fijo, desde, color) {
   var ord = fijo ? lista : ordenar(lista), n = fijo ? 9999 : (ST.pagina[clave] || 50), vis = ord.slice(0, n);
-  var h = '<div class="tabla"><table>' + cabecera(fijo) + "<tbody>" + vis.map(fila).join("") + "</tbody></table></div>";
+  var h = '<div class="tabla"><table>' + cabecera(fijo) + "<tbody>" + vis.map(function (p, i) { return fila(p, fijo && desde ? desde + i : 0, color); }).join("") + "</tbody></table></div>";
   if (ord.length > n) h += '<button type="button" class="mas" data-mas="' + esc(clave) + '">Mostrar más (' + (ord.length - n) + " restantes)</button>";
   if (!ord.length) h = '<div class="vacio">Sin empresas.</div>';
   return h + '<div id="ay-' + esc(clave) + '"></div>';
+}
+function podioHtml(l) {
+  var orden = [1, 0, 2].filter(function (i) { return l[i]; });
+  return '<div class="podio">' + orden.map(function (i) {
+    var p = l[i], f = FUND[p.ticker_yahoo], c = colorPunt(f), v = varp(p);
+    return '<div class="fila pod p' + (i + 1) + '" tabindex="0" role="button" data-t="' + esc(p.ticker_yahoo) + '" style="--rc:' + (c || "transparent") + '">' +
+      '<div class="pn">' + (i + 1) + 'º</div>' + logo(f, 24) +
+      '<div class="nm" title="' + esc(p.nombre) + '">' + esc(p.nombre) + '</div><div class="meta">' + esc(p.ticker_google) + "</div>" +
+      '<div class="num">' + precio(p.cierre, p.moneda) + "</div>" +
+      '<div class="num ' + (v == null ? "nd" : v >= 0 ? "up" : "down") + '">' + (v == null ? "n/d" : (v >= 0 ? "+" : "") + nf(v, 2) + " %") + "</div>" + chipPunt(f) + "</div>";
+  }).join("") + "</div>";
 }
 
 /* ---------- vista principal ---------- */
@@ -200,8 +233,8 @@ function paises() {
 var SECT_EN = { "Tecnología de la información": "Information Technology", "Finanzas": "Financials", "Salud": "Health Care", "Industriales": "Industrials", "Consumo discrecional": "Consumer Discretionary", "Consumo básico": "Consumer Staples", "Energía": "Energy", "Materiales": "Materials", "Bienes raíces": "Real Estate", "Servicios de comunicación": "Communication Services", "Servicios públicos": "Utilities", "Sin clasificar": "Unclassified" };
 function inicio() {
   var con = PRECIOS.filter(function (p) { var f = FUND[p.ticker_yahoo]; return f && f.puntuacion != null; });
-  if (!con.length) return '<div class="vacio">Elige un país para ver sus sectores, o busca una empresa.</div>';
-  var h = '<p class="sub">Resumen inicial: 10 de EE. UU. y 5 de cada uno de los demás países. Para ver más, elige un país y abre sus sectores.</p>';
+  if (!con.length) return '<div class="vacio">Elige un país para ver sus empresas, o busca una.</div>';
+  var h = '<p class="sub">Resumen inicial: 10 de EE. UU. y 5 de cada uno de los demás países, en clasificación de la nota del modelo. Para ver más, elige un país.</p>';
   [["Más favorables", -1], ["Más desfavorables", 1]].forEach(function (blk) {
     h += "<h2>" + blk[0] + "</h2>";
     paises().forEach(function (c) {
@@ -211,7 +244,8 @@ function inicio() {
         return d || a.nombre.localeCompare(b.nombre, "es");
       }).slice(0, n);
       if (!l.length) return;
-      h += '<div class="bloque"><h3 style="margin:14px 14px 4px;color:var(--fg);font-size:15px">' + esc(c[0]) + "</h3>" + tablaHtml(l, "ini|" + blk[0] + "|" + c[0], true) + "</div>";
+      h += '<div class="bloque"><h3 style="margin:14px 14px 4px;color:var(--fg);font-size:15px">' + esc(c[0]) + "</h3>" + podioHtml(l) +
+           (l.length > 3 ? tablaHtml(l.slice(3), "ini|" + blk[0] + "|" + c[0], true, 4, true) : '<div id="ay-ini|' + esc(blk[0] + "|" + c[0]) + '"></div>') + "</div>";
     });
   });
   return h;
@@ -219,9 +253,16 @@ function inicio() {
 function sectorDe(p) { var f = FUND[p.ticker_yahoo]; return f && f.sector ? f.sector : "Sin clasificar"; }
 function vistaLista() {
   var h = "<h1>Acciones</h1>";
-  h += '<div class="paises" role="group" aria-label="País">' + paises().map(function (c) {
-    return '<button type="button" class="pais" data-pais="' + esc(c[0]) + '" aria-pressed="' + (ST.pais === c[0]) + '">' + esc(c[0]) + "<small>" + c[1] + "</small></button>";
-  }).join("") + "</div>";
+  h += '<div class="filtros"><label>País <select id="selPais" aria-label="País"><option value="">Elige un país…</option>' + paises().map(function (c) {
+    return '<option value="' + esc(c[0]) + '"' + (ST.pais === c[0] ? " selected" : "") + ">" + esc(c[0]) + " (" + c[1] + ")</option>";
+  }).join("") + "</select></label>";
+  if (ST.pais) {
+    var por = sectoresDe(ST.pais);
+    h += '<label>Sector <select id="selSector" aria-label="Sector"><option value="">Todos los sectores (' + por.total + ")</option>" + por.lista.map(function (s) {
+      return '<option value="' + esc(s[0]) + '"' + (ST.sector === s[0] ? " selected" : "") + ">" + esc(s[0]) + (SECT_EN[s[0]] ? " (" + SECT_EN[s[0]] + ")" : "") + " · " + s[1] + "</option>";
+    }).join("") + "</select></label>";
+  }
+  h += "</div>";
   h += '<input id="q" type="search" placeholder="Buscar empresa o ticker (en todos los países)" aria-label="Buscar empresa o ticker" value="' + esc(ST.q) + '">';
   h += '<div id="res"></div>';
   h += '<p class="aviso"><b>Datos con retraso, solo informativos. No es una recomendación de inversión.</b> Cierre = último precio de la sesión (cierre oficial si la bolsa ya ha cerrado). Moneda de cada cotización con su símbolo; «p» = peniques. Fuente: Yahoo Finance (no es una API oficial).</p>';
@@ -232,6 +273,12 @@ function vistaLista() {
   pintarResultados();
   $("q").addEventListener("input", function (e) { ST.q = e.target.value; pintarResultados(); });
 }
+function sectoresDe(pais) {
+  var m = {}, t = 0;
+  PRECIOS.forEach(function (p) { if (p.pais === pais) { var s = sectorDe(p); m[s] = (m[s] || 0) + 1; t++; } });
+  var ks = Object.keys(m).sort(function (a, b) { if (a === "Sin clasificar") return 1; if (b === "Sin clasificar") return -1; return a.localeCompare(b, "es"); });
+  return { total: t, lista: ks.map(function (k) { return [k, m[k]]; }) };
+}
 function pintarResultados() {
   var res = $("res"), q = ST.q.trim().toLowerCase();
   if (q) {
@@ -240,25 +287,10 @@ function pintarResultados() {
     return;
   }
   if (!ST.pais) { res.innerHTML = inicio(); return; }
-  var del = PRECIOS.filter(function (p) { return p.pais === ST.pais; }), por = {};
-  del.forEach(function (p) { var s = sectorDe(p); (por[s] = por[s] || []).push(p); });
-  var ss = Object.keys(por).sort(function (a, b) { if (a === "Sin clasificar") return 1; if (b === "Sin clasificar") return -1; return a.localeCompare(b, "es"); });
-  res.innerHTML = ss.map(function (s) {
-    var clave = ST.pais + "|" + s;
-    return '<details class="sector" data-clave="' + esc(clave) + '"' + (ST.abiertos[clave] ? " open" : "") + "><summary>" + esc(s) + (SECT_EN[s] ? " <em style=\"color:var(--muted);font-weight:400;font-style:normal\">(" + esc(SECT_EN[s]) + ")</em>" : "") + "<span>" + por[s].length + " empresas</span></summary><div class=\"cuerpo\">" + (ST.abiertos[clave] ? tablaHtml(por[s], clave) : "") + "</div></details>";
-  }).join("");
-  res.__por = por;
+  var del = PRECIOS.filter(function (p) { return p.pais === ST.pais && (!ST.sector || sectorDe(p) === ST.sector); });
+  res.innerHTML = "<h2>" + esc(ST.pais) + (ST.sector ? " · " + esc(ST.sector) + (SECT_EN[ST.sector] ? " (" + esc(SECT_EN[ST.sector]) + ")" : "") : "") + " (" + del.length + ")</h2>" + tablaHtml(del, ST.pais + "|" + ST.sector);
 }
-function repintarAbiertos() {
-  var q = ST.q.trim();
-  if (q) { pintarResultados(); return; }
-  var res = $("res");
-  if (!res || !res.__por) return;
-  Array.prototype.forEach.call(res.querySelectorAll("details.sector[open]"), function (d) {
-    var clave = d.getAttribute("data-clave"), s = clave.split("|")[1];
-    d.querySelector(".cuerpo").innerHTML = tablaHtml(res.__por[s], clave);
-  });
-}
+function repintarAbiertos() { pintarResultados(); }
 
 /* ---------- ficha de una acción ---------- */
 function votoTxt(k, v) {
@@ -329,11 +361,11 @@ function vistaFicha(t) {
     h += '<div class="caja"><h3>Dividendo ' + q("div") + '</h3><div class="v">' + (f.dividendo == null ? (f.frecuencia === "no paga" ? "No paga" : "n/d") : nf(f.dividendo, 2) + " %") + '</div><div class="s">Frecuencia: ' + esc(f.frecuencia || "n/d") + "</div></div>";
     h += '<div class="caja"><h3>Deuda / patrimonio ' + q("deuda") + '</h3><div class="v">' + d + "</div></div>";
     h += "</div>";
-    h += '<div class="caja"><h3>Las cinco señales</h3><div class="tabla"><table class="sen"><thead><tr><th>Señal</th><th>Valor</th><th>Mediana del grupo</th><th>Voto</th></tr></thead><tbody>';
+    h += '<div class="caja"><h3>Las cinco señales '+ q("etiq") + '</h3><div id="ay-sen"></div><div class="tabla"><table class="sen"><thead><tr><th>Señal</th><th>Valor</th><th>Mediana del grupo</th><th>Voto</th></tr></thead><tbody>';
     var sen = f.señales || {};
     [["per", "PER"], ["roe", "ROE"], ["deuda", "Deuda / patrimonio"], ["tendencia", "Tendencia del precio"], ["sentimiento", "Sentimiento de mercado (analistas)"]].forEach(function (k) {
       var s = sen[k[0]];
-      var val = !s ? "n/d" : (k[0] === "tendencia" ? s.valor : k[0] === "sentimiento" ? nf(s.valor, 1) + " de 5 (1 = compra fuerte, 5 = venta)" : (k[0] === "roe" ? nf(s.valor, 1) + " %" : (s.valor == null ? "n/d" : nf(s.valor, k[0] === "per" ? 1 : 2))));
+      var val = !s ? "n/d" : (k[0] === "tendencia" ? s.valor : k[0] === "sentimiento" ? nf(6 - s.valor, 1) + " de 5 (1 = venta fuerte, 3 = neutral, 5 = compra fuerte)" : (k[0] === "roe" ? nf(s.valor, 1) + " %" : (s.valor == null ? "n/d" : nf(s.valor, k[0] === "per" ? 1 : 2))));
       var med = !s || s.mediana == null ? "—" : (k[0] === "roe" ? nf(s.mediana, 1) + " %" : nf(s.mediana, k[0] === "per" ? 1 : 2));
       if (k[0] === "tendencia" || k[0] === "sentimiento") med = "—";
       h += "<tr><td>" + k[1] + "</td><td>" + esc(val) + (s && s.nota ? " <span class=\"nd\">(" + esc(s.nota) + ")</span>" : "") + "</td><td>" + med + '</td><td class="voto">' + esc(votoTxt(k[0], s ? s.voto : null)) + "</td></tr>";
@@ -364,7 +396,7 @@ document.addEventListener("click", function (ev) {
   var T = ev.target; if (!T.closest) return;
   var a = T.closest("[data-ayuda]");
   if (a) {
-    var k = a.getAttribute("data-ayuda"), host = a.closest(".bloque") ? a.closest(".bloque").querySelector('[id^="ay-"]') : a.closest(".caja") ? $("ay-ficha") : (a.closest("details") ? a.closest("details").querySelector('[id^="ay-"]') : document.querySelector('[id^="ay-"]'));
+    var k = a.getAttribute("data-ayuda"), host = a.closest(".bloque") ? a.closest(".bloque").querySelector('[id^="ay-"]') : a.closest(".caja") ? (a.closest(".caja").querySelector('[id^="ay-"]') || $("ay-ficha")) : (a.closest("details") ? a.closest("details").querySelector('[id^="ay-"]') : document.querySelector('[id^="ay-"]'));
     if (!host && $("ay-busqueda")) host = $("ay-busqueda");
     if (host) { var abierto = host.getAttribute("data-k") === k && host.innerHTML; host.setAttribute("data-k", abierto ? "" : k); host.innerHTML = abierto ? "" : '<div class="pop" role="note">' + esc(AYUDA[k]) + "</div>"; }
     return;
@@ -373,21 +405,18 @@ document.addEventListener("click", function (ev) {
   if (o) { var kk = o.getAttribute("data-ord"); ST.orden = ST.orden.k === kk ? { k: kk, d: -ST.orden.d } : { k: kk, d: 1 }; ST.pagina = {}; repintarAbiertos(); return; }
   var m = T.closest("[data-mas]");
   if (m) { var c = m.getAttribute("data-mas"); ST.pagina[c] = (ST.pagina[c] || 50) + 50; repintarAbiertos(); return; }
-  var pb = T.closest("[data-pais]");
-  if (pb) { var np = pb.getAttribute("data-pais"); ST.pais = ST.pais === np ? null : np; ST.q = ""; vistaLista(); return; }
   if (T.closest("[data-volver]")) { history.back(); setTimeout(function () { if (location.hash) location.hash = ""; }, 50); return; }
-  var r = T.closest("tr.fila");
+  var r = T.closest("[data-t]");
   if (r) { location.hash = encodeURIComponent(r.getAttribute("data-t")); }
 });
 document.addEventListener("keydown", function (ev) {
   if ((ev.key === "Enter" || ev.key === " ") && ev.target.classList && ev.target.classList.contains("fila")) { ev.preventDefault(); location.hash = encodeURIComponent(ev.target.getAttribute("data-t")); }
 });
-document.addEventListener("toggle", function (ev) {
-  var d = ev.target; if (!d.classList || !d.classList.contains("sector")) return;
-  var clave = d.getAttribute("data-clave"), res = $("res");
-  ST.abiertos[clave] = d.open;
-  if (d.open && res && res.__por) d.querySelector(".cuerpo").innerHTML = tablaHtml(res.__por[clave.split("|")[1]], clave);
-}, true);
+document.addEventListener("change", function (ev) {
+  var T = ev.target;
+  if (T.id === "selPais") { ST.pais = T.value || null; ST.sector = ""; ST.q = ""; ST.pagina = {}; vistaLista(); }
+  else if (T.id === "selSector") { ST.sector = T.value; ST.pagina = {}; pintarResultados(); }
+});
 window.addEventListener("hashchange", ruta);
 
 function cargar() {
