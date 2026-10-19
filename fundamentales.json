@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T23:24:00+00:00",
+ "actualizado": "2026-10-19T06:01:57+00:00",
  "parametros": {
   "margen": 0.2,
   "min_señales": 3,
@@ -88,7 +88,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -506,7 +506,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -915,7 +915,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -1316,7 +1316,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -1730,7 +1730,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -2160,7 +2160,7 @@
      "año_anterior": 1544000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -2572,7 +2572,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -2972,7 +2972,7 @@
    "eps": 0.9,
    "roe": 9.26,
    "deuda": null,
-   "dividendo": 6.431,
+   "dividendo": 6.433,
    "dividendo_yahoo": 4.48,
    "pagos_12m": 3,
    "frecuencia": "irregular",
@@ -2998,7 +2998,7 @@
      "año_anterior": 67579000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -3408,7 +3408,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -3815,7 +3815,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -4220,7 +4220,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -4633,7 +4633,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -5025,17 +5025,17 @@
   },
   "1605.T": {
    "sector_yahoo": "Energy",
-   "per": 9.914096,
+   "per": 10.240964,
    "eps": 370.18,
    "roe": 9.27,
    "deuda": 0.246,
-   "dividendo": 2.888,
+   "dividendo": 2.794,
    "dividendo_yahoo": 3.05,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "JPY",
-   "tendencia": "lateral",
+   "tendencia": "alcista",
    "volumen_rel": null,
    "resultados": {
     "proxima": "2026-11-12",
@@ -5047,12 +5047,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Energía",
    "señales": {
     "per": {
-     "valor": 9.914096,
+     "valor": 10.240964,
      "voto": -1,
      "mediana": 5.423
     },
@@ -5067,8 +5067,8 @@
      "mediana": 0.578
     },
     "tendencia": {
-     "valor": "lateral",
-     "voto": 0
+     "valor": "alcista",
+     "voto": 1
     }
    },
    "grupo": {
@@ -5077,8 +5077,8 @@
     "n": 3,
     "pequeno": true
    },
-   "puntuacion": -1,
-   "etiqueta": "Desfavorable",
+   "puntuacion": 0,
+   "etiqueta": "Neutral",
    "deuda_etiqueta": "bajo"
   },
   "1609.HK": {
@@ -5472,7 +5472,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -5902,7 +5902,7 @@
      "año_anterior": null
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -6325,7 +6325,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -6704,11 +6704,11 @@
   },
   "1808.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 11.155988,
+   "per": 11.26015,
    "eps": 235.21,
    "roe": 11.59,
    "deuda": 0.733,
-   "dividendo": 3.811,
+   "dividendo": 3.776,
    "dividendo_yahoo": 3.81,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -6726,12 +6726,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 11.155988,
+     "valor": 11.26015,
      "voto": 1,
      "mediana": 18.853
     },
@@ -7136,7 +7136,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -7546,7 +7546,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -7952,7 +7952,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -8259,7 +8259,7 @@
     "per": {
      "valor": 7.6877794,
      "voto": 1,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 12.88,
@@ -8346,11 +8346,11 @@
   },
   "1928.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 8.601441,
+   "per": 8.700396,
    "eps": 394.12,
    "roe": 12.26,
    "deuda": 0.817,
-   "dividendo": 4.248,
+   "dividendo": 4.198,
    "dividendo_yahoo": 4.31,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -8376,12 +8376,12 @@
      "año_anterior": 68230000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 8.601441,
+     "valor": 8.700396,
      "voto": 1,
      "mediana": 18.853
     },
@@ -8789,7 +8789,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -9206,7 +9206,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -9643,7 +9643,7 @@
      "año_anterior": 734357000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -10082,7 +10082,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -10490,7 +10490,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -10918,7 +10918,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -11314,11 +11314,11 @@
   },
   "2269.T": {
    "sector_yahoo": "Consumer Defensive",
-   "per": 29.034214,
+   "per": 29.209322,
    "eps": 148.48,
    "roe": 5.53,
    "deuda": 0.169,
-   "dividendo": 2.494,
+   "dividendo": 2.478,
    "dividendo_yahoo": 2.49,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -11336,12 +11336,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 29.034214,
+     "valor": 29.209322,
      "voto": -1,
      "mediana": 19.672
     },
@@ -11737,7 +11737,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -12161,7 +12161,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -12580,7 +12580,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -12937,7 +12937,7 @@
     "per": {
      "valor": 27.832798,
      "voto": -1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 11.98,
@@ -12988,7 +12988,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -13411,7 +13411,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -13831,7 +13831,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -14243,7 +14243,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -14664,7 +14664,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -15080,7 +15080,7 @@
      "año_anterior": 18258000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -15507,7 +15507,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -15923,7 +15923,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -16348,7 +16348,7 @@
      "año_anterior": null
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -16743,7 +16743,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -17154,7 +17154,7 @@
      "año_anterior": 6038955975.93
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -17565,7 +17565,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -17948,11 +17948,11 @@
   },
   "2871.T": {
    "sector_yahoo": "Consumer Defensive",
-   "per": 18.737406,
+   "per": 18.768072,
    "eps": 114.13,
    "roe": 10.27,
    "deuda": 0.495,
-   "dividendo": 2.291,
+   "dividendo": 2.287,
    "dividendo_yahoo": 2.29,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -17970,12 +17970,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 18.737406,
+     "valor": 18.768072,
      "voto": 0,
      "mediana": 19.672
     },
@@ -18381,11 +18381,11 @@
   },
   "3086.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 24.405462,
+   "per": 24.251741,
    "eps": 110.59,
    "roe": 6.4,
    "deuda": 0.78,
-   "dividendo": 2.038,
+   "dividendo": 2.05,
    "dividendo_yahoo": 2.07,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -18403,12 +18403,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 24.405462,
+     "valor": 24.251741,
      "voto": -1,
      "mediana": 18.853
     },
@@ -18706,7 +18706,7 @@
     "per": {
      "valor": 9.409609,
      "voto": 1,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 10.54,
@@ -18815,7 +18815,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -19224,7 +19224,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -19628,7 +19628,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -20046,7 +20046,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -20466,7 +20466,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -20879,7 +20879,7 @@
      "año_anterior": 13962558000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -21287,7 +21287,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -21716,7 +21716,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -22133,7 +22133,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -22530,7 +22530,7 @@
   },
   "4005.T": {
    "sector_yahoo": "Basic Materials",
-   "per": 9.294227,
+   "per": 9.29887,
    "eps": 64.61,
    "roe": 13.17,
    "deuda": 0.802,
@@ -22552,12 +22552,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 9.294227,
+     "valor": 9.29887,
      "voto": 1,
      "mediana": 14.958
     },
@@ -22926,11 +22926,11 @@
   },
   "4151.T": {
    "sector_yahoo": "Healthcare",
-   "per": 15.073695,
+   "per": 14.993242,
    "eps": 155.37,
    "roe": 9.25,
    "deuda": null,
-   "dividendo": 2.861,
+   "dividendo": 2.876,
    "dividendo_yahoo": 2.99,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -22948,14 +22948,14 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 15.073695,
+     "valor": 14.993242,
      "voto": 1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 9.25,
@@ -23330,11 +23330,11 @@
   },
   "4452.T": {
    "sector_yahoo": "Consumer Defensive",
-   "per": 33.196575,
+   "per": 33.544415,
    "eps": 112.12,
    "roe": 12.32,
    "deuda": 0.206,
-   "dividendo": 2.082,
+   "dividendo": 2.06,
    "dividendo_yahoo": 2.1,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -23352,12 +23352,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 33.196575,
+     "valor": 33.544415,
      "voto": -1,
      "mediana": 19.672
     },
@@ -23426,7 +23426,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": -2.26,
@@ -23485,7 +23485,7 @@
     "per": {
      "valor": 11.909686,
      "voto": 1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 21.3,
@@ -23543,7 +23543,7 @@
     "per": {
      "valor": 7.5254526,
      "voto": 1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 38.53,
@@ -23601,7 +23601,7 @@
     "per": {
      "valor": 9.477662,
      "voto": 1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 16.77,
@@ -23659,7 +23659,7 @@
     "per": {
      "valor": 22.180712,
      "voto": 0,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 23.49,
@@ -23712,7 +23712,7 @@
     "per": {
      "valor": 35.970173,
      "voto": -1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 4.96,
@@ -23741,11 +23741,11 @@
   },
   "4543.T": {
    "sector_yahoo": "Healthcare",
-   "per": 20.961521,
+   "per": 21.136425,
    "eps": 111.49,
    "roe": 10.85,
    "deuda": 0.264,
-   "dividendo": 1.412,
+   "dividendo": 1.4,
    "dividendo_yahoo": 1.54,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -23763,14 +23763,14 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 20.961521,
+     "valor": 21.136425,
      "voto": 0,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 10.85,
@@ -23828,7 +23828,7 @@
     "per": {
      "valor": 20.751932,
      "voto": 0,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 14.81,
@@ -23886,7 +23886,7 @@
     "per": {
      "valor": 16.163525,
      "voto": 1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 13.42,
@@ -24159,7 +24159,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -24546,11 +24546,11 @@
   },
   "5201.T": {
    "sector_yahoo": "Industrials",
-   "per": 12.98753,
+   "per": 12.926698,
    "eps": 427.41,
    "roe": 6.1,
    "deuda": 0.383,
-   "dividendo": 3.783,
+   "dividendo": 3.804,
    "dividendo_yahoo": 3.78,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -24568,12 +24568,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 12.98753,
+     "valor": 12.926698,
      "voto": 1,
      "mediana": 17.077
     },
@@ -24952,11 +24952,11 @@
   },
   "5406.T": {
    "sector_yahoo": "Basic Materials",
-   "per": 11.801079,
+   "per": 11.792287,
    "eps": 170.62,
    "roe": 5.68,
    "deuda": 0.554,
-   "dividendo": 3.973,
+   "dividendo": 3.977,
    "dividendo_yahoo": 3.97,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -24974,12 +24974,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 11.801079,
+     "valor": 11.792287,
      "voto": 1,
      "mediana": 14.958
     },
@@ -25358,11 +25358,11 @@
   },
   "5801.T": {
    "sector_yahoo": "Industrials",
-   "per": 26.462265,
+   "per": 26.124214,
    "eps": 127.2,
    "roe": 22.57,
    "deuda": 0.776,
-   "dividendo": 0.951,
+   "dividendo": 0.964,
    "dividendo_yahoo": 0.33,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -25380,12 +25380,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 26.462265,
+     "valor": 26.124214,
      "voto": -1,
      "mediana": 17.077
     },
@@ -25561,7 +25561,7 @@
     "per": {
      "valor": 16.991688,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 8.2,
@@ -25804,7 +25804,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -26211,7 +26211,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -26600,11 +26600,11 @@
   },
   "6113.T": {
    "sector_yahoo": "Industrials",
-   "per": 23.691778,
+   "per": 23.447384,
    "eps": 104.34,
    "roe": null,
    "deuda": 0.149,
-   "dividendo": 2.549,
+   "dividendo": 2.576,
    "dividendo_yahoo": 2.59,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -26622,12 +26622,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 23.691778,
+     "valor": 23.447384,
      "voto": -1,
      "mediana": 17.077
     },
@@ -26854,7 +26854,7 @@
     "per": {
      "valor": 17.130154,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 5.12,
@@ -27000,11 +27000,11 @@
   },
   "6273.T": {
    "sector_yahoo": "Industrials",
-   "per": 25.763264,
+   "per": 25.275871,
    "eps": 2626.22,
    "roe": 9.85,
    "deuda": 0.002,
-   "dividendo": 1.478,
+   "dividendo": 1.505,
    "dividendo_yahoo": 1.48,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -27022,12 +27022,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 25.763264,
+     "valor": 25.275871,
      "voto": -1,
      "mediana": 17.077
     },
@@ -27406,11 +27406,11 @@
   },
   "6471.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 16.289417,
+   "per": 16.148924,
    "eps": 64.06,
    "roe": 4.89,
    "deuda": 0.494,
-   "dividendo": 3.258,
+   "dividendo": 3.287,
    "dividendo_yahoo": 3.26,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -27428,12 +27428,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 16.289417,
+     "valor": 16.148924,
      "voto": 0,
      "mediana": 18.853
     },
@@ -27802,11 +27802,11 @@
   },
   "6506.T": {
    "sector_yahoo": "Industrials",
-   "per": 31.600983,
+   "per": 31.528801,
    "eps": 138.54,
    "roe": 7.64,
    "deuda": 0.244,
-   "dividendo": 1.599,
+   "dividendo": 1.602,
    "dividendo_yahoo": 1.64,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -27824,12 +27824,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 31.600983,
+     "valor": 31.528801,
      "voto": -1,
      "mediana": 17.077
     },
@@ -28200,11 +28200,11 @@
   },
   "6645.T": {
    "sector_yahoo": "Technology",
-   "per": 27.830055,
+   "per": 27.60194,
    "eps": 210.42,
    "roe": 5.13,
    "deuda": 0.316,
-   "dividendo": 0.888,
+   "dividendo": 0.895,
    "dividendo_yahoo": 1.78,
    "pagos_12m": 1,
    "frecuencia": "anual",
@@ -28222,12 +28222,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 27.830055,
+     "valor": 27.60194,
      "voto": 0,
      "mediana": 32.438
     },
@@ -28628,7 +28628,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -29020,11 +29020,11 @@
   },
   "6702.T": {
    "sector_yahoo": "Technology",
-   "per": 24.554487,
+   "per": 24.332426,
    "eps": 180.13,
    "roe": 16.2,
    "deuda": 0.065,
-   "dividendo": 1.357,
+   "dividendo": 1.368,
    "dividendo_yahoo": 1.36,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -29042,12 +29042,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 24.554487,
+     "valor": 24.332426,
      "voto": 1,
      "mediana": 32.438
     },
@@ -29429,11 +29429,11 @@
   },
   "6762.T": {
    "sector_yahoo": "Technology",
-   "per": 16.14063,
+   "per": 16.014381,
    "eps": 182.18,
    "roe": 11.63,
    "deuda": 0.33,
-   "dividendo": 1.36,
+   "dividendo": 1.371,
    "dividendo_yahoo": 1.36,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -29451,12 +29451,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 16.14063,
+     "valor": 16.014381,
      "voto": 1,
      "mediana": 32.438
     },
@@ -29843,11 +29843,11 @@
   },
   "6841.T": {
    "sector_yahoo": "Industrials",
-   "per": 19.683996,
+   "per": 19.635448,
    "eps": 226.58,
    "roe": null,
    "deuda": 0.047,
-   "dividendo": 2.063,
+   "dividendo": 2.067,
    "dividendo_yahoo": 2.06,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -29865,12 +29865,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 19.683996,
+     "valor": 19.635448,
      "voto": 0,
      "mediana": 17.077
     },
@@ -30266,7 +30266,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -30653,7 +30653,7 @@
    "eps": -397.11,
    "roe": null,
    "deuda": 0.516,
-   "dividendo": 0.602,
+   "dividendo": 0.617,
    "dividendo_yahoo": 1.2,
    "pagos_12m": 1,
    "frecuencia": "anual",
@@ -30679,7 +30679,7 @@
      "año_anterior": null
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -31084,7 +31084,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -31383,7 +31383,7 @@
     "per": {
      "valor": 17.854612,
      "voto": -1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "deuda": {
      "valor": null,
@@ -31471,11 +31471,11 @@
   },
   "7202.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 10.277512,
+   "per": 10.253589,
    "eps": 209.0,
    "roe": 11.6,
    "deuda": 0.602,
-   "dividendo": 4.33,
+   "dividendo": 4.339,
    "dividendo_yahoo": 4.38,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -31493,12 +31493,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 10.277512,
+     "valor": 10.253589,
      "voto": 1,
      "mediana": 18.853
     },
@@ -31903,17 +31903,17 @@
   },
   "7272.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 8.341542,
+   "per": 8.229606,
    "eps": 223.34,
    "roe": 7.72,
    "deuda": 0.796,
-   "dividendo": 1.879,
+   "dividendo": 1.903,
    "dividendo_yahoo": 2.68,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "JPY",
-   "tendencia": "alcista",
+   "tendencia": "lateral",
    "volumen_rel": null,
    "resultados": {
     "proxima": "2026-11-06",
@@ -31925,12 +31925,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 8.341542,
+     "valor": 8.229606,
      "voto": 1,
      "mediana": 18.853
     },
@@ -31945,8 +31945,8 @@
      "mediana": 0.463
     },
     "tendencia": {
-     "valor": "alcista",
-     "voto": 1
+     "valor": "lateral",
+     "voto": 0
     }
    },
    "grupo": {
@@ -31955,8 +31955,8 @@
     "n": 34,
     "pequeno": false
    },
-   "puntuacion": 1,
-   "etiqueta": "Favorable",
+   "puntuacion": 0,
+   "etiqueta": "Neutral",
    "deuda_etiqueta": "alto"
   },
   "7453.T": {
@@ -32311,7 +32311,7 @@
    "eps": -261.57,
    "roe": -15.22,
    "deuda": 0.369,
-   "dividendo": 1.386,
+   "dividendo": 1.418,
    "dividendo_yahoo": 1.11,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -32329,7 +32329,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -32404,7 +32404,7 @@
     "per": {
      "valor": 27.614378,
      "voto": -1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 10.57,
@@ -32520,7 +32520,7 @@
     "per": {
      "valor": 32.502502,
      "voto": -1,
-     "mediana": 20.857
+     "mediana": 20.944
     },
     "roe": {
      "valor": 26.53,
@@ -32718,11 +32718,11 @@
   },
   "7911.T": {
    "sector_yahoo": "Industrials",
-   "per": 20.206121,
+   "per": 20.161507,
    "eps": 112.07,
    "roe": 5.61,
    "deuda": 0.374,
-   "dividendo": 1.943,
+   "dividendo": 1.946,
    "dividendo_yahoo": 1.28,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -32740,12 +32740,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 20.206121,
+     "valor": 20.161507,
      "voto": 0,
      "mediana": 17.077
     },
@@ -33126,11 +33126,11 @@
   },
   "8031.T": {
    "sector_yahoo": "Industrials",
-   "per": 15.249481,
+   "per": 15.206782,
    "eps": 327.88,
    "roe": 11.38,
    "deuda": 0.637,
-   "dividendo": 2.6,
+   "dividendo": 2.608,
    "dividendo_yahoo": 2.6,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -33148,12 +33148,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 15.249481,
+     "valor": 15.206782,
      "voto": 0,
      "mediana": 17.077
     },
@@ -33442,7 +33442,7 @@
     "per": {
      "valor": 16.995626,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 12.44,
@@ -33501,7 +33501,7 @@
     "per": {
      "valor": 8.965133,
      "voto": 1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 9.31,
@@ -33531,11 +33531,11 @@
   },
   "8267.T": {
    "sector_yahoo": "Consumer Cyclical",
-   "per": 35.360077,
+   "per": 36.38661,
    "eps": 31.66,
    "roe": 6.64,
    "deuda": 1.952,
-   "dividendo": 1.295,
+   "dividendo": 1.258,
    "dividendo_yahoo": 1.25,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -33553,12 +33553,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 35.360077,
+     "valor": 36.38661,
      "voto": -1,
      "mediana": 18.853
     },
@@ -33618,7 +33618,7 @@
     "per": {
      "valor": 14.376825,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 6.56,
@@ -33685,7 +33685,7 @@
     "per": {
      "valor": 14.69531,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 9.46,
@@ -33744,7 +33744,7 @@
     "per": {
      "valor": 20.573763,
      "voto": -1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 9.23,
@@ -33811,7 +33811,7 @@
     "per": {
      "valor": 12.719631,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 10.78,
@@ -33878,7 +33878,7 @@
     "per": {
      "valor": 14.290076,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 8.57,
@@ -33945,7 +33945,7 @@
     "per": {
      "valor": 17.74582,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 8.3,
@@ -33975,11 +33975,11 @@
   },
   "8354.T": {
    "sector_yahoo": "Financial Services",
-   "per": 15.048553,
+   "per": 14.996791,
    "eps": 482.97,
    "roe": 8.71,
    "deuda": null,
-   "dividendo": 2.752,
+   "dividendo": 2.761,
    "dividendo_yahoo": 2.89,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -33997,14 +33997,14 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 15.048553,
+     "valor": 14.996791,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 8.71,
@@ -34071,7 +34071,7 @@
     "per": {
      "valor": 14.346624,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 12.49,
@@ -34138,7 +34138,7 @@
     "per": {
      "valor": 10.522911,
      "voto": 1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 14.04,
@@ -34197,7 +34197,7 @@
     "per": {
      "valor": 12.304125,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 10.96,
@@ -34264,7 +34264,7 @@
     "per": {
      "valor": 10.990701,
      "voto": 1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 11.16,
@@ -34323,7 +34323,7 @@
     "per": {
      "valor": 21.112574,
      "voto": -1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 14.43,
@@ -34382,7 +34382,7 @@
     "per": {
      "valor": 50.615875,
      "voto": -1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "deuda": {
      "valor": 0.157,
@@ -34410,11 +34410,11 @@
   },
   "8725.T": {
    "sector_yahoo": "Financial Services",
-   "per": 8.453622,
+   "per": 8.50623,
    "eps": 608.26,
    "roe": 16.09,
    "deuda": 0.252,
-   "dividendo": 3.257,
+   "dividendo": 3.239,
    "dividendo_yahoo": 2.72,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -34432,14 +34432,14 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 8.453622,
+     "valor": 8.50623,
      "voto": 1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 16.09,
@@ -34498,7 +34498,7 @@
     "per": {
      "valor": 12.064783,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 13.58,
@@ -34557,7 +34557,7 @@
     "per": {
      "valor": 48.590076,
      "voto": -1,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "deuda": {
      "valor": 0.093,
@@ -34614,7 +34614,7 @@
     "per": {
      "valor": 16.344488,
      "voto": 0,
-     "mediana": 14.872
+     "mediana": 14.846
     },
     "roe": {
      "valor": 9.34,
@@ -34673,7 +34673,7 @@
     "per": {
      "valor": 17.826189,
      "voto": -1,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 6.71,
@@ -34731,7 +34731,7 @@
     "per": {
      "valor": 15.603078,
      "voto": -1,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 10.7,
@@ -34789,7 +34789,7 @@
     "per": {
      "valor": 10.830971,
      "voto": 0,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 10.64,
@@ -34818,11 +34818,11 @@
   },
   "8830.T": {
    "sector_yahoo": "Real Estate",
-   "per": 14.275037,
+   "per": 14.2222805,
    "eps": 227.46,
    "roe": 9.36,
    "deuda": 1.56,
-   "dividendo": 1.509,
+   "dividendo": 1.514,
    "dividendo_yahoo": 1.6,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -34840,14 +34840,14 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
     "per": {
-     "valor": 14.275037,
+     "valor": 14.2222805,
      "voto": 0,
-     "mediana": 12.553
+     "mediana": 12.527
     },
     "roe": {
      "valor": 9.36,
@@ -35219,11 +35219,11 @@
   },
   "9021.T": {
    "sector_yahoo": "Industrials",
-   "per": 11.748967,
+   "per": 11.996853,
    "eps": 254.15,
    "roe": 9.34,
    "deuda": 1.153,
-   "dividendo": 3.382,
+   "dividendo": 3.314,
    "dividendo_yahoo": 3.38,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -35241,12 +35241,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 11.748967,
+     "valor": 11.996853,
      "voto": 1,
      "mediana": 17.077
     },
@@ -35633,11 +35633,11 @@
   },
   "9201.T": {
    "sector_yahoo": "Industrials",
-   "per": 11.616102,
+   "per": 11.633809,
    "eps": 254.13,
    "roe": 9.07,
    "deuda": 0.555,
-   "dividendo": 3.32,
+   "dividendo": 3.312,
    "dividendo_yahoo": 3.25,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -35655,12 +35655,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 11.616102,
+     "valor": 11.633809,
      "voto": 1,
      "mediana": 17.077
     },
@@ -36040,17 +36040,17 @@
   },
   "9503.T": {
    "sector_yahoo": "Utilities",
-   "per": 7.0866876,
+   "per": 7.217305,
    "eps": 375.14,
    "roe": 12.51,
    "deuda": 1.211,
-   "dividendo": 3.197,
+   "dividendo": 3.139,
    "dividendo_yahoo": 3.01,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "JPY",
-   "tendencia": "lateral",
+   "tendencia": "alcista",
    "volumen_rel": null,
    "resultados": {
     "proxima": "2026-10-29",
@@ -36062,12 +36062,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
     "per": {
-     "valor": 7.0866876,
+     "valor": 7.217305,
      "voto": 1,
      "mediana": 12.059
     },
@@ -36082,8 +36082,8 @@
      "mediana": 0.912
     },
     "tendencia": {
-     "valor": "lateral",
-     "voto": 0
+     "valor": "alcista",
+     "voto": 1
     }
    },
    "grupo": {
@@ -36092,7 +36092,7 @@
     "n": 5,
     "pequeno": false
    },
-   "puntuacion": 1,
+   "puntuacion": 2,
    "etiqueta": "Favorable",
    "deuda_etiqueta": "alto"
   },
@@ -36486,7 +36486,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -36910,7 +36910,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -37326,7 +37326,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -37774,7 +37774,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -38203,7 +38203,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -38635,7 +38635,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -39075,7 +39075,7 @@
      "año_anterior": 336000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -39517,7 +39517,7 @@
      "año_anterior": 1779000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -39973,7 +39973,7 @@
      "año_anterior": 1772000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -40428,7 +40428,7 @@
      "año_anterior": 275000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -40884,7 +40884,7 @@
      "año_anterior": 732000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -41348,7 +41348,7 @@
      "año_anterior": 2109000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -41812,7 +41812,7 @@
      "año_anterior": 1432000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -42259,7 +42259,7 @@
      "año_anterior": 888800000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -42710,7 +42710,7 @@
      "año_anterior": 630000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -43160,7 +43160,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -43624,7 +43624,7 @@
      "año_anterior": 608440000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -44066,7 +44066,7 @@
      "año_anterior": 808000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
@@ -44525,7 +44525,7 @@
      "año_anterior": -42619000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -44972,7 +44972,7 @@
      "año_anterior": 895000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -45420,7 +45420,7 @@
      "año_anterior": 2951000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -45868,7 +45868,7 @@
      "año_anterior": 12370000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -46309,7 +46309,7 @@
      "año_anterior": 88977000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -46751,7 +46751,7 @@
      "año_anterior": 215355000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -47208,7 +47208,7 @@
      "año_anterior": 291000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -47665,7 +47665,7 @@
      "año_anterior": 191000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -48128,7 +48128,7 @@
      "año_anterior": -66042000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -48585,7 +48585,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -49053,7 +49053,7 @@
      "año_anterior": 506000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -49509,7 +49509,7 @@
      "año_anterior": 396354000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -49957,7 +49957,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -50412,7 +50412,7 @@
      "año_anterior": 183000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -50875,7 +50875,7 @@
      "año_anterior": 1687000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -51324,7 +51324,7 @@
      "año_anterior": 411426000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -51770,7 +51770,7 @@
      "año_anterior": 5262000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -52226,7 +52226,7 @@
      "año_anterior": 131091000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -52682,7 +52682,7 @@
      "año_anterior": 199337000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -53138,7 +53138,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -53592,7 +53592,7 @@
      "año_anterior": 458000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -54016,8 +54016,8 @@
   },
   "ENR.DE": {
    "sector_yahoo": "Industrials",
-   "per": 44.401314,
-   "eps": 3.04,
+   "per": 43.541935,
+   "eps": 3.1,
    "roe": 27.75,
    "deuda": 0.265,
    "dividendo": 0.519,
@@ -54046,12 +54046,12 @@
      "año_anterior": 615000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 44.401314,
+     "valor": 43.541935,
      "voto": -1,
      "mediana": 26.776
     },
@@ -54494,7 +54494,7 @@
      "año_anterior": 174685000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -54957,7 +54957,7 @@
      "año_anterior": 391000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -55403,7 +55403,7 @@
      "año_anterior": -36000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -55868,7 +55868,7 @@
      "año_anterior": null
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -56310,7 +56310,7 @@
      "año_anterior": 1026000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Sin clasificar",
    "señales": {
@@ -56770,7 +56770,7 @@
      "año_anterior": 717000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -57224,7 +57224,7 @@
      "año_anterior": 107028000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -57678,7 +57678,7 @@
      "año_anterior": 135000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -58138,7 +58138,7 @@
      "año_anterior": 469000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -58600,7 +58600,7 @@
      "año_anterior": 60000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -59063,7 +59063,7 @@
      "año_anterior": 536000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -59497,7 +59497,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -59930,7 +59930,7 @@
      "año_anterior": null
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -60379,7 +60379,7 @@
      "año_anterior": 221000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -60800,7 +60800,7 @@
    "eps": 0.57,
    "roe": 42.14,
    "deuda": 1.607,
-   "dividendo": 1.988,
+   "dividendo": 1.989,
    "dividendo_yahoo": 2.05,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -60826,7 +60826,7 @@
      "año_anterior": 1125000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -61283,7 +61283,7 @@
      "año_anterior": 59200000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -61725,7 +61725,7 @@
      "año_anterior": 235000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -62165,7 +62165,7 @@
      "año_anterior": 140887000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -62605,7 +62605,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -63070,7 +63070,7 @@
      "año_anterior": 701000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -63506,7 +63506,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -63966,7 +63966,7 @@
      "año_anterior": 1202849000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -64421,7 +64421,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -64876,7 +64876,7 @@
      "año_anterior": 1766000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
@@ -65341,7 +65341,7 @@
      "año_anterior": 2398000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -65790,7 +65790,7 @@
      "año_anterior": 114000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
@@ -66238,7 +66238,7 @@
      "año_anterior": 1678000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -66681,7 +66681,7 @@
      "año_anterior": 1040000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -67123,7 +67123,7 @@
      "año_anterior": 328000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
@@ -67570,7 +67570,7 @@
      "año_anterior": 1216000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Energía",
    "señales": {
@@ -68026,7 +68026,7 @@
      "año_anterior": 1211000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -68488,7 +68488,7 @@
      "año_anterior": 202348000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -68930,7 +68930,7 @@
      "año_anterior": 452000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -69385,7 +69385,7 @@
      "año_anterior": 211000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -69847,7 +69847,7 @@
      "año_anterior": 421300000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -70311,7 +70311,7 @@
      "año_anterior": 445000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -70757,7 +70757,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -71203,7 +71203,7 @@
      "año_anterior": 1419000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -71665,7 +71665,7 @@
      "año_anterior": 2910000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -72129,7 +72129,7 @@
      "año_anterior": 571229000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -72586,7 +72586,7 @@
      "año_anterior": 450000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
@@ -73002,8 +73002,8 @@
   },
   "PSON.L": {
    "sector_yahoo": "Communication Services",
-   "per": 28.05102,
-   "eps": 0.49,
+   "per": 27.49,
+   "eps": 0.5,
    "roe": 9.16,
    "deuda": 0.524,
    "dividendo": 1.862,
@@ -73024,12 +73024,12 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
     "per": {
-     "valor": 28.05102,
+     "valor": 27.49,
      "voto": -1,
      "mediana": 19.718
     },
@@ -73471,7 +73471,7 @@
      "año_anterior": 2666000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -73925,7 +73925,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -74365,7 +74365,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -74803,7 +74803,7 @@
      "año_anterior": 141489000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -75249,7 +75249,7 @@
      "año_anterior": 1657000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -75705,7 +75705,7 @@
      "año_anterior": 1697000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -76135,7 +76135,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -76581,7 +76581,7 @@
      "año_anterior": -43900000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -77014,7 +77014,7 @@
      "año_anterior": 250300000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -77469,7 +77469,7 @@
      "año_anterior": 473000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios públicos",
    "señales": {
@@ -77919,7 +77919,7 @@
      "año_anterior": -10000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -78362,7 +78362,7 @@
      "año_anterior": -28000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
@@ -78817,7 +78817,7 @@
      "año_anterior": 4500000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -79267,7 +79267,7 @@
      "año_anterior": 78372000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -79730,7 +79730,7 @@
      "año_anterior": 116140000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Energía",
    "señales": {
@@ -80188,7 +80188,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo básico",
    "señales": {
@@ -80644,7 +80644,7 @@
      "año_anterior": 22423000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -81106,7 +81106,7 @@
      "año_anterior": 353218000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Salud",
    "señales": {
@@ -81561,7 +81561,7 @@
      "año_anterior": 622000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
@@ -82003,7 +82003,7 @@
      "año_anterior": 865079000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -82431,7 +82431,7 @@
    "eps": -0.01,
    "roe": 0.11,
    "deuda": 1.002,
-   "dividendo": 3.228,
+   "dividendo": 3.229,
    "dividendo_yahoo": 3.26,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -82449,7 +82449,7 @@
     "ingresos": null,
     "beneficio": null
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Servicios de comunicación",
    "señales": {
@@ -82900,7 +82900,7 @@
      "año_anterior": 68264000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Bienes raíces",
    "señales": {
@@ -83364,7 +83364,7 @@
      "año_anterior": 257000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
@@ -83811,7 +83811,7 @@
      "año_anterior": 546000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Energía",
    "señales": {
@@ -84260,7 +84260,7 @@
      "año_anterior": 331000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Finanzas",
    "señales": {
@@ -84717,7 +84717,7 @@
      "año_anterior": 374000000.0
     }
    },
-   "fecha": "2026-10-18",
+   "fecha": "2026-10-19",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
