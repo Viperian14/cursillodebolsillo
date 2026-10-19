@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="theme-color" content="#0b110d">
 <title>Acciones · Cursillo de Bolsillo</title>
 <link rel="icon" href="favicon.png">
@@ -238,19 +238,17 @@ var SECT_EN = { "Tecnología de la información": "Information Technology", "Fin
 function inicio() {
   var con = PRECIOS.filter(function (p) { var f = FUND[p.ticker_yahoo]; return f && f.puntuacion != null; });
   if (!con.length) return '<div class="vacio">Elige un país para ver sus empresas, o busca una.</div>';
-  var h = '<p class="sub">Resumen inicial: 10 de EE. UU. y 5 de cada uno de los demás países, en clasificación de la nota del modelo. Para ver más, elige un país.</p>';
-  [["Más favorables", -1], ["Más desfavorables", 1]].forEach(function (blk) {
-    h += "<h2>" + blk[0] + "</h2>";
-    paises().forEach(function (c) {
-      var n = c[0] === "EE. UU." ? 10 : 5;
-      var l = con.filter(function (p) { return p.pais === c[0]; }).sort(function (a, b) {
-        var d = (FUND[a.ticker_yahoo].puntuacion - FUND[b.ticker_yahoo].puntuacion) * blk[1];
-        return d || a.nombre.localeCompare(b.nombre, "es");
-      }).slice(0, n);
-      if (!l.length) return;
-      h += '<div class="bloque"><h3 style="margin:14px 14px 4px;color:var(--fg);font-size:15px">' + esc(c[0]) + "</h3>" + podioHtml(l) +
-           (l.length > 3 ? tablaHtml(l.slice(3), "ini|" + blk[0] + "|" + c[0], true, 4, true) : '<div id="ay-ini|' + esc(blk[0] + "|" + c[0]) + '"></div>') + "</div>";
+  var h = '<p class="sub">Resumen inicial: un ranking por país, de la nota más favorable a la más desfavorable. EE. UU. muestra 10 mejores y 10 peores; los demás países, 5 y 5. Para ver más, elige un país.</p>';
+  paises().forEach(function (c) {
+    var k = c[0] === "EE. UU." ? 10 : 5;
+    var todas = con.filter(function (p) { return p.pais === c[0]; }).sort(function (a, b) {
+      var d = FUND[b.ticker_yahoo].puntuacion - FUND[a.ticker_yahoo].puntuacion;   /* mejor nota primero */
+      return d || a.nombre.localeCompare(b.nombre, "es");
     });
+    if (!todas.length) return;
+    var l = todas.length <= 2 * k ? todas : todas.slice(0, k).concat(todas.slice(todas.length - k));
+    h += '<div class="bloque"><h2 style="margin:18px 14px 4px">' + esc(c[0]) + ' <span class="nd" style="font-size:13px;font-weight:400">· ' + l.length + " de " + todas.length + " empresas con nota</span></h2>" + podioHtml(l) +
+         (l.length > 3 ? tablaHtml(l.slice(3), "ini|" + c[0], true, 4, true) : '<div id="ay-ini|' + esc(c[0]) + '"></div>') + "</div>";
   });
   return h;
 }
