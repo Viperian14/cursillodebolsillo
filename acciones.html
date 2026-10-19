@@ -78,6 +78,9 @@
   .filtros select { font:inherit; color:var(--fg); background:rgba(19,27,21,.95); border:1px solid #4a5040; border-radius:6px; padding:10px 12px; width:100%; }
   tr.col td { background-image:linear-gradient(var(--rc),var(--rc)); }
   tr.fila.col:hover td { filter:brightness(1.25); }
+  .paistit { margin:28px 0 2px; padding:8px 14px; border-left:4px solid var(--accent); background:rgba(19,27,21,.7); border-radius:0 8px 8px 0; }
+  .paistit .nd { font-size:13px; font-weight:400; }
+  .subtit { margin:14px 14px 4px; color:var(--fg); font-size:15px; }
   .rk { color:var(--accent); font-family:var(--font-num); }
   .podio { display:flex; gap:8px; align-items:flex-end; padding:10px 14px 6px; }
   .pod { flex:1 1 0; min-width:0; border:1px solid var(--line); border-radius:8px; padding:10px 6px; text-align:center; cursor:pointer; background-color:rgba(19,27,21,.95); background-image:linear-gradient(var(--rc),var(--rc)); display:flex; flex-direction:column; align-items:center; gap:3px; }
@@ -238,17 +241,20 @@ var SECT_EN = { "Tecnología de la información": "Information Technology", "Fin
 function inicio() {
   var con = PRECIOS.filter(function (p) { var f = FUND[p.ticker_yahoo]; return f && f.puntuacion != null; });
   if (!con.length) return '<div class="vacio">Elige un país para ver sus empresas, o busca una.</div>';
-  var h = '<p class="sub">Resumen inicial: un ranking por país, de la nota más favorable a la más desfavorable. EE. UU. muestra 10 mejores y 10 peores; los demás países, 5 y 5. Para ver más, elige un país.</p>';
+  var h = '<p class="sub">Resumen inicial por país: sus empresas más favorables y más desfavorables según la nota del modelo (10 y 10 en EE. UU.; 5 y 5 en los demás). Para ver más, elige un país.</p>';
   paises().forEach(function (c) {
     var k = c[0] === "EE. UU." ? 10 : 5;
-    var todas = con.filter(function (p) { return p.pais === c[0]; }).sort(function (a, b) {
-      var d = FUND[b.ticker_yahoo].puntuacion - FUND[a.ticker_yahoo].puntuacion;   /* mejor nota primero */
-      return d || a.nombre.localeCompare(b.nombre, "es");
-    });
+    var todas = con.filter(function (p) { return p.pais === c[0]; });
     if (!todas.length) return;
-    var l = todas.length <= 2 * k ? todas : todas.slice(0, k).concat(todas.slice(todas.length - k));
-    h += '<div class="bloque"><h2 style="margin:18px 14px 4px">' + esc(c[0]) + ' <span class="nd" style="font-size:13px;font-weight:400">· ' + l.length + " de " + todas.length + " empresas con nota</span></h2>" + podioHtml(l) +
-         (l.length > 3 ? tablaHtml(l.slice(3), "ini|" + c[0], true, 4, true) : '<div id="ay-ini|' + esc(c[0]) + '"></div>') + "</div>";
+    h += '<h2 class="paistit">' + esc(c[0]) + ' <span class="nd">· ' + todas.length + " empresas con nota</span></h2>";
+    [["Más favorables", -1], ["Más desfavorables", 1]].forEach(function (blk) {
+      var l = todas.slice().sort(function (a, b) {
+        var d = (FUND[a.ticker_yahoo].puntuacion - FUND[b.ticker_yahoo].puntuacion) * blk[1];
+        return d || a.nombre.localeCompare(b.nombre, "es");
+      }).slice(0, k);
+      h += '<div class="bloque"><h3 class="subtit">' + blk[0] + "</h3>" + podioHtml(l) +
+           (l.length > 3 ? tablaHtml(l.slice(3), "ini|" + c[0] + "|" + blk[0], true, 4, true) : '<div id="ay-ini|' + esc(c[0] + "|" + blk[0]) + '"></div>') + "</div>";
+    });
   });
   return h;
 }
