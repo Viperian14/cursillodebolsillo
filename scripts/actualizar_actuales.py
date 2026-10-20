@@ -6,7 +6,8 @@ valor real ("act") y, si BLS/FRED ya tienen el dato del mes o la semana que toca
 en el formato de la página. Solo usa la biblioteca estándar de Python.
 Claves en variables de entorno: BLS_KEY y FRED_KEY.
 """
-import json, os, re, sys, datetime as dt
+import json, os, re, sys, time, subprocess, datetime as dt
+from zoneinfo import ZoneInfo
 import urllib.request, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -222,6 +223,19 @@ def calc_subasta(ev, d):
         v = row.get(campo)
         if ok and v not in (None, '', 'null'):
             return ('%s%%' % v.rstrip('0').rstrip('.')).replace('.', ','), False
+    # Respaldo: TreasuryDirect publica los resultados al momento (fiscaldata puede tardar horas o un día)
+    try:
+        q2 = urllib.parse.urlencode({'format': 'json', 'type': tipo, 'dateFieldName': 'auctionDate', 'startDate': d.isoformat(), 'endDate': d.isoformat()})
+        j2 = http_json('https://www.treasurydirect.gov/TA_WS/securities/auctioned?' + q2)
+        campo2 = 'highDiscountRate' if letra else 'highYield'
+        for row in (j2 if isinstance(j2, list) else []):
+            term = row.get('securityTerm') or ''
+            ok = term == letra if letra else any(term.startswith(x) for x in nota[1])
+            v = str(row.get(campo2) or '').strip()
+            if ok and v not in ('', 'null', 'None'):
+                return ('%s%%' % v.rstrip('0').rstrip('.')).replace('.', ','), False
+    except Exception as ex:
+        print('Respaldo TreasuryDirect sin datos: %s' % ex, file=sys.stderr)
     return None
 
 
@@ -329,6 +343,17 @@ def sonda():
         r['eurostat_minr'] = {'id': j.get('id'), 'size': j.get('size'), 'dims': dims, 'n_valores': len(j.get('value', {}))}
     except Exception as ex:
         r['eurostat_minr'] = 'ERROR: %s' % ex
+    try:
+        q = urllib.parse.urlencode({'filter': 'security_type:eq:Bill,auction_date:gte:2026-10-12', 'fields': 'auction_date,security_term,high_discnt_rate', 'sort': '-auction_date', 'page[size]': '12'}, safe=':,[]-')
+        r['subastas_fiscaldata'] = (http_json('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?' + q) or {}).get('data')
+    except Exception as ex:
+        r['subastas_fiscaldata'] = 'ERROR: %s' % ex
+    try:
+        q = urllib.parse.urlencode({'format': 'json', 'type': 'Bill', 'dateFieldName': 'auctionDate', 'startDate': '2026-10-12', 'endDate': '2026-10-20'})
+        j = http_json('https://www.treasurydirect.gov/TA_WS/securities/auctioned?' + q)
+        r['subastas_treasurydirect'] = [{k: x.get(k) for k in ('auctionDate', 'securityTerm', 'highDiscountRate', 'highInvestmentRate')} for x in j][:12] if isinstance(j, list) else j
+    except Exception as ex:
+        r['subastas_treasurydirect'] = 'ERROR: %s' % ex
     for sid in ('ICSA', 'RSAFS', 'INDPRO'):
         try:
             o = fred_obs(sid, 3)
@@ -341,49 +366,139 @@ def sonda():
     print(json.dumps(r, ensure_ascii=False, indent=1))
 
 
+TZ_ES = ZoneInfo('Europe/Madrid')
+DEMORA_MIN = 3        # se empieza a buscar el dato 3 minutos después de la hora del evento
+VENTANA_MIN = 20      # y se sigue intentando hasta 20 minutos después
+ANTELACION_MIN = 12   # el trabajo arranca como mucho 12 minutos antes (el reloj de GitHub se retrasa a veces)
+
+
+def hora_evento(e):
+    """Instante UTC del evento (las horas del calendario son de España) o None si no tiene hora."""
+    if not re.match(r'^\d{1,2}:\d{2}$', e.get('h') or ''):
+        return None
+    y, mo, d = map(int, e['d'].split('-'))
+    hh, mm_ = map(int, e['h'].split(':'))
+    return dt.datetime(y, mo, d, hh, mm_, tzinfo=TZ_ES).astimezone(dt.timezone.utc)
+
+
+def manejador(ev):
+    for h in HANDLERS:
+        if h[0] in ev:
+            return h
+    return None
+
+
+def intentar(e):
+    """Busca el dato de un evento. Devuelve el item {d, match, act, res} o None."""
+    h = manejador(e['ev'])
+    if not h:
+        return None
+    key, fn, needs_month, tol = h
+    month = month_in(e['ev'])
+    ev_date = dt.date.fromisoformat(e['d'])
+    if needs_month and not month:
+        return None
+    try:
+        res = calc_subasta(e['ev'], ev_date) if key.startswith('Subasta') else fn(month, ev_date.year, ev_date)
+    except Exception as ex:
+        print('ERROR en %s: %s' % (e['ev'], ex), file=sys.stderr)
+        return None
+    if not res:
+        print('Sin dato todavía:', e['d'], e['ev'])
+        return None
+    act, higher_better = res
+    return {'d': e['d'], 'match': e['ev'], 'act': act, 'res': res_from(act, e['fc'], higher_better, tol)}
+
+
+def cargar_actuales():
+    path = os.path.join(ROOT, 'actuales.json')
+    try:
+        return path, json.load(open(path, encoding='utf-8'))
+    except Exception:
+        return path, {'updated': '', 'items': []}
+
+
+def guardar_actuales(path, cur):
+    cur['updated'] = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(cur, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+
+
+def subir():
+    """Publica ya lo que haya cambiado (la página se actualiza al momento)."""
+    sh = os.path.join(ROOT, 'scripts', 'guardar.sh')
+    if os.path.exists(sh) and os.environ.get('GITHUB_ACTIONS'):
+        subprocess.run(['bash', sh], cwd=ROOT, check=False)
+
+
+def eventos_pendientes(cur, hoy=None):
+    html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+    today = hoy or dt.datetime.now(dt.timezone.utc).date().isoformat()
+    have = {(i['d'], i['match']) for i in cur.get('items', [])}
+    return [e for e in pending_events(html, today) if (e['d'], e['ev']) not in have]
+
+
+def debidos_en(eventos, ahora):
+    """Eventos con dato automático cuya franja (hora - ANTELACION, hora + VENTANA) contiene 'ahora'."""
+    out = []
+    for e in eventos:
+        t = hora_evento(e)
+        if t is None or not manejador(e['ev']):
+            continue
+        if t - dt.timedelta(minutes=ANTELACION_MIN) <= ahora <= t + dt.timedelta(minutes=VENTANA_MIN):
+            out.append((e, t))
+    return out
+
+
+def ventana():
+    """Modo por franjas: solo trabaja si hay un evento con dato automático en torno a ahora.
+    Espera hasta DEMORA_MIN minutos después de la hora del evento y reintenta cada 45 s hasta VENTANA_MIN."""
+    t0 = time.time()
+    path, cur = cargar_actuales()
+    while True:
+        ahora = dt.datetime.now(dt.timezone.utc)
+        debidos = debidos_en(eventos_pendientes(cur), ahora)
+        if not debidos:
+            print('Nada que buscar en esta franja.')
+            return
+        listos = [(e, t) for e, t in debidos if ahora >= t + dt.timedelta(minutes=DEMORA_MIN)]
+        nuevos = 0
+        for e, t in listos:
+            item = intentar(e)
+            if item:
+                cur.setdefault('items', []).append(item)
+                guardar_actuales(path, cur)
+                nuevos += 1
+                print('NUEVO:', json.dumps(item, ensure_ascii=False))
+        if nuevos:
+            subir()
+            continue            # recalcula qué falta
+        if time.time() - t0 > 28 * 60:
+            print('Tiempo máximo de la franja alcanzado.')
+            return
+        time.sleep(45)
+
+
 def main():
     if '--gate' in sys.argv:
         sys.exit(gate())
     if '--sonda' in sys.argv:
         return sonda()
-    today = dt.datetime.now(dt.timezone.utc).date()
-    html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
-    path = os.path.join(ROOT, 'actuales.json')
-    try:
-        cur = json.load(open(path, encoding='utf-8'))
-    except Exception:
-        cur = {'updated': '', 'items': []}
-    have = {(i['d'], i['match']) for i in cur.get('items', [])}
-    new = 0
-    for e in pending_events(html, today.isoformat()):
-        if (e['d'], e['ev']) in have:
-            continue
-        for key, fn, needs_month, tol in HANDLERS:
-            if key not in e['ev']:
-                continue
-            month = month_in(e['ev'])
-            ev_date = dt.date.fromisoformat(e['d'])
-            res = None
-            if month or not needs_month:
-                try:
-                    res = calc_subasta(e['ev'], ev_date) if key.startswith('Subasta') else fn(month, ev_date.year, ev_date)
-                except Exception as ex:
-                    print('ERROR en %s: %s' % (e['ev'], ex), file=sys.stderr)
-            if res:
-                act, higher_better = res
-                item = {'d': e['d'], 'match': e['ev'], 'act': act, 'res': res_from(act, e['fc'], higher_better, tol)}
-                cur.setdefault('items', []).append(item)
-                new += 1
-                print('NUEVO:', json.dumps(item, ensure_ascii=False))
-            else:
-                print('Sin dato todavía:', e['d'], e['ev'])
-            break
-    if new:
-        cur['updated'] = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(cur, f, ensure_ascii=False, indent=1)
-            f.write('\n')
-    print('Eventos nuevos:', new)
+    if '--ventana' in sys.argv:
+        return ventana()
+    # Barrido: prueba todos los eventos pendientes de los últimos días (una o dos veces al día)
+    path, cur = cargar_actuales()
+    nuevos = 0
+    for e in eventos_pendientes(cur):
+        item = intentar(e)
+        if item:
+            cur.setdefault('items', []).append(item)
+            nuevos += 1
+            print('NUEVO:', json.dumps(item, ensure_ascii=False))
+    if nuevos:
+        guardar_actuales(path, cur)
+    print('Eventos nuevos:', nuevos)
 
 
 if __name__ == '__main__':
