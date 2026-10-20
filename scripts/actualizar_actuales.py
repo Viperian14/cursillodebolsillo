@@ -351,7 +351,7 @@ def sonda():
     try:
         q = urllib.parse.urlencode({'format': 'json', 'type': 'Bill', 'dateFieldName': 'auctionDate', 'startDate': '2026-10-12', 'endDate': '2026-10-20'})
         j = http_json('https://www.treasurydirect.gov/TA_WS/securities/auctioned?' + q)
-        r['subastas_treasurydirect'] = [{k: x.get(k) for k in ('auctionDate', 'securityTerm', 'highDiscountRate', 'highInvestmentRate')} for x in j][:12] if isinstance(j, list) else j
+        r['subastas_treasurydirect'] = {'n': len(j), 'claves': sorted(j[0].keys()), 'ej': [{k: v for k, v in x.items() if v not in (None, '')} for x in j[-3:]]} if isinstance(j, list) and j else j
     except Exception as ex:
         r['subastas_treasurydirect'] = 'ERROR: %s' % ex
     for sid in ('ICSA', 'RSAFS', 'INDPRO'):
