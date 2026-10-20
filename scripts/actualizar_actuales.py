@@ -227,8 +227,10 @@ def calc_subasta(ev, d):
     try:
         q2 = urllib.parse.urlencode({'format': 'json', 'type': tipo, 'dateFieldName': 'auctionDate', 'startDate': d.isoformat(), 'endDate': d.isoformat()})
         j2 = http_json('https://www.treasurydirect.gov/TA_WS/securities/auctioned?' + q2)
-        campo2 = 'highDiscountRate' if letra else 'highYield'
+        campo2 = 'highRate' if letra else 'highYield'
         for row in (j2 if isinstance(j2, list) else []):
+            if (row.get('competitiveAuctionCloseDate') or '')[:10] != d.isoformat():
+                continue
             term = row.get('securityTerm') or ''
             ok = term == letra if letra else any(term.startswith(x) for x in nota[1])
             v = str(row.get(campo2) or '').strip()
