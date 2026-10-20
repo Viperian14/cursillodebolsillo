@@ -1,5 +1,5 @@
 {
- "hecho": "2026-10-19T22:39:14Z",
+ "hecho": "2026-10-20T07:30:33Z",
  "bls": {
   "CUSR0000SA0": {
    "ultimo": "2026-09",
@@ -244,5 +244,126 @@
    ]
   },
   "n_valores": 1052
- }
+ },
+ "subastas_fiscaldata": [
+  {
+   "auction_date": "2026-10-20",
+   "security_term": "6-Week",
+   "high_discnt_rate": "null"
+  },
+  {
+   "auction_date": "2026-10-19",
+   "security_term": "13-Week",
+   "high_discnt_rate": "null"
+  },
+  {
+   "auction_date": "2026-10-19",
+   "security_term": "26-Week",
+   "high_discnt_rate": "null"
+  },
+  {
+   "auction_date": "2026-10-15",
+   "security_term": "8-Week",
+   "high_discnt_rate": "4.050000"
+  },
+  {
+   "auction_date": "2026-10-15",
+   "security_term": "4-Week",
+   "high_discnt_rate": "4.000000"
+  },
+  {
+   "auction_date": "2026-10-14",
+   "security_term": "17-Week",
+   "high_discnt_rate": "4.195000"
+  },
+  {
+   "auction_date": "2026-10-13",
+   "security_term": "6-Week",
+   "high_discnt_rate": "3.980000"
+  },
+  {
+   "auction_date": "2026-10-13",
+   "security_term": "26-Week",
+   "high_discnt_rate": "4.200000"
+  },
+  {
+   "auction_date": "2026-10-13",
+   "security_term": "13-Week",
+   "high_discnt_rate": "4.085000"
+  }
+ ],
+ "subastas_treasurydirect": [
+  {
+   "auctionDate": null,
+   "securityTerm": "13-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "26-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "4-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "8-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "17-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "6-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "13-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "26-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "4-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "8-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "17-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  },
+  {
+   "auctionDate": null,
+   "securityTerm": "6-Week",
+   "highDiscountRate": null,
+   "highInvestmentRate": null
+  }
+ ]
 }
