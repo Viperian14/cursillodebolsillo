@@ -11283,19 +11283,50 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     var min = Math.floor((lo - pad) / step) * step, max = Math.ceil((hi + pad) / step) * step;
     var range = max - min;
     var sorted = lv.map(function (l) { return l.p; }).sort(function (a, b) { return a - b; });
-    var minGap = range;
-    for (var i = 1; i < sorted.length; i++) { var g = sorted[i] - sorted[i - 1]; if (g > 0 && g < minGap) minGap = g; }
-    var height = Math.min(1000, Math.max(560, Math.ceil(22 * range / minGap)));
-    function top(p) { return ((max - p) / range) * 100; }
-    var html = '<div class="ladder" style="height:' + height + 'px" role="img" aria-label="Escala de precios con resistencias y soportes">';
+    var html = '<div class="ladder" data-min="' + min + '" data-max="' + max + '" style="height:560px" role="img" aria-label="Escala de precios con resistencias y soportes">';
     (e.bands || []).forEach(function (b) {
-      html += '<div class="band" style="top:' + top(b.hi) + '%;height:' + (top(b.lo) - top(b.hi)) + '%"><span>' + esc(b.label) + '</span></div>';
+      html += '<div class="band" data-lo="' + b.lo + '" data-hi="' + b.hi + '"><span>' + esc(b.label) + '</span></div>';
     });
     lv.forEach(function (l) {
-      html += '<div class="lv ' + esc(l.cls) + '" style="top:' + top(l.p) + '%"><span class="p">' + (l.lbl || fmt(l.p)) + '</span><span class="ln"></span><span class="t">' + (isKey(e, l.p) ? '🚨 ' : '') + esc(l.t) + '</span></div>';
+      html += '<div class="lv ' + esc(l.cls) + '" data-p="' + l.p + '"><span class="p">' + (l.lbl || fmt(l.p)) + '</span><span class="ln"></span><span class="t">' + (isKey(e, l.p) ? '🚨 ' : '') + esc(l.t) + '</span></div>';
     });
     return html + '</div>';
   }
+
+  /* Separación normal: cada nivel ocupa lo que mide su texto más un hueco que crece un poco con la distancia real en precio. */
+  function layoutLadders() {
+    var ls = document.querySelectorAll('.ladder');
+    for (var i = 0; i < ls.length; i++) {
+      var L = ls[i], els = [].slice.call(L.querySelectorAll('.lv'));
+      if (!els.length) continue;
+      var items = els.map(function (el) { return { el: el, p: parseFloat(el.getAttribute('data-p')), h: Math.max(el.offsetHeight, 20) }; });
+      items.sort(function (a, b) { return b.p - a.p; });
+      var span = items[0].p - items[items.length - 1].p || 1;
+      var ref = span / Math.max(4, items.length * 0.6);
+      var y = 24;
+      items.forEach(function (it, k) {
+        if (k > 0) {
+          var pr = items[k - 1], g = pr.p - it.p;
+          y += (pr.h + it.h) / 2 + 10 + (g > 0 ? 26 * Math.min(1, g / ref) : 0);
+        }
+        it.y = y; it.el.style.top = y + 'px';
+      });
+      function yOf(p) {
+        for (var k = 0; k < items.length - 1; k++) {
+          var a = items[k], b = items[k + 1];
+          if (p <= a.p && p >= b.p) return a.p === b.p ? a.y : a.y + (a.p - p) / (a.p - b.p) * (b.y - a.y);
+        }
+        return p > items[0].p ? items[0].y - 10 : items[items.length - 1].y + 10;
+      }
+      [].forEach.call(L.querySelectorAll('.band'), function (bd) {
+        var t = yOf(parseFloat(bd.getAttribute('data-hi'))), b2 = yOf(parseFloat(bd.getAttribute('data-lo')));
+        bd.style.top = t + 'px'; bd.style.height = Math.max(8, b2 - t) + 'px';
+      });
+      L.style.height = (y + items[items.length - 1].h / 2 + 24) + 'px';
+    }
+  }
+  window.addEventListener('resize', function () { clearTimeout(layoutLadders._t); layoutLadders._t = setTimeout(layoutLadders, 120); });
+  window.addEventListener('load', layoutLadders);
 
   function rows(list) {
     return '<div class="rows">' + list.map(function (r) {
@@ -11401,6 +11432,8 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     }
 
     document.getElementById('entry').innerHTML = out;
+    layoutLadders();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutLadders);
   }
 
   /* ---------- Plan: largos a la izquierda, cortos a la derecha, análisis reciente y secuencia ---------- */
