@@ -127,7 +127,7 @@ header { display: flex; flex-direction: column; gap: 18px; }
 .band { position: absolute; left: 0; right: 0; background: var(--band); }
 .band span { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--accent); font-weight: 500; }
 .lv { position: absolute; left: 0; right: 0; transform: translateY(-50%); display: flex; align-items: center; gap: 10px; padding-inline: 12px; z-index: 1; }
-.lv .p { width: 56px; text-align: right; font-family: var(--font-num); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 14px; flex: none; background: var(--surface); }
+.lv .p { min-width: 56px; white-space: nowrap; padding-inline: 4px; text-align: right; font-family: var(--font-num); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 14px; flex: none; background: var(--surface); }
 .lv .ln { flex: 1 1 24px; height: 0; border-top: 1px solid var(--line); min-width: 12px; }
 .lv .t { font-size: 12.5px; color: var(--muted); text-align: right; max-width: 52%; line-height: 1.25; }
 .lv.res .p { color: var(--up); } .lv.res .ln { border-top-color: var(--up); }
@@ -404,6 +404,13 @@ h2 { color: var(--muted); }
 .lscol.long .lsh { background: var(--up-soft); color: var(--up); } .lscol.short .lsh { background: var(--down-soft); color: var(--down); }
 .lscol.long .pl { border-top: 2px solid var(--up); } .lscol.short .pl { border-top: 2px solid var(--down); }
 .pl.none p { color: var(--muted); }
+.ps { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ps li { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 10px; font-size: 14px; line-height: 1.4; padding-top: 8px; border-top: 1px solid var(--line); }
+.ps li:first-child { border-top: 0; padding-top: 0; }
+.ps .l { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+.ps li.n { grid-template-columns: minmax(0,1fr); }
+.ps .v { color: var(--fg); }
+.sc .ps li, .recent .ps li { border-top: 0; padding-top: 0; }
 @media (max-width: 700px) { .lsgrid { grid-template-columns: minmax(0, 1fr); } }
 
 /* Operativas */
@@ -11395,7 +11402,7 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
 
     if (e.scenarios && e.scenarios.length) {
       out += sec('esc', 'Escenarios', '<div class="scen">' + e.scenarios.map(function (s) {
-        return '<article class="sc ' + esc(s.cls) + '"><span class="tag">' + esc(s.tag) + '</span><div class="top"><h3>' + esc(s.title) + '</h3><span class="pct">' + esc(s.pct) + '%</span></div><div class="bar" aria-hidden="true"><i style="width:' + Number(s.pct) + '%"></i></div><p>' + esc(s.text) + '</p></article>';
+        return '<article class="sc ' + esc(s.cls) + '"><span class="tag">' + esc(s.tag) + '</span><div class="top"><h3>' + esc(s.title) + '</h3><span class="pct">' + esc(s.pct) + '%</span></div><div class="bar" aria-hidden="true"><i style="width:' + Number(s.pct) + '%"></i></div>' + sentList(s.text, false) + '</article>';
       }).join('') + '</div>');
     }
 
@@ -11473,12 +11480,28 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
   }
   /* Gráfica pequeña (solo precios): zona de entrada, línea de anulación y objetivos.
      play = { k, dir: 'long'|'short', entry: [lo, hi] o precio, on: 'cómo se activa', stop: precio, off: 'cómo se anula', targets: [precios] } */
+  var SENT = /(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ¿¡])/;
+  function sentList(text, labeled) {
+    var parts = String(text).split(SENT).filter(Boolean);
+    return '<ul class="ps">' + parts.map(function (t, i) {
+      var l = '', v = t;
+      if (labeled) {
+        if (/^Stop\b/.test(t)) { l = '🛑 Stop'; v = t.replace(/^Stop\s+/, ''); }
+        else if (/^Objetivos?\b|^Siguiente\b/.test(t)) { l = '🎯 Objetivos'; v = t.replace(/^Objetivos?\s+/, ''); }
+        else if (/^Va (a favor|contra|en contra)/.test(t)) { l = 'Contexto'; }
+        else if (/^(Tamaño|Reduzco|Resistencia fuerte|Salida)/.test(t)) { l = 'Gestión'; }
+        else if (/^(Se anula|Si )/.test(t)) { l = 'Se anula'; }
+        else if (i === 0) { l = 'Entrada'; }
+      }
+      return l ? '<li><span class="l">' + l + '</span><span class="v">' + esc(v) + '</span></li>' : '<li class="n"><span class="v">' + esc(v) + '</span></li>';
+    }).join('') + '</ul>';
+  }
   function fmtP(n) {
     var r = Math.round(n * 100) / 100, neg = r < 0, a = Math.abs(r).toString().split('.');
     var ip = a[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     return (neg ? '−' : '') + ip + (a[1] ? ',' + a[1] : '');
   }
-  function miniChart(e, pl) {
+  function miniChart(e, pl, icon) {
     var now = null;
     (e.levels || []).forEach(function (l) { if (l.cls === 'now') now = l.p; });
     var lo = Array.isArray(pl.entry) ? Math.min(pl.entry[0], pl.entry[1]) : pl.entry;
@@ -11493,12 +11516,12 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     if (now != null) { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + fmtP(now) }); }
     if (hi > lo) g += '<rect class="m-zone" x="' + X0 + '" y="' + y(hi) + '" width="' + (X1 - X0) + '" height="' + Math.max(3, y(lo) - y(hi)) + '"/>';
     else g += '<line class="m-tg" style="stroke:var(--accent)" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(lo) + '" y2="' + y(lo) + '"/>';
-    labs.push({ y: (y(lo) + y(hi)) / 2, c: 't-zone mb', a: 'Entrada ' + (hi > lo ? fmtP(lo) + '‑' + fmtP(hi) : fmtP(lo)), b: pl.on });
+    labs.push({ y: (y(lo) + y(hi)) / 2, c: 't-zone mb', a: (icon || '') + ' ' + (hi > lo ? fmtP(lo) + '‑' + fmtP(hi) : fmtP(lo)) });
     g += '<line class="m-stop" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(pl.stop) + '" y2="' + y(pl.stop) + '"/>';
-    labs.push({ y: y(pl.stop), c: 't-stop mb', a: 'Se anula ' + fmtP(pl.stop), b: pl.off });
+    labs.push({ y: y(pl.stop), c: 't-stop mb', a: '🛑 ' + fmtP(pl.stop) });
     (pl.targets || []).forEach(function (t, i) {
       g += '<line class="m-tg" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(t) + '" y2="' + y(t) + '"/>';
-      labs.push({ y: y(t), c: 't-tg mb', a: 'Objetivo ' + (i + 1) + ' ' + fmtP(t) });
+      labs.push({ y: y(t), c: 't-tg mb', a: '🎯 ' + fmtP(t) });
     });
     var last = (pl.targets || [])[(pl.targets || []).length - 1], cy = (y(lo) + y(hi)) / 2, ax = 30;
     if (last != null) {
@@ -11532,7 +11555,7 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     var h = '<p class="note">📈 largo · 📉 corto · ↩️ pullback · 🎯 retesteo · ⚡ ruptura · 🚨 nivel importante · 🛑 stop · 🎯 objetivos · Todas las horas son de España</p>';
     if (rec.length) {
       var tm = (rec[0].k.match(/\((.*?)\)/) || [])[1];
-      h += '<div class="recent"><div class="rh">🕒 Análisis reciente' + (tm ? ' · ' + esc(tm) : '') + '</div>' + rec.map(function (p) { return '<p>' + esc(p.text) + '</p>'; }).join('') +
+      h += '<div class="recent"><div class="rh">🕒 Análisis reciente' + (tm ? ' · ' + esc(tm) : '') + '</div>' + rec.map(function (p) { return sentList(p.text, false); }).join('') +
         '</div>';
     }
     var man = SEQ[key];
@@ -11550,15 +11573,15 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     function chartFor(k) {
       var pl = null;
       (e.plays || []).forEach(function (q) { if (q.k === k) pl = q; });
-      return pl ? miniChart(e, pl) : '';
+      var si = setupInfo(k); return pl ? miniChart(e, pl, si ? si.icon : '') : '';
     }
     function col(list, cls, title) {
       return '<div class="lscol ' + cls + '"><div class="lsh">' + title + '</div>' + (list.length ? list.map(function (x) {
-        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span><p>' + esc(x.p.text) + '</p>' + seqFor(x) + chartFor(x.p.k) + '</div>';
+        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span>' + sentList(x.p.text, true) + seqFor(x) + chartFor(x.p.k) + '</div>';
       }).join('') : '<div class="pl none"><p>Sin planteamiento de este lado.</p></div>') + '</div>';
     }
     h += '<div class="lsgrid">' + col(L, 'long', '📈 Largos') + col(S, 'short', '📉 Cortos') + '</div>';
-    if (oth.length) h += '<div class="plan">' + oth.map(function (p) { return '<div class="pl wide"><span class="k">' + esc(p.k) + '</span><p>' + esc(p.text) + '</p></div>'; }).join('') + '</div>';
+    if (oth.length) h += '<div class="plan">' + oth.map(function (p) { return '<div class="pl wide"><span class="k">' + esc(p.k) + '</span>' + sentList(p.text, false) + '</div>'; }).join('') + '</div>';
     return h;
   }
   function isKey(e, p) {
