@@ -403,6 +403,14 @@ h2 { color: var(--muted); }
 .lsh { font-weight: 700; font-size: 15px; padding: 6px 10px; border-radius: 6px; }
 .lscol.long .lsh { background: var(--up-soft); color: var(--up); } .lscol.short .lsh { background: var(--down-soft); color: var(--down); }
 .lscol.long .pl { border-top: 2px solid var(--up); } .lscol.short .pl { border-top: 2px solid var(--down); }
+.bal-sum { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 6px 0 12px; font-size: 14px; font-weight: 600; }
+.bal { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.bal-row { border: 1px solid var(--line); border-left-width: 4px; background: var(--surface); border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.bal-row.ok { border-left-color: var(--up); } .bal-row.ko { border-left-color: var(--down); } .bal-row.mix, .bal-row.dud { border-left-color: var(--accent); } .bal-row.no { border-left-color: var(--muted); }
+.bal-h { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.bal-k { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.bal-r { font-weight: 600; font-size: 14px; }
+.bal-row p { font-size: 14px; line-height: 1.45; color: var(--fg); }
 .pl.none p { color: var(--muted); }
 .ps { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .ps li { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 10px; font-size: 14px; line-height: 1.4; padding-top: 8px; border-top: 1px solid var(--line); }
@@ -835,6 +843,31 @@ var ENTRIES = [
         "text": "Recupera la Genial Line de H1 y el túnel azul de M15 con IN institucional al cierre o color azul. Objetivos 4.165 y 4.176. Va contra H4: tamaño pequeño."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde las 09:27 hasta las 20:41 de hoy. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Corto (rebote)",
+          "r": "ko",
+          "t": "Zona 4.147‑4.153 tocada desde las 13:35 con subida fuerte. Rechazo con velas rojas y rosas a las 14:30‑14:45 (bajó a ≈4.145), sin llegar a 4.134. Después volvió a 4.158 (stop) a las 15:20. Mínimo posterior 4.140 (16:10)."
+        },
+        {
+          "k": "Corto (ruptura)",
+          "r": "no",
+          "t": "No se dio: mínimos 4.128 (09:00) y 4.130 (12:15), sin cierre M15 bajo 4.124."
+        },
+        {
+          "k": "Largo (ruptura)",
+          "r": "ko",
+          "t": "Cerró sobre 4.153 (≈13:35) pero sin retesteo por arriba: se quedó en 4.146‑4.160 y no llegó a 4.165 (máximo ≈4.161). La mecha de las 16:10 bajó a 4.140 (stop 4.143)."
+        },
+        {
+          "k": "Largo (pullback)",
+          "r": "ok",
+          "t": "Dos reacciones en la zona: 4.128 (09:00) y 4.130 (12:15). Desde la segunda subió a 4.141 y 4.150 (≈13:00‑13:30) sin tocar el stop 4.120. Confirma IN/azul y volumen."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (09:27)",
@@ -1298,6 +1331,31 @@ var ENTRIES = [
         "text": "Pierde el FVG y los túneles de M5. Objetivos 7.743 y 7.734,75. Se invalida con un cierre M15 sobre 7.770. Iría a favor de H4 y diario, y contra M5 y H1."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde las 09:27 hasta las 20:41 de hoy. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Largo (pullback)",
+          "r": "ok",
+          "t": "Rechazo de 7.757: mecha a 7.751 a las 16:05 (stop 7.751 respetado) y subida. 7.806 tocado a partir de las 18:30 (máximo ≈7.811). Los toques de 7.757 de las 10:50 y las 12:15 también acabaron en objetivo."
+        },
+        {
+          "k": "Largo (ruptura)",
+          "r": "mix",
+          "t": "Cierre M15 sobre 7.786 hacia las 17:20. Objetivo 1 (7.798) ✅ ≈17:35. Objetivo 2 (7.815) ❌: máximo ≈7.811. Sin retesteo limpio de 7.786 (mínimo posterior ≈7.790)."
+        },
+        {
+          "k": "Corto (rebote)",
+          "r": "no",
+          "t": "Zona en juego de 17:45 a 20:40 con velas verdes y teal, nunca naranja ni fucsia. Máximo ≈7.811, rozando el stop 7.812."
+        },
+        {
+          "k": "Corto (ruptura)",
+          "r": "no",
+          "t": "No se dio: mecha a 7.751 a las 16:05 con recuperación inmediata; no veo cierre M15 bajo 7.754."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (09:27)",
@@ -1760,6 +1818,31 @@ var ENTRIES = [
         "text": "Pierde la línea, la Genial Line de H1 y la EMA 8 de H4. Objetivos 29.675 y 29.505,50. Se invalida con un cierre M15 sobre 29.815."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde las 09:27 hasta las 20:41 de hoy. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Largo (pullback)",
+          "r": "dud",
+          "t": "Tres toques de la zona 29.768‑29.790: ≈11:00 (mecha a 29.734) y 12:15 (29.729), ambos bajo el stop 29.750 en mecha, y 15:40 (mínimo ≈29.770, stop intacto). 30.078 tocado a las 18:30 (máximo ≈30.105). ✅ si entraste en el tercer toque o si usas cierre M15 como stop; ❌ si stop duro en los dos primeros."
+        },
+        {
+          "k": "Largo (ruptura)",
+          "r": "mix",
+          "t": "Cierre M15 sobre 30.007 hacia las 18:30. Objetivo 1 (30.078) ✅. Objetivo 2 (30.200) ❌: máximo ≈30.105. Sin retesteo limpio de 30.007 (mínimo posterior ≈30.04)."
+        },
+        {
+          "k": "Corto (rebote)",
+          "r": "no",
+          "t": "Zona en juego de 18:30 a 20:40 con velas verdes y teal, nunca naranja ni fucsia. Máximo ≈30.105: rozó el stop 30.092 a las 19:00."
+        },
+        {
+          "k": "Corto (ruptura)",
+          "r": "dud",
+          "t": "Las mechas de las 11:00 y las 12:15 bajaron a ≈29.73 sin llegar a 29.675. No consta cierre M15 bajo 29.768,75 con retesteo, y el rebote posterior pasó de 29.815 (stop)."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (09:24)",
@@ -2188,6 +2271,26 @@ var ENTRIES = [
         "text": "Recupera la EMA 8 de H1 y el túnel azul de M5 con IN institucional al cierre. Objetivo 4.178 y, con H1 girando, 4.213. Va contra H1 y H4: tamaño pequeño."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde la hora del análisis hasta las 22:00. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Corto (rebote)",
+          "r": "mix",
+          "t": "La zona 4.146‑4.160 se tocó dos veces: a las 16:20 de subida (velas verdes, mecha hasta ≈4.174, sin señal de corto) y de bajada entre las 17:00 y las 18:30. Desde ahí cayó a ≈4.136 (19:45) sin llegar a 4.131 en la sesión. 4.131 se tocó de madrugada (≈02:00)."
+        },
+        {
+          "k": "Corto (ruptura)",
+          "r": "no",
+          "t": "Mínimo de la sesión 4.131: sin cierre M15 bajo 4.130,1. De madrugada sí bajó a 4.124 (03:10, con OUT en M5), ya fuera del plan."
+        },
+        {
+          "k": "Largo (solo táctico)",
+          "r": "no",
+          "t": "No llegó a 4.108‑4.113: el mínimo de la sesión fue 4.131."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (14:20)",
@@ -2574,6 +2677,26 @@ var ENTRIES = [
         "text": "Recupera la línea 7.734,75, las medias de M5/M15 y el túnel azul con IN institucional al cierre y color azul. Va contra H4 y diario: tamaño pequeño."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde la hora del análisis hasta las 22:00. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Corto (retesteo)",
+          "r": "dud",
+          "t": "Depende de la hora de entrada. 14:30: mínimo 7.704 en la vela de datos (objetivos 7.712 y 7.704 tocados), cuando el plan decía no entrar. 14:35‑15:25: rebote dentro de 7.718‑7.725 sin vela fucsia clara. 15:30: mecha a 7.710 (objetivo 1) y subida inmediata sobre 7.735 (stop)."
+        },
+        {
+          "k": "Corto (continuación)",
+          "r": "no",
+          "t": "No veo cierre M15 bajo 7.712 ni retesteo por abajo. El mínimo fue 7.704; 7.676 no se tocó."
+        },
+        {
+          "k": "Largo (solo táctico)",
+          "r": "dud",
+          "t": "Precio sí: reacción en 7.704‑7.712 a las 14:30 y 15:30, con 7.724 y 7.734,75 tocados después. No veo IN en la captura: confírmalo tú."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (14:20)",
@@ -2971,6 +3094,26 @@ var ENTRIES = [
         "text": "Recupera las medias de M15 y el túnel azul de M5 con IN institucional al cierre y color azul. Objetivo 29.768,75. Va contra H1, H4 y diario: tamaño pequeño."
       }
     ],
+    "balance": {
+      "nota": "Lectura de tus M5 (margen de 1‑2 puntos). Cuento desde la hora del análisis hasta las 22:00. El color de vela, el IN y el volumen no los puedo confirmar desde la captura: esos casos van como ❓.",
+      "rows": [
+        {
+          "k": "Corto (retesteo)",
+          "r": "ok",
+          "t": "Precio en la zona 29.530‑29.575 a las 14:20, con velas rojas en zona de corrección. Mínimo 29.479 a las 14:45: objetivos 29.491,5 y 29.480 tocados antes del rebote a ≈29.615 (≈15:10, stop 29.600). Si entraste a partir de las 15:10, habría sido stop."
+        },
+        {
+          "k": "Corto (continuación)",
+          "r": "no",
+          "t": "Condición no vista: la mecha de las 15:30 llegó a 29.394 (tocó 29.400 y 29.420‑29.447) pero con recuperación inmediata y sin cierre M15 bajo 29.491,5. Si tienes el M15, confírmalo."
+        },
+        {
+          "k": "Largo (solo táctico)",
+          "r": "dud",
+          "t": "Precio sí: tras la mecha de las 15:30 recuperó 29.480‑29.505 y llegó a 29.575 y 29.640 (y hasta ≈29.900). No veo IN en la captura. El plan no tenía stop definido; el mínimo 29.394 quedó 85 puntos bajo la zona."
+        }
+      ]
+    },
     "plan": [
       {
         "k": "Ahora (14:20)",
@@ -11407,6 +11550,16 @@ var KEYLV = {"WTI-2026-10-10": [86.86], "KC-2026-10-10": [285.45, 283], "CC-2026
     }
 
     if (e.plan && e.plan.length) out += sec('plan', 'Qué haría', planHtml(e));
+    if (e.balance && e.balance.rows && e.balance.rows.length) {
+      var BR = { ok: ['✅', 'Objetivo'], ko: ['❌', 'Stop'], mix: ['➖', 'Parcial'], no: ['⏳', 'No se dio'], dud: ['❓', 'A confirmar'] }, cnt = {};
+      e.balance.rows.forEach(function (r) { cnt[r.r] = (cnt[r.r] || 0) + 1; });
+      var bh = '<p class="note">' + esc(e.balance.nota) + '</p><div class="bal-sum">' + ['ok', 'ko', 'mix', 'no', 'dud'].filter(function (k) { return cnt[k]; }).map(function (k) { return '<span>' + BR[k][0] + ' ' + cnt[k] + ' ' + BR[k][1].toLowerCase() + '</span>'; }).join('') + '</div>' +
+        '<div class="bal">' + e.balance.rows.map(function (r) {
+          var si = setupInfo(r.k);
+          return '<div class="bal-row ' + esc(r.r) + '"><div class="bal-h"><span class="bal-k">' + (si ? si.icon + ' ' : '') + esc(r.k) + '</span><span class="bal-r">' + BR[r.r][0] + ' ' + BR[r.r][1] + '</span></div><p>' + esc(r.t) + '</p></div>';
+        }).join('') + '</div>';
+      out += sec('bal', 'Balance del plan', bh);
+    }
 
     if (e.tecnica && e.tecnica.length) out += sec('tec', 'Lectura técnica con el indicador', rows(e.tecnica));
 
