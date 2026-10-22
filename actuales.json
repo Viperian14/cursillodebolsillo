@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T18:30:45Z",
+ "updated": "2026-10-22T21:33:26Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -11,6 +11,12 @@
    "d": "2026-10-16",
    "match": "IPC final de la zona euro, septiembre",
    "act": "General 3,8% a/a\nSubyacente 2,5% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-10-22",
+   "match": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "act": "194 mil",
    "res": ""
   }
  ]
