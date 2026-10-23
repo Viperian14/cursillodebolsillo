@@ -1,38 +1,25 @@
 {
- "ultima_ejecucion": "2026-10-22T06:02:04+00:00",
+ "ultima_ejecucion": "2026-10-23T06:02:59+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
  "actualizadas_en_esta_ejecucion": 196,
  "errores": [],
  "n_errores": 0,
  "datos_insuficientes": 39,
- "minutos": 5.8,
+ "minutos": 6.2,
  "muestra_diagnostico": {
-  "2502.T": {
-   "sector_yahoo": "Consumer Defensive",
-   "per": 15.33212,
-   "eps": 109.9,
-   "roe": 5.57,
-   "deuda": 0.529,
-   "dividendo": 3.086,
-   "dividendo_yahoo": 3.71,
-   "frecuencia": "semestral",
-   "trimestre": "2026-06-30",
-   "moneda_yahoo": "JPY",
-   "tendencia": "alcista"
-  },
-  "IVZ": {
+  "AFL": {
    "sector_yahoo": "Financial Services",
-   "per": null,
-   "eps": -0.68,
-   "roe": -0.57,
-   "deuda": 0.121,
-   "dividendo": 2.906,
-   "dividendo_yahoo": 2.94,
+   "per": 12.921383,
+   "eps": 9.54,
+   "roe": 16.91,
+   "deuda": 0.534,
+   "dividendo": 1.955,
+   "dividendo_yahoo": 1.98,
    "frecuencia": "trimestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "USD",
-   "tendencia": "lateral"
+   "tendencia": "alcista"
   }
  }
 }
