@@ -1,38 +1,38 @@
 {
- "ultima_ejecucion": "2026-10-24T05:58:32+00:00",
+ "ultima_ejecucion": "2026-10-25T05:59:56+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
- "actualizadas_en_esta_ejecucion": 195,
+ "actualizadas_en_esta_ejecucion": 196,
  "errores": [],
  "n_errores": 0,
- "datos_insuficientes": 38,
- "minutos": 4.0,
+ "datos_insuficientes": 39,
+ "minutos": 5.6,
  "muestra_diagnostico": {
-  "3660.HK": {
-   "sector_yahoo": "Financial Services",
-   "per": 1.447521,
-   "eps": 15.53,
-   "roe": 15.26,
-   "deuda": 0.143,
-   "dividendo": 21.626,
-   "dividendo_yahoo": 16.05,
+  "0001.HK": {
+   "sector_yahoo": "Industrials",
+   "per": 6.5462866,
+   "eps": 9.83,
+   "roe": 7.29,
+   "deuda": 0.447,
+   "dividendo": 3.648,
+   "dividendo_yahoo": 3.65,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "HKD",
-   "tendencia": "bajista"
+   "tendencia": "lateral"
   },
-  "NWS": {
-   "sector_yahoo": "Communication Services",
-   "per": 32.786407,
-   "eps": 1.03,
-   "roe": 7.98,
-   "deuda": 0.316,
-   "dividendo": 0.592,
-   "dividendo_yahoo": 0.59,
-   "frecuencia": "semestral",
+  "CL": {
+   "sector_yahoo": "Consumer Defensive",
+   "per": 37.023624,
+   "eps": 2.54,
+   "roe": 267.37,
+   "deuda": 13.882,
+   "dividendo": 2.244,
+   "dividendo_yahoo": 2.25,
+   "frecuencia": "trimestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "USD",
-   "tendencia": "alcista"
+   "tendencia": "lateral"
   }
  }
 }
