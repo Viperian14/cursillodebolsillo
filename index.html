@@ -424,6 +424,39 @@ h2 { color: var(--muted); }
 @media (max-width: 700px) { .split { grid-template-columns: minmax(0, 1fr); } }
 
 /* Herramientas */
+/* Biblioteca */
+.toolcards { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.bsub { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 4px; }
+.bdocs { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 18px; }
+.bibdoc { max-width: 78ch; line-height: 1.6; font-size: 15px; }
+.bibdoc h2 { margin: 34px 0 12px; padding-top: 6px; }
+.bibdoc h3 { margin: 24px 0 6px; font-size: 16px; color: var(--accent); }
+.bibdoc p, .bibdoc ul, .bibdoc ol { margin: 0 0 12px; }
+.bibdoc ul, .bibdoc ol { padding-left: 22px; }
+.bibdoc li { margin-bottom: 4px; }
+.bibdoc hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
+.bibdoc blockquote { margin: 0 0 16px; padding: 8px 14px; border-left: 3px solid var(--accent); color: var(--muted); background: var(--accent-soft); border-radius: 0 6px 6px 0; }
+.bibdoc blockquote p { margin: 0; }
+.bibdoc code { font-family: var(--font-num); font-size: 13px; background: var(--surface); padding: 1px 5px; border-radius: 3px; }
+.bibdoc .tw { overflow-x: auto; margin: 0 0 16px; border: 1px solid var(--line); border-radius: 8px; }
+.bibdoc .tw table { min-width: 460px; }
+.bibdoc .tw td { min-width: 110px; }
+.bfig { margin: 18px 0 22px; }
+.bfig a { display: block; }
+.bfig img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+.bfig figcaption { margin-top: 6px; font-size: 13px; color: var(--muted); }
+.bletters { display: flex; flex-wrap: wrap; gap: 4px; margin: 14px 0 10px; }
+.bletters button { font: inherit; font-family: var(--font-num); font-weight: 600; font-size: 14px; min-width: 34px; height: 34px; padding: 0 8px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+.bletters button:hover:not(:disabled) { border-color: var(--accent); }
+.bletters button[aria-pressed="true"] { background: var(--accent); color: #0a0f0c; border-color: var(--accent); }
+.bletters button:disabled { opacity: .3; cursor: default; }
+.bcount { font-size: 13px; color: var(--muted); margin: 10px 0; }
+.dlet { font-family: var(--font-title); font-size: 26px; color: var(--accent); margin: 22px 0 4px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.dent { padding: 12px 0; border-bottom: 1px solid var(--line); max-width: 78ch; }
+.dent b { font-size: 16px; }
+.dent .dcat { margin-left: 8px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
+.dent p { margin: 4px 0 0; line-height: 1.55; font-size: 15px; }
+
 .toolcards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 @media (max-width: 640px) { .toolcards { grid-template-columns: 1fr; } }
 .tcard { font: inherit; text-align: left; color: var(--fg); background: rgba(19,27,21,.9); border: 2px solid #4a5040; border-radius: 10px; padding: 16px 18px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
@@ -454,109 +487,7 @@ button.bs:hover, button.bs:focus-visible { border-color: var(--accent); outline:
 
 <div id="home"><div class="bg"></div><div class="stage"><div class="pic" role="img" aria-label="Cursillo de Bolsillo: un toro verde y un oso rojo frente a frente"></div><button type="button" class="bubble b-intra" data-go="intra">Intradía / Scalping</button><button type="button" class="bubble b-swing" data-go="swing">Swing</button><button type="button" class="bubble mini b-ind" data-page="herramientas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M18 6h2M4 12h3M12 12h8M4 18h9M18 18h2"/><circle cx="15.5" cy="6" r="2"/><circle cx="9.5" cy="12" r="2"/><circle cx="15.5" cy="18" r="2"/></svg>Utilidades</button><button type="button" class="bubble mini b-cal" data-page="calendario"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Calendario</button><button type="button" class="bubble mini b-ops" data-href="acciones.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Acciones</button></div></div>
 
-<template id="tpl-indicador">
-<section>
-  <h2>Qué es</h2>
-  <div class="paras">
-    <p>VIPERIANDICATOR14 es un indicador de TradingView que se dibuja encima del gráfico y junta cuatro herramientas: <strong>tendencia y niveles (Doc 4in1)</strong>, <strong>reloj de sesiones</strong>, <strong>actividad institucional (IN/OUT)</strong> y <strong>huecos de precio (FVG)</strong>. Sirve para leer a la vez la dirección, la fuerza, los niveles y quién está moviendo el precio.</p>
-    <p class="note">Las velas miden fuerza y momentum, no volumen. El volumen se mira aparte, en las velas de volumen de M5 como mínimo.</p>
-  </div>
-</section>
 
-<section>
-  <h2>1 · Doc 4in1: tendencia, corrección y niveles</h2>
-  <div class="rows">
-    <div class="row"><span class="k">Genial Line</span><p>Media móvil simple de 34 periodos (SMA 34), dibujada con cruces negros. Es la línea de la tendencia principal: precio por encima es zona alcista, por debajo bajista. Sus cruces (+) con el precio marcan cambios de ritmo.</p></div>
-    <div class="row"><span class="k">Zona de corrección</span><p>Es el área entre la EMA 8 y la media de Wilder 8, que se dibuja con puntos marrones. Se rellena en <strong>verde</strong> cuando la EMA 8 está por encima de la de Wilder (momentum alcista) y en <strong>rojo</strong> cuando está por debajo (momentum bajista). Sirve para ver cuándo el precio está corrigiendo dentro de la tendencia.</p></div>
-    <div class="row"><span class="k">Cotas históricas</span><p>Líneas automáticas de precio: <strong>A</strong> (apertura anual, amarillo), <strong>T</strong> (niveles trimestrales, azul marino) y <strong>P</strong> (niveles psicológicos redondos, azul oscuro). Solo se dibujan en tickers reconocidos (NQ, NAS100, NAS100, DAX, XAU/oro, DOW/DJ30 y BTC). En el resto de activos los niveles son los que dibujo yo.</p></div>
-    <div class="row"><span class="k">Apertura diaria</span><p>Línea verde «Open Diario» en el precio de apertura del día: a las 8:00 (hora de España) en índices europeos y a las 14:00 en índices americanos y EURUSD. Es una referencia intradía.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>Túneles Domenec</h2>
-  <p class="note">Tres túneles formados por seis medias exponenciales (EMA). El color del túnel y sus cruces dan la tendencia de fondo y las zonas de soporte y resistencia de largo plazo.</p>
-  <div class="tablewrap"><table class="dt stack">
-    <thead><tr><th>Túnel</th><th>Medias</th><th>Para qué sirve</th></tr></thead>
-    <tbody>
-      <tr><td><span class="sw" style="background:#2f6bff"></span>Azul</td><td>EMA 123 y EMA 188</td><td>El más cercano al precio. Marca la tendencia de corto-medio plazo y es el primer soporte o resistencia. Su estrangulamiento o cruce avisa de un cambio de tendencia.</td></tr>
-      <tr><td><span class="sw" style="background:#f2d21b"></span>Amarillo</td><td>EMA 416 y EMA 618</td><td>Tendencia de medio-largo plazo. Soporte o resistencia fuerte cuando el precio llega a él.</td></tr>
-      <tr><td><span class="sw" style="background:#ff1493"></span>Rosa</td><td>EMA 882 y EMA 1223</td><td>Tendencia de fondo. Es el túnel más lento y el que define el mercado a largo plazo.</td></tr>
-    </tbody>
-  </table></div>
-</section>
-
-<section>
-  <h2>Colores de vela (ADX 7 + Williams %R 40)</h2>
-  <p class="note">El color depende de si el ADX (7) sube o baja, de si el Williams %R (40) sube o baja y de en qué zona está el %R. Mide fuerza, no volumen. La columna «Cuándo sale» es la regla del código; «Significado» es tu leyenda.</p>
-  <div class="tablewrap"><table class="dt stack">
-    <thead><tr><th>Color</th><th>Cuándo sale</th><th>Significado</th></tr></thead>
-    <tbody>
-      <tr><td><span class="sw" style="background:rgb(0,0,150)"></span>Azul marino</td><td>%R por encima de −50 sin otra condición</td><td>Inicio o confirmación de una secuencia alcista (cambio de tendencia al alza).</td></tr>
-      <tr><td><span class="sw" style="background:rgb(255,0,255)"></span>Fucsia</td><td>%R por debajo de −50 sin otra condición</td><td>Inicio o confirmación de una secuencia bajista (cambio de tendencia a la baja).</td></tr>
-      <tr><td><span class="sw" style="background:rgb(70,100,70)"></span>Verde oscuro</td><td>%R por encima de −27, ADX sube y %R sube</td><td>Máxima fuerza alcista dentro de una tendencia de subida.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(120,185,70)"></span>Verde</td><td>%R entre −50 y −27, ADX sube y %R sube</td><td>Máxima fuerza alcista dentro de una tendencia de subida.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(255,0,0)"></span>Rojo</td><td>%R por encima de −50, ADX sube y %R baja</td><td>Fuerza alcista durante una fase de corrección.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(100,40,50)"></span>Marrón</td><td>%R por debajo de −72, ADX sube y %R baja</td><td>Fuerza bajista impulsiva.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(0,255,0)"></span>Verde fosforito</td><td>%R por debajo de −50, ADX sube y %R sube</td><td>Fuerza bajista impulsiva.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(255,250,0)"></span>Amarillo</td><td>%R por encima de −50, ADX baja y %R baja</td><td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(30,180,230)"></span>Azul claro</td><td>%R por encima de −50, ADX baja y %R sube</td><td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(0,255,255)"></span>Cian</td><td>%R por debajo de −50, ADX baja y %R sube</td><td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(250,140,0)"></span>Naranja</td><td>%R por debajo de −50, ADX baja y %R baja</td><td>Falta de fuerza clara en la dirección actual del precio.</td></tr>
-      <tr><td><span class="sw" style="background:rgb(210,60,130)"></span>Rosa oscuro</td><td>%R entre −72 y −50, ADX sube y %R baja</td><td>Tu leyenda no lo nombra. Es un tono intermedio entre el fucsia y el marrón.</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">Vídeo explicativo del autor: <a href="https://www.youtube.com/watch?v=X0poBvo8HsI" target="_blank" rel="noopener">youtube.com/watch?v=X0poBvo8HsI</a></p>
-</section>
-
-<section>
-  <h2>2 · Sesiones (reloj de mercado)</h2>
-  <p class="note">Dibuja un triángulo hacia arriba bajo la vela en la apertura de cada sesión y uno hacia abajo sobre la vela en el cierre. Solo aparece en temporalidades de 30 minutos o menos. Además, una tabla en la esquina del gráfico indica si cada sesión está ABIERTA, CERRADA o en DESCANSO. Los horarios son de Madrid.</p>
-  <div class="tablewrap"><table class="dt stack">
-    <thead><tr><th>Sesión</th><th>Apertura</th><th>Cierre</th><th>Descanso</th></tr></thead>
-    <tbody>
-      <tr><td><span class="sw" style="background:#8b0000"></span>China</td><td>02:30</td><td>08:00</td><td>04:30 a 06:00</td></tr>
-      <tr><td><span class="sw" style="background:#ffd700"></span>Hong Kong</td><td>02:30</td><td>09:00</td><td>05:00 a 06:00</td></tr>
-      <tr><td><span class="sw" style="background:#ff9800"></span>Japón</td><td>01:00</td><td>07:00</td><td>03:30 a 04:30</td></tr>
-      <tr><td><span class="sw" style="background:#2f6bff"></span>Europa</td><td>09:00</td><td>17:30</td><td>—</td></tr>
-      <tr><td><span class="sw" style="background:#90ee90"></span>Estados Unidos</td><td>15:30</td><td>22:00</td><td>—</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">Mientras Europa está en horario de verano, los triángulos de Asia salen una hora antes.</p>
-</section>
-
-<section>
-  <h2>3 · Institucional: IN y OUT</h2>
-  <div class="rows">
-    <div class="row"><span class="k">Cómo se calcula</span><p>Media simple de 20 periodos con bandas a 3 desviaciones estándar. Se marca una señal cuando la vela cierra fuera de la banda y, además, el volumen es alto: más de 1,5 veces la media de las últimas 100 velas.</p></div>
-    <div class="row"><span class="k">IN (naranja)</span><p>Etiqueta bajo la vela cuando cierra por encima de la banda superior con volumen alto. Se interpreta como entrada de manos fuertes.</p></div>
-    <div class="row"><span class="k">OUT (rojo)</span><p>Etiqueta sobre la vela cuando cierra por debajo de la banda inferior con volumen alto. Se interpreta como salida de manos fuertes.</p></div>
-    <div class="row"><span class="k">Línea naranja</span><p>La media de 20 periodos sobre la que se calculan las bandas.</p></div>
-    <div class="row"><span class="k">Cuidado</span><p>La señal se repinta durante la vela: solo vale al cierre. Si el activo no da datos de volumen, el indicador no bloquea la señal y no valida nada con el volumen, así que hay que mirar la vela de volumen real aparte.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>4 · FVG (huecos de precio)</h2>
-  <div class="rows">
-    <div class="row"><span class="k">Qué es</span><p>Un hueco que el precio deja entre tres velas seguidas. Es una zona de desequilibrio a la que el precio suele volver.</p></div>
-    <div class="row"><span class="k">FVG alcista</span><p>El mínimo de la vela actual queda por encima del máximo de la vela de dos barras atrás.</p></div>
-    <div class="row"><span class="k">FVG bajista</span><p>El máximo de la vela actual queda por debajo del mínimo de la vela de dos barras atrás.</p></div>
-    <div class="row"><span class="k">Cómo se dibuja</span><p>Como una caja gris que se extiende a la derecha. Cuanto más grande es el hueco respecto al ATR de 100 periodos, más oscura es la caja, y más peso tiene.</p></div>
-    <div class="row"><span class="k">Mitigación</span><p>La caja se va recortando a medida que el precio la rellena, al cierre de cada vela. Desaparece cuando el precio cubre el 50% del hueco (configurable) o cuando lo consume entero. Un hueco nuevo contenido dentro de otro del mismo tipo no se dibuja.</p></div>
-    <div class="row"><span class="k">Alertas</span><p>Se pueden activar alertas para el FVG nuevo y para el FVG mitigado o cerrado.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>Cómo lo combino</h2>
-  <div class="rows">
-    <div class="row"><span class="k">D, W y M</span><p>Soportes, resistencias, estructura y cómo va el mercado.</p></div>
-    <div class="row"><span class="k">H4 y H1</span><p>Análisis y contexto: dirección, zona de corrección, Genial Line, túneles y sus cruces. En swing, H1 es el gatillo con confirmación en H4.</p></div>
-    <div class="row"><span class="k">M15, M5 y M1</span><p>Gatillo en intradía y scalping. M1 afina el timing, pero no decide solo. El volumen real se valida en M5 como mínimo.</p></div>
-  </div>
-</section>
-</template>
 
 <section id="info" class="wrap" hidden>
   <nav class="nav" aria-label="Menú">
@@ -23460,7 +23391,7 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
     if (x === 'XETR') return 'xetr';
     return '';
   }
-  var TOOLST = { tab: (location.hash === '#operativas' ? 'ops' : 'ind'), cat: 'all' };
+  var TOOLST = { tab: (location.hash === '#operativas' ? 'ops' : 'bib'), cat: 'all' };
   function activosHtml() {
     var h = '<section><h2>Activos de mi lista</h2><p class="legend">Símbolos de mi lista de TradingView agrupados por activo, con la etiqueta <b>FUTURO</b> o <b>CFD</b> (y SPOT, ÍNDICE o ETF cuando no es ninguno de los dos). El símbolo <span class="usd">$</span> marca los que necesitan una suscripción de datos para verse en tiempo real: púlsalo para ver cuál. Los CFD y los datos de TVC no llevan $ porque son del propio bróker o de TradingView, pero no he comprobado cada uno.</p>' +
       '<input type="search" id="actq" class="actq" placeholder="Buscar un activo o símbolo (por ejemplo café, WTI, NQ)" aria-label="Buscar activo"></section>';
@@ -23481,10 +23412,55 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
     });
     return h;
   }
+
+  /* ---------- Biblioteca: Indicadores y Diccionario (contenido en /biblioteca) ---------- */
+  var BIB = { sec: 'ind', doc: 'viper', q: '', letter: '', cat: 'all', cache: {}, dict: null, fail: false };
+  var BIBDOCS = [['viper', 'VIPERIANDICATOR14'], ['elliott', 'Ondas de Elliott'], ['wyckoff', 'Sistema Wyckoff'], ['patrones', 'Patrones de velas japonesas']];
+  var BIB_DESC = { viper: 'Cómo leer cada herramienta, con ejemplo anotado', elliott: 'Impulso, corrección, Fibonacci y escenarios con BTC', wyckoff: 'Acumulación, distribución y volumen', patrones: 'Velas de una, dos y tres, y continuación' };
+  function bibNorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  function bibFetch(url, json, done) {
+    fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return json ? r.json() : r.text(); }).then(done).catch(function () { BIB.fail = true; renderInfo(); });
+  }
+  function dictHtml() {
+    var D = BIB.dict.items, q = bibNorm(BIB.q.trim());
+    var avail = {};
+    D.forEach(function (e) { if (BIB.cat === 'all' || e.c === BIB.cat) { if (!q || bibNorm(e.t + ' ' + e.d).indexOf(q) >= 0) avail[e.l] = 1; } });
+    var L = []; for (var c = 65; c < 91; c++) L.push(String.fromCharCode(c));
+    var out = [], last = '', n = 0;
+    D.forEach(function (e) {
+      if (BIB.cat !== 'all' && e.c !== BIB.cat) return;
+      if (BIB.letter && e.l !== BIB.letter) return;
+      if (q && bibNorm(e.t + ' ' + e.d).indexOf(q) < 0) return;
+      if (e.l !== last) { last = e.l; out.push('<div class="dlet">' + esc(e.l) + '</div>'); }
+      out.push('<div class="dent"><b>' + esc(e.t) + '</b><span class="dcat">' + esc(e.c) + '</span><p>' + e.d + '</p></div>'); n++;
+    });
+    return { list: '<div class="bcount">' + n + (n === 1 ? ' término' : ' términos') + '</div>' + (n ? out.join('') : '<p class="legend">No hay términos con ese filtro.</p>'),
+      letters: '<button type="button" data-bl="" aria-pressed="' + (BIB.letter === '') + '">Todas</button>' + L.map(function (x) { return '<button type="button" data-bl="' + x + '" aria-pressed="' + (BIB.letter === x) + '"' + (avail[x] ? '' : ' disabled') + '>' + x + '</button>'; }).join('') };
+  }
+  function bibRefreshDict() {
+    var r = dictHtml(); var a = document.getElementById('bibres'), b = document.getElementById('bibletters');
+    if (a) a.innerHTML = r.list; if (b) b.innerHTML = r.letters;
+  }
+  function renderBib() {
+    var h = '<div class="bsub tabs" role="group" aria-label="Biblioteca"><button type="button" class="tab" data-bsec="ind" aria-pressed="' + (BIB.sec === 'ind') + '">Indicadores</button><button type="button" class="tab" data-bsec="dic" aria-pressed="' + (BIB.sec === 'dic') + '">Diccionario</button></div>';
+    if (BIB.fail) return h + '<p class="legend">No he podido cargar esta sección. Ábrela desde la web (cursillodebolsillo.com) y con conexión.</p>';
+    if (BIB.sec === 'ind') {
+      h += '<div class="bdocs tabs" role="group" aria-label="Indicador">' + BIBDOCS.map(function (d) { return '<button type="button" class="chip" data-bdoc="' + d[0] + '" aria-pressed="' + (BIB.doc === d[0]) + '">' + esc(d[1]) + '</button>'; }).join('') + '</div>';
+      var c = BIB.cache[BIB.doc];
+      if (c == null) { bibFetch('biblioteca/' + BIB.doc + '.html', false, function (t) { BIB.cache[BIB.doc] = t; renderInfo(); }); return h + '<p class="legend">Cargando…</p>'; }
+      return h + '<h1 class="btitle" style="margin:6px 0 6px">' + esc(BIBDOCS.filter(function (d) { return d[0] === BIB.doc; })[0][1]) + '</h1>' + c;
+    }
+    if (!BIB.dict) { bibFetch('biblioteca/diccionario.json', true, function (j) { BIB.dict = j; renderInfo(); }); return h + '<p class="legend">Cargando…</p>'; }
+    var r = dictHtml();
+    h += '<section style="margin-top:14px"><p class="legend">Diccionario del inversor: términos de economía, datos macro, mercados, trading y análisis. Busca por palabra o elige la letra inicial.</p><input type="search" id="bibq" class="actq" placeholder="Buscar un término (por ejemplo inflación, stop, gap)" aria-label="Buscar en el diccionario" value="' + esc(BIB.q) + '"></section>';
+    h += '<div class="bletters" id="bibletters" role="group" aria-label="Letra">' + r.letters + '</div>';
+    h += '<div class="tabs catchips" role="group" aria-label="Categoría">' + [['all', 'Todas las categorías']].concat(BIB.dict.cats.map(function (c) { return [c, c]; })).map(function (c) { return '<button type="button" class="chip" data-bcat="' + esc(c[0]) + '" aria-pressed="' + (BIB.cat === c[0]) + '">' + esc(c[1]) + '</button>'; }).join('') + '</div>';
+    return h + '<div id="bibres">' + r.list + '</div>';
+  }
   function renderTools() {
     var t = TOOLST.tab;
-    return '<div class="toolcards"><button type="button" class="tcard" data-tool="ind" aria-pressed="' + (t === 'ind') + '"><b>Indicador</b><span>VIPERIANDICATOR14: qué hace cada herramienta</span></button><button type="button" class="tcard" data-tool="act" aria-pressed="' + (t === 'act') + '"><b>Activos</b><span>Símbolos de mi lista: futuros y CFD por activo</span></button><button type="button" class="tcard" data-tool="ops" aria-pressed="' + (t === 'ops') + '"><b>Operativas</b><span>Aciertos y fallos de mis análisis, medidos con gráfico</span></button></div>' +
-      (t === 'ind' ? document.getElementById('tpl-indicador').innerHTML : t === 'ops' ? renderTrades() : activosHtml());
+    return '<div class="toolcards"><button type="button" class="tcard" data-tool="bib" aria-pressed="' + (t === 'bib') + '"><b>Biblioteca</b><span>Indicadores (VIPERIANDICATOR14, Elliott, Wyckoff, velas) y diccionario del inversor</span></button><button type="button" class="tcard" data-tool="act" aria-pressed="' + (t === 'act') + '"><b>Activos</b><span>Símbolos de mi lista: futuros y CFD por activo</span></button><button type="button" class="tcard" data-tool="ops" aria-pressed="' + (t === 'ops') + '"><b>Operativas</b><span>Aciertos y fallos de mis análisis, medidos con gráfico</span></button></div>' +
+      (t === 'bib' ? renderBib() : t === 'ops' ? renderTrades() : activosHtml());
   }
   function openUsd(k) {
     var u = USD[k]; if (!u) return;
@@ -23496,7 +23472,7 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
   function renderInfo() {
     var pg = state.page;
     document.getElementById('infoeyebrow').textContent = pg === 'herramientas' ? 'Utilidades' : 'Calendario';
-    document.getElementById('infotitle').textContent = pg === 'herramientas' ? (TOOLST.tab === 'ops' ? 'Operativas realizadas' : TOOLST.tab === 'act' ? 'Activos' : 'Indicador') : 'Datos y resultados';
+    document.getElementById('infotitle').textContent = pg === 'herramientas' ? (TOOLST.tab === 'ops' ? 'Operativas realizadas' : TOOLST.tab === 'act' ? 'Activos' : 'Biblioteca') : 'Datos y resultados';
     document.getElementById('infobody').innerHTML = pg === 'herramientas' ? renderTools() : renderCalendar();
   }
 
@@ -23547,7 +23523,8 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
 
   document.addEventListener('toggle', function (ev) { var d = ev.target; if (d && d.classList && d.classList.contains('day')) CALST.open[d.getAttribute('data-day')] = d.open; }, true);
   document.addEventListener('input', function (ev) {
-    var t = ev.target; if (!t || t.id !== 'actq') return;
+    var t = ev.target; if (t && t.id === 'bibq') { BIB.q = t.value; BIB.letter = ''; bibRefreshDict(); return; }
+    if (!t || t.id !== 'actq') return;
     var q = t.value.toLowerCase().trim();
     Array.prototype.forEach.call(document.querySelectorAll('.actgrp'), function (g) { g.hidden = !!q && g.textContent.toLowerCase().indexOf(q) < 0; });
     Array.prototype.forEach.call(document.querySelectorAll('.actcat'), function (c) { c.hidden = !c.querySelector('.actgrp:not([hidden])'); });
@@ -23570,6 +23547,10 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
       var tf = T.closest('[data-trf]'); if (tf) { var nf = tf.getAttribute('data-trf'); TRST.f = (TRST.f === nf ? 'all' : nf); renderInfo(); return; }
       var ta = T.closest('[data-tra]'); if (ta) { TRST.a = ta.getAttribute('data-tra'); renderInfo(); return; }
       var ct = T.closest('[data-cat]'); if (ct) { TOOLST.cat = ct.getAttribute('data-cat'); renderInfo(); return; }
+      var bs = T.closest('[data-bsec]'); if (bs) { BIB.sec = bs.getAttribute('data-bsec'); renderInfo(); return; }
+      var bd = T.closest('[data-bdoc]'); if (bd) { BIB.doc = bd.getAttribute('data-bdoc'); renderInfo(); window.scrollTo(0, 0); return; }
+      var bl = T.closest('[data-bl]'); if (bl && !bl.disabled) { BIB.letter = bl.getAttribute('data-bl'); bibRefreshDict(); return; }
+      var bc = T.closest('[data-bcat]'); if (bc) { BIB.cat = bc.getAttribute('data-bcat'); BIB.letter = ''; renderInfo(); return; }
       var tl = T.closest('[data-tool]'); if (tl) { TOOLST.tab = tl.getAttribute('data-tool'); renderInfo(); return; }
       var us = T.closest('[data-usd]'); if (us) { openUsd(us.getAttribute('data-usd')); return; }
       if (T.closest('[data-mclose]') || T.id === 'usdm') { document.getElementById('usdm').hidden = true; return; }

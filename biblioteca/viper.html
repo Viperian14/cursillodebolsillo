@@ -1,0 +1,238 @@
+<div class="bibdoc"><blockquote class="bnote"><p>Es una herramienta de lectura del gráfico y no una recomendación de inversión.</p>
+</blockquote>
+<h2>Qué es</h2>
+<p>VIPERIANDICATOR14 es un indicador de TradingView que se dibuja encima del gráfico y reúne cuatro herramientas:</p>
+<ol>
+<li><strong>Doc 4in1:</strong> tendencia, corrección y niveles.</li>
+<li><strong>Reloj de sesiones.</strong></li>
+<li><strong>Actividad institucional (IN/OUT).</strong></li>
+<li><strong>Huecos de precio (FVG).</strong></li>
+</ol>
+<p>Sirve para leer a la vez la dirección, la fuerza, los niveles y quién está moviendo el precio.</p>
+<p><strong>Importante:</strong> las velas de este indicador miden fuerza y momentum, no volumen. El volumen se mira aparte, en las velas de volumen de M5 como mínimo.</p>
+<p>Vídeo explicativo del autor: <a href="https://www.youtube.com/watch?v=X0poBvo8HsI">https://www.youtube.com/watch?v=X0poBvo8HsI</a></p>
+<hr />
+<h2>1. Doc 4in1: tendencia, corrección y niveles</h2>
+<h3>Genial Line</h3>
+<p>Media móvil simple de 34 periodos (SMA 34), dibujada con cruces negros. Es la línea de la tendencia principal: con el precio por encima, la zona es alcista; por debajo, bajista. Los cruces (+) con el precio marcan cambios de ritmo.</p>
+<h3>Zona de corrección</h3>
+<p>Es el área entre la EMA 8 y la media de Wilder 8, que se dibuja con puntos marrones. Se rellena en <strong>verde</strong> cuando la EMA 8 está por encima de la de Wilder (momentum alcista) y en <strong>rojo</strong> cuando está por debajo (momentum bajista). Sirve para ver cuándo el precio está corrigiendo dentro de la tendencia.</p>
+<h3>Cotas históricas</h3>
+<p>Líneas automáticas de precio: <strong>A</strong> (apertura anual, amarillo), <strong>T</strong> (niveles trimestrales, azul marino) y <strong>P</strong> (niveles psicológicos redondos, azul oscuro). Solo se dibujan en tickers reconocidos (NQ, US100, NAS100, DAX, XAU, DOW y BTC). En el resto de activos los niveles son los que dibujo yo.</p>
+<h3>Apertura diaria</h3>
+<p>Línea verde «Open Diario» en el precio de apertura del día. Se marca a las 8:00 (hora de España) en índices europeos y a las 14:00 en índices americanos y EURUSD. Es una referencia intradía.</p>
+<h3>Túneles Domenec</h3>
+<p>Tres túneles formados por seis medias exponenciales (EMA). El color del túnel y sus cruces dan la tendencia de fondo y las zonas de soporte y resistencia de largo plazo.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Túnel</th>
+<th>Medias</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azul</td>
+<td>EMA 123 y EMA 188</td>
+<td>El más cercano al precio. Marca la tendencia de corto-medio plazo y es el primer soporte o resistencia. Su estrangulamiento o cruce avisa de un cambio de tendencia.</td>
+</tr>
+<tr>
+<td>Amarillo</td>
+<td>EMA 416 y EMA 618</td>
+<td>Tendencia de medio-largo plazo. Soporte o resistencia fuerte cuando el precio llega a él.</td>
+</tr>
+<tr>
+<td>Rosa</td>
+<td>EMA 882 y EMA 1223</td>
+<td>Tendencia de fondo. Es el más lento y el que define el mercado a largo plazo.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Colores de vela (ADX 7 + Williams %R 40)</h3>
+<p>El color depende de tres cosas: si el ADX (7) sube o baja, si el Williams %R (40) sube o baja, y en qué zona está el %R. Mide fuerza, no volumen.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Cuándo sale</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azul marino</td>
+<td>%R por encima de −50 sin otra condición</td>
+<td>Inicio o confirmación de una secuencia alcista (cambio de tendencia al alza)</td>
+</tr>
+<tr>
+<td>Fucsia</td>
+<td>%R por debajo de −50 sin otra condición</td>
+<td>Inicio o confirmación de una secuencia bajista (cambio de tendencia a la baja)</td>
+</tr>
+<tr>
+<td>Verde oscuro</td>
+<td>%R por encima de −27, ADX sube y %R sube</td>
+<td>Máxima fuerza alcista dentro de una tendencia de subida</td>
+</tr>
+<tr>
+<td>Verde</td>
+<td>%R entre −50 y −27, ADX sube y %R sube</td>
+<td>Máxima fuerza alcista dentro de una tendencia de subida</td>
+</tr>
+<tr>
+<td>Rojo</td>
+<td>%R por encima de −50, ADX sube y %R baja</td>
+<td>Fuerza alcista durante una fase de corrección</td>
+</tr>
+<tr>
+<td>Marrón</td>
+<td>%R por debajo de −72, ADX sube y %R baja</td>
+<td>Fuerza bajista impulsiva</td>
+</tr>
+<tr>
+<td>Verde fosforito</td>
+<td>%R por debajo de −50, ADX sube y %R sube</td>
+<td>Fuerza bajista impulsiva</td>
+</tr>
+<tr>
+<td>Amarillo</td>
+<td>%R por encima de −50, ADX baja y %R baja</td>
+<td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral</td>
+</tr>
+<tr>
+<td>Azul claro</td>
+<td>%R por encima de −50, ADX baja y %R sube</td>
+<td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral</td>
+</tr>
+<tr>
+<td>Cian</td>
+<td>%R por debajo de −50, ADX baja y %R sube</td>
+<td>Pérdida de fuerza o indecisión. Suele anticipar una corrección o un lateral</td>
+</tr>
+<tr>
+<td>Naranja</td>
+<td>%R por debajo de −50, ADX baja y %R baja</td>
+<td>Falta de fuerza clara en la dirección actual del precio</td>
+</tr>
+<tr>
+<td>Rosa oscuro</td>
+<td>%R entre −72 y −50, ADX sube y %R baja</td>
+<td>Tono intermedio entre el fucsia y el marrón. La leyenda del autor no le asigna un significado propio</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>2. Sesiones (reloj de mercado)</h2>
+<p>Dibuja un triángulo hacia arriba bajo la vela en la apertura de cada sesión y uno hacia abajo sobre la vela en el cierre. Solo aparece en temporalidades de 30 minutos o menos. Además, una tabla en la esquina del gráfico indica si cada sesión está <strong>ABIERTA</strong>, <strong>CERRADA</strong> o en <strong>DESCANSO</strong>. Los horarios son de Madrid.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Apertura</th>
+<th>Cierre</th>
+<th>Descanso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>China</td>
+<td>02:30</td>
+<td>08:00</td>
+<td>04:30 a 06:00</td>
+</tr>
+<tr>
+<td>Hong Kong</td>
+<td>02:30</td>
+<td>09:00</td>
+<td>05:00 a 06:00</td>
+</tr>
+<tr>
+<td>Japón</td>
+<td>01:00</td>
+<td>07:00</td>
+<td>03:30 a 04:30</td>
+</tr>
+<tr>
+<td>Europa</td>
+<td>09:00</td>
+<td>17:30</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Estados Unidos</td>
+<td>15:30</td>
+<td>22:00</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mientras Europa está en horario de verano, los triángulos de Asia salen una hora antes.</p>
+<hr />
+<h2>3. Institucional: IN y OUT</h2>
+<h3>Cómo se calcula</h3>
+<p>Media simple de 20 periodos con bandas a 3 desviaciones estándar. Se marca una señal cuando la vela <strong>cierra fuera de la banda</strong> y, además, el <strong>volumen es alto</strong>: más de 1,5 veces la media de las últimas 100 velas.</p>
+<ul>
+<li><strong>IN (naranja):</strong> etiqueta bajo la vela cuando cierra por encima de la banda superior con volumen alto. Se interpreta como entrada de manos fuertes.</li>
+<li><strong>OUT (rojo):</strong> etiqueta sobre la vela cuando cierra por debajo de la banda inferior con volumen alto. Se interpreta como salida de manos fuertes.</li>
+<li><strong>Línea naranja:</strong> la media de 20 periodos sobre la que se calculan las bandas.</li>
+</ul>
+<h3>Cuidado</h3>
+<ul>
+<li>La señal se repinta durante la vela: <strong>solo vale al cierre</strong>.</li>
+<li>Se pueden activar alertas de IN y de OUT, pero hay que confirmarlas con la vela cerrada.</li>
+<li>Si el activo no da datos de volumen, el indicador no bloquea la señal y no valida nada con el volumen, así que hay que mirar la vela de volumen real aparte.</li>
+</ul>
+<hr />
+<h2>4. FVG (huecos de precio)</h2>
+<h3>Qué es</h3>
+<p>Un hueco que el precio deja entre tres velas seguidas. Es una zona de desequilibrio a la que el precio suele volver.</p>
+<ul>
+<li><strong>FVG alcista:</strong> el mínimo de la vela actual queda por encima del máximo de la vela de dos barras atrás.</li>
+<li><strong>FVG bajista:</strong> el máximo de la vela actual queda por debajo del mínimo de la vela de dos barras atrás.</li>
+</ul>
+<h3>Cómo se dibuja</h3>
+<p>Como una caja gris que se extiende a la derecha. Cuanto más grande es el hueco respecto al ATR de 100 periodos, más oscura es la caja y más peso tiene.</p>
+<h3>Mitigación</h3>
+<p>La caja se va recortando a medida que el precio la rellena, al cierre de cada vela. Desaparece cuando el precio cubre el 50 % del hueco (configurable) o cuando lo consume entero. Un hueco nuevo contenido dentro de otro del mismo tipo no se dibuja.</p>
+<h3>Alertas</h3>
+<p>Se pueden activar alertas para el FVG nuevo y para el FVG mitigado o cerrado.</p>
+<hr />
+<h2>Ejemplo anotado: cada elemento en un gráfico real</h2>
+<p>Capturas de TradingView (MNQ1!, Micro Nasdaq-100, gráfico de 5 minutos) con cada componente del indicador señalado y explicado debajo.</p>
+<p><strong>Captura completa:</strong> tendencia, túneles, FVG, OUT, triángulos de sesiones y ejemplos de color de vela (marrón, verde fosforito, naranja, cian y fucsia).</p>
+<figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_1_completa.webp" target="_blank" rel="noopener"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_1_completa.webp" alt="VIPERIANDICATOR14 anotado: captura completa"></a><figcaption>VIPERIANDICATOR14 anotado: captura completa</figcaption></figure>
+<p><strong>Zona alcista e IN:</strong> el relleno de la zona de corrección en verde (momentum alcista) y las etiquetas IN.</p>
+<figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_2_IN_y_zona_alcista.webp" target="_blank" rel="noopener"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_2_IN_y_zona_alcista.webp" alt="VIPERIANDICATOR14 anotado: IN y zona alcista"></a><figcaption>VIPERIANDICATOR14 anotado: IN y zona alcista</figcaption></figure>
+<p><strong>Colores de vela y sesión de EEUU:</strong> azul claro, amarillo, rojo, verde oscuro y verde, con la apertura de EEUU y el cierre de Europa.</p>
+<figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_3_velas_y_sesion_EEUU.webp" target="_blank" rel="noopener"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_3_velas_y_sesion_EEUU.webp" alt="VIPERIANDICATOR14 anotado: velas y sesión de EEUU"></a><figcaption>VIPERIANDICATOR14 anotado: velas y sesión de EEUU</figcaption></figure>
+<p>Notas sobre los ejemplos:
+- Se muestra una vela de cada color de la tabla. El azul marino y el rosa oscuro casi nunca aparecen: en su lugar suele verse el fucsia.
+- Los triángulos de sesión se identifican por la hora a la que salen, según la tabla de horarios de Madrid.</p>
+<h2>Colores de vela y patrones de velas</h2>
+<p>Los colores del indicador miden <strong>fuerza y momentum</strong> (ADX 7 + Williams %R 40). Los patrones de velas japonesas describen la <strong>forma</strong> de una o varias velas. Son dos lecturas distintas y se combinan: un martillo o una envolvente cobran peso si coinciden con el color de vela, con la zona de corrección, con un túnel o con un nivel. Los patrones tienen su propia ficha en esta biblioteca (Indicadores → Patrones de velas).</p>
+<h2>Cómo se combina según la temporalidad</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Temporalidad</th>
+<th>Para qué se usa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D, W y M</td>
+<td>Soportes, resistencias, estructura y cómo va el mercado</td>
+</tr>
+<tr>
+<td>H4 y H1</td>
+<td>Análisis y contexto: dirección, zona de corrección, Genial Line, túneles y sus cruces. En swing, H1 es el gatillo con confirmación en H4</td>
+</tr>
+<tr>
+<td>M15, M5 y M1</td>
+<td>Gatillo en intradía y scalping. M1 afina el timing, pero no decide solo. El volumen real se valida en M5 como mínimo</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<p><em>Contenido educativo, no es una recomendación de inversión. Datos con retraso, solo informativos.</em></p></div>
