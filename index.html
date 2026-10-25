@@ -528,6 +528,8 @@ button.bs:hover, button.bs:focus-visible { border-color: var(--accent); outline:
    objeto con el mismo formato (asset, date ISO, y las secciones que apliquen).
    --------------------------------------------------------------------------- */
 var MODES = { swing: 'Swing', intra: 'Intradía · Scalping' };
+function symNum(x) { var n = parseFloat(String(x).replace(/\./g, '').replace(',', '.')); return isNaN(n) ? null : n; }
+function symDec(x) { var m = /,(\d+)/.exec(String(x)); return m ? m[1].length : 0; }
 var SYMBOLS_PRICES_NG = { NGAS: 0, XNGUSD: 1 };
 function symPrices(e, sy) {
   var q = e.quotes && e.quotes[0]; if (!q || !/Entre paréntesis, el futuro/.test(q.s || '')) return null;
@@ -22425,6 +22427,14 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
         sy.fut.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + (pr ? '<td>' + esc(pr.fut) + '</td>' : '') + '</tr></tbody></table></div>';
       sh += '<h3 style="margin-top:14px">CFD</h3><div class="tablewrap"><table class="dt stack"><thead><tr><th>Símbolo</th><th>Instrumento</th><th>Proveedor</th>' + (pr ? '<th>Precio del CFD</th>' : '') + '</tr></thead><tbody>' +
         sy.cfd.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td>' + (pr ? '<td>' + esc(pr.cfd[r[0]] || '') + '</td>' : '') + '</tr>'; }).join('') + '</tbody></table></div>';
+      if (pr) {
+        var ln = sy.cfd.map(function (r) {
+          var f = symNum(pr.fut), c = symNum(pr.cfd[r[0]]); if (f == null || c == null) return '';
+          var d = f - c, dec = Math.max(symDec(pr.fut), symDec(pr.cfd[r[0]]));
+          return '<p>' + esc(sy.fut[0]) + ' − ' + esc(r[0]) + ' ≈ <b>' + (d >= 0 ? '+' : '−') + Math.abs(d).toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + '</b> (' + esc(pr.fut) + ' frente a ' + esc(pr.cfd[r[0]]) + ')</p>';
+        }).join('');
+        if (ln) sh += '<h3 style="margin-top:14px">Diferencial con el futuro</h3>' + ln;
+      }
       symHtml = sec('sim', 'Símbolos', sh);
     } else { symHtml = ''; }
     if (e.conclusion) {
