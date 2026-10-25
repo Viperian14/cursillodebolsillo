@@ -60,14 +60,6 @@
 </thead>
 <tbody>
 <tr>
-<td><i class="sw" style="background:#000096"></i>Azul marino</td>
-<td>Inicio o confirmación de una secuencia alcista (cambio de tendencia al alza)</td>
-</tr>
-<tr>
-<td><i class="sw" style="background:#ff00ff"></i>Fucsia</td>
-<td>Inicio o confirmación de una secuencia bajista (cambio de tendencia a la baja)</td>
-</tr>
-<tr>
 <td><i class="sw" style="background:#466446"></i>Verde oscuro</td>
 <td>Máxima fuerza alcista dentro de una tendencia de subida</td>
 </tr>
@@ -105,7 +97,7 @@
 </tr>
 <tr>
 <td><i class="sw" style="background:#d23c82"></i>Rosa oscuro</td>
-<td>Tono intermedio entre el <i class="sw" style="background:#ff00ff"></i>fucsia y el <i class="sw" style="background:#642832"></i>marrón. La leyenda del autor no le asigna un significado propio</td>
+<td>Tono rosado intermedio, cerca del <i class="sw" style="background:#642832"></i>marrón. La leyenda del autor no le asigna un significado propio</td>
 </tr>
 </tbody>
 </table></div>
@@ -187,14 +179,14 @@
 <hr />
 <h2>Ejemplo anotado: cada elemento en un gráfico real</h2>
 <p>Capturas de TradingView (MNQ1!, Micro Nasdaq-100, gráfico de 5 minutos) con cada componente del indicador señalado y explicado debajo.</p>
-<p><strong>Captura completa:</strong> tendencia, túneles, FVG, OUT, triángulos de sesiones y ejemplos de color de vela (<i class="sw" style="background:#642832"></i>marrón, <i class="sw" style="background:#00ff00"></i>verde fosforito, <i class="sw" style="background:#fa8c00"></i>naranja, <i class="sw" style="background:#00ffff"></i>cian y <i class="sw" style="background:#ff00ff"></i>fucsia).</p>
+<p><strong>Captura completa:</strong> tendencia, túneles, FVG, OUT, triángulos de sesiones y ejemplos de color de vela (<i class="sw" style="background:#642832"></i>marrón, <i class="sw" style="background:#00ff00"></i>verde fosforito, <i class="sw" style="background:#fa8c00"></i>naranja y <i class="sw" style="background:#00ffff"></i>cian).</p>
 <figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_1_completa.webp" class="bz" data-zoom="1"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_1_completa.webp" alt="VIPERIANDICATOR14 anotado: captura completa"></a><figcaption>VIPERIANDICATOR14 anotado: captura completa</figcaption></figure>
 <p><strong>Zona alcista e IN:</strong> el relleno de la zona de corrección en <i class="sw" style="background:#78b946"></i>verde (momentum alcista) y las etiquetas IN.</p>
 <figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_2_IN_y_zona_alcista.webp" class="bz" data-zoom="1"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_2_IN_y_zona_alcista.webp" alt="VIPERIANDICATOR14 anotado: IN y zona alcista"></a><figcaption>VIPERIANDICATOR14 anotado: IN y zona alcista</figcaption></figure>
 <p><strong>Colores de vela y sesión de EEUU:</strong> <i class="sw" style="background:#1eb4e6"></i>azul claro, <i class="sw" style="background:#fffa00"></i>amarillo, <i class="sw" style="background:#ff0000"></i>rojo, <i class="sw" style="background:#466446"></i>verde oscuro y <i class="sw" style="background:#78b946"></i>verde, con la apertura de EEUU y el cierre de Europa.</p>
 <figure class="bfig"><a href="biblioteca/imagenes/viperiandicator14_anotada_3_velas_y_sesion_EEUU.webp" class="bz" data-zoom="1"><img loading="lazy" src="biblioteca/imagenes/viperiandicator14_anotada_3_velas_y_sesion_EEUU.webp" alt="VIPERIANDICATOR14 anotado: velas y sesión de EEUU"></a><figcaption>VIPERIANDICATOR14 anotado: velas y sesión de EEUU</figcaption></figure>
 <p>Notas sobre los ejemplos:
-- Se muestra una vela de cada color de la tabla. El <i class="sw" style="background:#000096"></i>azul marino y el <i class="sw" style="background:#ff00ff"></i>fucsia casi nunca aparecen: en el código solo salen cuando el %R no cambia entre dos velas seguidas (por ejemplo, pegado en 0 o en −100). El <i class="sw" style="background:#d23c82"></i>rosa oscuro sí sale y se parece al <i class="sw" style="background:#ff00ff"></i>fucsia.
+- Se muestra una vela de cada color de la tabla.
 - Los triángulos de sesión se identifican por la hora a la que salen, según la tabla de horarios de Madrid.</p>
 <h2>Colores de vela y patrones de velas</h2>
 <p>Los colores del indicador miden <strong>fuerza y momentum</strong> (ADX 7 + Williams %R 40). Los patrones de velas japonesas describen la <strong>forma</strong> de una o varias velas. Son dos lecturas distintas y se combinan: un martillo o una envolvente cobran peso si coinciden con el color de vela, con la zona de corrección, con un túnel o con un nivel. Los patrones tienen su propia ficha en esta biblioteca (Indicadores → Patrones de velas).</p>
