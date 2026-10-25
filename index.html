@@ -425,6 +425,13 @@ h2 { color: var(--muted); }
 
 /* Herramientas */
 /* Biblioteca */
+.zoomov { position: fixed; inset: 0; z-index: 1000; background: rgba(11,17,13,.96); display: flex; flex-direction: column; }
+.zoomov .zbar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.zoomov .zback { font: inherit; font-weight: 600; font-size: 15px; color: #0a0f0c; background: var(--accent); border: 0; border-radius: 999px; padding: 9px 18px; cursor: pointer; }
+.zoomov .zcap { font-size: 13px; color: var(--muted); min-width: 0; }
+.zoomov .zimg { flex: 1; overflow: auto; padding: 12px; -webkit-overflow-scrolling: touch; }
+.zoomov .zimg img { display: block; margin: 0 auto; max-width: none; width: min(100%, 1400px); height: auto; border-radius: 8px; }
+.bz { cursor: zoom-in; }
 .toolcards { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .bsub { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 4px; }
 .bdocs { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 18px; }
@@ -23529,9 +23536,27 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
     Array.prototype.forEach.call(document.querySelectorAll('.actgrp'), function (g) { g.hidden = !!q && g.textContent.toLowerCase().indexOf(q) < 0; });
     Array.prototype.forEach.call(document.querySelectorAll('.actcat'), function (c) { c.hidden = !c.querySelector('.actgrp:not([hidden])'); });
   });
+  function zoomClose(fromPop) {
+    var o = document.getElementById('bibzoom'); if (!o) return;
+    o.remove(); document.body.style.overflow = '';
+    if (!fromPop && history.state && history.state.bibzoom) { try { history.back(); } catch (e) {} }
+  }
+  window.addEventListener('popstate', function () { zoomClose(true); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') zoomClose(); });
   document.addEventListener('click', function (ev) {
     var T = ev.target.closest ? ev.target : null;
     if (T) {
+      var zb = T.closest('.zback'); if (zb) { zoomClose(); return; }
+      var zl = T.closest('[data-zoom]');
+      if (zl) {
+        ev.preventDefault();
+        var im = zl.querySelector('img'), cp = zl.parentNode.querySelector('figcaption');
+        var o = document.createElement('div'); o.id = 'bibzoom'; o.className = 'zoomov'; o.setAttribute('role', 'dialog'); o.setAttribute('aria-modal', 'true');
+        o.innerHTML = '<div class="zbar"><button type="button" class="zback">← Volver</button><span class="zcap">' + esc(cp ? cp.textContent : '') + '</span></div><div class="zimg"><img src="' + esc(im.getAttribute('src')) + '" alt="' + esc(im.getAttribute('alt') || '') + '"></div>';
+        document.body.appendChild(o); document.body.style.overflow = 'hidden';
+        try { history.pushState({ bibzoom: 1 }, '', location.href); } catch (e) {}
+        o.querySelector('.zback').focus(); return;
+      }
       var nc = T.closest('[data-ncat]');
       if (nc) {
         state.cat = nc.getAttribute('data-ncat');
