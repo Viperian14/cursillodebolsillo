@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T21:36:03Z",
+ "updated": "2026-10-27T17:05:42Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -23,6 +23,12 @@
    "d": "2026-10-26",
    "match": "Subasta de notas y bonos del Tesoro a 2 años (Nota a 2 años)",
    "act": "4,708%",
+   "res": ""
+  },
+  {
+   "d": "2026-10-27",
+   "match": "Subasta de notas y bonos del Tesoro a 5 años (Nota a 5 años)",
+   "act": "4,845%",
    "res": ""
   }
  ]
