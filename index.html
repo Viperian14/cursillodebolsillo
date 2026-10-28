@@ -25067,7 +25067,7 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1545,1.01], "BTC-2026-10
     }
     if (!BIB.dict) { bibFetch('biblioteca/diccionario.json', true, function (j) { BIB.dict = j; renderInfo(); }); return h + '<p class="legend">Cargando…</p>'; }
     var r = dictHtml();
-    h += '<section style="margin-top:14px"><p class="legend">Diccionario del inversor: términos de economía, datos macro, mercados, trading y análisis. Busca por palabra o elige la letra inicial.</p><input type="search" id="bibq" class="actq" placeholder="Buscar un término (por ejemplo inflación, stop, gap)" aria-label="Buscar en el diccionario" value="' + esc(BIB.q) + '"></section>';
+    h += '<section style="margin-top:14px"><p class="legend">Diccionario del inversor: términos de economía, datos macro, mercados, futuros, trading, order flow, análisis y cripto. Busca por palabra o elige la letra inicial.</p><input type="search" id="bibq" class="actq" placeholder="Buscar un término (por ejemplo inflación, stop, gap)" aria-label="Buscar en el diccionario" value="' + esc(BIB.q) + '"></section>';
     h += '<div class="bletters" id="bibletters" role="group" aria-label="Letra">' + r.letters + '</div>';
     h += '<div class="tabs catchips" role="group" aria-label="Categoría">' + [['all', 'Todas las categorías']].concat(BIB.dict.cats.map(function (c) { return [c, c]; })).map(function (c) { return '<button type="button" class="chip" data-bcat="' + esc(c[0]) + '" aria-pressed="' + (BIB.cat === c[0]) + '">' + esc(c[1]) + '</button>'; }).join('') + '</div>';
     return h + '<div id="bibres">' + r.list + '</div>';
