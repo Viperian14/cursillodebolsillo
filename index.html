@@ -530,13 +530,11 @@ button.bs:hover, button.bs:focus-visible { border-color: var(--accent); outline:
 var MODES = { swing: 'Swing', intra: 'Intradía · Scalping' };
 function symNum(x) { var n = parseFloat(String(x).replace(/\./g, '').replace(',', '.')); return isNaN(n) ? null : n; }
 function symDec(x) { var m = /,(\d+)/.exec(String(x)); return m ? m[1].length : 0; }
-var SYMBOLS_PRICES_NG = { NGAS: 0, XNGUSD: 1 };
 function symPrices(e, sy) {
-  var q = e.quotes && e.quotes[0]; if (!q || !/Entre paréntesis, el futuro/.test(q.s || '')) return null;
-  var m = /^(.*?) \((.*)\)$/.exec(q.v || ''); if (!m) return null;
-  var parts = m[1].split(' y '), out = { fut: m[2], cfd: {} };
-  sy.cfd.forEach(function (r, i) { out.cfd[r[0]] = (e.asset === 'NG' && SYMBOLS_PRICES_NG[r[0]] != null) ? parts[SYMBOLS_PRICES_NG[r[0]]] : parts[Math.min(i, parts.length - 1)]; });
-  return out;
+  // Precios de la caja de Símbolos: e.sym = { fut: '29.117,75', cfd: { NAS100: '29.009,6' }, nota: '...' }.
+  // El futuro es el dato del análisis; el CFD solo se enseña aquí, como referencia.
+  if (!e.sym || !e.sym.fut) return null;
+  return { fut: e.sym.fut, cfd: e.sym.cfd || {}, nota: e.sym.nota || '' };
 }
 var SYMBOLS = {
   ES: { fut: ['ES', 'E-mini S&P 500', 'CME (CME Globex)', 'Diciembre (ESZ6)'],
@@ -10094,13 +10092,13 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Gas natural NG (noviembre)",
-        "v": "3,220 (3,400)",
-        "s": "cierre del viernes: +1,64% (+2,53%). Entre paréntesis, el XNGUSD"
+        "v": "3,220",
+        "s": "cierre del viernes: +1,64%"
       },
       {
         "l": "Semana",
         "v": "2,997 – 3,298",
-        "s": "abre 3,019 y cierra 3,220 (+6,10%). XNGUSD: 3,117 – 3,460, cierra 3,400 (+7,87%)"
+        "s": "abre 3,019 y cierra 3,220 (+6,10%)"
       },
       {
         "l": "Diciembre y enero sobre noviembre",
@@ -10114,8 +10112,8 @@ var ENTRIES = [
       "caption": "Gráfico diario del NG (captura del domingo 11 de octubre, 10:28). Cierre del viernes: 3,220."
     },
     "conclusion": {
-      "lead": "Coincido en la continuación alcista, pero con dos matices: antes puede haber un retroceso a 3,127‑3,08 (3,20), y el primer muro real es 3,305 (≈3,49), no 3,535.",
-      "text": "La semana subió +6,1% (+7,87% en el XNGUSD) y el viernes cerró en 3,220 (3,400), por encima de la Genial y del túnel azul diarios. El diario tiene color verde oscuro (máxima fuerza alcista) y el semanal cierra con una vela grande, así que tu lectura de W y D se sostiene. Pero H4 (amarillo en el NG, rojo en el XNGUSD) y H1 (azul claro) están corrigiendo o sin fuerza, y arriba hay un doble techo en 3,305 (24 de septiembre y 8 de octubre) pegado a los túneles amarillo y rosa diarios (~3,25‑3,33) y al borde alto del túnel azul semanal. Tu zona de 3,535‑3,7 (3,8‑3,94) queda detrás: 3,535 coincide con los túneles rosa y amarillo semanales y con el precio del diciembre (3,546), y alcanzarlo en el noviembre significaría aplanar la curva, un objetivo exigente (hipótesis). Hay conflicto entre marcos (W y D con fuerza, H4 y H1 corrigiendo): esperar al gatillo H1 con confirmación en H4 y no anticipar. Los fundamentales son mixtos: almacenamientos un 2% sobre la media y producción récord frente a demanda y GNL altos."
+      "lead": "Coincido en la continuación alcista, pero con dos matices: antes puede haber un retroceso a 3,127‑3,08, y el primer muro real es 3,305, no 3,535.",
+      "text": "La semana subió +6,1% y el viernes cerró en 3,220, por encima de la Genial y del túnel azul diarios. El diario tiene color verde oscuro (máxima fuerza alcista) y el semanal cierra con una vela grande, así que tu lectura de W y D se sostiene. Pero H4 (amarillo) y H1 (azul claro) están corrigiendo o sin fuerza, y arriba hay un doble techo en 3,305 (24 de septiembre y 8 de octubre) pegado a los túneles amarillo y rosa diarios (~3,25‑3,33) y al borde alto del túnel azul semanal. Tu zona de 3,535‑3,7 queda detrás: 3,535 coincide con los túneles rosa y amarillo semanales y con el precio del diciembre (3,546), y alcanzarlo en el noviembre significaría aplanar la curva, un objetivo exigente (hipótesis). Hay conflicto entre marcos (W y D con fuerza, H4 y H1 corrigiendo): esperar al gatillo H1 con confirmación en H4 y no anticipar. Los fundamentales son mixtos: almacenamientos un 2% sobre la media y producción récord frente a demanda y GNL altos."
     },
     "frames": [
       {
@@ -10154,97 +10152,97 @@ var ENTRIES = [
         "p": 3.906,
         "lbl": "3,906",
         "cls": "res",
-        "t": "Resistencia mayor (D y H4). XNGUSD ≈4,12"
+        "t": "Resistencia mayor (D y H4)"
       },
       {
         "p": 3.7,
         "lbl": "3,70",
         "cls": "res",
-        "t": "Techo alto de tu ruta. XNGUSD 3,94"
+        "t": "Techo alto de tu ruta"
       },
       {
         "p": 3.535,
         "lbl": "3,535",
         "cls": "res",
-        "t": "Túneles semanales y diciembre. XNGUSD 3,80"
+        "t": "Túneles semanales y diciembre"
       },
       {
         "p": 3.305,
         "lbl": "3,305",
         "cls": "res",
-        "t": "Doble techo. XNGUSD ≈3,49"
+        "t": "Doble techo"
       },
       {
         "p": 3.22,
         "lbl": "3,220",
         "cls": "now",
-        "t": "Cierre del viernes. XNGUSD 3,400"
+        "t": "Cierre del viernes"
       },
       {
         "p": 3.127,
         "lbl": "3,127",
         "cls": "sup",
-        "t": "Soporte H1. XNGUSD ≈3,30"
+        "t": "Soporte H1"
       },
       {
         "p": 3.08,
         "lbl": "3,08",
         "cls": "sup",
-        "t": "Tu retroceso. XNGUSD 3,20"
+        "t": "Tu retroceso"
       },
       {
         "p": 2.922,
         "lbl": "2,922",
         "cls": "sup",
-        "t": "Soporte. XNGUSD ≈3,09 (línea 3,047)"
+        "t": "Soporte"
       },
       {
         "p": 2.628,
         "lbl": "2,628",
         "cls": "sup",
-        "t": "Soporte. XNGUSD ≈2,78 (línea 2,754)"
+        "t": "Soporte"
       }
     ],
     "table": [
       [
-        "3,906 (≈4,12)",
+        "3,906",
         "Resistencia mayor",
-        "Línea verde en D y H4, bajo el bloque de FVG que sale del pico de enero. En XNGUSD tienes un FVG de H4 en 3,68‑4,13"
+        "Línea verde en D y H4, bajo el bloque de FVG que sale del pico de enero"
       ],
       [
-        "3,535‑3,7 (3,8‑3,94)",
+        "3,535‑3,7",
         "Tu zona objetivo",
-        "La línea 3,535 coincide con los túneles rosa y amarillo semanales (~3,38‑3,53, leídos a ojo) y con el precio del diciembre (3,546). En XNGUSD tienes la línea 3,544 y un bloque de FVG 3,55‑3,72 en el diario"
+        "La línea 3,535 coincide con los túneles rosa y amarillo semanales (~3,38‑3,53, leídos a ojo) y con el precio del diciembre (3,546)"
       ],
       [
-        "3,305 (≈3,49)",
+        "3,305",
         "Resistencia clave",
         "Doble techo del 24 de septiembre y del 8 de octubre. En el diario, los túneles amarillo (~3,25) y rosa (~3,30) quedan pegados. En el semanal, es el borde alto del túnel azul"
       ],
       [
-        "3,16‑3,19 (≈3,34‑3,37)",
+        "3,16‑3,19",
         "FVG de H1 y H4",
-        "Hueco bajo el precio actual, con la EMA 8 de H1 (~3,18) y la Genial de H1 (~3,17) dentro. En XNGUSD hay un FVG de H4 en 3,34‑3,39"
+        "Hueco bajo el precio actual, con la EMA 8 de H1 (~3,18) y la Genial de H1 (~3,17) dentro"
       ],
       [
-        "3,127 (≈3,30)",
+        "3,127",
         "Soporte clave",
         "Línea roja. Mínimos del 9 de octubre y borde alto del túnel azul H1 (~3,11‑3,14)"
       ],
       [
-        "3,03‑3,08 (≈3,20)",
+        "3,03‑3,08",
         "Soporte de tu escenario",
-        "Túnel rosa de H4 (~3,03‑3,08), con el azul (~3,00‑3,03) y el amarillo (~2,96‑2,98) por debajo. Es tu 3,08 (3,20)"
+        "Túnel rosa de H4 (~3,03‑3,08), con el azul (~3,00‑3,03) y el amarillo (~2,96‑2,98) por debajo. Es tu 3,08"
       ],
       [
-        "2,922 (≈3,09)",
+        "2,922",
         "Soporte",
-        "Línea roja, FVG de H1 en 2,89‑2,91 y túneles amarillo y rosa de H1 (~2,96‑3,05) por encima. En XNGUSD la línea es 3,047"
+        "Línea roja, FVG de H1 en 2,89‑2,91 y túneles amarillo y rosa de H1 (~2,96‑3,05) por encima"
       ],
       [
-        "2,784 / 2,628 (≈2,94 / ≈2,78)",
+        "2,784 / 2,628",
         "Soportes profundos",
-        "Mínimos de este año. En XNGUSD, 2,754 (roja) y 2,189"
+        "Mínimos de este año"
       ],
       [
         "5,438 / 4,868 / 4,609 / 4,308",
@@ -10265,7 +10263,7 @@ var ENTRIES = [
         "tag": "Lateral / retroceso",
         "title": "2. Retroceso a 3,127‑3,08 y rebote (tu escenario)",
         "pct": 40,
-        "text": "El precio corrige hacia el túnel azul H1 y el rosa H4 (3,08 es 3,20 en XNGUSD) con clima suave o noticias flojas, aguanta y vuelve a subir. Es el escenario más probable porque H4 y H1 ya corrigen. Se invalida con un cierre H4 bajo 3,03."
+        "text": "El precio corrige hacia el túnel azul H1 y el rosa H4 con clima suave o noticias flojas, aguanta y vuelve a subir. Es el escenario más probable porque H4 y H1 ya corrigen. Se invalida con un cierre H4 bajo 3,03."
       },
       {
         "cls": "down",
@@ -10287,7 +10285,7 @@ var ENTRIES = [
       },
       {
         "k": "Cortos",
-        "text": "Rechazo en 3,305 (≈3,49) con colores de fuerza bajista, o pérdida de 3,03 con retesteo. Objetivos 3,127 y después 2,922. Como el diario tiene fuerza, los cortos serían de menor tamaño y de gestión rápida."
+        "text": "Rechazo en 3,305 con colores de fuerza bajista, o pérdida de 3,03 con retesteo. Objetivos 3,127 y después 2,922. Como el diario tiene fuerza, los cortos serían de menor tamaño y de gestión rápida."
       },
       {
         "k": "Idea de fondo",
@@ -10295,10 +10293,6 @@ var ENTRIES = [
       }
     ],
     "tecnica": [
-      {
-        "k": "NG frente a XNGUSD",
-        "text": "El NG predomina, como dices. El XNGUSD cierra en 3,400 y el NG en 3,220: diferencia de 0,18, o 1,056 veces. Tus equivalencias (3,08 → 3,20; 3,535‑3,7 → 3,8‑3,94) implican una proporción entre 1,04 y 1,08, y la diferencia cambia con la curva, así que las conversiones con ≈ son aproximadas. Una diferencia importante: el XNGUSD ya cerró sobre los túneles diarios (el rosa está en ~3,30‑3,34), mientras el NG sigue bajo ellos. El cierre diario del NG (3,220, liquidación) también difiere del último precio de H1 y H4 (3,204). Fíate del NG."
-      },
       {
         "k": "Semanal",
         "text": "Vela de la semana en el NG: abre 3,019, máximo 3,298, mínimo 2,997 y cierre 3,220 (+6,10%). Color verde fosforito, que en tu leyenda es fuerza bajista impulsiva; con una vela que sube lo leo como rebote desde sobreventa más que como confirmación alcista (hipótesis). El cierre queda pegado por debajo del túnel azul semanal (~3,25‑3,35) y de la línea 3,305. Encima, túneles amarillo y rosa (~3,38‑3,53) y 3,535. Desde el pico de enero (por encima de 7) los máximos son decrecientes."
@@ -10309,11 +10303,11 @@ var ENTRIES = [
       },
       {
         "k": "H4",
-        "text": "Color amarillo en el NG (pérdida de fuerza o indecisión) y rojo en el XNGUSD (fuerza alcista en corrección). Precio sobre la EMA 8 (~3,17) y la Genial (~3,12). FVG 3,15‑3,19 justo debajo. Debajo, túnel rosa (~3,03‑3,08), azul y amarillo. Arriba, 3,305 y 3,535."
+        "text": "Color amarillo (pérdida de fuerza o indecisión). Precio sobre la EMA 8 (~3,17) y la Genial (~3,12). FVG 3,15‑3,19 justo debajo. Debajo, túnel rosa (~3,03‑3,08), azul y amarillo. Arriba, 3,305 y 3,535."
       },
       {
         "k": "H1",
-        "text": "Color azul claro en NG y XNGUSD (pérdida de fuerza o indecisión). Precio sobre el FVG 3,16‑3,19, la Genial (~3,17) y la EMA 8 (~3,18). Debajo, 3,127 con el túnel azul H1 (~3,11‑3,14). Aparecen marcas IN naranjas en la subida y en el mínimo del viernes (~3,12). Solo valen si la vela cerró fuera de la banda, y en una captura no puedo comprobarlo."
+        "text": "Color azul claro (pérdida de fuerza o indecisión). Precio sobre el FVG 3,16‑3,19, la Genial (~3,17) y la EMA 8 (~3,18). Debajo, 3,127 con el túnel azul H1 (~3,11‑3,14). Aparecen marcas IN naranjas en la subida y en el mínimo del viernes (~3,12). Solo valen si la vela cerró fuera de la banda, y en una captura no puedo comprobarlo."
       }
     ],
     "tables": [
@@ -10384,12 +10378,6 @@ var ENTRIES = [
           "Lectura"
         ],
         "rows": [
-          [
-            "XNGUSD (CFD)",
-            "3,400 (+2,53%) frente a NG 3,220 (+1,64%)",
-            "Directa, con más movimiento",
-            "Sube más que el NG; la diferencia cambia con la curva y el vencimiento"
-          ],
           [
             "Contratos de diciembre y enero",
             "3,546 y 3,972",
@@ -10499,7 +10487,13 @@ var ENTRIES = [
         "t": "Natural Gas Futures, 9 oct 2026 – Energy Intelligence (solo un adelanto del texto)",
         "u": "https://www.energyintel.com/000001a1-2155-d54e-affb-ff5f9d190000"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "3,220",
+      "cfd": {
+        "XNGUSD": "3,400"
+      }
+    }
   },
   {
     "asset": "ES",
@@ -10510,13 +10504,13 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "S&P 500 ES (diciembre)",
-        "v": "7.859,75 (7.811,54)",
-        "s": "cierre del viernes: +0,56% (+0,59%). Entre paréntesis, el SP500"
+        "v": "7.859,75",
+        "s": "cierre del viernes: +0,56%"
       },
       {
         "l": "Semana",
         "v": "7.760,25 – 7.897,50",
-        "s": "ES +1,06% (SP500 +1,15%; LPL da +1,21% y +14,19% en el año). Máximo semanal justo bajo la línea 7.901,75"
+        "s": "ES +1,06% (según LPL, el S&P 500 lleva +14,19% en el año). Máximo semanal justo bajo la línea 7.901,75"
       },
       {
         "l": "Bono a 10 años de EE. UU.",
@@ -10531,7 +10525,7 @@ var ENTRIES = [
     },
     "conclusion": {
       "lead": "Coincido: el sesgo sigue alcista y no es zona para entrar. Tu escenario es claro: con las elecciones cerca, si el precio alcanza ese máximo y choca con el canal alcista, un pullback bajista podría llevar camino de ese −20%.",
-      "text": "La semana subió y el ES cerró en 7.859,75 (SP500 7.811,54), con el máximo semanal (7.897,50) clavado bajo tu línea 7.901,75. Hay conflicto entre marcos: el semanal y el H1 tienen verde oscuro (máxima fuerza alcista), mientras que el diario y el H4 tienen azul claro (pérdida de fuerza o indecisión). Con ese conflicto, comprar aquí sería anticipar. Tu escenario (rebote en el canal y pullback bajista) lo veo como hipótesis razonable, pero hoy el gráfico no da ningún gatillo bajista: bajo el precio solo hay soportes, y el primero está a 125 puntos."
+      "text": "La semana subió y el ES cerró en 7.859,75, con el máximo semanal (7.897,50) clavado bajo tu línea 7.901,75. Hay conflicto entre marcos: el semanal y el H1 tienen verde oscuro (máxima fuerza alcista), mientras que el diario y el H4 tienen azul claro (pérdida de fuerza o indecisión). Con ese conflicto, comprar aquí sería anticipar. Tu escenario (rebote en el canal y pullback bajista) lo veo como hipótesis razonable, pero hoy el gráfico no da ningún gatillo bajista: bajo el precio solo hay soportes, y el primero está a 125 puntos."
     },
     "frames": [
       {
@@ -10565,81 +10559,81 @@ var ENTRIES = [
         "p": 7901.75,
         "lbl": "7.901,75",
         "cls": "res",
-        "t": "Tu línea (SP500 ≈7.854)"
+        "t": "Tu línea"
       },
       {
         "p": 7859.75,
         "lbl": "7.859,75",
         "cls": "now",
-        "t": "Cierre (SP500 7.811,54)"
+        "t": "Cierre"
       },
       {
         "p": 7734.75,
         "lbl": "7.734,75",
         "cls": "sup",
-        "t": "Primer soporte; Genial diaria (~7.720‑7.740) (SP500 ≈7.687)"
+        "t": "Primer soporte; Genial diaria (~7.720‑7.740)"
       },
       {
         "p": 7638.5,
         "lbl": "7.638,50",
         "cls": "sup",
-        "t": "Soporte; EMA 8 semanal (~7.630) (SP500 ≈7.590)"
+        "t": "Soporte; EMA 8 semanal (~7.630)"
       },
       {
         "p": 7542.25,
         "lbl": "7.542,25",
         "cls": "sup",
-        "t": "Soporte clave: FVG diario y borde alto del túnel azul diario (SP500 ≈7.494)"
+        "t": "Soporte clave: FVG diario y borde alto del túnel azul diario"
       },
       {
         "p": 7425.25,
         "lbl": "7.425,25",
         "cls": "sup",
-        "t": "Soporte, dentro del túnel azul diario (SP500 ≈7.377)"
+        "t": "Soporte, dentro del túnel azul diario"
       },
       {
         "p": 7333.5,
         "lbl": "7.333,50",
         "cls": "sup",
-        "t": "Soporte; borde bajo del túnel azul diario (SP500 ≈7.285)"
+        "t": "Soporte; borde bajo del túnel azul diario"
       },
       {
         "p": 7040.75,
         "lbl": "7.040,75",
         "cls": "sup",
-        "t": "Soporte; FVG semanal 6.950‑7.070 (SP500 ≈6.993)"
+        "t": "Soporte; FVG semanal 6.950‑7.070"
       },
       {
         "p": 6502.25,
         "lbl": "6.502,25",
         "cls": "sup",
-        "t": "Soporte semanal; cerca de tu SP500 6.401,97 (SP500 ≈6.454)"
+        "t": "Soporte semanal"
       },
       {
         "p": 6256.25,
         "lbl": "6.256,25",
         "cls": "sup",
-        "t": "Soporte semanal; −20% desde el cierre (SP500 ≈6.208)"
+        "t": "Soporte semanal; −20% desde el cierre"
       }
     ],
     "table": [
       [
-        "7.901,75 (≈7.854)",
+        "7.901,75",
         "Resistencia",
         "Tu línea verde. El máximo semanal fue 7.897,50. Por encima no hay nivel tuyo dibujado: el 8.000 es solo un número redondo"
       ],
       [
-        "7.734,75 (≈7.687)",
+        "7.734,75",
         "Primer soporte",
         "Línea roja, con la Genial diaria (~7.720‑7.740) y los puntos marrones pegados. Es donde debería aparecer un retroceso corto"
       ],
       [
-        "7.638,50 (≈7.590)",
+        "7.638,50",
         "Soporte",
         "Línea roja. En el semanal, la EMA 8 pasa por aquí (~7.630)"
       ],
       [
-        "7.542,25 (≈7.494)",
+        "7.542,25",
         "Soporte clave",
         "Línea roja con el FVG diario (7.520‑7.570) justo encima del túnel azul diario (~7.340‑7.520). Un cierre diario por debajo cambiaría el contexto"
       ],
@@ -10657,11 +10651,6 @@ var ENTRIES = [
         "6.502,25 / 6.376 / 6.256,25 / 6.166,50",
         "Soportes semanales",
         "Zona de tu proyección de −20% (ver tabla del estudio). El túnel azul semanal queda más abajo (~6.100‑6.600)"
-      ],
-      [
-        "SP500 mensual: 7.630,44 · 7.503,56 · 7.217,18 · 7.023,09 · 6.831,00 · 6.401,97 · 6.004,07",
-        "Tus líneas del mensual",
-        "Son tuyas y no las convierto: la diferencia entre ES y SP500 (hoy +48,21 puntos) cambia con el tiempo y en el vencimiento. Las equivalencias con ≈ son aproximadas"
       ]
     ],
     "scenarios": [
@@ -10703,14 +10692,10 @@ var ENTRIES = [
       },
       {
         "k": "Idea de fondo",
-        "text": "Tu tesis es de recogida de beneficios y nueva subida suave, no de fin del mercado: lo coherente es no pelear la subida y esperar a que el gráfico dé la señal de cambio. Ojo con el vencimiento de diciembre (probablemente el 18 de diciembre, cálculo mío): el continuo salta a la nueva base y la diferencia con el SP500 cambia."
+        "text": "Tu tesis es de recogida de beneficios y nueva subida suave, no de fin del mercado: lo coherente es no pelear la subida y esperar a que el gráfico dé la señal de cambio. Ojo con el vencimiento de diciembre (probablemente el 18 de diciembre, cálculo mío): el continuo salta a la nueva base."
       }
     ],
     "tecnica": [
-      {
-        "k": "ES frente a SP500",
-        "text": "El ES cierra en 7.859,75 y el SP500 en 7.811,54: diferencia de 48,21 puntos (es la base, no un error). En H1 y H4 el último precio del ES fue 7.866,00, no la liquidación del diario (7.859,75). Fíate del ES para el nivel y del SP500 para comparar con tus líneas del mensual."
-      },
       {
         "k": "Mensual (SP500)",
         "text": "Octubre abre 7.666,47, máximo 7.844,52, mínimo 7.616,78 y cierra 7.811,54 (+2,09%). Color verde oscuro. En tu gráfico la vela queda pegada al borde bajo del canal ascendente morado (a ojo, hipótesis). Tu etiqueta de máximo (7.896,60, 3 de agosto) no coincide con el máximo de octubre de la cabecera, así que no la uso como referencia: revisa si es un máximo intradía distinto."
@@ -10838,12 +10823,6 @@ var ENTRIES = [
         ],
         "rows": [
           [
-            "SP500 (índice)",
-            "7.811,54 (+0,59%)",
-            "Directa",
-            "El ES cotiza con una base de +48 puntos"
-          ],
-          [
             "Dow Jones (DJ30)",
             "Semana +1,09% y año +7,64% (LPL)",
             "Directa",
@@ -10944,7 +10923,14 @@ var ENTRIES = [
         "t": "Q3 Earnings Season: The Full Trading Calendar – Day Trading Toolkit (fechas de bancos y FOMC)",
         "u": "https://daytradingtoolkit.com/market-insights/q3-2026-earnings-season-trading-calendar"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "7.859,75",
+      "cfd": {
+        "SP500": "7.811,54"
+      },
+      "nota": "Precio del índice S&P 500 al cierre del viernes 9, no del CFD de Vantage."
+    }
   },
   {
     "asset": "NQ",
@@ -10955,17 +10941,17 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Nasdaq NQ (diciembre)",
-        "v": "31.108,75 (30.890,7)",
-        "s": "liquidación del viernes: +0,45% (+0,34%). Entre paréntesis, el NAS100 (CFD). Último precio en H1: 31.123,25 (30.890,7)"
+        "v": "31.108,75",
+        "s": "liquidación del viernes: +0,45%. Último precio en H1: 31.123,25"
       },
       {
         "l": "Semana",
         "v": "30.792 – 31.616,50",
-        "s": "NQ +0,15%; NAS100 30.549,3 – 31.365,3, +0,33%. El S&P 500 (ES) subió +1,06%: el Nasdaq va por detrás"
+        "s": "NQ +0,15%. El S&P 500 (ES) subió +1,06%: el Nasdaq va por detrás"
       },
       {
         "l": "Tu zona de bajada",
-        "v": "30.078 – 30.190 (≈29.846 – 29.958)",
+        "v": "30.078 – 30.190",
         "s": "≈ −930 a −1.045 puntos (−3,0% a −3,4%) desde 31.123"
       }
     ],
@@ -10975,7 +10961,7 @@ var ENTRIES = [
       "caption": "Gráfico diario del NQ (captura del domingo 11 de octubre, 11:22). Liquidación del viernes: 31.108,75."
     },
     "conclusion": {
-      "lead": "Tu zona 30.078‑30.190 (≈29.846‑29.958 en el NAS100) tiene sentido en el gráfico: ahí coinciden tu línea, la Genial diaria, el FVG diario y el túnel rosa de H1. Pero hoy falta el gatillo, y antes hay que perder 30.818,75.",
+      "lead": "Tu zona 30.078‑30.190 tiene sentido en el gráfico: ahí coinciden tu línea, la Genial diaria, el FVG diario y el túnel rosa de H1. Pero hoy falta el gatillo, y antes hay que perder 30.818,75.",
       "text": "La semana tocó 31.616,50, clavado en la cota histórica amarilla (31.617), y cerró en 31.108,75: mecha superior de ≈508 puntos (1,6%) y vela semanal en rojo (fuerza alcista en corrección). Eso apoya tu idea de que el máximo quedó estirado. Además el Nasdaq subió +0,15% frente al +1,06% del ES. Pero el diario, el H4 y el H1 tienen azul claro (pérdida de fuerza o indecisión), no color de fuerza bajista, y el precio sigue sobre el soporte 31.097,25 y la zona de 30.800. El camino hacia tu zona pasa por 30.818,75 y 30.401,25. El gatillo sería el H1 con confirmación en H4."
     },
     "frames": [
@@ -11011,109 +10997,109 @@ var ENTRIES = [
         "p": 31617,
         "lbl": "31.617",
         "cls": "res",
-        "t": "Cota histórica (≈31.385)"
+        "t": "Cota histórica"
       },
       {
         "p": 31291.5,
         "lbl": "31.291,50",
         "cls": "res",
-        "t": "Línea verde (≈31.060)"
+        "t": "Línea verde"
       },
       {
         "p": 31108.75,
         "lbl": "31.108,75",
         "cls": "now",
-        "t": "Cierre (NAS100 30.890,7)"
+        "t": "Cierre"
       },
       {
         "p": 30818.75,
         "lbl": "30.818,75",
         "cls": "sup",
-        "t": "Mínimo del jueves (≈30.587)"
+        "t": "Mínimo del jueves"
       },
       {
         "p": 30401.25,
         "lbl": "30.401,25",
         "cls": "sup",
-        "t": "Túnel azul H4 (≈30.169)"
+        "t": "Túnel azul H4"
       },
       {
         "p": 30190,
         "lbl": "30.190",
         "cls": "sup",
-        "t": "Techo de tu zona (≈29.958)"
+        "t": "Techo de tu zona"
       },
       {
         "p": 30078,
         "lbl": "30.078",
         "cls": "sup",
-        "t": "Base de tu zona (≈29.846)"
+        "t": "Base de tu zona"
       },
       {
         "p": 29768.75,
         "lbl": "29.768,75",
         "cls": "sup",
-        "t": "Soporte (≈29.537)"
+        "t": "Soporte"
       },
       {
         "p": 29505.5,
         "lbl": "29.505,50",
         "cls": "sup",
-        "t": "Soporte (≈29.274)"
+        "t": "Soporte"
       },
       {
         "p": 29145.25,
         "lbl": "29.145,25",
         "cls": "sup",
-        "t": "Soporte (≈28.913)"
+        "t": "Soporte"
       },
       {
         "p": 28729.75,
         "lbl": "28.729,75",
         "cls": "sup",
-        "t": "Soporte (≈28.498)"
+        "t": "Soporte"
       }
     ],
     "table": [
       [
-        "31.617 (≈31.385)",
+        "31.617",
         "Cota histórica",
-        "Línea amarilla del indicador. El máximo semanal (31.616,50) quedó clavado debajo, con mecha larga. En el NAS100, tu línea 31.357,1 y el máximo 31.365,3"
+        "Línea amarilla del indicador. El máximo semanal (31.616,50) quedó clavado debajo, con mecha larga"
       ],
       [
-        "31.291,50 (≈31.060)",
+        "31.291,50",
         "Resistencia",
-        "Línea verde en D, H4 y H1. Un cierre H4 por encima neutraliza tu escenario. En el NAS100, tu línea 31.121,4"
+        "Línea verde en D, H4 y H1. Un cierre H4 por encima neutraliza tu escenario"
       ],
       [
-        "31.097,25 (≈30.865)",
+        "31.097,25",
         "Soporte inmediato",
         "Línea roja pegada al precio y al túnel azul H1 (~31.080‑31.160). El precio se mueve sobre ella"
       ],
       [
-        "30.818,75 (≈30.587)",
+        "30.818,75",
         "Soporte clave",
-        "Mínimo del jueves 8 (el semanal marcó 30.792). Su pérdida es el primer paso real hacia tu zona. En el NAS100, tus líneas 30.749,3 y 30.501,3"
+        "Mínimo del jueves 8 (el semanal marcó 30.792). Su pérdida es el primer paso real hacia tu zona"
       ],
       [
-        "30.401,25 (≈30.169)",
+        "30.401,25",
         "Soporte",
-        "Línea roja con el túnel azul H4 (~30.400‑30.650) y el borde alto del FVG diario. En el NAS100, tu línea 30.240,8"
+        "Línea roja con el túnel azul H4 (~30.400‑30.650) y el borde alto del FVG diario"
       ],
       [
-        "30.078‑30.190 (≈29.846‑29.958)",
+        "30.078‑30.190",
         "Tu zona",
-        "Línea 30.078, la Genial diaria (~30.100), el FVG diario (~30.030‑30.400) y el túnel rosa de H1 (~30.050‑30.250), todo a ojo. En el NAS100, tu línea 29.775,4 queda justo debajo"
+        "Línea 30.078, la Genial diaria (~30.100), el FVG diario (~30.030‑30.400) y el túnel rosa de H1 (~30.050‑30.250), todo a ojo"
       ],
       [
-        "29.768,75 / 29.505,50 (≈29.537 / ≈29.274)",
+        "29.768,75 / 29.505,50",
         "Soportes",
-        "Líneas rojas, con FVG diario hacia 29.770‑29.980. En el NAS100, tus líneas 29.393,5 y 29.354,8"
+        "Líneas rojas, con FVG diario hacia 29.770‑29.980"
       ],
       [
-        "29.145,25 / 28.729,75 (≈28.913 / ≈28.498)",
+        "29.145,25 / 28.729,75",
         "Soportes",
-        "Parte alta del túnel azul diario (~28.200‑29.100). En el NAS100, tus líneas 29.192,3 y 28.490,5"
+        "Parte alta del túnel azul diario (~28.200‑29.100)"
       ]
     ],
     "scenarios": [
@@ -11122,7 +11108,7 @@ var ENTRIES = [
         "tag": "Bajista",
         "title": "1. Pérdida de 30.818,75 → tu zona 30.078‑30.190",
         "pct": 40,
-        "text": "Cierre H1 y H4 bajo 30.818,75 (≈30.587) con retesteo por abajo, colores de fuerza bajista. Paradas intermedias en 30.401,25 y objetivo en 30.190‑30.078 (≈29.958‑29.846). Se invalida con un cierre H4 sobre 31.097,25 y, con más fuerza, sobre 31.291,50."
+        "text": "Cierre H1 y H4 bajo 30.818,75 con retesteo por abajo, colores de fuerza bajista. Paradas intermedias en 30.401,25 y objetivo en 30.190‑30.078. Se invalida con un cierre H4 sobre 31.097,25 y, con más fuerza, sobre 31.291,50."
       },
       {
         "cls": "flat",
@@ -11155,29 +11141,25 @@ var ENTRIES = [
       },
       {
         "k": "Idea de fondo",
-        "text": "Tu idea es una bajada de ≈1.000 puntos hasta una zona de confluencia, no un cambio de tendencia: ahí tienes soporte de varios marcos. Ojo con el vencimiento de diciembre (probablemente el 18 de diciembre, cálculo mío): el continuo salta a la nueva base y la diferencia con el NAS100 cambia."
+        "text": "Tu idea es una bajada de ≈1.000 puntos hasta una zona de confluencia, no un cambio de tendencia: ahí tienes soporte de varios marcos. Ojo con el vencimiento de diciembre (probablemente el 18 de diciembre, cálculo mío): el continuo salta a la nueva base."
       }
     ],
     "tecnica": [
       {
-        "k": "NQ frente a NAS100",
-        "text": "En los mismos minutos, el último precio del NQ en H1 (31.123,25) y el del NAS100 (30.890,7) difieren en 232,5 puntos. La liquidación diaria del NQ (31.108,75) difiere en 218. En el máximo semanal la diferencia es de 251 y en el mínimo de 243. Por eso las conversiones con ≈ usan −232 y son aproximadas; para los niveles antiguos la diferencia cambia. Donde tienes línea propia en el NAS100, la indico aparte."
-      },
-      {
         "k": "Semanal (NQ)",
-        "text": "Abre 31.059, máximo 31.616,50, mínimo 30.792 y cierra 31.108,75 (+0,15%). Color rojo (fuerza alcista en corrección). Mecha superior de ≈508 puntos que tocó la cota histórica. En el NAS100 también es rojo: abre 30.849,2, máximo 31.365,3, mínimo 30.549,3 y cierra 30.890,7."
+        "text": "Abre 31.059, máximo 31.616,50, mínimo 30.792 y cierra 31.108,75 (+0,15%). Color rojo (fuerza alcista en corrección). Mecha superior de ≈508 puntos que tocó la cota histórica."
       },
       {
         "k": "Diario (NQ)",
-        "text": "Abre 31.020,50, máximo 31.266,50, mínimo 30.953 y cierra 31.108,75 (+0,45%). Azul claro (pérdida de fuerza o indecisión), tras la vela amarilla del jueves. Precio sobre la EMA 8 (~30.700) y sobre la Genial (~30.100), y con el FVG diario (~30.030‑30.400) por debajo. En el NAS100, también azul claro."
+        "text": "Abre 31.020,50, máximo 31.266,50, mínimo 30.953 y cierra 31.108,75 (+0,45%). Azul claro (pérdida de fuerza o indecisión), tras la vela amarilla del jueves. Precio sobre la EMA 8 (~30.700) y sobre la Genial (~30.100), y con el FVG diario (~30.030‑30.400) por debajo."
       },
       {
         "k": "H4",
-        "text": "Azul claro. Precio bajo la EMA 8 (~31.250) y con los puntos marrones y la zona de corrección en rojo. Marca OUT el jueves 8 en la caída; solo vale si la vela cerró fuera de la banda, y en una captura no puedo comprobarlo. Debajo, el túnel azul H4 (~30.400‑30.650). En el NAS100, azul claro."
+        "text": "Azul claro. Precio bajo la EMA 8 (~31.250) y con los puntos marrones y la zona de corrección en rojo. Marca OUT el jueves 8 en la caída; solo vale si la vela cerró fuera de la banda, y en una captura no puedo comprobarlo. Debajo, el túnel azul H4 (~30.400‑30.650)."
       },
       {
         "k": "H1",
-        "text": "Azul claro. El precio está dentro del túnel azul H1 (~31.080‑31.160), pegado a la EMA 8 y a la Genial, y por debajo del máximo del viernes (~31.270). Más abajo hay FVG de H1 en 30.400‑30.700 y el túnel rosa en 30.050‑30.250. En el NAS100, azul claro."
+        "text": "Azul claro. El precio está dentro del túnel azul H1 (~31.080‑31.160), pegado a la EMA 8 y a la Genial, y por debajo del máximo del viernes (~31.270). Más abajo hay FVG de H1 en 30.400‑30.700 y el túnel rosa en 30.050‑30.250."
       }
     ],
     "tables": [
@@ -11273,7 +11255,7 @@ var ENTRIES = [
       },
       {
         "k": "Viernes 9",
-        "text": "Rebote del NQ de +0,45% (NAS100 +0,34%) con los bonos al alza y la atención puesta en la temporada de resultados. La tecnología perdió apoyo por el gasto en IA durante la semana (LPL)."
+        "text": "Rebote del NQ de +0,45% con los bonos al alza y la atención puesta en la temporada de resultados. La tecnología perdió apoyo por el gasto en IA durante la semana (LPL)."
       },
       {
         "k": "Resultados",
@@ -11327,7 +11309,14 @@ var ENTRIES = [
         "t": "Nasdaq 100 Index Forecast: AI spending concerns, 4 ago 2026 – FXEmpire (gasto en IA)",
         "u": "https://www.fxempire.com/forecasts/article/nasdaq-100-index-forecast-ai-spending-concerns-increase-pressure-on-technology-stocks-1614779"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "31.123,25",
+      "cfd": {
+        "NAS100": "30.890,7"
+      },
+      "nota": "Futuro: último precio en H1, a la misma hora que el CFD (la liquidación del viernes fue 31.108,75)."
+    }
   },
   {
     "asset": "GC",
@@ -14108,8 +14097,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Nasdaq NQ (diciembre)",
-        "v": "29.391,50 (29.193,7)",
-        "s": "liquidación del viernes: −2,50% (−2,26%). Entre paréntesis, el NAS100 (CFD)"
+        "v": "29.391,50",
+        "s": "liquidación del viernes: −2,50%"
       },
       {
         "l": "Semana",
@@ -14164,92 +14153,92 @@ var ENTRIES = [
         "p": 31617,
         "lbl": "31.617",
         "cls": "res",
-        "t": "Cota histórica (≈31.419)"
+        "t": "Cota histórica"
       },
       {
         "p": 30818.75,
         "lbl": "30.818,75",
         "cls": "res",
-        "t": "Soporte que ahora es resistencia (≈30.621)"
+        "t": "Soporte que ahora es resistencia"
       },
       {
         "p": 30401.25,
         "lbl": "30.401,25",
         "cls": "res",
-        "t": "Línea verde y FVG diario (≈30.200‑30.600)"
+        "t": "Línea verde y FVG diario"
       },
       {
         "p": 30078,
         "lbl": "30.078",
         "cls": "res",
-        "t": "Resistencia fuerte de tu texto (≈29.880)"
+        "t": "Resistencia fuerte de tu texto"
       },
       {
         "p": 29768.75,
         "lbl": "29.768,75",
         "cls": "res",
-        "t": "Techo del rebote (≈29.571)"
+        "t": "Techo del rebote"
       },
       {
         "p": 29505.5,
         "lbl": "29.505,50",
         "cls": "res",
-        "t": "Línea verde (≈29.308)"
+        "t": "Línea verde"
       },
       {
         "p": 29391.5,
         "lbl": "29.391,50",
         "cls": "now",
-        "t": "Cierre (NAS100 29.193,7)"
+        "t": "Cierre"
       },
       {
         "p": 29268.75,
         "lbl": "29.268,75",
         "cls": "sup",
-        "t": "Mínimo semanal (≈29.071)"
+        "t": "Mínimo semanal"
       },
       {
         "p": 29145.25,
         "lbl": "29.145,25",
         "cls": "sup",
-        "t": "Soporte; borde alto de la cinta azul diaria (≈28.948)"
+        "t": "Soporte; borde alto de la cinta azul diaria"
       },
       {
         "p": 28729.75,
         "lbl": "28.729,75",
         "cls": "sup",
-        "t": "Soporte con FVG diario (≈28.532)"
+        "t": "Soporte con FVG diario"
       },
       {
         "p": 28240.25,
         "lbl": "28.240,25",
         "cls": "sup",
-        "t": "Soporte; base de la cinta azul diaria (≈28.043)"
+        "t": "Soporte; base de la cinta azul diaria"
       }
     ],
     "table": [
       [
-        "30.078 (≈29.880)",
+        "30.078",
         "Resistencia fuerte",
         "Línea verde de D, H4 y W. Borde alto del FVG de H4 (≈30.000‑30.200) y zona de la Genial diaria. Un cierre H4 por encima neutraliza tu escenario bajista"
       ],
       [
-        "29.768,75 (≈29.571)",
+        "29.768,75",
         "Techo del rebote",
         "Línea verde con el FVG de H4 (≈29.500‑29.800) y el borde bajo de la cinta amarilla de H4. Tu primer objetivo del rebote"
       ],
       [
-        "29.145,25 (≈28.948)",
+        "29.145,25",
         "Soporte",
         "Línea roja pegada al borde alto de la cinta azul diaria (≈29.150). Tu primera parada de la bajada"
       ],
       [
-        "28.729,75 (≈28.532)",
+        "28.729,75",
         "Soporte con fuerza bajista",
         "Línea roja con el FVG diario (≈28.700‑28.800) y el túnel rosa de H4 (≈28.200‑28.900), todo a ojo"
       ],
       [
-        "28.240,25 (≈28.043)",
+        "28.240,25",
         "Soporte",
         "Base de la cinta azul diaria (≈28.300). Si llega aquí, la corrección ya sería de ≈10% desde el máximo de 31.617"
       ]
@@ -14339,7 +14328,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El NQ de diciembre acaba probablemente el 18 de diciembre (cálculo mío), así que no afecta esta semana. La diferencia con el NAS100 está ahora en ≈198 puntos (era ≈232 el 11 de octubre)."
+        "text": "El NQ de diciembre acaba probablemente el 18 de diciembre (cálculo mío), así que no afecta esta semana."
       }
     ],
     "tecnica": [
@@ -14362,10 +14351,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices del H1 (OUT, doji de indecisión, cinta azul cruzando la amarilla) lo recojo como tu lectura. Pásamelo cuando busques el gatillo."
-      },
-      {
-        "k": "NQ frente a NAS100",
-        "text": "Liquidación del NQ (29.391,50) frente al cierre del NAS100 de Capital.com (29.193,7): ≈198 puntos (mediciones del sábado a las 12:19 y a las 13:04). Las conversiones con ≈ restan 198 y son aproximadas."
       }
     ],
     "tables": [
@@ -14440,7 +14425,7 @@ var ENTRIES = [
           ],
           [
             "Bitcoin (BTC)",
-            "CME 81.540, −0,07% el viernes; spot −2,5% semanal",
+            "CME 81.540, −0,07% el viernes",
             "Directa en las caídas de riesgo",
             "Aguanta mucho mejor que el NQ esta semana. Hipótesis: si el NQ rebota, el BTC puede ir por detrás"
           ],
@@ -14543,7 +14528,13 @@ var ENTRIES = [
         "t": "Resumen semanal de mercados, 9 de octubre de 2026 – LPL Research",
         "u": "https://www.lpl.com/research/blog/weekly-market-performance-october-9-2026.html"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "29.391,50",
+      "cfd": {
+        "NAS100": "29.193,7"
+      }
+    }
   },
   {
     "asset": "ES",
@@ -14554,8 +14545,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "S&P 500 ES (diciembre)",
-        "v": "7.704,25 (7.659,44)",
-        "s": "liquidación del viernes: −1,11% (−1,09%). Entre paréntesis, el índice S&P 500"
+        "v": "7.704,25",
+        "s": "liquidación del viernes: −1,11%"
       },
       {
         "l": "Semana",
@@ -14610,80 +14601,80 @@ var ENTRIES = [
         "p": 7901.75,
         "lbl": "7.901,75",
         "cls": "res",
-        "t": "Línea verde (≈7.857 en el índice)"
+        "t": "Línea verde"
       },
       {
         "p": 7832.75,
         "lbl": "7.832,75",
         "cls": "res",
-        "t": "Línea verde con FVG de H4 (≈7.788)"
+        "t": "Línea verde con FVG de H4"
       },
       {
         "p": 7734.75,
         "lbl": "7.734,75",
         "cls": "res",
-        "t": "Tu techo del rebote (≈7.690)"
+        "t": "Tu techo del rebote"
       },
       {
         "p": 7704.25,
         "lbl": "7.704,25",
         "cls": "now",
-        "t": "Cierre (índice 7.659,44)"
+        "t": "Cierre"
       },
       {
         "p": 7676,
         "lbl": "7.676",
         "cls": "sup",
-        "t": "Mínimo semanal (≈7.631)"
+        "t": "Mínimo semanal"
       },
       {
         "p": 7638.5,
         "lbl": "7.638,50",
         "cls": "sup",
-        "t": "Tu soporte de la bajada (≈7.594)"
+        "t": "Tu soporte de la bajada"
       },
       {
         "p": 7542.25,
         "lbl": "7.542,25",
         "cls": "sup",
-        "t": "Línea roja con FVG diario (≈7.497)"
+        "t": "Línea roja con FVG diario"
       },
       {
         "p": 7425.25,
         "lbl": "7.425,25",
         "cls": "sup",
-        "t": "Soporte (≈7.380)"
+        "t": "Soporte"
       },
       {
         "p": 7333.5,
         "lbl": "7.333,50",
         "cls": "sup",
-        "t": "Soporte con el túnel rosa de H4 (≈7.288)"
+        "t": "Soporte con el túnel rosa de H4"
       }
     ],
     "table": [
       [
-        "7.832,75 (≈7.788)",
+        "7.832,75",
         "Resistencia",
         "Línea verde de D, H4 y W con FVG de H4. Un cierre H4 por encima neutraliza tu bajada hacia 7.638,50"
       ],
       [
-        "7.734,75 (≈7.690)",
+        "7.734,75",
         "Techo del rebote",
         "Línea verde con el borde bajo del FVG de H4 (~7.734‑7.770) y el borde bajo de la cinta amarilla de H4. Tu objetivo del rebote"
       ],
       [
-        "7.676 (≈7.631)",
+        "7.676",
         "Soporte inmediato",
         "Mínimo semanal. Su pérdida es el primer paso hacia 7.638,50"
       ],
       [
-        "7.638,50 (≈7.594)",
+        "7.638,50",
         "Tu soporte",
         "Línea roja de D y W (el ES no la tocó la semana pasada). Es el objetivo de tu pullback sobre la Genial diaria"
       ],
       [
-        "7.542,25 (≈7.497)",
+        "7.542,25",
         "Soporte",
         "Línea roja con el FVG diario (~7.490‑7.540) y el borde alto de la cinta azul diaria (~7.550)"
       ],
@@ -14793,10 +14784,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices del H1 (dos velas recuperando la bajista, mucho OUT) lo recojo como tu lectura."
-      },
-      {
-        "k": "ES frente al índice S&P 500",
-        "text": "ES (7.704,25) frente al índice S&P 500 (7.659,44, cierre del viernes en tu gráfico del índice): ≈45 puntos. Las conversiones con ≈ restan 45 y son aproximadas."
       }
     ],
     "tables": [
@@ -14950,7 +14937,14 @@ var ENTRIES = [
         "t": "Oro, 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/commodity/gold"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "7.704,25",
+      "cfd": {
+        "SP500": "7.659,44"
+      },
+      "nota": "Precio del índice S&P 500 al cierre del viernes 16, no del CFD de Vantage."
+    }
   },
   {
     "asset": "NKD",
@@ -14961,8 +14955,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Nikkei NKD (diciembre)",
-        "v": "63.975 (63.498)",
-        "s": "liquidación del viernes: −2,81% (−2,99%). Último precio en H1: 63.660. Entre paréntesis, el CFD de Spreadex"
+        "v": "63.975",
+        "s": "liquidación del viernes: −2,81%. Último precio en H1: 63.660"
       },
       {
         "l": "Semana",
@@ -15047,7 +15041,7 @@ var ENTRIES = [
         "p": 63975,
         "lbl": "63.975",
         "cls": "now",
-        "t": "Liquidación (último precio 63.660; CFD 63.498)"
+        "t": "Liquidación (último precio 63.660)"
       },
       {
         "p": 63870,
@@ -15203,7 +15197,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El NKD de diciembre acaba probablemente a principios de diciembre (cálculo mío, sin confirmar). La diferencia con el CFD de Spreadex está ahora en ≈162 puntos si se mide con el último precio, y en ≈477 si se mide con la liquidación: usa el último precio."
+        "text": "El NKD de diciembre acaba probablemente a principios de diciembre (cálculo mío, sin confirmar)."
       }
     ],
     "tecnica": [
@@ -15226,10 +15220,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "Dos marcas OUT el jueves 16 sobre 65.200‑65.500 (a ojo) y una caída posterior hasta 63.600. Precio bajo la EMA 8 y la Genial. Lo que dices de la cinta azul cruzando la amarilla y la rosa lo recojo como tu lectura."
-      },
-      {
-        "k": "NKD frente a Nikkei (Spreadex)",
-        "text": "Último precio del NKD en H1 (63.660) frente al CFD de Spreadex (63.498): ≈162 puntos. La liquidación (63.975) da ≈477. Para el diario uso la diferencia con el último precio; es aproximado."
       }
     ],
     "tables": [
@@ -15370,7 +15360,14 @@ var ENTRIES = [
         "t": "Mercado de EE. UU., viernes 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/united-states/stock-market"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "63.660",
+      "cfd": {
+        "NIKKEI": "63.498"
+      },
+      "nota": "Futuro: último precio en H1 (la liquidación del viernes fue 63.975)."
+    }
   },
   {
     "asset": "GC",
@@ -15381,8 +15378,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Oro GC (diciembre)",
-        "v": "4.181,1 (4.165,2)",
-        "s": "liquidación del viernes: +0,26% (−0,14%). Entre paréntesis, el oro TVC (CFD)"
+        "v": "4.181,1",
+        "s": "liquidación del viernes: +0,26%"
       },
       {
         "l": "Semana",
@@ -15437,79 +15434,79 @@ var ENTRIES = [
         "p": 4376.8,
         "lbl": "4.376,8",
         "cls": "res",
-        "t": "Línea verde gruesa (≈4.361): tu objetivo largo"
+        "t": "Línea verde gruesa: tu objetivo largo"
       },
       {
         "p": 4275,
         "lbl": "4.275",
         "cls": "res",
-        "t": "Inicio de tu objetivo largo (≈4.259); FVG de H4 ~4.260‑4.310"
+        "t": "Inicio de tu objetivo largo; FVG de H4 ~4.260‑4.310"
       },
       {
         "p": 4242.3,
         "lbl": "4.242,3",
         "cls": "res",
-        "t": "Máximo semanal (≈4.226)"
+        "t": "Máximo semanal"
       },
       {
         "p": 4213,
         "lbl": "4.213",
         "cls": "res",
-        "t": "Línea verde de D y H4 (≈4.197); borde bajo de tu zona de rechazo"
+        "t": "Línea verde de D y H4; borde bajo de tu zona de rechazo"
       },
       {
         "p": 4181.1,
         "lbl": "4.181,1",
         "cls": "now",
-        "t": "Cierre (oro TVC 4.165,2)"
+        "t": "Cierre"
       },
       {
         "p": 4095.5,
         "lbl": "4.095,5",
         "cls": "sup",
-        "t": "Línea roja: soporte semanal que aguantó dos semanas (≈4.080)"
+        "t": "Línea roja: soporte semanal que aguantó dos semanas"
       },
       {
         "p": 3962.6,
         "lbl": "3.962,6",
         "cls": "sup",
-        "t": "Línea roja gruesa (≈3.947); base de la cinta amarilla diaria"
+        "t": "Línea roja gruesa; base de la cinta amarilla diaria"
       },
       {
         "p": 3835.9,
         "lbl": "3.835,9",
         "cls": "sup",
-        "t": "Línea roja (≈3.820)"
+        "t": "Línea roja"
       }
     ],
     "table": [
       [
-        "4.376,8 (≈4.361)",
+        "4.376,8",
         "Resistencia mayor",
         "Línea verde gruesa en D y W; cinta rosa de H4. Tu techo del escenario alcista"
       ],
       [
-        "4.275‑4.310 (≈4.259‑4.294)",
+        "4.275‑4.310",
         "FVG de H4",
         "Bloque cian de H4 sobre la cinta azul de H4 (~4.230‑4.260). Primer objetivo si rompe 4.213"
       ],
       [
-        "4.240‑4.213 (≈4.224‑4.197)",
+        "4.240‑4.213",
         "Tu zona de rechazo",
         "Línea verde 4.213 (D y H4), máximo semanal 4.242,3 y máximo del viernes 4.220,4. La directriz bajista diaria pasa pegada al precio (~4.190‑4.200)"
       ],
       [
-        "4.095,5 (≈4.080)",
+        "4.095,5",
         "Soporte semanal",
         "Línea roja de D y W. Mínimos del 7 y del 14 de octubre sin cerrar por debajo"
       ],
       [
-        "3.962,6 (≈3.947)",
+        "3.962,6",
         "Soporte fuerte",
         "Línea roja gruesa con la base de la cinta amarilla diaria (~4.000). Tu segundo objetivo bajista"
       ],
       [
-        "3.835,9 (≈3.820)",
+        "3.835,9",
         "Soporte",
         "Línea roja con FVG semanal (~3.700‑3.835)"
       ]
@@ -15600,7 +15597,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El GC de diciembre expira a finales de diciembre; el contrato continuo cambia de base cerca del 26 de noviembre (cálculo mío). La diferencia con el oro TVC está ahora en ≈ +16 puntos."
+        "text": "El GC de diciembre expira a finales de diciembre; el contrato continuo cambia de base cerca del 26 de noviembre (cálculo mío)."
       }
     ],
     "tecnica": [
@@ -15623,10 +15620,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices del H1 lo recojo como tu lectura."
-      },
-      {
-        "k": "GC frente al oro TVC",
-        "text": "Liquidación del GC (4.181,1) frente al cierre del oro TVC (4.165,175): ≈16 puntos (mediciones del sábado a las 12:24 y a las 13:07). Las conversiones con ≈ restan 16 y son aproximadas."
       }
     ],
     "tables": [
@@ -15641,7 +15634,7 @@ var ENTRIES = [
         "rows": [
           [
             "Viernes 16",
-            "El oro cierra ≈4.166 (TVC): subida intradía con la caída de bolsas y de rendimientos, dólar −0,70% (Trading Economics)",
+            "El oro sube en el día con la caída de bolsas y de rendimientos, dólar −0,70% (Trading Economics)",
             "El refugio funciona los días de pánico, no más"
           ],
           [
@@ -15771,7 +15764,13 @@ var ENTRIES = [
         "t": "Mercado de EE. UU., viernes 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/united-states/stock-market"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "4.181,1",
+      "cfd": {
+        "GOLD": "4.165,2"
+      }
+    }
   },
   {
     "asset": "SI",
@@ -15782,8 +15781,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Plata SI (diciembre)",
-        "v": "57,305 (56,975)",
-        "s": "liquidación del viernes: +0,26% (−0,70%). Entre paréntesis, el CFD de plata de TVC"
+        "v": "57,305",
+        "s": "liquidación del viernes: +0,26%"
       },
       {
         "l": "Semana",
@@ -15838,7 +15837,7 @@ var ENTRIES = [
         "p": 64.96,
         "lbl": "64,960",
         "cls": "res",
-        "t": "Línea verde (≈64,63)"
+        "t": "Línea verde"
       },
       {
         "p": 61.745,
@@ -15850,7 +15849,7 @@ var ENTRIES = [
         "p": 59.535,
         "lbl": "59,535",
         "cls": "res",
-        "t": "Línea verde con FVG de D (~59,5‑60,5): tu resistencia clave (≈59,2)"
+        "t": "Línea verde con FVG de D (~59,5‑60,5): tu resistencia clave"
       },
       {
         "p": 58.695,
@@ -15862,13 +15861,13 @@ var ENTRIES = [
         "p": 57.305,
         "lbl": "57,305",
         "cls": "now",
-        "t": "Cierre (CFD TVC 56,975)"
+        "t": "Cierre"
       },
       {
         "p": 56.245,
         "lbl": "56,245",
         "cls": "sup",
-        "t": "Línea roja de D y W (≈55,9)"
+        "t": "Línea roja de D y W"
       },
       {
         "p": 55.56,
@@ -15891,12 +15890,12 @@ var ENTRIES = [
     ],
     "table": [
       [
-        "64,960 (≈64,63)",
+        "64,960",
         "Resistencia",
         "Línea verde de D, H4 y W y cinta rosa y amarilla de H4 (~63‑66). Un cierre diario por encima anula tu bajada"
       ],
       [
-        "59,535 (≈59,2)",
+        "59,535",
         "Resistencia clave",
         "Línea verde con el FVG de D (~59,5‑60,5), la Genial de H4 (~59) y la Genial diaria (~59,7). Retesteo del miércoles 14 en 59,595"
       ],
@@ -15906,12 +15905,12 @@ var ENTRIES = [
         "Sin línea en el gráfico. Cae en el hueco entre la EMA 8 de H4 (~57,8) y 59,535"
       ],
       [
-        "56,245 (≈55,9)",
+        "56,245",
         "Soporte",
         "Línea roja de D y W. El jueves cerró H4 por debajo y el precio la recuperó el viernes"
       ],
       [
-        "53,285 (≈52,95)",
+        "53,285",
         "Soporte Supremo",
         "Línea roja gruesa, borde alto de la cinta azul semanal y FVG (~53,3‑54,3). Tu objetivo"
       ],
@@ -16007,7 +16006,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El SI de diciembre expira a finales de diciembre; el continuo cambia de base cerca del 26 de noviembre (cálculo mío). La diferencia con el CFD de TVC está ahora en ≈ +0,33."
+        "text": "El SI de diciembre expira a finales de diciembre; el continuo cambia de base cerca del 26 de noviembre (cálculo mío)."
       }
     ],
     "tecnica": [
@@ -16030,10 +16029,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "SI frente a plata TVC",
-        "text": "Liquidación del SI (57,305) frente al CFD de TVC (56,975): ≈0,33 (mediciones del sábado a las 12:26 y a las 13:07). Las conversiones con ≈ restan 0,33."
       }
     ],
     "tables": [
@@ -16152,7 +16147,13 @@ var ENTRIES = [
         "t": "Oro, 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/commodity/gold"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "57,305",
+      "cfd": {
+        "SILVER": "56,975"
+      }
+    }
   },
   {
     "asset": "WTI",
@@ -16163,8 +16164,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "WTI CL (mes frontal)",
-        "v": "99,02 (100,96)",
-        "s": "liquidación del viernes: +1,07% (+2,95%). Entre paréntesis, el WTI cash de BlackBull (CFD)"
+        "v": "99,02",
+        "s": "liquidación del viernes: +1,07%"
       },
       {
         "l": "Semana",
@@ -16249,7 +16250,7 @@ var ENTRIES = [
         "p": 99.02,
         "lbl": "99,02",
         "cls": "now",
-        "t": "Cierre (WTI cash 100,96)"
+        "t": "Cierre"
       },
       {
         "p": 97.11,
@@ -16384,7 +16385,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El CL cambia de contrato frontal cerca del 20 de noviembre (cálculo mío). La diferencia con el WTI cash de BlackBull está ahora en ≈ −1,94 (99,02 frente a 100,96): el cash cotiza por encima del futuro."
+        "text": "El CL cambia de contrato frontal cerca del 20 de noviembre (cálculo mío)."
       }
     ],
     "tecnica": [
@@ -16407,10 +16408,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "CL frente al WTI cash de BlackBull",
-        "text": "Liquidación del CL (99,02) frente al cierre del WTI cash de BlackBull (100,964): ≈ −1,94 (mediciones del sábado a las 12:31 y a las 13:05). Las conversiones con ≈ suman 1,94 y son aproximadas."
       }
     ],
     "tables": [
@@ -16502,7 +16499,7 @@ var ENTRIES = [
     "noticias": [
       {
         "k": "Viernes 16",
-        "text": "El WTI sube a ≈101 en los CFD (+3,5%) con Ormuz y Yemen en el foco; el futuro cierra en 99,02 (Trading Economics)."
+        "text": "El futuro WTI cierra en 99,02 con Ormuz y Yemen en el foco (Trading Economics)."
       },
       {
         "k": "Baker Hughes (viernes 16)",
@@ -16552,7 +16549,13 @@ var ENTRIES = [
         "t": "Mercado de EE. UU., viernes 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/united-states/stock-market"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "99,02",
+      "cfd": {
+        "WTI": "100,96"
+      }
+    }
   },
   {
     "asset": "NG",
@@ -16563,8 +16566,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Gas natural NG (noviembre)",
-        "v": "3,116 (3,334)",
-        "s": "liquidación del viernes: −3,71% (−3,47%). Entre paréntesis, el gas natural spot de FxPro (CFD)"
+        "v": "3,116",
+        "s": "liquidación del viernes: −3,71%"
       },
       {
         "l": "Semana",
@@ -16643,7 +16646,7 @@ var ENTRIES = [
         "p": 3.116,
         "lbl": "3,116",
         "cls": "now",
-        "t": "Cierre (CFD FxPro 3,334; FXCM 3,1164)"
+        "t": "Cierre"
       },
       {
         "p": 3.062,
@@ -16787,7 +16790,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El contrato de noviembre (NGX6) vence el 28 de octubre (último día de negociación, según el calendario de esta web). El continuo salta a diciembre, que suele cotizar por encima (hipótesis, no tengo la cifra): el gráfico puede abrir con hueco alcista sin que el precio haya subido. Revisa tus niveles ese día. La diferencia con el CFD de FxPro está ahora en ≈ −0,22."
+        "text": "El contrato de noviembre (NGX6) vence el 28 de octubre (último día de negociación, según el calendario de esta web). El continuo salta a diciembre, que suele cotizar por encima (hipótesis, no tengo la cifra): el gráfico puede abrir con hueco alcista sin que el precio haya subido. Revisa tus niveles ese día."
       }
     ],
     "tecnica": [
@@ -16810,10 +16813,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "NG frente al CFD",
-        "text": "Liquidación del NG (3,116) frente al cierre del gas natural spot de FxPro (3,334): ≈ −0,22. El CFD de FXCM (3,1164) coincide con el futuro (mediciones del sábado entre las 12:53 y las 13:05). Las conversiones con ≈ suman 0,22 para FxPro."
       }
     ],
     "tables": [
@@ -16939,7 +16938,14 @@ var ENTRIES = [
         "t": "Noticias de gas natural: tendencia bajista y temporada baja – FXEmpire (11 sep 2026, contexto de niveles)",
         "u": "https://www.fxempire.com/forecasts/article/natural-gas-news-bearish-trend-builds-as-shoulder-season-cuts-demand-1627037"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "3,116",
+      "cfd": {
+        "XNGUSD": "3,334",
+        "NGAS": "3,1164"
+      }
+    }
   },
   {
     "asset": "KC",
@@ -16950,8 +16956,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Café KC (diciembre)",
-        "v": "305,60 (305,43)",
-        "s": "liquidación del viernes: +3,66% (+2,24%). Entre paréntesis, el CFD de café de FXCM"
+        "v": "305,60",
+        "s": "liquidación del viernes: +3,66%"
       },
       {
         "l": "Máximo del viernes",
@@ -17042,7 +17048,7 @@ var ENTRIES = [
         "p": 305.6,
         "lbl": "305,60",
         "cls": "now",
-        "t": "Cierre (CFD FXCM 305,43)"
+        "t": "Cierre"
       },
       {
         "p": 298.35,
@@ -17184,7 +17190,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "Las existencias de ICE cerca de mínimos y la preocupación por los envíos antes del vencimiento de diciembre hacen que los días cercanos al vencimiento puedan ser más bruscos. No tengo las fechas de aviso (first notice) de diciembre; confírmalas antes de operar. La diferencia con el CFD de FXCM está ahora en ≈ +0,17."
+        "text": "Las existencias de ICE cerca de mínimos y la preocupación por los envíos antes del vencimiento de diciembre hacen que los días cercanos al vencimiento puedan ser más bruscos. No tengo las fechas de aviso (first notice) de diciembre; confírmalas antes de operar."
       }
     ],
     "tecnica": [
@@ -17207,10 +17213,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura. Un cierre H1 sobre 308,95 sería un primer dato."
-      },
-      {
-        "k": "KC frente al café de FXCM",
-        "text": "Liquidación del KC (305,60) frente al cierre del CFD de FXCM (305,43): ≈0,17 (mediciones del sábado a las 13:06 y a las 13:07). Las conversiones con ≈ restan 0,17."
       }
     ],
     "tables": [
@@ -17333,7 +17335,13 @@ var ENTRIES = [
         "t": "Café arábica, 16 de octubre de 2026 – Trading Economics",
         "u": "https://it.tradingeconomics.com/commodity/coffee"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "305,60",
+      "cfd": {
+        "COFFEENYF": "305,43"
+      }
+    }
   },
   {
     "asset": "CC",
@@ -17344,8 +17352,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Cacao CC (diciembre)",
-        "v": "5.645 (5.749)",
-        "s": "cierre diario del viernes: −3,19%. Entre paréntesis, el CFD de cacao de Pepperstone (último precio en H1)"
+        "v": "5.645",
+        "s": "cierre diario del viernes: −3,19%"
       },
       {
         "l": "Rango desde julio",
@@ -17582,7 +17590,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El CC de diciembre; el continuo cambia de base a finales de noviembre (cálculo mío, sin confirmar). La diferencia con el CFD de Pepperstone está ahora en ≈ −63 con el último precio de H1 (5.686 frente a 5.749) y ≈ −104 con el cierre diario."
+        "text": "El CC de diciembre; el continuo cambia de base a finales de noviembre (cálculo mío, sin confirmar)."
       }
     ],
     "tecnica": [
@@ -17605,10 +17613,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "CC frente al cacao de Pepperstone",
-        "text": "CC en H1 (5.686) frente al CFD cash de Pepperstone en H1 (5.748,9): ≈ −63 (mediciones del sábado a las 13:08). Con el cierre diario del CC (5.645) saldría ≈ −104. Las conversiones con ≈ son aproximadas."
       }
     ],
     "tables": [
@@ -17716,7 +17720,14 @@ var ENTRIES = [
         "t": "Cacao, 7 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/commodity/cocoa/news/590198"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "5.686",
+      "cfd": {
+        "COCOA": "5.748,9"
+      },
+      "nota": "Futuro: último precio en H1, a la misma hora que el CFD (el cierre diario fue 5.645)."
+    }
   },
   {
     "asset": "EURUSD",
@@ -17727,8 +17738,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Euro FX 6E (diciembre)",
-        "v": "1,12595 (1,12389)",
-        "s": "cierre diario del viernes: +0,19% (+0,18%). Entre paréntesis, el EUR/USD de FXCM (CFD)"
+        "v": "1,12595",
+        "s": "cierre diario del viernes: +0,19%"
       },
       {
         "l": "Semana",
@@ -17813,7 +17824,7 @@ var ENTRIES = [
         "p": 1.12595,
         "lbl": "1,12595",
         "cls": "now",
-        "t": "Cierre (EUR/USD FXCM 1,12389)"
+        "t": "Cierre"
       },
       {
         "p": 1.12495,
@@ -17961,7 +17972,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El 6E de diciembre expira a mediados de diciembre; el contrato continuo cambia de base cerca del 8 de diciembre (cálculo mío). La diferencia con el EUR/USD de FXCM está ahora en ≈ +0,0021."
+        "text": "El 6E de diciembre expira a mediados de diciembre; el contrato continuo cambia de base cerca del 8 de diciembre (cálculo mío)."
       }
     ],
     "tecnica": [
@@ -17984,10 +17995,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "6E frente al EUR/USD de FXCM",
-        "text": "Cierre diario del 6E (1,12595) frente al cierre del EUR/USD de FXCM (1,12389): ≈0,0021 (mediciones del sábado a las 13:25 y a las 13:30). Las conversiones con ≈ restan 0,0021."
       }
     ],
     "tables": [
@@ -18135,7 +18142,13 @@ var ENTRIES = [
         "t": "Oro, 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/commodity/gold"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "1,12595",
+      "cfd": {
+        "EURUSD": "1,12389"
+      }
+    }
   },
   {
     "asset": "BTC",
@@ -18146,13 +18159,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Bitcoin BTC CME (mes frontal)",
-        "v": "81.540 (81.552)",
-        "s": "cierre del viernes: −0,07%. Entre paréntesis, el BTC/USD de Binance (CFD)"
-      },
-      {
-        "l": "Semana (spot Binance)",
-        "v": "79.800 – 84.109,67",
-        "s": "−2,50% (abre 83.801,86). Aguanta mucho mejor que el Nasdaq (−5,5%)"
+        "v": "81.540",
+        "s": "cierre del viernes: −0,07%"
       },
       {
         "l": "Tu zona de compra",
@@ -18226,7 +18234,7 @@ var ENTRIES = [
         "p": 81540,
         "lbl": "81.540",
         "cls": "now",
-        "t": "Cierre (BTC/USD Binance 81.552)"
+        "t": "Cierre"
       },
       {
         "p": 81015,
@@ -18367,7 +18375,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El BTC de CME vence el último viernes de cada mes: probablemente el 30 de octubre (cálculo mío, sin confirmar). El continuo cambia de contrato esos días. La diferencia con el BTC/USD de Binance es ahora de ≈ −12 $."
+        "text": "El BTC de CME vence el último viernes de cada mes: probablemente el 30 de octubre (cálculo mío, sin confirmar). El continuo cambia de contrato esos días."
       }
     ],
     "tecnica": [
@@ -18390,10 +18398,6 @@ var ENTRIES = [
       {
         "k": "H1",
         "text": "No tengo el H1 en las capturas de este análisis; lo que dices lo recojo como tu lectura."
-      },
-      {
-        "k": "BTC frente al BTC/USD de Binance",
-        "text": "Cierre del BTC de CME (81.540) frente al BTC/USD de Binance (81.552): ≈ −12 $ (mediciones del sábado a las 13:14 y a las 13:15). Las conversiones con ≈ suman 12 $."
       }
     ],
     "tables": [
@@ -18448,11 +18452,11 @@ var ENTRIES = [
             "Nasdaq (NQ)",
             "−2,50% el viernes y −5,52% semanal",
             "Directa en las caídas de riesgo",
-            "El BTC cayó −0,07% (CME) y −2,5% (spot) esta semana: mucho menos. Si el NQ rebota, el BTC podría no seguirlo igual"
+            "El BTC de CME cayó −0,07% el viernes: mucho menos. Si el NQ rebota, el BTC podría no seguirlo igual"
           ],
           [
             "XRP",
-            "Spot −7,92% semanal",
+            "≈ −7,9% semanal",
             "Directa, con más beta",
             "El XRP cae más que el BTC: sigue su dirección con más movimiento (tu «van de la mano»)"
           ],
@@ -18543,7 +18547,13 @@ var ENTRIES = [
         "t": "Mercado de EE. UU., viernes 16 de octubre de 2026 – Trading Economics",
         "u": "https://tradingeconomics.com/united-states/stock-market"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "81.540",
+      "cfd": {
+        "BTCUSD": "81.552"
+      }
+    }
   },
   {
     "asset": "XRP",
@@ -18554,18 +18564,13 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "XRP CME (mes frontal)",
-        "v": "1,3045 (1,2980)",
-        "s": "último precio en H1 del sábado a las 17:05. Entre paréntesis, el XRP/USD de Binance (CFD)"
-      },
-      {
-        "l": "Semana (spot Binance)",
-        "v": "1,2851 – 1,4197",
-        "s": "−7,92% (abre 1,4094). El mínimo semanal 1,2851 coincide con tu línea de 1,2855 del futuro"
+        "v": "1,3045",
+        "s": "último precio en H1 del sábado a las 17:05"
       },
       {
         "l": "Tu soporte",
-        "v": "1,1954",
-        "s": "−0,1026 (−7,9%) desde 1,2980; después 1,9855‑2,2790 como objetivo de la subida"
+        "v": "1,1545",
+        "s": "−0,1500 (−11,5%) desde 1,3045; después 1,9870‑2,2905 como objetivo de la subida"
       }
     ],
     "imagen": {
@@ -18574,8 +18579,8 @@ var ENTRIES = [
       "caption": "Gráfico diario del XRP en CME (captura del sábado 17 de octubre, 17:05). Último precio: 1,3045."
     },
     "conclusion": {
-      "lead": "Con semanal y diario, dices que si no rebota ahora el XRP busca 1,1954 para después intentar subir a 1,9855‑2,2790, y que todo depende de Bitcoin y Ethereum. Coincido: el XRP está justo sobre su soporte y cae el triple que el BTC. Ojo con las referencias: tus 1,1954 y 1,9855‑2,2790 son del gráfico spot de Binance; en el futuro de CME las líneas son distintas.",
-      "text": "Tus niveles de texto coinciden con las líneas del gráfico spot (1,1954; 1,9855; 2,2790). En el futuro de CME, que es el que ejecutas, las líneas que dibujaste son 1,2855, 1,1545 y 1,0100 abajo y 1,9870 y 2,2905 arriba. Los dos gráficos dicen lo mismo, pero con 4 centavos de diferencia en 1,1954 frente a 1,1545: confirma con cuál de los dos operas. Lo que veo: el semanal del spot perdió 7,92% y su mínimo (1,2851) tocó exactamente la línea 1,2855 del CME; el diario del spot cierra bajo la cinta azul diaria (~1,32‑1,43), bajo la EMA 8 (~1,35) y bajo la Genial (~1,41). Debajo tiene un FVG diario (~1,17‑1,28) y 1,1954. El XRP depende de las grandes: cae −7,9% frente al −2,5% del BTC esta semana, es decir, con el triple de beta, y el BTC aguantó el viernes. Los fundamentales que localicé son del 29 de septiembre (el XRP estaba en 1,49): ETF spot con ≈1.800 M$ de activos y entradas de 75,6 M$ en cuatro días, ≈37.000 M de XRP aún en escrow de Ripple (presión vendedora), y la Fed. No localicé noticias propias del XRP de esta semana: no las invento."
+      "lead": "Con semanal y diario, dices que si no rebota ahora el XRP busca su soporte para después intentar subir a sus objetivos altos, y que todo depende de Bitcoin y Ethereum. Coincido: el XRP está justo sobre su soporte y cae el triple que el BTC. En el futuro de CME, que es el que operas, ese soporte es 1,1545 y los objetivos son 1,9870‑2,2905.",
+      "text": "En el futuro de CME, que es el que operas, las líneas que dibujaste son 1,2855, 1,1545 y 1,0100 abajo y 1,9870 y 2,2905 arriba. Lo que veo: el semanal cae ≈8% y su mínimo tocó la línea 1,2855; el diario cierra bajo la cinta azul diaria (~1,32‑1,43), bajo la EMA 8 (~1,35) y bajo la Genial (~1,41). Debajo tiene un FVG diario (~1,17‑1,28) y 1,1545. El XRP depende de las grandes: cae −7,9% frente al −2,5% del BTC esta semana, es decir, con el triple de beta, y el BTC aguantó el viernes. Los fundamentales que localicé son del 29 de septiembre (el XRP estaba en 1,49): ETF spot con ≈1.800 M$ de activos y entradas de 75,6 M$ en cuatro días, ≈37.000 M de XRP aún en escrow de Ripple (presión vendedora), y la Fed. No localicé noticias propias del XRP de esta semana: no las invento."
     },
     "frames": [
       {
@@ -18610,13 +18615,13 @@ var ENTRIES = [
         "p": 2.2905,
         "lbl": "2,2905",
         "cls": "res",
-        "t": "Línea verde (futuro); 2,2790 en el spot: tu objetivo alto"
+        "t": "Línea verde: tu objetivo alto"
       },
       {
         "p": 1.987,
         "lbl": "1,9870",
         "cls": "res",
-        "t": "Línea verde (futuro); 1,9855 en el spot: tu objetivo bajo"
+        "t": "Línea verde: tu objetivo bajo"
       },
       {
         "p": 1.6705,
@@ -18640,36 +18645,30 @@ var ENTRIES = [
         "p": 1.3045,
         "lbl": "1,3045",
         "cls": "now",
-        "t": "Último precio (spot Binance 1,2980)"
+        "t": "Último precio"
       },
       {
         "p": 1.2855,
         "lbl": "1,2855",
         "cls": "sup",
-        "t": "Línea roja: tocada por el mínimo semanal del spot (1,2851)"
-      },
-      {
-        "p": 1.1954,
-        "lbl": "1,1954",
-        "cls": "sup",
-        "t": "Tu soporte (línea del gráfico spot)"
+        "t": "Línea roja de D y W: tocada por el mínimo semanal"
       },
       {
         "p": 1.1545,
         "lbl": "1,1545",
         "cls": "sup",
-        "t": "Línea roja del futuro (CME)"
+        "t": "Línea roja: tu soporte"
       },
       {
         "p": 1.01,
         "lbl": "1,0100",
         "cls": "sup",
-        "t": "Línea roja del futuro; 0,9923 en el spot"
+        "t": "Línea roja: soporte de fondo"
       }
     ],
     "table": [
       [
-        "2,2905 / 1,9870 (spot 2,2790 / 1,9855)",
+        "2,2905 / 1,9870",
         "Tus objetivos altos",
         "Líneas verdes de D y W, con FVG de W (~1,98‑2,03). Solo con recuperación de 1,4375 y cinta azul diaria"
       ],
@@ -18679,22 +18678,22 @@ var ENTRIES = [
         "Líneas verdes con FVG diario (~1,65‑1,78). Escalones de la subida"
       ],
       [
-        "1,4375 (spot 1,4099)",
+        "1,4375",
         "Resistencia clave",
         "Línea verde de D y W con el borde alto de la cinta azul diaria. Un cierre diario por encima anula la bajada"
       ],
       [
         "1,2855",
         "Soporte inmediato",
-        "Línea roja de D y W; el mínimo semanal del spot (1,2851) la tocó. Su pérdida con cierre diario es el primer paso a 1,1954"
+        "Línea roja de D y W; el mínimo semanal la tocó. Su pérdida con cierre diario es el primer paso a 1,1545"
       ],
       [
-        "1,1954 / 1,1545",
+        "1,1545",
         "Tu soporte",
-        "En el spot, línea 1,1954 con el FVG diario (~1,17‑1,28). En el futuro, línea 1,1545. La diferencia entre ellas es de 0,04: confirma tu nivel de operación"
+        "Línea roja, bajo el FVG diario (~1,17‑1,28)"
       ],
       [
-        "1,0100 (spot 0,9923)",
+        "1,0100",
         "Soporte de fondo",
         "Línea roja. Solo si cae el mercado cripto entero"
       ]
@@ -18703,9 +18702,9 @@ var ENTRIES = [
       {
         "cls": "down",
         "tag": "Bajista",
-        "title": "1. Pérdida de 1,2855 → 1,1954 (spot) y 1,1545 (futuro)",
+        "title": "1. Pérdida de 1,2855 → 1,1545",
         "pct": 40,
-        "text": "Cierre diario y H4 bajo 1,2855, retesteo por abajo y bajada al FVG diario (~1,17‑1,28) y a 1,1954/1,1545, con el BTC perdiendo 81.015. Allí buscas compras para la subida a 1,9855‑2,2790. Se invalida con un cierre H4 sobre 1,3200 tras el retesteo."
+        "text": "Cierre diario y H4 bajo 1,2855, retesteo por abajo y bajada al FVG diario (~1,17‑1,28) y a 1,1545, con el BTC perdiendo 81.015. Allí buscas compras para la subida a 1,9870‑2,2905. Se invalida con un cierre H4 sobre 1,3200 tras el retesteo."
       },
       {
         "cls": "flat",
@@ -18760,11 +18759,11 @@ var ENTRIES = [
       },
       {
         "k": "Largos",
-        "text": "Solo en 1,2855 con rechazo en H1, confirmación en H4, con parada bajo 1,25 (tu tesis es de rebote), o en 1,1954/1,1545 con gatillo de rechazo y confirmación. Un largo desde 1,3045 sin gatillo es entrada anticipada."
+        "text": "Solo en 1,2855 con rechazo en H1, confirmación en H4, con parada bajo 1,25 (tu tesis es de rebote), o en 1,1545 con gatillo de rechazo y confirmación. Un largo desde 1,3045 sin gatillo es entrada anticipada."
       },
       {
         "k": "Cortos",
-        "text": "Solo con cierre H4 bajo 1,2855, retesteo, con objetivo 1,1954/1,1545 y tamaño reducido. Un corto en el soporte es contra el soporte: entrada anticipada."
+        "text": "Solo con cierre H4 bajo 1,2855, retesteo, con objetivo 1,1545 y tamaño reducido. Un corto en el soporte es contra el soporte: entrada anticipada."
       },
       {
         "k": "Conflicto de marcos",
@@ -18772,7 +18771,7 @@ var ENTRIES = [
       },
       {
         "k": "Vencimiento",
-        "text": "El futuro de XRP de CME tiene vencimiento mensual: no tengo la fecha del mes frontal; confírmala antes de operar. La diferencia con el XRP/USD de Binance es ahora de ≈ +0,0065 (aproximada: el futuro estaba cerrado)."
+        "text": "El futuro de XRP de CME tiene vencimiento mensual: no tengo la fecha del mes frontal; confírmala antes de operar."
       }
     ],
     "tecnica": [
@@ -18781,12 +18780,12 @@ var ENTRIES = [
         "text": "Viendo solo semanal y diario: si no rebota alcista ahora, buscará el soporte de 1,1954 aprox. para después intentar otra subida a 1,9855‑2,2790. Como «van de la mano» la mayoría de las grandes criptos, todo depende de Bitcoin y Ethereum. Si hace lo mismo que el bitcoin, corrección a ese rango y después subida."
       },
       {
-        "k": "Semanal (XRP spot Binance)",
-        "text": "Abre 1,4094, máximo 1,4197, mínimo 1,2851 y cierra 1,2980 (−7,92%). Vela bajista (el color exacto no lo he verificado). El semanal sigue sobre un soporte (1,1954/FVG) y bajo la EMA 8 semanal (~1,42), con la Genial semanal subiendo (~1,28‑1,30, a ojo) casi pegada al precio."
+        "k": "Semanal",
+        "text": "Vela bajista de ≈8% con el mínimo en la línea 1,2855 (el color exacto no lo he verificado). Sigue sobre el FVG diario y bajo la EMA 8 semanal (~1,42), con la Genial semanal subiendo (~1,28‑1,30, a ojo) casi pegada al precio."
       },
       {
-        "k": "Diario (XRP spot y CME)",
-        "text": "Spot: abre 1,3094, máximo 1,3109, mínimo 1,2919 y cierra 1,2980 (−0,91%). Cierra bajo la cinta azul diaria (~1,32‑1,43), la EMA 8 y la Genial. CME: último precio 1,3045. Por encima, la cinta rosa (~1,40‑1,58) y la amarilla (~1,52‑1,60); debajo, FVG diario (~1,17‑1,28)."
+        "k": "Diario",
+        "text": "Último precio del futuro: 1,3045. Bajo la cinta azul diaria (~1,32‑1,43), la EMA 8 y la Genial. Por encima, la cinta rosa (~1,40‑1,58) y la amarilla (~1,52‑1,60); debajo, FVG diario (~1,17‑1,28)."
       },
       {
         "k": "H4",
@@ -18794,11 +18793,7 @@ var ENTRIES = [
       },
       {
         "k": "H1",
-        "text": "H1 del CME: precio bajo la EMA 8 y la Genial, con varias marcas OUT en la caída, que no confirmo como cierres. Lo que no tengo es el H1 del spot con volumen."
-      },
-      {
-        "k": "XRP frente al XRP/USD de Binance",
-        "text": "Último precio del XRP de CME en H1 (1,3045) frente al XRP/USD de Binance (1,2980): ≈ +0,0065 (mediciones del sábado a las 17:05 y a las 17:08). El futuro estaba cerrado: es aproximado."
+        "text": "H1 del CME: precio bajo la EMA 8 y la Genial, con varias marcas OUT en la caída, que no confirmo como cierres."
       }
     ],
     "tables": [
@@ -18814,7 +18809,7 @@ var ENTRIES = [
           [
             "Precio y máximo histórico",
             "XRP en 1,49 el 29 de septiembre, −17,6% en lo que va de 2026 y 59% bajo el máximo de 3,65 (17 de julio de 2025) (24/7 Wall St.)",
-            "Desde entonces el spot ha perdido otro 13% (1,2980)"
+            "Desde entonces el futuro ha perdido ≈12% (1,3045)"
           ],
           [
             "ETF de XRP",
@@ -18856,9 +18851,9 @@ var ENTRIES = [
         "rows": [
           [
             "Bitcoin (BTC)",
-            "CME 81.540, spot −2,5% semanal",
+            "CME 81.540, −0,07% el viernes",
             "Directa, el XRP con más beta",
-            "Si el BTC corrige a 74.335‑71.290, el XRP debería ir a 1,1954 o más abajo"
+            "Si el BTC corrige a 74.335‑71.290, el XRP debería ir a 1,1545 o más abajo"
           ],
           [
             "Nasdaq (NQ)",
@@ -18879,7 +18874,7 @@ var ENTRIES = [
     "noticias": [
       {
         "k": "Esta semana",
-        "text": "No localicé noticias propias del XRP. El spot cae −7,9% en la semana, con el mínimo en 1,2851."
+        "text": "No localicé noticias propias del XRP. Cae ≈8% en la semana y el mínimo toca la línea 1,2855."
       },
       {
         "k": "29 de septiembre",
@@ -18897,7 +18892,7 @@ var ENTRIES = [
       },
       {
         "k": "1,2855 y 1,4375",
-        "text": "Cierre H4 bajo 1,2855 con retesteo: gatillo hacia 1,1954/1,1545. Cierre diario sobre 1,4375: la bajada se anula."
+        "text": "Cierre H4 bajo 1,2855 con retesteo: gatillo hacia 1,1545. Cierre diario sobre 1,4375: la bajada se anula."
       },
       {
         "k": "Bitcoin",
@@ -18925,7 +18920,14 @@ var ENTRIES = [
         "t": "Los ETF de bitcoin registran 679 M$ de salidas semanales (12 oct 2026) – KuCoin/Coinpaper",
         "u": "https://www.kucoin.com/news/flash/bitcoin-etfs-record-679m-in-weekly-outflows-amid-uptober-slump"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "1,3045",
+      "cfd": {
+        "XRPUSD": "1,2980"
+      },
+      "nota": "Aproximado: el futuro de CME estaba cerrado y el XRP/USD de Binance sigue cotizando."
+    }
   },
   {
     "date": "2026-10-24",
@@ -18936,8 +18938,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Nasdaq NQ (diciembre)",
-        "v": "29.009,6 (29.117,75)",
-        "s": "NAS100 (CFD). Entre paréntesis, el futuro NQ: liquidación del viernes −0,08%"
+        "v": "29.117,75",
+        "s": "liquidación del viernes −0,08%"
       },
       {
         "l": "Semana",
@@ -19009,7 +19011,7 @@ var ENTRIES = [
       {
         "p": 29145.25,
         "lbl": "29.145,25",
-        "cls": "now",
+        "cls": "res",
         "t": "Primer objetivo cumplido; ahora resistencia a retestear"
       },
       {
@@ -19374,7 +19376,13 @@ var ENTRIES = [
         "t": "Temporada de resultados de octubre de 2026 – Blofin",
         "u": "https://blofin.com/academy/education/tradfi/earnings-season-october-2026"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "29.117,75",
+      "cfd": {
+        "NAS100": "29.009,6"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -19385,8 +19393,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "S&P 500 ES (diciembre)",
-        "v": "7.640,05 (7.659,75)",
-        "s": "SP500 (CFD). Entre paréntesis, el futuro ES: liquidación del viernes −0,58%"
+        "v": "7.659,75",
+        "s": "liquidación del viernes −0,58%"
       },
       {
         "l": "Semana",
@@ -19761,7 +19769,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "7.659,75",
+      "cfd": {
+        "SP500": "7.640,05"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -19772,8 +19786,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Nikkei NKD (diciembre)",
-        "v": "62.560 (62.690)",
-        "s": "Nikkei 225 (CFD). Entre paréntesis, el futuro NKD: cierre del viernes −0,04%"
+        "v": "62.690",
+        "s": "cierre del viernes −0,04%"
       },
       {
         "l": "Semana",
@@ -20134,7 +20148,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "62.690",
+      "cfd": {
+        "NIKKEI": "62.560"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -20145,8 +20165,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Oro GC (diciembre)",
-        "v": "3.995,38 (4.007,9)",
-        "s": "Oro (CFD). Entre paréntesis, el futuro GC: liquidación del viernes −1,29%"
+        "v": "4.007,9",
+        "s": "liquidación del viernes −1,29%"
       },
       {
         "l": "Semana",
@@ -20515,7 +20535,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "4.007,9",
+      "cfd": {
+        "GOLD": "3.995,38"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -20526,8 +20552,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Plata SI (diciembre)",
-        "v": "53,828 (53,950)",
-        "s": "Plata (CFD). Entre paréntesis, el futuro SI: cierre del viernes −1,92%"
+        "v": "53,950",
+        "s": "cierre del viernes −1,92%"
       },
       {
         "l": "Semana",
@@ -20872,7 +20898,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "53,950",
+      "cfd": {
+        "SILVER": "53,828"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -20883,8 +20915,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "WTI CL (diciembre)",
-        "v": "104,881 (103,27)",
-        "s": "WTI (CFD). Entre paréntesis, el futuro CL: liquidación del viernes +3,82%"
+        "v": "103,27",
+        "s": "liquidación del viernes +3,82%"
       },
       {
         "l": "Semana",
@@ -21264,7 +21296,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "103,27",
+      "cfd": {
+        "WTI": "104,881"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -21275,8 +21313,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Gas natural NG (noviembre)",
-        "v": "2,619 y 3,083 (2,640)",
-        "s": "Gas natural Henry Hub y XNGUSD (CFD). Entre paréntesis, el futuro NG: liquidación del viernes −5,58%"
+        "v": "2,640",
+        "s": "liquidación del viernes −5,58%"
       },
       {
         "l": "Semana",
@@ -21491,7 +21529,7 @@ var ENTRIES = [
       },
       {
         "k": "Rolada",
-        "text": "El noviembre vence el miércoles 28. Con el nuevo contrato, suma casi 0,400 a los niveles (2,546‑2,492 → 2,946‑2,892). El XNGUSD (3,083) da una idea de dónde empieza el nuevo contrato; es una hipótesis, no un dato del futuro."
+        "text": "El noviembre vence el miércoles 28. Con el nuevo contrato, suma casi 0,400 a los niveles (2,546‑2,492 → 2,946‑2,892)."
       },
       {
         "k": "Jueves 29, 15:30",
@@ -21639,7 +21677,14 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "2,640",
+      "cfd": {
+        "NGAS": "2,619",
+        "XNGUSD": "3,083"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -21650,8 +21695,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Café KC (diciembre)",
-        "v": "306,02 (307,45)",
-        "s": "Café (CFD). Entre paréntesis, el futuro KC: liquidación del viernes −1,60%"
+        "v": "307,45",
+        "s": "liquidación del viernes −1,60%"
       },
       {
         "l": "Semana",
@@ -22007,7 +22052,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "307,45",
+      "cfd": {
+        "COFFEENYF": "306,02"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -22018,8 +22069,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Cacao CC (diciembre)",
-        "v": "5.631,9 (5.592)",
-        "s": "Cacao (CFD). Entre paréntesis, el futuro CC: liquidación del viernes +0,18%"
+        "v": "5.592",
+        "s": "liquidación del viernes +0,18%"
       },
       {
         "l": "Semana",
@@ -22344,7 +22395,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "5.592",
+      "cfd": {
+        "COCOA": "5.631,9"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -22355,8 +22412,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Euro 6E (diciembre)",
-        "v": "1,12031 (1,12160)",
-        "s": "EUR/USD (CFD). Entre paréntesis, el futuro 6E: liquidación del viernes −0,24%"
+        "v": "1,12160",
+        "s": "liquidación del viernes −0,24%"
       },
       {
         "l": "Semana",
@@ -22635,7 +22692,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "1,12160",
+      "cfd": {
+        "EURUSD": "1,12031"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -22646,8 +22709,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "Bitcoin CME",
-        "v": "80.255,99 (80.785)",
-        "s": "BTCUSD (CFD). Entre paréntesis, el futuro CME del sábado 24: −0,52%"
+        "v": "80.785",
+        "s": "sábado 24: −0,52%"
       },
       {
         "l": "Mínimo del sábado",
@@ -22990,7 +23053,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "80.785",
+      "cfd": {
+        "BTCUSD": "80.255,99"
+      }
+    }
   },
   {
     "date": "2026-10-24",
@@ -23001,8 +23070,8 @@ var ENTRIES = [
     "quotes": [
       {
         "l": "XRP CME",
-        "v": "1,2938 (1,2885)",
-        "s": "XRPUSD (CFD). Entre paréntesis, el futuro CME: −1,04%"
+        "v": "1,2885",
+        "s": "−1,04%"
       },
       {
         "l": "Nivel que decide",
@@ -23022,7 +23091,7 @@ var ENTRIES = [
     },
     "conclusion": {
       "lead": "Coincido con tu lectura: está en soporte diario y quizá baje a 1,1545 antes de continuar subiendo; como siempre, depende de Bitcoin y Ethereum. Tres operativas con su entrada y objetivo.",
-      "text": "Lo que veo en el gráfico: en diario está bajo el túnel azul diario (≈1,37‑1,50) y bajo la Genial, sobre la línea roja 1,2855, con un FVG enorme por debajo (1,2855‑1,13) y 1,1545 dentro de él. En semanal, la Genial semanal (≈1,29) está pegada. Ojo con las referencias: los niveles 1,1954 y 1,9855‑2,2790 son del gráfico spot de Binance; en el futuro CME usamos 1,1545, 1,0100, 1,4375 y 1,5385. No tengo noticias propias verificadas del XRP."
+      "text": "Lo que veo en el gráfico: en diario está bajo el túnel azul diario (≈1,37‑1,50) y bajo la Genial, sobre la línea roja 1,2855, con un FVG enorme por debajo (1,2855‑1,13) y 1,1545 dentro de él. En semanal, la Genial semanal (≈1,29) está pegada. En el futuro CME los niveles son 1,5385, 1,4375, 1,2855, 1,1545 y 1,0100. No tengo noticias propias verificadas del XRP."
     },
     "frames": [
       {
@@ -23073,16 +23142,10 @@ var ENTRIES = [
         "t": "Línea que decide"
       },
       {
-        "p": 1.1954,
-        "lbl": "1,1954",
-        "cls": "sup",
-        "t": "Soporte (Binance)"
-      },
-      {
         "p": 1.1545,
         "lbl": "1,1545",
         "cls": "sup",
-        "t": "Soporte CME"
+        "t": "Soporte"
       },
       {
         "p": 1.01,
@@ -23113,14 +23176,9 @@ var ENTRIES = [
         "Línea que decide"
       ],
       [
-        "1,1954",
-        "Soporte",
-        "Soporte (Binance)"
-      ],
-      [
         "1,1545",
         "Soporte",
-        "Soporte CME"
+        "Soporte"
       ],
       [
         "1,0100",
@@ -23312,7 +23370,13 @@ var ENTRIES = [
         "t": "La Fed mantendrá el 28 de octubre; subida en diciembre, 22 oct 2026 – Mitrade",
         "u": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428"
       }
-    ]
+    ],
+    "sym": {
+      "fut": "1,2885",
+      "cfd": {
+        "XRPUSD": "1,2938"
+      }
+    }
   }
 ];
 
@@ -23732,7 +23796,7 @@ var CAL_SRC = [
   { t: 'PrimeXBT: fecha y consenso de Alphabet, 3.er trimestre de 2026', u: 'https://primexbt.com/for-traders/alphabet-earnings-date/' },
   { t: 'MacTrast: Apple publica resultados el 2 de noviembre de 2026', u: 'https://www.mactrast.com/2026/10/apple-to-announce-fiscal-q4-2026-earnings-on-november-2/' }
 ];
-var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-2026-10-24": [87465,83500,82300,81015,78100,78000,76900,74335,69440,80440], "EURUSD-2026-10-24": [1.13715,1.12495,1.1178,1.10745,1.13125], "CC-2026-10-24": [5960,5860,5568,5517,5362,4918,5592,6505], "KC-2026-10-24": [328.8,318.2,308.95,302.75,302,293,285.45,269.85,298,318,321,292], "NG-2026-10-24": [3.127,2.784,2.628,2.546,2.492,2.252,1.942,2.922], "WTI-2026-10-24": [117.35,111.19,106.86,104.6,102.38,101.5,97.11,93.51], "SI-2026-10-24": [59.535,56.245,53.285,53.075,51,48.185,45.06,54.5,55.9], "GC-2026-10-24": [4376.8,4213,4095.5,4075,3989.1,3962.6,3835.9,3716.5,4020,4007.9], "NKD-2026-10-24": [66495,64960,63870,62270,61680,60220,58300,62200,62690], "ES-2026-10-24": [7901.75,7832.75,7734.75,7707,7638.5,7560,7542.25,7425.25,7648.5], "NQ-2026-10-24": [30078,29768.75,29505.5,28987,28729.75,28518.25,28240.25,27831,29145.25,30401.25],
+var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1545,1.01], "BTC-2026-10-24": [87465,83500,82300,81015,78100,78000,76900,74335,69440,80440], "EURUSD-2026-10-24": [1.13715,1.12495,1.1178,1.10745,1.13125], "CC-2026-10-24": [5960,5860,5568,5517,5362,4918,5592,6505], "KC-2026-10-24": [328.8,318.2,308.95,302.75,302,293,285.45,269.85,298,318,321,292], "NG-2026-10-24": [3.127,2.784,2.628,2.546,2.492,2.252,1.942,2.922], "WTI-2026-10-24": [117.35,111.19,106.86,104.6,102.38,101.5,97.11,93.51], "SI-2026-10-24": [59.535,56.245,53.285,53.075,51,48.185,45.06,54.5,55.9], "GC-2026-10-24": [4376.8,4213,4095.5,4075,3989.1,3962.6,3835.9,3716.5,4020,4007.9], "NKD-2026-10-24": [66495,64960,63870,62270,61680,60220,58300,62200,62690], "ES-2026-10-24": [7901.75,7832.75,7734.75,7707,7638.5,7560,7542.25,7425.25,7648.5], "NQ-2026-10-24": [30078,29768.75,29505.5,28987,28729.75,28518.25,28240.25,27831,29145.25,30401.25],
  
  
  
@@ -23918,6 +23982,7 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1954,1.1545,1.01], "BTC-
           return '<p>' + esc(sy.fut[0]) + ' − ' + esc(r[0]) + ' ≈ <b>' + (d >= 0 ? '+' : '−') + Math.abs(d).toLocaleString('es-ES', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + '</b> (' + esc(pr.fut) + ' frente a ' + esc(pr.cfd[r[0]]) + ')</p>';
         }).join('');
         if (ln) sh += '<h3 style="margin-top:14px">Diferencial con el futuro</h3>' + ln;
+          if (pr.nota) sh += '<p style="color:var(--muted);font-size:13px">' + esc(pr.nota) + '</p>';
       }
       symHtml = sec('sim', 'Símbolos', sh);
     } else { symHtml = ''; }
