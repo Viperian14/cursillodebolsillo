@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T17:05:42Z",
+ "updated": "2026-10-28T21:41:33Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -30,6 +30,12 @@
    "match": "Subasta de notas y bonos del Tesoro a 5 años (Nota a 5 años)",
    "act": "4,845%",
    "res": ""
+  },
+  {
+   "d": "2026-10-28",
+   "match": "Decisión de tipos de la Fed (reunión del 27–28 de octubre)",
+   "act": "Tipos 3,75–4,00%",
+   "res": "up"
   }
  ]
 }
