@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T21:41:33Z",
+ "updated": "2026-10-29T21:42:46Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -36,6 +36,18 @@
    "match": "Decisión de tipos de la Fed (reunión del 27–28 de octubre)",
    "act": "Tipos 3,75–4,00%",
    "res": "up"
+  },
+  {
+   "d": "2026-10-29",
+   "match": "Subasta de notas y bonos del Tesoro a 7 años (Nota a 7 años)",
+   "act": "4,894%",
+   "res": ""
+  },
+  {
+   "d": "2026-10-29",
+   "match": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "act": "194 mil",
+   "res": ""
   }
  ]
 }
