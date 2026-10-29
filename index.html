@@ -20353,8 +20353,8 @@ var ENTRIES = [
       "caption": "Gráfico diario del NQ (captura del sábado 24 de octubre, 12:37). Liquidación del viernes: 29.117,75."
     },
     "conclusion": {
-      "lead": "Coincido con tu lectura: rebote como mucho a 29.505,50‑29.768,75 y, si no lo supera, caída a 28.728,75‑28.518,25 (la Genial semanal), ya sea tras pullback o por continuación. Tu corto del 17 de octubre va en camino (29.145,25 cumplido); ahora hay dos operativas, con entrada y objetivos propios.",
-      "text": "Lo que veo en el gráfico: rechazo en semanal y en diario (vela de fuerza bajista con mínimo 28.987 y cierre sobre el borde alto de la cinta azul diaria, ≈29.130). En H4 y H1 el precio consolida bajo la Genial, con el FVG diario 29.145‑29.600 y la línea 29.505,50 por encima. Matiz mío: la Genial semanal la sitúas en 28.518,25 y yo, a ojo, en ≈28.400; me quedo con tu cifra. Contexto externo (Benzinga, 24 oct): los semiconductores cayeron 6,7% el jueves y hay estrés de crédito en la financiación de la IA; la semana trae Fed, Microsoft, Alphabet y PCE. Es una hipótesis que el mercado no recompre tecnología antes del miércoles."
+      "lead": "Tu lectura: escenario alcista al 50%, con recuperación hacia 29.768,75‑30.078. Ahí, sobre todo en 30.078, se daría la oportunidad de corto en rebote, con objetivos 29.505,50 y 29.235. Bajista al 40% (rechazo en esa zona y caída) y continuación de la caída sin rebote al 10%. Tu corto del 17 de octubre va en camino (29.145,25 cumplido).",
+      "text": "Lo que veo en el gráfico: rechazo en semanal y en diario (vela de fuerza bajista con mínimo 28.987 y cierre sobre el borde alto de la cinta azul diaria, ≈29.130). En H4 y H1 el precio consolida bajo la Genial, con el FVG diario 29.145‑29.600 y la línea 29.505,50 por encima. Matiz mío: la Genial semanal la sitúas en 28.518,25 y yo, a ojo, en ≈28.400; me quedo con tu cifra. Contexto externo (Benzinga, 24 oct): los semiconductores cayeron 6,7% el jueves y hay estrés de crédito en la financiación de la IA; la semana trae Fed, Microsoft, Alphabet y PCE. Hipótesis: Microsoft, Alphabet y la Fed decidirán si la recuperación llega a 29.768,75‑30.078."
     },
     "frames": [
       {
@@ -20374,8 +20374,8 @@ var ENTRIES = [
     ],
     "bands": [
       {
-        "lo": 29505.5,
-        "hi": 29768.75,
+        "lo": 29768.75,
+        "hi": 30078,
         "label": ""
       },
       {
@@ -20389,19 +20389,25 @@ var ENTRIES = [
         "p": 30078,
         "lbl": "30.078",
         "cls": "res",
-        "t": "Resistencia fuerte (línea verde, borde del FVG de H4)"
+        "t": "Línea verde y borde del FVG de H4: zona preferente del corto en rebote"
       },
       {
         "p": 29768.75,
         "lbl": "29.768,75",
         "cls": "res",
-        "t": "Línea verde y techo del rebote (FVG de H4)"
+        "t": "Línea verde: arranque de la zona del corto en rebote (29.768,75‑30.078)"
       },
       {
         "p": 29505.5,
         "lbl": "29.505,50",
         "cls": "res",
-        "t": "Línea verde; FVG diario 29.145‑29.600 por debajo"
+        "t": "Línea verde y objetivo 1 del corto en rebote; FVG diario 29.145‑29.600 por debajo"
+      },
+      {
+        "p": 29235,
+        "lbl": "29.235",
+        "cls": "res",
+        "t": "Objetivo 2 del corto en rebote (tu cifra)"
       },
       {
         "p": 29145.25,
@@ -20450,17 +20456,22 @@ var ENTRIES = [
       [
         "30.078",
         "Resistencia",
-        "Resistencia fuerte (línea verde, borde del FVG de H4)"
+        "Línea verde y borde del FVG de H4: zona preferente del corto en rebote"
       ],
       [
         "29.768,75",
         "Resistencia",
-        "Línea verde y techo del rebote (FVG de H4)"
+        "Línea verde: arranque de la zona del corto en rebote (29.768,75‑30.078)"
       ],
       [
         "29.505,50",
         "Resistencia",
-        "Línea verde; FVG diario 29.145‑29.600 por debajo"
+        "Línea verde y objetivo 1 del corto en rebote; FVG diario 29.145‑29.600 por debajo"
+      ],
+      [
+        "29.235",
+        "Resistencia",
+        "Objetivo 2 del corto en rebote (tu cifra)"
       ],
       [
         "29.145,25",
@@ -20500,25 +20511,25 @@ var ENTRIES = [
     ],
     "scenarios": [
       {
+        "cls": "up",
+        "tag": "Alcista",
+        "title": "1. Recuperación hacia 29.768,75‑30.078",
+        "pct": 50,
+        "text": "Tu escenario principal: el precio aguanta 28.987‑29.145,25 y sube a la zona 29.768,75‑30.078, sobre todo a 30.078 (líneas verdes y FVG de H4). Va contra el rechazo de D y W, por eso es una subida para vender arriba, no para perseguir. Se invalida con cierre H4 bajo 29.145,25 con retesteo por debajo."
+      },
+      {
         "cls": "down",
         "tag": "Bajista",
-        "title": "1. Rebote a 29.505,50‑29.768,75, rechazo y caída a 28.728,75‑28.518,25",
-        "pct": 45,
-        "text": "Tu escenario principal: pullback a la zona, rechazo con OUT o vela de rechazo en H1 y confirmación en H4; después Genial semanal. Se anula con cierre H4 sobre 29.768,75."
+        "title": "2. Rechazo en 29.768,75‑30.078 y caída a 29.505,50‑29.235",
+        "pct": 40,
+        "text": "Llega a la zona y la rechaza con OUT o vela de rechazo en H1 y confirmación en H4: es el corto en rebote, con objetivos 29.505,50 y 29.235. Va a favor de D y W. Se anula con cierre H4 sobre 30.078."
       },
       {
         "cls": "flat",
         "tag": "Continuación",
-        "title": "2. Cierre H4 bajo 29.145,25 o 28.987 y caída sin rebote",
-        "pct": 35,
+        "title": "3. Cierre H4 bajo 29.145,25 o 28.987 y caída sin rebote",
+        "pct": 10,
         "text": "Pierde el borde alto de la cinta azul diaria y retestea por debajo; objetivos 28.729,75 y 28.518,25. Se anula con cierre H4 sobre 29.505,50."
-      },
-      {
-        "cls": "up",
-        "tag": "Alcista",
-        "title": "3. Cierre H4 sobre 29.768,75 → 30.078",
-        "pct": 20,
-        "text": "Resultados de Microsoft y Alphabet y una Fed sin sorpresas devuelven compradores. Se invalida con cierre H4 bajo 29.505,50."
       }
     ],
     "plays": [
@@ -20547,13 +20558,12 @@ var ENTRIES = [
         "k": "Corto 1 · rebote",
         "dir": "short",
         "entry": [
-          29505.5,
-          29768.75
+          29768.75,
+          30078
         ],
         "targets": [
-          29145.25,
-          28729.75,
-          28518.25
+          29505.5,
+          29235
         ]
       },
       {
@@ -20576,11 +20586,11 @@ var ENTRIES = [
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 29.768,75 y retesteo con color de fuerza alcista. Objetivos 30.078,00 y 30.401,25. Se anula con cierre H4 bajo 29.505,50. Lo ves menos probable: solo si Microsoft, Alphabet y la Fed devuelven compradores."
+        "text": "Cierre H4 sobre 29.768,75 y retesteo con color de fuerza alcista. Objetivos 30.078,00 y 30.401,25. Se anula con cierre H4 bajo 29.505,50. Si llega a 30.078 sin cerrar H4 por encima, manda el Corto 1 y no este largo."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 29.505,50‑29.768,75 (FVG diario y línea verde) con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Objetivos 29.145,25, 28.729,75 y 28.518,25. Se anula con cierre H4 sobre 29.768,75. Es tu escenario principal. Entrar en el rebote, no en el mínimo."
+        "text": "Rebote a 29.768,75‑30.078, sobre todo en 30.078 (líneas verdes y FVG de H4), con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Objetivos 29.505,50 y 29.235. Va a favor de D y W y llega después de tu escenario alcista. Se anula con cierre H4 sobre 30.078. Entrar en el rebote, no en la vela de ruptura."
       },
       {
         "k": "Corto 2 · continuación",
@@ -20602,7 +20612,7 @@ var ENTRIES = [
     "tecnica": [
       {
         "k": "Tu lectura (texto del sábado)",
-        "text": "Posible recuperación a 29.505,50, con ≈29.768,75 como máximo. Si no la supera, más probabilidad de caída a 28.728,75‑28.518,25 (Genial semanal). Rechazo de subida en semanal y diario; en H4 y H1 la caída es lo más probable, bien por pullback tras subida, bien por continuación bajista."
+        "text": "Escenario alcista al 50%: recuperación hacia 29.768,75‑30.078. Entre 29.768,75 y 30.078, sobre todo en 30.078, se daría la oportunidad de corto en rebote, con objetivo 1 en 29.505,50 y objetivo 2 en 29.235. Bajista al 40% y continuación al 10%."
       },
       {
         "k": "Semanal (NQ)",
@@ -20742,8 +20752,8 @@ var ENTRIES = [
         "text": "Subasta del bono del Tesoro a 2 años (calendario de esta web). Subastas a 5 años el martes y a 7 años el jueves."
       },
       {
-        "k": "29.505,50 y 29.768,75",
-        "text": "Rechazo con OUT o vela de rechazo en H1; cierre H4 sobre 29.768,75 neutraliza el corto."
+        "k": "29.768,75 y 30.078",
+        "text": "Rechazo con OUT o vela de rechazo en H1, sobre todo en 30.078: corto en rebote hacia 29.505,50 y 29.235. Un cierre H4 sobre 30.078 lo anula."
       },
       {
         "k": "28.987 y 29.145,25",
