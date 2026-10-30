@@ -1,5 +1,5 @@
 {
- "hecho": "2026-10-20T07:33:29Z",
+ "hecho": "2026-10-30T08:50:10Z",
  "bls": {
   "CUSR0000SA0": {
    "ultimo": "2026-09",
@@ -45,12 +45,12 @@
  "fred": {
   "ICSA": [
    [
-    "2026-10-10",
-    199000.0
+    "2026-10-24",
+    194000.0
    ],
    [
-    "2026-10-03",
-    198000.0
+    "2026-10-17",
+    195000.0
    ]
   ],
   "RSAFS": [
@@ -71,6 +71,106 @@
    [
     "2026-08-01",
     103.2664
+   ]
+  ],
+  "HOUST": [
+   [
+    "2026-09-01",
+    1221.0
+   ],
+   [
+    "2026-08-01",
+    1288.0
+   ]
+  ],
+  "PERMIT": [
+   [
+    "2026-09-01",
+    1398.0
+   ],
+   [
+    "2026-08-01",
+    1403.0
+   ]
+  ],
+  "JTSJOL": [
+   [
+    "2026-08-01",
+    7079.0
+   ],
+   [
+    "2026-07-01",
+    7335.0
+   ]
+  ],
+  "BOPGSTB": [
+   [
+    "2026-08-01",
+    -105572.0
+   ],
+   [
+    "2026-07-01",
+    -92826.0
+   ]
+  ],
+  "MTSDS133FMS": [
+   [
+    "2026-09-01",
+    -26900.34710202
+   ],
+   [
+    "2026-08-01",
+    -166796.95227738
+   ]
+  ],
+  "A191RL1Q225SBEA": [
+   [
+    "2026-07-01",
+    3.4
+   ],
+   [
+    "2026-04-01",
+    2.2
+   ]
+  ],
+  "PCEPI": [
+   [
+    "2026-09-01",
+    132.257
+   ],
+   [
+    "2026-08-01",
+    131.611
+   ]
+  ],
+  "PCEPILFE": [
+   [
+    "2026-09-01",
+    130.902
+   ],
+   [
+    "2026-08-01",
+    130.489
+   ]
+  ],
+  "ECIALLCIV": [
+   [
+    "2026-04-01",
+    177.178
+   ],
+   [
+    "2026-01-01",
+    175.618
+   ]
+  ],
+  "DFEDTARU": [
+   [
+    "2026-10-29",
+    4.0
+   ],
+   [
+    "2026-10-28",
+    4.0
    ]
   ]
  },
@@ -293,7 +393,7 @@
   }
  ],
  "subastas_treasurydirect": {
-  "n": 89,
+  "n": 90,
   "claves": [
    "accruedInterest",
    "accruedInterestPerAmount",
@@ -486,6 +586,87 @@
   "ej": [
    {
     "allottedAtHighPercentageDecimals": "2",
+    "allottedAtHighRatePercentage": "29.55",
+    "announcementDate": "2026-01-15T00:00:00",
+    "bidToCoverRatio": "3.42",
+    "cashManagementBill": "No",
+    "competitiveAuctionCloseDate": "2026-01-20T00:00:00",
+    "competitiveAuctionCloseDateYear": "2026",
+    "competitiveAuctionCloseTime": "01:00 PM",
+    "competitiveBidDecimals": "3",
+    "competitiveBidExpression": "Rate",
+    "competitiveRateBidIncrements": "0.005",
+    "cusip": "912797TM9",
+    "daysIssueToMaturity": "364",
+    "directBiddersCompetitiveParAwarded": "1118650000",
+    "directBiddersCompetitiveParRecognized": "3727000000",
+    "fimaCompetitiveInsideOfOfferingAmount": "Yes",
+    "fimaNoncompetitiveInsideOfOfferingAmount": "Yes",
+    "fimaNoncompetitiveParAwarded": "220000000",
+    "fimaNoncompetitiveParRecognized": "220000000",
+    "floatingRate": "No",
+    "frequencyOfInterestPayments": "None",
+    "grandTotalParAwarded": "52172746400",
+    "grandTotalParRecognized": "173117171400",
+    "highPrice": "96.572333",
+    "highRate": "3.390",
+    "indirectBiddersCompetitiveParAwarded": "34898140000",
+    "indirectBiddersCompetitiveParRecognized": "59286515000",
+    "inflationProtected": "No",
+    "investmentRate": "3.528",
+    "issueDate": "2026-01-22T00:00:00",
+    "lowRate": "3.300",
+    "maturingDate": "2026-01-22T00:00:00",
+    "maturingSecuritiesType": "Bill",
+    "maturityDate": "2027-01-21T00:00:00",
+    "maximumCompetitiveAward": "17500000000",
+    "maximumNoncompetitiveAward": "10000000",
+    "maximumRecognizedBidAtASingleRate": "17500000000",
+    "medianRate": "3.380",
+    "minimumToBidAmount": "100",
+    "minimumToIssueAmount": "100",
+    "multipleToBidAmount": "100",
+    "multipleToIssueAmount": "100",
+    "nlpExclusionAmount": "0",
+    "nlpReportingThreshold": "17500000000",
+    "noncompetitiveAuctionCloseDate": "2026-01-20T00:00:00",
+    "noncompetitiveAuctionCloseDateYear": "2026",
+    "noncompetitiveAuctionCloseTime": "12:00 PM",
+    "noncompetitiveBidsAccepted": "Yes",
+    "offeringAmount": "50000000000",
+    "originalSecurityTerm": "52-Week",
+    "pricePerAmount": "100",
+    "pricingMethod": "Single-Price",
+    "primaryDealersCompetitiveParAwarded": "12257300000",
+    "primaryDealersCompetitiveParRecognized": "106205000000",
+    "privateHoldings": "280566000000",
+    "reopening": "No",
+    "retailNoncompetitiveParAwarded": "577601500",
+    "securityDescription": "52-Week Bill",
+    "securityTerm": "52-Week",
+    "securityTermDay": "364",
+    "securityTermWeek": "52",
+    "securityType": "Bill",
+    "somaHoldings": "13080000000",
+    "somaInsideOfOfferingAmount": "No",
+    "somaNoncompetitiveParAwarded": "2172724900",
+    "somaNoncompetitiveParRecognized": "2172724900",
+    "subtotalCompetitiveParAwardedInsideOfOfferingAmount": "48274090000",
+    "subtotalCompetitiveParRecognizedInsideOfOfferingAmount": "169218515000",
+    "subtotalNoncompetitiveParAwardedInsideOfOfferingAmount": "1725931500",
+    "technique": "Auction",
+    "treasuryAuctionResultsPressReleaseFileName": "R_20260120_4.pdf",
+    "treasuryAuctionResultsXmlFileName": "R_20260120_4.xml",
+    "treasuryNoncompetitiveAuctionResultsPressReleaseFileName": "NCR_20260120_3.pdf",
+    "treasuryOfferingAnnouncementPressReleaseFileName": "A_20260115_4.pdf",
+    "treasuryOfferingAnnouncementXmlFileName": "A_20260115_4.xml",
+    "treasuryRetailBidsAccepted": "Yes",
+    "treasurySpecialAnnouncementFileName": "SPL_20260115_1.pdf",
+    "type": "Bill",
+    "updatedTimestamp": "2026-01-20T13:04:00"
+   },
+   {
+    "allottedAtHighPercentageDecimals": "2",
     "allottedAtHighRatePercentage": "70.25",
     "announcementDate": "2025-12-18T00:00:00",
     "bidToCoverRatio": "3.74",
@@ -645,87 +826,11 @@
     "treasurySpecialAnnouncementFileName": "SPL_20251120_1.pdf",
     "type": "Bill",
     "updatedTimestamp": "2025-11-25T11:34:05"
-   },
-   {
-    "allottedAtHighPercentageDecimals": "2",
-    "allottedAtHighRatePercentage": "42.51",
-    "announcementDate": "2025-10-23T00:00:00",
-    "bidToCoverRatio": "3.21",
-    "cashManagementBill": "No",
-    "competitiveAuctionCloseDate": "2025-10-28T00:00:00",
-    "competitiveAuctionCloseDateYear": "2025",
-    "competitiveAuctionCloseTime": "11:30 AM",
-    "competitiveBidDecimals": "3",
-    "competitiveBidExpression": "Rate",
-    "competitiveRateBidIncrements": "0.005",
-    "cusip": "912797SK4",
-    "daysIssueToMaturity": "364",
-    "directBiddersCompetitiveParAwarded": "2160000000",
-    "directBiddersCompetitiveParRecognized": "5970000000",
-    "fimaCompetitiveInsideOfOfferingAmount": "Yes",
-    "fimaNoncompetitiveInsideOfOfferingAmount": "Yes",
-    "fimaNoncompetitiveParAwarded": "40000000",
-    "fimaNoncompetitiveParRecognized": "40000000",
-    "floatingRate": "No",
-    "frequencyOfInterestPayments": "None",
-    "grandTotalParAwarded": "52802202100",
-    "grandTotalParRecognized": "163143450100",
-    "highPrice": "96.516722",
-    "highRate": "3.445",
-    "indirectBiddersCompetitiveParAwarded": "26271427000",
-    "indirectBiddersCompetitiveParRecognized": "47421500000",
-    "inflationProtected": "No",
-    "investmentRate": "3.587",
-    "issueDate": "2025-10-30T00:00:00",
-    "lowRate": "3.300",
-    "maturingDate": "2025-10-30T00:00:00",
-    "maturingSecuritiesType": "Bill",
-    "maturityDate": "2026-10-29T00:00:00",
-    "maximumCompetitiveAward": "17500000000",
-    "maximumNoncompetitiveAward": "10000000",
-    "maximumRecognizedBidAtASingleRate": "17500000000",
-    "medianRate": "3.400",
-    "minimumToBidAmount": "100",
-    "minimumToIssueAmount": "100",
-    "multipleToBidAmount": "100",
-    "multipleToIssueAmount": "100",
-    "nlpExclusionAmount": "0",
-    "nlpReportingThreshold": "17500000000",
-    "noncompetitiveAuctionCloseDate": "2025-10-28T00:00:00",
-    "noncompetitiveAuctionCloseDateYear": "2025",
-    "noncompetitiveAuctionCloseTime": "11:00 AM",
-    "noncompetitiveBidsAccepted": "Yes",
-    "offeringAmount": "50000000000",
-    "originalSecurityTerm": "52-Week",
-    "pricePerAmount": "100",
-    "pricingMethod": "Single-Price",
-    "primaryDealersCompetitiveParAwarded": "20703825000",
-    "primaryDealersCompetitiveParRecognized": "106085000000",
-    "privateHoldings": "282908000000",
-    "reopening": "No",
-    "retailNoncompetitiveParAwarded": "418146500",
-    "securityDescription": "52-Week Bill",
-    "securityTerm": "52-Week",
-    "securityTermDay": "364",
-    "securityTermWeek": "52",
-    "securityType": "Bill",
-    "somaHoldings": "17257000000",
-    "somaInsideOfOfferingAmount": "No",
-    "somaNoncompetitiveParAwarded": "2801476300",
-    "somaNoncompetitiveParRecognized": "2801476300",
-    "subtotalCompetitiveParAwardedInsideOfOfferingAmount": "49135252000",
-    "subtotalCompetitiveParRecognizedInsideOfOfferingAmount": "159476500000",
-    "subtotalNoncompetitiveParAwardedInsideOfOfferingAmount": "865473800",
-    "technique": "Auction",
-    "treasuryAuctionResultsPressReleaseFileName": "R_20251028_2.pdf",
-    "treasuryAuctionResultsXmlFileName": "R_20251028_2.xml",
-    "treasuryNoncompetitiveAuctionResultsPressReleaseFileName": "NCR_20251028_2.pdf",
-    "treasuryOfferingAnnouncementPressReleaseFileName": "A_20251023_6.pdf",
-    "treasuryOfferingAnnouncementXmlFileName": "A_20251023_6.xml",
-    "treasuryRetailBidsAccepted": "Yes",
-    "type": "Bill",
-    "updatedTimestamp": "2025-10-28T11:34:16"
    }
   ]
+ },
+ "eia": {
+  "PET.WCESTUS1.W": [],
+  "NG.NW2_EPG0_SWO_R48_BCF.W": []
  }
 }
