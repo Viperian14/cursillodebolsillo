@@ -2,9 +2,10 @@ name: Datos reales del calendario
 
 on:
   schedule:
-    # Franjas: cada media hora (minutos 22 y 52, de 08:22 a 19:52 UTC) el trabajo mira si hay un dato automático
-    # a punto de publicarse (desde 12 min antes hasta 20 min después de su hora). Si no hay nada, termina en segundos.
-    # Si lo hay, espera hasta 3 minutos después de la hora del evento y reintenta cada 45 s.
+    # Franjas: cada media hora (minutos 22 y 52, de 08:22 a 19:52 UTC). En la práctica GitHub retrasa o se salta
+    # muchas y solo corre ≈1 vez por hora a minutos variables, así que cada ejecución recoge además todo lo que ya
+    # salió y sigue sin dato (últimos 3 días). Si hay un dato a punto de salir (12 min antes) o recién salido
+    # (20 min después), espera y reintenta cada 45 s.
     - cron: '22,52 8-19 * * 1-5'
     # Barrido de recogida (por si alguna franja se retrasó): dos veces al día.
     - cron: '5 7,21 * * 1-5'
@@ -35,6 +36,7 @@ jobs:
         env:
           BLS_KEY: ${{ secrets.BLS_KEY }}
           FRED_KEY: ${{ secrets.FRED_KEY }}
+          EIA_KEY: ${{ secrets.EIA_KEY }}
           EVENTO: ${{ github.event.schedule }}
           SONDA: ${{ inputs.sonda }}
         run: |
