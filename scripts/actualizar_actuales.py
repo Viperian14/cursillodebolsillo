@@ -46,6 +46,8 @@ def parse_num(s):
 
 
 def res_from(act, fc, higher_is_better, tol=0.0):
+    if higher_is_better is None:   # sin dirección clara (p. ej. decisiones de tipos): no se valora
+        return ''
     a, f = parse_num(act), parse_num(fc)
     if a is None or f is None or abs(a - f) <= tol:
         return ''
@@ -246,7 +248,165 @@ def calc_fed(d):
     lo, hi = fred_obs('DFEDTARL', 1), fred_obs('DFEDTARU', 1)
     if not lo or not hi or dt.date.fromisoformat(lo[0][0]) < d:
         return None
-    return 'Tipos %s–%s%%' % (('%.2f' % lo[0][1]).replace('.', ','), ('%.2f' % hi[0][1]).replace('.', ',')), False
+    # Sin valoración automática: la previsión suele ser un texto ("pausa descontada…") y no una cifra comparable.
+    return 'Tipos %s–%s%%' % (('%.2f' % lo[0][1]).replace('.', ','), ('%.2f' % hi[0][1]).replace('.', ',')), None
+
+
+# ---------- más series de EE. UU. (FRED, misma clave) ----------
+def es_num(x, dec=1):
+    return ('%.*f' % (dec, x)).replace('.', ',')
+
+
+def millones(miles):
+    """1221 (miles) -> '1,221 M'."""
+    return es_num(miles / 1000.0, 3) + ' M'
+
+
+def mil_m_dolares(millones_usd):
+    """-59600 (millones de $) -> '−59,6 mil M$'."""
+    v = millones_usd / 1000.0
+    s = es_num(abs(v))
+    if s.endswith(',0'):
+        s = s[:-2]
+    return ('−' if v < 0 else '') + s + ' mil M$'
+
+
+def obs_mes(series, month, year, n=16):
+    """Devuelve (valor, anterior, hace_un_año) de la observación mensual del mes pedido, o None."""
+    o = fred_obs(series, n)
+    for i, (d, v) in enumerate(o):
+        if int(d[:4]) == year and int(d[5:7]) == month:
+            prev = o[i + 1][1] if i + 1 < len(o) else None
+            yago = next((val for dd, val in o if int(dd[:4]) == year - 1 and int(dd[5:7]) == month), None)
+            return v, prev, yago
+    return None
+
+
+def anio_de_mes(month, ev_date):
+    """El dato de diciembre publicado en enero es del año anterior."""
+    return ev_date.year - 1 if month > ev_date.month else ev_date.year
+
+
+def calc_nivel_millones(series):
+    """Inicios de viviendas o permisos: nivel en millones (anualizado)."""
+    def f(month, year, d):
+        r = obs_mes(series, month, anio_de_mes(month, d))
+        return (millones(r[0]), True) if r else None
+    return f
+
+
+def calc_var_mensual(series):
+    def f(month, year, d):
+        r = obs_mes(series, month, anio_de_mes(month, d))
+        if not r or not r[1]:
+            return None
+        return pct((r[0] / r[1] - 1) * 100), True
+    return f
+
+
+def calc_jolts(month, year, d):
+    r = obs_mes('JTSJOL', month, anio_de_mes(month, d))
+    return (millones(r[0]), True) if r else None
+
+
+def calc_balanza(month, year, d):
+    r = obs_mes('BOPGSTB', month, anio_de_mes(month, d))
+    return (mil_m_dolares(r[0]), True) if r else None
+
+
+def calc_presupuesto(month, year, d):
+    r = obs_mes('MTSDS133FMS', month, anio_de_mes(month, d))
+    return (mil_m_dolares(r[0]), True) if r else None
+
+
+def trimestre_in(ev):
+    m = re.search(r'(\d)\s*\.?\s*(?:er|º|o|ᵉʳ)?\s*trimestre', ev)
+    return int(m.group(1)) if m else None
+
+
+def obs_trimestre(series, q, year, n=8):
+    """Valor y anterior de una serie trimestral de FRED (la fecha es el primer día del trimestre)."""
+    o = fred_obs(series, n)
+    mes = 3 * (q - 1) + 1
+    for i, (dd, v) in enumerate(o):
+        if int(dd[:4]) == year and int(dd[5:7]) == mes:
+            return v, (o[i + 1][1] if i + 1 < len(o) else None)
+    return None
+
+
+def calc_pib(ev, d):
+    """PIB real (tasa trimestral anualizada) y, si el evento lo nombra, el PCE del mes."""
+    q = trimestre_in(ev)
+    if not q:
+        return None
+    year = d.year - 1 if q == 4 and d.month <= 3 else d.year
+    g = obs_trimestre('A191RL1Q225SBEA', q, year)
+    if not g:
+        return None
+    act = 'PIB %s anualizado' % pct(g[0])
+    mes = month_in(ev)
+    if mes and 'PCE' in ev:
+        try:
+            yy_ = anio_de_mes(mes, d)
+            p, c = obs_mes('PCEPI', mes, yy_), obs_mes('PCEPILFE', mes, yy_)
+            if p and c and p[1] and c[1] and p[2] and c[2]:
+                act += '\nPCE %s: %s m/m · %s a/a' % (MESES[mes - 1], pct((p[0] / p[1] - 1) * 100), pct((p[0] / p[2] - 1) * 100, False))
+                act += '\nPCE subyacente: %s m/m · %s a/a' % (pct((c[0] / c[1] - 1) * 100), pct((c[0] / c[2] - 1) * 100, False))
+        except Exception as ex:
+            print('PCE sin datos: %s' % ex, file=sys.stderr)
+    return act, True
+
+
+def calc_eci(ev, d):
+    q = trimestre_in(ev)
+    if not q:
+        return None
+    r = obs_trimestre('ECIALLCIV', q, d.year)
+    if not r or not r[1]:
+        return None
+    return pct((r[0] / r[1] - 1) * 100) + ' t/t', False
+
+
+# ---------- EIA (inventarios semanales; clave EIA_KEY) ----------
+EIA_KEY = os.environ.get('EIA_KEY', '')
+
+
+def eia_semanal(serie, ev_date):
+    """[(fecha_semana, valor)] más recientes de una serie semanal de la EIA (API v2, ruta seriesid)."""
+    if not EIA_KEY:
+        print('Sin EIA_KEY: no se pueden leer los inventarios de la EIA', file=sys.stderr)
+        return []
+    desde = (ev_date - dt.timedelta(days=40)).isoformat()
+    q = urllib.parse.urlencode({'api_key': EIA_KEY, 'start': desde})
+    j = http_json('https://api.eia.gov/v2/seriesid/%s?%s' % (serie, q))
+    datos = [(r['period'][:10], float(r['value'])) for r in (j.get('response') or {}).get('data', []) if r.get('value') not in (None, '')]
+    return sorted(datos, reverse=True)
+
+
+def cambio_semanal(serie, ev_date):
+    o = eia_semanal(serie, ev_date)
+    if len(o) < 2:
+        return None
+    sem = dt.date.fromisoformat(o[0][0])
+    if not (ev_date - dt.timedelta(days=9) <= sem < ev_date):   # la semana que toca (acaba el viernes anterior)
+        return None
+    return o[0][1] - o[1][1], o[0][1]
+
+
+def calc_crudo(ev, d):
+    r = cambio_semanal('PET.WCESTUS1.W', d)       # miles de barriles, sin la reserva estratégica
+    if not r:
+        return None
+    ch = r[0] / 1000.0
+    # Un descenso de inventarios es lo "mejor" para el precio del crudo (criterio que ya usa la página).
+    return '%s%s M barriles' % ('+' if ch >= 0 else '−', es_num(abs(ch))), False
+
+
+def calc_gas(ev, d):
+    r = cambio_semanal('NG.NW2_EPG0_SWO_R48_BCF.W', d)   # Bcf, 48 estados
+    if not r:
+        return None
+    return '%s%d Bcf' % ('+' if r[0] >= 0 else '−', round(abs(r[0]))), False
 
 
 def gate():
@@ -272,6 +432,21 @@ HANDLERS = [
     ('Subasta de notas y bonos del Tesoro', lambda m, y, d: None, False, 0.05),
     ('Decisión de tipos de la Fed', lambda m, y, d: calc_fed(d), False, 0.0),
     ('IPC final de la zona euro', lambda m, y, d: calc_hicp(m, y), True, 0.05),
+    # Series de FRED añadidas el 30-10-2026. 'prev' = si el nombre no trae el mes, se usa el mes anterior al del evento.
+    # 'ev' = la función recibe el texto del evento (trimestre, semana…). Los más concretos van antes.
+    ('Inicios de viviendas, variación mensual', lambda m, y, d: calc_var_mensual('HOUST')(m, y, d), 'prev', 0.05),
+    ('Inicios de viviendas', lambda m, y, d: calc_nivel_millones('HOUST')(m, y, d), 'prev', 0.0005),
+    ('Permisos de construcción, variación mensual', lambda m, y, d: calc_var_mensual('PERMIT')(m, y, d), 'prev', 0.05),
+    ('Permisos de construcción', lambda m, y, d: calc_nivel_millones('PERMIT')(m, y, d), 'prev', 0.0005),
+    ('Ofertas de empleo JOLTS', calc_jolts, 'prev', 0.005),
+    ('Balanza comercial de EE. UU.', calc_balanza, 'prev', 0.05),
+    ('Estado mensual del presupuesto de EE. UU.', calc_presupuesto, 'prev', 0.5),
+    ('PIB de EE. UU.', calc_pib, 'ev', 0.05),
+    ('PIB del 3.er trimestre', calc_pib, 'ev', 0.05),
+    ('Índice de costes laborales (ECI)', calc_eci, 'ev', 0.05),
+    # EIA: necesitan el secreto EIA_KEY (si falta, se saltan sin error).
+    ('Inventarios de crudo de la EIA', calc_crudo, 'ev', 0.05),
+    ('Almacenamientos de gas natural de la EIA', calc_gas, 'ev', 0.5),
 ]
 
 
@@ -356,7 +531,12 @@ def sonda():
         r['subastas_treasurydirect'] = {'n': len(j), 'claves': sorted(j[0].keys()), 'ej': [{k: v for k, v in x.items() if v not in (None, '')} for x in j[-3:]]} if isinstance(j, list) and j else j
     except Exception as ex:
         r['subastas_treasurydirect'] = 'ERROR: %s' % ex
-    for sid in ('ICSA', 'RSAFS', 'INDPRO'):
+    try:
+        r['eia'] = {s: eia_semanal(s, dt.date.today())[:2] for s in ('PET.WCESTUS1.W', 'NG.NW2_EPG0_SWO_R48_BCF.W')}
+    except Exception as ex:
+        r['eia'] = 'ERROR: %s' % str(ex).replace(EIA_KEY or 'x', '***')
+    for sid in ('ICSA', 'RSAFS', 'INDPRO', 'HOUST', 'PERMIT', 'JTSJOL', 'BOPGSTB', 'MTSDS133FMS',
+                'A191RL1Q225SBEA', 'PCEPI', 'PCEPILFE', 'ECIALLCIV', 'DFEDTARU'):
         try:
             o = fred_obs(sid, 3)
             r['fred'][sid] = [list(x) for x in o[:2]]
@@ -398,10 +578,17 @@ def intentar(e):
     key, fn, needs_month, tol = h
     month = month_in(e['ev'])
     ev_date = dt.date.fromisoformat(e['d'])
-    if needs_month and not month:
+    if needs_month == 'prev' and not month:
+        month = 12 if ev_date.month == 1 else ev_date.month - 1
+    if needs_month is True and not month:
         return None
     try:
-        res = calc_subasta(e['ev'], ev_date) if key.startswith('Subasta') else fn(month, ev_date.year, ev_date)
+        if key.startswith('Subasta'):
+            res = calc_subasta(e['ev'], ev_date)
+        elif needs_month == 'ev':
+            res = fn(e['ev'], ev_date)
+        else:
+            res = fn(month, ev_date.year, ev_date)
     except Exception as ex:
         print('ERROR en %s: %s' % (e['ev'], ex), file=sys.stderr)
         return None
@@ -442,31 +629,42 @@ def eventos_pendientes(cur, hoy=None):
 
 
 def debidos_en(eventos, ahora):
-    """Eventos con dato automático cuya franja (hora - ANTELACION, hora + VENTANA) contiene 'ahora'."""
+    """Eventos con dato automático cuya hora (menos ANTELACION) ya ha llegado.
+    No tiene límite por detrás: GitHub retrasa o se salta muchas ejecuciones programadas (en la práctica corre
+    una vez por hora, a minutos variables), así que cada ejecución recoge también lo que se quedó atrás.
+    El límite de antigüedad lo pone eventos_pendientes (3 días)."""
     out = []
     for e in eventos:
         t = hora_evento(e)
         if t is None or not manejador(e['ev']):
             continue
-        if t - dt.timedelta(minutes=ANTELACION_MIN) <= ahora <= t + dt.timedelta(minutes=VENTANA_MIN):
+        if t - dt.timedelta(minutes=ANTELACION_MIN) <= ahora:
             out.append((e, t))
     return out
 
 
 def ventana():
-    """Modo por franjas: solo trabaja si hay un evento con dato automático en torno a ahora.
-    Espera hasta DEMORA_MIN minutos después de la hora del evento y reintenta cada 45 s hasta VENTANA_MIN."""
+    """Modo por franjas (cada ejecución programada del día):
+    1) intenta una vez todos los eventos con dato automático cuya hora ya pasó (recuperación);
+    2) si hay alguno a punto de salir o recién salido (hasta VENTANA_MIN después), espera y reintenta cada 45 s."""
     t0 = time.time()
     path, cur = cargar_actuales()
+    intentados = set()
     while True:
         ahora = dt.datetime.now(dt.timezone.utc)
         debidos = debidos_en(eventos_pendientes(cur), ahora)
         if not debidos:
             print('Nada que buscar en esta franja.')
             return
-        listos = [(e, t) for e, t in debidos if ahora >= t + dt.timedelta(minutes=DEMORA_MIN)]
         nuevos = 0
-        for e, t in listos:
+        for e, t in debidos:
+            if ahora < t + dt.timedelta(minutes=DEMORA_MIN):
+                continue                     # aún no ha salido
+            reciente = ahora <= t + dt.timedelta(minutes=VENTANA_MIN)
+            clave = (e['d'], e['ev'])
+            if clave in intentados and not reciente:
+                continue                     # lo atrasado se intenta una sola vez por ejecución
+            intentados.add(clave)
             item = intentar(e)
             if item:
                 cur.setdefault('items', []).append(item)
@@ -476,6 +674,11 @@ def ventana():
         if nuevos:
             subir()
             continue            # recalcula qué falta
+        # ¿Merece la pena esperar? Solo si hay algo que sale en breve o acaba de salir.
+        espera = [1 for e, t in debidos if ahora <= t + dt.timedelta(minutes=VENTANA_MIN)]
+        if not espera:
+            print('Recuperación hecha; nada reciente que esperar.')
+            return
         if time.time() - t0 > 28 * 60:
             print('Tiempo máximo de la franja alcanzado.')
             return
