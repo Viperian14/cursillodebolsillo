@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T21:42:46Z",
+ "updated": "2026-10-30T13:22:25Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -47,6 +47,12 @@
    "d": "2026-10-29",
    "match": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
    "act": "194 mil",
+   "res": ""
+  },
+  {
+   "d": "2026-10-30",
+   "match": "Índice de costes laborales (ECI), 3.er trimestre",
+   "act": "+0,8% t/t",
    "res": ""
   }
  ]
