@@ -170,6 +170,8 @@ td.cm { min-width: 200px; }
 .row p { max-width: 70ch; }
 .paras { display: flex; flex-direction: column; gap: 12px; max-width: 70ch; }
 .paras .note { color: var(--muted); font-size: 14px; }
+.paras ol.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
+.paras ol.steps ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 
 .dt td { min-width: 130px; }
 .dt td:first-child { font-weight: 600; white-space: nowrap; min-width: 0; }
@@ -33100,10 +33102,26 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     ['BTC', '2026-10-24', 'Largo en zona de corrección (78.100‑76.900)', 'Entró el viernes 30 (mínimo ≈76.300) y rebotó a ≈78.900 sin confirmación en H4 ni objetivo. Sigue vigente.'],
     ['XRP', '2026-10-24', 'Largo de rebote en 1,1545', 'No llegó (mínimo ≈1,2030).']
   ];
-  var TRST = { tab: 'intra', f: 'all', a: 'all', c: 'all' };
+  var TRST = { tab: 'intra', f: 'all', a: 'all', c: 'all', d: 'all' };
   function renderTradesSet(TR0, NA0, kind) {
-    var TR = TR0.filter(function (t) { return TRST.a === 'all' || t.asset === TRST.a; }), NA = NA0.filter(function (n) { return TRST.a === 'all' || n[0] === TRST.a; });
+    var TRa = TR0.filter(function (t) { return TRST.a === 'all' || t.asset === TRST.a; }), NAa = NA0.filter(function (n) { return TRST.a === 'all' || n[0] === TRST.a; });
     function dlabel(d) { var p = d.split('-'), dt = new Date(+p[0], +p[1] - 1, +p[2]); return DIAS[dt.getDay()] + ' ' + p[2].replace(/^0/, '') + ' de ' + MESES[+p[1] - 1]; }
+    // Periodo: en intradía, el día del análisis; en swing, la semana que prepara (lunes siguiente si el análisis es de fin de semana).
+    function pkey(d) {
+      if (kind !== 'swing') return d;
+      var p = d.split('-'), dt = new Date(+p[0], +p[1] - 1, +p[2]), w = dt.getDay();
+      dt.setDate(dt.getDate() + (w === 6 ? 2 : w === 0 ? 1 : 1 - w));
+      return dt.getFullYear() + '-' + ('0' + (dt.getMonth() + 1)).slice(-2) + '-' + ('0' + dt.getDate()).slice(-2);
+    }
+    function plabel(k) {
+      var p = k.split('-'), dt = new Date(+p[0], +p[1] - 1, +p[2]), m = MESES[+p[1] - 1].slice(0, 3);
+      return kind === 'swing' ? 'Semana del ' + (+p[2]) + ' ' + m : DIAS[dt.getDay()].slice(0, 3) + ' ' + (+p[2]) + ' ' + m;
+    }
+    var PER = {};
+    TRa.forEach(function (t) { PER[pkey(t.date)] = 1; }); NAa.forEach(function (n) { PER[pkey(n[1])] = 1; });
+    var PKS = Object.keys(PER).sort().reverse();
+    if (TRST.d !== 'all' && !PER[TRST.d]) TRST.d = 'all';
+    var TR = TRa.filter(function (t) { return TRST.d === 'all' || pkey(t.date) === TRST.d; }), NA = NAa.filter(function (n) { return TRST.d === 'all' || pkey(n[1]) === TRST.d; });
     function pc(n, t) { return t ? Math.round(100 * n / t) : 0; }
     var W = TR.filter(function (t) { return t.out === 'win' || t.out === 'open'; }), F = TR.filter(function (t) { return t.out === 'loss'; }), PD = TR.filter(function (t) { return t.out === 'pend'; }), N = W.length + F.length, OP = TR.filter(function (t) { return t.out === 'open'; }).length;
     function by(list, m) { return list.filter(function (t) { return t.match === m; }).length; }
@@ -33111,7 +33129,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     var html = '<section><h2>Resumen</h2><div class="bigstat"><button type="button" class="bs win" data-trf="win" aria-pressed="' + (TRST.f === 'win') + '"><b>' + pc(W.length, N) + '%</b><span>aciertos · ' + W.length + ' de ' + N + (OP ? ' (' + (W.length - OP) + ' cerrados + ' + OP + ' cumplidos en parte y en camino)' : '') + '</span></button><button type="button" class="bs loss" data-trf="loss" aria-pressed="' + (TRST.f === 'loss') + '"><b>' + (N ? 100 - pc(W.length, N) : 0) + '%</b><span>fallos · ' + F.length + ' de ' + N + '</span></button><button type="button" class="bs" data-trf="all" aria-pressed="' + (TRST.f === 'all') + '"><b>' + N + '</b><span>operativas activadas</span></button></div><p class="legend">Pulsa aciertos o fallos para ver solo esos; pulsa el tercer cuadro para verlo todo.</p>' +
       '<div class="split"><div class="sp"><h3>Desglose de los aciertos</h3><div class="sumrow"><div><b>' + by(W, 'Exacta') + '</b><span>exactos · ' + pc(by(W, 'Exacta'), W.length) + '%' + (W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length ? ' · ' + W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length + ' con doble objetivo' : '') + '</span></div><div><b>' + by(W, 'Aproximada') + '</b><span>aproximados · ' + pc(by(W, 'Aproximada'), W.length) + '%</span></div><div><b>' + by(W, 'Parcial') + '</b><span>parciales · ' + pc(by(W, 'Parcial'), W.length) + '%</span></div></div></div>' +
       '<div class="sp"><h3>Desglose de los fallos</h3><div class="sumrow"><div><b>' + by(F, 'Exacta') + '</b><span>exactos · ' + pc(by(F, 'Exacta'), F.length) + '%</span></div><div><b>' + by(F, 'Aproximada') + '</b><span>aproximados · ' + pc(by(F, 'Aproximada'), F.length) + '%</span></div><div><b>' + by(F, 'Parcial') + '</b><span>parciales · ' + pc(by(F, 'Parcial'), F.length) + '%</span></div></div></div></div>' +
-      '<p class="legend">Muestra pequeña (' + N + (kind === 'swing' ? ' operativas swing de los análisis del 10, 11, 17 y 24 de octubre, medidas con tus capturas H1 del sábado 17 de octubre (cierre del viernes 16), del sábado 24 a las 00:15 (cierre del viernes 23) y del sábado 31 a las 10:38‑10:58 (cierre del viernes 30); solo cuentan las ejecutadas' : ' operativas de los días 12, 13, 15, 16, 20, 21, 22, 23 y 27 de octubre (las del 27, con tus M5 del 28 a las 18:18; las del 22 y 23, con tus M5, M15 y H1 del 24 a las 00:05‑00:12, sin M5 del 22 antes de las 06:00 del 23, así que las del 22 son aproximadas; las del 15, medidas con tus M15 de las 22:30; las del 16, con tus capturas del sábado 17 a las 12:20; las del 20 y 21, con tus M5 del 21 a las 20:41; seis de ellas son tus tesis y cuentan como válidas, no gatillos de mis análisis escritos)') + '): en intradía lo que no se alcanza en el día no se arrastra al siguiente. Cómo se clasifica cada operativa activada (cuenta lo que pase primero): acierto exacto si alcanza el primer objetivo sin tocar antes el stop (con «doble objetivo» si alcanza también el segundo); acierto aproximado si recorre al menos el 65 % del camino hasta el primer objetivo (se queda a un 35 % o menos); acierto parcial si va a favor pero recorre menos. Igual con los fallos: fallo exacto si toca el stop; fallo aproximado si recorre al menos el 65 % del camino hasta el stop; fallo parcial si va en contra pero recorre menos. Las tesis y lecturas de escenario sin objetivo con número se valoran a ojo. Los porcentajes se calculan solo sobre operaciones ejecutadas: lo planteado que no se activó va aparte, no cuenta ni como acierto ni como fallo. Son orientativos. Son resultados teóricos medidos a ojo sobre tus capturas, no operaciones ejecutadas por ti. No tengo el volumen real de M5 que pedían los gatillos, así que «activada» significa que el precio hizo el recorrido del plan, no que se confirmaran todas las condiciones.</p></section>';
+      '</section>';
     function tradeHtml(t) {
       var tag = t.out !== 'loss' ? (t.match === 'Exacta' ? 'win' : t.match === 'Aproximada' ? 'ap' : '') : 'dn';
       var goals = t.goals.map(function (g) {
@@ -33130,14 +33148,24 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     html += '<div class="tabs assetchips" role="group" aria-label="Activo"><button type="button" class="tab" data-tra="all" aria-pressed="' + (TRST.a === 'all') + '">Todos los activos</button>' + ORD.map(function (a) {
       return '<button type="button" class="tab" data-tra="' + a + '" aria-pressed="' + (TRST.a === a) + '">' + esc(ASSET_NAMES[a] || a) + '</button>';
     }).join('') + '</div>';
+    if (PKS.length > 1) html += '<div class="tabs assetchips" role="group" aria-label="' + (kind === 'swing' ? 'Semana' : 'Día') + '"><button type="button" class="tab" data-trd="all" aria-pressed="' + (TRST.d === 'all') + '">' + (kind === 'swing' ? 'Todas las semanas' : 'Todos los días') + '</button>' + PKS.map(function (k) {
+      return '<button type="button" class="tab" data-trd="' + k + '" aria-pressed="' + (TRST.d === k) + '">' + esc(plabel(k)) + '</button>';
+    }).join('') + '</div>';
     var fa = TRST.f === 'all', fw = fa || TRST.f === 'win', fl = fa || TRST.f === 'loss';
-    if (!W.length && !F.length && !PD.length && !NA.length) html += '<p class="note">No hay operativas de este activo en esta pestaña.</p>';
+    if (!W.length && !F.length && !PD.length && !NA.length) html += '<p class="note">No hay operativas con este filtro.</p>';
     if (fw && W.length) html += '<details class="fold" open><summary><span>Aciertos</span><em>' + W.length + '</em></summary><div class="elist">' + sorted(W).map(tradeHtml).join('') + '</div></details>';
     if (fl && F.length) html += '<details class="fold" open><summary><span>Fallos</span><em>' + F.length + '</em></summary><div class="elist">' + sorted(F).map(tradeHtml).join('') + '</div></details>';
     if (fa && PD.length) html += '<details class="fold" open><summary><span>En curso, todavía no cuentan</span><em>' + PD.length + '</em></summary><div class="elist">' + PD.map(tradeHtml).join('') + '</div></details>';
     if (fa && NA.length) html += '<details class="fold"><summary><span>No se activaron o no se pueden comprobar (no cuentan en los porcentajes)</span><em>' + NA.length + '</em></summary><div class="elist">' +
       NA.map(function (n) { return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[n[0]] || n[0]) + '</span><span class="tg2">' + esc(dlabel(n[1])) + '</span></div><h3>' + esc(n[2]) + '</h3><p>' + esc(n[3]) + '</p></div>'; }).join('') + '</div></details>';
-    html += '<section><h2>Cómo lo mido</h2><div class="paras"><p><b>Acierto:</b> el precio alcanzó al menos el primer objetivo sin tocar antes el stop (o la invalidación, cuando el análisis no define stop). <b>Exacto:</b> entrada y objetivos coinciden con el plan. <b>Aproximado:</b> la entrada o algún objetivo se quedó a pocos puntos. <b>Parcial:</b> solo se cumplió una parte de los objetivos.</p><p><b>Fallo:</b> el stop o la invalidación se dieron antes del primer objetivo. <b>Exacto:</b> el plan falló tal como estaba escrito. <b>Aproximado:</b> falló por pocos puntos o el precio fue al objetivo justo después. <b>Parcial:</b> llegó a algún objetivo pero la operación acabó en pérdida.</p><p><b>No se activó:</b> el precio no llegó a la zona o no hubo gatillo comprobable; no cuenta como acierto ni como fallo. <b>Día lateral:</b> si el escenario principal es un rango, la lectura del escenario cuenta como acierto y los rebotes o rupturas que se comen el rango no se cuentan como fallos.</p><p>' + (kind === 'swing' ? '<b>En curso a favor:</b> el gatillo se activó y el precio va a favor, pero aún no ha llegado al primer objetivo o el análisis no definía objetivo; cuenta como acierto mientras no se invalide y se indica aparte. Las velas diarias de las capturas de las 23:00 aún no habían cerrado: lo que dependa de ese cierre puede cambiar. <b>En curso, no cuenta:</b> el gatillo se activó pero el precio devolvió lo ganado sin llegar al objetivo ni invalidarse. Solo evalúo los análisis de swing del 10 y 11 de octubre con tus gráficos H4 de las 19:20 y M15 y diarios de las 23:00 del miércoles 14.' : 'Solo evalúo las operativas de intradía y scalping (NQ, ES y oro) de los días 12 y 13 de octubre, con los gráficos M15 de las 19:35 del martes 13.') + '</p></div></section>';
+    html += '<section><h2>Cómo lo mido</h2><div class="paras"><ol class="steps">' +
+      '<li><b>¿Se activó?</b> Si el precio no llegó a la zona o no hubo gatillo comprobable, va a «No se activaron» y no cuenta ni como acierto ni como fallo.</li>' +
+      '<li><b>¿Qué llegó primero?</b> Miro si el precio fue antes hacia el primer objetivo o hacia el stop (o la invalidación, si el análisis no define stop). Cuenta lo que pase primero.</li>' +
+      '<li><b>Si fue a favor, es acierto:</b><ul><li><b>Exacto:</b> alcanza el primer objetivo sin tocar antes el stop. Si alcanza también el segundo, se marca «doble objetivo».</li><li><b>Aproximado:</b> recorre al menos el 65 % del camino hasta el primer objetivo (se queda a un 35 % o menos).</li><li><b>Parcial:</b> va a favor, pero recorre menos del 65 %.</li></ul></li>' +
+      '<li><b>Si fue en contra, es fallo:</b><ul><li><b>Exacto:</b> toca el stop.</li><li><b>Aproximado:</b> recorre al menos el 65 % del camino hasta el stop sin tocarlo.</li><li><b>Parcial:</b> va en contra, pero recorre menos del 65 %.</li></ul></li>' +
+      '<li><b>Casos especiales:</b> las tesis y las lecturas de escenario sin objetivo con número se valoran a ojo. Si el escenario principal es un rango, la lectura del escenario cuenta como acierto y los rebotes o rupturas dentro del rango no cuentan como fallos.' + (kind === 'swing' ? ' <b>Cumplido en parte y en camino:</b> el gatillo se activó y el precio va a favor, pero aún no ha llegado al primer objetivo o el análisis no definía objetivo; cuenta como acierto mientras no se invalide. <b>En curso, no cuenta:</b> el gatillo se activó pero el precio devolvió lo ganado sin llegar al objetivo ni invalidarse.' : '') + '</li>' +
+      '<li><b>Porcentajes:</b> se calculan solo con las operativas activadas. Son resultados teóricos medidos a ojo sobre tus capturas, no operaciones ejecutadas.</li>' +
+      '</ol></div></section>';
     return html;
   }
 
@@ -33387,9 +33415,10 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       if (na) { state.asset = na.getAttribute('data-nasset'); state.date = byAsset(state.asset)[0].date; render(); return; }
       var ca = T.closest('[data-cal]'); if (ca) { calAct(ca.getAttribute('data-cal')); return; }
       var eb = T.closest('[data-evt]'); if (eb) { var rw = eb.closest('.er'), op = rw.classList.toggle('open'); [].forEach.call(rw.querySelectorAll('[data-evt]'), function (x) { x.setAttribute('aria-expanded', op ? 'true' : 'false'); }); return; }
-      var tt = T.closest('[data-trtab]'); if (tt) { TRST.tab = tt.getAttribute('data-trtab'); TRST.a = 'all'; renderInfo(); return; }
+      var tt = T.closest('[data-trtab]'); if (tt) { TRST.tab = tt.getAttribute('data-trtab'); TRST.a = 'all'; TRST.d = 'all'; renderInfo(); return; }
       var tf = T.closest('[data-trf]'); if (tf) { var nf = tf.getAttribute('data-trf'); TRST.f = (TRST.f === nf ? 'all' : nf); renderInfo(); return; }
       var ta = T.closest('[data-tra]'); if (ta) { TRST.a = ta.getAttribute('data-tra'); renderInfo(); return; }
+      var td = T.closest('[data-trd]'); if (td) { TRST.d = td.getAttribute('data-trd'); renderInfo(); return; }
       var ct = T.closest('[data-cat]'); if (ct) { TOOLST.cat = ct.getAttribute('data-cat'); renderInfo(); return; }
       var bs = T.closest('[data-bsec]'); if (bs) { BIB.sec = bs.getAttribute('data-bsec'); renderInfo(); return; }
       var bd = T.closest('[data-bdoc]'); if (bd) { BIB.doc = bd.getAttribute('data-bdoc'); renderInfo(); window.scrollTo(0, 0); return; }
