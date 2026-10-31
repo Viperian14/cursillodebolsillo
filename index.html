@@ -175,6 +175,35 @@ svg.story text.mb, svg.story text.ms { font-size: 15px; }
 .paras ol.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
 .note ol.steps, .ps .v ol.steps { margin: 6px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 3px; }
 .ps .v .mut { color: var(--muted); }
+#plsheet { position: fixed; inset: 0; z-index: 80; background: var(--bg); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+#plsheet .pd { max-width: 760px; margin: 0 auto; padding: 14px 16px 48px; }
+#plsheet .pd-head { background: var(--bg); padding: 6px 0 10px; border-bottom: 1px solid var(--line); z-index: 2; }
+#plsheet .pd-back { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 8px; padding: 6px 10px; font: inherit; cursor: pointer; }
+#plsheet h2 { margin: 10px 0 2px; font-size: 1.25rem; }
+#plsheet .pd-sub { margin: 0 0 8px; color: var(--muted); }
+#plsheet section { margin-top: 18px; }
+#plsheet h3 { margin: 0 0 8px; font-size: 1rem; }
+.pd-chips, .pl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0; }
+.pd-chip { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: .82rem; color: var(--fg); }
+.pd-chip.estr { border-color: var(--up); color: var(--up); }
+.pd-chip.esc { border-color: var(--accent, #e0b84f); color: var(--accent, #e0b84f); }
+.pd-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; line-height: 1.5; }
+.pd-leg { margin: 6px 0 0; padding-left: 22px; color: var(--muted); font-size: .9rem; display: flex; flex-direction: column; gap: 3px; }
+.pd-cap { margin: 4px 0 0; color: var(--muted); font-size: .88rem; }
+.pd-sl { line-height: 1.6; } .pd-sl .slt { display: flex; flex-direction: column; gap: 2px; margin: 6px 0; padding-left: 10px; border-left: 2px solid var(--line); } .pd-sl .mut { color: var(--muted); }
+.pl-card .pl-open { margin-top: 12px; }
+.pd-fab { position: fixed; right: 16px; z-index: 85; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.pd-fab.top { bottom: 18px; } .pd-fab.back { bottom: 72px; }
+.pd-fab svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#plsheet .ps { margin-top: 4px; }
+.pd-ilus { margin-top: 18px; }
+.eftag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; font-size: .8rem; white-space: nowrap; }
+.eftag.up { border-color: var(--up); color: var(--up); } .eftag.dn { border-color: var(--down); color: var(--down); }
+h3.sub { margin: 14px 0 8px; font-size: 1rem; }
+
+.pl-open { margin-top: 10px; width: 100%; background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: inherit; font-weight: 600; cursor: pointer; }
+.pl-open:hover { border-color: var(--fg); }
+
 .ps .v .slt { display: flex; flex-direction: column; gap: 2px; margin: 6px 0; padding-left: 10px; border-left: 2px solid var(--line); }
 .ps .v .slt .slr { display: block; }
 .paras ol.steps ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
@@ -389,6 +418,9 @@ h2 { color: var(--muted); }
 .fabmenu { position: fixed; right: 16px; bottom: 18px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); line-height: 1; cursor: pointer; display: none; align-items: center; justify-content: center; }
 .fabmenu svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .fabmenu.show { display: flex; }
+.fabback { position: fixed; right: 16px; bottom: 72px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); cursor: pointer; display: none; align-items: center; justify-content: center; }
+.fabback svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.fabback.show { display: flex; }
 .ex b { color: var(--accent); font-weight: 600; margin-right: 4px; }
 .er.open .ex { display: block; }
 @media (max-width: 700px) {
@@ -31877,7 +31909,38 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     }
   } catch (e) {}
 
+  /* Flecha de atrás: pila de vistas visitadas (la web usa replaceState, así que el historial del navegador no sirve) */
+  var NAV = [], navLast = null, navBusy = false;
+  function navSnap() {
+    var b = typeof BIB !== 'undefined' ? { doc: BIB.doc, sec: BIB.sec, cat: BIB.cat, letter: BIB.letter } : null;
+    return { st: JSON.parse(JSON.stringify(state)), tool: typeof TOOLST !== 'undefined' ? JSON.parse(JSON.stringify(TOOLST)) : null, tr: typeof TRST !== 'undefined' ? JSON.parse(JSON.stringify(TRST)) : null, bib: b, y: window.pageYOffset || 0 };
+  }
+  function navKey(n) {
+    var t = n.st; return [t.home ? 'home' : '', t.page || '', t.mode || '', t.asset || '', t.date || '', t.page === 'herramientas' && n.tool ? n.tool.tab : '', t.page === 'herramientas' && n.tool && n.tool.tab === 'ops' && n.tr ? n.tr.tab : '', t.page === 'herramientas' && n.tool && n.tool.tab === 'bib' && n.bib ? n.bib.doc + '|' + n.bib.sec : ''].join('/');
+  }
+  function navTrack() {
+    if (navBusy) return;
+    var cur = navSnap();
+    if (navLast && navKey(navLast) !== navKey(cur)) { NAV.push(navLast); if (NAV.length > 60) NAV.shift(); }
+    navLast = cur; if (typeof backUpdate === 'function') backUpdate();
+  }
+  function navBack() {
+    var sh = document.getElementById('plsheet'); if (sh && !sh.hidden) { closePl(); return; }
+    var p = NAV.pop();
+    navBusy = true;
+    if (p) {
+      Object.keys(p.st).forEach(function (k) { state[k] = p.st[k]; });
+      if (p.tool) Object.keys(p.tool).forEach(function (k) { TOOLST[k] = p.tool[k]; });
+      if (p.tr) Object.keys(p.tr).forEach(function (k) { TRST[k] = p.tr[k]; });
+      if (p.bib) Object.keys(p.bib).forEach(function (k) { BIB[k] = p.bib[k]; });
+    } else { state.home = true; state.page = null; }
+    render(); if (state.page) renderInfo();
+    navBusy = false; navLast = navSnap();
+    window.scrollTo(0, p ? p.y : 0); if (typeof backUpdate === 'function') backUpdate();
+  }
+
   function setHash() {
+    setTimeout(navTrack, 0);
     try {
       if (state.home) history.replaceState(null, '', location.pathname + location.search);
       else if (state.page) history.replaceState(null, '', '#' + state.page);
@@ -32221,7 +32284,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     return '<svg class="mini" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(al) + '">' + g + '</svg>';
   }
   /* Dibujo de ejemplo de la entrada con velas simuladas: llegada a la zona (o ruptura y retesteo), vela de gatillo, stop y objetivos. Se usa en los swing desde el 31 de octubre de 2026. */
-  function storyChart(e, pl, k, text) {
+  function storyChart(e, pl, k, text, v) {
+    v = v || 'normal';
     var now = null, nowL = '';
     (e.levels || []).forEach(function (l) { if (l.cls === 'now') { now = l.p; nowL = l.lbl; } });
     var lvm = text.match(/[Cc]ierre (M5|M15|H1|H4|diario) (?:sobre|bajo|por encima de|por debajo de) (\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+,\d+)/);
@@ -32258,8 +32322,14 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       wp.push({ p: deep + s * 0.4 * u, n: 2 });
     }
     wp.push({ p: entryP, n: 1, mk: 'trig' });
-    if (tg[0] != null) { wp.push({ p: tg[0] + s * 0.5 * u, n: 4, mk: 't1' }); wp.push({ p: tg[0] - s * 3 * u, n: 2 }); }
-    if (tg[1] != null) wp.push({ p: tg[1] + s * 0.5 * u, n: 4, mk: 't2' });
+    var d1 = tg[0] != null ? tg[0] - entryP : s * 10 * u, slp = null;
+    if (v === 'reent') { var rr = e.mode === 'intra' ? [0.84, 0.5] : [0.68, 0.2]; slp = entryP + rr[1] * d1; wp.push({ p: entryP + rr[0] * d1, n: 4, mk: 'p65' }); wp.push({ p: slp - s * 0.6 * u, n: 3, mk: 'slx' }); wp.push({ p: deep + s * 0.4 * u, n: 2 }); wp.push({ p: entryP, n: 1, mk: 'trig2' }); }
+    if (v === 'estr') { wp.push({ p: entryP + 0.6 * d1, n: 4 }); wp.push({ p: entryP + 0.3 * d1, n: 3, mk: 'corr' }); wp.push({ p: entryP + 0.42 * d1, n: 1, mk: 'conf' }); }
+    if (v === 'anula') { var fp = deep - s * 3 * u; if (st != null) fp = long ? Math.max(fp, st + 1.5 * u) : Math.min(fp, st - 1.5 * u); wp.push({ p: entryP + 0.25 * d1, n: 3 }); wp.push({ p: fp, n: 4, mk: 'fil' }); }
+    else {
+      if (tg[0] != null) { wp.push({ p: tg[0] + s * 0.5 * u, n: 4, mk: 't1' }); wp.push({ p: tg[0] - s * 3 * u, n: 2 }); }
+      if (tg[1] != null) wp.push({ p: tg[1] + s * 0.5 * u, n: 4, mk: 't2' });
+    }
     // velas
     var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
     var C = [], prev = wp[0].p;
@@ -32275,8 +32345,12 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     }
     // la vela de gatillo: mecha que barre la zona y cierre a favor
     var ti = marks.trig, tc = C[ti];
-    if (long) { tc.l = Math.min(tc.l, deep - 0.3 * u); if (st != null) tc.l = Math.max(tc.l, st + u); }
-    else { tc.h = Math.max(tc.h, deep + 0.3 * u); if (st != null) tc.h = Math.min(tc.h, st - u); }
+    [ti, marks.trig2].forEach(function (q) { if (q == null) return; var c = C[q];
+      if (long) { c.l = Math.min(c.l, deep - 0.3 * u); if (st != null) c.l = Math.max(c.l, st + u); }
+      else { c.h = Math.max(c.h, deep + 0.3 * u); if (st != null) c.h = Math.min(c.h, st - u); } });
+    if (marks.corr != null) { var cc = C[marks.corr]; if (long) cc.l = Math.min(cc.l, cc.c - 0.8 * u); else cc.h = Math.max(cc.h, cc.c + 0.8 * u); }
+    var corrX = marks.corr != null ? (long ? C[marks.corr].l : C[marks.corr].h) : null;
+    if (v === 'estr') slp = corrX - s * 0.8 * u;
     var vals = [lo, hi].concat(tg); if (st != null) vals.push(st); if (now != null) vals.push(now);
     C.forEach(function (c) { vals.push(c.h, c.l); });
     var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals), pad = (mx - mn) * 0.06;
@@ -32290,9 +32364,11 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     labs.push({ y: (y(lo) + y(hi)) / 2, c: 't-zone mb', a: 'Entrada ' + fmt(lo) + '‑' + fmt(hi) });
     if (st != null) { g += '<line class="m-stop" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(st) + '" y2="' + y(st) + '"/>'; labs.push({ y: y(st), c: 't-stop mb', a: '🛑 Stop ' + fmt(st) }); }
     tg.forEach(function (t, i) { g += '<line class="m-tg" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(t) + '" y2="' + y(t) + '"/>'; labs.push({ y: y(t), c: 't-tg mb', a: '🎯 ' + (i + 1) + '.º ' + fmt(t) }); });
-    if (now != null) { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + nowL }); }
+    if (now != null && v === 'normal') { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + nowL }); }
+    if (slp != null) { var xs = cx(v === 'reent' ? marks.p65 : marks.conf) - 4; g += '<line x1="' + xs + '" x2="' + X1 + '" y1="' + y(slp) + '" y2="' + y(slp) + '" stroke="var(--accent, #e0b84f)" stroke-width="1.4" stroke-dasharray="5 3"/>'; labs.push({ y: y(slp), c: 'mb', a: '➕ SL+ ≈' + fmtT(e, rTick(slp, tickOf(e), s)) }); }
+    if (v === 'anula') { var fl = deep; g += '<line x1="' + X0 + '" x2="' + X1 + '" y1="' + y(fl) + '" y2="' + y(fl) + '" stroke="var(--down)" stroke-width="1.2" stroke-dasharray="2 3"/>'; }
     C.forEach(function (c, i) {
-      var up = c.c >= c.o, isT = i === ti;
+      var up = c.c >= c.o, isT = i === ti || i === marks.trig2 || i === marks.conf;
       var col = isT ? (rup ? (long ? '#78b946' : '#d23c82') : (long ? '#00ffff' : '#fffa00')) : (up ? 'var(--up)' : 'var(--down)');
       g += '<line x1="' + cx(i) + '" x2="' + cx(i) + '" y1="' + y(c.h) + '" y2="' + y(c.l) + '" stroke="' + col + '" stroke-width="1.3"/>';
       var yt = y(Math.max(c.o, c.c)), hb = Math.max(1.5, Math.abs(y(c.o) - y(c.c)));
@@ -32303,7 +32379,20 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     var tags = [];
     if (rup) tags.push({ i: marks.brk, t: ['Ruptura', 'cierre ' + tfR], p: long ? C[marks.brk].h : C[marks.brk].l, side: s });
     var colW = long ? 'verde' : 'rosa/marrón';
-    tags.push({ i: ti, t: e.mode === 'swing' ? ['Gatillo: H1 con rechazo', 'entro al cierre del H1'] : [rup ? 'Retesteo y entrada' : 'Gatillo y entrada', 'vela ' + tfG + (tfC ? ' · confirma ' + tfC : '')], p: long ? tc.l : tc.h, side: -s });
+    tags.push({ i: ti, t: e.mode === 'swing' ? ['Gatillo: H1 con rechazo', 'entro al cierre del H1'] : ['Gatillo: M5/M15 con rechazo', 'entro al cierre de esa vela'], p: long ? tc.l : tc.h, side: -s });
+    var nums = [];
+    if (v !== 'normal') {
+      tags = [];
+      var hiP = function (q) { return long ? C[q].l : C[q].h; }, loP = function (q) { return long ? C[q].h : C[q].l; };
+      nums.push({ i: ti, p: hiP(ti), side: -s });
+      if (v === 'reent') { nums.push({ i: marks.p65, p: loP(marks.p65), side: s }); nums.push({ i: marks.slx, p: hiP(marks.slx), side: -s }); nums.push({ i: marks.trig2, p: hiP(marks.trig2), side: -s }); }
+      if (v === 'estr') { nums.push({ i: marks.corr, p: hiP(marks.corr), side: -s }); nums.push({ i: marks.conf, p: loP(marks.conf), side: s }); }
+      if (v === 'anula') nums.push({ i: marks.fil, p: hiP(marks.fil), side: -s });
+      nums.forEach(function (m, k) {
+        var yy = y(m.p) + (m.side > 0 ? -14 : 14); yy = Math.max(T + 9, Math.min(H - B - 9, yy));
+        g += '<circle cx="' + cx(m.i) + '" cy="' + yy + '" r="10" fill="var(--fg)"/><text x="' + cx(m.i) + '" y="' + (yy + 5) + '" text-anchor="middle" style="fill:var(--bg);font-size:13px;font-weight:700">' + (k + 1) + '</text>';
+      });
+    }
     tags.forEach(function (m) {
       var bh = 2 * 17 + 6, tw = Math.max.apply(null, m.t.map(function (z) { return z.length; })) * 9.2 + 14;
       var top = m.side > 0 ? y(m.p) - 6 - bh : y(m.p) + 6;
@@ -32353,6 +32442,78 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     return '<span>Con entrada en ≈' + fmtT(e, ref) + ':</span><span class="slt">' + rows + '</span><span>Por contexto: ' + ctx.join('; ') + '. Se queda siempre el que más asegure y nunca se baja.</span>';
   }
 
+
+  /* Ficha de cada operativa (swing desde el 31 de octubre): se abre al pulsar la tarjeta en «Qué haría» */
+  var PLD = [];
+  function slMode(text, intra) {
+    var f = (text.match(/Va a favor de ([^.]*)\./) || [])[1] || '', all = /todos los marcos|cuatro marcos/.test(f);
+    if (intra) { var ctr = (text.match(/contra ([^.]*)\./) || [])[1] || ''; return (all || /\bH1\b/.test(f.split(/\by contra\b|;|:/)[0])) && !/\bH4\b/.test(ctr) ? 'estr' : 'esc'; }
+    f = f.split(/\by contra\b|;|:/)[0];
+    var D = all || /\b(D|diario)\b/.test(f), H4 = all || /\bH4\b/.test(f);
+    return D && H4 ? 'estr' : 'esc';
+  }
+  function plDetail(e, x, pl, d0) {
+    d0 = d0 || {};
+    var I = e.mode === 'intra', text = x.p.text, long = pl.dir === 'long', rup = /ruptura/i.test(x.p.k), md = slMode(text, I);
+    var G = I ? 'M5/M15' : 'H1', F = I ? 'M15' : 'H4', ctxTF = I ? 'H1' : 'D y H4', corrTF = I ? 'M5' : 'H1';
+    var lo = Array.isArray(pl.entry) ? Math.min(pl.entry[0], pl.entry[1]) : pl.entry, hi = Array.isArray(pl.entry) ? Math.max(pl.entry[0], pl.entry[1]) : pl.entry;
+    var zona = lo === hi ? fmtT(e, lo) : fmtT(e, lo) + '‑' + fmtT(e, hi);
+    var SE = '([^]*?)\\.(?=\\s+[A-ZÁÉÍÓÚ¿]|\\s*$)';
+    function grab(re) { var m = text.match(new RegExp(re + SE)); return m ? m[1] : ''; }
+    function cap1(z) { return z.charAt(0).toUpperCase() + z.slice(1) + '.'; }
+    var tg = (pl.targets || []).map(t0), fil = grab('Filtro ' + F + ': ');
+    var stop = grab('Stop ') || (pl.stop != null ? (long ? 'bajo ' : 'sobre ') + fmtT(e, pl.stop) : '');
+    var anula = grab('Se anula ');
+    var favor = grab('(?:Va )'); favor = favor ? 'Va ' + favor + '.' : '';
+    var colsF = long ? 'cian, verde fosforito, azul claro, verde o verde oscuro' : 'rojo, amarillo, naranja, rosa oscuro o marrón';
+    var cierre = 'Cierre ' + F + ' ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi);
+    var slTxt = I
+      ? (md === 'estr' ? 'Estructural, porque va a favor del H1. Antes del 1.er objetivo: al 50 % del camino aseguro el 10 % y al 80 %, el 50 %. Al tocar el 1.er objetivo aseguro el 25 % y desde ahí el SL+ va detrás de cada corrección del M5 confirmada (vela M5 que vuelve a cerrar a favor con color de fuerza). Nunca por una mecha y nunca se baja.'
+                       : 'En escalera, porque no va a favor del H1: al 50 % del camino aseguro el 10 %; al 80 %, el 50 %, y al tocar el 1.er objetivo, el 75 %. El escalón se activa con el toque.')
+      : (md === 'estr' ? 'Estructural, porque va a favor de D y H4: no hay escalones fijos. Cada vez que el precio hace un nuevo ' + (long ? 'máximo' : 'mínimo') + ', corrige y una vela H1 vuelve a cerrar a favor con color de fuerza, el SL+ va justo detrás del ' + (long ? 'mínimo' : 'máximo') + ' de esa corrección. Nunca por una mecha y nunca se baja.'
+                       : 'En escalera, porque no va a favor de D y H4: al 30, 50, 65 y 80 % del camino al 1.er objetivo aseguro el 5, 10, 20 y 50 %, y en el objetivo el 75 %. El escalón se activa con el toque.');
+    var steps = [
+      ['⏳ Espera', rup ? 'Cierre ' + F + ' ' + (long ? 'por encima' : 'por debajo') + ' del nivel y que el precio vuelva a retestearlo (' + zona + '). No entro en la vela de ruptura.' : 'Que el precio llegue a la zona ' + zona + '. Si no llega, no hay operativa.'],
+      ['⏱️ Gatillo ' + G, 'Vela ' + G + ' de giro o de fuerza ' + (long ? 'alcista' : 'bajista') + ' (' + colsF + ') con mecha de rechazo en la zona, o con ' + (long ? 'IN' : 'OUT') + ' al cierre.'],
+      ['✅ Entrada', 'Al cierre de esa vela. Nunca en la vela de un dato ni en la primera de la apertura.'],
+      ['🛑 Stop', stop ? cap1(stop) : 'El del análisis.'],
+      ['🔎 Filtro ' + F, fil ? cap1(fil) : 'Si la vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ', salgo aunque no haya tocado el stop.'],
+      ['🎯 Objetivos', tg.map(function (t, i) { return (i + 1) + '.º ' + fmtT(e, t); }).join(' · ') + '.'],
+      ['➕ SL+', slTxt],
+      ['🔁 Reentrada', 'Solo si me saca el SL+: el precio vuelve a ' + zona + ', sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado al otro lado. Una sola vez, con el stop original y los mismos objetivos' + (I ? ', y nunca en la vela de un dato ni en la de apertura.' : '.')],
+      ['❌ Se anula', anula ? cap1(anula) : cierre + '.']
+    ];
+    var sub = I ? 'intradía del ' + e.date.split('-').reverse().slice(0, 2).join('/') : 'swing de la ' + (e.title.match(/semana del [^·]*/i) || [''])[0].trim();
+    var h = '<div class="pd-head"><button type="button" class="pd-back" data-plclose>← Volver al análisis</button><h2>' + x.si.icon + ' ' + esc(x.p.k) + '</h2><p class="pd-sub">' + esc((ASSET_NAMES[e.asset] || e.asset) + ' · ' + sub) + '</p>' +
+      '<div class="pd-chips"><span class="pd-chip">' + esc(favor || 'Contexto sin indicar') + '</span><span class="pd-chip ' + md + '">' + (md === 'estr' ? 'SL+ estructural' : 'SL+ en escalera') + '</span></div></div>';
+    h += '<section><h3>Paso a paso</h3><ul class="ps">' + steps.map(function (q) { return '<li><span class="l">' + q[0] + '</span><span class="v">' + esc(q[1]) + '</span></li>'; }).join('') + '</ul>' + (d0.seq || '') + '</section>';
+    h += '<p class="note pd-ilus"><b>Gráficos ilustrativos.</b> Las velas de estos dibujos son un ejemplo de cómo se ejecuta la operativa. No son una previsión de lo que hará el precio.</p>';
+    var CAP = '<p class="pd-cap">Gráfico ilustrativo: velas de ejemplo, no es una previsión.</p>', L1 = '<li>Gatillo ' + G + ' y entrada al cierre.</li>', n = 1;
+    function sec(t, v, leg) { return '<section><h3>' + (n++) + '. ' + t + '</h3>' + storyChart(e, pl, x.p.k, text, v) + CAP + (leg ? '<ol class="pd-leg">' + L1 + leg + '</ol>' : '') + '</section>'; }
+    h += sec('Así sería la entrada', 'normal');
+    if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', '<li>El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.</li><li>Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.</li>');
+    var pr = I ? ['80', '50'] : ['65', '20'];
+    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', '<li>Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.</li><li>El precio vuelve y salta el SL+: salgo con ganancia.</li><li>Rebota en la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez, con el stop original.</li>');
+    h += sec('Cuándo salgo antes del stop', 'anula', '<li>La vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ': salgo aunque el precio no haya tocado el stop. No hay reentrada.</li>');
+    if (md === 'esc' && !I) { var sl = slPlus(e, pl); if (sl) h += '<section><h3>Precios del SL+</h3><div class="pd-sl">' + sl + '</div></section>'; }
+    return h;
+  }
+  function openPl(i) {
+    var d = PLD[i]; if (!d) return;
+    var el = document.getElementById('plsheet');
+    if (!el) { el = document.createElement('div'); el.id = 'plsheet'; el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); document.body.appendChild(el); }
+    el.innerHTML = '<div class="pd">' + plDetail(d.e, d.x, d.pl, d) + '</div><button type="button" class="pd-fab back" data-plclose aria-label="Volver al análisis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="pd-fab top" data-pltop aria-label="Subir al principio de la operativa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg></button>'; el.hidden = false; el.scrollTop = 0; document.body.style.overflow = 'hidden';
+    try { history.pushState({ pl: 1 }, ''); } catch (er) {}
+  }
+  function closePl(fromPop) { var el = document.getElementById('plsheet'); if (!el || el.hidden) return; el.hidden = true; document.body.style.overflow = ''; if (!fromPop) { try { if (history.state && history.state.pl) history.back(); } catch (er) {} } }
+  window.addEventListener('popstate', function () { closePl(true); });
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest ? ev.target.closest('[data-pld],[data-plclose],[data-pltop]') : null; if (!t) return;
+    if (t.hasAttribute('data-pltop')) { var sh = document.getElementById('plsheet'); if (sh) sh.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    if (t.hasAttribute('data-plclose')) closePl(); else openPl(+t.getAttribute('data-pld'));
+  });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') closePl(); });
+
   function planHtml(e) {
     var key = e.asset + '-' + e.date, rec = [], L = [], S = [], oth = [];
     (e.plan || []).forEach(function (p) {
@@ -32362,7 +32523,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       else (si.long ? L : S).push({ p: p, si: si });
     });
     var h = '<p class="note">📈 largo · 📉 corto · ↩️ pullback · 🎯 retesteo · ⚡ ruptura · 🚨 nivel importante · 🛑 stop · 🎯 objetivos · Todas las horas son de España</p>';
-    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre (largos: cian, verde fosforito, azul claro, verde o verde oscuro; cortos: rojo, amarillo, naranja, rosa oscuro o marrón).</li><li><b>Entrada:</b> al cierre de esa vela H1.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 30&nbsp;% del camino al 1.er objetivo aseguro el 5&nbsp;%; al 50&nbsp;%, el 10&nbsp;%; al 65&nbsp;%, el 20&nbsp;%; al 80&nbsp;%, el 50&nbsp;%, y en el 1.er objetivo, el 75&nbsp;%. Nunca a la entrada. Si un nivel o un FVG superado asegura más, manda el nivel; con una vela H1 de pérdida de fuerza cerca de un nivel, subo al escalón siguiente. El SL+ nunca se baja.</li></ol></div>';
+    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+ según el contexto:</b> si la operativa va a favor de D y H4, estructural (el stop va detrás de cada corrección H1 confirmada); si no, en escalera (al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el objetivo el 75&nbsp;%). Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> si me saca el SL+ y el precio vuelve a la zona con otro gatillo H1, sin cierre H4 en contra, reentro una sola vez con el stop original.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
+    if (e.mode === 'intra' && e.date >= '2026-10-30') h += '<div class="note"><b>Cómo entro y gestiono en intradía</b><ol class="steps"><li><b>Gatillo (M5/M15):</b> en la zona o en el retesteo, vela de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela, nunca en la de un dato ni en la primera de la apertura.</li><li><b>Filtro (M15):</b> si la vela M15 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 50&nbsp;% del camino al 1.er objetivo aseguro el 10&nbsp;% y al 80&nbsp;%, el 50&nbsp;%. En el 1.er objetivo, si va a favor del H1 aseguro el 25&nbsp;% y sigo las correcciones del M5; si no, el 75&nbsp;%. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> si me saca el SL+ y el precio vuelve a la zona con otro gatillo, sin cierre M15 en contra, reentro una sola vez con el stop original.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
     if (rec.length) {
       var tm = (rec[0].k.match(/\((.*?)\)/) || [])[1];
       h += '<div class="recent"><div class="rh">🕒 Análisis reciente' + (tm ? ' · ' + esc(tm) : '') + '</div>' + rec.map(function (p) { return sentList(p.text, false); }).join('') +
@@ -32397,9 +32559,10 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     }
     function col(list, cls, title) {
       return '<div class="lscol ' + cls + '"><div class="lsh">' + title + '</div>' + (list.length ? list.map(function (x) {
-        var ex = '';
-        if (e.mode === 'swing' && e.date >= '2026-10-31') { var pp = (e.plays || []).filter(function (q) { return q.k === x.p.k; })[0]; var tx = pp ? slPlus(e, pp) : ''; if (tx) ex = '<ul class="ps"><li><span class="l">➕ SL+</span><span class="v">' + tx + '</span></li></ul>'; }
-        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span>' + sentList(x.p.text, true) + seqFor(x) + chartFor(x) + ex + '</div>';
+        if ((e.mode === 'swing' && e.date >= '2026-10-31') || (e.mode === 'intra' && e.date >= '2026-10-30')) { var pp = (e.plays || []).filter(function (q) { return q.k === x.p.k; })[0];
+          if (pp) { var ix = PLD.push({ e: e, x: x, pl: pp, seq: seqFor(x) }) - 1;
+            return '<div class="pl pl-card"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span><button type="button" class="pl-open" data-pld="' + ix + '">Ver la operativa completa →</button></div>'; } }
+        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span>' + sentList(x.p.text, true) + seqFor(x) + chartFor(x) + '</div>';
       }).join('') : '<div class="pl none"><p>Sin planteamiento de este lado.</p></div>') + '</div>';
     }
     h += '<div class="lsgrid">' + col(L, 'long', '📈 Largos') + col(S, 'short', '📉 Cortos') + '</div>';
@@ -33248,6 +33411,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     ['XRP', '2026-10-24', 'Largo de rebote en 1,1545', 'No llegó (mínimo ≈1,2030).']
   ];
   var TRST = { tab: 'intra', f: 'all', a: 'all', c: 'all', d: 'all' };
+  var SLP_SW = [["NQ", "Corto de rebote (29.768,75‑30.078)", "Doble objetivo: ≈+665", "Estructural", "≈+665. El rebote del jueves 29 hace un máximo más bajo y el SL+ estructural aguanta hasta el 2.º objetivo.", "eq"], ["NQ", "Largo de ruptura (sobre 29.768,75)", "1.er objetivo: ≈+278", "Escalera", "≈+299. El SL+ la cierra en ≈+27 en el retroceso a ≈29.776 y la reentrada en el retesteo (≈29.800) llega al 1.er objetivo: ≈+272 más.", "up"], ["NQ", "Corto de continuación (bajo 29.145,25)", "Doble objetivo: ≈+580", "Estructural", "≈+580. El rebote a ≈29.060 hace un máximo más bajo y el SL+ aguanta.", "eq"], ["ES", "Largo de ruptura (sobre 7.734,75)", "Aproximado (86 %) y después invalidación: −43 con el Filtro H4", "Escalera", "≈+9. El SL+ al 50 % la cierra en ≈+39 y la reentrada del jueves 29 (≈7.750) sale por el Filtro H4 en ≈−30.", "up"], ["ES", "Corto de rebote (7.707‑7.734,75)", "No activada", "Estructural", "≈−45. Con el gatillo H1 se activa el martes 27 y el Filtro H4 la cierra; en estructural no hay escalón al 30 %.", "dn"], ["ES", "Corto de continuación (bajo 7.638,50)", "1.er objetivo y en curso", "Estructural", "1.er objetivo y en curso, con el SL+ detrás del rebote a 7.612.", "eq"], ["NKD", "Largo de pullback (62.200‑62.270)", "Doble objetivo: ≈+1.865", "Escalera", "≈+1.865: no hay retrocesos que toquen el SL+.", "eq"], ["NKD", "Corto de rebote (64.165‑64.960)", "1.er objetivo y en curso (SL+ en 63.870)", "Escalera", "En curso con el SL+ en ≈62.865: asegura ≈+1.785.", "up"], ["GC", "Corto de pullback (4.075‑4.095,5)", "Doble objetivo: ≈+122", "Estructural", "≈+122. Los rebotes hacen máximos más bajos y el SL+ aguanta.", "eq"], ["GC", "Corto de continuación (bajo 3.962,6)", "Parcial (61 %) y en curso", "Estructural", "En curso, con el SL+ detrás del último rebote.", "eq"], ["SI", "Largo de rebote en 53,285", "1.er objetivo: ≈+1,1", "Escalera", "≈+0,825: el SL+ del 75 % salta en el lateral del 28.", "dn"], ["SI", "Corto de ruptura (bajo 53,075)", "1.er objetivo y en curso (SL+ en 51,2)", "Estructural", "En curso, con el SL+ detrás del último rebote.", "eq"], ["WTI", "Corto en la zona de la directriz (101,5‑104,6)", "Parcial (63 %) y vuelta a la entrada", "Escalera", "≈+0,62: el SL+ al 10 % la cierra antes de volver a 104,99 (el lunes, con lo anotado).", "up"], ["KC", "Largo de pullback (302,75‑298)", "Fallo (invalidación tras ≈+4,9)", "Escalera", "≈+0,85: llega al 52 % y el SL+ al 10 % la cierra.", "up"], ["KC", "Corto de ruptura (bajo 298)", "1.er objetivo: ≈+4", "Estructural", "≈+4 o más: el rebote tras el objetivo hace un máximo más bajo.", "eq"], ["EURUSD", "Corto de ruptura (bajo 1,11780)", "Parcial, cerrado con SL+ en 1,11445", "Estructural", "≈−0,00100: el rebote a ≈1,1189 supera el último máximo y salta el SL+ estructural.", "dn"], ["BTC", "Corto de continuación (bajo 81.015)", "Doble objetivo: ≈+4.100", "Estructural", "≈+4.100: la caída del 30 llega a los dos objetivos sin retroceso.", "eq"], ["XRP", "Largo de rebote en 1,2855", "Fallo (invalidación tras ir al 39 %)", "Escalera", "≈+0,0073: el SL+ al 5 % la cierra.", "up"], ["XRP", "Corto de ruptura (bajo 1,2855)", "Parcial (57 %) y en curso", "Estructural", "En curso: el rebote a ≈1,273 queda por debajo del último máximo.", "eq"], ["CC", "Largo de pullback (5.592‑5.362)", "No activada", "Escalera", "Con el gatillo H1 se activa (≈5.525); máximo ≈25 % del camino y sigue en curso.", "eq"]];
+  var SLP_IN = [["27", "ES", "Corto de rebote (7.712‑7.720)", "≈−10", "≈+5,5", "up"], ["27", "GC", "Corto de ruptura (bajo 4.009)", "≈−11", "≈−5 (Filtro M15)", "up"], ["13", "ES", "Largo de pullback (7.852‑7.846)", "≈−14", "≈+3,5", "up"], ["13", "ES", "Corto de ruptura (bajo 7.845)", "≈−3", "≈+6,75", "up"], ["21", "ES", "Largo de ruptura (sobre 7.786)", "≈−11", "≈+13,7", "up"], ["21", "NQ", "Largo de ruptura (sobre 30.007)", "≈−32", "≈+18", "up"], ["22", "ES", "Corto de ruptura (bajo 7.705)", "≈+15", "≈+3,75", "dn"], ["23", "GC", "Corto de ruptura (bajo 4.016)", "≈+5", "≈+15,7", "up"], ["23", "ES", "Corto de ruptura (bajo 7.676)", "≈−13", "≈+12,6", "up"], ["29", "NQ", "Corto de ruptura (bajo 29.480)", "≈−50", "≈+12", "up"], ["29", "NQ", "Largo de rebote (29.505‑29.530)", "≈−55", "≈+113", "up"], ["29", "GC", "Corto de rebote (4.050‑4.058)", "≈+26", "≈+3,75", "dn"], ["29", "GC", "Corto de ruptura (bajo 4.030)", "≈−10", "≈+3,5", "up"], ["29", "GC", "Largo de rebote (4.017‑4.024)", "≈−12", "≈+15,75", "up"], ["30", "ES", "Largo de rebote (7.640‑7.646)", "≈−20", "≈+1,5", "up"], ["30", "NQ", "Largo de rebote (28.730‑28.760)", "≈−85", "≈+48,75", "up"]];
   function renderTradesSet(TR0, NA0, kind) {
     var TRa = TR0.filter(function (t) { return TRST.a === 'all' || t.asset === TRST.a; }), NAa = NA0.filter(function (n) { return TRST.a === 'all' || n[0] === TRST.a; });
     function dlabel(d) { var p = d.split('-'), dt = new Date(+p[0], +p[1] - 1, +p[2]); return DIAS[dt.getDay()] + ' ' + p[2].replace(/^0/, '') + ' de ' + MESES[+p[1] - 1]; }
@@ -33303,6 +33468,37 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     if (fa && PD.length) html += '<details class="fold" open><summary><span>En curso, todavía no cuentan</span><em>' + PD.length + '</em></summary><div class="elist">' + PD.map(tradeHtml).join('') + '</div></details>';
     if (fa && NA.length) html += '<details class="fold"><summary><span>No se activaron o no se pueden comprobar (no cuentan en los porcentajes)</span><em>' + NA.length + '</em></summary><div class="elist">' +
       NA.map(function (n) { return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[n[0]] || n[0]) + '</span><span class="tg2">' + esc(dlabel(n[1])) + '</span></div><h3>' + esc(n[2]) + '</h3><p>' + esc(n[3]) + '</p></div>'; }).join('') + '</div></details>';
+    function tagEf(x) { return '<span class="eftag ' + x + '">' + (x === 'up' ? 'Mejora' : x === 'dn' ? 'Empeora' : 'Igual') + '</span>'; }
+    if (kind === 'swing' && (TRST.d === 'all' || TRST.d === '2026-10-26')) {
+      var tr = SLP_SW.filter(function (r) { return TRST.a === 'all' || r[0] === TRST.a; });
+      if (tr.length) html += '<section><h2>Prueba de la regla nueva · semana del 26 oct</h2><div class="paras"><p>Repaso con tus capturas H1 del 31 de octubre de cómo habrían salido las operativas del swing del 24 con la regla nueva. No cambia el recuento de arriba.</p><ol class="steps">' +
+        '<li><b>Entrada:</b> al cierre de la vela H1 de gatillo (giro o fuerza a favor con mecha de rechazo en la zona).</li>' +
+        '<li><b>Filtro H4:</b> salida si el H4 cierra al otro lado del nivel.</li>' +
+        '<li><b>SL+ híbrido:</b> a favor de D y H4, estructural (detrás de cada corrección H1 confirmada); en contra, escalera (30/50/65/80&nbsp;% → 5/10/20/50&nbsp;%, y 75&nbsp;% en el objetivo).</li>' +
+        '<li><b>Reentrada:</b> una sola vez si salta el SL+ y vuelve a la zona con otro gatillo H1.</li>' +
+        '<li><b>Precisión:</b> precios medidos a ojo sobre el H1, con «≈». NG no se valora por el cambio de contrato del 28.</li></ol></div>' +
+        '<div class="tablewrap"><table class="dt stack"><thead><tr><th>Activo</th><th>Operativa</th><th>Como se anotó</th><th>SL+</th><th>Con la regla nueva</th><th></th></tr></thead><tbody>' +
+        tr.map(function (r) { return '<tr><td>' + esc(ASSET_NAMES[r[0]] || r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td>' + esc(r[4]) + '</td><td>' + tagEf(r[5]) + '</td></tr>'; }).join('') +
+        '</tbody></table></div>' +
+        (TRST.a === 'all' ? '<div class="paras"><ol class="steps"><li><b>NQ y oro:</b> las operativas a favor de la tendencia cobran lo mismo que lo anotado o más (en el NQ, ≈+1.544 frente a ≈+1.523), porque el SL+ estructural aguanta las correcciones.</li><li><b>Fallos:</b> las cuatro pérdidas de operativas en contra (ES largo, café largo, XRP largo y WTI corto) acaban en pequeña ganancia. A cambio salen dos fallos pequeños a favor de la tendencia: ES corto de rebote (≈−45) y EURUSD (≈−0,00100).</li><li><b>Reentrada:</b> recupera el largo de ruptura del NQ (≈+299) y en el ES resta poco (neto ≈+9).</li><li><b>Conclusión:</b> el híbrido gana más que la escalera para todo y que la regla anterior. Es una semana y medida a ojo: se seguirá midiendo aquí.</li></ol></div>' : '') +
+        '</section>';
+    }
+    if (kind !== 'swing') {
+      var ti = SLP_IN.filter(function (r) { return TRST.a === 'all' || r[1] === TRST.a; });
+      html += '<section><h2>Prueba del SL+ intradía · octubre</h2><div class="paras"><p>Repaso de las operativas intradía del 12 al 30 de octubre con el SL+ de la versión 2. No cambia el recuento de arriba: el recuento mide hasta dónde llegó el precio y aquí se mide lo que se cobra.</p><ol class="steps">' +
+        '<li><b>Antes del 1.er objetivo:</b> al 50&nbsp;% del camino aseguro el 10&nbsp;% y al 80&nbsp;%, el 50&nbsp;%.</li>' +
+        '<li><b>En el 1.er objetivo:</b> a favor del H1, aseguro el 25&nbsp;% y sigo las correcciones del M5; en contra, el 75&nbsp;%.</li>' +
+        '<li><b>Filtro M15 y reentrada:</b> como en swing, con gatillo M5/M15.</li>' +
+        '<li><b>Precisión:</b> día 30 con el M5, el resto con el M15 del análisis del día siguiente o con lo anotado; todo a ojo y con «≈». Las 7 tesis sin números no cuentan.</li></ol></div>' +
+        (TRST.a === 'all' ? '<div class="tablewrap"><table class="dt"><thead><tr><th>Regla</th><th>NQ</th><th>ES</th><th>GC</th><th>Pérdidas</th></tr></thead><tbody>' +
+          '<tr><td>Salgo todo en el 1.er objetivo</td><td>≈+1.765</td><td>≈+222</td><td>≈+208</td><td>5</td></tr>' +
+          '<tr><td>Mantengo hasta el 2.º con el stop original</td><td>≈+2.420</td><td>≈+154</td><td>≈+274</td><td>11</td></tr>' +
+          '<tr><td><b>SL+ versión 2</b></td><td><b>≈+2.955</b></td><td><b>≈+288</b></td><td><b>≈+305</b></td><td><b>3</b></td></tr></tbody></table></div>' : '') +
+        (ti.length ? '<h3 class="sub">Operativas en las que cambia el resultado</h3><div class="tablewrap"><table class="dt stack"><thead><tr><th>Día</th><th>Activo</th><th>Operativa</th><th>Manteniendo hasta el 2.º</th><th>Con SL+</th><th></th></tr></thead><tbody>' +
+          ti.map(function (r) { return '<tr><td>' + r[0] + ' oct</td><td>' + esc(ASSET_NAMES[r[1]] || r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td>' + esc(r[4]) + '</td><td>' + tagEf(r[5]) + '</td></tr>'; }).join('') + '</tbody></table></div>' : '') +
+        (TRST.a === 'all' ? '<div class="paras"><p><b>Conclusión:</b> con el SL+ se gana más que saliendo en el 1.er objetivo y que manteniendo sin SL+, porque las operativas que tocan el objetivo o se acercan y luego se giran dejan de acabar en el stop. Lo anotado (salir siempre en el mejor objetivo tocado) solo se sabe a posteriori.</p></div>' : '') +
+        '</section>';
+    }
     html += '<section><h2>Cómo lo mido</h2><div class="paras"><ol class="steps">' +
       '<li><b>¿Se activó?</b> Si el precio no llegó a la zona o no hubo gatillo comprobable, va a «No se activaron» y no cuenta ni como acierto ni como fallo.</li>' +
       '<li><b>¿Qué llegó primero?</b> Miro si el precio fue antes hacia el primer objetivo o hacia el stop (o la invalidación, si el análisis no define stop). Cuenta lo que pase primero.</li>' +
@@ -33473,6 +33669,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     document.getElementById('infoeyebrow').textContent = pg === 'herramientas' ? 'Utilidades' : 'Calendario';
     document.getElementById('infotitle').textContent = pg === 'herramientas' ? (TOOLST.tab === 'ops' ? 'Operativas realizadas' : TOOLST.tab === 'act' ? 'Activos' : 'Biblioteca') : 'Datos y resultados';
     document.getElementById('infobody').innerHTML = pg === 'herramientas' ? renderTools() : renderCalendar();
+    setTimeout(navTrack, 0);
   }
 
   /* Datos reales automáticos: un script de GitHub Actions escribe actuales.json y aquí se aplican sobre el calendario.
@@ -33506,6 +33703,11 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
   var fab = document.createElement('button');
   fab.type = 'button'; fab.className = 'fabmenu'; fab.setAttribute('aria-label', 'Subir al principio de la página'); fab.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }); fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg>';
   document.body.appendChild(fab);
+  var backFab = document.createElement('button');
+  backFab.type = 'button'; backFab.className = 'fabback'; backFab.setAttribute('aria-label', 'Volver atrás'); backFab.addEventListener('click', navBack);
+  backFab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+  document.body.appendChild(backFab);
+  function backUpdate() { backFab.classList.toggle('show', !state.home); }
   function fabUpdate() { var y = window.pageYOffset || document.documentElement.scrollTop || 0; fab.classList.toggle('show', y > 400 && !state.home); }
   window.addEventListener('scroll', fabUpdate, { passive: true });
 
