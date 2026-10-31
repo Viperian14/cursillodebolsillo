@@ -27566,11 +27566,11 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1545,1.01], "BTC-2026-10
       goals: [['7.645', 'hit'], ['7.638,50', 'hit']],
       pasa: 'Antes de la apertura solo rozó 7.665. La ruptura llegó con la apertura (14:30, marca OUT, mínimo ≈7.650), pero en la apertura no basta: la confirmó el rebote de las 15:00‑15:05, que subió a ≈7.666‑7.668 y lo rechazaron en la zona de entrada. Después, 7.645 hacia las 15:15 y 7.638,50 hacia las 15:20 (mínimo ≈7.629).',
       res: 'Ganadora: de ≈7.666 a 7.638,50, ≈27,5 puntos. El stop (7.676) quedó lejos.' },
-    { asset: 'ES', date: '2026-10-30', mode: 'intra', dir: 'Largo', setup: 'Largo de rebote (7.640‑7.646)', out: 'win', match: 'Aproximada',
+    { asset: 'ES', date: '2026-10-30', mode: 'intra', dir: 'Largo', setup: 'Largo de rebote (7.640‑7.646)', out: 'win', match: 'Parcial',
       plan: 'Retroceso a 7.640‑7.646 (línea 7.638,50 y FVG de H1/M15) con vela verde en M5/M15 y volumen comprador. Stop bajo 7.630. Objetivos 7.665 y 7.680. Contra H1 y H4: tamaño pequeño.',
-      goals: [['7.665', 'near'], ['7.680', 'miss']],
-      pasa: 'El primer toque (15:15‑15:25) fue con velas bajistas y una mecha a ≈7.629, pegada al stop: ahí no había gatillo. El gatillo llegó a las 15:30, con el triángulo verde y velas verdes; el rebote subió a ≈7.658 hacia las 15:50 y no llegó a 7.665. Hacia las 17:00 cayó a ≈7.625, ya bajo el stop.',
-      res: 'Ganadora aproximada: de ≈7.640 a ≈7.658, ≈18 puntos; el primer objetivo se quedó a ≈7 puntos (recorrió ≈70 % del camino). El stop saltó después.' },
+      goals: [['7.650 (entrada activada)', 'hit'], ['7.665', 'miss'], ['7.680', 'miss']],
+      pasa: 'El primer toque (15:15‑15:25) fue con velas bajistas y una mecha a ≈7.629, pegada al stop: ahí no había gatillo. El triángulo verde salió a las 15:30 y la vela cian de las 15:35 volvió a entrar en la zona; al cerrar (15:40, ≈7.650) se activa. El rebote llegó a ≈7.658 hacia las 15:50 y no tocó 7.665. Hacia las 17:00 cayó a ≈7.625, bajo el stop.',
+      res: 'Acierto parcial: activada al cierre de la vela de gatillo (≈7.650), recorrió ≈8 puntos, algo más de la mitad del camino a 7.665. El stop saltó después.' },
     { asset: 'NQ', date: '2026-10-30', mode: 'intra', dir: 'Corto', setup: 'Corto de rebote (28.990‑29.060)', out: 'win', match: 'Exacta', doble: true,
       plan: 'Rechazo en 28.990‑29.060 con vela naranja o rosa oscuro en M5/M15 y volumen vendedor. Stop sobre 29.125. Objetivos 28.920 y 28.830.',
       goals: [['28.920', 'hit'], ['28.830', 'hit']],
@@ -27584,8 +27584,8 @@ var KEYLV = { "XRP-2026-10-24": [1.5385,1.4375,1.2855,1.1545,1.01], "BTC-2026-10
     { asset: 'NQ', date: '2026-10-30', mode: 'intra', dir: 'Largo', setup: 'Largo de rebote (28.730‑28.760)', out: 'win', match: 'Exacta',
       plan: 'Retroceso a 28.730‑28.760 (línea 28.729,75 y FVG de H4) con vela verde en M5/M15 y volumen comprador. Stop bajo 28.680. Objetivos 28.830 y 28.920. Contra M15, H1 y H4: tamaño pequeño.',
       goals: [['28.830', 'hit'], ['28.920', 'miss']],
-      pasa: 'Antes de la apertura el precio rozó la zona con velas bajistas, sin gatillo. La vela de la apertura (14:30) bajó a ≈28.672 y no cuenta. El rebote llegó a las 14:40, con una vela verde grande que cruzó la zona, y a las 15:00 tocó ≈28.838. A las 15:30 cayó a ≈28.625.',
-      res: 'Ganadora: solo el primer objetivo, de ≈28.750 a 28.830, ≈80 puntos. El segundo se quedó lejos (máximo ≈28.855).' }
+      pasa: 'Antes de la apertura el precio rozó la zona con velas bajistas, sin gatillo. La vela de la apertura (14:30) bajó a ≈28.672 y no cuenta. La vela verde grande del rebote cerró a las 14:45 en ≈28.765 (activación) y a las 15:00 el precio tocó ≈28.838. A las 15:30 cayó a ≈28.625.',
+      res: 'Ganadora: solo el primer objetivo, de ≈28.765 a 28.830, ≈65 puntos. El segundo se quedó lejos (máximo ≈28.855).' }
   ];
   var NOACT = [
     ['GC', '2026-10-12', 'Largo de rebote (4.197‑4.193)', 'El precio atravesó la zona sin rechazo alcista y siguió cayendo.'],
