@@ -173,6 +173,10 @@ td.cm { min-width: 200px; }
 svg.story { width: 100%; height: auto; display: block; margin: 8px 0 2px; }
 svg.story text.mb, svg.story text.ms { font-size: 15px; }
 .paras ol.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
+.note ol.steps, .ps .v ol.steps { margin: 6px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 3px; }
+.ps .v .mut { color: var(--muted); }
+.ps .v .slt { display: flex; flex-direction: column; gap: 2px; margin: 6px 0; padding-left: 10px; border-left: 2px solid var(--line); }
+.ps .v .slt .slr { display: block; }
 .paras ol.steps ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 
 .dt td { min-width: 130px; }
@@ -773,19 +777,19 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Retesteo de 28.240,25‑28.400 (mínimo semanal y Genial semanal) con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 28.090. Objetivos 28.729,75 y 29.145,25. Va a favor del semanal y contra D y H4. Tamaño reducido. Se anula con cierre H4 bajo 28.240,25."
+        "text": "Retesteo de 28.240,25‑28.400 (mínimo semanal y Genial semanal) con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 28.240,25, salgo aunque no haya tocado el stop. Stop bajo 28.090. Objetivos 28.729,75 y 29.145,25. Va a favor del semanal y contra D y H4. Tamaño reducido. Se anula con cierre H4 bajo 28.240,25."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 29.145,25 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 28.729,75. Objetivos 29.505,50 y 29.768,75. Va a favor del semanal; necesita que el diario gire. Se anula con cierre H4 bajo 28.729,75."
+        "text": "Cierre H4 sobre 29.145,25 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 29.145,25, salgo aunque no haya tocado el stop. Stop bajo 28.729,75. Objetivos 29.505,50 y 29.768,75. Va a favor del semanal; necesita que el diario gire. Se anula con cierre H4 bajo 28.729,75."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 28.729,75‑29.145,25 con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 29.505,50. Objetivos 28.240,25 y 27.831. Va a favor de D, H4 y H1. Se anula con cierre H4 sobre 29.145,25."
+        "text": "Rebote a 28.729,75‑29.145,25 con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 29.145,25, salgo aunque no haya tocado el stop. Stop sobre 29.505,50. Objetivos 28.240,25 y 27.831. Va a favor de D, H4 y H1. Se anula con cierre H4 sobre 29.145,25."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 28.232,75 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 28.729,75. Objetivos 27.831 y 27.206. Va a favor de D y H4 y rompe el soporte semanal. Se anula con cierre H4 de nuevo sobre 28.729,75."
+        "text": "Cierre H4 bajo 28.232,75 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 28.232,75, salgo aunque no haya tocado el stop. Stop sobre 28.729,75. Objetivos 27.831 y 27.206. Va a favor de D y H4 y rompe el soporte semanal. Se anula con cierre H4 de nuevo sobre 28.729,75."
       },
       {
         "k": "Conflicto de marcos",
@@ -1288,19 +1292,19 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Bajada a 7.500‑7.542,25 (FVG diario, cinta azul diaria y línea roja) con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 7.480. Objetivos 7.631 y 7.734,75. Va a favor del semanal y contra D y H4. Tamaño reducido. Se anula con cierre H4 bajo 7.500."
+        "text": "Bajada a 7.500‑7.542,25 (FVG diario, cinta azul diaria y línea roja) con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 7.500, salgo aunque no haya tocado el stop. Stop bajo 7.480. Objetivos 7.631 y 7.734,75. Va a favor del semanal y contra D y H4. Tamaño reducido. Se anula con cierre H4 bajo 7.500."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 7.734,75 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 7.680. Objetivos 7.832,75 y 7.901,75. Se anula con cierre H4 bajo 7.680."
+        "text": "Cierre H4 sobre 7.734,75 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 7.734,75, salgo aunque no haya tocado el stop. Stop bajo 7.680. Objetivos 7.832,75 y 7.901,75. Se anula con cierre H4 bajo 7.680."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 7.631‑7.680 (línea nueva y Genial H1) con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 7.740. Objetivos 7.542,25 y 7.425,25. Va a favor de D, H4 y H1. Se anula con cierre H4 sobre 7.734,75."
+        "text": "Rebote a 7.631‑7.680 (línea nueva y Genial H1) con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 7.680, salgo aunque no haya tocado el stop. Stop sobre 7.740. Objetivos 7.542,25 y 7.425,25. Va a favor de D, H4 y H1. Se anula con cierre H4 sobre 7.734,75."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 7.542,25 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 7.631. Objetivos 7.425,25 y 7.333,50. Se anula con cierre H4 de nuevo sobre 7.631."
+        "text": "Cierre H4 bajo 7.542,25 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 7.542,25, salgo aunque no haya tocado el stop. Stop sobre 7.631. Objetivos 7.425,25 y 7.333,50. Se anula con cierre H4 de nuevo sobre 7.631."
       },
       {
         "k": "Cuándo",
@@ -1772,15 +1776,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Rechazo en 61.890‑62.270 (mínimo y línea roja, sobre la directriz) con giro en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 61.500. Objetivos 63.870 y 64.960. Va contra H4 y H1. Tamaño reducido. Se anula con cierre H4 bajo 61.890."
+        "text": "Rechazo en 61.890‑62.270 (mínimo y línea roja, sobre la directriz) con giro en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 61.890, salgo aunque no haya tocado el stop. Stop bajo 61.500. Objetivos 63.870 y 64.960. Va contra H4 y H1. Tamaño reducido. Se anula con cierre H4 bajo 61.890."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a tu zona 64.165‑64.960 con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 65.600. Objetivos 62.270 y 60.220. Va a favor del rechazo semanal. Se anula con cierre H4 sobre 64.960. Si el rebote se queda en 63.870, ahí también vigilo el rechazo."
+        "text": "Rebote a tu zona 64.165‑64.960 con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 64.960, salgo aunque no haya tocado el stop. Stop sobre 65.600. Objetivos 62.270 y 60.220. Va a favor del rechazo semanal. Se anula con cierre H4 sobre 64.960. Si el rebote se queda en 63.870, ahí también vigilo el rechazo."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 61.890 (y bajo 62.270) con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 62.700. Objetivos 60.220 y 58.300. Se anula con cierre H4 de nuevo sobre 62.700."
+        "text": "Cierre H4 bajo 61.890 (y bajo 62.270) con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 61.890, salgo aunque no haya tocado el stop. Stop sobre 62.700. Objetivos 60.220 y 58.300. Se anula con cierre H4 de nuevo sobre 62.700."
       },
       {
         "k": "Cuándo",
@@ -2218,15 +2222,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Bajada a 3.820‑3.835,9 con rechazo, giro en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 3.790. Objetivos 3.930 y 3.962,6. Va contra W, D y H4: tamaño reducido y salida rápida. Se anula con cierre H4 bajo 3.820."
+        "text": "Bajada a 3.820‑3.835,9 con rechazo, giro en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 3.820, salgo aunque no haya tocado el stop. Stop bajo 3.790. Objetivos 3.930 y 3.962,6. Va contra W, D y H4: tamaño reducido y salida rápida. Se anula con cierre H4 bajo 3.820."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 3.962,6 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 3.920. Objetivos 4.030 y 4.095,5. Se anula con cierre H4 de nuevo bajo 3.930."
+        "text": "Cierre H4 sobre 3.962,6 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 3.962,60, salgo aunque no haya tocado el stop. Stop bajo 3.920. Objetivos 4.030 y 4.095,5. Se anula con cierre H4 de nuevo bajo 3.930."
       },
       {
         "k": "Corto 1 · pullback",
-        "text": "Rebote a 3.930‑3.962,6 (FVG de H1 y H4 y línea rota) con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 3.995. Objetivos 3.835,9 y 3.716,5. Va a favor de W, D y H4. Se anula con cierre H4 sobre 3.962,6."
+        "text": "Rebote a 3.930‑3.962,6 (FVG de H1 y H4 y línea rota) con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 3.962,60, salgo aunque no haya tocado el stop. Stop sobre 3.995. Objetivos 3.835,9 y 3.716,5. Va a favor de W, D y H4. Se anula con cierre H4 sobre 3.962,6."
       },
       {
         "k": "Cuándo",
@@ -2660,15 +2664,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Bajada a 48,000‑48,400 (línea 48,185) con rechazo, giro en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 47,500. Objetivos 50,000 y 51,000. Va contra W, D y H4: tamaño reducido. Se anula con cierre H4 bajo 48,000."
+        "text": "Bajada a 48,000‑48,400 (línea 48,185) con rechazo, giro en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 48,000, salgo aunque no haya tocado el stop. Stop bajo 47,500. Objetivos 50,000 y 51,000. Va contra W, D y H4: tamaño reducido. Se anula con cierre H4 bajo 48,000."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 50,000‑51,000 con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 51,600. Objetivos 48,185 y 45,060. Va a favor de todos los marcos. Se anula con cierre H4 sobre 51,000."
+        "text": "Rebote a 50,000‑51,000 con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 51,000, salgo aunque no haya tocado el stop. Stop sobre 51,600. Objetivos 48,185 y 45,060. Va a favor de todos los marcos. Se anula con cierre H4 sobre 51,000."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 48,185 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 49,000. Objetivos 45,060. Se anula con cierre H4 de nuevo sobre 48,895."
+        "text": "Cierre H4 bajo 48,185 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 48,185, salgo aunque no haya tocado el stop. Stop sobre 49,000. Objetivos 45,060. Se anula con cierre H4 de nuevo sobre 48,895."
       },
       {
         "k": "Cuándo",
@@ -3081,15 +3085,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · ruptura",
-        "text": "Cierre H4 sobre 104,99 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 103,50. Objetivos 106,86 y 111,19. Va a favor de W y D. Se anula con cierre H4 bajo 103,50."
+        "text": "Cierre H4 sobre 104,99 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 104,99, salgo aunque no haya tocado el stop. Stop bajo 103,50. Objetivos 106,86 y 111,19. Va a favor de W y D. Se anula con cierre H4 bajo 103,50."
       },
       {
         "k": "Largo 2 · pullback",
-        "text": "Bajada a 102,20‑102,60 (102,38 y Genial H4) con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 101,40. Objetivos 104,99 y 106,86. Se anula con cierre H4 bajo 101,40."
+        "text": "Bajada a 102,20‑102,60 (102,38 y Genial H4) con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 102,20, salgo aunque no haya tocado el stop. Stop bajo 101,40. Objetivos 104,99 y 106,86. Se anula con cierre H4 bajo 101,40."
       },
       {
         "k": "Corto 1 · rechazo en la directriz",
-        "text": "Rechazo en 104,00‑104,99 con OUT o vela de rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 105,60. Objetivos 102,38 y 101,0. Va contra D y W: tamaño reducido. Se anula con cierre H4 sobre 104,99."
+        "text": "Rechazo en 104,00‑104,99 con OUT o vela de rechazo en H1. Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 104,99, salgo aunque no haya tocado el stop. Stop sobre 105,60. Objetivos 102,38 y 101,0. Va contra D y W: tamaño reducido. Se anula con cierre H4 sobre 104,99."
       },
       {
         "k": "Cuándo",
@@ -3505,15 +3509,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · pullback",
-        "text": "Bajada a 2,784‑2,830 con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 2,740. Objetivos 2,922 y 3,127. Va a favor de W. Se anula con cierre H4 bajo 2,784."
+        "text": "Bajada a 2,784‑2,830 con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 2,784, salgo aunque no haya tocado el stop. Stop bajo 2,740. Objetivos 2,922 y 3,127. Va a favor de W. Se anula con cierre H4 bajo 2,784."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 2,922 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 2,860. Objetivos 3,127 y 3,305. Se anula con cierre H4 bajo 2,860."
+        "text": "Cierre H4 sobre 2,922 y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 2,922, salgo aunque no haya tocado el stop. Stop bajo 2,860. Objetivos 3,127 y 3,305. Se anula con cierre H4 bajo 2,860."
       },
       {
         "k": "Corto 1 · ruptura",
-        "text": "Cierre H4 bajo 2,784 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 2,860. Objetivos 2,628 y 2,492. Va contra W y la estacionalidad: tamaño reducido. Se anula con cierre H4 sobre 2,860."
+        "text": "Cierre H4 bajo 2,784 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 2,784, salgo aunque no haya tocado el stop. Stop sobre 2,860. Objetivos 2,628 y 2,492. Va contra W y la estacionalidad: tamaño reducido. Se anula con cierre H4 sobre 2,860."
       },
       {
         "k": "Cuándo",
@@ -3924,15 +3928,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Rechazo en 280,80‑285,45 con giro en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 278,00. Objetivos 296,00 y 308,95. Va a favor del diario y contra H4. Tamaño reducido. Se anula con cierre H4 bajo 280,80."
+        "text": "Rechazo en 280,80‑285,45 con giro en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 280,80, salgo aunque no haya tocado el stop. Stop bajo 278,00. Objetivos 296,00 y 308,95. Va a favor del diario y contra H4. Tamaño reducido. Se anula con cierre H4 bajo 280,80."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 296‑300 (FVG y cinta azul de H4) con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 303,00. Objetivos 285,45 y 280,80. Va a favor de H4 y W. Se anula con cierre H4 sobre 300."
+        "text": "Rebote a 296‑300 (FVG y cinta azul de H4) con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 300,00, salgo aunque no haya tocado el stop. Stop sobre 303,00. Objetivos 285,45 y 280,80. Va a favor de H4 y W. Se anula con cierre H4 sobre 300."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 280,80 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 286,00. Objetivos 269,85. Se anula con cierre H4 de nuevo sobre 285,45."
+        "text": "Cierre H4 bajo 280,80 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 280,80, salgo aunque no haya tocado el stop. Stop sobre 286,00. Objetivos 269,85. Se anula con cierre H4 de nuevo sobre 285,45."
       },
       {
         "k": "Cuándo",
@@ -4359,15 +4363,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · pullback",
-        "text": "Tu zona, parte baja: 5.362‑5.420 con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 5.300. Objetivos 5.622 y 5.960. Va a favor de D (cinta azul diaria). Se anula con cierre H4 bajo 5.362."
+        "text": "Tu zona, parte baja: 5.362‑5.420 con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 5.362, salgo aunque no haya tocado el stop. Stop bajo 5.300. Objetivos 5.622 y 5.960. Va a favor de D (cinta azul diaria). Se anula con cierre H4 bajo 5.362."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 5.622 (máximo semanal) y retesteo con color de fuerza alcista. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 5.540. Objetivos 5.840 y 5.960. Se anula con cierre H4 bajo 5.540."
+        "text": "Cierre H4 sobre 5.622 (máximo semanal) y retesteo con color de fuerza alcista. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 5.622, salgo aunque no haya tocado el stop. Stop bajo 5.540. Objetivos 5.840 y 5.960. Se anula con cierre H4 bajo 5.540."
       },
       {
         "k": "Corto 1 · ruptura",
-        "text": "Cierre H4 bajo 5.362 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 5.460. Objetivos 5.200 y 4.918. Va contra tu sesgo alcista: tamaño reducido. Se anula con cierre H4 de nuevo sobre 5.460."
+        "text": "Cierre H4 bajo 5.362 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 5.362, salgo aunque no haya tocado el stop. Stop sobre 5.460. Objetivos 5.200 y 4.918. Va contra tu sesgo alcista: tamaño reducido. Se anula con cierre H4 de nuevo sobre 5.460."
       },
       {
         "k": "Cuándo",
@@ -4763,15 +4767,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en soporte",
-        "text": "Bajada a 1,11240‑1,11400 con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 1,11100. Objetivos 1,12495 y 1,13125. Va a favor del rechazo semanal. Se anula con cierre H4 bajo 1,11240."
+        "text": "Bajada a 1,11240‑1,11400 con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 1,11240, salgo aunque no haya tocado el stop. Stop bajo 1,11100. Objetivos 1,12495 y 1,13125. Va a favor del rechazo semanal. Se anula con cierre H4 bajo 1,11240."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 1,12495 y retesteo. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 1,12000. Objetivos 1,13125 y 1,13715. Se anula con cierre H4 bajo 1,12000."
+        "text": "Cierre H4 sobre 1,12495 y retesteo. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 1,12495, salgo aunque no haya tocado el stop. Stop bajo 1,12000. Objetivos 1,13125 y 1,13715. Se anula con cierre H4 bajo 1,12000."
       },
       {
         "k": "Corto 1 · ruptura",
-        "text": "Cierre H4 bajo 1,11240 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 1,11800. Objetivos 1,10745 y 1,09895. Va a favor del diario. Se anula con cierre H4 sobre 1,11800."
+        "text": "Cierre H4 bajo 1,11240 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 1,11240, salgo aunque no haya tocado el stop. Stop sobre 1,11800. Objetivos 1,10745 y 1,09895. Va a favor del diario. Se anula con cierre H4 sobre 1,11800."
       },
       {
         "k": "Cuándo",
@@ -5195,15 +5199,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en zona de corrección",
-        "text": "Tu zona 76.300‑76.900 con rechazo en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 75.800. Objetivos 78.900 y 81.015. Va a favor del semanal y contra D y H4. Se anula con cierre H4 bajo 76.300."
+        "text": "Tu zona 76.300‑76.900 con rechazo en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 76.300, salgo aunque no haya tocado el stop. Stop bajo 75.800. Objetivos 78.900 y 81.015. Va a favor del semanal y contra D y H4. Se anula con cierre H4 bajo 76.300."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 78.900‑80.000 con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 81.100. Objetivos 76.300 y 74.335. Va a favor de D y H4. Se anula con cierre H4 sobre 81.015."
+        "text": "Rebote a 78.900‑80.000 con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 80.000, salgo aunque no haya tocado el stop. Stop sobre 81.100. Objetivos 76.300 y 74.335. Va a favor de D y H4. Se anula con cierre H4 sobre 81.015."
       },
       {
         "k": "Corto 2 · ruptura",
-        "text": "Cierre H4 bajo 76.300 con retesteo por debajo. Gatillo: en el retesteo, cierre de una vela H1 rosa oscuro o marrón. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 77.300. Objetivos 74.335 y 69.440. Se anula con cierre H4 de nuevo sobre 77.300."
+        "text": "Cierre H4 bajo 76.300 con retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 76.300, salgo aunque no haya tocado el stop. Stop sobre 77.300. Objetivos 74.335 y 69.440. Se anula con cierre H4 de nuevo sobre 77.300."
       },
       {
         "k": "Cuándo",
@@ -5600,15 +5604,15 @@ var ENTRIES = [
       },
       {
         "k": "Largo 1 · rebote en 1,1545",
-        "text": "Bajada a 1,1545‑1,1700 (FVG diario) con rechazo, giro en H1 y confirmación en H4. Gatillo: cierre de una vela H1 verde o verde oscuro en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 1,1300. Objetivos 1,2030 y 1,2855. Va a favor del semanal. Se anula con cierre H4 bajo 1,1545."
+        "text": "Bajada a 1,1545‑1,1700 (FVG diario) con rechazo, giro en H1. Gatillo: vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 1,1545, salgo aunque no haya tocado el stop. Stop bajo 1,1300. Objetivos 1,2030 y 1,2855. Va a favor del semanal. Se anula con cierre H4 bajo 1,1545."
       },
       {
         "k": "Largo 2 · ruptura",
-        "text": "Cierre H4 sobre 1,2855 y retesteo. Gatillo: en el retesteo, cierre de una vela H1 verde o verde oscuro. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra verde o verde oscuro. Stop bajo 1,2500. Objetivos 1,3200 y 1,4375. Se anula con cierre H4 bajo 1,2500."
+        "text": "Cierre H4 sobre 1,2855 y retesteo. Gatillo: en el retesteo, vela H1 de giro o de fuerza alcista (cian, verde fosforito, azul claro, verde o verde oscuro) con mecha de rechazo en la zona, o con IN al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra bajo 1,2855, salgo aunque no haya tocado el stop. Stop bajo 1,2500. Objetivos 1,3200 y 1,4375. Se anula con cierre H4 bajo 1,2500."
       },
       {
         "k": "Corto 1 · rebote",
-        "text": "Rebote a 1,2750‑1,2855 con rechazo en H1 (OUT o vela de rechazo) y confirmación en H4. Gatillo: cierre de una vela H1 rosa oscuro o marrón en la zona. Entro al cierre de la vela H4 en la que está ese H1, solo si también cierra rosa oscuro o marrón. Stop sobre 1,3000. Objetivos 1,2030 y 1,1545. Va a favor de D y H4. Se anula con cierre H4 sobre 1,2855."
+        "text": "Rebote a 1,2750‑1,2855 con rechazo en H1 (OUT o vela de rechazo). Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 1,2855, salgo aunque no haya tocado el stop. Stop sobre 1,3000. Objetivos 1,2030 y 1,1545. Va a favor de D y H4. Se anula con cierre H4 sobre 1,2855."
       },
       {
         "k": "Cuándo",
@@ -32125,6 +32129,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
         else if (/^Va (a favor|contra|en contra)/.test(t)) { l = 'Contexto'; }
         else if (/^(Tamaño|Reduzco|Resistencia fuerte|Salida)/.test(t)) { l = 'Gestión'; }
         else if (/^(Se anula|Si )/.test(t)) { l = 'Se anula'; }
+        else if (/^Gatillo:/.test(t)) { l = '⏱️ Gatillo H1'; v = t.replace(/^Gatillo:\s*/, ''); }
+        else if (/^Filtro H4:/.test(t)) { l = '🔎 Filtro H4'; v = t.replace(/^Filtro H4:\s*/, ''); }
         else if (i === 0) { l = 'Entrada'; }
       }
       return l ? '<li><span class="l">' + l + '</span><span class="v">' + esc(v) + '</span></li>' : '<li class="n"><span class="v">' + esc(v) + '</span></li>';
@@ -32287,7 +32293,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     if (now != null) { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + nowL }); }
     C.forEach(function (c, i) {
       var up = c.c >= c.o, isT = i === ti;
-      var col = isT ? (long ? '#78b946' : '#d23c82') : (up ? 'var(--up)' : 'var(--down)');
+      var col = isT ? (rup ? (long ? '#78b946' : '#d23c82') : (long ? '#00ffff' : '#fffa00')) : (up ? 'var(--up)' : 'var(--down)');
       g += '<line x1="' + cx(i) + '" x2="' + cx(i) + '" y1="' + y(c.h) + '" y2="' + y(c.l) + '" stroke="' + col + '" stroke-width="1.3"/>';
       var yt = y(Math.max(c.o, c.c)), hb = Math.max(1.5, Math.abs(y(c.o) - y(c.c)));
       g += '<rect x="' + (cx(i) - bw / 2) + '" y="' + yt + '" width="' + bw + '" height="' + hb + '" fill="' + col + '" rx="1"/>';
@@ -32297,7 +32303,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     var tags = [];
     if (rup) tags.push({ i: marks.brk, t: ['Ruptura', 'cierre ' + tfR], p: long ? C[marks.brk].h : C[marks.brk].l, side: s });
     var colW = long ? 'verde' : 'rosa/marrón';
-    tags.push({ i: ti, t: e.mode === 'swing' ? ['Gatillo: ' + tfG + ' ' + colW, 'Entrada: cierre ' + (tfC || 'H4') + ' ' + colW] : [rup ? 'Retesteo y entrada' : 'Gatillo y entrada', 'vela ' + tfG + (tfC ? ' · confirma ' + tfC : '')], p: long ? tc.l : tc.h, side: -s });
+    tags.push({ i: ti, t: e.mode === 'swing' ? ['Gatillo: H1 con rechazo', 'entro al cierre del H1'] : [rup ? 'Retesteo y entrada' : 'Gatillo y entrada', 'vela ' + tfG + (tfC ? ' · confirma ' + tfC : '')], p: long ? tc.l : tc.h, side: -s });
     tags.forEach(function (m) {
       var bh = 2 * 17 + 6, tw = Math.max.apply(null, m.t.map(function (z) { return z.length; })) * 9.2 + 14;
       var top = m.side > 0 ? y(m.p) - 6 - bh : y(m.p) + 6;
@@ -32315,6 +32321,38 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     return svg;
   }
 
+  /* SL+ (swing desde el 31 de octubre): escalera de stop que asegura parte del camino al 1.er objetivo, en precio de futuro redondeado al tick */
+  var TICK = { NQ: 0.25, ES: 0.25, YM: 1, RTY: 0.1, NKD: 5, GC: 0.1, SI: 0.005, HG: 0.0005, WTI: 0.01, CL: 0.01, NG: 0.001, KC: 0.05, CC: 1, EURUSD: 0.00005, BTC: 5, XRP: 0.0001 };
+  function tickOf(e) { return TICK[e.asset] || 0.01; }
+  function rTick(n, tk, mode) { var q = n / tk, r = mode > 0 ? Math.ceil(q - 1e-9) : mode < 0 ? Math.floor(q + 1e-9) : Math.round(q); return +(r * tk).toFixed(6); }
+  function fmtT(e, n) {
+    var tk = tickOf(e), d = tk >= 1 ? 0 : (String(tk).split('.')[1] || '').length;
+    if (tk === 0.25 && Math.abs(n - Math.round(n)) < 1e-9) d = 0;
+    var t = Math.abs(n).toFixed(d).split('.');
+    return (n < 0 ? '−' : '') + t[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (t[1] ? ',' + t[1] : '');
+  }
+  function slPlus(e, pl) {
+    var tg = (pl.targets || []).map(t0); if (!tg.length) return '';
+    var tk = tickOf(e), long = pl.dir === 'long', s = long ? 1 : -1;
+    var lo = Array.isArray(pl.entry) ? Math.min(pl.entry[0], pl.entry[1]) : pl.entry, hi = Array.isArray(pl.entry) ? Math.max(pl.entry[0], pl.entry[1]) : pl.entry;
+    var ref = long ? hi : lo, t1 = tg[0];
+    if (hi - lo > Math.abs(t1 - ref) * 0.5) ref = (lo + hi) / 2;
+    ref = rTick(ref, tk, 0);
+    var d = t1 - ref; if (d * s <= 0) return '';
+    var pct = function (p) { return Math.round((p - ref) / d * 100); };
+    var rows = [[0.3, 0.05], [0.5, 0.1], [0.65, 0.2], [0.8, 0.5], [1, 0.75]].map(function (x) {
+      var trig = x[0] === 1 ? t1 : rTick(ref + x[0] * d, tk, s), sl = rTick(ref + x[1] * d, tk, s);
+      return '<span class="slr"><b>' + (x[0] === 1 ? '1.er objetivo' : Math.round(x[0] * 100) + '\u00a0%') + '</b> (' + fmtT(e, trig) + ') → SL+ ' + fmtT(e, sl) + ' <span class="mut">(' + Math.round(x[1] * 100) + '\u00a0%)</span></span>';
+    }).join('');
+    var a = Math.min(ref, t1), b = Math.max(ref, t1), tol = Math.abs(d) * 0.04, mg = Math.abs(d) * 0.05;
+    var ctx = (e.levels || []).filter(function (l) { return l.cls !== 'now' && l.p > a + tol && l.p < b - tol && (l.p < lo - tol || l.p > hi + tol); })
+      .sort(function (x, y) { return Math.abs(x.p - ref) - Math.abs(y.p - ref); })
+      .map(function (l) { var c = rTick(l.p - s * mg, tk, -s), dd = String(l.t || '').split(/[;(:]/)[0].trim(); return 'si el H1 cierra ' + (long ? 'sobre ' : 'bajo ') + l.lbl + (dd ? ' (' + (/^[A-ZÁÉÍÓÚ][a-záéíóúñ]/.test(dd) ? dd.charAt(0).toLowerCase() + dd.slice(1) : dd) + ')' : '') + ', SL+ a ' + fmtT(e, c) + ' (' + pct(c) + '\u00a0%)'; });
+    var c1 = rTick(t1 - s * mg, tk, -s);
+    ctx.push('si el H1 cierra ' + (long ? 'sobre' : 'bajo') + ' el 1.er objetivo, SL+ a ' + fmtT(e, c1) + ' (' + pct(c1) + '\u00a0%)');
+    return '<span>Con entrada en ≈' + fmtT(e, ref) + ':</span><span class="slt">' + rows + '</span><span>Por contexto: ' + ctx.join('; ') + '. Se queda siempre el que más asegure y nunca se baja.</span>';
+  }
+
   function planHtml(e) {
     var key = e.asset + '-' + e.date, rec = [], L = [], S = [], oth = [];
     (e.plan || []).forEach(function (p) {
@@ -32324,7 +32362,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       else (si.long ? L : S).push({ p: p, si: si });
     });
     var h = '<p class="note">📈 largo · 📉 corto · ↩️ pullback · 🎯 retesteo · ⚡ ruptura · 🚨 nivel importante · 🛑 stop · 🎯 objetivos · Todas las horas son de España</p>';
-    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<p class="note"><b>Cómo entro en swing:</b> 1) gatillo: cierre de una vela H1 con color de fuerza a favor en la zona (largos: verde o verde oscuro; cortos: rosa oscuro o marrón). 2) Entrada: al cierre de la vela H4, solo si también cierra con ese color (en las rupturas, además, al lado bueno del nivel). 3) Si el H4 solo gira (largos: cian, verde fosforito o azul claro; cortos: amarillo, rojo o naranja), espero al siguiente H4. 4) Si el H4 cierra con color en contra, no hay entrada.</p>';
+    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre (largos: cian, verde fosforito, azul claro, verde o verde oscuro; cortos: rojo, amarillo, naranja, rosa oscuro o marrón).</li><li><b>Entrada:</b> al cierre de esa vela H1.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 30&nbsp;% del camino al 1.er objetivo aseguro el 5&nbsp;%; al 50&nbsp;%, el 10&nbsp;%; al 65&nbsp;%, el 20&nbsp;%; al 80&nbsp;%, el 50&nbsp;%, y en el 1.er objetivo, el 75&nbsp;%. Nunca a la entrada. Si un nivel o un FVG superado asegura más, manda el nivel; con una vela H1 de pérdida de fuerza cerca de un nivel, subo al escalón siguiente. El SL+ nunca se baja.</li></ol></div>';
     if (rec.length) {
       var tm = (rec[0].k.match(/\((.*?)\)/) || [])[1];
       h += '<div class="recent"><div class="rh">🕒 Análisis reciente' + (tm ? ' · ' + esc(tm) : '') + '</div>' + rec.map(function (p) { return sentList(p.text, false); }).join('') +
@@ -32359,7 +32397,9 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     }
     function col(list, cls, title) {
       return '<div class="lscol ' + cls + '"><div class="lsh">' + title + '</div>' + (list.length ? list.map(function (x) {
-        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span>' + sentList(x.p.text, true) + seqFor(x) + chartFor(x) + '</div>';
+        var ex = '';
+        if (e.mode === 'swing' && e.date >= '2026-10-31') { var pp = (e.plays || []).filter(function (q) { return q.k === x.p.k; })[0]; var tx = pp ? slPlus(e, pp) : ''; if (tx) ex = '<ul class="ps"><li><span class="l">➕ SL+</span><span class="v">' + tx + '</span></li></ul>'; }
+        return '<div class="pl"><span class="k">' + x.si.icon + ' ' + esc(x.p.k) + '</span>' + sentList(x.p.text, true) + seqFor(x) + chartFor(x) + ex + '</div>';
       }).join('') : '<div class="pl none"><p>Sin planteamiento de este lado.</p></div>') + '</div>';
     }
     h += '<div class="lsgrid">' + col(L, 'long', '📈 Largos') + col(S, 'short', '📉 Cortos') + '</div>';
