@@ -1,25 +1,38 @@
 {
- "ultima_ejecucion": "2026-10-30T06:11:33+00:00",
+ "ultima_ejecucion": "2026-10-31T06:06:26+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
- "actualizadas_en_esta_ejecucion": 196,
+ "actualizadas_en_esta_ejecucion": 195,
  "errores": [],
  "n_errores": 0,
- "datos_insuficientes": 40,
- "minutos": 5.4,
+ "datos_insuficientes": 41,
+ "minutos": 4.7,
  "muestra_diagnostico": {
-  "AFL": {
+  "3660.HK": {
    "sector_yahoo": "Financial Services",
-   "per": 13.283871,
-   "eps": 9.3,
-   "roe": 16.91,
-   "deuda": 0.534,
-   "dividendo": 1.951,
-   "dividendo_yahoo": 2.0,
-   "frecuencia": "trimestral",
+   "per": 1.3175416,
+   "eps": 15.62,
+   "roe": 15.26,
+   "deuda": 0.143,
+   "dividendo": 23.632,
+   "dividendo_yahoo": 17.53,
+   "frecuencia": "semestral",
+   "trimestre": "2026-06-30",
+   "moneda_yahoo": "HKD",
+   "tendencia": "bajista"
+  },
+  "NWS": {
+   "sector_yahoo": "Communication Services",
+   "per": 30.815535,
+   "eps": 1.03,
+   "roe": 7.98,
+   "deuda": 0.316,
+   "dividendo": 0.63,
+   "dividendo_yahoo": 0.62,
+   "frecuencia": "semestral",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "USD",
-   "tendencia": "alcista"
+   "tendencia": "lateral"
   }
  }
 }
