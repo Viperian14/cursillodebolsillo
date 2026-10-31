@@ -171,7 +171,7 @@ td.cm { min-width: 200px; }
 .paras { display: flex; flex-direction: column; gap: 12px; max-width: 70ch; }
 .paras .note { color: var(--muted); font-size: 14px; }
 svg.story { width: 100%; height: auto; display: block; margin: 8px 0 2px; }
-svg.story text.mb, svg.story text.ms { font-size: 12px; }
+svg.story text.mb, svg.story text.ms { font-size: 15px; }
 .paras ol.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
 .paras ol.steps ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 
@@ -32218,8 +32218,11 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
   function storyChart(e, pl, k, text) {
     var now = null, nowL = '';
     (e.levels || []).forEach(function (l) { if (l.cls === 'now') { now = l.p; nowL = l.lbl; } });
-    var lvm = text.match(/[Cc]ierre (?:M5|M15|H1|H4|diario) (?:sobre|bajo|por encima de|por debajo de) (\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+,\d+)/);
-    var lvlS = lvm ? lvm[1] : null;
+    var lvm = text.match(/[Cc]ierre (M5|M15|H1|H4|diario) (?:sobre|bajo|por encima de|por debajo de) (\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+,\d+)/);
+    var lvlS = lvm ? lvm[2] : null, tfR = lvm ? lvm[1] : (e.mode === 'swing' ? 'H4' : 'M15');
+    // temporalidad de la vela de gatillo y de la confirmación, leídas del texto del plan
+    var tfG = (text.match(/(?:rechazo|giro|vela|gatillo|color)[^.]*?en (M5\/M15|M1|M5|M15|H1|H4)/i) || [])[1] || (e.mode === 'swing' ? 'H1' : 'M5/M15');
+    var tfC = (text.match(/confirmación en (H1|H4|diario)/) || [])[1] || (e.mode === 'swing' && tfG === 'H1' ? 'H4' : '');
     // precios completos: los decimales del activo salen de las etiquetas de sus niveles (28.543 → 0; 49,135 → 3; 1,11795 → 5)
     var dec = 0;
     (e.levels || []).forEach(function (l) { var m = /,(\d+)$/.exec(l.lbl || ''); if (m) dec = Math.max(dec, m[1].length); });
@@ -32272,7 +32275,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     C.forEach(function (c) { vals.push(c.h, c.l); });
     var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals), pad = (mx - mn) * 0.06;
     mn -= pad; mx += pad;
-    var W = 600, H = 280, T = 12, B = 12, X0 = 14, X1 = 410, XL = 420;
+    var W = 532, H = 300, T = 14, B = 12, X0 = 10, X1 = 262, XL = 270;
     function y(p) { return T + (mx - p) / (mx - mn) * (H - T - B); }
     var step = (X1 - X0 - 10) / C.length, bw = Math.max(4, step * 0.6);
     function cx(i) { return X0 + 6 + step * (i + 0.5); }
@@ -32292,19 +32295,21 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     });
     // etiquetas cortas sobre las velas clave
     var tags = [];
-    if (rup) tags.push({ i: marks.brk, t: 'Ruptura', p: long ? C[marks.brk].h : C[marks.brk].l, side: s });
-    tags.push({ i: ti, t: rup ? 'Retesteo y entrada' : 'Gatillo y entrada', p: long ? tc.l : tc.h, side: -s });
+    if (rup) tags.push({ i: marks.brk, t: ['Ruptura', 'cierre ' + tfR], p: long ? C[marks.brk].h : C[marks.brk].l, side: s });
+    tags.push({ i: ti, t: [rup ? 'Retesteo y entrada' : 'Gatillo y entrada', 'vela ' + tfG + (tfC ? ' · confirma ' + tfC : '')], p: long ? tc.l : tc.h, side: -s });
     tags.forEach(function (m) {
-      var yy = y(m.p) + (m.side > 0 ? -10 : 19);
-      yy = Math.max(T + 12, Math.min(H - B - 2, yy));
-      var tw = m.t.length * 6.6 + 10, x = Math.max(X0 + tw / 2, Math.min(X1 - tw / 2, cx(m.i)));
-      g += '<rect x="' + (x - tw / 2) + '" y="' + (yy - 12) + '" width="' + tw + '" height="16" rx="4" fill="var(--surface)" stroke="var(--line)"/>' +
-        '<text class="ms" x="' + x + '" y="' + yy + '" text-anchor="middle" style="fill:var(--fg)">' + m.t + '</text>';
+      var bh = 2 * 17 + 6, tw = Math.max.apply(null, m.t.map(function (z) { return z.length; })) * 8.2 + 14;
+      var top = m.side > 0 ? y(m.p) - 6 - bh : y(m.p) + 6;
+      top = Math.max(2, Math.min(H - bh - 2, top));
+      var x = Math.max(X0 + tw / 2, Math.min(X1 - tw / 2, cx(m.i)));
+      g += '<rect x="' + (x - tw / 2) + '" y="' + top + '" width="' + tw + '" height="' + bh + '" rx="5" fill="var(--surface)" fill-opacity="0.88" stroke="var(--line)"/>' +
+        '<text class="ms" x="' + x + '" y="' + (top + 17) + '" text-anchor="middle" style="fill:var(--fg)">' + esc(m.t[0]) + '</text>' +
+        '<text class="ms" x="' + x + '" y="' + (top + 34) + '" text-anchor="middle" style="fill:var(--muted)">' + esc(m.t[1]) + '</text>';
     });
     labs.sort(function (a, b) { return a.y - b.y; });
-    var pv = -99; labs.forEach(function (l) { var top = Math.max(l.y - 6, pv + 2); l.top = top; pv = top + 13; });
+    var pv = -99; labs.forEach(function (l) { var top = Math.max(l.y - 9, pv + 2); l.top = top; pv = top + 18; });
     var over = pv - (H + 4); if (over > 0) labs.forEach(function (l) { l.top -= over; });
-    labs.forEach(function (l) { g += '<text class="' + l.c + '" x="' + XL + '" y="' + (l.top + 9) + '">' + esc(l.a) + '</text>'; });
+    labs.forEach(function (l) { g += '<text class="' + l.c + '" x="' + XL + '" y="' + (l.top + 13) + '">' + esc(l.a) + '</text>'; });
     var svg = '<svg class="mini story" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Dibujo de ejemplo de ' + esc(k) + '">' + g + '</svg>';
     return svg;
   }
