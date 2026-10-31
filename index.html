@@ -170,6 +170,8 @@ td.cm { min-width: 200px; }
 .row p { max-width: 70ch; }
 .paras { display: flex; flex-direction: column; gap: 12px; max-width: 70ch; }
 .paras .note { color: var(--muted); font-size: 14px; }
+svg.story { width: 100%; height: auto; display: block; margin: 8px 0 2px; }
+svg.story text.mb, svg.story text.ms { font-size: 12px; }
 .paras ol.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; }
 .paras ol.steps ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 
@@ -32212,6 +32214,101 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     var al = (pl.k || '') + ': entrada ' + fmtP(lo) + (hi > lo ? ' a ' + fmtP(hi) : '') + (pl.stop != null ? ', se anula en ' + fmtP(pl.stop) : '') + (tg.length ? ', objetivos ' + tg.map(fmtT).join(', ') : '');
     return '<svg class="mini" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(al) + '">' + g + '</svg>';
   }
+  /* Dibujo de ejemplo de la entrada con velas simuladas: llegada a la zona (o ruptura y retesteo), vela de gatillo, stop y objetivos. Se usa en los swing desde el 31 de octubre de 2026. */
+  function storyChart(e, pl, k, text) {
+    var now = null, nowL = '';
+    (e.levels || []).forEach(function (l) { if (l.cls === 'now') { now = l.p; nowL = l.lbl; } });
+    var lvm = text.match(/[Cc]ierre (?:M5|M15|H1|H4|diario) (?:sobre|bajo|por encima de|por debajo de) (\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+,\d+)/);
+    var lvlS = lvm ? lvm[1] : null;
+    // precios completos: los decimales del activo salen de las etiquetas de sus niveles (28.543 → 0; 49,135 → 3; 1,11795 → 5)
+    var dec = 0;
+    (e.levels || []).forEach(function (l) { var m = /,(\d+)$/.exec(l.lbl || ''); if (m) dec = Math.max(dec, m[1].length); });
+    function fmt(n) {
+      if (!dec || (Math.abs(n) >= 1000 && Math.abs(n - Math.round(n)) < 1e-9)) return fmtP(n);
+      var t = Math.abs(n).toFixed(dec).split('.'), ip = t[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      return (n < 0 ? '−' : '') + ip + ',' + t[1];
+    }
+    var long = pl.dir === 'long', s = long ? 1 : -1, rup = /ruptura/i.test(k);
+    var lo = Array.isArray(pl.entry) ? Math.min(pl.entry[0], pl.entry[1]) : pl.entry;
+    var hi = Array.isArray(pl.entry) ? Math.max(pl.entry[0], pl.entry[1]) : pl.entry;
+    var near = long ? hi : lo, deep = long ? lo : hi, zw = Math.max(hi - lo, 1);
+    var tg = (pl.targets || []).map(t0), st = pl.stop;
+    var span = Math.abs((tg.length ? tg[tg.length - 1] : near + s * 4 * zw) - (st != null ? st : deep - s * 2 * zw));
+    var u = span / 40;
+    var trig = deep + s * u * 1.2, entryP = long ? Math.max(trig + 3 * u, near) : Math.min(trig - 3 * u, near);
+    var wp = [], marks = {};
+    var start = now != null ? now : (rup ? deep - s * 8 * u : near + s * 8 * u);
+    wp.push({ p: start, n: 0 });
+    if (rup) {
+      var lvl = lvlS ? parseEs(lvlS) : deep;
+      wp.push({ p: lvl - s * 2 * u, n: 4 });
+      wp.push({ p: (long ? Math.max(lvl, hi) : Math.min(lvl, lo)) + s * 5 * u, n: 2, mk: 'brk' });
+      wp.push({ p: deep + s * 0.6 * u, n: 3, mk: 'ret' });
+    } else {
+      wp.push({ p: near + s * 1 * u, n: 4, mk: 'ret' });
+      wp.push({ p: deep + s * 0.4 * u, n: 2 });
+    }
+    wp.push({ p: entryP, n: 1, mk: 'trig' });
+    if (tg[0] != null) { wp.push({ p: tg[0] + s * 0.5 * u, n: 4, mk: 't1' }); wp.push({ p: tg[0] - s * 3 * u, n: 2 }); }
+    if (tg[1] != null) wp.push({ p: tg[1] + s * 0.5 * u, n: 4, mk: 't2' });
+    // velas
+    var seed = 7; function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    var C = [], prev = wp[0].p;
+    for (var i = 1; i < wp.length; i++) {
+      var a = prev, b = wp[i].p, n = wp[i].n;
+      for (var j = 1; j <= n; j++) {
+        var c = a + (b - a) * j / n + (j < n ? (rnd() - 0.5) * 2 * u : 0), o = prev;
+        var w1 = rnd() * 1.4 * u, w2 = rnd() * 1.4 * u;
+        C.push({ o: o, c: c, h: Math.max(o, c) + w1, l: Math.min(o, c) - w2 });
+        prev = c;
+      }
+      if (wp[i].mk) marks[wp[i].mk] = C.length - 1;
+    }
+    // la vela de gatillo: mecha que barre la zona y cierre a favor
+    var ti = marks.trig, tc = C[ti];
+    if (long) { tc.l = Math.min(tc.l, deep - 0.3 * u); if (st != null) tc.l = Math.max(tc.l, st + u); }
+    else { tc.h = Math.max(tc.h, deep + 0.3 * u); if (st != null) tc.h = Math.min(tc.h, st - u); }
+    var vals = [lo, hi].concat(tg); if (st != null) vals.push(st); if (now != null) vals.push(now);
+    C.forEach(function (c) { vals.push(c.h, c.l); });
+    var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals), pad = (mx - mn) * 0.06;
+    mn -= pad; mx += pad;
+    var W = 600, H = 280, T = 12, B = 12, X0 = 14, X1 = 410, XL = 420;
+    function y(p) { return T + (mx - p) / (mx - mn) * (H - T - B); }
+    var step = (X1 - X0 - 10) / C.length, bw = Math.max(4, step * 0.6);
+    function cx(i) { return X0 + 6 + step * (i + 0.5); }
+    var g = '', labs = [];
+    g += '<rect class="m-zone" x="' + X0 + '" y="' + y(hi) + '" width="' + (X1 - X0) + '" height="' + Math.max(3, y(lo) - y(hi)) + '"/>';
+    labs.push({ y: (y(lo) + y(hi)) / 2, c: 't-zone mb', a: 'Entrada ' + fmt(lo) + '‑' + fmt(hi) });
+    if (st != null) { g += '<line class="m-stop" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(st) + '" y2="' + y(st) + '"/>'; labs.push({ y: y(st), c: 't-stop mb', a: '🛑 Stop ' + fmt(st) }); }
+    tg.forEach(function (t, i) { g += '<line class="m-tg" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(t) + '" y2="' + y(t) + '"/>'; labs.push({ y: y(t), c: 't-tg mb', a: '🎯 ' + (i + 1) + '.º ' + fmt(t) }); });
+    if (now != null) { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + nowL }); }
+    C.forEach(function (c, i) {
+      var up = c.c >= c.o, isT = i === ti;
+      var col = isT ? (long ? '#78b946' : '#d23c82') : (up ? 'var(--up)' : 'var(--down)');
+      g += '<line x1="' + cx(i) + '" x2="' + cx(i) + '" y1="' + y(c.h) + '" y2="' + y(c.l) + '" stroke="' + col + '" stroke-width="1.3"/>';
+      var yt = y(Math.max(c.o, c.c)), hb = Math.max(1.5, Math.abs(y(c.o) - y(c.c)));
+      g += '<rect x="' + (cx(i) - bw / 2) + '" y="' + yt + '" width="' + bw + '" height="' + hb + '" fill="' + col + '" rx="1"/>';
+      if (isT) g += '<rect x="' + (cx(i) - bw / 2 - 4) + '" y="' + (y(c.h) - 4) + '" width="' + (bw + 8) + '" height="' + (y(c.l) - y(c.h) + 8) + '" fill="none" stroke="var(--fg)" stroke-width="1.2" rx="3"/>';
+    });
+    // etiquetas cortas sobre las velas clave
+    var tags = [];
+    if (rup) tags.push({ i: marks.brk, t: 'Ruptura', p: long ? C[marks.brk].h : C[marks.brk].l, side: s });
+    tags.push({ i: ti, t: rup ? 'Retesteo y entrada' : 'Gatillo y entrada', p: long ? tc.l : tc.h, side: -s });
+    tags.forEach(function (m) {
+      var yy = y(m.p) + (m.side > 0 ? -10 : 19);
+      yy = Math.max(T + 12, Math.min(H - B - 2, yy));
+      var tw = m.t.length * 6.6 + 10, x = Math.max(X0 + tw / 2, Math.min(X1 - tw / 2, cx(m.i)));
+      g += '<rect x="' + (x - tw / 2) + '" y="' + (yy - 12) + '" width="' + tw + '" height="16" rx="4" fill="var(--surface)" stroke="var(--line)"/>' +
+        '<text class="ms" x="' + x + '" y="' + yy + '" text-anchor="middle" style="fill:var(--fg)">' + m.t + '</text>';
+    });
+    labs.sort(function (a, b) { return a.y - b.y; });
+    var pv = -99; labs.forEach(function (l) { var top = Math.max(l.y - 6, pv + 2); l.top = top; pv = top + 13; });
+    var over = pv - (H + 4); if (over > 0) labs.forEach(function (l) { l.top -= over; });
+    labs.forEach(function (l) { g += '<text class="' + l.c + '" x="' + XL + '" y="' + (l.top + 9) + '">' + esc(l.a) + '</text>'; });
+    var svg = '<svg class="mini story" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Dibujo de ejemplo de ' + esc(k) + '">' + g + '</svg>';
+    return svg;
+  }
+
   function planHtml(e) {
     var key = e.asset + '-' + e.date, rec = [], L = [], S = [], oth = [];
     (e.plan || []).forEach(function (p) {
@@ -32250,7 +32347,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
         pls = ls.map(function (m) { return playFromSeq(m, k); });
       }
       if (!pls.length) { var ap = autoPlay(x.p); if (ap) pls = [ap]; }
-      return pls.map(function (pl) { return miniChart(e, pl, x.si.icon); }).join('');
+      var story = e.mode === 'swing' && e.date >= '2026-10-31';
+      return pls.map(function (pl) { return story ? storyChart(e, pl, k, x.p.text) : miniChart(e, pl, x.si.icon); }).join('');
     }
     function col(list, cls, title) {
       return '<div class="lscol ' + cls + '"><div class="lsh">' + title + '</div>' + (list.length ? list.map(function (x) {
