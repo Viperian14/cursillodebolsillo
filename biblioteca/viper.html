@@ -9,7 +9,7 @@
 <li><strong>Huecos de precio (FVG).</strong></li>
 </ol>
 <p>Sirve para leer a la vez la dirección, la fuerza, los niveles y quién está moviendo el precio.</p>
-<p><strong>Importante:</strong> las velas de este indicador miden fuerza y momentum, no volumen. El volumen se mira aparte, en las velas de volumen de M5 como mínimo.</p>
+<p><strong>Importante:</strong> las velas de este indicador miden fuerza y momentum, no volumen.</p>
 <p>Vídeo explicativo del autor: <a href="https://www.youtube.com/watch?v=X0poBvo8HsI">https://www.youtube.com/watch?v=X0poBvo8HsI</a></p>
 <hr />
 <h2>1. Doc 4in1: tendencia, corrección y niveles</h2>
@@ -20,7 +20,7 @@
 <h3>Apertura diaria</h3>
 <p>Línea <i class="sw" style="background:#78b946"></i>verde «Open Diario» en el precio de apertura del día. Se marca a las 8:00 (hora de España) en índices europeos y a las 14:00 en índices americanos y EURUSD. Es una referencia intradía.</p>
 <h3>Túneles Domenec</h3>
-<p>Tres túneles formados por seis medias exponenciales (EMA). El color del túnel y sus cruces dan la tendencia de fondo y las zonas de soporte y resistencia de largo plazo.</p>
+<p>Tres túneles formados por seis medias exponenciales (EMA). El color del túnel y sus cruces dan la tendencia de fondo y las zonas de soporte y resistencia de largo plazo. En cada túnel, la EMA rápida se dibuja con línea punteada y la lenta con línea continua, y el espacio entre las dos se rellena con el color del túnel.</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -32,17 +32,17 @@
 <tbody>
 <tr>
 <td><i class="sw" style="background:#2962ff"></i>Azul</td>
-<td>EMA 123 y EMA 188</td>
+<td>EMA 123 (punteada) y EMA 188 (continua)</td>
 <td>El más cercano al precio. Marca la tendencia de corto-medio plazo y es el primer soporte o resistencia. Su estrangulamiento o cruce avisa de un cambio de tendencia.</td>
 </tr>
 <tr>
 <td><i class="sw" style="background:#fffa00"></i>Amarillo</td>
-<td>EMA 416 y EMA 618</td>
+<td>EMA 416 (punteada) y EMA 618 (continua)</td>
 <td>Tendencia de medio-largo plazo. Soporte o resistencia fuerte cuando el precio llega a él.</td>
 </tr>
 <tr>
 <td><i class="sw" style="background:#ff1493"></i>Rosa</td>
-<td>EMA 882 y EMA 1223</td>
+<td>EMA 882 (punteada) y EMA 1223 (continua)</td>
 <td>Tendencia de fondo. Es el más lento y el que define el mercado a largo plazo.</td>
 </tr>
 </tbody>
@@ -164,7 +164,7 @@
 <ul>
 <li>La señal se repinta durante la vela: <strong>solo vale al cierre</strong>.</li>
 <li>Se pueden activar alertas de IN y de OUT, pero hay que confirmarlas con la vela cerrada.</li>
-<li>Si el activo no da datos de volumen, el indicador no bloquea la señal y no valida nada con el volumen, así que hay que mirar la vela de volumen real aparte.</li>
+<li>Si el activo no da datos de volumen, el indicador no bloquea la señal y no valida nada con el volumen: la señal sale solo por el cierre fuera de la banda.</li>
 </ul>
 <hr />
 <h2>4. FVG (huecos de precio)</h2>
@@ -175,7 +175,7 @@
 <li><strong>FVG bajista:</strong> el máximo de la vela actual queda por debajo del mínimo de la vela de dos barras atrás.</li>
 </ul>
 <h3>Cómo se dibuja</h3>
-<p>Como una caja gris que se extiende a la derecha. Cuanto más grande es el hueco respecto al ATR de 100 periodos, más oscura es la caja y más peso tiene.</p>
+<p>Como una caja cian (celeste) semitransparente que se extiende a la derecha. Cuanto más grande es el hueco respecto al ATR de 100 periodos, más intenso es el cian y más peso tiene.</p>
 <h3>Mitigación</h3>
 <p>La caja se va recortando a medida que el precio la rellena, al cierre de cada vela. Desaparece cuando el precio cubre el 50 % del hueco (configurable) o cuando lo consume entero. Un hueco nuevo contenido dentro de otro del mismo tipo no se dibuja.</p>
 <h3>Alertas</h3>
@@ -209,11 +209,11 @@
 </tr>
 <tr>
 <td>H4 y H1</td>
-<td>Análisis y contexto: dirección, zona de corrección, Genial Line, túneles y sus cruces. En swing, H1 es el gatillo con confirmación en H4</td>
+<td>Análisis y contexto: dirección, zona de corrección, Genial Line, túneles y sus cruces. En swing, H1 es el gatillo y H4 da el contexto y el filtro de salida</td>
 </tr>
 <tr>
 <td>M15, M5 y M1</td>
-<td>Gatillo en intradía y scalping. M1 afina el timing, pero no decide solo. El volumen real se valida en M5 como mínimo</td>
+<td>Gatillo en intradía y scalping. M1 afina el timing, pero no decide solo</td>
 </tr>
 </tbody>
 </table></div>
