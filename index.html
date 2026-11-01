@@ -190,6 +190,15 @@ svg.story text.mb, svg.story text.ms { font-size: 15px; }
 .pd-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; line-height: 1.5; }
 .pd-leg { margin: 6px 0 0; padding-left: 22px; color: var(--muted); font-size: .9rem; display: flex; flex-direction: column; gap: 3px; }
 .pd-cap { margin: 4px 0 0; color: var(--muted); font-size: .88rem; }
+.pd-intro { margin: 0 0 10px; color: var(--muted); font-size: .92rem; }
+.pd-two { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 760px) { .pd-two { grid-template-columns: 1fr; } }
+.pd-res { display: inline-block; font-size: .85rem; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
+.pd-res.ok { background: var(--up-soft); color: var(--up); } .pd-res.mid { background: var(--flat-soft); color: var(--flat); } .pd-res.out { background: var(--down-soft); color: var(--down); }
+.pd-st { margin: 0; padding: 0; list-style: none; } .pd-st li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; padding: 7px 0; border-top: 1px solid var(--line); font-size: .92rem; line-height: 1.45; }
+.pd-st .n { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--fg); color: var(--bg); font-size: .78rem; font-weight: 700; }
+.pd-st.plain .n { background: none; font-size: 1rem; }
+#plsheet .pd-case { border-top: 1px solid var(--line); padding-top: 16px; }
 .pd-sl { line-height: 1.6; } .pd-sl .slt { display: flex; flex-direction: column; gap: 2px; margin: 6px 0; padding-left: 10px; border-left: 2px solid var(--line); } .pd-sl .mut { color: var(--muted); }
 .pl-card .pl-open { margin-top: 12px; }
 .pd-fab { position: fixed; right: 16px; z-index: 85; width: 46px; height: 46px; border-radius: 50%; border: 0; background: transparent; color: #e1d3a8; filter: drop-shadow(0 2px 5px rgba(0,0,0,.6)); display: flex; align-items: center; justify-content: center; cursor: pointer; }
@@ -32505,13 +32514,25 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       '<div class="pd-chips"><span class="pd-chip">' + esc(favor || 'Contexto sin indicar') + '</span><span class="pd-chip ' + md + '">' + (md === 'estr' ? 'SL+ estructural' : 'SL+ en escalera') + '</span></div></div>';
     h += '<section><h3>Paso a paso</h3><ul class="ps">' + steps.map(function (q) { return '<li><span class="l">' + q[0] + '</span><span class="v">' + esc(q[1]) + '</span></li>'; }).join('') + '</ul>' + (d0.seq || '') + '</section>';
     h += '<p class="note pd-ilus"><b>Gráficos ilustrativos.</b> Las velas de estos dibujos son un ejemplo de cómo se ejecuta la operativa. No son una previsión de lo que hará el precio.</p>';
-    var CAP = '<p class="pd-cap">Gráfico ilustrativo: velas de ejemplo, no es una previsión.</p>', L1 = '<li>Gatillo ' + G + ' y entrada al cierre.</li>', n = 1;
-    function sec(t, v, leg) { return '<section><h3>' + (n++) + '. ' + t + '</h3>' + storyChart(e, pl, x.p.k, text, v) + CAP + (leg ? '<ol class="pd-leg">' + L1 + leg + '</ol>' : '') + '</section>'; }
-    h += sec('Así sería la entrada', 'normal');
-    if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', '<li>El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.</li><li>Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.</li>');
+    var CAP = '<p class="pd-cap">Gráfico ilustrativo: velas de ejemplo, no es una previsión.</p>', L1 = 'Gatillo ' + G + ' y entrada al cierre.', n = 1;
+    function sec(t, v, intro, res, items, plain) {
+      return '<section class="pd-case"><h3>' + (n++) + '. ' + t + '</h3>' + (intro ? '<p class="pd-intro">' + intro + '</p>' : '') +
+        '<div class="pd-two"><div>' + storyChart(e, pl, x.p.k, text, v) + CAP + '</div><div><span class="pd-res ' + res[0] + '">' + res[1] + '</span><ol class="pd-st' + (plain ? ' plain' : '') + '">' +
+        items.map(function (it, k) { return '<li><span class="n">' + (plain ? it[0] : k + 1) + '</span><span>' + (plain ? it[1] : it) + '</span></li>'; }).join('') + '</ol></div></div></section>';
+    }
+    var tgs = (pl.targets || []).map(function (q) { return fmtT(e, q); });
+    h += sec('Así sería la entrada', 'normal', 'La operativa va bien desde la entrada hasta los objetivos.', ['ok', 'Resultado: llega a los objetivos'],
+      [['🕯️', L1], ['🎯', 'Llega al 1.er objetivo' + (tgs[0] ? ' (' + tgs[0] + ')' : '') + '.']].concat(tgs[1] ? [['🎯', 'Llega al 2.º objetivo (' + tgs[1] + ').']] : []), true);
+    if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', 'Cómo acompaña el SL+ al precio (estructural: va a favor de D y H4).', ['ok', 'Resultado: el SL+ acompaña el movimiento'],
+      [L1, 'El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.', 'Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.']);
     var pr = I ? ['80', '50'] : ['65', '20'];
-    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', '<li>Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.</li><li>El precio vuelve y salta el SL+: salgo con ganancia.</li><li>Rebota en la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez.</li><li><b>La reentrada lleva el stop original' + (stop ? ' (' + esc(stop) + ')' : '') + '</b>, no el SL+; <b>los mismos objetivos' + ((pl.targets || []).length ? ' (' + pl.targets.map(function (x) { return fmtT(e, x); }).join(' y ') + ')' : '') + '</b> y el mismo modo de SL+, que vuelve a empezar desde la nueva entrada.</li>');
-    h += sec('Cuándo salgo antes del stop', 'anula', '<li>La vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ': salgo aunque el precio no haya tocado el stop. No hay reentrada.</li>');
+    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', 'Solo hay reentrada si me saca el SL+. Lleva el stop original, los mismos objetivos y el mismo modo de SL+.', ['mid', 'Resultado: sale con ganancia y reentra una vez'],
+      [L1, 'Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.', 'El precio vuelve y salta el SL+: salgo con ganancia.',
+       'Vuelve a la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez, con el stop original' + (stop ? ' (' + esc(stop) + ')' : '') + ', no el SL+, y los mismos objetivos' + (tgs.length ? ' (' + tgs.join(' y ') + ')' : '') + '.']);
+    h += sec('Filtro ' + F + ': salgo antes de tocar el stop', 'anula', 'Es la primera entrada, no la reentrada. Si el precio se da la vuelta y una vela ' + F + ' cierra al otro lado de la zona, salgo sin esperar al stop: pierdo menos. Como con el stop, aquí la operativa termina y no hay reentrada.', ['out', 'Resultado: pierdo menos que con el stop y la operativa termina'],
+      [L1, 'El precio se da la vuelta y la vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ', el borde de la zona: la operativa ya no vale. Salgo al cierre de esa vela, antes de llegar al stop' + (stop ? ' (' + esc(stop) + ')' : '') + '. No hay reentrada.']);
+    h += '<section><h3>Qué me saca de la operativa</h3><div class="tablewrap"><table class="dt"><thead><tr><th>Qué me saca</th><th>Resultado</th><th>¿Reentrada?</th></tr></thead><tbody>' +
+      '<tr><td>🛑 Stop</td><td>Pérdida completa</td><td>No</td></tr><tr><td>🚪 Filtro ' + F + ' (cierre al otro lado de la zona)</td><td>Pérdida menor</td><td>No</td></tr><tr><td>➕ SL+</td><td>Ganancia</td><td>Sí, una vez</td></tr></tbody></table></div></section>';
     if (md === 'esc' && !I) { var sl = slPlus(e, pl); if (sl) h += '<section><h3>Precios del SL+</h3><div class="pd-sl">' + sl + '</div></section>'; }
     return h;
   }
