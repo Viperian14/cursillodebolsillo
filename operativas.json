@@ -1,0 +1,6444 @@
+{
+ "version": 1,
+ "zonaHoraria": "Europe/Madrid",
+ "nota": "Generado desde index.html por scripts/generar_operativas.js. Precios en futuro. No editar a mano.",
+ "operativas": [
+  {
+   "id": "CC-2026-10-17-S1",
+   "activo": "CC",
+   "fecha": "2026-10-17",
+   "modo": "swing",
+   "nombre": "Largos",
+   "dir": "largo",
+   "zona": [
+    5362,
+    5568
+   ],
+   "stop": 5300,
+   "objetivos": [
+    5960,
+    6505
+   ],
+   "tick": 1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 5720,
+     "lbl": "5.720"
+    },
+    {
+     "p": 5861,
+     "lbl": "5.861"
+    }
+   ],
+   "desde": "2026-10-18T00:00",
+   "hasta": "2026-10-23T23:00"
+  },
+  {
+   "id": "CC-2026-10-17-S3",
+   "activo": "CC",
+   "fecha": "2026-10-17",
+   "modo": "swing",
+   "nombre": "Cortos",
+   "dir": "corto",
+   "zona": [
+    5860,
+    5960
+   ],
+   "stop": 6000,
+   "objetivos": [
+    5568,
+    5362
+   ],
+   "tick": 1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5960,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5960,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 5720,
+     "lbl": "5.720"
+    }
+   ],
+   "desde": "2026-10-18T00:00",
+   "hasta": "2026-10-23T23:00"
+  },
+  {
+   "id": "KC-2026-10-17-S3",
+   "activo": "KC",
+   "fecha": "2026-10-17",
+   "modo": "swing",
+   "nombre": "Cortos",
+   "dir": "corto",
+   "zona": [
+    308.95,
+    311.3
+   ],
+   "stop": 312,
+   "objetivos": [
+    298.35,
+    292
+   ],
+   "tick": 0.05,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 311.3,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 311.3,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-18T00:00",
+   "hasta": "2026-10-23T23:00"
+  },
+  {
+   "id": "WTI-2026-10-17-S1",
+   "activo": "WTI",
+   "fecha": "2026-10-17",
+   "modo": "swing",
+   "nombre": "Largos",
+   "dir": "largo",
+   "zona": [
+    97.11,
+    97.11
+   ],
+   "stop": 96.5,
+   "objetivos": [
+    101.5
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 97.11,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 97.11,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-18T00:00",
+   "hasta": "2026-10-23T23:00"
+  },
+  {
+   "id": "WTI-2026-10-17-S3",
+   "activo": "WTI",
+   "fecha": "2026-10-17",
+   "modo": "swing",
+   "nombre": "Cortos",
+   "dir": "corto",
+   "zona": [
+    101.5,
+    104.6
+   ],
+   "stop": 104.6,
+   "objetivos": [
+    97.11,
+    93.51
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 104.6,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 104.6,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-18T00:00",
+   "hasta": "2026-10-23T23:00"
+  },
+  {
+   "id": "ES-2026-10-21-I1",
+   "activo": "ES",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    7757,
+    7765
+   ],
+   "stop": 7751,
+   "objetivos": [
+    7806
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7757,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7751
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M5, M15 y H1; contra el diario y la resistencia de H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "ES-2026-10-21-I2",
+   "activo": "ES",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7783,
+    7786
+   ],
+   "stop": 7775,
+   "objetivos": [
+    7798,
+    7815
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7786
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7783,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7775
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "ES-2026-10-21-I3",
+   "activo": "ES",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7796,
+    7806
+   ],
+   "stop": 7812,
+   "objetivos": [
+    7785,
+    7765
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7806,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7812
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H4 y diario; contra M5 y H1: tamaño pequeño.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "ES-2026-10-21-I4",
+   "activo": "ES",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7752,
+    7756
+   ],
+   "stop": 7766,
+   "objetivos": [
+    7743,
+    7734.75
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7754
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7756,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7766
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "GC-2026-10-21-I1",
+   "activo": "GC",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4147,
+    4153
+   ],
+   "stop": 4158,
+   "objetivos": [
+    4134,
+    4124
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4153,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4158
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4; en M5 va contra el rebote de la madrugada.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "GC-2026-10-21-I2",
+   "activo": "GC",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    4121,
+    4124
+   ],
+   "stop": 4134,
+   "objetivos": [
+    4113,
+    4105
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4124
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4124,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4134
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "GC-2026-10-21-I3",
+   "activo": "GC",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4150,
+    4153
+   ],
+   "stop": 4143,
+   "objetivos": [
+    4165,
+    4176
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4153
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4150,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4143
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "GC-2026-10-21-I4",
+   "activo": "GC",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    4124,
+    4130
+   ],
+   "stop": 4120,
+   "objetivos": [
+    4141,
+    4150
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4124,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4120
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-21T09:27",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "NQ-2026-10-21-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    29768,
+    29790
+   ],
+   "stop": 29750,
+   "objetivos": [
+    30078
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29768,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29750
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M5, M15, H1 y H4 sobre la EMA 8.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:24",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "NQ-2026-10-21-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29995,
+    30010
+   ],
+   "stop": 29975,
+   "objetivos": [
+    30078,
+    30200
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 30007
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29995,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29975
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:24",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "NQ-2026-10-21-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    30020,
+    30078
+   ],
+   "stop": 30092,
+   "objetivos": [
+    29930,
+    29806
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 30078,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 30092
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H4 y diario; contra M5 y H1: tamaño pequeño.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-21T09:24",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "NQ-2026-10-21-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-21",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    29765,
+    29775
+   ],
+   "stop": 29815,
+   "objetivos": [
+    29675,
+    29505.5
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29768.75
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29775,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29815
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-21T09:24",
+   "hasta": "2026-10-21T22:00"
+  },
+  {
+   "id": "ES-2026-10-22-I1",
+   "activo": "ES",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7727,
+    7735
+   ],
+   "stop": 7742,
+   "objetivos": [
+    7710,
+    7705
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1, H4 y los gatillos.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:12",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "ES-2026-10-22-I2",
+   "activo": "ES",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7703,
+    7705
+   ],
+   "stop": 7716,
+   "objetivos": [
+    7690,
+    7676
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7705
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7705,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7705,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:12",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "ES-2026-10-22-I3",
+   "activo": "ES",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    7705,
+    7711
+   ],
+   "stop": 7698,
+   "objetivos": [
+    7727,
+    7735
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7705,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7705
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4: tamaño pequeño.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:12",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "ES-2026-10-22-I4",
+   "activo": "ES",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7733,
+    7735
+   ],
+   "stop": 7725,
+   "objetivos": [
+    7755,
+    7765
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7733,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7733,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:12",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "GC-2026-10-22-I1",
+   "activo": "GC",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    4093,
+    4095.5
+   ],
+   "stop": 4103,
+   "objetivos": [
+    4082,
+    4062
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4095.5
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4095.5,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4095.5,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:15",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "GC-2026-10-22-I2",
+   "activo": "GC",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4118,
+    4120
+   ],
+   "stop": 4109,
+   "objetivos": [
+    4127,
+    4135
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4118
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4118,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4118,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:15",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "GC-2026-10-22-I3",
+   "activo": "GC",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    4096,
+    4100
+   ],
+   "stop": 4090,
+   "objetivos": [
+    4112,
+    4118
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4096,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4095.5
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:15",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "GC-2026-10-22-I4",
+   "activo": "GC",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4117,
+    4127
+   ],
+   "stop": 4131,
+   "objetivos": [
+    4105,
+    4098
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4127,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4127,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:15",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "NQ-2026-10-22-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    29505,
+    29600
+   ],
+   "stop": 29625,
+   "objetivos": [
+    29434,
+    29370
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29600,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29600,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de los cuatro marcos.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:09",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "NQ-2026-10-22-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    29365,
+    29370
+   ],
+   "stop": 29410,
+   "objetivos": [
+    29220,
+    29145.25
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29370
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29370,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29370,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-22T11:09",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "NQ-2026-10-22-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    29370,
+    29417
+   ],
+   "stop": 29340,
+   "objetivos": [
+    29505,
+    29600
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29370,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29370
+   },
+   "slplus": "escalera",
+   "favor": "Va contra los cuatro marcos: tamaño pequeño.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:09",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "NQ-2026-10-22-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-22",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29495,
+    29505.5
+   ],
+   "stop": 29465,
+   "objetivos": [
+    29600,
+    29700
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29505.5
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29495,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29495,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-22T11:09",
+   "hasta": "2026-10-22T22:00"
+  },
+  {
+   "id": "ES-2026-10-23-I1",
+   "activo": "ES",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7727,
+    7735
+   ],
+   "stop": 7743,
+   "objetivos": [
+    7712,
+    7704
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:45",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "ES-2026-10-23-I2",
+   "activo": "ES",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7674,
+    7676
+   ],
+   "stop": 7688,
+   "objetivos": [
+    7665,
+    7638.5
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7676
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7676,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7676,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:45",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "ES-2026-10-23-I3",
+   "activo": "ES",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    7677,
+    7690
+   ],
+   "stop": 7670,
+   "objetivos": [
+    7704,
+    7712
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7677,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7676
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:45",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "ES-2026-10-23-I4",
+   "activo": "ES",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7733,
+    7735
+   ],
+   "stop": 7725,
+   "objetivos": [
+    7755,
+    7765
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7735
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7733,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7733,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:45",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "GC-2026-10-23-I1",
+   "activo": "GC",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    4014,
+    4016
+   ],
+   "stop": 4026,
+   "objetivos": [
+    4001,
+    3984
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4016
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4016,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4016,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:46",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "GC-2026-10-23-I2",
+   "activo": "GC",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4043,
+    4045
+   ],
+   "stop": 4033,
+   "objetivos": [
+    4057,
+    4072
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4043
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4043,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4043,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:46",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "GC-2026-10-23-I3",
+   "activo": "GC",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    4017,
+    4023
+   ],
+   "stop": 4010,
+   "objetivos": [
+    4036,
+    4043
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4017,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4016
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:46",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "GC-2026-10-23-I4",
+   "activo": "GC",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4050,
+    4060
+   ],
+   "stop": 4066,
+   "objetivos": [
+    4036,
+    4023
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4060,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4060,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:46",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "NQ-2026-10-23-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    29190,
+    29215
+   ],
+   "stop": 29140,
+   "objetivos": [
+    29280,
+    29340
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29190,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29190,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M5 y M15; contra H1 y H4: tamaño pequeño.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:44",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "NQ-2026-10-23-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29380,
+    29390
+   ],
+   "stop": 29340,
+   "objetivos": [
+    29460,
+    29505.5
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29380
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29380,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29380,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-23T10:44",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "NQ-2026-10-23-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    29380,
+    29460
+   ],
+   "stop": 29475,
+   "objetivos": [
+    29280,
+    29200
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29460,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29460,
+    "porDefecto": true
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:44",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "NQ-2026-10-23-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-23",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    29140,
+    29145
+   ],
+   "stop": 29175,
+   "objetivos": [
+    29020,
+    28940
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29145
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29145,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29145,
+    "porDefecto": true
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-23T10:44",
+   "hasta": "2026-10-23T22:00"
+  },
+  {
+   "id": "ES-2026-10-27-I1",
+   "activo": "ES",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7712,
+    7720
+   ],
+   "stop": 7726,
+   "objetivos": [
+    7705,
+    7700
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7720,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7722
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "ES-2026-10-27-I2",
+   "activo": "ES",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7698,
+    7700
+   ],
+   "stop": 7708,
+   "objetivos": [
+    7674,
+    7662
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7700
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7700,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7708
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "ES-2026-10-27-I3",
+   "activo": "ES",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    7691,
+    7695
+   ],
+   "stop": 7685,
+   "objetivos": [
+    7705,
+    7712
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7691,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7688
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "ES-2026-10-27-I4",
+   "activo": "ES",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7720,
+    7722
+   ],
+   "stop": 7712,
+   "objetivos": [
+    7731,
+    7734.75
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7720
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7720,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7712
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "GC-2026-10-27-I1",
+   "activo": "GC",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    4009,
+    4013
+   ],
+   "stop": 4003,
+   "objetivos": [
+    4023,
+    4033
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4009,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4009
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "GC-2026-10-27-I2",
+   "activo": "GC",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4033,
+    4035
+   ],
+   "stop": 4025,
+   "objetivos": [
+    4050,
+    4058
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4033
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4033,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4026
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "GC-2026-10-27-I3",
+   "activo": "GC",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4030,
+    4038
+   ],
+   "stop": 4044,
+   "objetivos": [
+    4022,
+    4012
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4038,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4040
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "GC-2026-10-27-I4",
+   "activo": "GC",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    4006,
+    4008
+   ],
+   "stop": 4016,
+   "objetivos": [
+    3989,
+    3962.6
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4009
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4008,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4016
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:33",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "NQ-2026-10-27-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    29355,
+    29395
+   ],
+   "stop": 29412,
+   "objetivos": [
+    29320,
+    29290
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29395,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29400
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M5, M15 y H1.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:30",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "NQ-2026-10-27-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    29280,
+    29285
+   ],
+   "stop": 29315,
+   "objetivos": [
+    29243,
+    29145.25
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29285
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29285,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29315
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-27T08:30",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "NQ-2026-10-27-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    29290,
+    29310
+   ],
+   "stop": 29240,
+   "objetivos": [
+    29355,
+    29395
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29290,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29285
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-27T08:30",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "NQ-2026-10-27-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-27",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29445,
+    29455
+   ],
+   "stop": 29395,
+   "objetivos": [
+    29505.5,
+    29587
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29445
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29445,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29395
+   },
+   "slplus": "escalera",
+   "favor": "",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-27T08:30",
+   "hasta": "2026-10-27T22:00"
+  },
+  {
+   "id": "ES-2026-10-29-I1",
+   "activo": "ES",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7773,
+    7783
+   ],
+   "stop": 7792,
+   "objetivos": [
+    7757,
+    7745
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7783,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7785
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y del diario.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:35",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "ES-2026-10-29-I2",
+   "activo": "ES",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7740,
+    7745
+   ],
+   "stop": 7752,
+   "objetivos": [
+    7734.75,
+    7725
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7740
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7745,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7752
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:35",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "ES-2026-10-29-I3",
+   "activo": "ES",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    7735,
+    7742
+   ],
+   "stop": 7724,
+   "objetivos": [
+    7757,
+    7773
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7735,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7730
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H4 y del semanal.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:35",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "ES-2026-10-29-I4",
+   "activo": "ES",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7766,
+    7773
+   ],
+   "stop": 7758,
+   "objetivos": [
+    7783,
+    7800
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7773
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7766,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7758
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-29T09:35",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "GC-2026-10-29-I1",
+   "activo": "GC",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4050,
+    4058
+   ],
+   "stop": 4064,
+   "objetivos": [
+    4035,
+    4024
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4058,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4060
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1, H4, el diario y el semanal.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:33",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "GC-2026-10-29-I2",
+   "activo": "GC",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    4030,
+    4034
+   ],
+   "stop": 4041,
+   "objetivos": [
+    4017,
+    3995
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4030
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4034,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4041
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de todos los marcos.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:33",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "GC-2026-10-29-I3",
+   "activo": "GC",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    4017,
+    4024
+   ],
+   "stop": 4008,
+   "objetivos": [
+    4041,
+    4050
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4017,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4010
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1, H4, el diario y el semanal.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-29T09:33",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "GC-2026-10-29-I4",
+   "activo": "GC",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4057,
+    4062
+   ],
+   "stop": 4045,
+   "objetivos": [
+    4072,
+    4081
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4059
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4057,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4050
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H4 y el diario.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-29T09:33",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "NQ-2026-10-29-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    29660,
+    29720
+   ],
+   "stop": 29775,
+   "objetivos": [
+    29600,
+    29510
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29720,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29770
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y del diario.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:34",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "NQ-2026-10-29-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    29480,
+    29505
+   ],
+   "stop": 29540,
+   "objetivos": [
+    29370,
+    29145.25
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29480
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29505,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29540
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y del diario.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-29T09:34",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "NQ-2026-10-29-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    29505,
+    29530
+   ],
+   "stop": 29460,
+   "objetivos": [
+    29620,
+    29700
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29505,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29480
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y el diario.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-29T09:34",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "NQ-2026-10-29-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-29",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29770,
+    29790
+   ],
+   "stop": 29700,
+   "objetivos": [
+    29840,
+    30078
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29770
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29770,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29700
+   },
+   "slplus": "escalera",
+   "favor": "Va contra el diario.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-29T09:34",
+   "hasta": "2026-10-29T22:00"
+  },
+  {
+   "id": "ES-2026-10-30-I1",
+   "activo": "ES",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7693,
+    7700
+   ],
+   "stop": 7706,
+   "objetivos": [
+    7680,
+    7670
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7700,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7703
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:38",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "ES-2026-10-30-I2",
+   "activo": "ES",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7665,
+    7670
+   ],
+   "stop": 7676,
+   "objetivos": [
+    7645,
+    7638.5
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7665
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7670,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7676
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:38",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "ES-2026-10-30-I3",
+   "activo": "ES",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    7640,
+    7646
+   ],
+   "stop": 7630,
+   "objetivos": [
+    7665,
+    7680
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7640,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7635
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:38",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "ES-2026-10-30-I4",
+   "activo": "ES",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7700,
+    7703
+   ],
+   "stop": 7690,
+   "objetivos": [
+    7712,
+    7722
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7700
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7700,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7690
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:38",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "GC-2026-10-30-I1",
+   "activo": "GC",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    4003,
+    4013
+   ],
+   "stop": 4020,
+   "objetivos": [
+    3990,
+    3976
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4013,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4015
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:39",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "GC-2026-10-30-I2",
+   "activo": "GC",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    3975,
+    3979
+   ],
+   "stop": 3986,
+   "objetivos": [
+    3962.6,
+    3950
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3975
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3979,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3986
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:39",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "GC-2026-10-30-I3",
+   "activo": "GC",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    3963,
+    3970
+   ],
+   "stop": 3955,
+   "objetivos": [
+    3990,
+    4000
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3963,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3958
+   },
+   "slplus": "escalera",
+   "favor": "Va contra M15, H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:39",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "GC-2026-10-30-I4",
+   "activo": "GC",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    4011,
+    4015
+   ],
+   "stop": 4003,
+   "objetivos": [
+    4021,
+    4030
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 4013
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4011,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 4003
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:39",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "NQ-2026-10-30-I1",
+   "activo": "NQ",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    28990,
+    29060
+   ],
+   "stop": 29125,
+   "objetivos": [
+    28920,
+    28830
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29060,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29120
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:36",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "NQ-2026-10-30-I2",
+   "activo": "NQ",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    28820,
+    28850
+   ],
+   "stop": 28890,
+   "objetivos": [
+    28729.75,
+    28650
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28820
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28850,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28890
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-10-30T09:36",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "NQ-2026-10-30-I3",
+   "activo": "NQ",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    28730,
+    28760
+   ],
+   "stop": 28680,
+   "objetivos": [
+    28830,
+    28920
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28730,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28700
+   },
+   "slplus": "escalera",
+   "favor": "Va contra M15, H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:36",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "NQ-2026-10-30-I4",
+   "activo": "NQ",
+   "fecha": "2026-10-30",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    29145,
+    29170
+   ],
+   "stop": 29060,
+   "objetivos": [
+    29300,
+    29440
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 29145.25
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29145,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 29060
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-10-30T09:36",
+   "hasta": "2026-10-30T22:00"
+  },
+  {
+   "id": "BTC-2026-10-31-S1",
+   "activo": "BTC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en zona de corrección",
+   "dir": "largo",
+   "zona": [
+    76300,
+    76900
+   ],
+   "stop": 75800,
+   "objetivos": [
+    78900,
+    81015
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 76300
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 76300
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del semanal y contra D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "BTC-2026-10-31-S2",
+   "activo": "BTC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    78900,
+    80000
+   ],
+   "stop": 81100,
+   "objetivos": [
+    76300,
+    74335
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 80000
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 81015
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "BTC-2026-10-31-S3",
+   "activo": "BTC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    76000,
+    76300
+   ],
+   "stop": 77300,
+   "objetivos": [
+    74335,
+    69440
+   ],
+   "tick": 5,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 76300
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 76300
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 77300
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4 y contra W.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "CC-2026-10-31-S1",
+   "activo": "CC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · pullback",
+   "dir": "largo",
+   "zona": [
+    5362,
+    5420
+   ],
+   "stop": 5300,
+   "objetivos": [
+    5622,
+    5960
+   ],
+   "tick": 1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de D (cinta azul diaria).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "CC-2026-10-31-S2",
+   "activo": "CC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    5622,
+    5660
+   ],
+   "stop": 5540,
+   "objetivos": [
+    5840,
+    5960
+   ],
+   "tick": 1,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5622
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5622
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5540
+   },
+   "slplus": "escalera",
+   "favor": "Va contra D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 5790,
+     "lbl": "≈5.740‑5.840"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "CC-2026-10-31-S3",
+   "activo": "CC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · ruptura",
+   "dir": "corto",
+   "zona": [
+    5300,
+    5362
+   ],
+   "stop": 5460,
+   "objetivos": [
+    5200,
+    4918
+   ],
+   "tick": 1,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5362
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5460
+   },
+   "slplus": "escalera",
+   "favor": "Va contra tu sesgo alcista: tamaño reducido.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 5280,
+     "lbl": "≈5.200‑5.360"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "ES-2026-10-31-S1",
+   "activo": "ES",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    7500,
+    7542.25
+   ],
+   "stop": 7480,
+   "objetivos": [
+    7631,
+    7734.75
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 7500
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 7500
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del semanal y contra D y H4.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 7558.25,
+     "lbl": "7.558,25"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "ES-2026-10-31-S2",
+   "activo": "ES",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    7734.75,
+    7760
+   ],
+   "stop": 7680,
+   "objetivos": [
+    7832.75,
+    7901.75
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7734.75
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 7734.75
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 7680
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W y contra D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "ES-2026-10-31-S3",
+   "activo": "ES",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    7631,
+    7680
+   ],
+   "stop": 7740,
+   "objetivos": [
+    7542.25,
+    7425.25
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7680
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7734.75
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D, H4 y H1.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 7558.25,
+     "lbl": "7.558,25"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "ES-2026-10-31-S4",
+   "activo": "ES",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    7520,
+    7542.25
+   ],
+   "stop": 7631,
+   "objetivos": [
+    7425.25,
+    7333.5
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 7542.25
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7542.25
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7631
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4 y contra W.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "EURUSD-2026-10-31-S1",
+   "activo": "EURUSD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    1.1124,
+    1.114
+   ],
+   "stop": 1.111,
+   "objetivos": [
+    1.12495,
+    1.13125
+   ],
+   "tick": 0.00005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.1124
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.1124
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del rechazo semanal.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 1.1178,
+     "lbl": "1,11780"
+    },
+    {
+     "p": 1.1195,
+     "lbl": "≈1,1190‑1,1200"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "EURUSD-2026-10-31-S2",
+   "activo": "EURUSD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    1.12495,
+    1.126
+   ],
+   "stop": 1.12,
+   "objetivos": [
+    1.13125,
+    1.13715
+   ],
+   "tick": 0.00005,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.12495
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.12495
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.12
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W y contra D.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "EURUSD-2026-10-31-S3",
+   "activo": "EURUSD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · ruptura",
+   "dir": "corto",
+   "zona": [
+    1.111,
+    1.1124
+   ],
+   "stop": 1.118,
+   "objetivos": [
+    1.10745,
+    1.09895
+   ],
+   "tick": 0.00005,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.1124
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.1124
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.118
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del diario.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "GC-2026-10-31-S1",
+   "activo": "GC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    3820,
+    3835.9
+   ],
+   "stop": 3790,
+   "objetivos": [
+    3930,
+    3962.6
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3820
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3820
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4: tamaño reducido y salida rápida.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 3879.3,
+     "lbl": "3.879,3"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "GC-2026-10-31-S2",
+   "activo": "GC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    3962.6,
+    3980
+   ],
+   "stop": 3920,
+   "objetivos": [
+    4030,
+    4095.5
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3962.6
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3962.6
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3930
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "GC-2026-10-31-S3",
+   "activo": "GC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · pullback",
+   "dir": "corto",
+   "zona": [
+    3930,
+    3962.6
+   ],
+   "stop": 3995,
+   "objetivos": [
+    3835.9,
+    3716.5
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3962.6
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3962.6
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 3879.3,
+     "lbl": "3.879,3"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "KC-2026-10-31-S1",
+   "activo": "KC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    280.8,
+    285.45
+   ],
+   "stop": 278,
+   "objetivos": [
+    296,
+    308.95
+   ],
+   "tick": 0.05,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 280.8
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 280.8
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del diario y contra H4.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 291,
+     "lbl": "≈291"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "KC-2026-10-31-S2",
+   "activo": "KC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    296,
+    300
+   ],
+   "stop": 303,
+   "objetivos": [
+    285.45,
+    280.8
+   ],
+   "tick": 0.05,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 300
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 300
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H4 y W.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 291,
+     "lbl": "≈291"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "KC-2026-10-31-S3",
+   "activo": "KC",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    278,
+    280.8
+   ],
+   "stop": 286,
+   "objetivos": [
+    269.85
+   ],
+   "tick": 0.05,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 280.8
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 280.8
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 285.45
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NG-2026-10-31-S1",
+   "activo": "NG",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · pullback",
+   "dir": "largo",
+   "zona": [
+    2.784,
+    2.83
+   ],
+   "stop": 2.74,
+   "objetivos": [
+    2.922,
+    3.127
+   ],
+   "tick": 0.001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 2.784
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 2.784
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NG-2026-10-31-S2",
+   "activo": "NG",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    2.922,
+    2.96
+   ],
+   "stop": 2.86,
+   "objetivos": [
+    3.127,
+    3.305
+   ],
+   "tick": 0.001,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 2.922
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 2.922
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 2.86
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W y H4 y contra D.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 3,
+     "lbl": "≈2,950‑3,020"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NG-2026-10-31-S3",
+   "activo": "NG",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · ruptura",
+   "dir": "corto",
+   "zona": [
+    2.74,
+    2.784
+   ],
+   "stop": 2.86,
+   "objetivos": [
+    2.628,
+    2.492
+   ],
+   "tick": 0.001,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 2.784
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 2.784
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 2.86
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W y la estacionalidad: tamaño reducido.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NKD-2026-10-31-S1",
+   "activo": "NKD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    61890,
+    62270
+   ],
+   "stop": 61500,
+   "objetivos": [
+    63870,
+    64960
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 61890
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 61890
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H4 y H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NKD-2026-10-31-S2",
+   "activo": "NKD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    64165,
+    64960
+   ],
+   "stop": 65600,
+   "objetivos": [
+    62270,
+    60220
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 64960
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 64960
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del rechazo semanal.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 63870,
+     "lbl": "63.870"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NKD-2026-10-31-S3",
+   "activo": "NKD",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    61700,
+    61890
+   ],
+   "stop": 62700,
+   "objetivos": [
+    60220,
+    58300
+   ],
+   "tick": 5,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 61890
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 61890
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 62700
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NQ-2026-10-31-S1",
+   "activo": "NQ",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    28240.25,
+    28400
+   ],
+   "stop": 28090,
+   "objetivos": [
+    28729.75,
+    29145.25
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 28240.25
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 28240.25
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del semanal y contra D y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NQ-2026-10-31-S2",
+   "activo": "NQ",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    29145.25,
+    29250
+   ],
+   "stop": 28729.75,
+   "objetivos": [
+    29505.5,
+    29768.75
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 29145.25
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 29145.25
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 28729.75
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del semanal; necesita que el diario gire.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NQ-2026-10-31-S3",
+   "activo": "NQ",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    28729.75,
+    29145.25
+   ],
+   "stop": 29505.5,
+   "objetivos": [
+    28240.25,
+    27831
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 29145.25
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 29145.25
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D, H4 y H1.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "NQ-2026-10-31-S4",
+   "activo": "NQ",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    28100,
+    28232.75
+   ],
+   "stop": 28729.75,
+   "objetivos": [
+    27831,
+    27206
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 28232.75
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 28232.75
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 28729.75
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4 y rompe el soporte semanal.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "SI-2026-10-31-S1",
+   "activo": "SI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en soporte",
+   "dir": "largo",
+   "zona": [
+    48,
+    48.4
+   ],
+   "stop": 47.5,
+   "objetivos": [
+    50,
+    51
+   ],
+   "tick": 0.005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 48
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 48
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4: tamaño reducido.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 48.895,
+     "lbl": "48,895"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "SI-2026-10-31-S2",
+   "activo": "SI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    50,
+    51
+   ],
+   "stop": 51.6,
+   "objetivos": [
+    48.185,
+    45.06
+   ],
+   "tick": 0.005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 51
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 51
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de todos los marcos.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 48.895,
+     "lbl": "48,895"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "SI-2026-10-31-S3",
+   "activo": "SI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    47.9,
+    48.185
+   ],
+   "stop": 49,
+   "objetivos": [
+    45.06
+   ],
+   "tick": 0.005,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 48.185
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 48.185
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 48.895
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "WTI-2026-10-31-S1",
+   "activo": "WTI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · ruptura",
+   "dir": "largo",
+   "zona": [
+    104.99,
+    105.3
+   ],
+   "stop": 103.5,
+   "objetivos": [
+    106.86,
+    111.19
+   ],
+   "tick": 0.01,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 104.99
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 104.99
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 103.5
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W y D.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "WTI-2026-10-31-S2",
+   "activo": "WTI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · pullback",
+   "dir": "largo",
+   "zona": [
+    102.2,
+    102.6
+   ],
+   "stop": 101.4,
+   "objetivos": [
+    104.99,
+    106.86
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 102.2
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 101.4
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 103.75,
+     "lbl": "≈103,5‑104"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "WTI-2026-10-31-S3",
+   "activo": "WTI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rechazo en la directriz",
+   "dir": "corto",
+   "zona": [
+    104,
+    104.99
+   ],
+   "stop": 105.6,
+   "objetivos": [
+    102.38,
+    101
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 104.99
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 104.99
+   },
+   "slplus": "escalera",
+   "favor": "Va contra D y W: tamaño reducido.",
+   "reducido": true,
+   "niveles": [
+    {
+     "p": 103.75,
+     "lbl": "≈103,5‑104"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "WTI-2026-10-31-S4",
+   "activo": "WTI",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    102.1,
+    102.38
+   ],
+   "stop": 103.5,
+   "objetivos": [
+    101,
+    97.11
+   ],
+   "tick": 0.01,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 102.38
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 102.38
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 103.5
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W y D.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "XRP-2026-10-31-S1",
+   "activo": "XRP",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote en 1,1545",
+   "dir": "largo",
+   "zona": [
+    1.1545,
+    1.17
+   ],
+   "stop": 1.13,
+   "objetivos": [
+    1.203,
+    1.2855
+   ],
+   "tick": 0.0001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.1545
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.1545
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor del semanal.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "XRP-2026-10-31-S2",
+   "activo": "XRP",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Largo 2 · ruptura",
+   "dir": "largo",
+   "zona": [
+    1.2855,
+    1.295
+   ],
+   "stop": 1.25,
+   "objetivos": [
+    1.32,
+    1.4375
+   ],
+   "tick": 0.0001,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.2855
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.2855
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.25
+   },
+   "slplus": "escalera",
+   "favor": "Va contra D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "XRP-2026-10-31-S3",
+   "activo": "XRP",
+   "fecha": "2026-10-31",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    1.275,
+    1.2855
+   ],
+   "stop": 1.3,
+   "objetivos": [
+    1.203,
+    1.1545
+   ],
+   "tick": 0.0001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.2855
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.2855
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 1.245,
+     "lbl": "≈1,240‑1,250"
+    }
+   ],
+   "desde": "2026-11-01T00:00",
+   "hasta": "2026-11-06T23:00"
+  }
+ ],
+ "datos": [
+  {
+   "fecha": "2026-10-02",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Empleo de EE. UU. (NFP), septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-07",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Inventarios de crudo de la EIA (semana al 2 de octubre)",
+   "activos": [
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-07",
+   "hora": "20:00",
+   "imp": 3,
+   "ev": "Actas de la reunión de la Fed (15–16 de septiembre)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-08",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Almacenamientos de gas natural de la EIA (semana al 2 de octubre)",
+   "activos": [
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-12",
+   "hora": "18:50",
+   "imp": 2,
+   "ev": "Discurso de Hammack (Fed)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "02:30",
+   "imp": 2,
+   "ev": "Confianza empresarial NAB, septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "02:30",
+   "imp": 2,
+   "ev": "Actas del RBA",
+   "activos": [
+    "AUD",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "08:00",
+   "imp": 2,
+   "ev": "IPC final de Alemania, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "09:45",
+   "imp": 2,
+   "ev": "Discurso de Waller (Fed)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Cambio semanal del empleo ADP (ADP Employment Change Weekly)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "16:00",
+   "imp": 3,
+   "ev": "Ventas de viviendas de segunda mano (Existing Home Sales), septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Ventas de viviendas de segunda mano, variación mensual (Existing Home Sales MoM)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Discurso de Barkin (Fed)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "19:30",
+   "imp": 2,
+   "ev": "BCE: discurso de Lane",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-13",
+   "hora": "22:00",
+   "imp": 2,
+   "ev": "Discurso de Collins (Fed)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "03:30",
+   "imp": 2,
+   "ev": "IPC de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "03:30",
+   "imp": 2,
+   "ev": "IPP de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "04:10",
+   "imp": 2,
+   "ev": "Lagarde (BCE) habla; otra vez a las 10:30",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "04:30",
+   "imp": 2,
+   "ev": "Balanza comercial de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "09:00",
+   "imp": 3,
+   "ev": "IPC final de España, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "IPC de EE. UU. (CPI), septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "18:15",
+   "imp": 2,
+   "ev": "BCE: discurso de Schnabel",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-14",
+   "hora": "20:00",
+   "imp": 2,
+   "ev": "Beige Book de la Fed",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "02:30",
+   "imp": 2,
+   "ev": "Empleo de Australia, septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "08:00",
+   "imp": 2,
+   "ev": "PIB del Reino Unido, agosto",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "08:00",
+   "imp": 2,
+   "ev": "Producción industrial y manufacturera del Reino Unido, agosto",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "08:45",
+   "imp": 3,
+   "ev": "IPC final de Francia, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "10:45",
+   "imp": 2,
+   "ev": "Discurso de Breeden (Banco de Inglaterra)",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "Producción industrial de la zona euro, agosto",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Precios de producción (PPI), septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Ventas minoristas de EE. UU., septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Índice manufacturero de la Fed de Filadelfia, octubre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Almacenamientos de gas natural de la EIA (semana al 9 de octubre)",
+   "activos": [
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-15",
+   "hora": "18:00",
+   "imp": 2,
+   "ev": "Inventarios de crudo de la EIA (semana al 9 de octubre)",
+   "activos": [
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "05:30",
+   "imp": 3,
+   "ev": "Warsh (presidente de la Fed) habla",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "IPC final de la zona euro, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Precios de importación y exportación de EE. UU., septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "15:15",
+   "imp": 2,
+   "ev": "Producción industrial de EE. UU., septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "15:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-16",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Recuento de plataformas de Baker Hughes (EE. UU.)",
+   "activos": [
+    "WTI",
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "03:30",
+   "imp": 2,
+   "ev": "Precios de la vivienda nueva de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "04:00",
+   "imp": 3,
+   "ev": "PIB de China, tercer trimestre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "04:00",
+   "imp": 2,
+   "ev": "Producción industrial de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "04:00",
+   "imp": 2,
+   "ev": "Ventas minoristas de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "04:00",
+   "imp": 2,
+   "ev": "Inversión en activos fijos de China, acumulado anual, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "04:00",
+   "imp": 2,
+   "ev": "Paro urbano de China, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "IPC de Canadá, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Índice del mercado de la vivienda NAHB (NAHB Housing Market Index)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-19",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Encuesta de perspectivas empresariales del Banco de Canadá (BOS), 3T",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "03:15",
+   "imp": 3,
+   "ev": "Tipos LPR de China (PBoC): 1 año y 5 años, octubre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "08:00",
+   "imp": 3,
+   "ev": "Mercado laboral del Reino Unido (ONS), agosto: paro y salarios",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "08:00",
+   "imp": 2,
+   "ev": "Solicitantes de subsidio de paro y nóminas HMRC del Reino Unido, septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "ZEW alemán, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "ZEW de la zona euro, expectativas, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "Subasta de gilt a 10 años (2036)",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Cambio semanal del empleo ADP",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Permisos de construcción, variación mensual (preliminar)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Permisos de construcción (preliminar)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Inicios de viviendas (Housing Starts)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Inicios de viviendas, variación mensual",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-20",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Ventas de viviendas pendientes, variación mensual",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "01:50",
+   "imp": 2,
+   "ev": "Balanza comercial de Japón, septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "08:00",
+   "imp": 3,
+   "ev": "IPC del Reino Unido, septiembre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "15:00",
+   "imp": 2,
+   "ev": "Discurso de Bailey (Banco de Inglaterra)",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-21",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Inventarios de crudo de la EIA",
+   "activos": [
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "08:45",
+   "imp": 2,
+   "ev": "Confianza empresarial INSEE, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "10:30",
+   "imp": 2,
+   "ev": "IPC de Hong Kong, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "10:30",
+   "imp": 2,
+   "ev": "Paro de Hong Kong, trimestre junio-septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "12:50",
+   "imp": 2,
+   "ev": "Discurso de Bailey (Banco de Inglaterra)",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Confianza del consumidor de la zona euro, avance octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-22",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Almacenamientos de gas natural de la EIA",
+   "activos": [
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "00:00",
+   "imp": 2,
+   "ev": "PMI flash S&P Global de Australia, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "01:01",
+   "imp": 2,
+   "ev": "Confianza del consumidor GfK del Reino Unido, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "01:30",
+   "imp": 3,
+   "ev": "IPC nacional de Japón, septiembre",
+   "activos": [
+    "NKD",
+    "JPY",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "02:30",
+   "imp": 2,
+   "ev": "PMI flash S&P Global de Japón, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "08:00",
+   "imp": 3,
+   "ev": "Ventas minoristas del Reino Unido, septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "09:15",
+   "imp": 2,
+   "ev": "PMI flash de Francia, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "09:30",
+   "imp": 2,
+   "ev": "PMI flash de Alemania, octubre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "10:00",
+   "imp": 3,
+   "ev": "PMI flash de la zona euro, octubre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "10:30",
+   "imp": 3,
+   "ev": "PMI flash de S&P Global del Reino Unido, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Ventas minoristas de Canadá, agosto (final) y avance de septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "15:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-23",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Recuento de plataformas de Baker Hughes (EE. UU.)",
+   "activos": [
+    "WTI",
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-26",
+   "hora": "10:00",
+   "imp": 3,
+   "ev": "Ifo, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-26",
+   "hora": "18:00",
+   "imp": 2,
+   "ev": "Subasta de notas y bonos del Tesoro a 2 años (Nota a 2 años)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "07:45",
+   "imp": 2,
+   "ev": "Confianza del consumidor INSEE, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "08:00",
+   "imp": 3,
+   "ev": "EPA, paro 3T",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "18:00",
+   "imp": 2,
+   "ev": "Subasta de notas y bonos del Tesoro a 5 años (Nota a 5 años)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-27",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "01:30",
+   "imp": 3,
+   "ev": "IPC trimestral de Australia, tercer trimestre",
+   "activos": [
+    "AUD",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "01:30",
+   "imp": 3,
+   "ev": "IPC mensual de Australia, septiembre",
+   "activos": [
+    "AUD",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "08:00",
+   "imp": 2,
+   "ev": "GfK confianza del consumidor, noviembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "09:30",
+   "imp": 2,
+   "ev": "Comercio exterior de Hong Kong, septiembre",
+   "activos": [
+    "CN50",
+    "CNH",
+    "GC",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "12:00",
+   "imp": 2,
+   "ev": "Demandantes de empleo (Francia), septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "14:45",
+   "imp": 3,
+   "ev": "Decisión de tipos del Banco de Canadá e Informe de Política Monetaria",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Inventarios de crudo de la EIA",
+   "activos": [
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-28",
+   "hora": "19:00",
+   "imp": 3,
+   "ev": "Decisión de tipos de la Fed (reunión del 27–28 de octubre)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "04:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "09:00",
+   "imp": 2,
+   "ev": "Ventas minoristas de España, septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "10:30",
+   "imp": 2,
+   "ev": "Aprobaciones de hipotecas y crédito del Banco de Inglaterra, septiembre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "11:00",
+   "imp": 2,
+   "ev": "Sentimiento económico (ESI) de la zona euro, octubre",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "13:30",
+   "imp": 3,
+   "ev": "PIB de EE. UU. del 3.er trimestre (avance) y PCE de septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Ganancias semanales medias de Canadá (SEPH), agosto",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "14:15",
+   "imp": 3,
+   "ev": "Decisión de tipos del BCE",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "14:45",
+   "imp": 3,
+   "ev": "BCE: rueda de prensa de Lagarde",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Almacenamientos de gas natural de la EIA",
+   "activos": [
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "18:00",
+   "imp": 2,
+   "ev": "Subasta de notas y bonos del Tesoro a 7 años (Nota a 7 años)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "21:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-29",
+   "hora": "21:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "00:30",
+   "imp": 3,
+   "ev": "IPC de Tokio, octubre",
+   "activos": [
+    "NKD",
+    "JPY",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "00:30",
+   "imp": 2,
+   "ev": "Paro de Japón, septiembre",
+   "activos": [
+    "NKD",
+    "JPY"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "00:50",
+   "imp": 2,
+   "ev": "Producción industrial de Japón, septiembre (preliminar)",
+   "activos": [
+    "NKD",
+    "JPY"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "00:50",
+   "imp": 2,
+   "ev": "Ventas minoristas de Japón, septiembre",
+   "activos": [
+    "NKD",
+    "JPY"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "04:00",
+   "imp": 3,
+   "ev": "Decisión del Banco de Japón y Informe de Perspectivas",
+   "activos": [
+    "NKD",
+    "JPY",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "07:30",
+   "imp": 3,
+   "ev": "PIB de Francia, avance 3T",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "08:45",
+   "imp": 3,
+   "ev": "IPC adelantado de Francia, octubre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "09:00",
+   "imp": 3,
+   "ev": "PIB de España, avance 3T",
+   "activos": []
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "09:00",
+   "imp": 3,
+   "ev": "IPC adelantado de España, octubre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "09:55",
+   "imp": 3,
+   "ev": "Paro en Alemania, octubre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "10:00",
+   "imp": 3,
+   "ev": "PIB de Alemania, avance 3T",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "11:00",
+   "imp": 3,
+   "ev": "PIB de la zona euro, avance 3T",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "11:00",
+   "imp": 3,
+   "ev": "Paro de la zona euro, septiembre",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "13:30",
+   "imp": 3,
+   "ev": "Índice de costes laborales (ECI), 3.er trimestre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "13:30",
+   "imp": 3,
+   "ev": "PIB mensual de Canadá, agosto (y avance de septiembre)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "14:00",
+   "imp": 3,
+   "ev": "IPC adelantado de Alemania, octubre",
+   "activos": [
+    "GC",
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-10-30",
+   "hora": "18:00",
+   "imp": 2,
+   "ev": "Recuento de plataformas de Baker Hughes (EE. UU.)",
+   "activos": [
+    "WTI",
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "16:00",
+   "imp": 3,
+   "ev": "ISM manufacturero, octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "04:30",
+   "imp": 3,
+   "ev": "Decisión de tipos del RBA (Australia)",
+   "activos": []
+  },
+  {
+   "fecha": "2026-11-03",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Ofertas de empleo JOLTS, septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-04",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Balanza comercial de EE. UU., septiembre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-04",
+   "hora": "16:00",
+   "imp": 3,
+   "ev": "ISM de servicios, octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-05",
+   "hora": "13:00",
+   "imp": 3,
+   "ev": "Decisión de tipos del Banco de Inglaterra e Informe de Política Monetaria",
+   "activos": []
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Empleo de EE. UU. (NFP), octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "IPC de EE. UU., octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Subasta de notas y bonos del Tesoro a 10 años (Nota a 10 años)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Subasta de notas y bonos del Tesoro a 30 años (Bono a 30 años)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Precios de producción (PPI), octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-11-17",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Ventas minoristas de EE. UU., octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-11-18",
+   "hora": "20:00",
+   "imp": 3,
+   "ev": "Actas de la Fed (reunión de octubre)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-11-25",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "PIB del 3.er trimestre (2.ª estimación) y PCE de octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI"
+   ]
+  },
+  {
+   "fecha": "2026-12-09",
+   "hora": "20:00",
+   "imp": 3,
+   "ev": "Decisión de tipos de la Fed (reunión del 8–9 de diciembre)",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC",
+    "SI",
+    "WTI"
+   ]
+  }
+ ]
+}
