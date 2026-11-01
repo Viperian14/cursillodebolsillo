@@ -1,0 +1,33 @@
+name: Operativas para el bot
+
+# Genera operativas.json (lo lee el bot de NinjaTrader, ViperBot) cada vez que cambia index.html en main.
+on:
+  push:
+    branches: [main]
+    paths: ['index.html', 'scripts/generar_operativas.js']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: operativas
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: node scripts/generar_operativas.js index.html operativas.json
+      - name: Guardar operativas.json
+        run: |
+          git config user.name "bot-operativas"
+          git config user.email "bot@users.noreply.github.com"
+          git add operativas.json
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -q -m "Operativas para el bot $(date -u +%F\ %H:%M)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
+          exit 1
