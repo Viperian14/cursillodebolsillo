@@ -3128,6 +3128,10 @@ var ENTRIES = [
         "text": "Rechazo en 104,00‑104,99 con OUT o vela de rechazo en H1. Gatillo: vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 104,99, salgo aunque no haya tocado el stop. Stop sobre 105,60. Objetivos 102,38 y 101,0. Va contra D y W: tamaño reducido. Se anula con cierre H4 sobre 104,99."
       },
       {
+        "k": "Corto 2 · ruptura",
+        "text": "Cierre H4 bajo 102,38 (falsa ruptura de la directriz) y retesteo por debajo. Gatillo: en el retesteo, vela H1 de giro o de fuerza bajista (rojo, amarillo, naranja, rosa oscuro o marrón) con mecha de rechazo en la zona, o con OUT al cierre; entro al cierre de esa vela H1. Filtro H4: si la vela H4 cierra sobre 102,38, salgo aunque no haya tocado el stop. Stop sobre 103,50. Objetivos 101,0 y 97,11. Va contra W y D. Tamaño reducido. Se anula con cierre H4 sobre 103,50."
+      },
+      {
         "k": "Cuándo",
         "text": "Inventarios de crudo de la EIA el miércoles 4 a las 16:30 y empleo el viernes 6 (14:30). Ormuz manda: una noticia puede abrir hueco el lunes."
       }
@@ -3170,6 +3174,19 @@ var ENTRIES = [
         "targets": [
           102.38,
           101.0
+        ]
+      },
+      {
+        "k": "Corto 2 · ruptura",
+        "dir": "short",
+        "entry": [
+          102.1,
+          102.38
+        ],
+        "stop": 103.5,
+        "targets": [
+          101.0,
+          97.11
         ]
       }
     ],
@@ -32480,7 +32497,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       ['🔎 Filtro ' + F, fil ? cap1(fil) : 'Si la vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ', salgo aunque no haya tocado el stop.'],
       ['🎯 Objetivos', tg.map(function (t, i) { return (i + 1) + '.º ' + fmtT(e, t); }).join(' · ') + '.'],
       ['➕ SL+', slTxt],
-      ['🔁 Reentrada', 'Solo si me saca el SL+: el precio vuelve a ' + zona + ', sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado al otro lado. Una sola vez, con el stop original y los mismos objetivos' + (I ? ', y nunca en la vela de un dato ni en la de apertura.' : '.')],
+      ['🔁 Reentrada', 'Solo si me saca el SL+: el precio vuelve a ' + zona + ', sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado al otro lado. Una sola vez, con el stop original' + (stop ? ' (🛑 ' + stop + ')' : '') + ', no con el SL+; con los mismos objetivos' + ((pl.targets || []).length ? ' (🎯 ' + pl.targets.map(function (x) { return fmtT(e, x); }).join(' y ') + ')' : '') + ' y el mismo modo de SL+' + (I ? ', y nunca en la vela de un dato ni en la de apertura.' : '.')],
       ['❌ Se anula', anula ? cap1(anula) : cierre + '.']
     ];
     var sub = I ? 'intradía del ' + e.date.split('-').reverse().slice(0, 2).join('/') : 'swing de la ' + (e.title.match(/semana del [^·]*/i) || [''])[0].trim();
@@ -32493,7 +32510,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     h += sec('Así sería la entrada', 'normal');
     if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', '<li>El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.</li><li>Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.</li>');
     var pr = I ? ['80', '50'] : ['65', '20'];
-    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', '<li>Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.</li><li>El precio vuelve y salta el SL+: salgo con ganancia.</li><li>Rebota en la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez, con el stop original.</li>');
+    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', '<li>Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.</li><li>El precio vuelve y salta el SL+: salgo con ganancia.</li><li>Rebota en la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez.</li><li><b>La reentrada lleva el stop original' + (stop ? ' (' + esc(stop) + ')' : '') + '</b>, no el SL+; <b>los mismos objetivos' + ((pl.targets || []).length ? ' (' + pl.targets.map(function (x) { return fmtT(e, x); }).join(' y ') + ')' : '') + '</b> y el mismo modo de SL+, que vuelve a empezar desde la nueva entrada.</li>');
     h += sec('Cuándo salgo antes del stop', 'anula', '<li>La vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ': salgo aunque el precio no haya tocado el stop. No hay reentrada.</li>');
     if (md === 'esc' && !I) { var sl = slPlus(e, pl); if (sl) h += '<section><h3>Precios del SL+</h3><div class="pd-sl">' + sl + '</div></section>'; }
     return h;
@@ -32523,8 +32540,8 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       else (si.long ? L : S).push({ p: p, si: si });
     });
     var h = '<p class="note">📈 largo · 📉 corto · ↩️ pullback · 🎯 retesteo · ⚡ ruptura · 🚨 nivel importante · 🛑 stop · 🎯 objetivos · Todas las horas son de España</p>';
-    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+ según el contexto:</b> si la operativa va a favor de D y H4, estructural (el stop va detrás de cada corrección H1 confirmada); si no, en escalera (al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el objetivo el 75&nbsp;%). Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> si me saca el SL+ y el precio vuelve a la zona con otro gatillo H1, sin cierre H4 en contra, reentro una sola vez con el stop original.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
-    if (e.mode === 'intra' && e.date >= '2026-10-30') h += '<div class="note"><b>Cómo entro y gestiono en intradía</b><ol class="steps"><li><b>Gatillo (M5/M15):</b> en la zona o en el retesteo, vela de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela, nunca en la de un dato ni en la primera de la apertura.</li><li><b>Filtro (M15):</b> si la vela M15 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 50&nbsp;% del camino al 1.er objetivo aseguro el 10&nbsp;% y al 80&nbsp;%, el 50&nbsp;%. En el 1.er objetivo, si va a favor del H1 aseguro el 25&nbsp;% y sigo las correcciones del M5; si no, el 75&nbsp;%. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> si me saca el SL+ y el precio vuelve a la zona con otro gatillo, sin cierre M15 en contra, reentro una sola vez con el stop original.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
+    if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+ según el contexto:</b> si la operativa va a favor de D y H4, estructural (el stop va detrás de cada corrección H1 confirmada); si no, en escalera (al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el objetivo el 75&nbsp;%). Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo si me saca el SL+ (nunca tras el stop ni tras el filtro H4). Si el precio vuelve a la zona o al retesteo con otro gatillo H1 y sin cierre H4 en contra, reentro una sola vez. <b>La reentrada lleva el stop original</b> (no el SL+), <b>los mismos objetivos</b> y el mismo modo de SL+.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
+    if (e.mode === 'intra' && e.date >= '2026-10-30') h += '<div class="note"><b>Cómo entro y gestiono en intradía</b><ol class="steps"><li><b>Gatillo (M5/M15):</b> en la zona o en el retesteo, vela de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela, nunca en la de un dato ni en la primera de la apertura.</li><li><b>Filtro (M15):</b> si la vela M15 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 50&nbsp;% del camino al 1.er objetivo aseguro el 10&nbsp;% y al 80&nbsp;%, el 50&nbsp;%. En el 1.er objetivo, si va a favor del H1 aseguro el 25&nbsp;% y sigo las correcciones del M5; si no, el 75&nbsp;%. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo si me saca el SL+ (nunca tras el stop ni tras el filtro M15). Si el precio vuelve a la zona o al retesteo con otro gatillo y sin cierre M15 en contra, reentro una sola vez, nunca en la vela de un dato ni en la de apertura. <b>La reentrada lleva el stop original</b> (no el SL+), <b>los mismos objetivos</b> y el mismo modo de SL+.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
     if (rec.length) {
       var tm = (rec[0].k.match(/\((.*?)\)/) || [])[1];
       h += '<div class="recent"><div class="rh">🕒 Análisis reciente' + (tm ? ' · ' + esc(tm) : '') + '</div>' + rec.map(function (p) { return sentList(p.text, false); }).join('') +
@@ -33475,7 +33492,7 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
         '<li><b>Entrada:</b> al cierre de la vela H1 de gatillo (giro o fuerza a favor con mecha de rechazo en la zona).</li>' +
         '<li><b>Filtro H4:</b> salida si el H4 cierra al otro lado del nivel.</li>' +
         '<li><b>SL+ híbrido:</b> a favor de D y H4, estructural (detrás de cada corrección H1 confirmada); en contra, escalera (30/50/65/80&nbsp;% → 5/10/20/50&nbsp;%, y 75&nbsp;% en el objetivo).</li>' +
-        '<li><b>Reentrada:</b> una sola vez si salta el SL+ y vuelve a la zona con otro gatillo H1.</li>' +
+        '<li><b>Reentrada:</b> una sola vez si salta el SL+ y vuelve a la zona con otro gatillo H1; lleva el stop original, los mismos objetivos y el mismo modo de SL+.</li>' +
         '<li><b>Precisión:</b> precios medidos a ojo sobre el H1, con «≈». NG no se valora por el cambio de contrato del 28.</li></ol></div>' +
         '<div class="tablewrap"><table class="dt stack"><thead><tr><th>Activo</th><th>Operativa</th><th>Como se anotó</th><th>SL+</th><th>Con la regla nueva</th><th></th></tr></thead><tbody>' +
         tr.map(function (r) { return '<tr><td>' + esc(ASSET_NAMES[r[0]] || r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td>' + esc(r[4]) + '</td><td>' + tagEf(r[5]) + '</td></tr>'; }).join('') +
