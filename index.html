@@ -32512,7 +32512,9 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     var sub = I ? 'intradía del ' + e.date.split('-').reverse().slice(0, 2).join('/') : 'swing de la ' + (e.title.match(/semana del [^·]*/i) || [''])[0].trim();
     var h = '<div class="pd-head"><button type="button" class="pd-back" data-plclose>← Volver al análisis</button><h2>' + x.si.icon + ' ' + esc(x.p.k) + '</h2><p class="pd-sub">' + esc((ASSET_NAMES[e.asset] || e.asset) + ' · ' + sub) + '</p>' +
       '<div class="pd-chips"><span class="pd-chip">' + esc(favor || 'Contexto sin indicar') + '</span><span class="pd-chip ' + md + '">' + (md === 'estr' ? 'SL+ estructural' : 'SL+ en escalera') + '</span></div></div>';
-    h += '<section><h3>Paso a paso</h3><ul class="ps">' + steps.map(function (q) { return '<li><span class="l">' + q[0] + '</span><span class="v">' + esc(q[1]) + '</span></li>'; }).join('') + '</ul>' + (d0.seq || '') + '</section>';
+    var SX = {}; steps.forEach(function (q) { SX[q[0].split(' ')[0]] = q; });
+    function it(ic) { var q = SX[ic]; return q ? ['', '<b>' + esc(q[0].replace(/^\S+\s/, '')) + ':</b> ' + esc(q[1])] : null; }
+    if (d0.seq) h += '<section>' + d0.seq + '</section>';
     h += '<p class="note pd-ilus"><b>Gráficos ilustrativos.</b> Las velas de estos dibujos son un ejemplo de cómo se ejecuta la operativa. No son una previsión de lo que hará el precio.</p>';
     var CAP = '<p class="pd-cap">Gráfico ilustrativo: velas de ejemplo, no es una previsión.</p>', L1 = 'Gatillo ' + G + ' y entrada al cierre.', n = 1;
     function sec(t, v, intro, res, items, plain) {
@@ -32521,15 +32523,15 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
         items.map(function (it, k) { return '<li><span class="n">' + (plain ? it[0] : k + 1) + '</span><span>' + (plain ? it[1] : it) + '</span></li>'; }).join('') + '</ol></div></div></section>';
     }
     var tgs = (pl.targets || []).map(function (q) { return fmtT(e, q); });
-    h += sec('Así sería la entrada', 'normal', 'La operativa va bien desde la entrada hasta los objetivos.', ['ok', 'Resultado: llega a los objetivos'],
-      [['🕯️', L1], ['🎯', 'Llega al 1.er objetivo' + (tgs[0] ? ' (' + tgs[0] + ')' : '') + '.']].concat(tgs[1] ? [['🎯', 'Llega al 2.º objetivo (' + tgs[1] + ').']] : []), true);
+    h += sec('Así sería la entrada', 'normal', 'Paso a paso de la operativa cuando sale bien, desde la espera hasta los objetivos.', ['ok', 'Resultado: llega a los objetivos'],
+      ['⏳', '⏱️', '✅', '🛑', '🎯', '➕'].map(function (ic) { var r = it(ic); if (r) r[0] = ic; return r; }).filter(Boolean), true);
     if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', 'Cómo acompaña el SL+ al precio (estructural: va a favor de D y H4).', ['ok', 'Resultado: el SL+ acompaña el movimiento'],
       [L1, 'El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.', 'Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.']);
     var pr = I ? ['80', '50'] : ['65', '20'];
-    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', 'Solo hay reentrada si me saca el SL+. Lleva el stop original, los mismos objetivos y el mismo modo de SL+.', ['mid', 'Resultado: sale con ganancia y reentra una vez'],
+    h += sec('Si salta el SL+ y hay rebote: reentrada', 'reent', '<b>Reentrada:</b> ' + esc(SX['🔁'] ? SX['🔁'][1] : 'solo si me saca el SL+, con el stop original y los mismos objetivos.'), ['mid', 'Resultado: sale con ganancia y reentra una vez'],
       [L1, 'Llega al ' + pr[0] + ' % del camino: el SL+ asegura el ' + pr[1] + ' %.', 'El precio vuelve y salta el SL+: salgo con ganancia.',
        'Vuelve a la zona, sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado en contra: reentro una sola vez, con el stop original' + (stop ? ' (' + esc(stop) + ')' : '') + ', no el SL+, y los mismos objetivos' + (tgs.length ? ' (' + tgs.join(' y ') + ')' : '') + '.']);
-    h += sec('Filtro ' + F + ': salgo antes de tocar el stop', 'anula', 'Es la primera entrada, no la reentrada. Si el precio se da la vuelta y una vela ' + F + ' cierra al otro lado de la zona, salgo sin esperar al stop: pierdo menos. Como con el stop, aquí la operativa termina y no hay reentrada.', ['out', 'Resultado: pierdo menos que con el stop y la operativa termina'],
+    h += sec('Filtro ' + F + ': salgo antes de tocar el stop', 'anula', 'Es la primera entrada, no la reentrada. Si el precio se da la vuelta y una vela ' + F + ' cierra al otro lado de la zona, salgo sin esperar al stop: pierdo menos. Como con el stop, aquí la operativa termina y no hay reentrada.' + (SX['🔎'] ? '<br><b>' + esc(SX['🔎'][0].replace(/^\S+\s/, '')) + ':</b> ' + esc(SX['🔎'][1]) : '') + (SX['❌'] ? '<br><b>Se anula:</b> ' + esc(SX['❌'][1]) : ''), ['out', 'Resultado: pierdo menos que con el stop y la operativa termina'],
       [L1, 'El precio se da la vuelta y la vela ' + F + ' cierra ' + (long ? 'bajo ' : 'sobre ') + fmtT(e, long ? lo : hi) + ', el borde de la zona: la operativa ya no vale. Salgo al cierre de esa vela, antes de llegar al stop' + (stop ? ' (' + esc(stop) + ')' : '') + '. No hay reentrada.']);
     h += '<section><h3>Qué me saca de la operativa</h3><div class="tablewrap"><table class="dt"><thead><tr><th>Qué me saca</th><th>Resultado</th><th>¿Reentrada?</th></tr></thead><tbody>' +
       '<tr><td>🛑 Stop</td><td>Pérdida completa</td><td>No</td></tr><tr><td>🚪 Filtro ' + F + ' (cierre al otro lado de la zona)</td><td>Pérdida menor</td><td>No</td></tr><tr><td>➕ SL+</td><td>Ganancia</td><td>Sí, una vez</td></tr></tbody></table></div></section>';
