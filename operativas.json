@@ -4472,6 +4472,462 @@
    ],
    "desde": "2026-11-01T00:00",
    "hasta": "2026-11-06T23:00"
+  },
+  {
+   "id": "ES-2026-11-02-I1",
+   "activo": "ES",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7654,
+    7660
+   ],
+   "stop": 7670,
+   "objetivos": [
+    7636,
+    7626
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7660,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7662
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:34",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "ES-2026-11-02-I2",
+   "activo": "ES",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7631,
+    7636
+   ],
+   "stop": 7645,
+   "objetivos": [
+    7615,
+    7600
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7631
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7636,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7645
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:34",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "ES-2026-11-02-I3",
+   "activo": "ES",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    7626,
+    7631
+   ],
+   "stop": 7614,
+   "objetivos": [
+    7646,
+    7656
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7626,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7620
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:34",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "ES-2026-11-02-I4",
+   "activo": "ES",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7656,
+    7660
+   ],
+   "stop": 7645,
+   "objetivos": [
+    7674,
+    7692
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7660
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7656,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7648
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:34",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "GC-2026-11-02-I1",
+   "activo": "GC",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    3913,
+    3920
+   ],
+   "stop": 3930,
+   "objetivos": [
+    3900,
+    3887
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3920,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3928
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:35",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "GC-2026-11-02-I2",
+   "activo": "GC",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    3900,
+    3904
+   ],
+   "stop": 3912,
+   "objetivos": [
+    3887,
+    3875
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3900
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3904,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3912
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:35",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "GC-2026-11-02-I3",
+   "activo": "GC",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    3880,
+    3887
+   ],
+   "stop": 3870,
+   "objetivos": [
+    3900,
+    3913
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3880,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3876
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:35",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "GC-2026-11-02-I4",
+   "activo": "GC",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    3924,
+    3928
+   ],
+   "stop": 3913,
+   "objetivos": [
+    3943,
+    3960
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3928
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3924,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3915
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:35",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "NQ-2026-11-02-I1",
+   "activo": "NQ",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    28800,
+    28835
+   ],
+   "stop": 28880,
+   "objetivos": [
+    28730,
+    28640
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28835,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28840
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:33",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "NQ-2026-11-02-I2",
+   "activo": "NQ",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    28710,
+    28730
+   ],
+   "stop": 28775,
+   "objetivos": [
+    28600,
+    28545
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28710
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28730,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28775
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-02T09:33",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "NQ-2026-11-02-I3",
+   "activo": "NQ",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (rebote)",
+   "dir": "largo",
+   "zona": [
+    28570,
+    28600
+   ],
+   "stop": 28520,
+   "objetivos": [
+    28700,
+    28770
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28570,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28540
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:33",
+   "hasta": "2026-11-02T22:00"
+  },
+  {
+   "id": "NQ-2026-11-02-I4",
+   "activo": "NQ",
+   "fecha": "2026-11-02",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    28835,
+    28850
+   ],
+   "stop": 28780,
+   "objetivos": [
+    28950,
+    29000
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 28840
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28835,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 28780
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-02T09:33",
+   "hasta": "2026-11-02T22:00"
   }
  ],
  "datos": [
@@ -6272,6 +6728,33 @@
    "activos": [
     "WTI",
     "NG"
+   ]
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-02",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
    ]
   },
   {
