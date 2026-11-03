@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T13:22:25Z",
+ "updated": "2026-11-03T15:30:13Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -53,6 +53,12 @@
    "d": "2026-10-30",
    "match": "Índice de costes laborales (ECI), 3.er trimestre",
    "act": "+0,8% t/t",
+   "res": ""
+  },
+  {
+   "d": "2026-11-03",
+   "match": "Ofertas de empleo JOLTS, septiembre",
+   "act": "7,523 M",
    "res": ""
   }
  ]
