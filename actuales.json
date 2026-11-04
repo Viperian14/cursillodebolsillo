@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T15:30:13Z",
+ "updated": "2026-11-04T15:13:52Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -59,6 +59,12 @@
    "d": "2026-11-03",
    "match": "Ofertas de empleo JOLTS, septiembre",
    "act": "7,523 M",
+   "res": ""
+  },
+  {
+   "d": "2026-11-04",
+   "match": "Balanza comercial de EE. UU., septiembre",
+   "act": "−105 mil M$",
    "res": ""
   }
  ]
