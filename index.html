@@ -37102,7 +37102,37 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
       plan: 'Cierre M15 bajo 28.710 con color de fuerza bajista; entro en el retesteo 28.710‑28.730. Stop sobre 28.775. Objetivos 28.600 y 28.545.',
       goals: [['28.600', 'hit'], ['28.545', 'hit']],
       pasa: 'Los cierres de las 13:30‑13:45 (≈28.700‑28.705) no siguieron y el de las 15:45 fue con duda tras la apertura: la subida de las 16:15 lo dejó sin efecto. Fuera de la apertura y con H1 y H4 a favor, la vela naranja de las 17:00 cerró bajo 28.710 (≈28.690) y siguió. Llegó a 28.600 a las 18:15 y a 28.545 a las 18:30 (mínimo ≈28.530); por la noche, ≈28.100.',
-      res: 'Ganadora: de ≈28.690 a 28.545, ≈145 puntos, con entrada al cierre de la vela de ruptura (no volvió al retesteo).' }
+      res: 'Ganadora: de ≈28.690 a 28.545, ≈145 puntos, con entrada al cierre de la vela de ruptura (no volvió al retesteo).' },
+    { asset: 'GC', date: '2026-11-03', mode: 'intra', dir: 'Largo', setup: 'Largo de ruptura (sobre 3.942)', out: 'win', match: 'Exacta', doble: true,
+      plan: 'Cierre M15 sobre 3.942 con IN al cierre o color verde; entro en el retesteo 3.940‑3.944. Stop bajo 3.930. Objetivos 3.962,6 y 3.975. Contra H1 y H4: tamaño pequeño.',
+      goals: [['3.962,6', 'hit'], ['3.975', 'hit']],
+      pasa: 'La subida de las 13:45 cerró sobre 3.942 hacia las 14:00. Entre las 14:15 y las 14:30 retesteó 3.940‑3.948 y la vela verde de las 14:30 cerró en ≈3.945 (activación). A las 14:35 tocó 3.962,6 y hacia las 14:50 llegó a ≈3.978. El stop quedó lejos.',
+      res: 'Ganadora: de ≈3.945 a 3.975, ≈30 puntos.' },
+    { asset: 'GC', date: '2026-11-03', mode: 'intra', dir: 'Corto', setup: 'Corto de ruptura (bajo 3.910)', out: 'loss', match: 'Parcial',
+      plan: 'Cierre M15 bajo 3.910 con color de fuerza bajista; entro en el retesteo 3.910‑3.914. Stop sobre 3.922. Objetivos 3.896 y 3.882.',
+      goals: [['3.896', 'miss'], ['3.882', 'miss']],
+      pasa: 'Fuera de la apertura y con H1 y H4 a favor, la vela de las 10:00 cerró bajo 3.910 (≈3.905) con un OUT y siguió hasta ≈3.903. No hubo más caída: la vela M15 de las 10:30 cerró otra vez sobre 3.910 (≈3.912) y el oro se quedó en 3.910‑3.920 hasta las 13:30. A las 13:45 subió de golpe por encima del stop.',
+      res: 'Fallo parcial: salida por el filtro M15 a las 10:45 (≈3.912), ≈7 puntos de pérdida (≈40 % del camino al stop). Sin el filtro, el stop 3.922 habría saltado a las 13:45.' },
+    { asset: 'ES', date: '2026-11-03', mode: 'intra', dir: 'Corto', setup: 'Corto de rebote (7.575‑7.585)', out: 'win', match: 'Aproximada',
+      plan: 'Rechazo en 7.575‑7.585 con vela de giro o de fuerza bajista en M5/M15; entro al cierre de esa vela. Stop sobre 7.596. Objetivos 7.560 y 7.546.',
+      goals: [['7.560', 'near'], ['7.546', 'miss']],
+      pasa: 'Hacia las 13:35‑13:50 el ES tocó el borde bajo de la zona (≈7.575‑7.576) con velas rojas y amarillas y la vela cerró en ≈7.573. Bajó a ≈7.562 hacia las 14:20 y no tocó 7.560. A las 14:30, con un IN, subió de golpe por encima del stop.',
+      res: 'Ganadora aproximada: de ≈7.573 a ≈7.562, ≈11 puntos (≈85 % del camino); el primer objetivo se quedó a ≈2 puntos. El stop saltó después. Gatillo valorado a ojo.' },
+    { asset: 'ES', date: '2026-11-03', mode: 'intra', dir: 'Largo', setup: 'Largo de ruptura (sobre 7.590)', out: 'win', match: 'Exacta',
+      plan: 'Cierre M15 sobre 7.590 con IN al cierre o color verde; entro en el retesteo 7.586‑7.590. Stop bajo 7.575. Objetivos 7.605 y 7.625. Contra H1 y H4: tamaño pequeño.',
+      goals: [['7.605', 'hit'], ['7.625', 'miss']],
+      pasa: 'El salto de las 14:30 no aguantó: a las 15:20 el ES volvió a ≈7.575. La vela de la apertura (15:30) no cuenta; la vela M15 de las 15:45 cerró sobre 7.590 (≈7.598) y el retroceso de las 16:15 se quedó en ≈7.594, rechazado. Tocó 7.605 hacia las 16:30 y ≈7.620 a las 19:40. No llegó a 7.625 en el día.',
+      res: 'Ganadora: solo el primer objetivo, de ≈7.596 a 7.605, ≈9 puntos, con entrada aproximada (el retesteo se quedó ≈4 puntos sobre la zona).' },
+    { asset: 'NQ', date: '2026-11-03', mode: 'intra', dir: 'Corto', setup: 'Corto de rebote (28.200‑28.240)', out: 'win', match: 'Aproximada',
+      plan: 'Rechazo en 28.200‑28.240 con vela de giro o de fuerza bajista en M5/M15; entro al cierre de esa vela. Stop sobre 28.300. Objetivos 28.100 y 28.040.',
+      goals: [['28.100', 'near'], ['28.040', 'miss']],
+      pasa: 'El NQ subió a la zona hacia las 10:30 con velas verdes, sin rechazo. Entre las 12:30 y las 13:00 hubo velas rojas y amarillas dentro de la zona y la roja cerró en ≈28.225. A las 13:15 una mecha bajó a ≈28.120 y no tocó 28.100. A las 14:30 subió por encima del stop.',
+      res: 'Ganadora aproximada: de ≈28.225 a ≈28.120, ≈105 puntos (≈84 % del camino); el primer objetivo se quedó a ≈20 puntos. El stop saltó después.' },
+    { asset: 'NQ', date: '2026-11-03', mode: 'intra', dir: 'Largo', setup: 'Largo de ruptura (sobre 28.270)', out: 'win', match: 'Exacta',
+      plan: 'Cierre M15 sobre 28.270 con IN al cierre o color verde; entro en el retesteo 28.250‑28.270. Stop bajo 28.190. Objetivos 28.400 y 28.500. Contra H1 y H4: tamaño pequeño.',
+      goals: [['28.400', 'hit'], ['28.500', 'miss']],
+      pasa: 'La vela de las 14:30 cerró sobre 28.270 (≈28.345). La de la apertura (15:30) no cuenta; la vela verde de las 15:45 bajó con mecha hasta ≈28.200, dentro del retesteo y sin tocar el stop, y cerró en ≈28.340 (activación). Tocó 28.400 hacia las 17:00 (máximo ≈28.430 a las 17:15). A las 21:00 bajó a ≈28.235 sin tocar el stop. El 28.512 llegó ya en la sesión de la noche.',
+      res: 'Ganadora: solo el primer objetivo, de ≈28.340 a 28.400, ≈60 puntos.' }
   ];
   var NOACT = [
     ['GC', '2026-10-12', 'Largo de rebote (4.197‑4.193)', 'El precio atravesó la zona sin rechazo alcista y siguió cayendo.'],
@@ -37170,9 +37200,14 @@ var KEYLV = { "NQ-2026-10-31": [30078,29768.75,29505.5,29145.25,28729.75,28240.2
     ['GC', '2026-11-02', 'Largo de ruptura (sobre 3.928)', 'La vela del IN de las 14:30 cerró en ≈3.952, pero va contra H1 y H4 y no hubo retesteo de 3.924‑3.928 (el retroceso se quedó en ≈3.945): sin entrada.'],
     ['ES', '2026-11-02', 'Largo de ruptura (sobre 7.660)', 'Cierre sobre 7.660 a las 16:00 con IN, contra H4 y sin retesteo; el retroceso de 17:15‑18:00 a la zona fue con velas bajistas, sin gatillo alcista.'],
     ['NQ', '2026-11-02', 'Largo de rebote (28.570‑28.600)', 'Se anuló con el cierre M15 de las 18:30 bajo 28.540 (≈28.535) antes de la vela verde de las 18:45.'],
-    ['NQ', '2026-11-02', 'Largo de ruptura (sobre 28.840)', 'Cierre sobre 28.840 a las 16:15 (≈28.880), contra H4; en el retesteo de las 16:30 no hubo vela de giro alcista y a las 16:45 cayó por el stop.']
+    ['NQ', '2026-11-02', 'Largo de ruptura (sobre 28.840)', 'Cierre sobre 28.840 a las 16:15 (≈28.880), contra H4; en el retesteo de las 16:30 no hubo vela de giro alcista y a las 16:45 cayó por el stop.'],
+    ['GC', '2026-11-03', 'Corto de rebote (3.926‑3.934)', 'La subida de las 13:45 atravesó la zona con velas verdes, sin rechazo; después el precio volvió a ella desde arriba, no en rebote.'],
+    ['GC', '2026-11-03', 'Largo de rebote (3.887‑3.895)', 'El precio no llegó a la zona (mínimo ≈3.903).'],
+    ['ES', '2026-11-03', 'Corto de ruptura (bajo 7.542)', 'No hubo cierre M15 por debajo en el día; la caída a 7.490 fue en la sesión de la noche.'],
+    ['ES', '2026-11-03', 'Largo de rebote (7.542‑7.548)', 'El precio no volvió a la zona en el día.'],
+    ['NQ', '2026-11-03', 'Corto de ruptura (bajo 28.040)', 'No hubo cierre M15 por debajo en el día; la caída a 27.615,75 fue en la sesión de la noche.'],
+    ['NQ', '2026-11-03', 'Largo de rebote (27.840‑27.880)', 'El precio no llegó a la zona en el día.']
   ];
-
 
   var SWING = [
     { asset: 'NQ', date: '2026-10-11', mode: 'swing', dir: 'Corto', setup: 'Corto de ruptura y retesteo', out: 'win', match: 'Exacta', doble: true,
