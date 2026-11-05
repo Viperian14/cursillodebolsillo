@@ -8183,6 +8183,28 @@
   },
   {
    "fecha": "2026-11-04",
+   "hora": "11:00",
+   "imp": 3,
+   "ev": "IPC adelantado de la zona euro, octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-04",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Empleo privado ADP, octubre",
+   "activos": [
+    "ES",
+    "NQ",
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-04",
    "hora": "14:30",
    "imp": 2,
    "ev": "Balanza comercial de EE. UU., septiembre",
@@ -8231,6 +8253,15 @@
    ]
   },
   {
+   "fecha": "2026-11-04",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Inventarios de crudo de la EIA",
+   "activos": [
+    "WTI"
+   ]
+  },
+  {
    "fecha": "2026-11-05",
    "hora": "13:00",
    "imp": 3,
@@ -8268,27 +8299,11 @@
    "fecha": "2026-11-05",
    "hora": "14:30",
    "imp": 2,
-   "ev": "Hora citada en «Cuándo» del intradía",
+   "ev": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
    "activos": [
+    "ES",
+    "NQ",
     "GC"
-   ]
-  },
-  {
-   "fecha": "2026-11-05",
-   "hora": "14:30",
-   "imp": 2,
-   "ev": "Hora citada en «Cuándo» del intradía",
-   "activos": [
-    "ES"
-   ]
-  },
-  {
-   "fecha": "2026-11-05",
-   "hora": "14:30",
-   "imp": 2,
-   "ev": "Hora citada en «Cuándo» del intradía",
-   "activos": [
-    "NQ"
    ]
   },
   {
@@ -8317,6 +8332,22 @@
    "activos": [
     "NQ"
    ]
+  },
+  {
+   "fecha": "2026-11-05",
+   "hora": "16:30",
+   "imp": 2,
+   "ev": "Almacenamientos de gas natural de la EIA",
+   "activos": [
+    "NG"
+   ]
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "14:30",
+   "imp": 3,
+   "ev": "Empleo de Canadá, octubre",
+   "activos": []
   },
   {
    "fecha": "2026-11-06",
@@ -8329,6 +8360,26 @@
     "GC",
     "SI",
     "WTI"
+   ]
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Confianza del consumidor de la Universidad de Michigan, noviembre (preliminar)",
+   "activos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-06",
+   "hora": "19:00",
+   "imp": 2,
+   "ev": "Recuento de plataformas de Baker Hughes (EE. UU.)",
+   "activos": [
+    "WTI",
+    "NG"
    ]
   },
   {
