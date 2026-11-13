@@ -1,1 +1,2 @@
+S&P 500	Kenvue	NYSE:KVUE	KVUE
 S&P 500	Paramount Skydance	NASDAQ:PSKY	PSKY
