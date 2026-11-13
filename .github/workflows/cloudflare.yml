@@ -1,0 +1,31 @@
+name: Publicar en Cloudflare
+
+# Sube la web al bucket R2 de Cloudflare (cursillodebolsillo.com) cada vez que cambia main:
+# por un merge de análisis o por los bots (precios, fundamentales, datos reales y operativas).
+# Solo sube los archivos que han cambiado. Necesita el secreto CLOUDFLARE_API_TOKEN.
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Actualizar precios", "Actualizar fundamentales", "Datos reales del calendario", "Operativas para el bot"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Subir a Cloudflare R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 scripts/publicar_cloudflare.py publicar .
