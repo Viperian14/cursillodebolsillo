@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T00:46:52+00:00",
+ "actualizado": "2026-11-14T12:31:46+00:00",
  "parametros": {
   "margen": 0.15,
   "min_señales": 3,
@@ -536,7 +536,7 @@
    "roe": 52.84,
    "deuda": 21.018,
    "dividendo": 7.604,
-   "dividendo_yahoo": 7.55,
+   "dividendo_yahoo": 7.6,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -583,7 +583,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 52.84,
@@ -1116,12 +1116,12 @@
   "0019.HK": {
    "dominio": "swirepacific.com",
    "sector_yahoo": "Industrials",
-   "per": 17.296467,
-   "eps": 6.51,
+   "per": 17.138508,
+   "eps": 6.57,
    "roe": 3.24,
    "deuda": 0.294,
    "dividendo": 3.552,
-   "dividendo_yahoo": 3.52,
+   "dividendo_yahoo": 3.55,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -1165,7 +1165,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 17.296467,
+     "valor": 17.138508,
      "voto": -1.0,
      "mediana": 10.164
     },
@@ -1421,8 +1421,8 @@
    "señales": {
     "per": {
      "valor": 14.311475,
-     "voto": 0.0,
-     "mediana": 12.458
+     "voto": -0.5,
+     "mediana": 12.296
     },
     "roe": {
      "valor": 13.01,
@@ -1450,8 +1450,8 @@
     "n": 57,
     "pequeno": false
    },
-   "puntuacion": 5.0,
-   "etiqueta": "Muy favorable",
+   "puntuacion": 4.0,
+   "etiqueta": "Favorable",
    "deuda_etiqueta": "bajo"
   },
   "0041.HK": {
@@ -1705,7 +1705,7 @@
    "roe": 1.38,
    "deuda": 1.017,
    "dividendo": 1.457,
-   "dividendo_yahoo": 1.42,
+   "dividendo_yahoo": 1.46,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -2300,7 +2300,7 @@
    "roe": 9.21,
    "deuda": 0.228,
    "dividendo": 5.07,
-   "dividendo_yahoo": 5.05,
+   "dividendo_yahoo": 5.07,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -2432,7 +2432,7 @@
     "per": {
      "valor": 13.833333,
      "voto": 0.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 6.25,
@@ -2895,12 +2895,12 @@
   "1171.HK": {
    "dominio": "yanzhoucoal.com.cn",
    "sector_yahoo": "Energy",
-   "per": 7.9064746,
-   "eps": 1.39,
+   "per": 7.85,
+   "eps": 1.4,
    "roe": 11.49,
    "deuda": 0.752,
    "dividendo": 5.44,
-   "dividendo_yahoo": 5.38,
+   "dividendo_yahoo": 5.44,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -2952,7 +2952,7 @@
    "sector": "Energía",
    "señales": {
     "per": {
-     "valor": 7.9064746,
+     "valor": 7.85,
      "voto": 0.5,
      "mediana": 11.597
     },
@@ -3134,7 +3134,7 @@
     "per": {
      "valor": 35.790478,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 38.13,
@@ -3642,7 +3642,7 @@
     "per": {
      "valor": 10.253731,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 21.26,
@@ -3817,7 +3817,7 @@
     "per": {
      "valor": 18.248732,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 11.94,
@@ -3980,8 +3980,8 @@
    "señales": {
     "per": {
      "valor": 10.434783,
-     "voto": 0.0,
-     "mediana": 9.095
+     "voto": -0.5,
+     "mediana": 8.921
     },
     "roe": {
      "valor": 23.49,
@@ -4004,7 +4004,7 @@
     "n": 25,
     "pequeno": false
    },
-   "puntuacion": 3.8,
+   "puntuacion": 2.5,
    "etiqueta": "Favorable",
    "deuda_etiqueta": "bajo"
   },
@@ -4110,7 +4110,7 @@
    "roe": 11.92,
    "deuda": 0.15,
    "dividendo": 7.453,
-   "dividendo_yahoo": 7.32,
+   "dividendo_yahoo": 7.45,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -4672,7 +4672,7 @@
     "per": {
      "valor": 25.928574,
      "voto": -1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 14.4,
@@ -4707,7 +4707,7 @@
    "roe": -1.79,
    "deuda": 0.323,
    "dividendo": 4.176,
-   "dividendo_yahoo": 4.11,
+   "dividendo_yahoo": 4.18,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -4754,7 +4754,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": -1.79,
@@ -4840,8 +4840,8 @@
    "señales": {
     "per": {
      "valor": 10.538463,
-     "voto": 0.5,
-     "mediana": 12.458
+     "voto": 0.0,
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.2,
@@ -4869,7 +4869,7 @@
     "n": 57,
     "pequeno": false
    },
-   "puntuacion": 1.0,
+   "puntuacion": 0.0,
    "etiqueta": "Neutral",
    "deuda_etiqueta": "bajo"
   },
@@ -5020,8 +5020,8 @@
    "señales": {
     "per": {
      "valor": 12.0495,
-     "voto": 0.5,
-     "mediana": 19.903
+     "voto": 1.0,
+     "mediana": 20.083
     },
     "roe": {
      "valor": 10.26,
@@ -5049,8 +5049,8 @@
     "n": 15,
     "pequeno": false
    },
-   "puntuacion": -2.0,
-   "etiqueta": "Desfavorable",
+   "puntuacion": -1.0,
+   "etiqueta": "Neutral",
    "deuda_etiqueta": "alto"
   },
   "1333.HK": {
@@ -5447,7 +5447,7 @@
     "per": {
      "valor": 18.85,
      "voto": -1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 16.46,
@@ -5617,7 +5617,7 @@
     "per": {
      "valor": 6.4459457,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 13.12,
@@ -5698,7 +5698,7 @@
     "per": {
      "valor": 15.902099,
      "voto": -0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 48.23,
@@ -5784,7 +5784,7 @@
     "per": {
      "valor": 7.489796,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 12.25,
@@ -5870,7 +5870,7 @@
     "per": {
      "valor": 6.859061,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 22.87,
@@ -6286,7 +6286,7 @@
     "per": {
      "valor": 23.770992,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.47,
@@ -6536,7 +6536,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -19.68,
@@ -7223,7 +7223,7 @@
     "per": {
      "valor": 9.297752,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 25.27,
@@ -7702,7 +7702,7 @@
    "dominio": "ascletis.com",
    "sector_yahoo": "Healthcare",
    "per": null,
-   "eps": -0.63,
+   "eps": -0.65,
    "roe": -28.59,
    "deuda": 0.002,
    "dividendo": null,
@@ -8093,7 +8093,7 @@
     "per": {
      "valor": 11.009404,
      "voto": 0.5,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 10.97,
@@ -8632,7 +8632,7 @@
     "per": {
      "valor": 6.4265933,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 14.08,
@@ -8926,7 +8926,7 @@
    "roe": 11.37,
    "deuda": 1.034,
    "dividendo": 1.85,
-   "dividendo_yahoo": 1.81,
+   "dividendo_yahoo": 1.85,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -8980,7 +8980,7 @@
     "per": {
      "valor": 20.517647,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 11.37,
@@ -9512,12 +9512,12 @@
   "1802.T": {
    "dominio": "obayashi.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 12.967715,
-   "eps": 261.11,
+   "per": 12.458607,
+   "eps": 271.78,
    "roe": 16.16,
    "deuda": 0.274,
    "dividendo": 2.776,
-   "dividendo_yahoo": 2.95,
+   "dividendo_yahoo": 2.78,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -9525,15 +9525,15 @@
    "tendencia": "lateral",
    "tendencia_voto": -0.5,
    "analistas": {
-    "recomendacion": null,
+    "recomendacion": 1.77778,
     "n": 9,
     "objetivo": 3811.111,
     "potencial": 12.6,
-    "voto": null
+    "voto": 1.0
    },
    "volumen_rel": null,
    "resultados": {
-    "proxima": null,
+    "proxima": "2027-02-09",
     "ultima": "2026-11-12",
     "bpa_real": 82.48,
     "bpa_est": 51.02,
@@ -9561,7 +9561,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 12.967715,
+     "valor": 12.458607,
      "voto": 0.5,
      "mediana": 15.412
     },
@@ -9578,6 +9578,11 @@
     "tendencia": {
      "valor": "lateral",
      "voto": -0.5
+    },
+    "sentimiento": {
+     "valor": 1.77778,
+     "voto": 1.0,
+     "nota": "9 analistas"
     }
    },
    "grupo": {
@@ -9586,8 +9591,8 @@
     "n": 64,
     "pequeno": false
    },
-   "puntuacion": 3.8,
-   "etiqueta": "Favorable",
+   "puntuacion": 5.0,
+   "etiqueta": "Muy favorable",
    "deuda_etiqueta": "bajo"
   },
   "1803.T": {
@@ -10115,7 +10120,7 @@
    "roe": 16.41,
    "deuda": 0.608,
    "dividendo": 0.696,
-   "dividendo_yahoo": 0.67,
+   "dividendo_yahoo": 0.7,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -10161,7 +10166,7 @@
     "per": {
      "valor": 14.732142,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 16.41,
@@ -10415,7 +10420,7 @@
     "per": {
      "valor": 11.842106,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 11.21,
@@ -10501,7 +10506,7 @@
     "per": {
      "valor": 26.652777,
      "voto": -1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 21.73,
@@ -10582,7 +10587,7 @@
     "per": {
      "valor": 8.298165,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 12.99,
@@ -10835,7 +10840,7 @@
     "per": {
      "valor": 19.203619,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.15,
@@ -11002,7 +11007,7 @@
     "per": {
      "valor": 9.56,
      "voto": 0.5,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 8.51,
@@ -11169,7 +11174,7 @@
     "per": {
      "valor": 10.614285,
      "voto": 0.5,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 3.99,
@@ -11295,7 +11300,7 @@
    "roe": 2.07,
    "deuda": 2.586,
    "dividendo": 1.277,
-   "dividendo_yahoo": 2.22,
+   "dividendo_yahoo": 2.26,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -11341,7 +11346,7 @@
     "per": {
      "valor": 24.666668,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 2.07,
@@ -11508,7 +11513,7 @@
     "per": {
      "valor": 8.89041,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 18.28,
@@ -11594,7 +11599,7 @@
     "per": {
      "valor": 13.908128,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 17.98,
@@ -11887,12 +11892,12 @@
   "1925.T": {
    "dominio": "daiwahouse.co.jp",
    "sector_yahoo": "Real Estate",
-   "per": 10.289604,
-   "eps": 231.35,
+   "per": 10.237829,
+   "eps": 232.52,
    "roe": 12.83,
    "deuda": 1.207,
-   "dividendo": 5.713,
-   "dividendo_yahoo": 3.93,
+   "dividendo": 3.907,
+   "dividendo_yahoo": 3.95,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -11944,7 +11949,7 @@
    "sector": "Bienes raíces",
    "señales": {
     "per": {
-     "valor": 10.289604,
+     "valor": 10.237829,
      "voto": 0.5,
      "mediana": 12.733
     },
@@ -12032,7 +12037,7 @@
     "per": {
      "valor": 12.564706,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 73.2,
@@ -12212,7 +12217,7 @@
     "per": {
      "valor": 12.833334,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 30.6,
@@ -12504,7 +12509,7 @@
    "roe": 9.66,
    "deuda": null,
    "dividendo": 6.018,
-   "dividendo_yahoo": 6.09,
+   "dividendo_yahoo": 6.02,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -12512,7 +12517,7 @@
    "tendencia": "alcista",
    "tendencia_voto": 1.0,
    "analistas": {
-    "recomendacion": 1.5,
+    "recomendacion": null,
     "n": 2,
     "objetivo": 10.828453,
     "potencial": 28.6,
@@ -12985,7 +12990,7 @@
     "per": {
      "valor": 5.2340426,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 13.2,
@@ -13079,7 +13084,7 @@
     "per": {
      "valor": 16.056437,
      "voto": 0.5,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 7.93,
@@ -13119,7 +13124,7 @@
    "roe": 6.61,
    "deuda": 0.498,
    "dividendo": 3.314,
-   "dividendo_yahoo": 3.27,
+   "dividendo_yahoo": 3.31,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -13419,7 +13424,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -6.57,
@@ -13682,7 +13687,7 @@
     "per": {
      "valor": 12.705696,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 24.76,
@@ -13718,7 +13723,7 @@
    "dominio": "pony.ai",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -2.62,
+   "eps": -2.73,
    "roe": -6.77,
    "deuda": 0.012,
    "dividendo": null,
@@ -14231,7 +14236,7 @@
     "per": {
      "valor": 12.862386,
      "voto": 0.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 23.94,
@@ -14347,8 +14352,8 @@
   "2097.HK": {
    "dominio": "mxbc.com",
    "sector_yahoo": "Consumer Defensive",
-   "per": 10.761007,
-   "eps": 15.9,
+   "per": 10.594428,
+   "eps": 16.15,
    "roe": 22.82,
    "deuda": 0.008,
    "dividendo": 1.802,
@@ -14396,7 +14401,7 @@
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 10.761007,
+     "valor": 10.594428,
      "voto": 0.5,
      "mediana": 17.008
     },
@@ -14492,7 +14497,7 @@
     "per": {
      "valor": 11.180327,
      "voto": -0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 33.7,
@@ -14932,8 +14937,8 @@
   "2162.HK": {
    "dominio": "keymedbio.com",
    "sector_yahoo": "Healthcare",
-   "per": 24.086206,
-   "eps": 2.9,
+   "per": 23.677965,
+   "eps": 2.95,
    "roe": 21.49,
    "deuda": 0.174,
    "dividendo": null,
@@ -14981,7 +14986,7 @@
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 24.086206,
+     "valor": 23.677965,
      "voto": 0.0,
      "mediana": 21.69
     },
@@ -15751,7 +15756,7 @@
     "per": {
      "valor": 11.8671875,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 14.79,
@@ -15837,7 +15842,7 @@
     "per": {
      "valor": 18.15,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 5.28,
@@ -15927,7 +15932,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -13.86,
@@ -16102,7 +16107,7 @@
     "per": {
      "valor": 18.292683,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "deuda": {
      "valor": 0.052,
@@ -16132,8 +16137,8 @@
   "2268.HK": {
    "dominio": "wuxixdc.com",
    "sector_yahoo": "Healthcare",
-   "per": 56.38211,
-   "eps": 1.23,
+   "per": 54.179688,
+   "eps": 1.28,
    "roe": 16.33,
    "deuda": 0.046,
    "dividendo": null,
@@ -16181,7 +16186,7 @@
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 56.38211,
+     "valor": 54.179688,
      "voto": -1.0,
      "mediana": 21.69
     },
@@ -16363,7 +16368,7 @@
     "per": {
      "valor": 29.007275,
      "voto": -1.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 5.53,
@@ -16698,7 +16703,7 @@
     "per": {
      "valor": 8.266666,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 158.68,
@@ -16733,12 +16738,12 @@
   "2282.T": {
    "dominio": "nipponham.co.jp",
    "sector_yahoo": "Consumer Defensive",
-   "per": 19.47343,
-   "eps": 103.5,
+   "per": 19.833694,
+   "eps": 101.62,
    "roe": 5.84,
    "deuda": 0.542,
    "dividendo": 2.646,
-   "dividendo_yahoo": 3.03,
+   "dividendo_yahoo": 2.98,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
@@ -16790,9 +16795,9 @@
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 19.47343,
+     "valor": 19.833694,
      "voto": 0.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 5.84,
@@ -16964,7 +16969,7 @@
     "per": {
      "valor": 11.18584,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 12.26,
@@ -17049,8 +17054,8 @@
    "señales": {
     "per": {
      "valor": 5.431035,
-     "voto": 1.0,
-     "mediana": 9.095
+     "voto": 0.5,
+     "mediana": 8.921
     },
     "roe": {
      "valor": 8.07,
@@ -17073,7 +17078,7 @@
     "n": 25,
     "pequeno": false
    },
-   "puntuacion": -2.5,
+   "puntuacion": -3.8,
    "etiqueta": "Desfavorable",
    "deuda_etiqueta": "medio"
   },
@@ -17348,12 +17353,12 @@
   "2331.HK": {
    "dominio": "lining.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 11.866141,
-   "eps": 1.27,
+   "per": 11.592308,
+   "eps": 1.3,
    "roe": 10.8,
    "deuda": 0.069,
    "dividendo": 4.477,
-   "dividendo_yahoo": 4.36,
+   "dividendo_yahoo": 4.48,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -17397,9 +17402,9 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 11.866141,
+     "valor": 11.592308,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 10.8,
@@ -17493,7 +17498,7 @@
     "per": {
      "valor": 8.215189,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.97,
@@ -17665,7 +17670,7 @@
     "per": {
      "valor": 13.771085,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 12.27,
@@ -17949,7 +17954,7 @@
    "roe": 29.96,
    "deuda": 0.087,
    "dividendo": 1.248,
-   "dividendo_yahoo": 0.58,
+   "dividendo_yahoo": 0.61,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -18551,8 +18556,8 @@
   "2400.HK": {
    "dominio": "2400.hk",
    "sector_yahoo": "Communication Services",
-   "per": 13.353659,
-   "eps": 3.28,
+   "per": 13.192771,
+   "eps": 3.32,
    "roe": 41.95,
    "deuda": 0.026,
    "dividendo": 0.0,
@@ -18600,9 +18605,9 @@
    "sector": "Servicios de comunicación",
    "señales": {
     "per": {
-     "valor": 13.353659,
+     "valor": 13.192771,
      "voto": 0.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 41.95,
@@ -19377,7 +19382,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": -17.98,
@@ -19563,7 +19568,7 @@
     "per": {
      "valor": 99.415886,
      "voto": -1.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 2.38,
@@ -19652,7 +19657,7 @@
     "per": {
      "valor": 16.09645,
      "voto": 0.5,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 5.57,
@@ -19746,7 +19751,7 @@
     "per": {
      "valor": 12.225886,
      "voto": 0.5,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 15.14,
@@ -19794,7 +19799,7 @@
    "tendencia": "lateral",
    "tendencia_voto": -0.5,
    "analistas": {
-    "recomendacion": 1.0,
+    "recomendacion": null,
     "n": 1,
     "objetivo": 100.39625,
     "potencial": 48.1,
@@ -20253,7 +20258,7 @@
     "per": {
      "valor": 29.108696,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 7.49,
@@ -20387,11 +20392,11 @@
    "tendencia": "bajista",
    "tendencia_voto": -1.0,
    "analistas": {
-    "recomendacion": 2.0,
+    "recomendacion": null,
     "n": 3,
     "objetivo": 20.413906,
     "potencial": 238.8,
-    "voto": 0.5
+    "voto": null
    },
    "volumen_rel": null,
    "resultados": {
@@ -20442,11 +20447,6 @@
     "tendencia": {
      "valor": "bajista",
      "voto": -1.0
-    },
-    "sentimiento": {
-     "valor": 2.0,
-     "voto": 0.5,
-     "nota": "3 analistas"
     }
    },
    "grupo": {
@@ -20455,7 +20455,7 @@
     "n": 70,
     "pequeno": false
    },
-   "puntuacion": -7.0,
+   "puntuacion": -10.0,
    "etiqueta": "Muy desfavorable",
    "deuda_etiqueta": "alto"
   },
@@ -20514,7 +20514,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "deuda": {
      "valor": 1.29,
@@ -20967,7 +20967,7 @@
    "roe": 19.69,
    "deuda": 0.286,
    "dividendo": 19.837,
-   "dividendo_yahoo": 19.76,
+   "dividendo_yahoo": 19.84,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -21021,7 +21021,7 @@
     "per": {
      "valor": 5.211865,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 19.69,
@@ -21102,7 +21102,7 @@
     "per": {
      "valor": 20.437956,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 15.65,
@@ -21350,7 +21350,7 @@
     "per": {
      "valor": 8.958967,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 32.3,
@@ -21546,7 +21546,7 @@
    "dominio": "genfleet.com",
    "sector_yahoo": "Healthcare",
    "per": null,
-   "eps": -4.6,
+   "eps": -5.05,
    "roe": null,
    "deuda": 0.086,
    "dividendo": null,
@@ -21681,7 +21681,7 @@
     "per": {
      "valor": 5.476923,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 27.13,
@@ -22123,7 +22123,7 @@
     "per": {
      "valor": 7.423488,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 11.62,
@@ -22154,12 +22154,12 @@
   "2611.HK": {
    "dominio": "gtht.com",
    "sector_yahoo": "Financial Services",
-   "per": 6.4761906,
-   "eps": 1.89,
+   "per": 6.375,
+   "eps": 1.92,
    "roe": 8.78,
    "deuda": 2.844,
    "dividendo": 6.098,
-   "dividendo_yahoo": 6.02,
+   "dividendo_yahoo": 6.1,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -22211,7 +22211,7 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 6.4761906,
+     "valor": 6.375,
      "voto": 0.0,
      "mediana": 6.559
     },
@@ -23350,7 +23350,7 @@
    "dominio": "baopharma.com",
    "sector_yahoo": "Healthcare",
    "per": null,
-   "eps": -1.33,
+   "eps": -1.46,
    "roe": -31.3,
    "deuda": 0.292,
    "dividendo": null,
@@ -24058,7 +24058,7 @@
     "per": {
      "valor": 7.1944437,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "deuda": {
      "valor": 0.045,
@@ -24301,7 +24301,7 @@
     "per": {
      "valor": 5.535294,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 7.97,
@@ -24488,12 +24488,12 @@
   "2698.HK": {
    "dominio": "softcarehome.com",
    "sector_yahoo": "Consumer Defensive",
-   "per": 12.698114,
-   "eps": 2.12,
+   "per": 12.520929,
+   "eps": 2.15,
    "roe": null,
    "deuda": 0.015,
    "dividendo": 4.915,
-   "dividendo_yahoo": 4.83,
+   "dividendo_yahoo": 4.91,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -24537,7 +24537,7 @@
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 12.698114,
+     "valor": 12.520929,
      "voto": 0.5,
      "mediana": 17.008
     },
@@ -25076,7 +25076,7 @@
    "dominio": "galaxis-tech.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -0.38,
+   "eps": -0.44,
    "roe": null,
    "deuda": 0.071,
    "dividendo": null,
@@ -25394,7 +25394,7 @@
     "per": {
      "valor": 5.9310346,
      "voto": 0.5,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "deuda": {
      "valor": 1.367,
@@ -25564,8 +25564,8 @@
    "señales": {
     "per": {
      "valor": 27.868616,
-     "voto": -1.0,
-     "mediana": 19.903
+     "voto": -0.5,
+     "mediana": 20.083
     },
     "roe": {
      "valor": 12.09,
@@ -25593,8 +25593,8 @@
     "n": 15,
     "pequeno": false
    },
-   "puntuacion": 4.0,
-   "etiqueta": "Favorable",
+   "puntuacion": 5.0,
+   "etiqueta": "Muy favorable",
    "deuda_etiqueta": "bajo"
   },
   "2802.T": {
@@ -25659,7 +25659,7 @@
     "per": {
      "valor": 29.699667,
      "voto": -1.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 18.49,
@@ -25694,12 +25694,12 @@
   "2858.HK": {
    "dominio": "yixincars.com",
    "sector_yahoo": "Financial Services",
-   "per": 3.4285717,
-   "eps": 0.21,
+   "per": 3.2727275,
+   "eps": 0.22,
    "roe": 8.19,
    "deuda": 1.935,
    "dividendo": 19.444,
-   "dividendo_yahoo": 13.61,
+   "dividendo_yahoo": 13.89,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -25743,7 +25743,7 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 3.4285717,
+     "valor": 3.2727275,
      "voto": 1.0,
      "mediana": 6.559
     },
@@ -25913,7 +25913,7 @@
     "per": {
      "valor": 18.881977,
      "voto": 0.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 10.27,
@@ -26306,12 +26306,12 @@
   "2899.HK": {
    "dominio": "zjky.cn",
    "sector_yahoo": "Basic Materials",
-   "per": 9.398602,
-   "eps": 2.86,
+   "per": 9.050505,
+   "eps": 2.97,
    "roe": 36.13,
    "deuda": 0.606,
    "dividendo": 3.425,
-   "dividendo_yahoo": 3.3,
+   "dividendo_yahoo": 3.43,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -26319,11 +26319,11 @@
    "tendencia": "bajista",
    "tendencia_voto": -1.0,
    "analistas": {
-    "recomendacion": 1.21429,
+    "recomendacion": null,
     "n": 14,
     "objetivo": 49.121437,
     "potencial": 82.7,
-    "voto": 1.0
+    "voto": null
    },
    "volumen_rel": null,
    "resultados": {
@@ -26363,9 +26363,9 @@
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 9.398602,
+     "valor": 9.050505,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 36.13,
@@ -26380,11 +26380,6 @@
     "tendencia": {
      "valor": "bajista",
      "voto": -1.0
-    },
-    "sentimiento": {
-     "valor": 1.21429,
-     "voto": 1.0,
-     "nota": "14 analistas"
     }
    },
    "grupo": {
@@ -26393,8 +26388,8 @@
     "n": 25,
     "pequeno": false
    },
-   "puntuacion": 2.0,
-   "etiqueta": "Favorable",
+   "puntuacion": 0.0,
+   "etiqueta": "Neutral",
    "deuda_etiqueta": "medio"
   },
   "2914.T": {
@@ -26459,7 +26454,7 @@
     "per": {
      "valor": 21.213629,
      "voto": 0.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 14.66,
@@ -26950,7 +26945,7 @@
    "roe": 8.84,
    "deuda": 2.086,
    "dividendo": 4.173,
-   "dividendo_yahoo": 4.12,
+   "dividendo_yahoo": 4.09,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -27089,8 +27084,8 @@
    "señales": {
     "per": {
      "valor": 10.454977,
-     "voto": 0.5,
-     "mediana": 12.458
+     "voto": 0.0,
+     "mediana": 12.296
     },
     "roe": {
      "valor": 37.65,
@@ -27118,7 +27113,7 @@
     "n": 57,
     "pequeno": false
    },
-   "puntuacion": 7.0,
+   "puntuacion": 6.0,
    "etiqueta": "Muy favorable",
    "deuda_etiqueta": "medio"
   },
@@ -27503,7 +27498,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": -3.61,
@@ -27539,12 +27534,12 @@
   "3328.HK": {
    "dominio": "bankcomm.com",
    "sector_yahoo": "Financial Services",
-   "per": 7.2868853,
-   "eps": 1.22,
+   "per": 7.3471074,
+   "eps": 1.21,
    "roe": 7.68,
    "deuda": null,
    "dividendo": 4.132,
-   "dividendo_yahoo": 4.16,
+   "dividendo_yahoo": 4.13,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -27596,7 +27591,7 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 7.2868853,
+     "valor": 7.3471074,
      "voto": 0.0,
      "mediana": 6.559
     },
@@ -27685,7 +27680,7 @@
     "per": {
      "valor": 9.683544,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 28.08,
@@ -28100,7 +28095,7 @@
     "per": {
      "valor": 17.209711,
      "voto": 0.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 8.08,
@@ -28136,7 +28131,7 @@
    "dominio": "creality.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -0.8,
+   "eps": -0.86,
    "roe": null,
    "deuda": 0.253,
    "dividendo": null,
@@ -28741,11 +28736,11 @@
    "dominio": "sumcosi.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -77.25,
+   "eps": -79.28,
    "roe": -2.78,
    "deuda": 0.444,
    "dividendo": 0.946,
-   "dividendo_yahoo": 0.92,
+   "dividendo_yahoo": 0.95,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -28753,7 +28748,7 @@
    "tendencia": "bajista",
    "tendencia_voto": -1.0,
    "analistas": {
-    "recomendacion": 2.5625,
+    "recomendacion": 2.5,
     "n": 16,
     "objetivo": 3613.125,
     "potencial": 70.9,
@@ -28800,7 +28795,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": -2.78,
@@ -28818,7 +28813,7 @@
      "voto": -1.0
     },
     "sentimiento": {
-     "valor": 2.5625,
+     "valor": 2.5,
      "voto": 0.0,
      "nota": "16 analistas"
     }
@@ -28894,8 +28889,8 @@
    "señales": {
     "per": {
      "valor": 14.217877,
-     "voto": 0.0,
-     "mediana": 12.458
+     "voto": -0.5,
+     "mediana": 12.296
     },
     "roe": {
      "valor": 22.64,
@@ -28923,7 +28918,7 @@
     "n": 57,
     "pequeno": false
    },
-   "puntuacion": 0.0,
+   "puntuacion": -1.0,
    "etiqueta": "Neutral",
    "deuda_etiqueta": "alto"
   },
@@ -29351,12 +29346,12 @@
   "3660.HK": {
    "dominio": "qfin.com",
    "sector_yahoo": "Financial Services",
-   "per": 1.26875,
-   "eps": 16.0,
+   "per": 1.2438725,
+   "eps": 16.32,
    "roe": 15.26,
    "deuda": 0.143,
    "dividendo": 23.962,
-   "dividendo_yahoo": 17.18,
+   "dividendo_yahoo": 17.78,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -29408,7 +29403,7 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 1.26875,
+     "valor": 1.2438725,
      "voto": 1.0,
      "mediana": 6.559
     },
@@ -29578,7 +29573,7 @@
     "per": {
      "valor": 7.976744,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 12.38,
@@ -29660,7 +29655,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -21.76,
@@ -29923,7 +29918,7 @@
     "per": {
      "valor": 36.737537,
      "voto": -0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 17.76,
@@ -29958,12 +29953,12 @@
   "3698.HK": {
    "dominio": "hsbank.com.cn",
    "sector_yahoo": "Financial Services",
-   "per": 3.572519,
-   "eps": 1.31,
+   "per": 3.6850393,
+   "eps": 1.27,
    "roe": 9.95,
    "deuda": null,
    "dividendo": 6.143,
-   "dividendo_yahoo": 6.3,
+   "dividendo_yahoo": 6.14,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -30007,7 +30002,7 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 3.572519,
+     "valor": 3.6850393,
      "voto": 1.0,
      "mediana": 6.559
     },
@@ -30271,7 +30266,7 @@
     "per": {
      "valor": 428.57144,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 34.9,
@@ -30526,7 +30521,7 @@
     "per": {
      "valor": 8.144796,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 120.09,
@@ -30561,12 +30556,12 @@
   "3861.T": {
    "dominio": "ojiholdings.co.jp",
    "sector_yahoo": "Basic Materials",
-   "per": 13.181818,
-   "eps": 63.8,
+   "per": 13.353446,
+   "eps": 62.98,
    "roe": 5.33,
    "deuda": 0.905,
    "dividendo": 4.281,
-   "dividendo_yahoo": 4.34,
+   "dividendo_yahoo": 4.28,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -30618,7 +30613,7 @@
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 13.181818,
+     "valor": 13.353446,
      "voto": 0.0,
      "mediana": 14.123
     },
@@ -31047,8 +31042,8 @@
    "señales": {
     "per": {
      "valor": 11.117904,
-     "voto": 0.5,
-     "mediana": 13.108
+     "voto": 0.0,
+     "mediana": 13.028
     },
     "roe": {
      "valor": 14.56,
@@ -31071,8 +31066,8 @@
     "n": 19,
     "pequeno": false
    },
-   "puntuacion": 5.0,
-   "etiqueta": "Muy favorable",
+   "puntuacion": 3.8,
+   "etiqueta": "Favorable",
    "deuda_etiqueta": "bajo"
   },
   "3896.HK": {
@@ -31169,12 +31164,12 @@
   "3898.HK": {
    "dominio": "tec.crrczic.cc",
    "sector_yahoo": "Industrials",
-   "per": 8.083582,
-   "eps": 3.35,
+   "per": 8.011834,
+   "eps": 3.38,
    "roe": 9.49,
    "deuda": 0.009,
    "dividendo": 4.851,
-   "dividendo_yahoo": 4.8,
+   "dividendo_yahoo": 4.85,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -31218,7 +31213,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 8.083582,
+     "valor": 8.011834,
      "voto": 0.5,
      "mediana": 10.164
     },
@@ -31566,7 +31561,7 @@
     "per": {
      "valor": 4.083333,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 12.71,
@@ -31768,12 +31763,12 @@
   "3939.HK": {
    "dominio": "wgmine.com",
    "sector_yahoo": "Basic Materials",
-   "per": 30.074999,
-   "eps": 0.4,
+   "per": 28.642857,
+   "eps": 0.42,
    "roe": 39.24,
    "deuda": 0.023,
    "dividendo": 1.43,
-   "dividendo_yahoo": 0.97,
+   "dividendo_yahoo": 1.0,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -31817,9 +31812,9 @@
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 30.074999,
+     "valor": 28.642857,
      "voto": -1.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 39.24,
@@ -32261,7 +32256,7 @@
     "per": {
      "valor": 8.791666,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 33.63,
@@ -32377,12 +32372,12 @@
   "3998.HK": {
    "dominio": "company.bosideng.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 12.351352,
-   "eps": 0.37,
+   "per": 12.026317,
+   "eps": 0.38,
    "roe": 22.83,
    "deuda": 0.091,
    "dividendo": 6.849,
-   "dividendo_yahoo": 6.78,
+   "dividendo_yahoo": 6.85,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-03-31",
@@ -32426,9 +32421,9 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 12.351352,
+     "valor": 12.026317,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 22.83,
@@ -33001,12 +32996,12 @@
   "4062.T": {
    "dominio": "ibiden.com",
    "sector_yahoo": "Technology",
-   "per": 44.945732,
-   "eps": 135.43,
+   "per": 44.949047,
+   "eps": 135.42,
    "roe": 14.12,
    "deuda": 0.278,
    "dividendo": 0.287,
-   "dividendo_yahoo": 0.28,
+   "dividendo_yahoo": 0.29,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -33058,9 +33053,9 @@
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 44.945732,
+     "valor": 44.949047,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 14.12,
@@ -33612,7 +33607,7 @@
     "per": {
      "valor": 145.23929,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 0.644,
@@ -33643,7 +33638,7 @@
    "dominio": "group.dentsu.com",
    "sector_yahoo": "Communication Services",
    "per": null,
-   "eps": -814.72,
+   "eps": -800.74,
    "roe": -34.88,
    "deuda": 0.927,
    "dividendo": 0.0,
@@ -33655,11 +33650,11 @@
    "tendencia": "alcista",
    "tendencia_voto": 1.0,
    "analistas": {
-    "recomendacion": 2.55556,
+    "recomendacion": null,
     "n": 9,
     "objetivo": 3653.3333,
     "potencial": -7.8,
-    "voto": 0.0
+    "voto": null
    },
    "volumen_rel": null,
    "resultados": {
@@ -33718,11 +33713,6 @@
     "tendencia": {
      "valor": "alcista",
      "voto": 1.0
-    },
-    "sentimiento": {
-     "valor": 2.55556,
-     "voto": 0.0,
-     "nota": "9 analistas"
     }
    },
    "grupo": {
@@ -33731,8 +33721,8 @@
     "n": 12,
     "pequeno": false
    },
-   "puntuacion": -4.0,
-   "etiqueta": "Desfavorable",
+   "puntuacion": -5.0,
+   "etiqueta": "Muy desfavorable",
    "deuda_etiqueta": "alto"
   },
   "4385.T": {
@@ -33878,7 +33868,7 @@
     "per": {
      "valor": 33.633606,
      "voto": -1.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 12.32,
@@ -34294,7 +34284,7 @@
    "roe": 25.32,
    "deuda": null,
    "dividendo": 2.966,
-   "dividendo_yahoo": 1.85,
+   "dividendo_yahoo": 1.84,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -34942,12 +34932,12 @@
   "4704.T": {
    "dominio": "trendmicro.com",
    "sector_yahoo": "Technology",
-   "per": 27.66741,
-   "eps": 260.74,
+   "per": 29.969673,
+   "eps": 240.71,
    "roe": 24.16,
    "deuda": null,
    "dividendo": 2.564,
-   "dividendo_yahoo": 2.78,
+   "dividendo_yahoo": 2.56,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
@@ -34956,9 +34946,9 @@
    "tendencia_voto": 1.0,
    "analistas": {
     "recomendacion": 2.88889,
-    "n": 8,
-    "objetivo": 6387.5,
-    "potencial": -11.5,
+    "n": 9,
+    "objetivo": 6266.6665,
+    "potencial": -13.1,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -34999,9 +34989,9 @@
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 27.66741,
+     "valor": 29.969673,
      "voto": 0.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 24.16,
@@ -35015,7 +35005,7 @@
     "sentimiento": {
      "valor": 2.88889,
      "voto": 0.0,
-     "nota": "8 analistas"
+     "nota": "9 analistas"
     }
    },
    "grupo": {
@@ -35366,7 +35356,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": -3.08,
@@ -35585,15 +35575,15 @@
   "5101.T": {
    "dominio": "y-yokohama.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 7.908268,
-   "eps": 925.74,
-   "roe": 14.31,
-   "deuda": 0.543,
+   "per": 8.093974,
+   "eps": 904.5,
+   "roe": 13.43,
+   "deuda": 0.583,
    "dividendo": 2.363,
-   "dividendo_yahoo": 2.42,
+   "dividendo_yahoo": 2.36,
    "pagos_12m": 2,
    "frecuencia": "semestral",
-   "trimestre": "2026-06-30",
+   "trimestre": "2026-09-30",
    "moneda_yahoo": "JPY",
    "tendencia": "alcista",
    "tendencia_voto": 1.0,
@@ -35606,7 +35596,7 @@
    },
    "volumen_rel": null,
    "resultados": {
-    "proxima": null,
+    "proxima": "2027-02-18",
     "ultima": "2026-11-12",
     "bpa_real": 148.99,
     "bpa_est": 138.66,
@@ -35638,21 +35628,21 @@
     "sma200": 6925.285
    },
    "fecha": "2026-11-14",
-   "actualizada": null,
+   "actualizada": "2026-11-14",
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 7.908268,
+     "valor": 8.093974,
      "voto": 1.0,
      "mediana": 18.648
     },
     "roe": {
-     "valor": 14.31,
+     "valor": 13.43,
      "voto": 1.0,
      "mediana": 8.625
     },
     "deuda": {
-     "valor": 0.543,
+     "valor": 0.583,
      "voto": -0.5,
      "mediana": 0.463
     },
@@ -35905,7 +35895,7 @@
     "per": {
      "valor": 18.151508,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 4.88,
@@ -36217,8 +36207,8 @@
   "5333.T": {
    "dominio": "ngk.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 14.165267,
-   "eps": 339.21,
+   "per": 14.176969,
+   "eps": 338.93,
    "roe": 12.22,
    "deuda": 0.277,
    "dividendo": 2.185,
@@ -36274,7 +36264,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 14.165267,
+     "valor": 14.176969,
      "voto": 0.0,
      "mediana": 15.412
     },
@@ -36843,12 +36833,12 @@
   "5713.T": {
    "dominio": "smm.co.jp",
    "sector_yahoo": "Basic Materials",
-   "per": 9.367715,
-   "eps": 767.85,
+   "per": 9.146396,
+   "eps": 786.43,
    "roe": 10.7,
    "deuda": 0.289,
    "dividendo": 3.698,
-   "dividendo_yahoo": 2.82,
+   "dividendo_yahoo": 2.89,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -36900,7 +36890,7 @@
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 9.367715,
+     "valor": 9.146396,
      "voto": 0.5,
      "mediana": 14.123
     },
@@ -37372,7 +37362,7 @@
     "per": {
      "valor": 16.41624,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 8.2,
@@ -37498,12 +37488,12 @@
   "6031.HK": {
    "dominio": "sany.com.cn",
    "sector_yahoo": "Industrials",
-   "per": 14.398231,
-   "eps": 1.13,
+   "per": 14.147827,
+   "eps": 1.15,
    "roe": 10.95,
    "deuda": 0.214,
    "dividendo": 1.27,
-   "dividendo_yahoo": 1.25,
+   "dividendo_yahoo": 1.27,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
@@ -37555,8 +37545,8 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 14.398231,
-     "voto": -1.0,
+     "valor": 14.147827,
+     "voto": -0.5,
      "mediana": 10.164
     },
     "roe": {
@@ -37585,7 +37575,7 @@
     "n": 54,
     "pequeno": false
    },
-   "puntuacion": 0.0,
+   "puntuacion": 1.0,
    "etiqueta": "Neutral",
    "deuda_etiqueta": "bajo"
   },
@@ -38092,7 +38082,7 @@
    "dominio": "birentech.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -8.55,
+   "eps": -9.16,
    "roe": -3048.99,
    "deuda": 0.033,
    "dividendo": null,
@@ -38104,11 +38094,11 @@
    "tendencia": "bajista",
    "tendencia_voto": -1.0,
    "analistas": {
-    "recomendacion": null,
+    "recomendacion": 1.28571,
     "n": 6,
-    "objetivo": 95.3827,
-    "potencial": 354.6,
-    "voto": null
+    "objetivo": 95.32706,
+    "potencial": 354.4,
+    "voto": 1.0
    },
    "volumen_rel": null,
    "resultados": {
@@ -38159,6 +38149,11 @@
     "tendencia": {
      "valor": "bajista",
      "voto": -1.0
+    },
+    "sentimiento": {
+     "valor": 1.28571,
+     "voto": 1.0,
+     "nota": "6 analistas"
     }
    },
    "grupo": {
@@ -38167,8 +38162,8 @@
     "n": 70,
     "pequeno": false
    },
-   "puntuacion": -5.0,
-   "etiqueta": "Muy desfavorable",
+   "puntuacion": -2.0,
+   "etiqueta": "Desfavorable",
    "deuda_etiqueta": "bajo"
   },
   "6088.HK": {
@@ -38834,7 +38829,7 @@
     "per": {
      "valor": 5.261905,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 13.17,
@@ -39009,7 +39004,7 @@
     "per": {
      "valor": 34.16339,
      "voto": -0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 27.93,
@@ -39269,7 +39264,7 @@
     "per": {
      "valor": 15.796162,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 5.12,
@@ -39300,12 +39295,12 @@
   "6181.HK": {
    "dominio": "lphj.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 6.8437424,
-   "eps": 41.79,
+   "per": 6.5461206,
+   "eps": 43.69,
    "roe": 65.77,
    "deuda": 0.537,
    "dividendo": 8.451,
-   "dividendo_yahoo": 8.08,
+   "dividendo_yahoo": 8.45,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -39349,9 +39344,9 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 6.8437424,
+     "valor": 6.5461206,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 65.77,
@@ -39942,12 +39937,12 @@
   "6361.T": {
    "dominio": "ebara.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 21.221693,
-   "eps": 167.8,
+   "per": 15.753152,
+   "eps": 226.05,
    "roe": 15.74,
    "deuda": 0.42,
    "dividendo": 1.797,
-   "dividendo_yahoo": 1.81,
+   "dividendo_yahoo": 1.85,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -39963,7 +39958,7 @@
    },
    "volumen_rel": null,
    "resultados": {
-    "proxima": null,
+    "proxima": "2027-02-12",
     "ultima": "2026-11-12",
     "bpa_real": 83.13,
     "bpa_est": 64.48,
@@ -39991,8 +39986,8 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 21.221693,
-     "voto": -0.5,
+     "valor": 15.753152,
+     "voto": 0.0,
      "mediana": 15.412
     },
     "roe": {
@@ -40021,7 +40016,7 @@
     "n": 64,
     "pequeno": false
    },
-   "puntuacion": 0.0,
+   "puntuacion": 1.0,
    "etiqueta": "Neutral",
    "deuda_etiqueta": "medio"
   },
@@ -40455,7 +40450,7 @@
     "per": {
      "valor": 10.52255,
      "voto": 1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 0.521,
@@ -40579,12 +40574,12 @@
   "6503.T": {
    "dominio": "mitsubishielectric.com",
    "sector_yahoo": "Industrials",
-   "per": 19.738482,
-   "eps": 240.9,
+   "per": 18.892288,
+   "eps": 251.69,
    "roe": 12.1,
    "deuda": 0.07,
    "dividendo": 1.262,
-   "dividendo_yahoo": 1.21,
+   "dividendo_yahoo": 1.26,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -40636,7 +40631,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 19.738482,
+     "valor": 18.892288,
      "voto": -0.5,
      "mediana": 15.412
     },
@@ -40920,7 +40915,7 @@
     "per": {
      "valor": 45.511314,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 0.224,
@@ -41452,7 +41447,7 @@
     "per": {
      "valor": 24.921585,
      "voto": 0.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 5.13,
@@ -41629,7 +41624,7 @@
     "per": {
      "valor": 8.620512,
      "voto": 0.0,
-     "mediana": 9.095
+     "mediana": 8.921
     },
     "roe": {
      "valor": 12.27,
@@ -42363,7 +42358,7 @@
     "per": {
      "valor": 10.018779,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 13.98,
@@ -42398,12 +42393,12 @@
   "6699.HK": {
    "dominio": "angelalign.com",
    "sector_yahoo": "Healthcare",
-   "per": 42.43243,
-   "eps": 1.85,
+   "per": 41.97861,
+   "eps": 1.87,
    "roe": 8.38,
    "deuda": 0.203,
    "dividendo": 12.79,
-   "dividendo_yahoo": 1.2,
+   "dividendo_yahoo": 1.21,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -42447,7 +42442,7 @@
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 42.43243,
+     "valor": 41.97861,
      "voto": -1.0,
      "mediana": 21.69
     },
@@ -42530,7 +42525,7 @@
     "per": {
      "valor": 20.543882,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 14.47,
@@ -42616,7 +42611,7 @@
     "per": {
      "valor": 22.666147,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 13.48,
@@ -42787,7 +42782,7 @@
     "per": {
      "valor": 8.527805,
      "voto": 1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 23.6,
@@ -42881,7 +42876,7 @@
     "per": {
      "valor": 51.46101,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 2.97,
@@ -42970,7 +42965,7 @@
     "per": {
      "valor": 21.41725,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 6.51,
@@ -43005,8 +43000,8 @@
   "6753.T": {
    "dominio": "corporate.jp.sharp",
    "sector_yahoo": "Technology",
-   "per": 26.22707,
-   "eps": 20.17,
+   "per": 26.893747,
+   "eps": 19.67,
    "roe": null,
    "deuda": 1.501,
    "dividendo": 0.0,
@@ -43020,8 +43015,8 @@
    "analistas": {
     "recomendacion": 3.85714,
     "n": 7,
-    "objetivo": 601.4286,
-    "potencial": 13.7,
+    "objetivo": 588.5714,
+    "potencial": 11.3,
     "voto": -1.0
    },
    "volumen_rel": null,
@@ -43062,9 +43057,9 @@
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 26.22707,
+     "valor": 26.893747,
      "voto": 0.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 1.501,
@@ -43153,7 +43148,7 @@
     "per": {
      "valor": 21.247585,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 13.16,
@@ -43247,7 +43242,7 @@
     "per": {
      "valor": 12.740041,
      "voto": 1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 12.41,
@@ -43341,7 +43336,7 @@
     "per": {
      "valor": 21.897854,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 0.203,
@@ -43423,7 +43418,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -1.73,
@@ -43631,7 +43626,7 @@
    "roe": null,
    "deuda": null,
    "dividendo": 6.821,
-   "dividendo_yahoo": 6.87,
+   "dividendo_yahoo": 6.82,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -43767,7 +43762,7 @@
     "per": {
      "valor": 17.112677,
      "voto": -0.5,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 15.59,
@@ -44028,7 +44023,7 @@
     "per": {
      "valor": 43.68353,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 65.35,
@@ -44121,8 +44116,8 @@
    "señales": {
     "per": {
      "valor": 32.34581,
-     "voto": -0.5,
-     "mediana": 26.947
+     "voto": 0.0,
+     "mediana": 28.432
     },
     "tendencia": {
      "valor": "lateral",
@@ -44140,8 +44135,8 @@
     "n": 28,
     "pequeno": false
    },
-   "puntuacion": 3.3,
-   "etiqueta": "Favorable",
+   "puntuacion": 5.0,
+   "etiqueta": "Muy favorable",
    "deuda_etiqueta": null
   },
   "6862.HK": {
@@ -44198,7 +44193,7 @@
     "per": {
      "valor": 11.999999,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 41.9,
@@ -44228,12 +44223,12 @@
   "6869.HK": {
    "dominio": "yofc.com",
    "sector_yahoo": "Technology",
-   "per": 20.205479,
-   "eps": 4.38,
+   "per": 18.75,
+   "eps": 4.72,
    "roe": 35.82,
    "deuda": 0.377,
    "dividendo": 1.768,
-   "dividendo_yahoo": 1.64,
+   "dividendo_yahoo": 1.77,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -44277,7 +44272,7 @@
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 20.205479,
+     "valor": 18.75,
      "voto": 0.0,
      "mediana": 21.575
     },
@@ -44735,7 +44730,7 @@
     "per": {
      "valor": 43.611404,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 31.05,
@@ -44848,8 +44843,8 @@
   "6954.T": {
    "dominio": "fanuc.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 25.851452,
-   "eps": 214.34,
+   "per": 25.944654,
+   "eps": 213.57,
    "roe": 10.97,
    "deuda": null,
    "dividendo": 2.315,
@@ -44905,7 +44900,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 25.851452,
+     "valor": 25.944654,
      "voto": -1.0,
      "mediana": 15.412
     },
@@ -45084,7 +45079,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "deuda": {
      "valor": 0.516,
@@ -45340,7 +45335,7 @@
     "per": {
      "valor": 48.615864,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 5.33,
@@ -45461,12 +45456,12 @@
   "6981.T": {
    "dominio": "murata.com",
    "sector_yahoo": "Technology",
-   "per": 33.003952,
-   "eps": 156.86,
+   "per": 32.70786,
+   "eps": 158.28,
    "roe": 10.74,
    "deuda": 0.02,
    "dividendo": 1.352,
-   "dividendo_yahoo": 1.34,
+   "dividendo_yahoo": 1.35,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -45518,9 +45513,9 @@
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 33.003952,
+     "valor": 32.70786,
      "voto": -0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 10.74,
@@ -46095,12 +46090,12 @@
   "7186.T": {
    "dominio": "yokohamafg.co.jp",
    "sector_yahoo": "Financial Services",
-   "per": 15.396476,
-   "eps": 113.5,
+   "per": 15.467339,
+   "eps": 112.98,
    "roe": null,
    "deuda": null,
    "dividendo": 2.518,
-   "dividendo_yahoo": 3.45,
+   "dividendo_yahoo": 3.43,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -46152,9 +46147,9 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 15.396476,
+     "valor": 15.467339,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "deuda": {
      "valor": null,
@@ -46737,12 +46732,12 @@
   "7269.T": {
    "dominio": "suzuki.co.jp",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 8.490935,
-   "eps": 255.39,
+   "per": 8.365481,
+   "eps": 259.22,
    "roe": 14.53,
    "deuda": 0.179,
    "dividendo": 2.26,
-   "dividendo_yahoo": 2.36,
+   "dividendo_yahoo": 2.4,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -46786,7 +46781,7 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 8.490935,
+     "valor": 8.365481,
      "voto": 1.0,
      "mediana": 18.648
     },
@@ -47148,7 +47143,7 @@
     "per": {
      "valor": 20.332336,
      "voto": 0.0,
-     "mediana": 19.903
+     "mediana": 20.083
     },
     "roe": {
      "valor": 16.48,
@@ -47234,7 +47229,7 @@
     "per": {
      "valor": 28.333334,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 39.11,
@@ -47348,7 +47343,7 @@
    "dominio": "metistechbio.com",
    "sector_yahoo": "Healthcare",
    "per": null,
-   "eps": -0.31,
+   "eps": -0.38,
    "roe": null,
    "deuda": 0.059,
    "dividendo": null,
@@ -47753,7 +47748,7 @@
     "per": {
      "valor": 17.278316,
      "voto": 0.5,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 20.55,
@@ -47941,7 +47936,7 @@
     "per": {
      "valor": 11.182486,
      "voto": 1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 11.03,
@@ -47981,7 +47976,7 @@
    "roe": 7.74,
    "deuda": 0.44,
    "dividendo": 2.443,
-   "dividendo_yahoo": 2.61,
+   "dividendo_yahoo": 2.56,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -48601,12 +48596,12 @@
   "8002.T": {
    "dominio": "marubeni.com",
    "sector_yahoo": "Industrials",
-   "per": 14.842254,
-   "eps": 349.61,
+   "per": 14.720149,
+   "eps": 352.51,
    "roe": 14.38,
    "deuda": 0.573,
    "dividendo": 2.313,
-   "dividendo_yahoo": 2.39,
+   "dividendo_yahoo": 2.41,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -48658,7 +48653,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 14.842254,
+     "valor": 14.720149,
      "voto": 0.0,
      "mediana": 15.412
     },
@@ -48934,7 +48929,7 @@
     "per": {
      "valor": 56.154236,
      "voto": -1.0,
-     "mediana": 26.947
+     "mediana": 28.432
     },
     "roe": {
      "valor": 33.8,
@@ -49248,12 +49243,12 @@
   "8252.T": {
    "dominio": "0101maruigroup.co.jp",
    "sector_yahoo": "Financial Services",
-   "per": 17.16123,
-   "eps": 169.51,
+   "per": 17.214035,
+   "eps": 168.99,
    "roe": 12.69,
    "deuda": 3.535,
    "dividendo": 4.572,
-   "dividendo_yahoo": 4.62,
+   "dividendo_yahoo": 4.61,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -49305,9 +49300,9 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 17.16123,
+     "valor": 17.214035,
      "voto": -0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 12.69,
@@ -49394,7 +49389,7 @@
     "per": {
      "valor": 8.864473,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 9.31,
@@ -49578,7 +49573,7 @@
     "per": {
      "valor": 13.388727,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 6.56,
@@ -49668,7 +49663,7 @@
     "per": {
      "valor": 14.221677,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 9.46,
@@ -49755,7 +49750,7 @@
     "per": {
      "valor": 19.6995,
      "voto": -0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 9.23,
@@ -49850,7 +49845,7 @@
     "per": {
      "valor": 11.795669,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 10.78,
@@ -49881,12 +49876,12 @@
   "8316.T": {
    "dominio": "smfg.co.jp",
    "sector_yahoo": "Financial Services",
-   "per": 14.684781,
-   "eps": 223.02,
+   "per": 14.68544,
+   "eps": 223.01,
    "roe": 8.57,
    "deuda": null,
-   "dividendo": 2.58,
-   "dividendo_yahoo": 2.75,
+   "dividendo": 4.26,
+   "dividendo_yahoo": 3.05,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -49902,7 +49897,7 @@
    },
    "volumen_rel": null,
    "resultados": {
-    "proxima": null,
+    "proxima": "2027-01-28",
     "ultima": "2026-11-12",
     "bpa_real": 66.2,
     "bpa_est": 63.85,
@@ -49938,9 +49933,9 @@
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 14.684781,
+     "valor": 14.68544,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 8.57,
@@ -50035,7 +50030,7 @@
     "per": {
      "valor": 17.229753,
      "voto": -0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 8.3,
@@ -50117,7 +50112,7 @@
     "per": {
      "valor": 14.135453,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 8.71,
@@ -50207,7 +50202,7 @@
     "per": {
      "valor": 13.534922,
      "voto": 0.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 12.49,
@@ -50302,7 +50297,7 @@
     "per": {
      "valor": 10.255166,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 14.04,
@@ -50392,7 +50387,7 @@
     "per": {
      "valor": 12.193606,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 10.83,
@@ -50487,7 +50482,7 @@
     "per": {
      "valor": 10.013098,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 11.51,
@@ -50528,7 +50523,7 @@
    "roe": 14.43,
    "deuda": 0.176,
    "dividendo": 2.401,
-   "dividendo_yahoo": 2.78,
+   "dividendo_yahoo": 2.74,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -50574,7 +50569,7 @@
     "per": {
      "valor": 22.31883,
      "voto": -1.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 14.43,
@@ -50656,7 +50651,7 @@
     "per": {
      "valor": 26.062061,
      "voto": -1.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "deuda": {
      "valor": 0.146,
@@ -50738,7 +50733,7 @@
     "per": {
      "valor": 8.586788,
      "voto": 1.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 16.09,
@@ -50833,7 +50828,7 @@
     "per": {
      "valor": 11.749278,
      "voto": 0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 13.58,
@@ -50928,7 +50923,7 @@
     "per": {
      "valor": 49.89646,
      "voto": -1.0,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "deuda": {
      "valor": 0.093,
@@ -51018,7 +51013,7 @@
     "per": {
      "valor": 17.081705,
      "voto": -0.5,
-     "mediana": 14.453
+     "mediana": 14.454
     },
     "roe": {
      "valor": 9.34,
@@ -51138,12 +51133,12 @@
   "8802.T": {
    "dominio": "mec.co.jp",
    "sector_yahoo": "Real Estate",
-   "per": 16.930912,
-   "eps": 243.46,
+   "per": 17.021803,
+   "eps": 242.16,
    "roe": 13.28,
    "deuda": 1.283,
    "dividendo": 1.14,
-   "dividendo_yahoo": 1.22,
+   "dividendo_yahoo": 1.21,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -51195,7 +51190,7 @@
    "sector": "Bienes raíces",
    "señales": {
     "per": {
-     "valor": 16.930912,
+     "valor": 17.021803,
      "voto": -0.5,
      "mediana": 12.733
     },
@@ -51761,12 +51756,12 @@
   "9009.T": {
    "dominio": "keisei.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 14.906561,
-   "eps": 102.74,
+   "per": 14.905109,
+   "eps": 102.75,
    "roe": 8.99,
    "deuda": 0.698,
    "dividendo": 1.502,
-   "dividendo_yahoo": 1.45,
+   "dividendo_yahoo": 1.44,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -51818,7 +51813,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 14.906561,
+     "valor": 14.905109,
      "voto": 0.0,
      "mediana": 15.412
     },
@@ -52411,12 +52406,12 @@
   "9107.T": {
    "dominio": "kline.co.jp",
    "sector_yahoo": "Industrials",
-   "per": 10.283665,
-   "eps": 303.88,
+   "per": 10.38344,
+   "eps": 300.96,
    "roe": 10.97,
    "deuda": 0.139,
    "dividendo": 3.84,
-   "dividendo_yahoo": 3.88,
+   "dividendo_yahoo": 3.84,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -52468,7 +52463,7 @@
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 10.283665,
+     "valor": 10.38344,
      "voto": 0.5,
      "mediana": 15.412
     },
@@ -53046,8 +53041,8 @@
   "9501.T": {
    "dominio": "tepco.co.jp",
    "sector_yahoo": "Utilities",
-   "per": 2.6542487,
-   "eps": 170.18,
+   "per": 2.6286082,
+   "eps": 171.84,
    "roe": 9.57,
    "deuda": 1.943,
    "dividendo": 0.0,
@@ -53103,7 +53098,7 @@
    "sector": "Servicios públicos",
    "señales": {
     "per": {
-     "valor": 2.6542487,
+     "valor": 2.6286082,
      "voto": 1.0,
      "mediana": 10.639
     },
@@ -53673,12 +53668,12 @@
   "9618.HK": {
    "dominio": "jd.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 19.210052,
-   "eps": 5.57,
+   "per": 19.107143,
+   "eps": 5.6,
    "roe": 6.79,
    "deuda": 0.373,
    "dividendo": 3.666,
-   "dividendo_yahoo": 3.64,
+   "dividendo_yahoo": 3.66,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -53730,9 +53725,9 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 19.210052,
+     "valor": 19.107143,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.79,
@@ -53826,7 +53821,7 @@
     "per": {
      "valor": 25.238094,
      "voto": -1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 10.14,
@@ -54165,7 +54160,7 @@
     "per": {
      "valor": 105.0,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 2.63,
@@ -54284,7 +54279,7 @@
    "dominio": "unisound.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -3.85,
+   "eps": -4.04,
    "roe": -28.81,
    "deuda": 0.405,
    "dividendo": null,
@@ -54513,7 +54508,7 @@
     "per": {
      "valor": 35.333332,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.1,
@@ -54888,12 +54883,12 @@
   "9766.T": {
    "dominio": "konami.com",
    "sector_yahoo": "Communication Services",
-   "per": 22.066942,
-   "eps": 1322.34,
+   "per": 22.066776,
+   "eps": 1322.35,
    "roe": 23.32,
    "deuda": 0.087,
    "dividendo": 0.858,
-   "dividendo_yahoo": 0.87,
+   "dividendo_yahoo": 0.86,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -54945,7 +54940,7 @@
    "sector": "Servicios de comunicación",
    "señales": {
     "per": {
-     "valor": 22.066942,
+     "valor": 22.066776,
      "voto": 0.0,
      "mediana": 20.816
     },
@@ -55208,7 +55203,7 @@
     "per": {
      "valor": 57.50877,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 5.22,
@@ -55303,7 +55298,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -45.32,
@@ -55399,7 +55394,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": -10.88,
@@ -55519,7 +55514,7 @@
    "dominio": "leadsbiolabs.com",
    "sector_yahoo": "Healthcare",
    "per": null,
-   "eps": -1.53,
+   "eps": -1.63,
    "roe": -51.55,
    "deuda": 0.401,
    "dividendo": null,
@@ -55669,7 +55664,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": -1.39,
@@ -55756,7 +55751,7 @@
     "per": {
      "valor": 3.5159817,
      "voto": 1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 29.52,
@@ -55845,7 +55840,7 @@
     "per": {
      "valor": 17.213675,
      "voto": -0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 11.82,
@@ -55934,7 +55929,7 @@
     "per": {
      "valor": 5.2275133,
      "voto": 1.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 8.52,
@@ -56020,7 +56015,7 @@
     "per": {
      "valor": 11.183163,
      "voto": 0.0,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 13.51,
@@ -56151,7 +56146,7 @@
    "dominio": "iluvatar.com",
    "sector_yahoo": "Technology",
    "per": null,
-   "eps": -0.41,
+   "eps": -0.42,
    "roe": -6.93,
    "deuda": 0.468,
    "dividendo": null,
@@ -56163,11 +56158,11 @@
    "tendencia": "bajista",
    "tendencia_voto": -1.0,
    "analistas": {
-    "recomendacion": null,
+    "recomendacion": 1.27273,
     "n": 11,
-    "objetivo": 262.49313,
-    "potencial": 241.6,
-    "voto": null
+    "objetivo": 262.31714,
+    "potencial": 241.3,
+    "voto": 1.0
    },
    "volumen_rel": null,
    "resultados": {
@@ -56218,6 +56213,11 @@
     "tendencia": {
      "valor": "bajista",
      "voto": -1.0
+    },
+    "sentimiento": {
+     "valor": 1.27273,
+     "voto": 1.0,
+     "nota": "11 analistas"
     }
    },
    "grupo": {
@@ -56226,7 +56226,7 @@
     "n": 70,
     "pequeno": false
    },
-   "puntuacion": -10.0,
+   "puntuacion": -6.0,
    "etiqueta": "Muy desfavorable",
    "deuda_etiqueta": "alto"
   },
@@ -56466,7 +56466,7 @@
     "per": {
      "valor": 33.822224,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 2.59,
@@ -56555,7 +56555,7 @@
     "per": {
      "valor": 8.398761,
      "voto": 0.5,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 15.65,
@@ -56735,7 +56735,7 @@
     "per": {
      "valor": 6.6518106,
      "voto": 1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 37.47,
@@ -56770,12 +56770,12 @@
   "9983.T": {
    "dominio": "fastretailing.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 45.415333,
-   "eps": 1808.2,
+   "per": 46.50952,
+   "eps": 1765.66,
    "roe": 22.3,
    "deuda": 0.223,
    "dividendo": 1.035,
-   "dividendo_yahoo": 1.12,
+   "dividendo_yahoo": 1.1,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-08-31",
@@ -56827,7 +56827,7 @@
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 45.415333,
+     "valor": 46.50952,
      "voto": -1.0,
      "mediana": 18.648
     },
@@ -57095,7 +57095,7 @@
     "per": {
      "valor": 17.796532,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 16.81,
@@ -57189,7 +57189,7 @@
     "per": {
      "valor": 24.813894,
      "voto": -1.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 6.36,
@@ -57275,7 +57275,7 @@
     "per": {
      "valor": 12.963963,
      "voto": 0.0,
-     "mediana": 12.458
+     "mediana": 12.296
     },
     "roe": {
      "valor": 71.22,
@@ -57393,8 +57393,8 @@
   "9995.HK": {
    "dominio": "remegen.com",
    "sector_yahoo": "Healthcare",
-   "per": 5.96601,
-   "eps": 11.18,
+   "per": 5.7401032,
+   "eps": 11.62,
    "roe": 116.54,
    "deuda": 0.033,
    "dividendo": null,
@@ -57442,7 +57442,7 @@
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 5.96601,
+     "valor": 5.7401032,
      "voto": 1.0,
      "mediana": 21.69
     },
@@ -57538,7 +57538,7 @@
     "per": {
      "valor": 15.72064,
      "voto": -0.5,
-     "mediana": 13.108
+     "mediana": 13.028
     },
     "roe": {
      "valor": 20.37,
@@ -58027,12 +58027,12 @@
   "ABF.L": {
    "dominio": "abf.co.uk",
    "sector_yahoo": "Consumer Defensive",
-   "per": 15.43609,
-   "eps": 1.33,
+   "per": 15.55303,
+   "eps": 1.32,
    "roe": 8.18,
    "deuda": 0.327,
-   "dividendo": 3.141,
-   "dividendo_yahoo": 3.18,
+   "dividendo": 3.069,
+   "dividendo_yahoo": 3.14,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-12",
@@ -58043,7 +58043,7 @@
     "recomendacion": 3.55556,
     "n": 18,
     "objetivo": 1817.222,
-    "potencial": -9.4,
+    "potencial": -11.5,
     "voto": -0.5
    },
    "volumen_rel": null,
@@ -58058,25 +58058,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 2006.0,
-    "rsi14": 59.0,
-    "macd": 27.7221,
-    "macd_senal": 21.441,
-    "macd_hist": 6.281,
-    "adx7": 28.4,
-    "di_mas": 33.1,
-    "di_menos": 17.0,
-    "willr40": -19.0,
-    "sma50": 1905.93,
-    "sma200": 1920.7425
+    "fecha": "2026-11-13",
+    "cierre": 2053.0,
+    "rsi14": 64.1,
+    "macd": 31.8245,
+    "macd_senal": 23.5177,
+    "macd_hist": 8.3067,
+    "adx7": 30.3,
+    "di_mas": 35.5,
+    "di_menos": 14.6,
+    "willr40": -0.8,
+    "sma50": 1905.55,
+    "sma200": 1921.4825
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-14",
    "sector": "Consumo básico",
    "señales": {
     "per": {
-     "valor": 15.43609,
+     "valor": 15.55303,
      "voto": 0.0,
      "mediana": 15.718
     },
@@ -58441,7 +58441,7 @@
     "per": {
      "valor": 7.7025642,
      "voto": 0.0,
-     "mediana": 8.262
+     "mediana": 8.232
     },
     "roe": {
      "valor": 9.33,
@@ -58670,19 +58670,19 @@
    "eps": 4.58,
    "roe": 25.01,
    "deuda": 2.424,
-   "dividendo": 2.497,
-   "dividendo_yahoo": 2.5,
+   "dividendo": 2.551,
+   "dividendo_yahoo": 2.55,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "EUR",
-   "tendencia": "lateral",
-   "tendencia_voto": -0.5,
+   "tendencia": "bajista",
+   "tendencia_voto": -1.0,
    "analistas": {
     "recomendacion": 1.70588,
     "n": 17,
     "objetivo": 128.53235,
-    "potencial": 38.1,
+    "potencial": 41.2,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -58705,18 +58705,18 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 93.05,
-    "rsi14": 54.9,
-    "macd": -0.6168,
-    "macd_senal": -1.207,
-    "macd_hist": 0.5902,
-    "adx7": 25.7,
-    "di_mas": 33.7,
-    "di_menos": 13.9,
-    "willr40": -30.0,
-    "sma50": 92.628,
-    "sma200": 109.5497
+    "fecha": "2026-11-13",
+    "cierre": 91.05,
+    "rsi14": 50.1,
+    "macd": -0.5126,
+    "macd_senal": -1.0681,
+    "macd_hist": 0.5556,
+    "adx7": 25.4,
+    "di_mas": 28.3,
+    "di_menos": 17.7,
+    "willr40": -45.5,
+    "sma50": 92.407,
+    "sma200": 109.523
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-14",
@@ -58738,8 +58738,8 @@
      "mediana": 1.607
     },
     "tendencia": {
-     "valor": "lateral",
-     "voto": -0.5
+     "valor": "bajista",
+     "voto": -1.0
     },
     "sentimiento": {
      "valor": 1.70588,
@@ -58753,8 +58753,8 @@
     "n": 7,
     "pequeno": false
    },
-   "puntuacion": -1.0,
-   "etiqueta": "Neutral",
+   "puntuacion": -2.0,
+   "etiqueta": "Desfavorable",
    "deuda_etiqueta": "alto"
   },
   "ACX.MC": {
@@ -59312,11 +59312,11 @@
   "ADS.DE": {
    "dominio": "adidas-group.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 19.184664,
-   "eps": 9.26,
+   "per": 19.163969,
+   "eps": 9.27,
    "roe": 26.33,
    "deuda": 0.898,
-   "dividendo": 1.582,
+   "dividendo": 1.576,
    "dividendo_yahoo": 1.58,
    "pagos_12m": 1,
    "frecuencia": "anual",
@@ -59328,7 +59328,7 @@
     "recomendacion": 1.84375,
     "n": 30,
     "objetivo": 198.46667,
-    "potencial": 12.2,
+    "potencial": 11.7,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -59351,27 +59351,27 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 176.95,
-    "rsi14": 66.5,
-    "macd": 6.8876,
-    "macd_senal": 6.1386,
-    "macd_hist": 0.7489,
-    "adx7": 60.6,
-    "di_mas": 43.4,
-    "di_menos": 11.8,
-    "willr40": -12.7,
-    "sma50": 154.619,
-    "sma200": 156.0925
+    "fecha": "2026-11-13",
+    "cierre": 177.65,
+    "rsi14": 67.2,
+    "macd": 6.763,
+    "macd_senal": 6.2635,
+    "macd_hist": 0.4995,
+    "adx7": 58.3,
+    "di_mas": 38.6,
+    "di_menos": 14.7,
+    "willr40": -11.1,
+    "sma50": 155.189,
+    "sma200": 156.2358
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-10-31",
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 19.184664,
+     "valor": 19.163969,
      "voto": 0.5,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 26.33,
@@ -59966,12 +59966,12 @@
   "AI.PA": {
    "dominio": "airliquide.com",
    "sector_yahoo": "Basic Materials",
-   "per": 34.70736,
-   "eps": 5.57,
+   "per": 34.83243,
+   "eps": 5.55,
    "roe": 13.97,
    "deuda": 0.633,
-   "dividendo": 1.744,
-   "dividendo_yahoo": 1.75,
+   "dividendo": 1.74,
+   "dividendo_yahoo": 1.74,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -59982,7 +59982,7 @@
     "recomendacion": 1.35,
     "n": 20,
     "objetivo": 202.725,
-    "potencial": 5.1,
+    "potencial": 4.9,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -59997,27 +59997,27 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 192.84,
-    "rsi14": 81.2,
-    "macd": 5.5564,
-    "macd_senal": 4.3488,
-    "macd_hist": 1.2076,
-    "adx7": 65.6,
-    "di_mas": 50.0,
-    "di_menos": 5.9,
-    "willr40": -4.6,
-    "sma50": 173.3852,
-    "sma200": 167.2063
+    "fecha": "2026-11-13",
+    "cierre": 193.32,
+    "rsi14": 81.6,
+    "macd": 5.7032,
+    "macd_senal": 4.6197,
+    "macd_hist": 1.0835,
+    "adx7": 67.6,
+    "di_mas": 47.0,
+    "di_menos": 5.4,
+    "willr40": -4.0,
+    "sma50": 173.8428,
+    "sma200": 167.448
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 34.70736,
+     "valor": 34.83243,
      "voto": 0.0,
-     "mediana": 34.707
+     "mediana": 34.832
     },
     "roe": {
      "valor": 13.97,
@@ -60614,7 +60614,7 @@
    "roe": 7.05,
    "deuda": 0.185,
    "dividendo": 1.737,
-   "dividendo_yahoo": 1.73,
+   "dividendo_yahoo": 1.75,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -61050,7 +61050,7 @@
     "roe": {
      "valor": 19.61,
      "voto": 0.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
      "valor": 0.506,
@@ -61932,19 +61932,19 @@
    "eps": 6.62,
    "roe": 10.45,
    "deuda": 2.26,
-   "dividendo": 2.606,
-   "dividendo_yahoo": 2.61,
+   "dividendo": 2.832,
+   "dividendo_yahoo": 2.83,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
    "moneda_yahoo": "EUR",
-   "tendencia": "lateral",
-   "tendencia_voto": -0.5,
+   "tendencia": "bajista",
+   "tendencia_voto": -1.0,
    "analistas": {
     "recomendacion": 3.2,
     "n": 11,
     "objetivo": 218.1,
-    "potencial": -1.1,
+    "potencial": 7.4,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -61959,18 +61959,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 220.6,
-    "rsi14": 58.5,
-    "macd": 2.2921,
-    "macd_senal": 0.9321,
-    "macd_hist": 1.36,
-    "adx7": 35.2,
-    "di_mas": 30.8,
-    "di_menos": 8.7,
-    "willr40": -18.6,
-    "sma50": 211.02,
-    "sma200": 227.231
+    "fecha": "2026-11-13",
+    "cierre": 203.0,
+    "rsi14": 41.5,
+    "macd": 1.1154,
+    "macd_senal": 0.9688,
+    "macd_hist": 0.1466,
+    "adx7": 34.1,
+    "di_mas": 20.5,
+    "di_menos": 36.3,
+    "willr40": -96.5,
+    "sma50": 211.016,
+    "sma200": 227.3355
    },
    "fecha": "2026-11-14",
    "actualizada": null,
@@ -61992,8 +61992,8 @@
      "mediana": 1.607
     },
     "tendencia": {
-     "valor": "lateral",
-     "voto": -0.5
+     "valor": "bajista",
+     "voto": -1.0
     },
     "sentimiento": {
      "valor": 3.2,
@@ -62007,7 +62007,7 @@
     "n": 7,
     "pequeno": false
    },
-   "puntuacion": -7.0,
+   "puntuacion": -8.0,
    "etiqueta": "Muy desfavorable",
    "deuda_etiqueta": "alto"
   },
@@ -62599,8 +62599,8 @@
     "macd_senal": 5.6622,
     "macd_hist": -0.0673,
     "adx7": 33.3,
-    "di_mas": 28.1,
-    "di_menos": 14.5,
+    "di_mas": 27.9,
+    "di_menos": 14.4,
     "willr40": -13.2,
     "sma50": 295.653,
     "sma200": 292.676
@@ -63256,8 +63256,8 @@
     "macd_senal": 2.8893,
     "macd_hist": 0.0763,
     "adx7": 54.0,
-    "di_mas": 34.9,
-    "di_menos": 9.3,
+    "di_mas": 34.8,
+    "di_menos": 9.2,
     "willr40": -19.4,
     "sma50": 165.624,
     "sma200": 174.6566
@@ -64487,7 +64487,7 @@
    "roe": 9.49,
    "deuda": 1.331,
    "dividendo": 1.222,
-   "dividendo_yahoo": 1.23,
+   "dividendo_yahoo": 1.22,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -65143,7 +65143,7 @@
    "roe": 43.13,
    "deuda": 1.301,
    "dividendo": 3.68,
-   "dividendo_yahoo": 3.71,
+   "dividendo_yahoo": 3.69,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-08-01",
@@ -65184,8 +65184,8 @@
     "macd_senal": 2.9458,
     "macd_hist": 0.4234,
     "adx7": 38.9,
-    "di_mas": 28.8,
-    "di_menos": 11.5,
+    "di_mas": 28.7,
+    "di_menos": 11.6,
     "willr40": -11.9,
     "sma50": 93.6434,
     "sma200": 76.9755
@@ -65836,7 +65836,7 @@
     "macd_hist": -0.6191,
     "adx7": 23.9,
     "di_mas": 18.4,
-    "di_menos": 13.5,
+    "di_menos": 13.4,
     "willr40": -16.4,
     "sma50": 233.3476,
     "sma200": 205.1537
@@ -66391,7 +66391,7 @@
     "per": {
      "valor": 6.1034827,
      "voto": 1.0,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 6.25,
@@ -66431,7 +66431,7 @@
    "roe": 44.01,
    "deuda": 1.915,
    "dividendo": 3.973,
-   "dividendo_yahoo": 4.04,
+   "dividendo_yahoo": 3.97,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -66471,8 +66471,8 @@
     "macd": 0.4178,
     "macd_senal": 0.2693,
     "macd_hist": 0.1485,
-    "adx7": 19.3,
-    "di_mas": 22.9,
+    "adx7": 19.2,
+    "di_mas": 22.8,
     "di_menos": 17.8,
     "willr40": -22.5,
     "sma50": 61.8984,
@@ -66665,7 +66665,7 @@
     "per": {
      "valor": 7.4934382,
      "voto": 0.0,
-     "mediana": 8.262
+     "mediana": 8.232
     },
     "roe": {
      "valor": 10.91,
@@ -67075,7 +67075,7 @@
    "roe": 40.15,
    "deuda": 1.391,
    "dividendo": 2.086,
-   "dividendo_yahoo": 2.28,
+   "dividendo_yahoo": 2.27,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -67117,7 +67117,7 @@
     "macd_hist": 0.4624,
     "adx7": 43.5,
     "di_mas": 29.2,
-    "di_menos": 14.3,
+    "di_menos": 14.2,
     "willr40": -8.2,
     "sma50": 173.2952,
     "sma200": 165.0102
@@ -67706,12 +67706,12 @@
   "BVI.PA": {
    "dominio": "group.bureauveritas.com",
    "sector_yahoo": "Industrials",
-   "per": 26.745615,
-   "eps": 1.14,
+   "per": 26.982302,
+   "eps": 1.13,
    "roe": 32.93,
    "deuda": 1.785,
-   "dividendo": 3.047,
-   "dividendo_yahoo": 3.06,
+   "dividendo": 3.017,
+   "dividendo_yahoo": 3.05,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -67722,7 +67722,7 @@
     "recomendacion": 1.64706,
     "n": 17,
     "objetivo": 33.49471,
-    "potencial": 10.9,
+    "potencial": 9.9,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -67737,25 +67737,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 30.19,
-    "rsi14": 71.5,
-    "macd": 0.6621,
-    "macd_senal": 0.6166,
-    "macd_hist": 0.0455,
-    "adx7": 52.0,
-    "di_mas": 40.6,
-    "di_menos": 13.1,
-    "willr40": -10.2,
-    "sma50": 27.9978,
-    "sma200": 27.3097
+    "fecha": "2026-11-13",
+    "cierre": 30.49,
+    "rsi14": 74.2,
+    "macd": 0.6792,
+    "macd_senal": 0.6291,
+    "macd_hist": 0.05,
+    "adx7": 52.2,
+    "di_mas": 38.2,
+    "di_menos": 11.7,
+    "willr40": -4.0,
+    "sma50": 28.0636,
+    "sma200": 27.3277
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 26.745615,
+     "valor": 26.982302,
      "voto": 0.0,
      "mediana": 25.631
     },
@@ -68341,12 +68341,12 @@
   "CAP.PA": {
    "dominio": "capgemini.com",
    "sector_yahoo": "Technology",
-   "per": 15.845772,
-   "eps": 8.04,
+   "per": 16.188057,
+   "eps": 7.87,
    "roe": 12.2,
    "deuda": 0.875,
-   "dividendo": 2.687,
-   "dividendo_yahoo": 2.74,
+   "dividendo": 2.669,
+   "dividendo_yahoo": 2.69,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -68357,7 +68357,7 @@
     "recomendacion": 1.76471,
     "n": 17,
     "objetivo": 150.90765,
-    "potencial": 19.2,
+    "potencial": 18.5,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -68372,25 +68372,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 126.55,
-    "rsi14": 59.2,
-    "macd": 2.9209,
-    "macd_senal": 3.6447,
-    "macd_hist": -0.7238,
-    "adx7": 22.1,
-    "di_mas": 23.0,
-    "di_menos": 24.9,
-    "willr40": -16.6,
-    "sma50": 114.909,
-    "sma200": 105.108
+    "fecha": "2026-11-13",
+    "cierre": 127.4,
+    "rsi14": 60.6,
+    "macd": 2.8896,
+    "macd_senal": 3.4937,
+    "macd_hist": -0.6041,
+    "adx7": 19.8,
+    "di_mas": 25.0,
+    "di_menos": 22.4,
+    "willr40": -13.8,
+    "sma50": 115.329,
+    "sma200": 105.1352
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Tecnología de la información",
    "señales": {
     "per": {
-     "valor": 15.845772,
+     "valor": 16.188057,
      "voto": 0.5,
      "mediana": 24.49
     },
@@ -68870,7 +68870,7 @@
     "roe": {
      "valor": 9.67,
      "voto": -1.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
      "valor": null,
@@ -70341,8 +70341,8 @@
     "macd_senal": 4.9462,
     "macd_hist": 0.4114,
     "adx7": 76.1,
-    "di_mas": 39.8,
-    "di_menos": 8.1,
+    "di_mas": 39.5,
+    "di_menos": 8.0,
     "willr40": -16.6,
     "sma50": 172.6036,
     "sma200": 169.5409
@@ -70957,7 +70957,7 @@
    "roe": 25.05,
    "deuda": 0.566,
    "dividendo": 1.813,
-   "dividendo_yahoo": 1.93,
+   "dividendo_yahoo": 1.95,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -70981,13 +70981,13 @@
     "periodo": "2026-09-30",
     "ingresos": {
      "ultimo": 9438000000.0,
-     "anterior": 8398000000.0,
-     "año_anterior": 8643000000.0
+     "anterior": 9457000000.0,
+     "año_anterior": 8317000000.0
     },
     "beneficio": {
      "ultimo": 1140000000.0,
-     "anterior": 654000000.0,
-     "año_anterior": 890000000.0
+     "anterior": 932000000.0,
+     "año_anterior": 536000000.0
     }
    },
    "tecnicos": {
@@ -71643,17 +71643,17 @@
    },
    "tecnicos": {
     "fecha": "2026-11-13",
-    "cierre": 127.645,
+    "cierre": 127.65,
     "rsi14": 32.4,
-    "macd": -12.0221,
-    "macd_senal": -10.4205,
-    "macd_hist": -1.6016,
+    "macd": -12.0217,
+    "macd_senal": -10.4204,
+    "macd_hist": -1.6013,
     "adx7": 49.1,
     "di_mas": 9.7,
     "di_menos": 32.7,
     "willr40": -97.3,
-    "sma50": 170.3857,
-    "sma200": 174.0523
+    "sma50": 170.3858,
+    "sma200": 174.0524
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
@@ -71854,7 +71854,7 @@
      "valor": null,
      "voto": -1,
      "nota": "pérdidas",
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": -8.3,
@@ -72312,7 +72312,7 @@
     "macd_senal": 10.6326,
     "macd_hist": 5.2148,
     "adx7": 43.2,
-    "di_mas": 33.5,
+    "di_mas": 33.6,
     "di_menos": 12.6,
     "willr40": -18.6,
     "sma50": 409.8214,
@@ -73147,7 +73147,7 @@
     "per": {
      "valor": 11.482479,
      "voto": -0.5,
-     "mediana": 8.262
+     "mediana": 8.232
     },
     "roe": {
      "valor": 14.88,
@@ -73563,8 +73563,8 @@
    "eps": 0.05,
    "roe": 7.65,
    "deuda": 1.218,
-   "dividendo": 2.168,
-   "dividendo_yahoo": 2.19,
+   "dividendo": 2.148,
+   "dividendo_yahoo": 2.17,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -73575,7 +73575,7 @@
     "recomendacion": 1.42105,
     "n": 19,
     "objetivo": 304.4479,
-    "potencial": 19.0,
+    "potencial": 17.9,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -73590,18 +73590,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 255.8,
-    "rsi14": 70.3,
-    "macd": 6.616,
-    "macd_senal": 6.4264,
-    "macd_hist": 0.1896,
-    "adx7": 42.8,
-    "di_mas": 35.1,
-    "di_menos": 11.7,
-    "willr40": -5.7,
-    "sma50": 229.784,
-    "sma200": 223.628
+    "fecha": "2026-11-13",
+    "cierre": 258.2,
+    "rsi14": 72.2,
+    "macd": 6.8783,
+    "macd_senal": 6.5168,
+    "macd_hist": 0.3616,
+    "adx7": 43.9,
+    "di_mas": 32.6,
+    "di_menos": 10.7,
+    "willr40": -1.2,
+    "sma50": 230.384,
+    "sma200": 223.769
    },
    "fecha": "2026-11-14",
    "actualizada": null,
@@ -74362,7 +74362,7 @@
     "roe": {
      "valor": 20.34,
      "voto": 0.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
      "valor": 0.722,
@@ -74457,7 +74457,7 @@
     "roe": {
      "valor": 8.98,
      "voto": -1.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
      "valor": null,
@@ -75483,12 +75483,12 @@
   "DHL.DE": {
    "dominio": "group.dhl.com",
    "sector_yahoo": "Industrials",
-   "per": 18.179106,
-   "eps": 3.35,
+   "per": 18.343374,
+   "eps": 3.32,
    "roe": 17.87,
    "deuda": 1.18,
-   "dividendo": 3.138,
-   "dividendo_yahoo": 3.17,
+   "dividendo": 3.12,
+   "dividendo_yahoo": 3.14,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
@@ -75499,7 +75499,7 @@
     "recomendacion": 2.61905,
     "n": 19,
     "objetivo": 58.89941,
-    "potencial": -2.7,
+    "potencial": -3.3,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -75522,25 +75522,25 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 60.54,
-    "rsi14": 62.4,
-    "macd": 0.7484,
-    "macd_senal": 0.671,
-    "macd_hist": 0.0774,
-    "adx7": 28.0,
-    "di_mas": 34.7,
-    "di_menos": 15.2,
-    "willr40": -11.3,
-    "sma50": 57.196,
-    "sma200": 52.6003
+    "fecha": "2026-11-13",
+    "cierre": 60.9,
+    "rsi14": 63.9,
+    "macd": 0.8322,
+    "macd_senal": 0.7033,
+    "macd_hist": 0.1289,
+    "adx7": 29.6,
+    "di_mas": 32.6,
+    "di_menos": 14.2,
+    "willr40": -6.0,
+    "sma50": 57.3148,
+    "sma200": 52.6631
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 18.179106,
+     "valor": 18.343374,
      "voto": 0.5,
      "mediana": 25.48
     },
@@ -76146,7 +76146,7 @@
    "roe": -3.24,
    "deuda": 1.076,
    "dividendo": 4.237,
-   "dividendo_yahoo": 4.22,
+   "dividendo_yahoo": 4.24,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -76783,12 +76783,12 @@
   "DTG.DE": {
    "dominio": "daimlertruck.com",
    "sector_yahoo": "Industrials",
-   "per": 23.184782,
-   "eps": 1.84,
+   "per": 23.311474,
+   "eps": 1.83,
    "roe": 6.21,
    "deuda": 1.223,
-   "dividendo": 4.457,
-   "dividendo_yahoo": 4.49,
+   "dividendo": 4.454,
+   "dividendo_yahoo": 4.46,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
@@ -76799,7 +76799,7 @@
     "recomendacion": 2.11111,
     "n": 18,
     "objetivo": 49.53333,
-    "potencial": 16.2,
+    "potencial": 16.1,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -76822,25 +76822,25 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 42.63,
-    "rsi14": 57.9,
-    "macd": 0.106,
-    "macd_senal": -0.2223,
-    "macd_hist": 0.3283,
-    "adx7": 21.6,
-    "di_mas": 24.8,
-    "di_menos": 30.8,
-    "willr40": -28.3,
-    "sma50": 41.982,
-    "sma200": 42.8002
+    "fecha": "2026-11-13",
+    "cierre": 42.66,
+    "rsi14": 58.1,
+    "macd": 0.1826,
+    "macd_senal": -0.1413,
+    "macd_hist": 0.3239,
+    "adx7": 20.0,
+    "di_mas": 24.1,
+    "di_menos": 29.5,
+    "willr40": -20.0,
+    "sma50": 41.9206,
+    "sma200": 42.7944
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-14",
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 23.184782,
+     "valor": 23.311474,
      "voto": 0.0,
      "mediana": 25.48
     },
@@ -77446,7 +77446,7 @@
    "roe": 20.77,
    "deuda": 1.333,
    "dividendo": 0.944,
-   "dividendo_yahoo": 0.96,
+   "dividendo_yahoo": 0.94,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -77488,7 +77488,7 @@
     "macd_hist": 0.0686,
     "adx7": 55.1,
     "di_mas": 29.2,
-    "di_menos": 10.2,
+    "di_menos": 10.1,
     "willr40": -18.8,
     "sma50": 286.4666,
     "sma200": 277.2762
@@ -77680,7 +77680,7 @@
     "per": {
      "valor": 11.684466,
      "voto": -1.0,
-     "mediana": 8.262
+     "mediana": 8.232
     },
     "deuda": {
      "valor": null,
@@ -78093,7 +78093,7 @@
    "roe": 9.28,
    "deuda": 2.278,
    "dividendo": 1.253,
-   "dividendo_yahoo": 1.27,
+   "dividendo_yahoo": 1.25,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -78742,8 +78742,8 @@
    "eps": 1.36,
    "roe": 11.88,
    "deuda": 1.318,
-   "dividendo": 5.504,
-   "dividendo_yahoo": 5.5,
+   "dividendo": 5.435,
+   "dividendo_yahoo": 5.43,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -78754,7 +78754,7 @@
     "recomendacion": 2.7,
     "n": 20,
     "objetivo": 17.1825,
-    "potencial": -5.4,
+    "potencial": -6.6,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -78777,18 +78777,18 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 18.17,
-    "rsi14": 75.5,
-    "macd": 0.3037,
-    "macd_senal": 0.2803,
-    "macd_hist": 0.0233,
-    "adx7": 56.2,
-    "di_mas": 38.2,
-    "di_menos": 7.7,
-    "willr40": -1.9,
-    "sma50": 16.9734,
-    "sma200": 16.5908
+    "fecha": "2026-11-13",
+    "cierre": 18.4,
+    "rsi14": 79.0,
+    "macd": 0.3311,
+    "macd_senal": 0.2905,
+    "macd_hist": 0.0406,
+    "adx7": 58.7,
+    "di_mas": 44.2,
+    "di_menos": 6.6,
+    "willr40": -0.0,
+    "sma50": 17.0094,
+    "sma200": 16.6128
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-10-24",
@@ -79387,7 +79387,7 @@
    "roe": 10.49,
    "deuda": 0.191,
    "dividendo": 1.259,
-   "dividendo_yahoo": 1.3,
+   "dividendo_yahoo": 1.29,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -80032,8 +80032,8 @@
    "eps": 4.49,
    "roe": 10.06,
    "deuda": 1.466,
-   "dividendo": 3.132,
-   "dividendo_yahoo": 3.27,
+   "dividendo": 3.131,
+   "dividendo_yahoo": 3.26,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -80068,16 +80068,16 @@
    },
    "tecnicos": {
     "fecha": "2026-11-13",
-    "cierre": 88.775,
-    "rsi14": 71.5,
-    "macd": 1.771,
-    "macd_senal": 1.5959,
-    "macd_hist": 0.1751,
+    "cierre": 88.78,
+    "rsi14": 71.6,
+    "macd": 1.7714,
+    "macd_senal": 1.596,
+    "macd_hist": 0.1754,
     "adx7": 32.5,
-    "di_mas": 26.8,
+    "di_mas": 26.9,
     "di_menos": 17.1,
-    "willr40": -7.1,
-    "sma50": 82.5137,
+    "willr40": -7.0,
+    "sma50": 82.5138,
     "sma200": 82.6118
    },
    "fecha": "2026-11-14",
@@ -80683,7 +80683,7 @@
    "roe": 7.7,
    "deuda": 1.03,
    "dividendo": 4.088,
-   "dividendo_yahoo": 4.1,
+   "dividendo_yahoo": 4.09,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -80724,8 +80724,8 @@
     "macd_senal": 5.2546,
     "macd_hist": 0.3574,
     "adx7": 60.8,
-    "di_mas": 32.2,
-    "di_menos": 13.1,
+    "di_mas": 32.1,
+    "di_menos": 13.0,
     "willr40": -14.3,
     "sma50": 141.6898,
     "sma200": 143.1242
@@ -81335,7 +81335,7 @@
    "roe": 25.47,
    "deuda": 0.77,
    "dividendo": 1.359,
-   "dividendo_yahoo": 1.4,
+   "dividendo_yahoo": 1.39,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-08-31",
@@ -82017,7 +82017,7 @@
     "macd_senal": -26.2256,
     "macd_hist": 6.0564,
     "adx7": 15.6,
-    "di_mas": 16.1,
+    "di_mas": 16.0,
     "di_menos": 19.9,
     "willr40": -64.9,
     "sma50": 787.6606,
@@ -82617,23 +82617,23 @@
   "FME.DE": {
    "dominio": "freseniusmedicalcare.com",
    "sector_yahoo": "Healthcare",
-   "per": 13.878893,
-   "eps": 2.89,
+   "per": 13.459732,
+   "eps": 2.98,
    "roe": 7.84,
    "deuda": 0.792,
-   "dividendo": 3.766,
-   "dividendo_yahoo": 3.65,
+   "dividendo": 3.715,
+   "dividendo_yahoo": 3.77,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "EUR",
    "tendencia": "lateral",
-   "tendencia_voto": -0.5,
+   "tendencia_voto": 0.5,
    "analistas": {
     "recomendacion": 3.1875,
     "n": 17,
     "objetivo": 39.68235,
-    "potencial": 0.3,
+    "potencial": -1.1,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -82646,36 +82646,36 @@
     "periodo": "2026-09-30",
     "ingresos": {
      "ultimo": 4936742000.0,
-     "anterior": null,
+     "anterior": 4860566000.0,
      "año_anterior": 4884850000.0
     },
     "beneficio": {
      "ultimo": 159777000.0,
-     "anterior": null,
+     "anterior": 218377000.0,
      "año_anterior": 274797000.0
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 39.56,
-    "rsi14": 46.5,
-    "macd": 0.3589,
-    "macd_senal": 0.4176,
-    "macd_hist": -0.0587,
-    "adx7": 19.7,
-    "di_mas": 12.8,
-    "di_menos": 28.5,
-    "willr40": -46.4,
-    "sma50": 39.5568,
-    "sma200": 39.7955
+    "fecha": "2026-11-13",
+    "cierre": 40.11,
+    "rsi14": 49.5,
+    "macd": 0.2951,
+    "macd_senal": 0.3931,
+    "macd_hist": -0.098,
+    "adx7": 23.5,
+    "di_mas": 11.2,
+    "di_menos": 30.7,
+    "willr40": -38.0,
+    "sma50": 39.5746,
+    "sma200": 39.8016
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
    "sector": "Salud",
    "señales": {
     "per": {
-     "valor": 13.878893,
-     "voto": 0.5,
+     "valor": 13.459732,
+     "voto": 1.0,
      "mediana": 22.959
     },
     "roe": {
@@ -82690,7 +82690,7 @@
     },
     "tendencia": {
      "valor": "lateral",
-     "voto": -0.5
+     "voto": 0.5
     },
     "sentimiento": {
      "valor": 3.1875,
@@ -82704,8 +82704,8 @@
     "n": 6,
     "pequeno": false
    },
-   "puntuacion": -1.0,
-   "etiqueta": "Neutral",
+   "puntuacion": 2.0,
+   "etiqueta": "Favorable",
    "deuda_etiqueta": "alto"
   },
   "FOX": {
@@ -84555,12 +84555,12 @@
   "GLE.PA": {
    "dominio": "societegenerale.com",
    "sector_yahoo": "Financial Services",
-   "per": 8.262315,
-   "eps": 8.12,
+   "per": 8.231902,
+   "eps": 8.15,
    "roe": 9.62,
    "deuda": null,
-   "dividendo": 2.596,
-   "dividendo_yahoo": 2.59,
+   "dividendo": 2.608,
+   "dividendo_yahoo": 2.6,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -84571,7 +84571,7 @@
     "recomendacion": 1.85,
     "n": 20,
     "objetivo": 88.45,
-    "potencial": 31.2,
+    "potencial": 31.8,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -84594,27 +84594,27 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 67.42,
-    "rsi14": 60.7,
-    "macd": 0.0764,
-    "macd_senal": -0.9563,
-    "macd_hist": 1.0327,
-    "adx7": 42.2,
-    "di_mas": 34.1,
-    "di_menos": 8.3,
-    "willr40": -49.6,
-    "sma50": 67.2084,
-    "sma200": 71.2148
+    "fecha": "2026-11-13",
+    "cierre": 67.09,
+    "rsi14": 59.0,
+    "macd": 0.2383,
+    "macd_senal": -0.7174,
+    "macd_hist": 0.9556,
+    "adx7": 42.4,
+    "di_mas": 31.9,
+    "di_menos": 12.5,
+    "willr40": -51.5,
+    "sma50": 67.0666,
+    "sma200": 71.1672
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-10-31",
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 8.262315,
+     "valor": 8.231902,
      "voto": 0.0,
-     "mediana": 8.262
+     "mediana": 8.232
     },
     "roe": {
      "valor": 9.62,
@@ -85211,7 +85211,7 @@
    "roe": 0.66,
    "deuda": 1.465,
    "dividendo": 3.421,
-   "dividendo_yahoo": 3.46,
+   "dividendo_yahoo": 3.45,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -85865,7 +85865,7 @@
    "roe": 18.78,
    "deuda": 0.735,
    "dividendo": 2.013,
-   "dividendo_yahoo": 2.08,
+   "dividendo_yahoo": 2.01,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -86498,7 +86498,7 @@
    "roe": 23.25,
    "deuda": 0.232,
    "dividendo": 1.746,
-   "dividendo_yahoo": 1.96,
+   "dividendo_yahoo": 1.95,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -86539,7 +86539,7 @@
     "macd_senal": 1.0833,
     "macd_hist": 0.1891,
     "adx7": 30.3,
-    "di_mas": 31.3,
+    "di_mas": 31.2,
     "di_menos": 12.5,
     "willr40": -18.4,
     "sma50": 132.5974,
@@ -87088,7 +87088,7 @@
     "roe": {
      "valor": 22.16,
      "voto": 0.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
      "valor": 0.29,
@@ -87119,12 +87119,12 @@
   "HO.PA": {
    "dominio": "thalesgroup.com",
    "sector_yahoo": "Industrials",
-   "per": 31.673641,
-   "eps": 7.17,
+   "per": 31.280993,
+   "eps": 7.26,
    "roe": 19.35,
    "deuda": 0.695,
-   "dividendo": 1.715,
-   "dividendo_yahoo": 1.69,
+   "dividendo": 1.717,
+   "dividendo_yahoo": 1.71,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -87135,7 +87135,7 @@
     "recomendacion": 2.05263,
     "n": 19,
     "objetivo": 284.6842,
-    "potencial": 25.2,
+    "potencial": 25.4,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -87150,25 +87150,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 227.4,
-    "rsi14": 47.2,
-    "macd": -0.3508,
-    "macd_senal": -0.1925,
-    "macd_hist": -0.1584,
-    "adx7": 20.9,
-    "di_mas": 25.5,
-    "di_menos": 25.6,
-    "willr40": -48.3,
-    "sma50": 229.414,
-    "sma200": 239.661
+    "fecha": "2026-11-13",
+    "cierre": 227.1,
+    "rsi14": 46.8,
+    "macd": -0.5023,
+    "macd_senal": -0.2544,
+    "macd_hist": -0.2479,
+    "adx7": 19.3,
+    "di_mas": 23.4,
+    "di_menos": 28.4,
+    "willr40": -47.6,
+    "sma50": 229.284,
+    "sma200": 239.503
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Industriales",
    "señales": {
     "per": {
-     "valor": 31.673641,
+     "valor": 31.280993,
      "voto": -0.5,
      "mediana": 25.631
     },
@@ -87755,8 +87755,8 @@
    "eps": 1.14,
    "roe": 14.22,
    "deuda": null,
-   "dividendo": 4.116,
-   "dividendo_yahoo": 2.21,
+   "dividendo": 4.115,
+   "dividendo_yahoo": 2.23,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -87767,7 +87767,7 @@
     "recomendacion": 2.47059,
     "n": 17,
     "objetivo": 1494.3494,
-    "potencial": 10.4,
+    "potencial": 10.3,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -87780,28 +87780,28 @@
     "periodo": "2026-09-30",
     "ingresos": {
      "ultimo": null,
-     "anterior": 19125000000.0,
-     "año_anterior": 17657000000.0
+     "anterior": 19043000000.0,
+     "año_anterior": 17900000000.0
     },
     "beneficio": {
      "ultimo": null,
-     "anterior": 7345000000.0,
-     "año_anterior": 4733000000.0
+     "anterior": 7914000000.0,
+     "año_anterior": 5284000000.0
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 1354.0,
-    "rsi14": 48.6,
-    "macd": -25.8326,
-    "macd_senal": -37.1697,
-    "macd_hist": 11.3371,
-    "adx7": 32.9,
-    "di_mas": 29.7,
-    "di_menos": 17.8,
-    "willr40": -66.9,
-    "sma50": 1429.304,
-    "sma200": 1391.581
+    "fecha": "2026-11-13",
+    "cierre": 1354.4,
+    "rsi14": 48.7,
+    "macd": -22.1741,
+    "macd_senal": -34.1706,
+    "macd_hist": 11.9965,
+    "adx7": 31.8,
+    "di_mas": 28.0,
+    "di_menos": 16.6,
+    "willr40": -66.4,
+    "sma50": 1424.788,
+    "sma200": 1392.003
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-10-31",
@@ -88407,8 +88407,8 @@
    "eps": 0.49,
    "roe": 23.94,
    "deuda": 0.624,
-   "dividendo": 2.588,
-   "dividendo_yahoo": 2.58,
+   "dividendo": 2.579,
+   "dividendo_yahoo": 2.59,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-13",
@@ -88419,7 +88419,7 @@
     "recomendacion": 1.5625,
     "n": 16,
     "objetivo": 1007.37494,
-    "potencial": 18.5,
+    "potencial": 18.1,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -88434,18 +88434,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 850.0,
-    "rsi14": 66.0,
-    "macd": 21.0795,
-    "macd_senal": 17.9951,
-    "macd_hist": 3.0843,
-    "adx7": 53.2,
-    "di_mas": 31.0,
-    "di_menos": 12.0,
-    "willr40": -16.9,
-    "sma50": 782.36,
-    "sma200": 805.0597
+    "fecha": "2026-11-13",
+    "cierre": 853.0,
+    "rsi14": 66.9,
+    "macd": 20.8262,
+    "macd_senal": 18.5614,
+    "macd_hist": 2.2649,
+    "adx7": 49.1,
+    "di_mas": 27.6,
+    "di_menos": 16.6,
+    "willr40": -14.6,
+    "sma50": 783.92,
+    "sma200": 805.1397
    },
    "fecha": "2026-11-14",
    "actualizada": null,
@@ -89711,8 +89711,8 @@
    "eps": 4.71,
    "roe": null,
    "deuda": null,
-   "dividendo": 1.039,
-   "dividendo_yahoo": 1.05,
+   "dividendo": 1.032,
+   "dividendo_yahoo": 1.06,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -89723,7 +89723,7 @@
     "recomendacion": 2.47059,
     "n": 17,
     "objetivo": 167.9647,
-    "potencial": -6.2,
+    "potencial": -6.8,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -89738,18 +89738,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 179.05,
-    "rsi14": 65.8,
-    "macd": 4.8127,
-    "macd_senal": 3.914,
-    "macd_hist": 0.8987,
-    "adx7": 51.3,
-    "di_mas": 25.4,
-    "di_menos": 10.1,
-    "willr40": -10.1,
-    "sma50": 162.814,
-    "sma200": 153.632
+    "fecha": "2026-11-13",
+    "cierre": 180.25,
+    "rsi14": 67.2,
+    "macd": 4.8662,
+    "macd_senal": 4.1045,
+    "macd_hist": 0.7618,
+    "adx7": 50.1,
+    "di_mas": 23.3,
+    "di_menos": 9.3,
+    "willr40": -6.7,
+    "sma50": 163.223,
+    "sma200": 153.8592
    },
    "fecha": "2026-11-14",
    "actualizada": null,
@@ -91616,7 +91616,7 @@
    "roe": 18.77,
    "deuda": 0.398,
    "dividendo": 0.773,
-   "dividendo_yahoo": 0.79,
+   "dividendo_yahoo": 0.77,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -92255,7 +92255,7 @@
    "roe": 18.01,
    "deuda": null,
    "dividendo": 1.776,
-   "dividendo_yahoo": 1.93,
+   "dividendo_yahoo": 1.91,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -92903,7 +92903,7 @@
    "roe": 7.2,
    "deuda": 0.832,
    "dividendo": 4.149,
-   "dividendo_yahoo": 4.4,
+   "dividendo_yahoo": 4.38,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -92943,9 +92943,9 @@
     "macd": 0.7291,
     "macd_senal": 0.6591,
     "macd_hist": 0.0701,
-    "adx7": 62.0,
-    "di_mas": 34.0,
-    "di_menos": 10.0,
+    "adx7": 59.7,
+    "di_mas": 32.3,
+    "di_menos": 14.4,
     "willr40": -17.7,
     "sma50": 23.3674,
     "sma200": 23.7643
@@ -94845,7 +94845,7 @@
    "roe": 12.36,
    "deuda": 1.609,
    "dividendo": 2.914,
-   "dividendo_yahoo": 2.93,
+   "dividendo_yahoo": 2.91,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -95486,7 +95486,7 @@
    "roe": 13.94,
    "deuda": 0.938,
    "dividendo": 1.602,
-   "dividendo_yahoo": 1.59,
+   "dividendo_yahoo": 1.6,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -96357,7 +96357,7 @@
     "per": {
      "valor": 7.704545,
      "voto": 1.0,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 5.88,
@@ -97400,12 +97400,12 @@
   "MKS.L": {
    "dominio": "corporate.marksandspencer.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 0.36192697,
-   "eps": 12.87,
+   "per": 0.36619496,
+   "eps": 12.72,
    "roe": 16.09,
    "deuda": 1.029,
-   "dividendo": 0.91,
-   "dividendo_yahoo": 0.92,
+   "dividendo": 0.902,
+   "dividendo_yahoo": 0.91,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-26",
@@ -97416,7 +97416,7 @@
     "recomendacion": 1.55556,
     "n": 19,
     "objetivo": 490.158,
-    "potencial": 6.2,
+    "potencial": 5.2,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -97431,25 +97431,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 461.6,
-    "rsi14": 73.6,
-    "macd": 14.8176,
-    "macd_senal": 11.3782,
-    "macd_hist": 3.4394,
-    "adx7": 41.9,
-    "di_mas": 41.7,
-    "di_menos": 12.7,
-    "willr40": -3.0,
-    "sma50": 400.226,
-    "sma200": 376.5531
+    "fecha": "2026-11-13",
+    "cierre": 465.8,
+    "rsi14": 74.9,
+    "macd": 15.9434,
+    "macd_senal": 12.2913,
+    "macd_hist": 3.6521,
+    "adx7": 43.7,
+    "di_mas": 39.5,
+    "di_menos": 11.6,
+    "willr40": -0.5,
+    "sma50": 401.784,
+    "sma200": 377.0516
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 0.36192697,
+     "valor": 0.36619496,
      "voto": 1.0,
      "mediana": 19.547
     },
@@ -98031,7 +98031,7 @@
    "roe": null,
    "deuda": null,
    "dividendo": 5.455,
-   "dividendo_yahoo": 5.7,
+   "dividendo_yahoo": 5.65,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -99357,7 +99357,7 @@
     "macd_senal": 14.5201,
     "macd_hist": 3.7172,
     "adx7": 70.3,
-    "di_mas": 47.6,
+    "di_mas": 47.5,
     "di_menos": 6.5,
     "willr40": -15.9,
     "sma50": 472.7124,
@@ -99944,15 +99944,15 @@
   "MUV2.DE": {
    "dominio": "munichre.com",
    "sector_yahoo": "Financial Services",
-   "per": 10.784386,
-   "eps": 54.82,
-   "roe": 21.3,
-   "deuda": 0.244,
-   "dividendo": 4.097,
-   "dividendo_yahoo": 4.17,
+   "per": 11.094014,
+   "eps": 53.29,
+   "roe": 20.11,
+   "deuda": 0.224,
+   "dividendo": 4.06,
+   "dividendo_yahoo": 4.1,
    "pagos_12m": 1,
    "frecuencia": "anual",
-   "trimestre": "2026-06-30",
+   "trimestre": "2026-09-30",
    "moneda_yahoo": "EUR",
    "tendencia": "alcista",
    "tendencia_voto": 1.0,
@@ -99960,7 +99960,7 @@
     "recomendacion": 2.9375,
     "n": 16,
     "objetivo": 551.1875,
-    "potencial": -5.9,
+    "potencial": -6.8,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -99983,35 +99983,35 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 585.8,
-    "rsi14": 65.7,
-    "macd": 13.2502,
-    "macd_senal": 13.2905,
-    "macd_hist": -0.0404,
-    "adx7": 41.6,
-    "di_mas": 45.0,
-    "di_menos": 16.1,
-    "willr40": -15.4,
-    "sma50": 533.008,
-    "sma200": 517.611
+    "fecha": "2026-11-13",
+    "cierre": 591.2,
+    "rsi14": 67.6,
+    "macd": 13.8968,
+    "macd_senal": 13.4118,
+    "macd_hist": 0.485,
+    "adx7": 43.2,
+    "di_mas": 46.3,
+    "di_menos": 14.3,
+    "willr40": -10.5,
+    "sma50": 534.28,
+    "sma200": 517.987
    },
    "fecha": "2026-11-14",
-   "actualizada": null,
+   "actualizada": "2026-11-14",
    "sector": "Finanzas",
    "señales": {
     "per": {
-     "valor": 10.784386,
+     "valor": 11.094014,
      "voto": 0.5,
      "mediana": 14.164
     },
     "roe": {
-     "valor": 21.3,
+     "valor": 20.11,
      "voto": 0.0,
-     "mediana": 19.975
+     "mediana": 19.86
     },
     "deuda": {
-     "valor": 0.244,
+     "valor": 0.224,
      "voto": null,
      "nota": "n/a",
      "mediana": 0.398
@@ -100599,12 +100599,12 @@
   "NG.L": {
    "dominio": "nationalgrid.com",
    "sector_yahoo": "Utilities",
-   "per": 15.790123,
-   "eps": 0.81,
+   "per": 15.9875,
+   "eps": 0.8,
    "roe": 10.3,
    "deuda": 1.321,
-   "dividendo": 3.827,
-   "dividendo_yahoo": 3.89,
+   "dividendo": 3.791,
+   "dividendo_yahoo": 3.83,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -100615,7 +100615,7 @@
     "recomendacion": 2.4375,
     "n": 16,
     "objetivo": 1336.438,
-    "potencial": 5.5,
+    "potencial": 4.5,
     "voto": 0.0
    },
    "volumen_rel": null,
@@ -100630,25 +100630,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 1267.0,
-    "rsi14": 63.3,
-    "macd": 22.0397,
-    "macd_senal": 23.0753,
-    "macd_hist": -1.0355,
-    "adx7": 40.1,
-    "di_mas": 26.9,
-    "di_menos": 13.1,
-    "willr40": -17.9,
-    "sma50": 1182.2,
-    "sma200": 1240.155
+    "fecha": "2026-11-13",
+    "cierre": 1279.0,
+    "rsi14": 65.9,
+    "macd": 22.8104,
+    "macd_senal": 23.0223,
+    "macd_hist": -0.2119,
+    "adx7": 40.6,
+    "di_mas": 30.0,
+    "di_menos": 11.8,
+    "willr40": -11.9,
+    "sma50": 1184.76,
+    "sma200": 1240.3775
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
    "sector": "Servicios públicos",
    "señales": {
     "per": {
-     "valor": 15.790123,
+     "valor": 15.9875,
      "voto": 0.0,
      "mediana": 18.379
     },
@@ -101254,7 +101254,7 @@
    "roe": 114.82,
    "deuda": 1.695,
    "dividendo": 1.147,
-   "dividendo_yahoo": 1.12,
+   "dividendo_yahoo": 1.15,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-07-31",
@@ -101271,10 +101271,10 @@
    "volumen_rel": null,
    "resultados": {
     "proxima": "2026-12-01",
-    "ultima": "2026-09-02",
-    "bpa_real": 2.58,
-    "bpa_est": 2.12,
-    "sorpresa": 21.54,
+    "ultima": "2026-05-28",
+    "bpa_real": 2.43,
+    "bpa_est": 2.27,
+    "sorpresa": 7.22,
     "periodo": "2026-07-31",
     "ingresos": {
      "ultimo": 2025000000.0,
@@ -101295,8 +101295,8 @@
     "macd_senal": -7.0201,
     "macd_hist": -2.014,
     "adx7": 42.4,
-    "di_mas": 14.8,
-    "di_menos": 28.3,
+    "di_mas": 14.7,
+    "di_menos": 28.2,
     "willr40": -81.9,
     "sma50": 203.8194,
     "sma200": 154.1043
@@ -101914,7 +101914,7 @@
    "roe": 8.72,
    "deuda": 0.318,
    "dividendo": 0.669,
-   "dividendo_yahoo": 0.69,
+   "dividendo_yahoo": 0.67,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
@@ -101949,16 +101949,16 @@
    },
    "tecnicos": {
     "fecha": "2026-11-13",
-    "cierre": 29.885,
-    "rsi14": 41.0,
-    "macd": -0.8362,
-    "macd_senal": -0.5736,
-    "macd_hist": -0.2626,
+    "cierre": 29.89,
+    "rsi14": 41.1,
+    "macd": -0.8358,
+    "macd_senal": -0.5735,
+    "macd_hist": -0.2623,
     "adx7": 42.8,
     "di_mas": 13.8,
     "di_menos": 35.3,
-    "willr40": -78.4,
-    "sma50": 32.1405,
+    "willr40": -78.3,
+    "sma50": 32.1406,
     "sma200": 30.4237
    },
    "fecha": "2026-11-14",
@@ -102559,7 +102559,7 @@
    "roe": 9.94,
    "deuda": 1.073,
    "dividendo": 3.637,
-   "dividendo_yahoo": 3.68,
+   "dividendo_yahoo": 3.64,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -103189,7 +103189,7 @@
    "roe": 13.18,
    "deuda": 0.288,
    "dividendo": 1.77,
-   "dividendo_yahoo": 1.92,
+   "dividendo_yahoo": 1.91,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -103431,7 +103431,7 @@
     "per": {
      "valor": 82.58064,
      "voto": -1.0,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 0.27,
@@ -103847,7 +103847,7 @@
    "roe": 10.28,
    "deuda": 1.484,
    "dividendo": 3.479,
-   "dividendo_yahoo": 3.58,
+   "dividendo_yahoo": 3.53,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -103888,9 +103888,9 @@
     "macd_senal": 0.8061,
     "macd_hist": 0.2094,
     "adx7": 28.8,
-    "di_mas": 30.2,
+    "di_mas": 30.3,
     "di_menos": 13.6,
-    "willr40": -0.0,
+    "willr40": -0.1,
     "sma50": 71.3544,
     "sma200": 77.7778
    },
@@ -104549,7 +104549,7 @@
     "macd_hist": -0.0401,
     "adx7": 36.8,
     "di_mas": 30.0,
-    "di_menos": 23.3,
+    "di_menos": 23.4,
     "willr40": -39.3,
     "sma50": 120.0606,
     "sma200": 124.2237
@@ -107073,7 +107073,7 @@
    "roe": 7.67,
    "deuda": 0.722,
    "dividendo": 3.968,
-   "dividendo_yahoo": 4.23,
+   "dividendo_yahoo": 4.2,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -107711,12 +107711,12 @@
   "RIO.L": {
    "dominio": "riotinto.com",
    "sector_yahoo": "Basic Materials",
-   "per": 11.552294,
-   "eps": 5.45,
+   "per": 11.447272,
+   "eps": 5.5,
    "roe": 19.31,
    "deuda": 0.319,
-   "dividendo": 5.509,
-   "dividendo_yahoo": 5.46,
+   "dividendo": 5.534,
+   "dividendo_yahoo": 5.51,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-06-30",
@@ -107727,7 +107727,7 @@
     "recomendacion": 2.28571,
     "n": 20,
     "objetivo": 7687.72,
-    "potencial": 21.5,
+    "potencial": 22.1,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -107742,25 +107742,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 6325.0,
-    "rsi14": 42.3,
-    "macd": -155.667,
-    "macd_senal": -198.7311,
-    "macd_hist": 43.0641,
-    "adx7": 18.8,
-    "di_mas": 24.9,
-    "di_menos": 20.3,
-    "willr40": -85.5,
-    "sma50": 6854.72,
-    "sma200": 7154.1953
+    "fecha": "2026-11-13",
+    "cierre": 6296.0,
+    "rsi14": 41.3,
+    "macd": -147.0638,
+    "macd_senal": -188.3977,
+    "macd_hist": 41.3339,
+    "adx7": 16.3,
+    "di_mas": 22.4,
+    "di_menos": 21.8,
+    "willr40": -87.2,
+    "sma50": 6827.82,
+    "sma200": 7151.9853
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Materiales",
    "señales": {
     "per": {
-     "valor": 11.552294,
+     "valor": 11.447272,
      "voto": 0.5,
      "mediana": 15.019
     },
@@ -108338,12 +108338,12 @@
   "RNO.PA": {
    "dominio": "renaultgroup.com",
    "sector_yahoo": "Consumer Cyclical",
-   "per": 9.019048,
-   "eps": 3.15,
+   "per": 8.688073,
+   "eps": 3.27,
    "roe": 5.0,
    "deuda": 3.277,
-   "dividendo": 7.793,
-   "dividendo_yahoo": 7.51,
+   "dividendo": 7.744,
+   "dividendo_yahoo": 7.79,
    "pagos_12m": 1,
    "frecuencia": "anual",
    "trimestre": "2026-06-30",
@@ -108354,7 +108354,7 @@
     "recomendacion": 2.10526,
     "n": 19,
     "objetivo": 38.02632,
-    "potencial": 34.7,
+    "potencial": 33.8,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -108369,25 +108369,25 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 28.23,
-    "rsi14": 53.4,
-    "macd": 0.5313,
-    "macd_senal": 0.356,
-    "macd_hist": 0.1754,
-    "adx7": 40.4,
-    "di_mas": 31.7,
-    "di_menos": 22.6,
-    "willr40": -31.6,
-    "sma50": 27.44,
-    "sma200": 28.4232
+    "fecha": "2026-11-13",
+    "cierre": 28.41,
+    "rsi14": 54.6,
+    "macd": 0.5009,
+    "macd_senal": 0.385,
+    "macd_hist": 0.116,
+    "adx7": 36.1,
+    "di_mas": 28.7,
+    "di_menos": 23.5,
+    "willr40": -28.4,
+    "sma50": 27.4254,
+    "sma200": 28.4126
    },
    "fecha": "2026-11-14",
    "actualizada": null,
    "sector": "Consumo discrecional",
    "señales": {
     "per": {
-     "valor": 9.019048,
+     "valor": 8.688073,
      "voto": 1.0,
      "mediana": 25.66
     },
@@ -109627,7 +109627,7 @@
    "eps": 0.91,
    "roe": 13.06,
    "deuda": null,
-   "dividendo": 2.274,
+   "dividendo": 2.272,
    "dividendo_yahoo": 2.29,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -109639,7 +109639,7 @@
     "recomendacion": 1.7619,
     "n": 21,
     "objetivo": 13.66762,
-    "potencial": 23.3,
+    "potencial": 23.2,
     "voto": 1.0
    },
    "volumen_rel": null,
@@ -109662,17 +109662,17 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 11.082,
-    "rsi14": 46.1,
-    "macd": -0.2656,
-    "macd_senal": -0.3627,
-    "macd_hist": 0.0971,
-    "adx7": 33.5,
-    "di_mas": 30.9,
-    "di_menos": 22.7,
-    "willr40": -65.4,
-    "sma50": 11.92,
+    "fecha": "2026-11-13",
+    "cierre": 11.09,
+    "rsi14": 46.3,
+    "macd": -0.2399,
+    "macd_senal": -0.3382,
+    "macd_hist": 0.0983,
+    "adx7": 28.9,
+    "di_mas": 28.0,
+    "di_menos": 27.3,
+    "willr40": -64.5,
+    "sma50": 11.8845,
     "sma200": 11.291
    },
    "fecha": "2026-11-14",
@@ -110294,18 +110294,18 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
+    "fecha": "2026-11-13",
     "cierre": 4.25,
     "rsi14": 62.8,
-    "macd": 0.0436,
-    "macd_senal": 0.0163,
-    "macd_hist": 0.0273,
-    "adx7": 35.9,
-    "di_mas": 34.1,
-    "di_menos": 11.5,
+    "macd": 0.0489,
+    "macd_senal": 0.0229,
+    "macd_hist": 0.026,
+    "adx7": 36.5,
+    "di_mas": 31.1,
+    "di_menos": 13.4,
     "willr40": -11.1,
-    "sma50": 4.0786,
-    "sma200": 4.411
+    "sma50": 4.0774,
+    "sma200": 4.412
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-07",
@@ -110883,10 +110883,10 @@
    "eps": 10.87,
    "roe": 63.7,
    "deuda": 3.722,
-   "dividendo": 0.912,
+   "dividendo": 1.14,
    "dividendo_yahoo": 0.91,
-   "pagos_12m": 4,
-   "frecuencia": "trimestral",
+   "pagos_12m": 5,
+   "frecuencia": "irregular",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "USD",
    "tendencia": "lateral",
@@ -111528,7 +111528,7 @@
    "eps": null,
    "roe": null,
    "deuda": null,
-   "dividendo": 0.302,
+   "dividendo": 0.307,
    "dividendo_yahoo": null,
    "pagos_12m": 2,
    "frecuencia": "semestral",
@@ -111555,18 +111555,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 1513.0,
-    "rsi14": 47.7,
-    "macd": -15.9809,
-    "macd_senal": -14.8609,
-    "macd_hist": -1.1199,
-    "adx7": 31.9,
-    "di_mas": 20.6,
-    "di_menos": 29.2,
-    "willr40": -60.0,
-    "sma50": 1541.6,
-    "sma200": 1408.5325
+    "fecha": "2026-11-13",
+    "cierre": 1489.5,
+    "rsi14": 43.5,
+    "macd": -16.2773,
+    "macd_senal": -15.1442,
+    "macd_hist": -1.1331,
+    "adx7": 30.4,
+    "di_mas": 18.0,
+    "di_menos": 27.9,
+    "willr40": -70.1,
+    "sma50": 1541.39,
+    "sma200": 1409.7025
    },
    "fecha": "2026-11-14",
    "actualizada": null,
@@ -112162,7 +112162,7 @@
    "roe": 17.88,
    "deuda": 0.539,
    "dividendo": 0.784,
-   "dividendo_yahoo": 0.83,
+   "dividendo_yahoo": 0.82,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -112795,7 +112795,7 @@
    "dominio": "stellantis.com",
    "sector_yahoo": "Consumer Cyclical",
    "per": null,
-   "eps": -5.15,
+   "eps": -5.38,
    "roe": -26.48,
    "deuda": 0.908,
    "dividendo": 0.0,
@@ -112810,7 +112810,7 @@
     "recomendacion": null,
     "n": 1,
     "objetivo": 8.0,
-    "potencial": 125.3,
+    "potencial": 127.8,
     "voto": null
    },
    "volumen_rel": null,
@@ -112833,18 +112833,18 @@
     }
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 3.551,
-    "rsi14": 36.1,
-    "macd": -0.0718,
-    "macd_senal": -0.0411,
-    "macd_hist": -0.0307,
-    "adx7": 29.8,
-    "di_mas": 12.8,
-    "di_menos": 40.0,
-    "willr40": -94.4,
-    "sma50": 4.0879,
-    "sma200": 5.4343
+    "fecha": "2026-11-13",
+    "cierre": 3.5125,
+    "rsi14": 35.1,
+    "macd": -0.0963,
+    "macd_senal": -0.0521,
+    "macd_hist": -0.0442,
+    "adx7": 32.9,
+    "di_mas": 11.9,
+    "di_menos": 37.3,
+    "willr40": -98.0,
+    "sma50": 4.0626,
+    "sma200": 5.41
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-10-31",
@@ -113447,7 +113447,7 @@
    "roe": 18.37,
    "deuda": 1.534,
    "dividendo": 1.277,
-   "dividendo_yahoo": 1.29,
+   "dividendo_yahoo": 1.28,
    "pagos_12m": 2,
    "frecuencia": "semestral",
    "trimestre": "2026-07-31",
@@ -114086,7 +114086,7 @@
    "roe": 16.02,
    "deuda": 0.658,
    "dividendo": 1.137,
-   "dividendo_yahoo": 1.13,
+   "dividendo_yahoo": 1.14,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -114128,7 +114128,7 @@
     "macd_hist": -0.7789,
     "adx7": 20.2,
     "di_mas": 25.6,
-    "di_menos": 30.5,
+    "di_menos": 30.4,
     "willr40": -49.3,
     "sma50": 292.2492,
     "sma200": 321.9323
@@ -114736,7 +114736,7 @@
    "roe": 24.61,
    "deuda": 0.458,
    "dividendo": 1.049,
-   "dividendo_yahoo": 1.43,
+   "dividendo_yahoo": 1.44,
    "pagos_12m": 3,
    "frecuencia": "irregular",
    "trimestre": "2026-09-25",
@@ -115428,7 +115428,7 @@
     "macd_senal": 11.5705,
     "macd_hist": -0.8002,
     "adx7": 17.0,
-    "di_mas": 20.6,
+    "di_mas": 20.5,
     "di_menos": 33.3,
     "willr40": -29.6,
     "sma50": 670.6206,
@@ -116083,9 +116083,9 @@
     "macd": 6.0689,
     "macd_senal": 6.697,
     "macd_hist": -0.6281,
-    "adx7": 26.3,
-    "di_mas": 30.6,
-    "di_menos": 15.0,
+    "adx7": 22.5,
+    "di_mas": 25.5,
+    "di_menos": 21.9,
     "willr40": -23.0,
     "sma50": 380.9532,
     "sma200": 336.0265
@@ -116685,7 +116685,7 @@
    "dominio": "take2games.com",
    "sector_yahoo": "Communication Services",
    "per": null,
-   "eps": -1.73,
+   "eps": -1.29,
    "roe": -6.77,
    "deuda": 0.793,
    "dividendo": 0.0,
@@ -117992,7 +117992,7 @@
    "roe": 38.75,
    "deuda": 1.413,
    "dividendo": 1.838,
-   "dividendo_yahoo": 1.87,
+   "dividendo_yahoo": 1.88,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -118629,7 +118629,7 @@
    "roe": 63.51,
    "deuda": 0.636,
    "dividendo": 0.655,
-   "dividendo_yahoo": 0.74,
+   "dividendo_yahoo": 0.73,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -119280,7 +119280,7 @@
    "roe": -0.39,
    "deuda": 0.476,
    "dividendo": 4.363,
-   "dividendo_yahoo": 4.4,
+   "dividendo_yahoo": 4.38,
    "pagos_12m": 4,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
@@ -119611,7 +119611,7 @@
     "per": {
      "valor": 33.607655,
      "voto": -0.5,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 0.4,
@@ -121213,13 +121213,13 @@
    "frecuencia": "no paga",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "GBp",
-   "tendencia": "bajista",
-   "tendencia_voto": -1.0,
+   "tendencia": "lateral",
+   "tendencia_voto": -0.5,
    "analistas": {
     "recomendacion": 1.85,
     "n": 16,
     "objetivo": 1157.438,
-    "potencial": 39.3,
+    "potencial": 29.4,
     "voto": 0.5
    },
    "volumen_rel": null,
@@ -121234,18 +121234,18 @@
     "beneficio": null
    },
    "tecnicos": {
-    "fecha": "2026-11-12",
-    "cierre": 830.6,
-    "rsi14": 46.7,
-    "macd": -9.619,
-    "macd_senal": -13.0152,
-    "macd_hist": 3.3961,
-    "adx7": 28.1,
-    "di_mas": 17.2,
-    "di_menos": 12.8,
-    "willr40": -68.9,
-    "sma50": 859.284,
-    "sma200": 908.4785
+    "fecha": "2026-11-13",
+    "cierre": 894.4,
+    "rsi14": 62.4,
+    "macd": -3.7816,
+    "macd_senal": -11.1684,
+    "macd_hist": 7.3869,
+    "adx7": 33.7,
+    "di_mas": 42.4,
+    "di_menos": 8.4,
+    "willr40": -30.0,
+    "sma50": 858.304,
+    "sma200": 908.2355
    },
    "fecha": "2026-11-14",
    "actualizada": "2026-11-14",
@@ -121267,8 +121267,8 @@
      "mediana": 4.723
     },
     "tendencia": {
-     "valor": "bajista",
-     "voto": -1.0
+     "valor": "lateral",
+     "voto": -0.5
     },
     "sentimiento": {
      "valor": 1.85,
@@ -121282,7 +121282,7 @@
     "n": 2,
     "pequeno": true
    },
-   "puntuacion": -1.0,
+   "puntuacion": 0.0,
    "etiqueta": "Neutral",
    "deuda_etiqueta": "bajo"
   },
@@ -121894,8 +121894,8 @@
     "macd_senal": 9.7518,
     "macd_hist": -0.1141,
     "adx7": 29.8,
-    "di_mas": 24.2,
-    "di_menos": 20.0,
+    "di_mas": 24.3,
+    "di_menos": 19.9,
     "willr40": -27.7,
     "sma50": 380.1758,
     "sma200": 321.3903
@@ -122820,7 +122820,7 @@
     "per": {
      "valor": 72.945946,
      "voto": -1.0,
-     "mediana": 26.396
+     "mediana": 26.386
     },
     "roe": {
      "valor": 3.45,
