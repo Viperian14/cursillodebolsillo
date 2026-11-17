@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T13:43:46Z",
+ "updated": "2026-11-17T16:50:08Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -95,6 +95,18 @@
    "d": "2026-11-13",
    "match": "Precios de producción (PPI), octubre",
    "act": "General +0,3% m/m · 6,5% a/a\nSubyacente +0,3% m/m · 5,0% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-17",
+   "match": "Ventas minoristas de EE. UU., octubre",
+   "act": "+0,2% m/m · 6,8% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-17",
+   "match": "Producción industrial de EE. UU., octubre",
+   "act": "−0,4% m/m · 2,1% a/a",
    "res": ""
   }
  ]
