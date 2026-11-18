@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T02:49:32Z",
+ "updated": "2026-11-18T16:21:53Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -113,6 +113,12 @@
    "d": "2026-11-18",
    "match": "IPC final de la zona euro, octubre",
    "act": "General 4,0% a/a\nSubyacente 2,5% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-18",
+   "match": "Inicios de viviendas y permisos de construcción, octubre",
+   "act": "1,309 M",
    "res": ""
   }
  ]
