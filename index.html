@@ -58087,6 +58087,11 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       ['🔁 Reentrada', 'Solo si me saca el SL+: el precio vuelve a ' + zona + ', sale otro gatillo ' + G + ' y la vela ' + F + ' no ha cerrado al otro lado. Una sola vez, con el stop original' + (stop ? ' (🛑 ' + stop + ')' : '') + ', no con el SL+; con los mismos objetivos' + ((pl.targets || []).length ? ' (🎯 ' + pl.targets.map(function (x) { return fmtT(e, x); }).join(' y ') + ')' : '') + ' y el mismo modo de SL+' + (I ? ', y nunca en la vela de un dato ni en la de apertura.' : '.')],
       ['❌ Se anula', anula ? cap1(anula) : cierre + '.']
     ];
+    if (I && !rup && e.date >= '2026-11-18' && pl.stop != null) {
+      var mgZ = 0.1 * Math.abs((long ? lo : hi) - pl.stop), limZ = rTick(long ? hi + mgZ : lo - mgZ, tickOf(e), long ? -1 : 1);
+      steps[0][1] = 'Que el precio llegue a la zona ' + zona + ' o se quede a menos del 10 % de la distancia al stop (hasta ' + fmtT(e, limZ) + '). Si no llega, no hay operativa.';
+      steps[1][1] = 'Vela M5/M15 con color de gatillo (' + colsF + ') en la zona con mecha de rechazo de al menos el 50 % o envolvente, o con ' + (long ? 'IN' : 'OUT') + ' al cierre, o rechazo de la Genial tras un cambio de secuencia. Tras la vela de un dato o de la apertura que llega a la zona, vale la vela siguiente con color a favor que cierra en el lado bueno, aunque no tenga mecha (⚠ si está en la ventana).';
+    }
     var tgsT = (pl.targets || []).length ? ' (🎯 ' + pl.targets.map(function (q) { return fmtT(e, q); }).join(' y ') + ')' : '';
     if (N14) {
       steps[1][1] = (rup ? 'En el retesteo, el mismo gatillo que en los rebotes: v' : 'V') + 'ela H1 con color de gatillo (' + colsF + ') y mecha de rechazo de al menos el 30 % en la zona, o con ' + (long ? 'IN' : 'OUT') + ' al cierre, o rechazo de la Genial tras un cambio de secuencia. Si sale en mitad de una ' + (long ? 'caída de velas marrones' : 'subida de velas verde oscuro') + ' con el H4 en contra, es dudoso: espero la siguiente vela H1 que confirme o reduzco tamaño.';
