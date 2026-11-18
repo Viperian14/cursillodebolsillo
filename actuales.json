@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:50:08Z",
+ "updated": "2026-11-18T02:49:32Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -107,6 +107,12 @@
    "d": "2026-11-17",
    "match": "Producción industrial de EE. UU., octubre",
    "act": "−0,4% m/m · 2,1% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-18",
+   "match": "IPC final de la zona euro, octubre",
+   "act": "General 4,0% a/a\nSubyacente 2,5% a/a",
    "res": ""
   }
  ]
