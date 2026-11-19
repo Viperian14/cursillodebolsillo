@@ -1,38 +1,38 @@
 {
- "ultima_ejecucion": "2026-11-18T14:31:23+00:00",
+ "ultima_ejecucion": "2026-11-19T14:43:05+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
  "actualizadas_en_esta_ejecucion": 196,
  "errores": [],
  "n_errores": 0,
  "datos_insuficientes": 37,
- "minutos": 3.9,
+ "minutos": 5.4,
  "muestra_diagnostico": {
-  "8306.T": {
-   "sector_yahoo": "Financial Services",
-   "per": 13.325954,
-   "eps": 243.96,
-   "roe": 9.55,
-   "deuda": null,
-   "dividendo": 3.045,
-   "dividendo_yahoo": 3.16,
+  "2502.T": {
+   "sector_yahoo": "Consumer Defensive",
+   "per": 14.971264,
+   "eps": 121.8,
+   "roe": 6.08,
+   "deuda": 0.499,
+   "dividendo": 2.852,
+   "dividendo_yahoo": 3.41,
    "frecuencia": "semestral",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "JPY",
-   "tendencia": "lateral"
+   "tendencia": "alcista"
   },
-  "ZBH": {
-   "sector_yahoo": "Healthcare",
-   "per": 25.511364,
-   "eps": 3.96,
-   "roe": 6.03,
-   "deuda": 0.602,
-   "dividendo": 0.94,
-   "dividendo_yahoo": 0.94,
+  "IVZ": {
+   "sector_yahoo": "Financial Services",
+   "per": null,
+   "eps": -0.69,
+   "roe": -0.58,
+   "deuda": 0.094,
+   "dividendo": 2.956,
+   "dividendo_yahoo": 3.0,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "USD",
-   "tendencia": "alcista"
+   "tendencia": "lateral"
   }
  }
 }
