@@ -61167,6 +61167,12 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       if (!j || !j.items) return false;
       var ch = 0;
       j.items.forEach(function (it) {
+        if (it.co) {
+          EARN.forEach(function (e) {
+            if (e.d === it.d && e.co === it.co && !e.epsA) { e.epsA = it.epsA; if (!e.epsF && it.epsF) e.epsF = it.epsF; if (it.res) e.res = it.res; ch++; }
+          });
+          return;
+        }
         CAL.forEach(function (e) {
           if (e.d === it.d && e.ev === it.match && !e.act) { e.act = it.act; if (it.res) e.res = it.res; ch++; }
         });

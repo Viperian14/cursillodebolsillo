@@ -320,8 +320,13 @@ def calc_presupuesto(month, year, d):
 
 
 def trimestre_in(ev):
-    m = re.search(r'(\d)\s*\.?\s*(?:er|º|o|ᵉʳ)?\s*trimestre', ev)
-    return int(m.group(1)) if m else None
+    m = re.search(r'(\d)\s*\.?\s*(?:er|º|o|ᵉʳ)?\s*trimestre', ev) or re.search(r'\b([1-4])T\b', ev)
+    if m:
+        return int(m.group(1))
+    for i, w in enumerate(('primer', 'segundo', 'tercer', 'cuarto')):
+        if re.search(r'\b%s\s+trimestre' % w, ev):
+            return i + 1
+    return None
 
 
 def obs_trimestre(series, q, year, n=8):
@@ -366,6 +371,311 @@ def calc_eci(ev, d):
         return None
     return pct((r[0] / r[1] - 1) * 100) + ' t/t', False
 
+
+
+# ---------- Europa (Eurostat, sin clave) — añadido el 19-11-2026 ----------
+def eurostat_serie(ds, params):
+    q = urllib.parse.urlencode(dict(params, format='JSON', lang='EN'))
+    j = http_json('https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/%s?%s' % (ds, q))
+    idx = j['dimension']['time']['category']['index']
+    v = j.get('value', {})
+    return {tt: v.get(str(i)) for tt, i in idx.items()}
+
+
+def trimestre_publicado(ev, d):
+    """Trimestre del que va el dato: el del nombre o, si no lo trae, el anterior al de la fecha del evento."""
+    q = trimestre_in(ev)
+    year = d.year
+    if not q:
+        q = (d.month - 1) // 3
+        if q == 0:
+            q, year = 4, d.year - 1
+    elif q == 4 and d.month <= 3:
+        year = d.year - 1
+    return q, year
+
+
+def calc_pib_eurostat(geo):
+    def f(ev, d):
+        q, year = trimestre_publicado(ev, d)
+        per = '%d-Q%d' % (year, q)
+        tt = eurostat_serie('namq_10_gdp', {'geo': geo, 'unit': 'CLV_PCH_PRE', 's_adj': 'SCA', 'na_item': 'B1GQ', 'sinceTimePeriod': '%d-Q1' % (year - 1)})
+        if tt.get(per) is None:
+            return None
+        act = pct(tt[per], False).replace('+', '') + ' t/t'
+        aa = eurostat_serie('namq_10_gdp', {'geo': geo, 'unit': 'CLV_PCH_SM', 's_adj': 'SCA', 'na_item': 'B1GQ', 'sinceTimePeriod': '%d-Q1' % (year - 1)})
+        if aa.get(per) is not None:
+            act += ' · ' + pct(aa[per], False).replace('+', '') + ' a/a'
+        return act, True
+    return f
+
+
+def mes_esperado(ev, d, retraso_dias_corte=5):
+    """Mes del dato: el del nombre o, si no lo trae, el anterior (o dos antes si sale en los primeros días del mes)."""
+    m = month_in(ev)
+    if m:
+        return m, anio_de_mes(m, d)
+    atras = 2 if d.day <= retraso_dias_corte else 1
+    y, mm_ = d.year, d.month - atras
+    while mm_ <= 0:
+        mm_ += 12
+        y -= 1
+    return mm_, y
+
+
+def calc_paro_eurostat(geos):
+    def f(ev, d):
+        m, y = mes_esperado(ev, d)
+        for geo in geos:
+            tt = eurostat_serie('une_rt_m', {'geo': geo, 's_adj': 'SA', 'age': 'TOTAL', 'sex': 'T', 'unit': 'PC_ACT', 'sinceTimePeriod': '%d-01' % (y - 1)})
+            v = tt.get('%d-%02d' % (y, m))
+            if v is not None:
+                return es_num(v) + '%', False
+        return None
+    return f
+
+
+def calc_hicp_avance(ev, d):
+    m = month_in(ev) or d.month
+    return calc_hicp(m, anio_de_mes(m, d))
+
+
+# ---------- Canadá (Statistics Canada, sin clave) ----------
+def statcan(vecs, n=14):
+    body = json.dumps([{'vectorId': v, 'latestN': n} for v in vecs]).encode()
+    j = http_json('https://www150.statcan.gc.ca/t1/wds/rest/getDataFromVectorsAndLatestNPeriods', body)
+    out = {}
+    for it in j:
+        o = it.get('object') or {}
+        out[o.get('vectorId')] = {p['refPer'][:7]: float(p['value']) for p in o.get('vectorDataPoint', []) if p.get('value') is not None}
+    return out
+
+
+def _mes_ant(ym):
+    y, m = int(ym[:4]), int(ym[5:7]) - 1
+    if m == 0:
+        y, m = y - 1, 12
+    return '%d-%02d' % (y, m)
+
+
+def calc_empleo_canada(ev, d):
+    m, y = mes_esperado(ev, d, retraso_dias_corte=12)
+    s = statcan([2062811, 2062815])
+    k = '%d-%02d' % (y, m)
+    e, u = s.get(2062811, {}), s.get(2062815, {})
+    if k not in e or k not in u or _mes_ant(k) not in e:
+        return None
+    ch = e[k] - e[_mes_ant(k)]
+    return 'Empleo %s%s mil\nParo %s%%' % ('+' if ch >= 0 else '−', es_num(abs(ch)), es_num(u[k])), True
+
+
+def calc_ipc_canada(ev, d):
+    m, y = mes_esperado(ev, d, retraso_dias_corte=0)
+    s = statcan([41690973], 14).get(41690973, {})
+    k = '%d-%02d' % (y, m)
+    ya = '%d-%02d' % (y - 1, m)
+    if k not in s or _mes_ant(k) not in s or ya not in s:
+        return None
+    return 'General %s m/m · %s a/a' % (pct((s[k] / s[_mes_ant(k)] - 1) * 100), pct((s[k] / s[ya] - 1) * 100, False).replace('+', '')), False
+
+
+def calc_pib_mensual_canada(ev, d):
+    m = month_in(ev)
+    s = statcan([65201210], 6).get(65201210, {})
+    if not s:
+        return None
+    k = max(s) if not m else '%d-%02d' % (anio_de_mes(m, d), m)
+    # el dato que sale en este evento es de hace dos meses
+    if not m:
+        y, mm_ = d.year, d.month - 2
+        if mm_ <= 0:
+            y, mm_ = y - 1, mm_ + 12
+        k = '%d-%02d' % (y, mm_)
+    if k not in s or _mes_ant(k) not in s:
+        return None
+    return '%s %s m/m' % (MESES[int(k[5:7]) - 1].capitalize(), pct((s[k] / s[_mes_ant(k)] - 1) * 100)), True
+
+
+
+# ---------- Reino Unido (ONS, sin clave) ----------
+ONS_RUTA = {
+    'd7g7': 'economy/inflationandpriceindices/timeseries/d7g7/mm23',      # IPC general a/a
+    'dko8': 'economy/inflationandpriceindices/timeseries/dko8/mm23',      # IPC subyacente a/a
+    'mgsx': 'employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms',   # paro 3 meses
+    'ihyq': 'economy/grossdomesticproductgdp/timeseries/ihyq/qna',        # PIB t/t
+    'ecy2': 'economy/grossdomesticproductgdp/timeseries/ecy2/mgdp',       # PIB mensual m/m
+    'j5ek': 'businessindustryandtrade/retailindustry/timeseries/j5ek/drsi',  # ventas minoristas m/m
+}
+
+
+def ons(serie):
+    j = http_json('https://www.ons.gov.uk/%s/data' % ONS_RUTA[serie])
+    out = {}
+    for p in (j.get('months') or []) + (j.get('quarters') or []):
+        try:
+            out[p['date'].upper()] = float(p['value'])
+        except (KeyError, ValueError, TypeError):
+            pass
+    return out
+
+
+MESES_EN = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
+
+def calc_ipc_uk(ev, d):
+    m, y = mes_esperado(ev, d, retraso_dias_corte=0)
+    k = '%d %s' % (y, MESES_EN[m - 1])
+    g, c = ons('d7g7'), ons('dko8')
+    if k not in g or k not in c:
+        return None
+    return 'General %s a/a\nSubyacente %s a/a' % (pct(g[k], False), pct(c[k], False)), False
+
+
+def calc_paro_uk(ev, d):
+    s = ons('mgsx')
+    meses = sorted((k for k in s if len(k) == 8), key=lambda k: (int(k[:4]), MESES_EN.index(k[5:])))
+    if not meses:
+        return None
+    k = meses[-1]
+    # el dato que sale este mes es el trimestre que acaba dos meses antes
+    y, mm_ = d.year, d.month - 2
+    if mm_ <= 0:
+        y, mm_ = y - 1, mm_ + 12
+    if k != '%d %s' % (y, MESES_EN[mm_ - 1]):
+        return None
+    return 'Paro %s%% (3 meses a %s)' % (es_num(s[k]), MESES[mm_ - 1]), False
+
+
+def calc_pib_uk(ev, d):
+    m = month_in(ev)
+    q = trimestre_in(ev)
+    partes = []
+    if q:
+        q, year = trimestre_publicado(ev, d)
+        s = ons('ihyq')
+        if '%d Q%d' % (year, q) not in s:
+            return None
+        partes.append('%s t/t' % pct(s['%d Q%d' % (year, q)]))
+    if m:
+        s = ons('ecy2')
+        k = '%d %s' % (anio_de_mes(m, d), MESES_EN[m - 1])
+        if k not in s:
+            return None
+        partes.append('%s %s m/m' % (MESES[m - 1].capitalize(), pct(s[k])))
+    return (' · '.join(partes), True) if partes else None
+
+
+def calc_minoristas_uk(ev, d):
+    m, y = mes_esperado(ev, d, retraso_dias_corte=0)
+    s = ons('j5ek')
+    k = '%d %s' % (y, MESES_EN[m - 1])
+    return ('%s m/m' % pct(s[k]), True) if k in s else None
+
+
+# ---------- Australia (ABS, sin clave) ----------
+def abs_serie(flow, key, desde):
+    url = 'https://data.api.abs.gov.au/rest/data/%s/%s?startPeriod=%s&dimensionAtObservation=AllDimensions&format=jsondata' % (flow, key, desde)
+    req = urllib.request.Request(url, headers={'User-Agent': 'cdb-actuales', 'Accept': 'application/vnd.sdmx.data+json'})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        j = json.loads(r.read().decode('utf-8'))
+    data = j.get('data', j)
+    st = data.get('structure') or (data.get('structures') or [{}])[0] or j.get('structure')
+    dims = st['dimensions']['observation']
+    ti = next(i for i, dd in enumerate(dims) if dd['id'] == 'TIME_PERIOD')
+    tiempos = [v['id'] for v in dims[ti]['values']]
+    out = {}
+    for k, v in data['dataSets'][0].get('observations', {}).items():
+        out[tiempos[int(k.split(':')[ti])]] = float(v[0])
+    return out
+
+
+def calc_empleo_australia(ev, d):
+    m, y = mes_esperado(ev, d, retraso_dias_corte=0)
+    k = '%d-%02d' % (y, m)
+    desde = '%d-%02d' % ((y - 1, 12) if m == 1 else (y, m - 1))
+    e = abs_serie('ABS,LF,1.0.0', 'M3.3.1599.20.AUS.M', desde)
+    u = abs_serie('ABS,LF,1.0.0', 'M13.3.1599.20.AUS.M', desde)
+    if k not in e or k not in u or _mes_ant(k) not in e:
+        return None
+    ch = e[k] - e[_mes_ant(k)]
+    return 'Empleo %s%s mil\nParo %s%%' % ('+' if ch >= 0 else '−', es_num(abs(ch)), es_num(u[k])), True
+
+# ---------- Resultados de empresas (Alpha Vantage, clave ALPHAVANTAGE_KEY) ----------
+AV_KEY = os.environ.get('ALPHAVANTAGE_KEY', '')
+AV_MAX = 12      # el plan gratuito permite 25 consultas al día: solo en los barridos y con tope por ejecución
+
+
+def earn_pendientes(html, cur, hoy):
+    """Resultados de EE. UU. de los últimos 3 días sin BPA real y que el bot aún no tiene."""
+    have = {(i['d'], i.get('co')) for i in cur.get('items', []) if i.get('co')}
+    out = []
+    a = html.find('var EARN = [')
+    b = html.find('var HOL = [', a)
+    for l in html[a:b].split('\n'):
+        m = re.match(r"\s*\{ d: '([^']+)', h: '[^']*', s: \d, co: '((?:[^'\\]|\\.)*)', tk: '([^']*)', epsF: '((?:[^'\\]|\\.)*)', epsA: '((?:[^'\\]|\\.)*)'", l)
+        if not m:
+            continue
+        d, co, tk, epsF, epsA = m.groups()
+        hd = dt.date.fromisoformat(hoy)
+        if epsA or not tk or (d, co) in have or not (hd - dt.timedelta(days=3) <= dt.date.fromisoformat(d) <= hd):
+            continue
+        out.append({'d': d, 'co': co, 'tk': tk, 'epsF': epsF})
+    return out
+
+
+def eps_es(x):
+    return ('−' if x < 0 else '') + ('%.2f' % abs(x)).replace('.', ',') + ' $'
+
+
+def intentar_earn(e):
+    if not AV_KEY:
+        return None
+    j = http_json('https://www.alphavantage.co/query?function=EARNINGS&symbol=%s&apikey=%s' % (urllib.parse.quote(e['tk']), AV_KEY))
+    q = j.get('quarterlyEarnings')
+    if not q:
+        print('Alpha Vantage sin datos para %s: %s' % (e['tk'], str(j)[:120]), file=sys.stderr)
+        return None
+    d = dt.date.fromisoformat(e['d'])
+    for r in q[:3]:
+        try:
+            rd = dt.date.fromisoformat(r.get('reportedDate', ''))
+            rep = float(r['reportedEPS'])
+        except (ValueError, TypeError, KeyError):
+            continue
+        if abs((rd - d).days) > 1:
+            continue
+        try:
+            est = float(r.get('estimatedEPS'))
+        except (ValueError, TypeError):
+            est = None
+        ref = parse_num(e['epsF']) if e['epsF'] else est
+        res = ''
+        if ref is not None:
+            res = 'up' if rep > ref + 0.005 else 'down' if rep < ref - 0.005 else ''
+        item = {'d': e['d'], 'co': e['co'], 'epsA': eps_es(rep), 'res': res, 'fuente': 'Alpha Vantage',
+                'cuando': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ')}
+        if not e['epsF'] and est is not None:
+            item['epsF'] = eps_es(est)
+        return item
+    return None
+
+
+def barrido_earn(cur):
+    html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+    hoy = dt.datetime.now(dt.timezone.utc).date().isoformat()
+    nuevos = 0
+    for e in earn_pendientes(html, cur, hoy)[:AV_MAX]:
+        try:
+            item = intentar_earn(e)
+        except Exception as ex:
+            print('Alpha Vantage %s: %s' % (e['tk'], str(ex).replace(AV_KEY or 'x', '***')), file=sys.stderr)
+            item = None
+        time.sleep(1.5)        # 1 consulta por segundo como máximo
+        if item:
+            cur.setdefault('items', []).append(item)
+            nuevos += 1
+            print('NUEVO (resultados):', json.dumps(item, ensure_ascii=False))
+    return nuevos
 
 # ---------- EIA (inventarios semanales; clave EIA_KEY) ----------
 EIA_KEY = os.environ.get('EIA_KEY', '')
@@ -447,6 +757,22 @@ HANDLERS = [
     # EIA: necesitan el secreto EIA_KEY (si falta, se saltan sin error).
     ('Inventarios de crudo de la EIA', calc_crudo, 'ev', 0.05),
     ('Almacenamientos de gas natural de la EIA', calc_gas, 'ev', 0.5),
+    # Eurostat y Statistics Canada (sin clave), 19-11-2026.
+    ('PIB de la zona euro', calc_pib_eurostat('EA20'), 'ev', 0.05),
+    ('PIB de Alemania', calc_pib_eurostat('DE'), 'ev', 0.05),
+    ('PIB de Francia', calc_pib_eurostat('FR'), 'ev', 0.05),
+    ('PIB de España', calc_pib_eurostat('ES'), 'ev', 0.05),
+    ('Paro de la zona euro', calc_paro_eurostat(('EA21', 'EA20', 'EA')), 'ev', 0.05),
+    ('IPC adelantado de la zona euro', calc_hicp_avance, 'ev', 0.05),
+    ('Empleo de Canadá', calc_empleo_canada, 'ev', 0.5),
+    ('IPC de Canadá', calc_ipc_canada, 'ev', 0.05),
+    ('PIB mensual de Canadá', calc_pib_mensual_canada, 'ev', 0.05),
+    ('PIB de Canadá', calc_pib_mensual_canada, 'ev', 0.05),
+    ('IPC del Reino Unido', calc_ipc_uk, 'ev', 0.05),
+    ('Mercado laboral del Reino Unido', calc_paro_uk, 'ev', 0.05),
+    ('PIB del Reino Unido', calc_pib_uk, 'ev', 0.05),
+    ('Ventas minoristas del Reino Unido', calc_minoristas_uk, 'ev', 0.05),
+    ('Empleo de Australia', calc_empleo_australia, 'ev', 0.5),
 ]
 
 
@@ -701,6 +1027,7 @@ def main():
             cur.setdefault('items', []).append(item)
             nuevos += 1
             print('NUEVO:', json.dumps(item, ensure_ascii=False))
+    nuevos += barrido_earn(cur)
     if nuevos:
         guardar_actuales(path, cur)
     print('Eventos nuevos:', nuevos)

@@ -36,13 +36,23 @@ def eurostat(ds, params):
 
 probar('eurostat_pib', lambda: {g: eurostat('namq_10_gdp', {'geo': g, 'unit': 'CLV_PCH_PRE', 's_adj': 'SCA', 'na_item': 'B1GQ', 'sinceTimePeriod': '2026-Q1'}) for g in ('EA20', 'DE', 'FR', 'ES')})
 probar('eurostat_pib_aa', lambda: eurostat('namq_10_gdp', {'geo': 'EA20', 'unit': 'CLV_PCH_SM', 's_adj': 'SCA', 'na_item': 'B1GQ', 'sinceTimePeriod': '2026-Q1'}))
-probar('eurostat_paro', lambda: {g: eurostat('une_rt_m', {'geo': g, 's_adj': 'SA', 'age': 'TOTAL', 'sex': 'T', 'unit': 'PC_ACT', 'sinceTimePeriod': '2026-06'}) for g in ('EA20', 'DE', 'FR', 'ES')})
+probar('eurostat_paro', lambda: {g: eurostat('une_rt_m', {'geo': g, 's_adj': 'SA', 'age': 'TOTAL', 'sex': 'T', 'unit': 'PC_ACT', 'sinceTimePeriod': '2026-06'}) for g in ('EA20', 'EA', 'EA21', 'EU27_2020')})
 probar('eurostat_hicp_flash', lambda: eurostat('prc_hicp_manr', {'geo': 'EA', 'coicop': 'CP00', 'sinceTimePeriod': '2026-08'}))
 probar('eurostat_hicp_paises', lambda: {g: eurostat('prc_hicp_manr', {'geo': g, 'coicop': 'CP00', 'sinceTimePeriod': '2026-08'}) for g in ('DE', 'FR', 'ES')})
 
 
-def ons(serie, ds):
-    j = get('https://www.ons.gov.uk/economy/x/timeseries/%s/%s/data' % (serie, ds))
+ONS_RUTA = {
+    'd7g7': 'economy/inflationandpriceindices/timeseries/d7g7/mm23',
+    'dko8': 'economy/inflationandpriceindices/timeseries/dko8/mm23',
+    'mgsx': 'employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms',
+    'ihyq': 'economy/grossdomesticproductgdp/timeseries/ihyq/qna',
+    'ecy2': 'economy/grossdomesticproductgdp/timeseries/ecy2/mgdp',
+    'j5ek': 'businessindustryandtrade/retailindustry/timeseries/j5ek/drsi',
+}
+
+
+def ons(serie):
+    j = get('https://www.ons.gov.uk/%s/data' % ONS_RUTA[serie])
     out = {'titulo': j.get('description', {}).get('title'), 'publicado': j.get('description', {}).get('releaseDate')}
     for per in ('months', 'quarters'):
         if j.get(per):
@@ -50,8 +60,8 @@ def ons(serie, ds):
     return out
 
 
-for s, ds in (('d7g7', 'mm23'), ('d7oe', 'mm23'), ('dko8', 'mm23'), ('mgsx', 'lms'), ('ihyq', 'qna'), ('ecy2', 'mgdp'), ('j5ek', 'drsi'), ('j5ed', 'drsi')):
-    probar('ons_' + s, lambda s=s, ds=ds: ons(s, ds))
+for s in ONS_RUTA:
+    probar('ons_' + s, lambda s=s: ons(s))
 
 
 def statcan(vecs):
@@ -70,16 +80,19 @@ probar('statcan', lambda: statcan([41690973, 41690914, 2062811, 2062815, 6520121
 def abs_(flow, key):
     j = get('https://data.api.abs.gov.au/rest/data/%s/%s?lastNObservations=3&dimensionAtObservation=AllDimensions&format=jsondata' % (flow, key),
             headers={'Accept': 'application/vnd.sdmx.data+json'})
-    ds = j['data']['dataSets'][0]
+    data = j.get('data', j)
+    st = data.get('structure') or (data.get('structures') or [{}])[0] or j.get('structure')
+    if not st:
+        return {'claves': list(j.keys()), 'claves_data': list(data.keys()) if isinstance(data, dict) else None}
+    ds = data['dataSets'][0]
     obs = ds.get('observations', {})
-    tdim = [d for d in j['data']['structure']['dimensions']['observation'] if d['id'] == 'TIME_PERIOD'][0]
-    return {'n': len(obs), 'tiempos': [v['id'] for v in tdim['values']][-4:], 'muestra': list(obs.items())[:4]}
+    tdim = [d for d in st['dimensions']['observation'] if d['id'] == 'TIME_PERIOD'][0]
+    return {'n': len(obs), 'tiempos': [v['id'] for v in tdim['values']][-4:], 'muestra': list(obs.items())[-4:]}
 
 
 probar('abs_paro', lambda: abs_('ABS,LF,1.0.0', 'M13.3.1599.20.AUS.M'))
 probar('abs_empleo', lambda: abs_('ABS,LF,1.0.0', 'M3.3.1599.20.AUS.M'))
-probar('abs_ipc_m', lambda: abs_('ABS,CPI_M,1.0.0', '3.10001.10.50.M'))
-probar('abs_ipc_m2', lambda: abs_('ABS,CPI_M_H,1.0.0', 'all'))
+probar('abs_flujos_cpi', lambda: [f['id'] for f in get('https://data.api.abs.gov.au/rest/dataflow/ABS', headers={'Accept': 'application/vnd.sdmx.structure+json'})['data']['dataflows'] if 'CPI' in f['id']])
 
 
 def av(sym):
@@ -93,6 +106,8 @@ def av(sym):
 
 
 probar('alphavantage_HD', lambda: av('HD'))
+import time
+time.sleep(2)
 probar('alphavantage_NVDA', lambda: av('NVDA'))
 
 
