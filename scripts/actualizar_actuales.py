@@ -508,7 +508,7 @@ ONS_RUTA = {
 }
 
 
-def ons(serie):
+def ons(serie, con_fecha=False):
     j = http_json('https://www.ons.gov.uk/%s/data' % ONS_RUTA[serie])
     out = {}
     for p in (j.get('months') or []) + (j.get('quarters') or []):
@@ -516,15 +516,33 @@ def ons(serie):
             out[p['date'].upper()] = float(p['value'])
         except (KeyError, ValueError, TypeError):
             pass
+    if con_fecha:
+        return out, (j.get('description') or {}).get('releaseDate', '')[:10]
     return out
 
 
 MESES_EN = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
 
+def ons_mes(y, m):
+    return '%d %s' % (y, MESES_EN[m - 1])
+
+
+def ons_ant(k):
+    y, m = int(k[:4]), MESES_EN.index(k[5:]) + 1
+    return ons_mes(y - 1, 12) if m == 1 else ons_mes(y, m - 1)
+
+
+def ons_mm(s, k):
+    """Variación mensual en % a partir de un índice (PIB mensual y ventas minoristas vienen como índice)."""
+    if k not in s or ons_ant(k) not in s:
+        return None
+    return (s[k] / s[ons_ant(k)] - 1) * 100
+
+
 def calc_ipc_uk(ev, d):
     m, y = mes_esperado(ev, d, retraso_dias_corte=0)
-    k = '%d %s' % (y, MESES_EN[m - 1])
+    k = ons_mes(y, m)
     g, c = ons('d7g7'), ons('dko8')
     if k not in g or k not in c:
         return None
@@ -532,18 +550,15 @@ def calc_ipc_uk(ev, d):
 
 
 def calc_paro_uk(ev, d):
-    s = ons('mgsx')
+    """El último trimestre móvil publicado, solo si la ONS lo ha publicado el día del evento (o después)."""
+    s, pub = ons('mgsx', con_fecha=True)
+    if not pub or pub < (d - dt.timedelta(days=1)).isoformat():
+        return None
     meses = sorted((k for k in s if len(k) == 8), key=lambda k: (int(k[:4]), MESES_EN.index(k[5:])))
     if not meses:
         return None
     k = meses[-1]
-    # el dato que sale este mes es el trimestre que acaba dos meses antes
-    y, mm_ = d.year, d.month - 2
-    if mm_ <= 0:
-        y, mm_ = y - 1, mm_ + 12
-    if k != '%d %s' % (y, MESES_EN[mm_ - 1]):
-        return None
-    return 'Paro %s%% (3 meses a %s)' % (es_num(s[k]), MESES[mm_ - 1]), False
+    return 'Paro %s%% (3 meses a %s)' % (es_num(s[k]), MESES[MESES_EN.index(k[5:])]), False
 
 
 def calc_pib_uk(ev, d):
@@ -557,19 +572,17 @@ def calc_pib_uk(ev, d):
             return None
         partes.append('%s t/t' % pct(s['%d Q%d' % (year, q)]))
     if m:
-        s = ons('ecy2')
-        k = '%d %s' % (anio_de_mes(m, d), MESES_EN[m - 1])
-        if k not in s:
+        v = ons_mm(ons('ecy2'), ons_mes(anio_de_mes(m, d), m))
+        if v is None:
             return None
-        partes.append('%s %s m/m' % (MESES[m - 1].capitalize(), pct(s[k])))
+        partes.append('%s %s m/m' % (MESES[m - 1].capitalize(), pct(v)))
     return (' · '.join(partes), True) if partes else None
 
 
 def calc_minoristas_uk(ev, d):
     m, y = mes_esperado(ev, d, retraso_dias_corte=0)
-    s = ons('j5ek')
-    k = '%d %s' % (y, MESES_EN[m - 1])
-    return ('%s m/m' % pct(s[k]), True) if k in s else None
+    v = ons_mm(ons('j5ek'), ons_mes(y, m))
+    return ('%s m/m' % pct(v), True) if v is not None else None
 
 
 # ---------- Australia (ABS, sin clave) ----------
