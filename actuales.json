@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T16:21:53Z",
+ "updated": "2026-11-19T11:38:47Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -120,6 +120,63 @@
    "match": "Inicios de viviendas y permisos de construcción, octubre",
    "act": "1,309 M",
    "res": ""
+  },
+  {
+   "d": "2026-11-16",
+   "match": "IPC de Canadá, octubre",
+   "act": "General +0,2% m/m · 3,1% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-17",
+   "match": "Mercado laboral del Reino Unido",
+   "act": "Paro 4,6% (3 meses a agosto)",
+   "res": ""
+  },
+  {
+   "d": "2026-11-18",
+   "match": "IPC del Reino Unido, octubre",
+   "act": "General 3,6% a/a\nSubyacente 2,8% a/a",
+   "res": ""
+  },
+  {
+   "d": "2026-11-18",
+   "match": "Inventarios de crudo de la EIA",
+   "act": "+3,4 M barriles",
+   "res": ""
+  },
+  {
+   "d": "2026-11-19",
+   "match": "Empleo de Australia, octubre",
+   "act": "Empleo −43,5 mil\nParo 4,9%",
+   "res": ""
+  },
+  {
+   "d": "2026-11-17",
+   "co": "Nvidia",
+   "epsA": "2,68 $",
+   "res": "up",
+   "fuente": "Alpha Vantage",
+   "cuando": "2026-11-19T11:38Z",
+   "epsF": "2,47 $"
+  },
+  {
+   "d": "2026-11-17",
+   "co": "Home Depot",
+   "epsA": "3,86 $",
+   "res": "",
+   "fuente": "Alpha Vantage",
+   "cuando": "2026-11-19T11:38Z",
+   "epsF": "3,86 $"
+  },
+  {
+   "d": "2026-11-17",
+   "co": "Disney",
+   "epsA": "1,77 $",
+   "res": "up",
+   "fuente": "Alpha Vantage",
+   "cuando": "2026-11-19T11:38Z",
+   "epsF": "1,67 $"
   }
  ]
 }
