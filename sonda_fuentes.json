@@ -1,5 +1,5 @@
 {
- "hecho": "2026-11-19T11:30:41Z",
+ "hecho": "2026-11-19T11:36:57Z",
  "eurostat_pib": {
   "EA20": {
    "2026-Q1": 0.0,
@@ -35,25 +35,25 @@
    "2026-09": null,
    "2026-10": null
   },
-  "DE": {
-   "2026-06": 4.0,
-   "2026-07": 4.0,
-   "2026-08": 4.1,
-   "2026-09": 4.1,
+  "EA": {
+   "2026-06": null,
+   "2026-07": null,
+   "2026-08": null,
+   "2026-09": null,
    "2026-10": null
   },
-  "FR": {
-   "2026-06": 8.3,
-   "2026-07": 8.3,
-   "2026-08": 8.3,
-   "2026-09": 8.5,
+  "EA21": {
+   "2026-06": 6.4,
+   "2026-07": 6.5,
+   "2026-08": 6.5,
+   "2026-09": 6.5,
    "2026-10": null
   },
-  "ES": {
-   "2026-06": 10.2,
-   "2026-07": 10.2,
-   "2026-08": 10.2,
-   "2026-09": 10.3,
+  "EU27_2020": {
+   "2026-06": 6.2,
+   "2026-07": 6.2,
+   "2026-08": 6.2,
+   "2026-09": 6.2,
    "2026-10": null
   }
  },
@@ -63,15 +63,188 @@
   "FR": {},
   "ES": {}
  },
- "ons_d7g7": "ERROR: HTTP Error 404: Not Found",
- "ons_d7oe": "ERROR: HTTP Error 404: Not Found",
- "ons_dko8": "ERROR: HTTP Error 404: Not Found",
- "ons_mgsx": "ERROR: HTTP Error 404: Not Found",
- "ons_ihyq": "ERROR: HTTP Error 404: Not Found",
- "ons_ecy2": "ERROR: HTTP Error 404: Not Found",
- "ons_j5ek": "ERROR: HTTP Error 404: Not Found",
- "ons_j5ed": "ERROR: HTTP Error 404: Not Found",
+ "ons_d7g7": {
+  "titulo": "CPI ANNUAL RATE 00: ALL ITEMS 2015=100",
+  "publicado": "2026-11-18T00:00:00.000Z",
+  "months": [
+   [
+    "2026 AUG",
+    "3.1"
+   ],
+   [
+    "2026 SEP",
+    "3.5"
+   ],
+   [
+    "2026 OCT",
+    "3.6"
+   ]
+  ],
+  "quarters": [
+   [
+    "2026 Q1",
+    "3.1"
+   ],
+   [
+    "2026 Q2",
+    "2.8"
+   ],
+   [
+    "2026 Q3",
+    "3.1"
+   ]
+  ]
+ },
+ "ons_dko8": {
+  "titulo": "CPI 12mth: Excluding Energy, food, alcoholic beverages & tobacco 2015=100",
+  "publicado": "2026-11-18T00:00:00.000Z",
+  "months": [
+   [
+    "2026 AUG",
+    "2.6"
+   ],
+   [
+    "2026 SEP",
+    "2.8"
+   ],
+   [
+    "2026 OCT",
+    "2.8"
+   ]
+  ],
+  "quarters": [
+   [
+    "2026 Q1",
+    "3.2"
+   ],
+   [
+    "2026 Q2",
+    "2.5"
+   ],
+   [
+    "2026 Q3",
+    "2.6"
+   ]
+  ]
+ },
+ "ons_mgsx": {
+  "titulo": "Unemployment rate (aged 16 and over, seasonally adjusted): %",
+  "publicado": "2026-11-17T00:00:00.000Z",
+  "months": [
+   [
+    "2026 JUN",
+    "4.9"
+   ],
+   [
+    "2026 JUL",
+    "4.7"
+   ],
+   [
+    "2026 AUG",
+    "4.6"
+   ]
+  ],
+  "quarters": [
+   [
+    "2026 Q1",
+    "5.0"
+   ],
+   [
+    "2026 Q2",
+    "4.9"
+   ],
+   [
+    "2026 Q3",
+    "4.6"
+   ]
+  ]
+ },
+ "ons_ihyq": {
+  "titulo": "Gross Domestic Product: Quarter on Quarter growth: CVM SA %",
+  "publicado": "2026-09-29T23:00:00.000Z",
+  "quarters": [
+   [
+    "2025 Q4",
+    "0.0"
+   ],
+   [
+    "2026 Q1",
+    "0.6"
+   ],
+   [
+    "2026 Q2",
+    "0.5"
+   ]
+  ]
+ },
+ "ons_ecy2": {
+  "titulo": "Gross Value Added - Monthly (Index 1dp) :CVM SA",
+  "publicado": "2026-11-12T00:00:00.000Z",
+  "months": [
+   [
+    "2026 JUL",
+    "103.0"
+   ],
+   [
+    "2026 AUG",
+    "103.0"
+   ],
+   [
+    "2026 SEP",
+    "103.3"
+   ]
+  ]
+ },
+ "ons_j5ek": {
+  "titulo": "RSI:Volume Seasonally Adjusted:All Retailers inc fuel:All Business Index",
+  "publicado": "2026-10-22T23:00:00.000Z",
+  "months": [
+   [
+    "2026 JUL",
+    "103.0"
+   ],
+   [
+    "2026 AUG",
+    "103.7"
+   ],
+   [
+    "2026 SEP",
+    "103.3"
+   ]
+  ],
+  "quarters": [
+   [
+    "2026 Q1",
+    "102.5"
+   ],
+   [
+    "2026 Q2",
+    "102.6"
+   ],
+   [
+    "2026 Q3",
+    "103.3"
+   ]
+  ]
+ },
  "statcan": {
+  "41690914": [
+   [
+    "2026-08-01",
+    169.4,
+    "2026-10-19T08:30"
+   ],
+   [
+    "2026-09-01",
+    170.0,
+    "2026-11-16T08:30"
+   ],
+   [
+    "2026-10-01",
+    170.3,
+    "2026-11-16T08:30"
+   ]
+  ],
   "2062811": [
    [
     "2026-08-01",
@@ -104,23 +277,6 @@
     "2026-10-01",
     6.7,
     "2026-11-06T08:30"
-   ]
-  ],
-  "41690914": [
-   [
-    "2026-08-01",
-    169.4,
-    "2026-10-19T08:30"
-   ],
-   [
-    "2026-09-01",
-    170.0,
-    "2026-11-16T08:30"
-   ],
-   [
-    "2026-10-01",
-    170.3,
-    "2026-11-16T08:30"
    ]
   ],
   "41690973": [
@@ -158,10 +314,98 @@
    ]
   ]
  },
- "abs_paro": "ERROR: 'structure'",
- "abs_empleo": "ERROR: 'structure'",
- "abs_ipc_m": "ERROR: HTTP Error 404: Not Found",
- "abs_ipc_m2": "ERROR: HTTP Error 404: Not Found",
+ "abs_paro": {
+  "n": 3,
+  "tiempos": [
+   "2026-10",
+   "2026-09",
+   "2026-08"
+  ],
+  "muestra": [
+   [
+    "0:0:0:0:0:0:0",
+    [
+     4.86483265,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ],
+   [
+    "0:0:0:0:0:0:1",
+    [
+     4.74188818,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ],
+   [
+    "0:0:0:0:0:0:2",
+    [
+     4.66927473,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ]
+  ]
+ },
+ "abs_empleo": {
+  "n": 3,
+  "tiempos": [
+   "2026-10",
+   "2026-09",
+   "2026-08"
+  ],
+  "muestra": [
+   [
+    "0:0:0:0:0:0:0",
+    [
+     14738.6373622,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ],
+   [
+    "0:0:0:0:0:0:1",
+    [
+     14782.16810654,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ],
+   [
+    "0:0:0:0:0:0:2",
+    [
+     14818.56773245,
+     0,
+     0,
+     null,
+     null,
+     0
+    ]
+   ]
+  ]
+ },
+ "abs_flujos_cpi": [
+  "CPI",
+  "CPI_M",
+  "CPI_Q",
+  "CPI_WEIGHTS"
+ ],
  "alphavantage_HD": [
   {
    "fiscalDateEnding": "2026-10-31",
@@ -182,9 +426,26 @@
    "reportTime": "pre-market"
   }
  ],
- "alphavantage_NVDA": {
-  "Information": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage"
- },
+ "alphavantage_NVDA": [
+  {
+   "fiscalDateEnding": "2026-10-31",
+   "reportedDate": "2026-11-17",
+   "reportedEPS": "2.68",
+   "estimatedEPS": "2.47",
+   "surprise": "0.21",
+   "surprisePercentage": "8.502",
+   "reportTime": "post-market"
+  },
+  {
+   "fiscalDateEnding": "2026-07-31",
+   "reportedDate": "2026-08-26",
+   "reportedEPS": "2.22",
+   "estimatedEPS": "2.09",
+   "surprise": "0.13",
+   "surprisePercentage": "6.2201",
+   "reportTime": "post-market"
+  }
+ ],
  "eia_crudo": [
   [
    "2026-11-13",
