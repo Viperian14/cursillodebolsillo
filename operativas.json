@@ -13216,6 +13216,462 @@
    "niveles": [],
    "desde": "2026-11-19T11:45",
    "hasta": "2026-11-19T22:00"
+  },
+  {
+   "id": "ES-2026-11-20-I1",
+   "activo": "ES",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7180,
+    7200
+   ],
+   "stop": 7215,
+   "objetivos": [
+    7160,
+    7142
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7200,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7210
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:23",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "ES-2026-11-20-I2",
+   "activo": "ES",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7132,
+    7140
+   ],
+   "stop": 7152,
+   "objetivos": [
+    7110,
+    7080
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7134
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7140,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7152
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:23",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "ES-2026-11-20-I3",
+   "activo": "ES",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    7134,
+    7142
+   ],
+   "stop": 7120,
+   "objetivos": [
+    7162,
+    7180
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7134,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7128
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:23",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "ES-2026-11-20-I4",
+   "activo": "ES",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7203,
+    7210
+   ],
+   "stop": 7188,
+   "objetivos": [
+    7233,
+    7250
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7208
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7203,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7188
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:23",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "GC-2026-11-20-I1",
+   "activo": "GC",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    3594,
+    3610
+   ],
+   "stop": 3622,
+   "objetivos": [
+    3570,
+    3556
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3610,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3615
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4; contra M15. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:24",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "GC-2026-11-20-I2",
+   "activo": "GC",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    3555,
+    3562
+   ],
+   "stop": 3572,
+   "objetivos": [
+    3540,
+    3520
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3555
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3562,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3572
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:24",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "GC-2026-11-20-I3",
+   "activo": "GC",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    3567,
+    3575
+   ],
+   "stop": 3553,
+   "objetivos": [
+    3592,
+    3605
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3567,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3555
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15; contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:24",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "GC-2026-11-20-I4",
+   "activo": "GC",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    3610,
+    3618
+   ],
+   "stop": 3596,
+   "objetivos": [
+    3640,
+    3660
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3615
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3610,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3596
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15; contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:24",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "NQ-2026-11-20-I1",
+   "activo": "NQ",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    26330,
+    26385
+   ],
+   "stop": 26460,
+   "objetivos": [
+    26180,
+    26050
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26385,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26420
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:21",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "NQ-2026-11-20-I2",
+   "activo": "NQ",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    26130,
+    26160
+   ],
+   "stop": 26220,
+   "objetivos": [
+    26030,
+    25880
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26130
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26160,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26220
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de M15, H1 y H4. ⚠ Media posición si el gatillo sale entre las 14:15 y las 14:45 (dato) o entre las 15:15 y las 16:15 (apertura y Michigan).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-20T11:21",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "NQ-2026-11-20-I3",
+   "activo": "NQ",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    26030,
+    26070
+   ],
+   "stop": 25960,
+   "objetivos": [
+    26180,
+    26300
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26030,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 25990
+   },
+   "slplus": "escalera",
+   "favor": "Va contra M15, H1 y H4; a favor del soporte del diario.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:21",
+   "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "NQ-2026-11-20-I4",
+   "activo": "NQ",
+   "fecha": "2026-11-20",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    26385,
+    26410
+   ],
+   "stop": 26335,
+   "objetivos": [
+    26470,
+    26600
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26400
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26385,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26335
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-20T11:21",
+   "hasta": "2026-11-20T22:00"
   }
  ],
  "datos": [
@@ -16580,6 +17036,195 @@
    "imp": 2,
    "ev": "Ventas minoristas del Reino Unido, octubre",
    "activos": []
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "14:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "15:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:00",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "16:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
   },
   {
    "fecha": "2026-11-20",
