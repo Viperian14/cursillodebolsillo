@@ -200,7 +200,7 @@ def calc_claims(month, year, ev_date):
     return '%d mil' % round(v / 1000), False
 
 
-NOTAS = {'2 años': ('Note', ('2-Year',)), '5 años': ('Note', ('5-Year',)), '7 años': ('Note', ('7-Year',)), '10 años': ('Note', ('10-Year', '9-Year')), '30 años': ('Bond', ('30-Year', '29-Year'))}
+NOTAS = {'2 años': ('Note', ('2-Year',)), '5 años': ('Note', ('5-Year',)), '7 años': ('Note', ('7-Year',)), '10 años': ('Note', ('10-Year', '9-Year')), '20 años': ('Bond', ('20-Year', '19-Year')), '30 años': ('Bond', ('30-Year', '29-Year'))}
 TERMINOS = {'6 semanas': '6-Week', '3 meses': '13-Week', '6 meses': '26-Week'}
 
 
@@ -753,6 +753,7 @@ HANDLERS = [
     ('Precios de importación y exportación de EE. UU.', lambda m, y, d: calc_import(m, y), True, 0.05),
     ('Subasta de letras del Tesoro', lambda m, y, d: None, False, 0.05),
     ('Subasta de notas y bonos del Tesoro', lambda m, y, d: None, False, 0.05),
+    ('Subasta de bonos del Tesoro', lambda m, y, d: None, False, 0.05),
     ('Decisión de tipos de la Fed', lambda m, y, d: calc_fed(d), False, 0.0),
     ('IPC final de la zona euro', lambda m, y, d: calc_hicp(m, y), True, 0.05),
     # Series de FRED añadidas el 30-10-2026. 'prev' = si el nombre no trae el mes, se usa el mes anterior al del evento.
@@ -963,7 +964,7 @@ def subir():
 def eventos_pendientes(cur, hoy=None):
     html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
     today = hoy or dt.datetime.now(dt.timezone.utc).date().isoformat()
-    have = {(i['d'], i['match']) for i in cur.get('items', [])}
+    have = {(i['d'], i['match']) for i in cur.get('items', []) if 'match' in i}
     return [e for e in pending_events(html, today) if (e['d'], e['ev']) not in have]
 
 
