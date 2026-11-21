@@ -13672,6 +13672,1325 @@
    "niveles": [],
    "desde": "2026-11-20T11:21",
    "hasta": "2026-11-20T22:00"
+  },
+  {
+   "id": "BTC-2026-11-21-S1",
+   "activo": "BTC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    62700,
+    64000
+   ],
+   "stop": 65300,
+   "objetivos": [
+    58350,
+    55150
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 64000
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 65300
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 59500,
+     "lbl": "≈58.900‑60.200"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "BTC-2026-11-21-S2",
+   "activo": "BTC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    55150,
+    55700
+   ],
+   "stop": 56900,
+   "objetivos": [
+    52830,
+    49545
+   ],
+   "tick": 5,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 55150
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 55150
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 56900
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "BTC-2026-11-21-S3",
+   "activo": "BTC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · pullback",
+   "dir": "largo",
+   "zona": [
+    58350,
+    58900
+   ],
+   "stop": 57300,
+   "objetivos": [
+    62700,
+    64620
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 58350
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 57300
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4 (rebote).",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 59500,
+     "lbl": "≈58.900‑60.200"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "CC-2026-11-21-S1",
+   "activo": "CC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · ruptura",
+   "dir": "largo",
+   "zona": [
+    5362,
+    5400
+   ],
+   "stop": 5280,
+   "objetivos": [
+    5600,
+    5960
+   ],
+   "tick": 1,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 5400
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5362
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 5280
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "CC-2026-11-21-S2",
+   "activo": "CC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 2 · rebote",
+   "dir": "largo",
+   "zona": [
+    4984,
+    5050
+   ],
+   "stop": 4900,
+   "objetivos": [
+    5160,
+    5362
+   ],
+   "tick": 1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 4984
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 4900
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H4 y contra D.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "ES-2026-11-21-S1",
+   "activo": "ES",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    7040.75,
+    7090
+   ],
+   "stop": 7170,
+   "objetivos": [
+    6953,
+    6814.75
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7090
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 7170
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "ES-2026-11-21-S2",
+   "activo": "ES",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    6884.75,
+    6910
+   ],
+   "stop": 6980,
+   "objetivos": [
+    6814.75,
+    6675.25
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 6884.75
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 6884.75
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 6980
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "ES-2026-11-21-S3",
+   "activo": "ES",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    6768.25,
+    6814.75
+   ],
+   "stop": 6720,
+   "objetivos": [
+    6953,
+    7040.75
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 6768.25
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 6720
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4 (rebote técnico).",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 6884.75,
+     "lbl": "6.884,75"
+    },
+    {
+     "p": 6898,
+     "lbl": "6.898"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "EURUSD-2026-11-21-S1",
+   "activo": "EURUSD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    1.1,
+    1.1025
+   ],
+   "stop": 1.105,
+   "objetivos": [
+    1.0931,
+    1.0835
+   ],
+   "tick": 0.00005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.1025
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.105
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 1.09895,
+     "lbl": "1,09895"
+    },
+    {
+     "p": 1.0965,
+     "lbl": "1,09650"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "EURUSD-2026-11-21-S2",
+   "activo": "EURUSD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    1.0931,
+    1.094
+   ],
+   "stop": 1.097,
+   "objetivos": [
+    1.0835,
+    1.0635
+   ],
+   "tick": 0.00005,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.0931
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.0931
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 1.097
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "EURUSD-2026-11-21-S3",
+   "activo": "EURUSD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    1.0931,
+    1.094
+   ],
+   "stop": 1.0905,
+   "objetivos": [
+    1.09895,
+    1.10745
+   ],
+   "tick": 0.00005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.0931
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 1.0905
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 1.0965,
+     "lbl": "1,09650"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "GC-2026-11-21-S1",
+   "activo": "GC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    3594.7,
+    3640
+   ],
+   "stop": 3690,
+   "objetivos": [
+    3502.9,
+    3447.6
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3640
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3690
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "GC-2026-11-21-S2",
+   "activo": "GC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    3447.6,
+    3470
+   ],
+   "stop": 3520,
+   "objetivos": [
+    3249.7,
+    3112.7
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3447.6
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3447.6
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3520
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "GC-2026-11-21-S3",
+   "activo": "GC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    3447.6,
+    3490
+   ],
+   "stop": 3410,
+   "objetivos": [
+    3594.7,
+    3716.5
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3447.6
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3410
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W (túnel semanal) y contra D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 3495,
+     "lbl": "≈3.490‑3.510"
+    },
+    {
+     "p": 3502.9,
+     "lbl": "3.502,9"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "KC-2026-11-21-S1",
+   "activo": "KC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · ruptura (del 14, sigue vigente)",
+   "dir": "corto",
+   "zona": [
+    268,
+    269.85
+   ],
+   "stop": 274.5,
+   "objetivos": [
+    262.15,
+    256
+   ],
+   "tick": 0.05,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 269.85
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 269.85
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 274.5
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 266.5,
+     "lbl": "≈265,50‑267,50"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "KC-2026-11-21-S2",
+   "activo": "KC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · rebote",
+   "dir": "corto",
+   "zona": [
+    275,
+    277.5
+   ],
+   "stop": 280.5,
+   "objetivos": [
+    269.85,
+    262.15
+   ],
+   "tick": 0.05,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 277.5
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 280.5
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "KC-2026-11-21-S3",
+   "activo": "KC",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    262.15,
+    264
+   ],
+   "stop": 259.5,
+   "objetivos": [
+    269.85,
+    277.5
+   ],
+   "tick": 0.05,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 262.15
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 259.5
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de W (suelo de la caja) y contra D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 266.5,
+     "lbl": "≈265,50‑267,50"
+    },
+    {
+     "p": 268,
+     "lbl": "268,00"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NG-2026-11-21-S1",
+   "activo": "NG",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · pullback",
+   "dir": "largo",
+   "zona": [
+    3.33,
+    3.37
+   ],
+   "stop": 3.27,
+   "objetivos": [
+    3.535
+   ],
+   "tick": 0.001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3.33
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 3.27
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 3.415,
+     "lbl": "≈3,400‑3,430"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NG-2026-11-21-S2",
+   "activo": "NG",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    3.535,
+    3.58
+   ],
+   "stop": 3.64,
+   "objetivos": [
+    3.4,
+    3.305
+   ],
+   "tick": 0.001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3.58
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 3.64
+   },
+   "slplus": "escalera",
+   "favor": "Va contra D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 3.415,
+     "lbl": "≈3,400‑3,430"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NKD-2026-11-21-S1",
+   "activo": "NKD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    56200,
+    56570
+   ],
+   "stop": 57200,
+   "objetivos": [
+    54715,
+    52860
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 56570
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 57200
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 56100,
+     "lbl": "≈55.900‑56.200"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NKD-2026-11-21-S2",
+   "activo": "NKD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    54715,
+    55000
+   ],
+   "stop": 55600,
+   "objetivos": [
+    52860,
+    50685
+   ],
+   "tick": 5,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 54715
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 54715
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 55600
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 54335,
+     "lbl": "54.335"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NKD-2026-11-21-S3",
+   "activo": "NKD",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    52860,
+    53200
+   ],
+   "stop": 52200,
+   "objetivos": [
+    54715,
+    56570
+   ],
+   "tick": 5,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 52860
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 52200
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4 (rebote técnico).",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 54335,
+     "lbl": "54.335"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NQ-2026-11-21-S1",
+   "activo": "NQ",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    26026.25,
+    26200
+   ],
+   "stop": 26500,
+   "objetivos": [
+    25453.5,
+    24838.5
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 26200
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 26500
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NQ-2026-11-21-S2",
+   "activo": "NQ",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    24838.5,
+    24950
+   ],
+   "stop": 25300,
+   "objetivos": [
+    24400,
+    23650.75
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 24838.5
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 24838.5
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 25300
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 24550,
+     "lbl": "≈24.400‑24.700"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "NQ-2026-11-21-S3",
+   "activo": "NQ",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    24838.5,
+    25000
+   ],
+   "stop": 24550,
+   "objetivos": [
+    25453.5,
+    26026.25
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 24838.5
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 24550
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4 (rebote técnico).",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "SI-2026-11-21-S1",
+   "activo": "SI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    42.6,
+    43.2
+   ],
+   "stop": 43.9,
+   "objetivos": [
+    40.615,
+    39.8
+   ],
+   "tick": 0.005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 43.2
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 43.9
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "SI-2026-11-21-S2",
+   "activo": "SI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    39.8,
+    40.1
+   ],
+   "stop": 40.9,
+   "objetivos": [
+    38.8,
+    36.665
+   ],
+   "tick": 0.005,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 39.8
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 39.8
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 40.9
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 38.95,
+     "lbl": "≈38,800‑39,100"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "SI-2026-11-21-S3",
+   "activo": "SI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    39.8,
+    40.2
+   ],
+   "stop": 39,
+   "objetivos": [
+    42.6,
+    45.06
+   ],
+   "tick": 0.005,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 39.8
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 39
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4 (rebote técnico).",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 40.615,
+     "lbl": "40,615"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "WTI-2026-11-21-S1",
+   "activo": "WTI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    84.7,
+    85.4
+   ],
+   "stop": 86.4,
+   "objetivos": [
+    81,
+    80
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 85.4
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 86.4
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 82.75,
+     "lbl": "≈82,75"
+    },
+    {
+     "p": 81.3,
+     "lbl": "≈81,00‑81,60"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "WTI-2026-11-21-S2",
+   "activo": "WTI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 2 · ruptura",
+   "dir": "corto",
+   "zona": [
+    80,
+    80.5
+   ],
+   "stop": 81.4,
+   "objetivos": [
+    77,
+    74.43
+   ],
+   "tick": 0.01,
+   "ruptura": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 80
+   },
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 80
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 81.4
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 77.5,
+     "lbl": "≈76,50‑78,50"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "WTI-2026-11-21-S3",
+   "activo": "WTI",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    81,
+    81.6
+   ],
+   "stop": 79.7,
+   "objetivos": [
+    84.7,
+    86.14
+   ],
+   "tick": 0.01,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 81
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 79.7
+   },
+   "slplus": "escalera",
+   "favor": "Va contra D y H4 (rebote en el suelo de la semana).",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 82.75,
+     "lbl": "≈82,75"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "XRP-2026-11-21-S1",
+   "activo": "XRP",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Corto 1 · rebote",
+   "dir": "corto",
+   "zona": [
+    0.955,
+    0.965
+   ],
+   "stop": 0.985,
+   "objetivos": [
+    0.9,
+    0.88
+   ],
+   "tick": 0.0001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 0.965
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "sobre",
+    "nivel": 0.985
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 0.905,
+     "lbl": "≈0,9000‑0,9100"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
+  },
+  {
+   "id": "XRP-2026-11-21-S2",
+   "activo": "XRP",
+   "fecha": "2026-11-21",
+   "modo": "swing",
+   "nombre": "Largo 1 · rebote",
+   "dir": "largo",
+   "zona": [
+    0.88,
+    0.895
+   ],
+   "stop": 0.86,
+   "objetivos": [
+    0.955,
+    1.01
+   ],
+   "tick": 0.0001,
+   "ruptura": null,
+   "filtro": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 0.88
+   },
+   "anula": {
+    "tf": "H4",
+    "lado": "bajo",
+    "nivel": 0.86
+   },
+   "slplus": "escalera",
+   "favor": "Va contra W, D y H4.",
+   "reducido": false,
+   "niveles": [
+    {
+     "p": 0.905,
+     "lbl": "≈0,9000‑0,9100"
+    }
+   ],
+   "desde": "2026-11-22T00:00",
+   "hasta": "2026-11-27T23:00"
   }
  ],
  "datos": [
