@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:38:47Z",
+ "updated": "2026-11-21T21:35:19Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -177,6 +177,39 @@
    "fuente": "Alpha Vantage",
    "cuando": "2026-11-19T11:38Z",
    "epsF": "1,67 $"
+  },
+  {
+   "d": "2026-11-18",
+   "match": "Subasta de bonos del Tesoro a 20 años (Bono a 20 años)",
+   "act": "5,459%",
+   "res": ""
+  },
+  {
+   "d": "2026-11-19",
+   "match": "Peticiones iniciales de subsidio de desempleo (EE. UU.)",
+   "act": "203 mil",
+   "res": ""
+  },
+  {
+   "d": "2026-11-19",
+   "match": "Almacenamientos de gas natural de la EIA",
+   "act": "+20 Bcf",
+   "res": ""
+  },
+  {
+   "d": "2026-11-20",
+   "match": "Ventas minoristas del Reino Unido, octubre",
+   "act": "+0,7% m/m",
+   "res": ""
+  },
+  {
+   "d": "2026-11-19",
+   "co": "Walmart",
+   "epsA": "0,65 $",
+   "res": "up",
+   "fuente": "Alpha Vantage",
+   "cuando": "2026-11-21T21:35Z",
+   "epsF": "0,64 $"
   }
  ]
 }
