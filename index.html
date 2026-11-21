@@ -187,6 +187,7 @@ svg.story text.mb, svg.story text.ms { font-size: 15px; }
 .pd-chip { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: .82rem; color: var(--fg); }
 .pd-chip.estr { border-color: var(--up); color: var(--up); }
 .pd-chip.esc { border-color: var(--accent, #e0b84f); color: var(--accent, #e0b84f); }
+.pd-chip.exc { border-style: dashed; border-color: var(--accent); color: var(--accent); }
 .pd-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; line-height: 1.5; }
 .pd-leg { margin: 6px 0 0; padding-left: 22px; color: var(--muted); font-size: .9rem; display: flex; flex-direction: column; gap: 3px; }
 .pd-cap { margin: 4px 0 0; color: var(--muted); font-size: .88rem; }
@@ -267,6 +268,7 @@ h2 { color: var(--muted); }
 .trade h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.3; }
 .trade .tg2 { font-size: 12px; font-weight: 600; border-radius: 4px; padding: 3px 8px; background: var(--accent-soft); color: var(--accent); }
 .trade .tg2.win { background: var(--up-soft); color: var(--up); }
+.trade .tg2.exc { background: transparent; border: 1px dashed var(--accent); color: var(--accent); }
 .trade .tg2.ap { background: var(--flat-soft); color: var(--flat); }
 .trade .tg2.dn { background: var(--down-soft); color: var(--down); }
 .trade .goals { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
@@ -65459,7 +65461,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     return '<svg class="mini" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(al) + '">' + g + '</svg>';
   }
   /* Dibujo de ejemplo de la entrada con velas simuladas: llegada a la zona (o ruptura y retesteo), vela de gatillo, stop y objetivos. Se usa en los swing desde el 31 de octubre de 2026. */
-  function storyChart(e, pl, k, text, v) {
+  function storyChart(e, pl, k, text, v, ex) {
     v = v || 'normal';
     var now = null, nowL = '';
     (e.levels || []).forEach(function (l) { if (l.cls === 'now') { now = l.p; nowL = l.lbl; } });
@@ -65484,6 +65486,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     var span = Math.abs((tg.length ? tg[tg.length - 1] : near + s * 4 * zw) - (st != null ? st : deep - s * 2 * zw));
     var u = span / 40;
     var trig = deep + s * u * 1.2, entryP = long ? Math.max(trig + 3 * u, near) : Math.min(trig - 3 * u, near);
+    if (v === 'exc' && ex && ex.ref != null) entryP = ex.ref;
     var wp = [], marks = {};
     var start = now != null ? now : (rup ? deep - s * 8 * u : near + s * 8 * u);
     wp.push({ p: start, n: 0 });
@@ -65502,6 +65505,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     if (v === 'estr') { wp.push({ p: entryP + 0.6 * d1, n: 4 }); wp.push({ p: entryP + 0.3 * d1, n: 3, mk: 'corr' }); wp.push({ p: entryP + 0.42 * d1, n: 1, mk: 'conf' }); }
     if (v === 'slx') { slp = entryP + 0.2 * d1; wp.push({ p: entryP + 0.68 * d1, n: 4, mk: 'p65' }); wp.push({ p: slp - s * 0.6 * u, n: 3, mk: 'slx' }); wp.push({ p: deep + s * 0.4 * u, n: 3 }); wp.push({ p: deep - s * 1.5 * u, n: 2 }); }
     if (v === 'reentF') { var fq = deep - s * 3 * u; if (st != null) fq = long ? Math.max(fq, st + 1.5 * u) : Math.min(fq, st - 1.5 * u); wp.push({ p: entryP + 0.25 * d1, n: 3 }); wp.push({ p: fq, n: 4, mk: 'fil' }); wp.push({ p: deep + s * 0.4 * u, n: 3, mk: 'back' }); wp.push({ p: entryP, n: 1, mk: 'trig2' }); }
+    if (v === 'exc') { slp = entryP + 0.3 * d1; wp.push({ p: entryP + 0.53 * d1, n: 4, mk: 'p50' }); wp.push({ p: entryP + 0.4 * d1, n: 2 }); }
     if (v === 'slx') {}
     else if (v === 'anula') { var fp = deep - s * 3 * u; if (st != null) fp = long ? Math.max(fp, st + 1.5 * u) : Math.min(fp, st - 1.5 * u); wp.push({ p: entryP + 0.25 * d1, n: 3 }); wp.push({ p: fp, n: 4, mk: 'fil' }); }
     else {
@@ -65543,7 +65547,8 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     if (st != null) { g += '<line class="m-stop" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(st) + '" y2="' + y(st) + '"/>'; labs.push({ y: y(st), c: 't-stop mb', a: '🛑 Stop ' + fmt(st) }); }
     tg.forEach(function (t, i) { g += '<line class="m-tg" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(t) + '" y2="' + y(t) + '"/>'; labs.push({ y: y(t), c: 't-tg mb', a: '🎯 ' + (i + 1) + '.º ' + fmt(t) }); });
     if (now != null && v === 'normal') { g += '<line class="m-now" x1="' + X0 + '" x2="' + X1 + '" y1="' + y(now) + '" y2="' + y(now) + '"/>'; labs.push({ y: y(now), c: 'ms', a: 'Ahora ' + nowL }); }
-    if (slp != null) { var xs = cx(v === 'reent' || v === 'slx' ? marks.p65 : marks.conf) - 4; g += '<line x1="' + xs + '" x2="' + X1 + '" y1="' + y(slp) + '" y2="' + y(slp) + '" stroke="var(--accent, #e0b84f)" stroke-width="1.4" stroke-dasharray="5 3"/>'; labs.push({ y: y(slp), c: 'mb', a: '➕ SL+ ≈' + fmtT(e, rTick(slp, tickOf(e), s)) }); }
+    if (slp != null) { var xs = cx(v === 'reent' || v === 'slx' ? marks.p65 : v === 'exc' ? marks.p50 : marks.conf) - 4; g += '<line x1="' + xs + '" x2="' + X1 + '" y1="' + y(slp) + '" y2="' + y(slp) + '" stroke="var(--accent, #e0b84f)" stroke-width="1.4" stroke-dasharray="5 3"/>'; labs.push({ y: y(slp), c: 'mb', a: '➕ SL+ ≈' + fmtT(e, rTick(slp, tickOf(e), s)) }); }
+    if (v === 'exc' && marks.p50 != null) { var p50 = entryP + 0.5 * d1, x50 = cx(marks.p50) - 4; g += '<line x1="' + x50 + '" x2="' + X1 + '" y1="' + y(p50) + '" y2="' + y(p50) + '" stroke="var(--up)" stroke-width="1.2" stroke-dasharray="1 3"/>'; labs.push({ y: y(p50), c: 'mb', a: '50 %: completo ≈' + fmtT(e, rTick(p50, tickOf(e), s)) }); }
     if (v === 'anula' || v === 'reentF') { var fl = deep; g += '<line x1="' + X0 + '" x2="' + X1 + '" y1="' + y(fl) + '" y2="' + y(fl) + '" stroke="var(--down)" stroke-width="1.2" stroke-dasharray="2 3"/>'; }
     C.forEach(function (c, i) {
       var up = c.c >= c.o, isT = i === ti || i === marks.trig2 || i === marks.conf;
@@ -65568,6 +65573,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       if (v === 'slx') { nums.push({ i: marks.p65, p: loP(marks.p65), side: s }); nums.push({ i: marks.slx, p: hiP(marks.slx), side: -s }); }
       if (v === 'reentF') { nums.push({ i: marks.fil, p: hiP(marks.fil), side: -s }); nums.push({ i: marks.trig2, p: hiP(marks.trig2), side: -s }); }
       if (v === 'anula') nums.push({ i: marks.fil, p: hiP(marks.fil), side: -s });
+      if (v === 'exc') { nums.push({ i: marks.p50, p: loP(marks.p50), side: s }); if (marks.t1 != null) nums.push({ i: marks.t1, p: loP(marks.t1), side: s }); }
       nums.forEach(function (m, k) {
         var yy = y(m.p) + (m.side > 0 ? -14 : 14); yy = Math.max(T + 9, Math.min(H - B - 9, yy));
         g += '<circle cx="' + cx(m.i) + '" cy="' + yy + '" r="10" fill="var(--fg)"/><text x="' + cx(m.i) + '" y="' + (yy + 5) + '" text-anchor="middle" style="fill:var(--bg);font-size:13px;font-weight:700">' + (k + 1) + '</text>';
@@ -65600,18 +65606,20 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     var t = Math.abs(n).toFixed(d).split('.');
     return (n < 0 ? '−' : '') + t[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (t[1] ? ',' + t[1] : '');
   }
-  function slPlus(e, pl, n14) {
+  function slPlus(e, pl, n14, ex) {
     var tg = (pl.targets || []).map(t0); if (!tg.length) return '';
     var tk = tickOf(e), long = pl.dir === 'long', s = long ? 1 : -1;
     var lo = Array.isArray(pl.entry) ? Math.min(pl.entry[0], pl.entry[1]) : pl.entry, hi = Array.isArray(pl.entry) ? Math.max(pl.entry[0], pl.entry[1]) : pl.entry;
     var ref = long ? hi : lo, t1 = tg[0];
     if (hi - lo > Math.abs(t1 - ref) * 0.5) ref = (lo + hi) / 2;
     ref = rTick(ref, tk, 0);
+    if (ex && ex.ref != null) ref = ex.ref;
     var d = t1 - ref; if (d * s <= 0) return '';
     var pct = function (p) { return Math.round((p - ref) / d * 100); };
-    var rows = [[0.3, 0.05], [0.5, 0.1], [0.65, 0.2], [0.8, 0.5], [1, 0.75]].map(function (x) {
+    var R0 = ex ? [[0.3, 0.05, 'media posición'], [0.5, 0.3, 'completo a posición normal; SL+ de toda la posición'], [0.8, 0.5], [1, 0.75]] : [[0.3, 0.05], [0.5, 0.1], [0.65, 0.2], [0.8, 0.5], [1, 0.75]];
+    var rows = R0.map(function (x) {
       var trig = x[0] === 1 ? t1 : rTick(ref + x[0] * d, tk, s), sl = rTick(ref + x[1] * d, tk, s);
-      return '<span class="slr"><b>' + (x[0] === 1 ? '1.er objetivo' : Math.round(x[0] * 100) + '\u00a0%') + '</b> (' + fmtT(e, trig) + ') → SL+ ' + fmtT(e, sl) + ' <span class="mut">(' + Math.round(x[1] * 100) + '\u00a0%)</span></span>';
+      return '<span class="slr"><b>' + (x[0] === 1 ? '1.er objetivo' : Math.round(x[0] * 100) + '\u00a0%') + '</b> (' + fmtT(e, trig) + ') → SL+ ' + fmtT(e, sl) + ' <span class="mut">(' + Math.round(x[1] * 100) + '\u00a0%' + (x[2] ? ' · ' + x[2] : '') + ')</span></span>';
     }).join('');
     var a = Math.min(ref, t1), b = Math.max(ref, t1), tol = Math.abs(d) * 0.04, mg = Math.abs(d) * 0.05;
     var ctx = (e.levels || []).filter(function (l) { return l.cls !== 'now' && l.p > a + tol && l.p < b - tol && (l.p < lo - tol || l.p > hi + tol); })
@@ -65626,7 +65634,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
         return '<span class="slr"><b>' + Math.round(x[0] * 100) + '\u00a0%</b> (' + fmtT(e, rTick(t1 + x[0] * d2, tk, s)) + ') → SL+ ' + fmtT(e, rTick(t1 + x[1] * d2, tk, s)) + ' <span class="mut">(' + Math.round(x[1] * 100) + '\u00a0%)</span></span>';
       }).join('') + '</span>';
     }
-    return '<span>Con entrada en ≈' + fmtT(e, ref) + ':</span><span class="slt">' + rows + '</span><span>Por contexto: ' + ctx.join('; ') + '. Se queda siempre el que más asegure y nunca se baja.</span>' + r2;
+    return '<span>Con entrada en ≈' + fmtT(e, ref) + (ex ? ' (excepción en prueba: media posición hasta el 50\u00a0% del camino)' : '') + ':</span><span class="slt">' + rows + '</span><span>Por contexto: ' + ctx.join('; ') + '. Se queda siempre el que más asegure y nunca se baja.</span>' + r2;
   }
 
 
@@ -65682,9 +65690,41 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       steps[1][1] = (rup ? 'En el retesteo, el mismo gatillo que en los rebotes: v' : 'V') + 'ela H1 con color de gatillo (' + colsF + ') y mecha de rechazo de al menos el 30 % en la zona, o con ' + (long ? 'IN' : 'OUT') + ' al cierre, o rechazo de la Genial tras un cambio de secuencia. Si sale en mitad de una ' + (long ? 'caída de velas marrones' : 'subida de velas verde oscuro') + ' con el H4 en contra, es dudoso: espero la siguiente vela H1 que confirme o reduzco tamaño.';
       steps[7][1] = 'Solo tras salir por el filtro H4 sin haber tocado el 1.er objetivo: cuando un H4 vuelve a cerrar al lado bueno del filtro y sale un gatillo H1 de rebote en ' + zona + ', reentro una sola vez, con el stop original' + (stop ? ' (🛑 ' + stop + ')' : '') + ' y los mismos objetivos' + tgsT + '. Termina si, mientras espera, toca el stop o un H4 cierra más allá del nivel de anulación. Tras el SL+ no hay reentrada.';
     }
+    // Filtro H4 en los rebotes swing (21/11): estado de cada operativa según la sección «Filtro H4 en los rebotes» del análisis
+    var N21 = N14 && !rup && e.date >= '2026-11-21', h4 = null, exO = null, IO = long ? 'IN' : 'OUT';
+    if (N14 && rup && e.date >= '2026-11-21') steps[1][1] = steps[1][1].replace(/ Si sale en mitad[^]*$/, '');
+    if (N21) {
+      var lab = x.p.k.split(' · ')[0], fsec = (e.plan || []).filter(function (p) { return /^Filtro H4 en los rebotes/.test(p.k); })[0], seg = '';
+      if (fsec) {
+        var ix = fsec.text.indexOf(lab + ':');
+        if (ix >= 0) { seg = fsec.text.slice(ix + lab.length + 1); var cut = seg.search(/\s(?:Los|Las)\s(?:cortos|largos)\b|\s(?:Largo|Corto)\s\d+:/); if (cut >= 0) seg = seg.slice(0, cut); }
+        else if (new RegExp('Los ' + (long ? 'largos' : 'cortos') + '[^.]*(?:sin cambios|a favor del H4)').test(fsec.text)) seg = 'a favor del H4';
+      }
+      var fv = favor.toLowerCase(), ci = fv.indexOf('contra'), ctrH4 = ci >= 0 && /\bh4\b/.test(fv.slice(ci));
+      h4 = /no cumple/.test(seg) || /solo vale con (?:IN|OUT)/.test(seg) ? 'inout' : /cumple la excepción/.test(seg) ? 'exc' : /a favor del H4|sin cambios/.test(seg) ? 'ok' : ctrH4 ? 'h4c' : 'ok';
+      var atr = (seg.match(/≈\s?(\d+(?:,\d+)?) ATR/) || [])[1], gen = (seg.match(/Genial H4 \((≈[^)]*)\)/) || [])[1], refX = (seg.match(/entrada en ≈\s?(\d[\d.]*(?:,\d+)?)/) || [])[1];
+      if ((h4 === 'exc' || h4 === 'h4c') && tg.length) {
+        var tkE = tickOf(e), sE = long ? 1 : -1, refE = long ? hi : lo;
+        if (hi - lo > Math.abs(tg[0] - refE) * 0.5) refE = (lo + hi) / 2;
+        refE = refX ? parseEs(refX) : rTick(refE, tkE, 0);
+        var dE = tg[0] - refE;
+        if (dE * sE > 0) exO = { ref: refE, p50: rTick(refE + 0.5 * dE, tkE, sE), p30: rTick(refE + 0.3 * dE, tkE, sE) };
+      }
+      steps[1][1] = (rup ? 'En el retesteo, el mismo gatillo que en los rebotes: v' : 'V') + 'ela H1 con color de gatillo (' + colsF + ') y mecha de rechazo de al menos el 30 % en la zona, o con ' + IO + ' al cierre, o rechazo de la Genial tras un cambio de secuencia. Filtro H4: si el último cierre H4 está ' + (long ? 'bajo' : 'sobre') + ' su Genial, solo vale la vela con ' + IO + ' al cierre. Excepción en prueba: si al cierre del gatillo el precio está a 3 ATR H4 o más de la Genial H4 (ATR de 14 velas H4), vale el gatillo normal con media posición.' +
+        (h4 === 'exc' ? ' Según el análisis, esta cumple la excepción' + (atr ? ' (≈' + atr + ' ATR' + (gen ? ' de la Genial H4, ' + gen : '') + ')' : '') + ': media posición.'
+          : h4 === 'inout' ? ' Según el análisis, esta va contra el H4 y no cumple la excepción' + (atr ? ' (≈' + atr + ' ATR' + (gen ? ' de la Genial H4, ' + gen : '') + ')' : '') + ': solo vale con ' + IO + ' al cierre.'
+          : h4 === 'h4c' ? ' Esta va contra el H4: al cierre del gatillo mira la distancia a la Genial H4.'
+          : ' Esta va a favor del H4: vale el gatillo normal mientras el H4 siga a favor.');
+      steps[7][1] += ' La reentrada tiene que cumplir también el filtro H4: con el H4 en contra, solo con ' + IO + ' al cierre o con la excepción (media posición).';
+      if (exO) {
+        steps[6][1] = (h4 === 'h4c' ? 'Si entra por la excepción: ' : 'Con la excepción: ') + 'media posición hasta el 50 % del camino al 1.er objetivo (al 30 % aseguro el 5 %); al 50 % completo a posición normal y el SL+ de toda la posición sube al 30 %; al 80 %, el 50 %, y en el 1.er objetivo, el 75 %. Para el 2.º objetivo la escalera vuelve a empezar desde el 1.er objetivo. El escalón se activa con el toque.' + (h4 === 'h4c' ? ' Si no, la escalera normal: 30, 50, 65 y 80 % → 5, 10, 20 y 50 %.' : '');
+        steps.splice(3, 0, ['🧪 Excepción en prueba', (h4 === 'h4c' ? 'Solo si entra por la excepción: m' : 'M') + 'edia posición. Si el precio llega al 50 % del camino al 1.er objetivo (' + fmtT(e, exO.p50) + '), completo a posición normal y el SL+ de toda la posición sube al 30 % del camino (' + fmtT(e, exO.p30) + '), medido desde la primera entrada (≈' + fmtT(e, exO.ref) + '). Después sigue la escalera: al 80 % aseguro el 50 % y en el 1.er objetivo, el 75 %. El stop, los objetivos y el filtro H4 no cambian.']);
+      }
+    }
     var sub = I ? 'intradía del ' + e.date.split('-').reverse().slice(0, 2).join('/') : 'swing de la ' + (e.title.match(/semana del [^·]*/i) || [''])[0].trim();
     var h = '<div class="pd-head"><button type="button" class="pd-back" data-plclose>← Volver al análisis</button><h2>' + x.si.icon + ' ' + esc(x.p.k) + '</h2><p class="pd-sub">' + esc((ASSET_NAMES[e.asset] || e.asset) + ' · ' + sub) + '</p>' +
-      '<div class="pd-chips"><span class="pd-chip">' + esc(favor || 'Contexto sin indicar') + '</span><span class="pd-chip ' + md + '">' + (N14 ? 'SL+ escalonado' : md === 'estr' ? 'SL+ estructural' : 'SL+ en escalera') + '</span></div></div>';
+      '<div class="pd-chips"><span class="pd-chip">' + esc(favor || 'Contexto sin indicar') + '</span><span class="pd-chip ' + md + '">' + (N14 ? 'SL+ escalonado' : md === 'estr' ? 'SL+ estructural' : 'SL+ en escalera') + '</span>' +
+      (h4 === 'exc' ? '<span class="pd-chip exc">🧪 Excepción en prueba · media posición</span>' : h4 === 'inout' ? '<span class="pd-chip exc">Filtro H4: solo con ' + IO + ' al cierre</span>' : h4 === 'h4c' ? '<span class="pd-chip exc">Filtro H4: va contra el H4</span>' : '') + '</div></div>';
     var SX = {}; steps.forEach(function (q) { SX[q[0].split(' ')[0]] = q; });
     function it(ic) { var q = SX[ic]; return q ? ['', '<b>' + esc(q[0].replace(/^\S+\s/, '')) + ':</b> ' + esc(q[1])] : null; }
     if (d0.seq) h += '<section>' + d0.seq + '</section>';
@@ -65692,12 +65732,14 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     var CAP = '<p class="pd-cap">Gráfico ilustrativo: velas de ejemplo, no es una previsión.</p>', L1 = 'Gatillo ' + G + ' y entrada al cierre.', n = 1;
     function sec(t, v, intro, res, items, plain) {
       return '<section class="pd-case"><h3>' + (n++) + '. ' + t + '</h3>' + (intro ? '<p class="pd-intro">' + intro + '</p>' : '') +
-        '<div class="pd-two"><div>' + storyChart(e, pl, x.p.k, text, v) + CAP + '</div><div><span class="pd-res ' + res[0] + '">' + res[1] + '</span><ol class="pd-st' + (plain ? ' plain' : '') + '">' +
+        '<div class="pd-two"><div>' + storyChart(e, pl, x.p.k, text, v, v === 'exc' ? exO : null) + CAP + '</div><div><span class="pd-res ' + res[0] + '">' + res[1] + '</span><ol class="pd-st' + (plain ? ' plain' : '') + '">' +
         items.map(function (it, k) { return '<li><span class="n">' + (plain ? it[0] : k + 1) + '</span><span>' + (plain ? it[1] : it) + '</span></li>'; }).join('') + '</ol></div></div></section>';
     }
     var tgs = (pl.targets || []).map(function (q) { return fmtT(e, q); });
     h += sec('Así sería la entrada', 'normal', 'Paso a paso de la operativa cuando sale bien, desde la espera hasta los objetivos.', ['ok', 'Resultado: llega a los objetivos'],
-      ['⏳', '⏱️', '✅', '🛑', '🎯', '➕'].map(function (ic) { var r = it(ic); if (r) r[0] = ic; return r; }).filter(Boolean), true);
+      ['⏳', '⏱️', '✅', '🧪', '🛑', '🎯', '➕'].map(function (ic) { var r = it(ic); if (r) r[0] = ic; return r; }).filter(Boolean), true);
+    if (exO) h += sec(h4 === 'h4c' ? 'Si entra por la excepción en prueba' : 'Excepción en prueba: media posición y completo al 50 %', 'exc', 'El H4 va en contra, pero el precio está a 3 ATR H4 o más de su Genial: vale el gatillo normal con media posición. Si el precio llega al 50 % del camino, completo y subo el SL+ de toda la posición al 30 %.', ['ok', 'Resultado: completa la posición con el 30 % asegurado'],
+      [L1 + ' Media posición.', 'Llega al 50 % del camino al 1.er objetivo (' + fmtT(e, exO.p50) + '): completo a posición normal.', 'El SL+ de toda la posición sube al 30 % del camino (' + fmtT(e, exO.p30) + '), medido desde la primera entrada. Después, la escalera: al 80 % aseguro el 50 % y en el 1.er objetivo, el 75 %.']);
     if (md === 'estr') h += sec('Cómo sube el SL+', 'estr', 'Cómo acompaña el SL+ al precio (estructural: va a favor de D y H4).', ['ok', 'Resultado: el SL+ acompaña el movimiento'],
       [L1, 'El precio corrige: ' + (long ? 'mínimo' : 'máximo') + ' de la corrección.', 'Una vela ' + corrTF + ' vuelve a cerrar a favor con color de fuerza: el SL+ pasa justo detrás de ese ' + (long ? 'mínimo' : 'máximo') + '. Se repite en cada corrección.']);
     if (N14) {
@@ -65719,7 +65761,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       '<tr><td>🛑 Stop</td><td>Pérdida completa</td><td>No</td></tr><tr><td>🚪 Filtro H4 (cierre al otro lado de la zona, antes del 1.er objetivo)</td><td>Pérdida menor</td><td>Sí, una vez: cuando un H4 vuelve a cerrar al lado bueno y sale un gatillo H1 (termina si toca el stop o se anula)</td></tr><tr><td>➕ SL+</td><td>Ganancia</td><td>No</td></tr></tbody></table></div></section>';
     else h += '<section><h3>Qué me saca de la operativa</h3><div class="tablewrap"><table class="dt"><thead><tr><th>Qué me saca</th><th>Resultado</th><th>¿Reentrada?</th></tr></thead><tbody>' +
       '<tr><td>🛑 Stop</td><td>Pérdida completa</td><td>No</td></tr><tr><td>🚪 Filtro ' + F + ' (cierre al otro lado de la zona)</td><td>Pérdida menor</td><td>No</td></tr><tr><td>➕ SL+</td><td>Ganancia</td><td>Sí, una vez</td></tr></tbody></table></div></section>';
-    if (md === 'esc' && !I) { var sl = slPlus(e, pl, N14); if (sl) h += '<section><h3>Precios del SL+</h3><div class="pd-sl">' + sl + '</div></section>'; }
+    if (md === 'esc' && !I) { var sl = slPlus(e, pl, N14, exO); if (sl) h += '<section><h3>Precios del SL+</h3><div class="pd-sl">' + sl + '</div></section>'; }
     return h;
   }
   function openPl(i) {
@@ -65747,7 +65789,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       else (si.long ? L : S).push({ p: p, si: si });
     });
     var h = '<p class="note">📈 largo · 📉 corto · ↩️ pullback · 🎯 retesteo · ⚡ ruptura · 🚨 nivel importante · 🛑 stop · 🎯 objetivos · Todas las horas son de España</p>';
-    if (e.mode === 'swing' && e.date >= '2026-11-14') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 con color de gatillo y mecha de rechazo de al menos el 30&nbsp;%, o con IN/OUT al cierre, o rechazo de la Genial tras un cambio de secuencia. Entro al cierre de esa vela. Si sale en mitad de una caída de velas marrones con el H4 en contra (en cortos, de una subida de verdes oscuras con el H4 alcista), es dudoso: espero la siguiente H1 que confirme o reduzco tamaño.</li><li><b>Rupturas:</b> se confirman con el cierre H4 al otro lado del nivel y entro en el retesteo, con el mismo gatillo H1. Nunca en la vela de ruptura.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel antes del 1.er objetivo, salgo aunque no haya tocado el stop.</li>' + (e.date >= '2026-11-20' ? '<li><b>Tamaño:</b> si la operativa va contra la Genial diaria (largo con el precio bajo la SMA&nbsp;34 del diario, corto con el precio sobre ella), media posición; a favor, posición normal.</li>' : '') + '<li><b>SL+ escalonado:</b> al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el 1.er objetivo el 75&nbsp;%; para el 2.º objetivo la escalera vuelve a empezar desde el 1.er objetivo. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo tras salir por el filtro H4 sin haber tocado el 1.er objetivo. Cuando un H4 vuelve a cerrar al lado bueno del filtro y sale un gatillo H1 de rebote en la zona, reentro una sola vez, <b>con el stop original y los mismos objetivos</b>. Termina si, mientras espera, toca el stop o un H4 cierra más allá del nivel de anulación. Tras el SL+ no hay reentrada.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
+    if (e.mode === 'swing' && e.date >= '2026-11-14') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 con color de gatillo y mecha de rechazo de al menos el 30&nbsp;%, o con IN/OUT al cierre, o rechazo de la Genial tras un cambio de secuencia. Entro al cierre de esa vela.' + (e.date >= '2026-11-21' ? '' : ' Si sale en mitad de una caída de velas marrones con el H4 en contra (en cortos, de una subida de verdes oscuras con el H4 alcista), es dudoso: espero la siguiente H1 que confirme o reduzco tamaño.') + '</li><li><b>Rupturas:</b> se confirman con el cierre H4 al otro lado del nivel y entro en el retesteo, con el mismo gatillo H1. Nunca en la vela de ruptura.</li>' + (e.date >= '2026-11-21' ? '<li><b>Filtro H4 en los rebotes:</b> si el último cierre H4 está al otro lado de su Genial (largo con el H4 bajo su Genial, corto con el H4 sobre ella), la vela H1 de gatillo de un rebote o pullback solo vale con IN/OUT al cierre. Las rupturas no cambian. <b>Excepción en prueba:</b> si al cierre del gatillo el precio está a 3 ATR H4 o más de la Genial H4 (ATR de 14 velas H4), vale el gatillo normal con media posición; si llega al 50&nbsp;% del camino al 1.er objetivo, completo a posición normal y el SL+ de toda la posición sube al 30&nbsp;% (medido desde la primera entrada); después sigue la escalera (80&nbsp;% → 50&nbsp;%; 1.er objetivo → 75&nbsp;%).</li>' : '') + '<li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel antes del 1.er objetivo, salgo aunque no haya tocado el stop.</li>' + (e.date >= '2026-11-20' ? '<li><b>Tamaño:</b> si la operativa va contra la Genial diaria (largo con el precio bajo la SMA&nbsp;34 del diario, corto con el precio sobre ella), media posición; a favor, posición normal.</li>' : '') + '<li><b>SL+ escalonado:</b> al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el 1.er objetivo el 75&nbsp;%; para el 2.º objetivo la escalera vuelve a empezar desde el 1.er objetivo. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo tras salir por el filtro H4 sin haber tocado el 1.er objetivo. Cuando un H4 vuelve a cerrar al lado bueno del filtro y sale un gatillo H1 de rebote en la zona, reentro una sola vez, <b>con el stop original y los mismos objetivos</b>. Termina si, mientras espera, toca el stop o un H4 cierra más allá del nivel de anulación. Tras el SL+ no hay reentrada.' + (e.date >= '2026-11-21' ? ' En los rebotes, la nueva entrada tiene que cumplir también el filtro H4 o la excepción.' : '') + '</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
     else if (e.mode === 'swing' && e.date >= '2026-10-31') h += '<div class="note"><b>Cómo entro y gestiono en swing</b><ol class="steps"><li><b>Gatillo (H1):</b> en la zona o en el retesteo, vela H1 de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela.</li><li><b>Filtro (H4):</b> si la vela H4 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+ según el contexto:</b> si la operativa va a favor de D y H4, estructural (el stop va detrás de cada corrección H1 confirmada); si no, en escalera (al 30, 50, 65 y 80&nbsp;% del camino al 1.er objetivo aseguro el 5, 10, 20 y 50&nbsp;%, y en el objetivo el 75&nbsp;%). Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo si me saca el SL+ (nunca tras el stop ni tras el filtro H4). Si el precio vuelve a la zona o al retesteo con otro gatillo H1 y sin cierre H4 en contra, reentro una sola vez. <b>La reentrada lleva el stop original</b> (no el SL+), <b>los mismos objetivos</b> y el mismo modo de SL+.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
     if (e.mode === 'intra' && e.date >= '2026-10-30') h += '<div class="note"><b>Cómo entro y gestiono en intradía</b><ol class="steps"><li><b>Gatillo (M5/M15):</b> en la zona o en el retesteo, vela de giro o de fuerza a favor con mecha de rechazo, o con IN/OUT al cierre. Entro al cierre de esa vela, nunca en la de un dato ni en la primera de la apertura.</li><li><b>Filtro (M15):</b> si la vela M15 cierra al otro lado del nivel, salgo aunque no haya tocado el stop.</li><li><b>SL+:</b> al 50&nbsp;% del camino al 1.er objetivo aseguro el 10&nbsp;% y al 80&nbsp;%, el 50&nbsp;%. En el 1.er objetivo, si va a favor del H1 aseguro el 25&nbsp;% y sigo las correcciones del M5; si no, el 75&nbsp;%. Nunca a la entrada y nunca se baja.</li><li><b>Reentrada:</b> solo si me saca el SL+ (nunca tras el stop ni tras el filtro M15). Si el precio vuelve a la zona o al retesteo con otro gatillo y sin cierre M15 en contra, reentro una sola vez, nunca en la vela de un dato ni en la de apertura. <b>La reentrada lleva el stop original</b> (no el SL+), <b>los mismos objetivos</b> y el mismo modo de SL+.</li><li><b>Detalle:</b> pulsa «Ver la operativa completa» en cada una.</li></ol></div>';
     if (rec.length) {
@@ -67201,7 +67243,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       goals: [['58.300', 'miss'], ['56.570', 'miss']],
       pasa: 'Retesteo con gatillo el lunes 16 de madrugada: entrada ≈59.995. Pasó el 30 % del camino y volvió.',
       res: 'Acierto parcial: el escalón del 30 % asegura el 5 % y el SL+ (≈59.910) la cierra el lunes 16 a las 15:35: ≈+85. Los dos objetivos llegaron después (el 58.300 el martes 17) sin la operativa.' },
-    { asset: 'GC', date: '2026-11-14', mode: 'swing', dir: 'Largo', setup: 'Largo de rebote (3.835,9‑3.855)', out: 'win', match: 'Parcial',
+    { asset: 'GC', date: '2026-11-14', mode: 'swing', dir: 'Largo', exc: true, setup: 'Largo de rebote (3.835,9‑3.855)', out: 'win', match: 'Parcial',
       plan: 'Bajada a 3.835,9‑3.855 con gatillo H1 alcista. Stop bajo 3.795. Objetivos 3.920 y 3.962,6. Va contra W, D y H4.',
       goals: [['3.920', 'miss'], ['3.962,6', 'miss']],
       pasa: 'Gatillo en la zona el lunes 16 a las 22:00: entrada ≈3.859. Subió a ≈3.890 y volvió.',
@@ -67236,12 +67278,12 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       goals: [['1,09310', 'miss'], ['1,08350', 'miss']],
       pasa: 'Retesteo con gatillo el miércoles 18 a las 11:00: entrada ≈1,09840. Bajó a 1,09650 y volvió.',
       res: 'Acierto parcial: el SL+ (≈1,09810) la cierra el miércoles 18 a las 14:00: ≈+0,0003.' },
-    { asset: 'BTC', date: '2026-11-14', mode: 'swing', dir: 'Largo', setup: 'Largo de rebote (64.620‑65.500)', out: 'loss', match: 'Parcial',
+    { asset: 'BTC', date: '2026-11-14', mode: 'swing', dir: 'Largo', exc: true, setup: 'Largo de rebote (64.620‑65.500)', out: 'loss', match: 'Parcial',
       plan: 'Bajada a 64.620‑65.500 con gatillo H1 alcista. Stop bajo 63.500. Objetivos 67.585 y 69.440. Va contra W, D y H4.',
       goals: [['67.585', 'miss'], ['69.440', 'miss']],
       pasa: 'Abrió la semana con hueco hasta la zona y la vela de las 7:00 del lunes 16 dio la entrada (≈64.740; aviso de contexto: caída fuerte con todo en contra). El H4 cerró bajo 64.620 a las 11:00.',
       res: 'Fallo parcial: salida por el filtro H4 (≈64.310, ≈−0,35R). Entra por la excepción en prueba (precio a ≈3,5 ATR de la Genial H4, media posición).' },
-    { asset: 'BTC', date: '2026-11-14', mode: 'swing', dir: 'Largo', setup: 'Largo de rebote (64.620‑65.500) · reentrada', out: 'loss', match: 'Parcial',
+    { asset: 'BTC', date: '2026-11-14', mode: 'swing', dir: 'Largo', exc: true, setup: 'Largo de rebote (64.620‑65.500) · reentrada', out: 'loss', match: 'Parcial',
       plan: 'Reentrada tras el filtro: H4 de nuevo sobre 64.620 y gatillo H1 en la zona. Mismo stop (63.500) y objetivos.',
       goals: [['67.585', 'miss'], ['69.440', 'miss']],
       pasa: 'El H4 volvió encima y la vela de las 19:00 del lunes 16 dio la reentrada (≈65.080). El martes 17 a las 11:00 el H4 volvió a cerrar debajo.',
@@ -67393,13 +67435,21 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       '<div class="split"><div class="sp"><h3>Desglose de los aciertos</h3><div class="sumrow"><div><b>' + by(W, 'Exacta') + '</b><span>exactos · ' + pc(by(W, 'Exacta'), W.length) + '%' + (W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length ? ' · ' + W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length + ' con doble objetivo' : '') + '</span></div><div><b>' + by(W, 'Aproximada') + '</b><span>aproximados · ' + pc(by(W, 'Aproximada'), W.length) + '%</span></div><div><b>' + by(W, 'Parcial') + '</b><span>parciales · ' + pc(by(W, 'Parcial'), W.length) + '%</span></div></div></div>' +
       '<div class="sp"><h3>Desglose de los fallos</h3><div class="sumrow"><div><b>' + by(F, 'Exacta') + '</b><span>exactos · ' + pc(by(F, 'Exacta'), F.length) + '%</span></div><div><b>' + by(F, 'Aproximada') + '</b><span>aproximados · ' + pc(by(F, 'Aproximada'), F.length) + '%</span></div><div><b>' + by(F, 'Parcial') + '</b><span>parciales · ' + pc(by(F, 'Parcial'), F.length) + '%</span></div></div></div></div>' +
       '</section>';
+    var EXC = TR.filter(function (t) { return t.exc; });
+    if (kind === 'swing' && EXC.length) {
+      var eW = EXC.filter(function (t) { return t.out === 'win' || t.out === 'open'; }).length, eF = EXC.filter(function (t) { return t.out === 'loss'; }).length, eP = EXC.filter(function (t) { return t.out === 'pend'; }).length;
+      html += '<section><h2>🧪 Excepción en prueba · filtro H4 en los rebotes</h2><div class="paras"><p>Rebotes y pullbacks que entran con el H4 en contra porque el precio está a 3 ATR H4 o más de su Genial (media posición; completo al 50&nbsp;% del camino con el SL+ al 30&nbsp;%). Están incluidas en el resumen de arriba; aquí se ven aparte.</p></div>' +
+        '<div class="sumrow"><div><b>' + EXC.length + '</b><span>operativas</span></div><div><b>' + eW + '</b><span>aciertos</span></div><div><b>' + eF + '</b><span>fallos</span></div>' + (eP ? '<div><b>' + eP + '</b><span>en curso</span></div>' : '') + '</div>' +
+        '<div class="tablewrap"><table class="dt stack"><thead><tr><th>Activo</th><th>Operativa</th><th>Análisis</th><th>Resultado</th></tr></thead><tbody>' +
+        EXC.map(function (t) { return '<tr><td>' + esc(ASSET_NAMES[t.asset] || t.asset) + '</td><td>' + esc(t.setup) + '</td><td>' + esc(dlabel(t.date)) + '</td><td>' + (t.out === 'win' ? 'Acierto ' : t.out === 'open' ? 'Cumplido ' : t.out === 'pend' ? 'En curso ' : 'Fallo ') + esc((t.match || '').toLowerCase()) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
+    }
     function tradeHtml(t) {
       var tag = t.out !== 'loss' ? (t.match === 'Exacta' ? 'win' : t.match === 'Aproximada' ? 'ap' : '') : 'dn';
       var goals = t.goals.map(function (g) {
         var cls = g[1] === 'hit' ? 'hit' : g[1] === 'near' ? 'near' : 'miss', mark = g[1] === 'hit' ? '✓ ' : g[1] === 'near' ? '≈ ' : '✗ ';
         return '<span class="goal ' + cls + '">' + mark + esc(g[0]) + '</span>';
       }).join('');
-      return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[t.asset] || t.asset) + '</span><span class="tg2">' + esc(MODES[t.mode] || t.mode) + '</span><span class="tg2 ' + tag + '">' + (t.out === 'win' ? 'Acierto ' : t.out === 'open' ? 'Cumplido ' : t.out === 'pend' ? 'En curso, no cuenta · ' : 'Fallo ') + esc(t.out === 'open' ? ({ Exacta: 'exacto', Aproximada: 'aproximado', Parcial: 'parcial' })[t.match] : t.match.toLowerCase()) + (t.doble ? ' · doble objetivo' : '') + (t.out === 'open' ? ' · en camino' : '') + '</span></div>' +
+      return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[t.asset] || t.asset) + '</span><span class="tg2">' + esc(MODES[t.mode] || t.mode) + '</span>' + (t.exc ? '<span class="tg2 exc">🧪 Excepción en prueba</span>' : '') + '<span class="tg2 ' + tag + '">' + (t.out === 'win' ? 'Acierto ' : t.out === 'open' ? 'Cumplido ' : t.out === 'pend' ? 'En curso, no cuenta · ' : 'Fallo ') + esc(t.out === 'open' ? ({ Exacta: 'exacto', Aproximada: 'aproximado', Parcial: 'parcial' })[t.match] : t.match.toLowerCase()) + (t.doble ? ' · doble objetivo' : '') + (t.out === 'open' ? ' · en camino' : '') + '</span></div>' +
         '<h3>' + esc(t.setup) + ' · análisis del ' + esc(dlabel(t.date)) + '</h3><div class="rows"><div class="row"><span class="k">Plan</span><p>' + esc(t.plan) + '</p></div><div class="row"><span class="k">Qué pasó</span><p>' + esc(t.pasa) + '</p></div><div class="row"><span class="k">Resultado</span><p>' + esc(t.res) + '</p></div></div>' +
         '<div class="goals" aria-label="Objetivos">' + goals + '</div><p class="go"><a data-tr="' + esc(t.asset + '-' + t.date) + '">Ver el análisis completo →</a></p></div>';
     }
