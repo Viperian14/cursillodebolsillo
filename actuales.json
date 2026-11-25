@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T17:55:54Z",
+ "updated": "2026-11-25T18:44:01Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -239,6 +239,12 @@
    "d": "2026-11-25",
    "match": "Subasta de notas y bonos del Tesoro a 7 años (Nota a 7 años)",
    "act": "4,708%",
+   "res": ""
+  },
+  {
+   "d": "2026-11-25",
+   "match": "Almacenamientos de gas natural de la EIA",
+   "act": "−24 Bcf",
    "res": ""
   }
  ]
