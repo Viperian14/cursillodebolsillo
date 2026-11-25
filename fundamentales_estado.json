@@ -1,38 +1,38 @@
 {
- "ultima_ejecucion": "2026-11-24T16:15:00+00:00",
+ "ultima_ejecucion": "2026-11-25T16:01:12+00:00",
  "parcial": false,
  "empresas_con_datos": 1371,
  "actualizadas_en_esta_ejecucion": 196,
  "errores": [],
  "n_errores": 0,
  "datos_insuficientes": 35,
- "minutos": 5.1,
+ "minutos": 5.8,
  "muestra_diagnostico": {
-  "1810.HK": {
-   "sector_yahoo": "Technology",
-   "per": 19.485294,
-   "eps": 1.36,
-   "roe": 12.63,
-   "deuda": 0.164,
-   "dividendo": null,
-   "dividendo_yahoo": 0.0,
-   "frecuencia": "no paga",
-   "trimestre": "2026-06-30",
-   "moneda_yahoo": "HKD",
+  "8306.T": {
+   "sector_yahoo": "Financial Services",
+   "per": 12.797179,
+   "eps": 243.96,
+   "roe": 9.55,
+   "deuda": null,
+   "dividendo": 3.137,
+   "dividendo_yahoo": 3.3,
+   "frecuencia": "semestral",
+   "trimestre": "2026-09-30",
+   "moneda_yahoo": "JPY",
    "tendencia": "lateral"
   },
-  "FANG": {
-   "sector_yahoo": "Energy",
-   "per": 23.783312,
-   "eps": 7.43,
-   "roe": 4.86,
-   "deuda": 0.293,
-   "dividendo": 2.508,
-   "dividendo_yahoo": 2.73,
+  "ZBH": {
+   "sector_yahoo": "Healthcare",
+   "per": 27.540403,
+   "eps": 3.96,
+   "roe": 6.03,
+   "deuda": 0.602,
+   "dividendo": 0.881,
+   "dividendo_yahoo": 0.88,
    "frecuencia": "trimestral",
    "trimestre": "2026-09-30",
    "moneda_yahoo": "USD",
-   "tendencia": "bajista"
+   "tendencia": "alcista"
   }
  }
 }
