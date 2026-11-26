@@ -71685,7 +71685,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       goals: [['26.960', 'hit'], ['26.880', 'hit']],
       pasa: 'Con el OUT de las 16:00 rompió 27.080 y cayó a ≈26.670. Fuera de la ventana, entre las 17:30 y las 18:00 rebotó a ≈27.085‑27.095, dentro del retesteo, y fue rechazado (entrada ≈27.085). Bajó a 26.960 hacia las 19:00 y a ≈26.850 hacia las 21:30. El stop no se tocó.',
       res: 'Ganadora: de ≈27.085 a 26.880, ≈205 puntos.' },
-    { asset: 'NQ', date: '2026-11-17', mode: 'intra', dir: 'Largo', setup: 'Largo de ruptura (sobre 27.250)', out: 'win', match: 'Exacta', doble: true,
+    { asset: 'NQ', date: '2026-11-17', mode: 'intra', temprana: true, dir: 'Largo', setup: 'Largo de ruptura (sobre 27.250)', out: 'win', match: 'Exacta', doble: true,
       plan: 'Cierre M15 sobre 27.250; entro en el retesteo 27.240‑27.265. Stop bajo 27.170. Objetivos 27.340 y 27.420.',
       goals: [['27.340', 'hit'], ['27.420', 'hit']],
       pasa: 'La vela de las 12:15, con IN, cerró sobre 27.250 y el retroceso se quedó en ≈27.290, a ≈25 puntos de la zona, con el IN a favor. Subió hasta ≈27.440 hacia las 12:30.',
@@ -71795,7 +71795,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       goals: [['7.112', 'hit'], ['7.100', 'hit']],
       pasa: 'Entre las 12:00 y las 13:15 tocó la zona con velas rojas (máximo ≈7.140); a las 13:30 una vela con OUT cerró en ≈7.120 (entrada). Llegó a 7.112 y a 7.100 y bajó hasta ≈7.084 hacia las 13:45. El stop solo se tocó con la subida vertical de las 14:55, con los dos objetivos ya cumplidos.',
       res: 'Ganadora: de ≈7.120 a 7.100, ≈20 puntos.' },
-    { asset: 'GC', date: '2026-11-23', mode: 'intra', dir: 'Largo', setup: 'Largo de pullback (3.600‑3.608)', out: 'win', match: 'Exacta', doble: true,
+    { asset: 'GC', date: '2026-11-23', mode: 'intra', temprana: true, dir: 'Largo', setup: 'Largo de pullback (3.600‑3.608)', out: 'win', match: 'Exacta', doble: true,
       plan: 'Retroceso a 3.600‑3.608 con vela de gatillo alcista en M5/M15; entro al cierre de esa vela. Stop bajo 3.590. Objetivos 3.627 y 3.636.',
       goals: [['3.627', 'hit'], ['3.636', 'hit']],
       pasa: 'Bajó a ≈3.611, a 3 puntos de la zona, y a las 14:55 salieron dos IN a favor (entrada temprana). Llegó a 3.627 y a 3.636 y siguió hasta ≈3.690. El stop no se tocó.',
@@ -71829,7 +71829,12 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
       plan: 'Cierre M15 bajo 3.510; entro en el retesteo 3.508‑3.514. Stop sobre 3.524. Objetivos 3.495 y 3.480.',
       goals: [['3.495', 'hit'], ['3.480', 'hit']],
       pasa: 'Con el OUT de las 13:00 rompió 3.510. La vela del dato de las 14:30 volvió al nivel con mecha hasta ≈3.523 y la siguiente, roja, cerró por debajo (entrada ≈3.508, ⚠ media posición: ventana 14:00‑15:00). Llegó a 3.495 y a 3.480 hacia las 15:15 y, con el OUT de las 16:25, hasta ≈3.422.',
-      res: 'Ganadora: de ≈3.508 a 3.480, ≈28 puntos (media posición).' }
+      res: 'Ganadora: de ≈3.508 a 3.480, ≈28 puntos (media posición).' },
+    { asset: 'NQ', date: '2026-11-25', mode: 'intra', temprana: true, dir: 'Largo', setup: 'Largo de ruptura (sobre 25.760)', out: 'win', match: 'Exacta', doble: true,
+      plan: 'Cierre M15 sobre 25.760; entro en el retesteo 25.755‑25.780. Stop bajo 25.690. Objetivos 25.860 y 25.920.',
+      goals: [['25.860', 'hit'], ['25.920', 'hit']],
+      pasa: 'Tras los IN de las 17:50 subió en vertical desde ≈25.050; cerró en M15 sobre 25.760 hacia las 19:45 y el retroceso se quedó en ≈25.804, a unos 24 puntos de la zona, con el IN a favor (entrada temprana). Llegó a 25.860 y a 25.920 y siguió hasta ≈26.430 de madrugada. El stop no se tocó.',
+      res: 'Ganadora con entrada temprana: llegó a los dos objetivos.' }
   ];
   var NOACT = [
     ['GC', '2026-10-12', 'Largo de rebote (4.197‑4.193)', 'El precio atravesó la zona sin rechazo alcista y siguió cayendo.'],
@@ -72015,7 +72020,6 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     ['GC', '2026-11-24', 'Largo de ruptura (sobre 3.637)', 'La subida de las 13:45 llegó a ≈3.644, pero no hubo retesteo que cerrara por encima.'],
     ['NQ', '2026-11-25', 'Corto de rebote (25.720‑25.760)', 'No llegó a la zona: después del análisis no pasó de ≈25.660.'],
     ['NQ', '2026-11-25', 'Largo de pullback (25.460‑25.500)', 'Bajó a ≈25.471 hacia las 12:45 sin vela de gatillo clara; con el OUT de las 15:40 cruzó el stop.'],
-    ['NQ', '2026-11-25', 'Largo de ruptura (sobre 25.760)', 'Cerró en M15 por encima hacia las 19:45, pero el retroceso solo llegó a ≈25.804, sin volver a la zona de retesteo.'],
     ['ES', '2026-11-25', 'Corto de rebote (7.130‑7.137)', 'Llegó a la zona hacia las 18:35 tras los IN de las 17:55, sin recoger: no hay corto.'],
     ['ES', '2026-11-25', 'Corto de ruptura (bajo 7.098)', 'Rompió hacia las 12:30, pero el rebote solo llegó a ≈7.085, sin volver a la zona de retesteo.'],
     ['ES', '2026-11-25', 'Largo de pullback (7.055‑7.065)', 'Bajó a ≈7.067 entre las 13:30 y las 15:15 sin vela de gatillo clara; con los OUT de las 15:30 cruzó el stop.'],
@@ -72571,10 +72575,11 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
     function pc(n, t) { return t ? Math.round(100 * n / t) : 0; }
     var W = TR.filter(function (t) { return t.out === 'win' || t.out === 'open'; }), F = TR.filter(function (t) { return t.out === 'loss'; }), PD = TR.filter(function (t) { return t.out === 'pend'; }), N = W.length + F.length, OP = TR.filter(function (t) { return t.out === 'open'; }).length;
     function by(list, m) { return list.filter(function (t) { return t.match === m; }).length; }
+    function tmp(list) { var n = list.filter(function (t) { return t.temprana; }).length; return '<div><b>' + n + '</b><span>con entrada temprana · ' + pc(n, list.length) + '%</span></div>'; }
     var total = N + PD.length + NA.length;
     var html = '<section><h2>Resumen</h2><div class="bigstat"><button type="button" class="bs win" data-trf="win" aria-pressed="' + (TRST.f === 'win') + '"><b>' + pc(W.length, N) + '%</b><span>aciertos · ' + W.length + ' de ' + N + (OP ? ' (' + (W.length - OP) + ' cerrados + ' + OP + ' cumplidos en parte y en camino)' : '') + '</span></button><button type="button" class="bs loss" data-trf="loss" aria-pressed="' + (TRST.f === 'loss') + '"><b>' + (N ? 100 - pc(W.length, N) : 0) + '%</b><span>fallos · ' + F.length + ' de ' + N + '</span></button><button type="button" class="bs" data-trf="all" aria-pressed="' + (TRST.f === 'all') + '"><b>' + N + '</b><span>operativas activadas</span></button></div><p class="legend">Pulsa aciertos o fallos para ver solo esos; pulsa el tercer cuadro para verlo todo. En swing, una ruptura sin continuación que sale por el filtro H4 cuenta como fallo parcial.</p>' +
-      '<div class="split"><div class="sp"><h3>Desglose de los aciertos</h3><div class="sumrow"><div><b>' + by(W, 'Exacta') + '</b><span>exactos · ' + pc(by(W, 'Exacta'), W.length) + '%' + (W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length ? ' · ' + W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length + ' con doble objetivo' : '') + '</span></div><div><b>' + by(W, 'Aproximada') + '</b><span>aproximados · ' + pc(by(W, 'Aproximada'), W.length) + '%</span></div><div><b>' + by(W, 'Parcial') + '</b><span>parciales · ' + pc(by(W, 'Parcial'), W.length) + '%</span></div></div></div>' +
-      '<div class="sp"><h3>Desglose de los fallos</h3><div class="sumrow"><div><b>' + by(F, 'Exacta') + '</b><span>exactos · ' + pc(by(F, 'Exacta'), F.length) + '%</span></div><div><b>' + by(F, 'Aproximada') + '</b><span>aproximados · ' + pc(by(F, 'Aproximada'), F.length) + '%</span></div><div><b>' + by(F, 'Parcial') + '</b><span>parciales · ' + pc(by(F, 'Parcial'), F.length) + '%</span></div></div></div></div>' +
+      '<div class="split"><div class="sp"><h3>Desglose de los aciertos</h3><div class="sumrow"><div><b>' + by(W, 'Exacta') + '</b><span>exactos · ' + pc(by(W, 'Exacta'), W.length) + '%' + (W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length ? ' · ' + W.filter(function (t) { return t.match === 'Exacta' && t.doble; }).length + ' con doble objetivo' : '') + '</span></div><div><b>' + by(W, 'Aproximada') + '</b><span>aproximados · ' + pc(by(W, 'Aproximada'), W.length) + '%</span></div><div><b>' + by(W, 'Parcial') + '</b><span>parciales · ' + pc(by(W, 'Parcial'), W.length) + '%</span></div>' + tmp(W) + '</div></div>' +
+      '<div class="sp"><h3>Desglose de los fallos</h3><div class="sumrow"><div><b>' + by(F, 'Exacta') + '</b><span>exactos · ' + pc(by(F, 'Exacta'), F.length) + '%</span></div><div><b>' + by(F, 'Aproximada') + '</b><span>aproximados · ' + pc(by(F, 'Aproximada'), F.length) + '%</span></div><div><b>' + by(F, 'Parcial') + '</b><span>parciales · ' + pc(by(F, 'Parcial'), F.length) + '%</span></div>' + tmp(F) + '</div></div></div>' +
       '</section>';
     var EXC = TR.filter(function (t) { return t.exc; });
     if (kind === 'swing' && EXC.length) {
@@ -72590,7 +72595,7 @@ var KEYLV = { "NQ-2026-11-14": [29145.25, 28729.75, 28240.25, 27950, 27831, 2735
         var cls = g[1] === 'hit' ? 'hit' : g[1] === 'near' ? 'near' : 'miss', mark = g[1] === 'hit' ? '✓ ' : g[1] === 'near' ? '≈ ' : '✗ ';
         return '<span class="goal ' + cls + '">' + mark + esc(g[0]) + '</span>';
       }).join('');
-      return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[t.asset] || t.asset) + '</span><span class="tg2">' + esc(MODES[t.mode] || t.mode) + '</span>' + (t.exc ? '<span class="tg2 exc">🧪 Excepción en prueba</span>' : '') + '<span class="tg2 ' + tag + '">' + (t.out === 'win' ? 'Acierto ' : t.out === 'open' ? 'Cumplido ' : t.out === 'pend' ? 'En curso, no cuenta · ' : 'Fallo ') + esc(t.out === 'open' ? ({ Exacta: 'exacto', Aproximada: 'aproximado', Parcial: 'parcial' })[t.match] : t.match.toLowerCase()) + (t.doble ? ' · doble objetivo' : '') + (t.out === 'open' ? ' · en camino' : '') + '</span></div>' +
+      return '<div class="trade"><div class="th"><span class="tg2">' + esc(ASSET_NAMES[t.asset] || t.asset) + '</span><span class="tg2">' + esc(MODES[t.mode] || t.mode) + '</span>' + (t.exc ? '<span class="tg2 exc">🧪 Excepción en prueba</span>' : '') + '<span class="tg2 ' + tag + '">' + (t.out === 'win' ? 'Acierto ' : t.out === 'open' ? 'Cumplido ' : t.out === 'pend' ? 'En curso, no cuenta · ' : 'Fallo ') + esc(t.out === 'open' ? ({ Exacta: 'exacto', Aproximada: 'aproximado', Parcial: 'parcial' })[t.match] : t.match.toLowerCase()) + (t.doble ? ' · doble objetivo' : '') + (t.out === 'open' ? ' · en camino' : '') + '</span>' + (t.temprana ? '<span class="tg2">Entrada temprana</span>' : '') + '</div>' +
         '<h3>' + esc(t.setup) + ' · análisis del ' + esc(dlabel(t.date)) + '</h3><div class="rows"><div class="row"><span class="k">Plan</span><p>' + esc(t.plan) + '</p></div><div class="row"><span class="k">Qué pasó</span><p>' + esc(t.pasa) + '</p></div><div class="row"><span class="k">Resultado</span><p>' + esc(t.res) + '</p></div></div>' +
         '<div class="goals" aria-label="Objetivos">' + goals + '</div><p class="go"><a data-tr="' + esc(t.asset + '-' + t.date) + '">Ver el análisis completo →</a></p></div>';
     }
