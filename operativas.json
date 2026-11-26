@@ -16359,6 +16359,462 @@
    "niveles": [],
    "desde": "2026-11-25T11:38",
    "hasta": "2026-11-25T22:00"
+  },
+  {
+   "id": "ES-2026-11-26-I1",
+   "activo": "ES",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    7190,
+    7196
+   ],
+   "stop": 7176,
+   "objetivos": [
+    7215,
+    7230
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7190,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7180
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:25",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "ES-2026-11-26-I2",
+   "activo": "ES",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    7254,
+    7260
+   ],
+   "stop": 7240,
+   "objetivos": [
+    7275,
+    7290
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7256
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7254,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7240
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y H4. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:25",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "ES-2026-11-26-I3",
+   "activo": "ES",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    7245,
+    7255
+   ],
+   "stop": 7268,
+   "objetivos": [
+    7230,
+    7215
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7255,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7262
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:25",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "ES-2026-11-26-I4",
+   "activo": "ES",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    7207,
+    7214
+   ],
+   "stop": 7225,
+   "objetivos": [
+    7193,
+    7178
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 7210
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7214,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 7225
+   },
+   "slplus": "escalera",
+   "favor": "Va contra H1 y H4.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:25",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "GC-2026-11-26-I1",
+   "activo": "GC",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    3572,
+    3578
+   ],
+   "stop": 3560,
+   "objetivos": [
+    3594,
+    3605
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3572,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3565
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H1; contra la Genial Line de H4. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:26",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "GC-2026-11-26-I2",
+   "activo": "GC",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    3612,
+    3618
+   ],
+   "stop": 3600,
+   "objetivos": [
+    3632,
+    3645
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3614
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3612,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3600
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1 y supera la Genial Line de H4. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:26",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "GC-2026-11-26-I3",
+   "activo": "GC",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    3604,
+    3612
+   ],
+   "stop": 3622,
+   "objetivos": [
+    3588,
+    3576
+   ],
+   "tick": 0.1,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3612,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3618
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15 y de la Genial Line de H4; contra H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:26",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "GC-2026-11-26-I4",
+   "activo": "GC",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    3582,
+    3588
+   ],
+   "stop": 3598,
+   "objetivos": [
+    3568,
+    3556
+   ],
+   "tick": 0.1,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 3584
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3588,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 3598
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15; contra H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:26",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "NQ-2026-11-26-I1",
+   "activo": "NQ",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (pullback)",
+   "dir": "largo",
+   "zona": [
+    26090,
+    26120
+   ],
+   "stop": 26020,
+   "objetivos": [
+    26210,
+    26290
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26090,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26040
+   },
+   "slplus": "estructural",
+   "favor": "Va a favor de H1; contra M15. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:23",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "NQ-2026-11-26-I2",
+   "activo": "NQ",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Largo (ruptura)",
+   "dir": "largo",
+   "zona": [
+    26385,
+    26410
+   ],
+   "stop": 26320,
+   "objetivos": [
+    26480,
+    26580
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26390
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26385,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26320
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de H1; contra la Genial Line de H4. ⚠ Media posición si el gatillo sale entre las 13:15 y las 13:45 (actas del BCE).",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:23",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "NQ-2026-11-26-I3",
+   "activo": "NQ",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (rebote)",
+   "dir": "corto",
+   "zona": [
+    26290,
+    26330
+   ],
+   "stop": 26395,
+   "objetivos": [
+    26210,
+    26150
+   ],
+   "tick": 0.25,
+   "ruptura": null,
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26330,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26390
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15 y de la Genial Line de H4; contra H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:23",
+   "hasta": "2026-11-26T22:00"
+  },
+  {
+   "id": "NQ-2026-11-26-I4",
+   "activo": "NQ",
+   "fecha": "2026-11-26",
+   "modo": "intradia",
+   "nombre": "Corto (ruptura)",
+   "dir": "corto",
+   "zona": [
+    26140,
+    26170
+   ],
+   "stop": 26230,
+   "objetivos": [
+    26070,
+    26010
+   ],
+   "tick": 0.25,
+   "ruptura": {
+    "tf": "M15",
+    "lado": "bajo",
+    "nivel": 26145
+   },
+   "filtro": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26170,
+    "porDefecto": true
+   },
+   "anula": {
+    "tf": "M15",
+    "lado": "sobre",
+    "nivel": 26230
+   },
+   "slplus": "escalera",
+   "favor": "Va a favor de M15; contra H1.",
+   "reducido": true,
+   "niveles": [],
+   "desde": "2026-11-26T11:23",
+   "hasta": "2026-11-26T22:00"
   }
  ],
  "datos": [
@@ -20708,6 +21164,87 @@
   {
    "fecha": "2026-11-25",
    "hora": "20:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:15",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:30",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "NQ"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "GC"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:45",
+   "imp": 2,
+   "ev": "Hora citada en «Cuándo» del intradía",
+   "activos": [
+    "ES"
+   ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "13:45",
    "imp": 2,
    "ev": "Hora citada en «Cuándo» del intradía",
    "activos": [
