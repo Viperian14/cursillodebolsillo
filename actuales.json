@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T18:44:01Z",
+ "updated": "2026-11-26T01:58:53Z",
  "items": [
   {
    "d": "2026-10-16",
@@ -245,6 +245,12 @@
    "d": "2026-11-25",
    "match": "Almacenamientos de gas natural de la EIA",
    "act": "−24 Bcf",
+   "res": ""
+  },
+  {
+   "d": "2026-11-25",
+   "match": "Inventarios de crudo de la EIA",
+   "act": "+1,1 M barriles",
    "res": ""
   }
  ]
