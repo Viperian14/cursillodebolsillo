@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T00:20:24+00:00",
+ "actualizado": "2026-11-28T03:28:04+00:00",
  "fx": {
   "fecha": "2026-11-28",
   "usd_por": {
@@ -32,7 +32,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 358.44,
+   "apertura": 358.21,
    "cierre": 358.54,
    "cierre_anterior": 355.58,
    "fecha": "2026-11-27",
@@ -172,7 +172,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 96.75,
+   "apertura": 96.87,
    "cierre": 97.04,
    "cierre_anterior": 94.2,
    "fecha": "2026-11-27",
@@ -332,7 +332,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 321.945,
+   "apertura": 321.95,
    "cierre": 322.96,
    "cierre_anterior": 316.74,
    "fecha": "2026-11-27",
@@ -412,7 +412,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 140.435,
+   "apertura": 140.44,
    "cierre": 141.32,
    "cierre_anterior": 140.29,
    "fecha": "2026-11-27",
@@ -432,7 +432,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 499.485,
+   "apertura": 499.76,
    "cierre": 492.85,
    "cierre_anterior": 489.93,
    "fecha": "2026-11-27",
@@ -472,7 +472,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 151.94,
+   "apertura": 151.9,
    "cierre": 150.49,
    "cierre_anterior": 149.3,
    "fecha": "2026-11-27",
@@ -572,7 +572,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 423.745,
+   "apertura": 423.75,
    "cierre": 429.56,
    "cierre_anterior": 424.39,
    "fecha": "2026-11-27",
@@ -612,7 +612,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 131.86,
+   "apertura": 131.88,
    "cierre": 133.13,
    "cierre_anterior": 131.94,
    "fecha": "2026-11-27",
@@ -726,7 +726,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 419.745,
+   "apertura": 420.27,
    "cierre": 424.54,
    "cierre_anterior": 406.03,
    "fecha": "2026-11-27",
@@ -973,7 +973,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 279.16,
+   "apertura": 279.14,
    "cierre": 274.96,
    "cierre_anterior": 273.1,
    "fecha": "2026-11-27",
@@ -1239,7 +1239,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 46.2,
+   "apertura": 46.14,
    "cierre": 46.1,
    "cierre_anterior": 45.48,
    "fecha": "2026-11-27",
@@ -1277,7 +1277,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 323.77,
+   "apertura": 324.19,
    "cierre": 322.04,
    "cierre_anterior": 311.18,
    "fecha": "2026-11-27",
@@ -1334,7 +1334,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 109.8,
+   "apertura": 111.2,
    "cierre": 110.33,
    "cierre_anterior": 110.29,
    "fecha": "2026-11-27",
@@ -1448,7 +1448,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 22.912,
+   "apertura": 22.91,
    "cierre": 23.21,
    "cierre_anterior": 22.97,
    "fecha": "2026-11-27",
@@ -1486,7 +1486,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 246.615,
+   "apertura": 246.75,
    "cierre": 251.88,
    "cierre_anterior": 246.79,
    "fecha": "2026-11-27",
@@ -1562,7 +1562,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 355.26,
+   "apertura": 355.0,
    "cierre": 363.48,
    "cierre_anterior": 343.05,
    "fecha": "2026-11-27",
@@ -1581,7 +1581,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 47.405,
+   "apertura": 47.25,
    "cierre": 47.47,
    "cierre_anterior": 46.36,
    "fecha": "2026-11-27",
@@ -1733,7 +1733,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 72.8,
+   "apertura": 72.82,
    "cierre": 72.82,
    "cierre_anterior": 72.65,
    "fecha": "2026-11-27",
@@ -1752,7 +1752,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 259.89,
+   "apertura": 259.9,
    "cierre": 264.2,
    "cierre_anterior": 261.44,
    "fecha": "2026-11-27",
@@ -1904,7 +1904,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 306.44,
+   "apertura": 305.21,
    "cierre": 312.34,
    "cierre_anterior": 300.86,
    "fecha": "2026-11-27",
@@ -2208,7 +2208,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 176.685,
+   "apertura": 176.69,
    "cierre": 179.1,
    "cierre_anterior": 174.97,
    "fecha": "2026-11-27",
@@ -2360,7 +2360,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 147.28,
+   "apertura": 147.65,
    "cierre": 153.87,
    "cierre_anterior": 147.27,
    "fecha": "2026-11-27",
@@ -2493,7 +2493,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 226.655,
+   "apertura": 226.66,
    "cierre": 228.58,
    "cierre_anterior": 227.65,
    "fecha": "2026-11-27",
@@ -2569,7 +2569,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 312.525,
+   "apertura": 312.5,
    "cierre": 313.1,
    "cierre_anterior": 311.74,
    "fecha": "2026-11-27",
@@ -2626,7 +2626,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 211.175,
+   "apertura": 211.18,
    "cierre": 223.79,
    "cierre_anterior": 196.19,
    "fecha": "2026-11-27",
@@ -2645,7 +2645,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 108.44,
+   "apertura": 108.53,
    "cierre": 107.04,
    "cierre_anterior": 103.72,
    "fecha": "2026-11-27",
@@ -2797,7 +2797,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 62.29,
+   "apertura": 62.36,
    "cierre": 62.28,
    "cierre_anterior": 62.29,
    "fecha": "2026-11-27",
@@ -2816,7 +2816,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 33.14,
+   "apertura": 33.17,
    "cierre": 33.2,
    "cierre_anterior": 33.17,
    "fecha": "2026-11-27",
@@ -2892,7 +2892,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 1086.035,
+   "apertura": 1086.04,
    "cierre": 1097.8101,
    "cierre_anterior": 1086.8101,
    "fecha": "2026-11-27",
@@ -3082,7 +3082,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 163.34,
+   "apertura": 163.48,
    "cierre": 165.75,
    "cierre_anterior": 158.25,
    "fecha": "2026-11-27",
@@ -3158,7 +3158,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 307.025,
+   "apertura": 307.03,
    "cierre": 316.96,
    "cierre_anterior": 297.06,
    "fecha": "2026-11-27",
@@ -3215,7 +3215,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 85.47,
+   "apertura": 85.7,
    "cierre": 85.15,
    "cierre_anterior": 84.84,
    "fecha": "2026-11-27",
@@ -3291,7 +3291,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 152.85,
+   "apertura": 152.0,
    "cierre": 148.53,
    "cierre_anterior": 152.21,
    "fecha": "2026-11-27",
@@ -3500,7 +3500,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 88.35,
+   "apertura": 88.38,
    "cierre": 88.77,
    "cierre_anterior": 85.74,
    "fecha": "2026-11-27",
@@ -3538,7 +3538,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 63.435,
+   "apertura": 63.44,
    "cierre": 63.53,
    "cierre_anterior": 63.39,
    "fecha": "2026-11-27",
@@ -3557,7 +3557,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 106.845,
+   "apertura": 106.85,
    "cierre": 106.0,
    "cierre_anterior": 106.36,
    "fecha": "2026-11-27",
@@ -3690,7 +3690,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 51.835,
+   "apertura": 51.84,
    "cierre": 51.86,
    "cierre_anterior": 51.53,
    "fecha": "2026-11-27",
@@ -3747,7 +3747,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 278.2,
+   "apertura": 278.45,
    "cierre": 280.35,
    "cierre_anterior": 279.82,
    "fecha": "2026-11-27",
@@ -3880,7 +3880,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 46.38,
+   "apertura": 46.34,
    "cierre": 46.66,
    "cierre_anterior": 46.51,
    "fecha": "2026-11-27",
@@ -3975,7 +3975,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 159.765,
+   "apertura": 159.77,
    "cierre": 160.18,
    "cierre_anterior": 158.08,
    "fecha": "2026-11-27",
@@ -4222,7 +4222,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 59.93,
+   "apertura": 60.11,
    "cierre": 61.49,
    "cierre_anterior": 59.78,
    "fecha": "2026-11-27",
@@ -4317,7 +4317,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 64.8,
+   "apertura": 65.035,
    "cierre": 65.62,
    "cierre_anterior": 64.63,
    "fecha": "2026-11-27",
@@ -4564,7 +4564,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 85.24,
+   "apertura": 85.29,
    "cierre": 85.2,
    "cierre_anterior": 83.99,
    "fecha": "2026-11-27",
@@ -4602,7 +4602,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 174.12,
+   "apertura": 174.67,
    "cierre": 177.0,
    "cierre_anterior": 176.74,
    "fecha": "2026-11-27",
@@ -4773,7 +4773,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 89.01,
+   "apertura": 89.31,
    "cierre": 89.25,
    "cierre_anterior": 88.73,
    "fecha": "2026-11-27",
@@ -4830,7 +4830,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 369.2,
+   "apertura": 368.23,
    "cierre": 369.94,
    "cierre_anterior": 366.2,
    "fecha": "2026-11-27",
@@ -4849,7 +4849,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 160.5,
+   "apertura": 160.24,
    "cierre": 167.6,
    "cierre_anterior": 157.84,
    "fecha": "2026-11-27",
@@ -4982,7 +4982,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 15.095,
+   "apertura": 15.1,
    "cierre": 15.04,
    "cierre_anterior": 14.88,
    "fecha": "2026-11-27",
@@ -5039,7 +5039,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 714.7116,
+   "apertura": 714.6,
    "cierre": 719.23,
    "cierre_anterior": 709.46,
    "fecha": "2026-11-27",
@@ -5077,7 +5077,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 203.31,
+   "apertura": 203.85,
    "cierre": 205.74,
    "cierre_anterior": 200.39,
    "fecha": "2026-11-27",
@@ -5096,7 +5096,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 122.1,
+   "apertura": 122.16,
    "cierre": 122.63,
    "cierre_anterior": 122.35,
    "fecha": "2026-11-27",
@@ -5153,7 +5153,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 56.475,
+   "apertura": 56.55,
    "cierre": 57.4,
    "cierre_anterior": 54.47,
    "fecha": "2026-11-27",
@@ -5248,7 +5248,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 273.115,
+   "apertura": 274.26,
    "cierre": 271.94,
    "cierre_anterior": 271.72,
    "fecha": "2026-11-27",
@@ -5267,7 +5267,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 430.925,
+   "apertura": 430.93,
    "cierre": 430.18,
    "cierre_anterior": 427.18,
    "fecha": "2026-11-27",
@@ -5381,12 +5381,12 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 182.235,
-   "cierre": 182.035,
+   "apertura": 182.08,
+   "cierre": 182.04,
    "cierre_anterior": 182.08,
    "fecha": "2026-11-27",
-   "precio_usd": 182.035,
-   "precio_eur": 165.9067
+   "precio_usd": 182.04,
+   "precio_eur": 165.9113
   },
   {
    "indice": "S&P 500",
@@ -5552,7 +5552,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 109.16,
+   "apertura": 109.13,
    "cierre": 109.11,
    "cierre_anterior": 109.45,
    "fecha": "2026-11-27",
@@ -5628,7 +5628,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 138.93,
+   "apertura": 139.45,
    "cierre": 140.86,
    "cierre_anterior": 134.2,
    "fecha": "2026-11-27",
@@ -5704,7 +5704,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 368.785,
+   "apertura": 368.79,
    "cierre": 370.42,
    "cierre_anterior": 368.95,
    "fecha": "2026-11-27",
@@ -5723,7 +5723,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 193.44,
+   "apertura": 193.18,
    "cierre": 192.69,
    "cierre_anterior": 185.01,
    "fecha": "2026-11-27",
@@ -5818,7 +5818,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 525.48,
+   "apertura": 525.02,
    "cierre": 532.61,
    "cierre_anterior": 524.61,
    "fecha": "2026-11-27",
@@ -5932,7 +5932,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 514.78,
+   "apertura": 515.8,
    "cierre": 514.63,
    "cierre_anterior": 476.58,
    "fecha": "2026-11-27",
@@ -6008,7 +6008,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 416.435,
+   "apertura": 416.44,
    "cierre": 421.01,
    "cierre_anterior": 415.77,
    "fecha": "2026-11-27",
@@ -6065,7 +6065,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 139.41,
+   "apertura": 139.46,
    "cierre": 140.54,
    "cierre_anterior": 130.93,
    "fecha": "2026-11-27",
@@ -6160,7 +6160,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 96.895,
+   "apertura": 96.9,
    "cierre": 95.41,
    "cierre_anterior": 96.06,
    "fecha": "2026-11-27",
@@ -6179,7 +6179,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 627.825,
+   "apertura": 628.39,
    "cierre": 628.96,
    "cierre_anterior": 609.89,
    "fecha": "2026-11-27",
@@ -6274,7 +6274,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 630.28,
+   "apertura": 630.13,
    "cierre": 646.95,
    "cierre_anterior": 601.25,
    "fecha": "2026-11-27",
@@ -6312,7 +6312,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 223.502,
+   "apertura": 224.75,
    "cierre": 228.64,
    "cierre_anterior": 220.84,
    "fecha": "2026-11-27",
@@ -6331,7 +6331,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 67.47,
+   "apertura": 67.51,
    "cierre": 67.77,
    "cierre_anterior": 67.81,
    "fecha": "2026-11-27",
@@ -6369,7 +6369,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 42.47,
+   "apertura": 42.63,
    "cierre": 42.59,
    "cierre_anterior": 42.6,
    "fecha": "2026-11-27",
@@ -6483,7 +6483,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 109.16,
+   "apertura": 108.84,
    "cierre": 109.14,
    "cierre_anterior": 107.07,
    "fecha": "2026-11-27",
@@ -6521,7 +6521,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 60.04,
+   "apertura": 59.98,
    "cierre": 60.93,
    "cierre_anterior": 59.41,
    "fecha": "2026-11-27",
@@ -6578,7 +6578,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 28.815,
+   "apertura": 28.96,
    "cierre": 29.25,
    "cierre_anterior": 28.94,
    "fecha": "2026-11-27",
@@ -6597,7 +6597,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 84.325,
+   "apertura": 84.33,
    "cierre": 84.95,
    "cierre_anterior": 85.41,
    "fecha": "2026-11-27",
@@ -6787,7 +6787,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 248.125,
+   "apertura": 248.13,
    "cierre": 253.19,
    "cierre_anterior": 242.96,
    "fecha": "2026-11-27",
@@ -6806,7 +6806,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 54.445,
+   "apertura": 54.45,
    "cierre": 54.17,
    "cierre_anterior": 53.95,
    "fecha": "2026-11-27",
@@ -6825,7 +6825,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 177.035,
+   "apertura": 177.04,
    "cierre": 176.01,
    "cierre_anterior": 174.66,
    "fecha": "2026-11-27",
@@ -6863,7 +6863,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 64.165,
+   "apertura": 64.17,
    "cierre": 66.24,
    "cierre_anterior": 62.48,
    "fecha": "2026-11-27",
@@ -6958,7 +6958,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 110.145,
+   "apertura": 110.15,
    "cierre": 109.97,
    "cierre_anterior": 107.95,
    "fecha": "2026-11-27",
@@ -6996,7 +6996,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 169.765,
+   "apertura": 169.89,
    "cierre": 172.17,
    "cierre_anterior": 163.59,
    "fecha": "2026-11-27",
@@ -7110,7 +7110,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 143.555,
+   "apertura": 143.71,
    "cierre": 144.6,
    "cierre_anterior": 143.93,
    "fecha": "2026-11-27",
@@ -7357,7 +7357,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 196.25,
+   "apertura": 196.31,
    "cierre": 196.85,
    "cierre_anterior": 196.0,
    "fecha": "2026-11-27",
@@ -7433,7 +7433,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 173.475,
+   "apertura": 173.4,
    "cierre": 179.27,
    "cierre_anterior": 168.66,
    "fecha": "2026-11-27",
@@ -7566,7 +7566,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 75.48,
+   "apertura": 75.75,
    "cierre": 75.78,
    "cierre_anterior": 75.52,
    "fecha": "2026-11-27",
@@ -7585,7 +7585,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 981.034,
+   "apertura": 981.03,
    "cierre": 992.14,
    "cierre_anterior": 981.87,
    "fecha": "2026-11-27",
@@ -7737,7 +7737,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 481.765,
+   "apertura": 481.77,
    "cierre": 484.45,
    "cierre_anterior": 483.09,
    "fecha": "2026-11-27",
@@ -7851,7 +7851,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 494.28,
+   "apertura": 490.28,
    "cierre": 509.66,
    "cierre_anterior": 472.33,
    "fecha": "2026-11-27",
@@ -8099,7 +8099,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 108.0,
+   "apertura": 107.87,
    "cierre": 108.8,
    "cierre_anterior": 107.74,
    "fecha": "2026-11-27",
@@ -8194,7 +8194,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 24.1475,
+   "apertura": 24.14,
    "cierre": 23.76,
    "cierre_anterior": 23.31,
    "fecha": "2026-11-27",
@@ -8232,7 +8232,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 417.0,
+   "apertura": 416.64,
    "cierre": 420.07,
    "cierre_anterior": 405.09,
    "fecha": "2026-11-27",
@@ -8422,7 +8422,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 222.0,
+   "apertura": 221.97,
    "cierre": 222.96,
    "cierre_anterior": 212.15,
    "fecha": "2026-11-27",
@@ -8441,7 +8441,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 391.33,
+   "apertura": 391.34,
    "cierre": 400.0,
    "cierre_anterior": 380.14,
    "fecha": "2026-11-27",
@@ -8460,7 +8460,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 273.62,
+   "apertura": 274.64,
    "cierre": 281.85,
    "cierre_anterior": 270.19,
    "fecha": "2026-11-27",
@@ -8574,7 +8574,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 39.95,
+   "apertura": 40.03,
    "cierre": 40.01,
    "cierre_anterior": 40.37,
    "fecha": "2026-11-27",
@@ -8764,7 +8764,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 637.64,
+   "apertura": 639.03,
    "cierre": 642.5,
    "cierre_anterior": 642.64,
    "fecha": "2026-11-27",
@@ -8802,7 +8802,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 106.095,
+   "apertura": 105.79,
    "cierre": 108.09,
    "cierre_anterior": 104.52,
    "fecha": "2026-11-27",
@@ -8821,7 +8821,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 112.275,
+   "apertura": 112.28,
    "cierre": 112.63,
    "cierre_anterior": 111.47,
    "fecha": "2026-11-27",
@@ -8973,7 +8973,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 319.71,
+   "apertura": 319.52,
    "cierre": 320.2,
    "cierre_anterior": 319.47,
    "fecha": "2026-11-27",
@@ -9277,7 +9277,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 286.15,
+   "apertura": 285.01,
    "cierre": 292.11,
    "cierre_anterior": 272.45,
    "fecha": "2026-11-27",
@@ -9391,7 +9391,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 181.4,
+   "apertura": 179.38,
    "cierre": 181.93,
    "cierre_anterior": 180.44,
    "fecha": "2026-11-27",
@@ -9448,7 +9448,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 86.29,
+   "apertura": 86.64,
    "cierre": 89.39,
    "cierre_anterior": 86.08,
    "fecha": "2026-11-27",
@@ -9524,7 +9524,7 @@
     "S&P 500"
    ],
    "moneda_lista": "USD",
-   "apertura": 323.275,
+   "apertura": 322.3,
    "cierre": 331.5,
    "cierre_anterior": 318.37,
    "fecha": "2026-11-27",
